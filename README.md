@@ -42,7 +42,7 @@ Further, prerequisites might be necessary for specific tasks. These are listed u
 If you only want to use pre-built containers, you can find them in the [release section](https://github.com/exasol/script-languages-release/releases) of this repository. However, if you want build custom container you need to clone this repository.
 
 ```bash
-$ git clone --recurse-submodules https://github.com/tkilias/script-language-release.git 
+$ git clone --recurse-submodules https://github.com/exasol/script-language-release.git 
 ```
 
 Note: The option --recurse-submodules clones the submodule [https://github.com/exasol/script-languages](script-languages)

@@ -19,10 +19,10 @@ that can be used in the EXASOL database (version 6.0.0 or later).
 A script language container consists of a Linux container with a complete linux distribution and all required libraries, 
 such as a script client. A script client is responsible for the communication with the database and for executing the script code.
 We provide in this repository several [flavors](flavors) of script language containers, 
-such as the current standard implementation of the [script client](src) with support for Python 2/3, R und Java. 
+such as the current standard implementation of the [script client](https://github.com/exasol/script-languages/blob/master/exaudfclient/base) with support for Python 2/3, R und Java. 
 We will show here how to customize and build the different flavors of the script language containers. 
 Pre-built containers can you find in the [release section](https://github.com/exasol/script-languages-release/releases) of this repository.
-If you are interested in the script client you find more details [here](src/README.md).
+If you are interested in the script client you find more details [here](https://github.com/exasol/script-languages/blob/master/exaudfclient/base/README.md).
 
 ## Prerequisites
 In order to build this project, you need:
@@ -45,7 +45,7 @@ If you only want to use pre-built containers, you can find them in the [release 
 $ git clone --recurse-submodules https://github.com/exasol/script-language-release.git 
 ```
 
-Note: The option --recurse-submodules clones the submodule [https://github.com/exasol/script-languages](script-languages)
+Note: The option --recurse-submodules clones the submodule [script-languages](https://github.com/exasol/script-languages)
 
 ## How to build an existing flavor?
 

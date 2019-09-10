@@ -1,1 +1,1 @@
-../../script-languages/google-cloud-build/setup.sh
+../script-languages/google-cloud-build/setup.sh

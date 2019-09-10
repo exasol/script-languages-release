@@ -1,1 +1,1 @@
-../../script-languages/google-cloud-build/run_triggers.sh
+../script-languages/google-cloud-build/run_triggers.sh

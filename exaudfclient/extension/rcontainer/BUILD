@@ -72,7 +72,8 @@ cc_library(
     srcs = [":filter_swig_code_exascript_r_cc",":filter_swig_code_exascript_r_h"],
     hdrs = [":filter_swig_code_exascript_r_h"],
     copts = ["-DENABLE_R_VM"]+optimize_copts,
-    deps = ["@R_linux//:r-lib","@script_languages//exaudflib:exaudflib-deps","@script_languages//exaudflib:header"]
+    deps = ["@R_linux//:r-lib","@script_languages//exaudflib:exaudflib-deps","@script_languages//exaudflib:header"],
+    alwayslink = True,
 )
 
 cc_library(
@@ -82,5 +83,6 @@ cc_library(
     include_prefix = ".",
     data = ["exascript_r_wrap.R", "exascript_r_preset.R"], #TODO do we need this, because build_integreted
     hdrs = ["filter_swig_code_exascript_r_h","exascript_r_int", "rcontainer.h"],
-    deps = ["@R_linux//:r-lib",":exascript_r","@script_languages//exaudflib:header"]
+    deps = ["@R_linux//:r-lib",":exascript_r","@script_languages//exaudflib:header"],
+    alwayslink = True,
 )

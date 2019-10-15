@@ -30,6 +30,7 @@ cc_library(
     hdrs = [
         "debug_message.h"
     ],
+    alwayslink = True,
 )
 
 VM_ENABLED_DEPS=select({

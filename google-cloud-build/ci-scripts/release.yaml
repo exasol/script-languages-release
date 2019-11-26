@@ -91,7 +91,7 @@ steps:
           '${_GITHUB_USER_NAME}',
           '${_GITHUB_REPOSITORY}'
           ]
-timeout: "3600s"
+timeout: "7200s"
 options:
   machineType: 'N1_HIGHCPU_8'
-  diskSizeGb: "50"
+  diskSizeGb: "300"

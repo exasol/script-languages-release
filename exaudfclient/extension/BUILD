@@ -1,23 +1,23 @@
 load("@script_languages//:variables.bzl", "VM_ENABLED_DEFINES")
 
-config_setting(
+alias(
     name = "benchmark",
-    define_values = {"benchmark": "true"},
+    actual = "@script_languages//:benchmark"
 )
 
-config_setting(
+alias(
     name = "python",
-    define_values = {"python": "true"},
+    actual = "@script_languages//:python"
 )
 
-config_setting(
+alias(
     name = "java",
-    define_values = {"java": "true"},
+    actual = "@script_languages//:java"
 )
 
-config_setting(
+alias(
     name = "bash",
-    define_values = {"bash": "true"},
+    actual = "@script_languages//:bash"
 )
 
 config_setting(
@@ -25,46 +25,25 @@ config_setting(
     define_values = {"r": "true"},
 )
 
-config_setting(
-    name = "fast_binary",
-    define_values = {
-        "binary_type": "fast_binary",
-        },
-)
-
-config_setting(
-    name = "slow_wrapper",
-    define_values = {
-        "binary_type": "slow_wrapper",
-        },
-)
-
-cc_library(
-    name = "debug_message_h",
-    hdrs = [
-        "debug_message.h"
-    ],
-    alwayslink = True,
-)
 
 VM_ENABLED_DEPS=select({
-        ":benchmark": ["@script_languages//benchmark_container:benchmark_container"],
+        "//:benchmark": ["@script_languages//benchmark_container:benchmark_container"],
         "//conditions:default": []
     }) + select({
-        ":java": ["@script_languages//javacontainer:javacontainer"],
+        "//:java": ["@script_languages//javacontainer:javacontainer"],
         "//conditions:default": []
     }) + select({
-        ":bash": ["@script_languages//streaming_container:streamingcontainer"],
+        "//:bash": ["@script_languages//streaming_container:streamingcontainer"],
         "//conditions:default": []
     })
 
 VM_PYTHON2_DEPS=select({
-        ":python": ["@script_languages//python/python2:pythoncontainer"],
+        "//:python": ["@script_languages//python/python2:pythoncontainer"],
         "//conditions:default": []
     }) 
 
 VM_PYTHON3_DEPS=select({
-        ":python": ["@script_languages//python/python3:pythoncontainer"],
+        "//:python": ["@script_languages//python/python3:pythoncontainer"],
         "//conditions:default": []
     }) 
 
@@ -108,37 +87,33 @@ cc_binary(
 # - For performance reason, we can not wrap the binary into a shell script, as such this is only for local debugging and testing
 #   and we hardcode the paths for the production container
 
-SLOW_WRAPPER_BINARY_PY2="""
-  $(location create_binary_wrapper.sh) "$(location exaudfclient_bin)" "$(location exaudfclient)" "$(location exaudfclient.template.sh)"
-"""
+
+SLOW_WRAPPER_BINARY_PY2="""$(location @script_languages//:wrapper_generator_bin) "$(location exaudfclient_bin)" "$(location exaudfclient)" "$(location exaudfclient.template.sh)" """
 FAST_BINARY_PY2="""cp "$(location exaudfclient_bin)" "$(location exaudfclient)" """
 CREATE_BINARY_PY2_SCRIPT=select({
-        "//:fast_binary": FAST_BINARY_PY2,
-        "//:slow_wrapper": SLOW_WRAPPER_BINARY_PY2,
+        "@script_languages//:fast_binary": FAST_BINARY_PY2,
+        "@script_languages//:slow_wrapper": SLOW_WRAPPER_BINARY_PY2,
         "//conditions:default": FAST_BINARY_PY2
     })
-
 genrule(
     name = "exaudfclient",
     cmd = CREATE_BINARY_PY2_SCRIPT, 
     outs = ["exaudfclient"],
-    srcs = [":exaudfclient_bin", "@script_languages//:libexaudflib_complete.so", "exaudfclient.template.sh","create_binary_wrapper.sh"],
+    srcs = [":exaudfclient_bin", "@script_languages//:libexaudflib_complete.so", "exaudfclient.template.sh","@script_languages//:wrapper_generator_bin"],
     output_to_bindir = True
 )
 
-SLOW_WRAPPER_BINARY_PY3="""
-  $(location create_binary_wrapper.sh) "$(location exaudfclient_py3_bin)" "$(location exaudfclient_py3)" "$(location exaudfclient.template.sh)"
-"""
+SLOW_WRAPPER_BINARY_PY3="""$(location @script_languages//:wrapper_generator_bin) "$(location exaudfclient_py3_bin)" "$(location exaudfclient_py3)" "$(location exaudfclient.template.sh)" """
 FAST_BINARY_PY3="""cp "$(location exaudfclient_py3_bin)" "$(location exaudfclient_py3)" """
 CREATE_BINARY_PY3_SCRIPT=select({
-        "//:fast_binary": FAST_BINARY_PY3,
-        "//:slow_wrapper": SLOW_WRAPPER_BINARY_PY3,
+        "@script_languages//:fast_binary": FAST_BINARY_PY3,
+        "@script_languages//:slow_wrapper": SLOW_WRAPPER_BINARY_PY3,
         "//conditions:default": FAST_BINARY_PY3
     })
 genrule(
     name = "exaudfclient_py3",
     cmd = CREATE_BINARY_PY3_SCRIPT,
     outs = ["exaudfclient_py3"],
-    srcs = [":exaudfclient_py3_bin", "@script_languages//:libexaudflib_complete.so", "exaudfclient.template.sh", "create_binary_wrapper.sh"],
+    srcs = [":exaudfclient_py3_bin", "@script_languages//:libexaudflib_complete.so", "exaudfclient.template.sh", "@script_languages//:wrapper_generator_bin"],
     output_to_bindir = True
 )

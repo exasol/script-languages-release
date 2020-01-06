@@ -45,6 +45,7 @@ python-scipy
 python-boto
 python-pycurl
 python-requests
+python-paramiko
 python3-pycurl
 python3-redis
 python3-smbc
@@ -67,6 +68,7 @@ python3-docutils
 python3-requests
 python3-boto
 python3-ujson
+python3-paramiko
 r-base
 r-cran-rcurl
 r-cran-xml

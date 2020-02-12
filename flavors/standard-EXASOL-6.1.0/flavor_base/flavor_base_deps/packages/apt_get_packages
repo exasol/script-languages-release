@@ -6,6 +6,7 @@ wget
 curl
 maven
 git
+python-setuptools
 python-cffi
 python-cryptography
 python-docutils
@@ -46,6 +47,7 @@ python-boto
 python-pycurl
 python-requests
 python-paramiko
+python3-setuptools
 python3-pycurl
 python3-redis
 python3-smbc

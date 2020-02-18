@@ -7,10 +7,11 @@
 2. [Prerequisites](#prerequisites)
 3. [Getting Started](#getting-started)
 4. [How to build an existing flavor?](#how-to-build-an-existing-flavor)
-5. [How to customize an existing flavor?](#how-to-customize-an-existing-flavor)
-6. [Partial builds or rebuilds](#partial-builds-and-rebuilds)
-7. [Using your own remote cache](#using-your-own-remote-cache)
-8. [Testing an existing flavor](#testing-an-existing-flavor)
+5. [How to activate a script language container in the database](#how-to-activate-the-script-language-container-in-the-database)
+6. [How to customize an existing flavor?](#how-to-customize-an-existing-flavor)
+7. [Partial builds or rebuilds](#partial-builds-and-rebuilds)
+8. [Using your own remote cache](#using-your-own-remote-cache)
+9. [Testing an existing flavor](#testing-an-existing-flavor)
 10. [Cleaning up after your are finished](#cleaning-up-after-your-are-finished)
 
 ## About
@@ -26,7 +27,7 @@ If you are interested in the script client you find more details [here](https://
 
 ## Prerequisites
 In order to build this project, you need:
-* Linux or Mac OS X (experimental)
+* Linux or Mac OS X (experimental) with bash and tar
 * Docker >= 17.05 [multi-stage builds required](https://docs.docker.com/develop/develop-images/multistage-build/)
 * Python >=3.6 with pip
 * We recommend at least 50 GB free disk space on the partition 
@@ -42,7 +43,7 @@ Further, prerequisites might be necessary for specific tasks. These are listed u
 If you only want to use pre-built containers, you can find them in the [release section](https://github.com/exasol/script-languages-release/releases) of this repository. However, if you want build custom container you need to clone this repository.
 
 ```bash
-$ git clone --recurse-submodules https://github.com/exasol/script-language-release.git 
+$ git clone --recurse-submodules https://github.com/exasol/script-languages-release.git 
 ```
 
 Note: The option --recurse-submodules clones the submodule [script-languages](https://github.com/exasol/script-languages)
@@ -70,6 +71,17 @@ $ ./exaslct upload --flavor-path=flavors/<flavor-name> --database-host <hostname
 
 Once it is successfully uploaded, it will print the ALTER SESSION statement
 that can be used to activate the script language container in the database.
+
+## How to activate a script language container in the database
+
+If you uploaded a container manually you can generate the ALTER SESSION statement with
+
+```bash
+$ ./exaslct generate-alter-session --flavor-path=flavors/<flavor-name> --bucketfs-name <bucketfs-name> \
+                                   --bucket-name <bucket-name> --path-in-bucket <path/in/bucket> --container-name <container-name>
+```
+
+where \<container-name> is the name of the uploaded archive without its file extension. Execute the generated statement in your database session to activate the container for the current session.
 
 ## How to customize an existing flavor?
 

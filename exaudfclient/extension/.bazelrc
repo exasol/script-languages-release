@@ -16,3 +16,5 @@ build:optimize --copt="-g0" --copt="-DNDEBUG" --copt=-fstack-protector-strong --
 build:optimize-r --define r-unroll-loops=true --config=r
 build:no-tty --curses=no --color=no
 build:debug-build --sandbox_debug --config=verbose
+build:no-symlinks --symlink_prefix=/
+build:symlinks-to-tmp --symlink_prefix=/tmp/

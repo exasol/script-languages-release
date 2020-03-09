@@ -1,0 +1,1 @@
+../script-languages/google-cloud-build/update_triggers.sh

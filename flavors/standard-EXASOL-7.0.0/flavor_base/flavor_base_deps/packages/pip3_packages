@@ -1,6 +1,7 @@
 protobuf==3.0.0
-martian==0.14
+martian==1.4
 git+http://github.com/EXASOL/websocket-api.git#egg=exasol-ws-api&subdirectory=python
 pyexasol==0.11.2
 pysftp==0.2.9
 boto3==1.11.15
+pykickstart==3.20

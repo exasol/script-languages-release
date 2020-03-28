@@ -31,7 +31,7 @@ RVM::RVM(bool checkOnly) {
         m_impl = new RVMImpl(checkOnly);
     } catch (std::exception& err) {
         lock_guard<mutex> lock(exception_msg_mtx);
-        exception_msg = err.what();
+        exception_msg = "F-UDF.CL.R-1: "+std::string(err.what());
     }
 }
 bool RVM::run() {
@@ -39,7 +39,7 @@ bool RVM::run() {
         return m_impl->run();
     } catch (std::exception& err) {
         lock_guard<mutex> lock(exception_msg_mtx);
-        exception_msg = err.what();
+        exception_msg = "F-UDF.CL.R-2: "+std::string(err.what());
     }
     return false;
 }
@@ -49,7 +49,7 @@ const char* RVM::singleCall(single_call_function_id_e fn, const ExecutionGraph::
         return m_impl->singleCall(fn,args,calledUndefinedSingleCall);
     } catch (std::exception& err) {
         lock_guard<mutex> lock(exception_msg_mtx);
-        exception_msg = err.what();
+        exception_msg = "F-UDF.CL.R-3: "+std::string(err.what());
     }
     return strdup("<this is an error>");
 }
@@ -59,7 +59,7 @@ void RVM::shutdown() {
         m_impl->shutdown();
     } catch (std::exception& err) {
         lock_guard<mutex> lock(exception_msg_mtx);
-        exception_msg = err.what();
+        exception_msg = "F-UDF.CL.R-4: "+std::string(err.what());
     }
 }
 
@@ -71,7 +71,7 @@ static void evaluate_code(const char *code) {
     cmdexpr = PROTECT(R_ParseVector(cmdSexp, -1, &status, R_NilValue));
     if (status != PARSE_OK) {
         UNPROTECT(2);
-        throw RVM::exception("Failed to parse code");
+        throw RVM::exception("F-UDF.CL.R-5: Failed to parse code");
     }
     for (R_len_t i = 0; i < length(cmdexpr); i++) {
         int errorOccurred;
@@ -79,7 +79,7 @@ static void evaluate_code(const char *code) {
         if (errorOccurred) {
             UNPROTECT(2);
             const char *buf = R_curErrorBuf();
-            throw RVM::exception(buf);
+            throw RVM::exception("F-UDF.CL.R-6: "+std::string(buf));
         }
     }
     UNPROTECT(2);
@@ -97,7 +97,7 @@ static void evaluate_code_protected(const char *code) {
     R_tryEvalSilent(expr, R_GlobalEnv, &errorOccurred);
     UNPROTECT(3);
     if (errorOccurred)
-        throw RVM::exception(R_curErrorBuf());
+        throw RVM::exception("F-UDF.CL.R-7: "+std::string(R_curErrorBuf()));
 }
 
 #define RVM_next_block_gen(type, vtype, rtype, var, value, null)  \
@@ -236,7 +236,7 @@ extern "C" {
                 if (!ret_is_buffer) PROTECT(cols[c] = NEW_LOGICAL(rowsalloc));
                 break;
             default:
-                SWIGVM_params->exch->setException("Internal error: wrong column type");
+                SWIGVM_params->exch->setException("F-UDF.CL.R-8: Internal error: wrong column type");
                 break;
             }
         }
@@ -253,7 +253,7 @@ extern "C" {
                 if (!data->next()) break;
             } while(currow < (unsigned long)rows);
             if (!SWIGVM_params->exch->exthrowed && currow != (unsigned long)rows)
-                SWIGVM_params->exch->setException("Could not read all rows");
+                SWIGVM_params->exch->setException("F-UDF.CL.R-9: Could not read all rows");
         } else if (rows == 0) {
             for (long c = 0; c < cols_count; ++c)
                 setfs[c](data, cols[c], c, currow);
@@ -288,22 +288,22 @@ extern "C" {
         if (datain == R_NilValue || isNull(datain) || !IS_LIST(datain) || LENGTH(datain) != cols_count) {
             if (datain != R_NilValue && IS_LIST(datain)) {
                 stringstream sb;
-                sb << "emit function argument count (" << LENGTH(datain)
+                sb << "E-UDF.CL.R-10: emit function argument count (" << LENGTH(datain)
                    << ") must match the number of output columns (" << cols_count << ')';
                 SWIGVM_params->exch->setException(sb.str().c_str());
             } else
-                SWIGVM_params->exch->setException("emit function argument count must match the number of output columns");
+                SWIGVM_params->exch->setException("E-UDF.CL.R-11: emit function argument count must match the number of output columns");
             return R_NilValue;
         }
         for (long c = 0; c < cols_count; ++c) {
             setfs[c].dat = VECTOR_ELT(datain, c);
             if (isNull(setfs[c].dat)) {
-                SWIGVM_params->exch->setException("emitting NULL values not supported");
+                SWIGVM_params->exch->setException("E-UDF.CL.R-12: emitting NULL values not supported");
                 return R_NilValue;
             }   
             setfs[c].len = GET_LENGTH(setfs[c].dat);
             if (setfs[c].len < 1) {
-                SWIGVM_params->exch->setException("emitting empty vectors not supported");
+                SWIGVM_params->exch->setException("E-UDF.CL.R-13: emitting empty vectors not supported");
                 return R_NilValue;
             }   
             if (emiting_rows < setfs[c].len)
@@ -318,7 +318,7 @@ extern "C" {
             case STRING    : setfs[c].fun = &RVM_emit_block_set_String;    break;
             case BOOLEAN   : setfs[c].fun = &RVM_emit_block_set_Boolean;   break;
             default:
-                SWIGVM_params->exch->setException("Internal error: wrong column type");
+                SWIGVM_params->exch->setException("F-UDF.CL.R-14: Internal error: wrong column type");
                 break;
             }
         }
@@ -336,7 +336,7 @@ RVMImpl::RVMImpl(bool checkOnly): m_checkOnly(checkOnly) {
     int argc = 5;
     DllInfo *info = NULL;
 
-    setenv("R_HOME", "/usr/lib/R", 1);
+    setenv("R_HOME", "/usr/lib/R", 1); // TODO hard coded
     setenv("R_ENABLE_JIT", "0", 1);
     Rf_initEmbeddedR(argc, const_cast<char**>(argv));
     R_Interactive = (Rboolean)0; /* 0 has problems with Exceptions -> needs options(error = ...) ? */
@@ -357,7 +357,7 @@ void RVMImpl::shutdown() {
     SETCAR(expr, fun);
     R_tryEvalSilent(expr, R_GlobalEnv, &errorOccurred);
     if (errorOccurred)
-        throw RVM::exception(R_curErrorBuf());
+        throw RVM::exception("F-UDF.CL.R-15: "+std::string(R_curErrorBuf()));
     Rf_endEmbeddedR(0);
     R_CleanTempDir();
 }
@@ -372,7 +372,7 @@ bool RVMImpl::run() {
     R_tryEvalSilent(expr, R_GlobalEnv, &errorOccurred);
     UNPROTECT(2);
     if (errorOccurred)
-        throw RVM::exception(R_curErrorBuf());
+        throw RVM::exception("F-UDF.CL.R-16: "+std::string(R_curErrorBuf()));
     return true;
 }
 
@@ -633,13 +633,13 @@ const char* RVMImpl::singleCall(single_call_function_id_e fn, const ExecutionGra
     switch (fn) {
     case SC_FN_NIL: break;
     case SC_FN_DEFAULT_OUTPUT_COLUMNS: func = "defaultOutputColumns"; break;
-    case SC_FN_VIRTUAL_SCHEMA_ADAPTER_CALL: throw RVM::exception("R is not a supported language for adapter calls"); break;
+    case SC_FN_VIRTUAL_SCHEMA_ADAPTER_CALL: throw RVM::exception("F-UDF.CL.R-22: R is not a supported language for adapter calls"); break;
     case SC_FN_GENERATE_SQL_FOR_IMPORT_SPEC: func = "generate_sql_for_import_spec"; break;
     case SC_FN_GENERATE_SQL_FOR_EXPORT_SPEC: func = "generate_sql_for_export_spec"; break;
     }
     if (func == NULL)
     {
-        abort();
+        throw RVM::exception("F-UDF.CL.R-17: unkown single call function "+std::to_string(fn));
     }
 
     size_t num_protects = 0;
@@ -660,7 +660,7 @@ const char* RVMImpl::singleCall(single_call_function_id_e fn, const ExecutionGra
     PROTECT(fun = myFindFun(install("INTERNAL_SINGLE_CALL_WRAPPER__"), R_GlobalEnv));
     num_protects++;
     if (fun == R_UnboundValue) {
-        abort(); 
+        throw RVM::exception("F-UDF.CL.R-18: Cannot find INTERNAL_SINGLE_CALL_WRAPPER__");
     }
     SETCAR(expr, fun);
 
@@ -686,7 +686,7 @@ const char* RVMImpl::singleCall(single_call_function_id_e fn, const ExecutionGra
          }
          else
          {
-             throw RVM::exception("Internal R VM error: cannot cast argument DTO to import/export specification");
+             throw RVM::exception("F-UDF.CL.R-19: Internal R VM error: cannot cast argument DTO to import/export specification");
          }
     }
     PROTECT(ret = R_tryEvalSilent(expr, R_GlobalEnv, &errorOccurred));
@@ -694,13 +694,13 @@ const char* RVMImpl::singleCall(single_call_function_id_e fn, const ExecutionGra
 
     if (errorOccurred)
     {
-         UNPROTECT(num_protects);
-        throw RVM::exception(R_curErrorBuf());
+        UNPROTECT(num_protects);
+        throw RVM::exception("F-UDF.CL.R-20: "+std::string(R_curErrorBuf()));
     }
 
     if (!isString(ret)) {
         UNPROTECT(num_protects);
-        throw RVM::exception("result of singleCall function is not of type string");
+        throw RVM::exception("F-UDF.CL.R-21: result of singleCall function is not of type string");
     }
 
     SEXP c_res = STRING_ELT(ret,0);

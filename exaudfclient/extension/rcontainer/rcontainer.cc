@@ -63,7 +63,7 @@ void RVM::shutdown() {
     }
 }
 
-static void evaluate_code(const char *code) {
+static void evaluate_code(const std::string& errorCode, const char *code) {
     SEXP cmdSexp, cmdexpr;
     ParseStatus status;
     PROTECT(cmdSexp = allocVector(STRSXP, 1));
@@ -71,7 +71,7 @@ static void evaluate_code(const char *code) {
     cmdexpr = PROTECT(R_ParseVector(cmdSexp, -1, &status, R_NilValue));
     if (status != PARSE_OK) {
         UNPROTECT(2);
-        throw RVM::exception("F-UDF.CL.R-5: Failed to parse code");
+        throw RVM::exception(errorCode+": F-UDF.CL.R-5: Failed to parse code"+std::string(R_curErrorBuf()));
     }
     for (R_len_t i = 0; i < length(cmdexpr); i++) {
         int errorOccurred;
@@ -79,13 +79,13 @@ static void evaluate_code(const char *code) {
         if (errorOccurred) {
             UNPROTECT(2);
             const char *buf = R_curErrorBuf();
-            throw RVM::exception("F-UDF.CL.R-6: "+std::string(buf));
+            throw RVM::exception(errorCode+": F-UDF.CL.R-6: "+std::string(buf));
         }
     }
     UNPROTECT(2);
 }
 
-static void evaluate_code_protected(const char *code) {
+static void evaluate_code_protected(const std::string& errorCode, const char *code) {
     SEXP expr, cmd, fun;
     int errorOccurred;
     PROTECT(fun = findFun(install("INTERNAL_PARSE_WRAPPER__"), R_GlobalEnv));
@@ -97,7 +97,7 @@ static void evaluate_code_protected(const char *code) {
     R_tryEvalSilent(expr, R_GlobalEnv, &errorOccurred);
     UNPROTECT(3);
     if (errorOccurred)
-        throw RVM::exception("F-UDF.CL.R-7: "+std::string(R_curErrorBuf()));
+        throw RVM::exception(errorCode+": "+std::string(R_curErrorBuf()));
 }
 
 #define RVM_next_block_gen(type, vtype, rtype, var, value, null)  \
@@ -343,10 +343,10 @@ RVMImpl::RVMImpl(bool checkOnly): m_checkOnly(checkOnly) {
     info = R_getEmbeddingDllInfo();
     R_init_exascript_r(info);
 
-    evaluate_code(integrated_exascript_r_r);
-    evaluate_code(integrated_exascript_r_preset_r);
-    evaluate_code_protected(SWIGVM_params->script_code);
-    evaluate_code(integrated_exascript_r_wrap_r);
+    evaluate_code("F-UDF.CL.R-62",integrated_exascript_r_r);
+    evaluate_code("F-UDF.CL.R-63",integrated_exascript_r_preset_r);
+    evaluate_code_protected("F-UDF.CL.R-7",SWIGVM_params->script_code);
+    evaluate_code("F-UDF.CL.R-65",integrated_exascript_r_wrap_r);
 }
 
 void RVMImpl::shutdown() {

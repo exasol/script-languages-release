@@ -3,16 +3,27 @@
 "$.EXAUDFContext" <- function(value, name) {
     dat <- value[[name]]
     col <- attr(dat, "COLUMN")
-    if (is.null(col)) dat
-    else dat()
+    if (is.null(col)){
+        return(dat)
+    }else{
+        return(dat())
+    }
 }
 
 INTERNAL_RUN_WRAPPER_DATA__ <- list()
 INTERNAL_RUN_WRAPPER_DATA_RAW__ <- INTERNAL_RUN_WRAPPER_DATA__
 INTERNAL_RUN_WRAPPER_DATA_LEN__ <- 0
 INTERNAL_RUN_WRAPPER_BODY__ <- function(meta, inp, out) {
-    create_check <- function(ce, tbl)
-        function(error_code,f, ...) { v <- f(tbl, ...); msg <- ce(tbl); if (!is.null(msg)) stop(paste(error_code,": ",msg,sep="")); v }
+    create_check <- function(ce, tbl) {
+        function(error_code,f, ...) { 
+            v <- f(tbl, ...); 
+            msg <- ce(tbl); 
+            if (!is.null(msg)) {
+                stop(paste(error_code,": ",msg,sep="")); 
+            }
+            return(v) 
+        }
+    }
     em <- create_check(Metadata_checkException, meta)
     ei <- create_check(TableIterator_checkException, inp)
     eo <- create_check(ResultHandler_checkException, out)
@@ -126,7 +137,7 @@ INTERNAL_RUN_WRAPPER_BODY__ <- function(meta, inp, out) {
         } else stop("F-UDF.CL.R-50: Unknown output mode type")
     } else if (em("F-UDF.CL.R-51",Metadata_inputType) == "MULTIPLE") {
         context["reset"] = list(function() { ei("F-UDF.CL.R-52",TableIterator_reset); nextdata(0); })
-        if (em("F-UDF.CL.R-60".Metadata_outputType) == "EXACTLY_ONCE") {
+        if (em("F-UDF.CL.R-60",Metadata_outputType) == "EXACTLY_ONCE") {
             data <- run(context)
             if (!is.null(data)) emitfun(data)
             else emitfun(NA)

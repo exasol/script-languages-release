@@ -13,7 +13,7 @@ exa <- {
     m <- function(f, ...) {
         v <- f(meta, ...)
         msg <- Metadata_checkException(meta)
-        if (!is.null(msg)) stop(paste("F-UDF.CL.R-23",msg,sep="")) else v
+        if (!is.null(msg)) stop(paste("F-UDF.CL.SL.R-1061",msg,sep="")) else v
     }
     mo <- list()
     mo[["database_name"]] = m(Metadata_databaseName)
@@ -71,7 +71,7 @@ exa <- {
     import_script <- function(script) {
         v <- Metadata_moduleContent(meta, script)
         msg <- Metadata_checkException(meta)
-        if (!is.null(msg)) stop(paste("F-UDF.CL.R-24",msg,sep=""))
+        if (!is.null(msg)) stop(paste("F-UDF.CL.SL.R-1062",msg,sep=""))
         else v
     }
     ret <- list(meta = mo)
@@ -91,7 +91,7 @@ exa <- {
         wrapper <- Metadata_connectionInformation(meta, connection_name)
         msg <- Metadata_checkException(meta)
         if (!is.null(msg)) {
-            stop(paste("F-UDF.CL.R-58",msg,sep=""))
+            stop(paste("F-UDF.CL.SL.R-1063",msg,sep=""))
         }
         res <- list()
         res[["type"]] = ConnectionInformationWrapper_copyKind(wrapper)

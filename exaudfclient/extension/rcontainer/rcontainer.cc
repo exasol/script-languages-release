@@ -22,6 +22,7 @@ public:
     void shutdown();
     bool run();
     const char* singleCall(single_call_function_id_e fn,  const ExecutionGraph::ScriptDTO& args, string& calledUndefinedSingleCall);
+
 private:
     bool m_checkOnly;
 };
@@ -32,14 +33,21 @@ RVM::RVM(bool checkOnly) {
     } catch (std::exception& err) {
         lock_guard<mutex> lock(exception_msg_mtx);
         exception_msg = "F-UDF-CL-SL-R-1000: "+std::string(err.what());
+    } catch (...) {
+        lock_guard<mutex> lock(exception_msg_mtx);
+        exception_msg = "F-UDF-CL-SL-R-1064: R crashed for unknown reason";
     }
 }
+
 bool RVM::run() {
     try {
         return m_impl->run();
     } catch (std::exception& err) {
         lock_guard<mutex> lock(exception_msg_mtx);
         exception_msg = "F-UDF-CL-SL-R-1001: "+std::string(err.what());
+    } catch (...) {
+        lock_guard<mutex> lock(exception_msg_mtx);
+        exception_msg = "F-UDF-CL-SL-R-1065: R crashed for unknown reason";
     }
     return false;
 }
@@ -50,6 +58,9 @@ const char* RVM::singleCall(single_call_function_id_e fn, const ExecutionGraph::
     } catch (std::exception& err) {
         lock_guard<mutex> lock(exception_msg_mtx);
         exception_msg = "F-UDF-CL-SL-R-1002: "+std::string(err.what());
+    } catch (...) {
+        lock_guard<mutex> lock(exception_msg_mtx);
+        exception_msg = "F-UDF-CL-SL-R-1066: R crashed for unknown reason";
     }
     return strdup("<this is an error>");
 }
@@ -60,6 +71,9 @@ void RVM::shutdown() {
     } catch (std::exception& err) {
         lock_guard<mutex> lock(exception_msg_mtx);
         exception_msg = "F-UDF-CL-SL-R-1003: "+std::string(err.what());
+    } catch (...) {
+        lock_guard<mutex> lock(exception_msg_mtx);
+        exception_msg = "F-UDF-CL-SL-R-1067: R crashed for unknown reason";
     }
 }
 

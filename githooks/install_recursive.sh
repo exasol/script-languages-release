@@ -1,0 +1,1 @@
+../script-languages/githooks/install_recursive.sh

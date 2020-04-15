@@ -1,0 +1,1 @@
+../script-languages/githooks/update_current_submodules_file.sh

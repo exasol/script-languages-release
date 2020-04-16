@@ -1,0 +1,1 @@
+../script-languages/githooks/prohibit_commit_to_master.sh

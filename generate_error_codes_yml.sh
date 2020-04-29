@@ -67,20 +67,23 @@ function trim(s) { return rtrim(ltrim(s)); }
   cmd="echo \"" cmdout "\" | md5sum | cut -f 1 -d \" \""
   cmd | getline hash
   close(cmd)
-  print "- \"error_code\": \"" error_code "\""
-  print "  \"module\": \"" module "\""
-  print "  \"hash\": \"" hash "\""
-  print "  \"level\": \"" level "\""
-  print "  \"file\": \"" file "\"" 
-  print "  \"line\": \"" line "\"" 
-  print "  \"versions\":" 
-  print "  - \"7.0 alpha 2\""
-  print "  \"deprecated:\": \"false\"" 
-  print "  \"description\":"
-  print "  - \"" trim(cmdout) "\""
-  print "  - \"\""
-  print "  \"recommandations\":"
-  print "  - \"\""
+  print "- error_code: " error_code
+  print "  module: " module
+  print "  hash: " hash
+  print "  level: " level
+  print "  file: " file
+  print "  line: " line
+  print "  versions:" 
+  print "  - 7.0 alpha 2"
+  print "  deprecated: false" 
+  print "  error_message: |"
+  print "    " trim(cmdout)
+  print "  description: |"
+  print "     <description missing>" 
+  print "  possible_causes:"
+  print "  -"
+  print "  recommandations:"
+  print "  -"
 }
 '
 
@@ -88,5 +91,4 @@ echo $new_error_codes \
   | tr " " "\n" \
   | tr "|" " " \
   | tr ":" " " \
-  | awk "$awkcommand" \
-#  | xargs -n 1 -I {} echo "bash -c '{}'"
+  | awk "$awkcommand" >> error_codes.yml

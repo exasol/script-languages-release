@@ -55,7 +55,7 @@
   possible_causes:
   - Unknown
   recommandations:
-  - Please contact the support and include all session logs and the source code of the UDFs
+  - Please contact the support and include all session logs, this error message and the source code of the UDFs
 - error_code: F-UDF-CL-LIB-1003
   module: UDF-CL-LIB
   hash: a565ae93c3e8c6b6ffdd48049444d91f
@@ -72,7 +72,7 @@
   possible_causes:
   - Unknown
   recommandations:
-  - Please contact the support and include all session logs and the source code of the UDFs
+  - Please contact the support and include all session logs, this error message and the source code of the UDFs
 - error_code: F-UDF-CL-LIB-1004
   module: UDF-CL-LIB
   hash: 402cd58f85f755f5b8a1adee78189809
@@ -83,13 +83,13 @@
   - 7.0 alpha 2
   deprecated: false
   error_message: |
-    exchandler.setException(response.close().exception_message().c_str()); else exchandler.setException(F-UDF-CL-LIB-1004: Connection closed by server); return false;
+    Connection closed by server
   description: |
-     <description missing>
+    The database closed the connection during UDFClient initialization.
   possible_causes:
-  -
+  - Probably, occured an error during the query processing  and the database decided to abort the query and close the connection.
   recommandations:
-  -
+  - Please contact the support and include all session logs, this error message and the source code of the UDFs
 - error_code: F-UDF-CL-LIB-1005
   module: UDF-CL-LIB
   hash: 05502f2e5c3420a25a7da554cb09f842
@@ -100,13 +100,13 @@
   - 7.0 alpha 2
   deprecated: false
   error_message: |
-    if (response.type() != MT_INFO) { exchandler.setException(F-UDF-CL-LIB-1005: Wrong message type, should be MT_INFO got + convert_message_type_to_string(response.type()));
+    Wrong message type, should be MT_INFO got <message_type>
   description: |
-     <description missing>
+    For an unknown reason the Database sent a message with wrong message type. This should not happen in normal operations!!!
   possible_causes:
-  -
+  - Bug in either the UDFClient or the Database
   recommandations:
-  -
+  - Please contact the support and include all session logs, this error message and the source code of the UDFs
 - error_code: W-UDF-CL-LIB-1006
   module: UDF-CL-LIB
   hash: 45b45fd111affd92344150f3e9d3cbd6
@@ -117,13 +117,18 @@
   - 7.0 alpha 2
   deprecated: false
   error_message: |
-    #ifdef SWIGVM_LOG_CLIENT cerr << W-UDF-CL-LIB-1006: Failed to set memory limit << endl; #else
+    Failed to set memory limit
   description: |
-     <description missing>
+    WARNING! You are running a debug build of the UDFClient. 
+    Your client failed to set the memory limit with setrlimit(RLIMIT_RSS,...), 
+    This might be the correct behavior in your situtation, depending were you run the client.
+    In a debug build this case doesn't end the execution of the program,
+    but if the same problems happens with a release build an exception with
+    error code F-UDF-CL-LIB-1007 will be thrown.
   possible_causes:
-  -
+  - For possible reasons why setrlimit can fail, please consult the man page of setrlimit (https://linux.die.net/man/2/setrlimit)
   recommandations:
-  -
+  - Check your execution environment for the UDFClient
 - error_code: F-UDF-CL-LIB-1007
   module: UDF-CL-LIB
   hash: 0b5840333382f639e8c2cf5f2d97421f
@@ -134,13 +139,14 @@
   - 7.0 alpha 2
   deprecated: false
   error_message: |
-    #else throw SWIGVM::exception(F-UDF-CL-LIB-1007: Failed to set memory limit); #endif
+    Failed to set memory limit
   description: |
-     <description missing>
+    Your client failed to set the memory limit with setrlimit(RLIMIT_RSS,...).
+    This should not happen in normal operations!!!
   possible_causes:
-  -
+  - For possible reasons why setrlimit can fail, please consult the man page of setrlimit (https://linux.die.net/man/2/setrlimit)
   recommandations:
-  -
+  - Please contact the support and include all session logs, this error message and the source code of the UDFs
 - error_code: W-UDF-CL-LIB-1008
   module: UDF-CL-LIB
   hash: 18a258744a21f8d4f67cd7ff1d01d53d

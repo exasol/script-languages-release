@@ -121,7 +121,7 @@
   description: |
     WARNING! You are running a debug build of the UDFClient. 
     Your client failed to set the memory limit with setrlimit(RLIMIT_RSS,...), 
-    This might be the correct behavior in your situtation, depending were you run the client.
+    This might be the correct behavior in your situtation, depending on where you run the client.
     In a debug build this case doesn't end the execution of the program,
     but if the same problems happens with a release build an exception with
     error code F-UDF-CL-LIB-1007 will be thrown.
@@ -142,7 +142,7 @@
     Failed to set memory limit
   description: |
     Your client failed to set the memory limit with setrlimit(RLIMIT_RSS,...).
-    This should not happen in normal operations!!!
+    This should not happen in normal operations!!! Check your execution environment.
   possible_causes:
   - For possible reasons why setrlimit can fail, please consult the man page of setrlimit (https://linux.die.net/man/2/setrlimit)
   recommandations:
@@ -157,13 +157,18 @@
   - 7.0 alpha 2
   deprecated: false
   error_message: |
-    #ifdef SWIGVM_LOG_CLIENT cerr << W-UDF-CL-LIB-1008: Failed to set core dump size limit << endl; #else
+    Failed to set core dump size limit
   description: |
-     <description missing>
+    WARNING! You are running a debug build of the UDFClient. 
+    Your client failed to set the core dump size limit with setrlimit(RLIMIT_CORE,...), 
+    This might be the correct behavior in your situtation, depending on where you run the client.
+    In a debug build this case doesn't end the execution of the program,
+    but if the same problems happens with a release build an exception with
+    error code F-UDF-CL-LIB-1009 will be thrown.
   possible_causes:
-  -
+  - For possible reasons why setrlimit can fail, please consult the man page of setrlimit (https://linux.die.net/man/2/setrlimit)
   recommandations:
-  -
+  - Please contact the support and include all session logs, this error message and the source code of the UDFs
 - error_code: F-UDF-CL-LIB-1009
   module: UDF-CL-LIB
   hash: b7ca17586922af83ff1e3c597d26b31f
@@ -174,13 +179,14 @@
   - 7.0 alpha 2
   deprecated: false
   error_message: |
-    #else throw SWIGVM::exception(F-UDF-CL-LIB-1009: Failed to set core dump size limit); #endif
+    Failed to set core dump size limit
   description: |
-     <description missing>
+    Your client failed to set the memory limit with setrlimit(RLIMIT_CORE,...).
+    This should not happen in normal operations!!! Check your execution environment.
   possible_causes:
-  -
+  - For possible reasons why setrlimit can fail, please consult the man page of setrlimit (https://linux.die.net/man/2/setrlimit)
   recommandations:
-  -
+  - Please contact the support and include all session logs, this error message and the source code of the UDFs
 - error_code: W-UDF-CL-LIB-1010
   module: UDF-CL-LIB
   hash: 6cd61c05ba57636e1c9066e9b2d16398

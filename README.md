@@ -95,11 +95,10 @@ ALTER SESSION SET SCRIPT_LANGUAGES='<LANGUAGE_ALIAS>=localzmq+protobuf:///<bucke
 
 ## How to customize an existing flavor?
 
-To customize an existing flavor you can add your specific needs to the Dockerfile in the `flavors/<flavor>/flavor-customization` directory. The easiest way to extend a flavor is by installing additional packages.
-Under `flavors/<flavor>/flavor-customization/packages` you can find files which list packages which will 
-get installed. If you want to change or add other things you are able to add Dockerfile commands to
-`flavors/<flavor>/flavor-customization/Dockerfile`. Please follow the instruction in in there, if you add 
-Dockerfile commands. 
+To customize an existing flavor you can add your specific needs to the Dockerfile in the `flavors/<flavor>/flavor_customization` directory. The easiest way to extend a flavor is by installing additional packages.
+Under `flavors/<flavor>/flavor_customization/packages` you can find files which list packages which will 
+get installed, for an example look [here](flavors/python3-ds-cuda-preview-EXASOL-6.1.0/flavor_customization/packages). If you want to change or add other things you are able to add Dockerfile commands to
+`flavors/<flavor>/flavor-customization/Dockerfile`, for an example look [here](flavors/python3-ds-cuda-preview-EXASOL-6.1.0/flavor_customization/Dockerfile). Please follow the instruction in in there, if you add Dockerfile commands. 
 
 Your changes on the file system will then be merged with the file system of the script client
 which contains all necessary libraries that are required to run the script language runtime.
@@ -127,7 +126,7 @@ Note: The tool `exaslct` tries to reuse as much as possible of the previous buil
 ## Force a rebuild
 
 Sometimes it is necessary to force a rebuild of a flavor. 
-A typical reason is to update the dependencies in order to
+A typical reason to update the dependencies is to
 fix bugs and security vulnerabilities in the installed dependencies.
 To force a rebuild the command line option --force-rebuild can be used 
 with basically all commands of ./exaslct, except the clean commands.

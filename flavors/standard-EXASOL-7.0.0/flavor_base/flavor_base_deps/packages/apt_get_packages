@@ -1,4 +1,4 @@
-software-properties-common|0.96.24.32.12
+software-properties-common|0.96.24.32.13
 coreutils|8.28-1ubuntu1
 locales|2.27-3ubuntu1
 unzip|6.0-21ubuntu1
@@ -42,7 +42,7 @@ python-numpy|1:1.13.3-2ubuntu1
 python-pandas|0.22.0-4
 python-redis|2.10.6-2ubuntu1
 python-scipy|0.19.1-2ubuntu1
-python-boto|2.44.0-1ubuntu2.18.04.0
+python-boto|2.44.0-1ubuntu2.18.04.1
 python-pycurl|7.43.0.1-0.2
 python-requests|2.18.4-2ubuntu0.1
 python-paramiko|2.0.0-1ubuntu1.2
@@ -67,7 +67,7 @@ python3-jinja2|2.10-1ubuntu0.18.04.1
 python3-cffi|1.11.5-1
 python3-docutils|0.14+dfsg-3
 python3-requests|2.18.4-2ubuntu0.1
-python3-boto|2.44.0-1ubuntu2.18.04.0
+python3-boto|2.44.0-1ubuntu2.18.04.1
 python3-ujson|1.35-2
 python3-paramiko|2.0.0-1ubuntu1.2
 r-base|3.4.4-1ubuntu1

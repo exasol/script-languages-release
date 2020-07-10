@@ -97,8 +97,8 @@ ALTER SESSION SET SCRIPT_LANGUAGES='<LANGUAGE_ALIAS>=localzmq+protobuf:///<bucke
 
 To customize an existing flavor you can add your specific needs to the Dockerfile in the `flavors/<flavor>/flavor_customization` directory. The easiest way to extend a flavor is by installing additional packages.
 Under `flavors/<flavor>/flavor_customization/packages` you can find files which list packages which will 
-get installed, for an example look [here](flavors/flavors/standard-EXASOL-7.0.0/flavor_customization/packages). If you want to change or add other things you are able to add Dockerfile commands to
-`flavors/<flavor>/flavor-customization/Dockerfile`, for an example look [here](flavors/flavors/standard-EXASOL-7.0.0/flavor_customization/Dockerfile). Please follow the instruction in in there, if you add Dockerfile commands. 
+get installed, for an example look [here](flavors/standard-EXASOL-7.0.0/flavor_customization/packages). If you want to change or add other things you are able to add Dockerfile commands to
+`flavors/<flavor>/flavor-customization/Dockerfile`, for an example look [here](flavors/standard-EXASOL-7.0.0/flavor_customization/Dockerfile). Please follow the instruction in in there, if you add Dockerfile commands. 
 
 Your changes on the file system will then be merged with the file system of the script client
 which contains all necessary libraries that are required to run the script language runtime.

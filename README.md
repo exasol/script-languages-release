@@ -47,7 +47,7 @@ Further, prerequisites might be necessary for specific tasks. These are listed u
 If you only want to use pre-built containers, you can find them in the [release section](https://github.com/exasol/script-languages-release/releases) of this repository. However, if you want build custom container you need to clone this repository.
 
 ```bash
-$ git clone --recurse-submodules https://github.com/exasol/script-languages-release.git 
+git clone --recurse-submodules https://github.com/exasol/script-languages-release.git 
 ```
 
 Note: The option --recurse-submodules clones the submodule [script-languages](https://github.com/exasol/script-languages)
@@ -57,18 +57,20 @@ Note: The option --recurse-submodules clones the submodule [script-languages](ht
 Choose a flavor. Currently we have several pre-defined flavors available, e.g., `mini-EXASOL-6.0.0`, and `standard-EXASOL-6.1.0`.
 This project supports different versions of script language environments with different libraries and languages.
 We call these versions _flavors_. The pre-defined flavors can be modified and extended to create customized flavors.
-Each pre-defined flavor has its own set of Dockerfiles in a corresponding subfolder of [flavors](flavors).
+Each pre-defined flavor has its own set of Dockerfiles in a corresponding sub directory of [flavors](flavors). 
+
+**For more details about the flavors please checkout their [documentation](flavors/README.md).**
 
 Create the language container and export it to the local file system
 
 ```bash
-$ ./exaslct export --flavor-path=flavors/<flavor-name> --export-path <export-path>
+./exaslct export --flavor-path=flavors/<flavor-name> --export-path <export-path>
 ```
 
 or upload it directly into your BuckerFS (currently http only, https follows soon)
 
 ```bash
-$ ./exaslct upload --flavor-path=flavors/<flavor-name> --database-host <hostname-or-ip> --bucketfs-port <port> \ 
+./exaslct upload --flavor-path=flavors/<flavor-name> --database-host <hostname-or-ip> --bucketfs-port <port> \ 
                    --bucketfs-username w --bucketfs-password <password>  --bucketfs-name <bucketfs-name> \
                    --bucket-name <bucket-name> --path-in-bucket <path/in/bucket>
 ```
@@ -81,7 +83,7 @@ that can be used to activate the script language container in the database.
 If you uploaded a container manually you can generate the language activation statement with
 
 ```bash
-$ ./exaslct generate-language-activation --flavor-path=flavors/<flavor-name> --bucketfs-name <bucketfs-name> \
+./exaslct generate-language-activation --flavor-path=flavors/<flavor-name> --bucketfs-name <bucketfs-name> \
                                          --bucket-name <bucket-name> --path-in-bucket <path/in/bucket> --container-name <container-name>
 ```
 
@@ -89,7 +91,7 @@ where \<container-name> is the name of the uploaded archive without its file ext
 
 This command will print a SQL statement to activate the language similiar to the following one:
 
-```
+```bash
 ALTER SESSION SET SCRIPT_LANGUAGES='<LANGUAGE_ALIAS>=localzmq+protobuf:///<bucketfs-name>/<bucket-name>/<path-in-bucket>/<container-name>?lang=<language>#buckets/<bucketfs-name>/<bucket-name>/<path-in-bucket>/<container-name>/exaudf/exaudfclient[_py3]';
 ```
 
@@ -99,6 +101,9 @@ To customize an existing flavor you can add your specific needs to the Dockerfil
 Under `flavors/<flavor>/flavor_customization/packages` you can find files which list packages which will 
 get installed, for an example look [here](flavors/standard-EXASOL-7.0.0/flavor_customization/packages). If you want to change or add other things you are able to add Dockerfile commands to
 `flavors/<flavor>/flavor-customization/Dockerfile`, for an example look [here](flavors/standard-EXASOL-7.0.0/flavor_customization/Dockerfile). Please follow the instruction in in there, if you add Dockerfile commands. 
+
+**Note: For more details about the flavors please checkout their [documentation](flavors/README.md).**
+
 
 Your changes on the file system will then be merged with the file system of the script client
 which contains all necessary libraries that are required to run the script language runtime.
@@ -110,13 +115,13 @@ which are necessary for the script client they will be restored in the final con
 After you finished your changes, rebuild with 
 
 ```bash
-$ ./exaslct export --flavor-path=flavors/<flavor-name>
+./exaslct export --flavor-path=flavors/<flavor-name>
 ```
 
 or upload it directly into your BuckerFS (currently http only, https follows soon)
 
 ```bash
-$ ./exaslct upload --flavor-path=flavors/<flavor-name> --database-host <hostname-or-ip> --bucketfs-port <port> \ 
+./exaslct upload --flavor-path=flavors/<flavor-name> --database-host <hostname-or-ip> --bucketfs-port <port> \ 
                    --bucketfs-username w --bucketfs-password <password>  --bucketfs-name <bucketfs-name> \
                    --bucket-name <bucket-name> --path-in-bucket <path/in/bucket>
 ```
@@ -207,7 +212,7 @@ You can specify the repository name, as below:
 To test the script language container you can execute the following command:
 
 ```bash
-$ ./exaslct run-db-test --flavor-path=flavors/<flavor-name>
+./exaslct run-db-test --flavor-path=flavors/<flavor-name>
 ```
 
 **Note: you need docker in privileged mode to execute the tests**

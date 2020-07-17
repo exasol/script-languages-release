@@ -3,6 +3,7 @@
 ###### Please note that this is an open source project which is officially supported by EXASOL. For any question, you can contact our support team.
 
 ## Table of Contents
+
 1. [About](#about)
 2. [Prerequisites](#prerequisites)
 3. [Getting Started](#getting-started)
@@ -15,6 +16,7 @@
 10. [Cleaning up after your are finished](#cleaning-up-after-your-are-finished)
 
 ## About
+
 This project contains script language containers for user defined functions (UDF's) 
 that can be used in the EXASOL database (version 6.0.0 or later). 
 A script language container consists of a Linux container with a complete linux distribution and all required libraries, 
@@ -26,7 +28,9 @@ Pre-built containers can you find in the [release section](https://github.com/ex
 If you are interested in the script client you find more details [here](https://github.com/exasol/script-languages/blob/master/exaudfclient/base/README.md).
 
 ## Prerequisites
+
 In order to build this project, you need:
+
 * Linux or Mac OS X (experimental) with bash and tar
 * Docker >= 17.05 [multi-stage builds required](https://docs.docker.com/develop/develop-images/multistage-build/)
 * Python >=3.6 with pip
@@ -43,7 +47,7 @@ Further, prerequisites might be necessary for specific tasks. These are listed u
 If you only want to use pre-built containers, you can find them in the [release section](https://github.com/exasol/script-languages-release/releases) of this repository. However, if you want build custom container you need to clone this repository.
 
 ```bash
-$ git clone --recurse-submodules https://github.com/exasol/script-languages-release.git 
+git clone --recurse-submodules https://github.com/exasol/script-languages-release.git 
 ```
 
 Note: The option --recurse-submodules clones the submodule [script-languages](https://github.com/exasol/script-languages)
@@ -53,18 +57,20 @@ Note: The option --recurse-submodules clones the submodule [script-languages](ht
 Choose a flavor. Currently we have several pre-defined flavors available, e.g., `mini-EXASOL-6.0.0`, and `standard-EXASOL-6.1.0`.
 This project supports different versions of script language environments with different libraries and languages.
 We call these versions _flavors_. The pre-defined flavors can be modified and extended to create customized flavors.
-Each pre-defined flavor has its own set of Dockerfiles in a corresponding subfolder of [flavors](flavors).
+Each pre-defined flavor has its own set of Dockerfiles in a corresponding sub directory of [flavors](flavors). 
+
+**For more details about the flavors please checkout their [documentation](flavors/README.md).**
 
 Create the language container and export it to the local file system
 
 ```bash
-$ ./exaslct export --flavor-path=flavors/<flavor-name> --export-path <export-path>
+./exaslct export --flavor-path=flavors/<flavor-name> --export-path <export-path>
 ```
 
 or upload it directly into your BuckerFS (currently http only, https follows soon)
 
 ```bash
-$ ./exaslct upload --flavor-path=flavors/<flavor-name> --database-host <hostname-or-ip> --bucketfs-port <port> \ 
+./exaslct upload --flavor-path=flavors/<flavor-name> --database-host <hostname-or-ip> --bucketfs-port <port> \ 
                    --bucketfs-username w --bucketfs-password <password>  --bucketfs-name <bucketfs-name> \
                    --bucket-name <bucket-name> --path-in-bucket <path/in/bucket>
 ```
@@ -77,7 +83,7 @@ that can be used to activate the script language container in the database.
 If you uploaded a container manually you can generate the language activation statement with
 
 ```bash
-$ ./exaslct generate-language-activation --flavor-path=flavors/<flavor-name> --bucketfs-name <bucketfs-name> \
+./exaslct generate-language-activation --flavor-path=flavors/<flavor-name> --bucketfs-name <bucketfs-name> \
                                          --bucket-name <bucket-name> --path-in-bucket <path/in/bucket> --container-name <container-name>
 ```
 
@@ -85,48 +91,19 @@ where \<container-name> is the name of the uploaded archive without its file ext
 
 This command will print a SQL statement to activate the language similiar to the following one:
 
-```
-ALTER SESSION SET SCRIPT_LANGUAGES='<LANGUAGE_ALIAS>=localzmq+protobuf:///<bucketfs-name>/<bucket-name>/<path-in-bucket>/<container-name>?lang=<language>#buckets/<bucketfs-name>/<bucket-name>/<path-in-bucket>/<container-name>/exaudf/exaudfclienti[_py3]';
+```bash
+ALTER SESSION SET SCRIPT_LANGUAGES='<LANGUAGE_ALIAS>=localzmq+protobuf:///<bucketfs-name>/<bucket-name>/<path-in-bucket>/<container-name>?lang=<language>#buckets/<bucketfs-name>/<bucket-name>/<path-in-bucket>/<container-name>/exaudf/exaudfclient[_py3]';
 ```
 
 ## How to customize an existing flavor?
 
-To customize an existing flavor you can add your specific needs to the Dockerfile in the flavor-customization directory. 
-You can run commands with:
+To customize an existing flavor you can add your specific needs to the Dockerfile in the `flavors/<flavor>/flavor_customization` directory. The easiest way to extend a flavor is by installing additional packages.
+Under `flavors/<flavor>/flavor_customization/packages` you can find files which list packages which will 
+get installed, for an example look [here](flavors/standard-EXASOL-7.0.0/flavor_customization/packages). If you want to change or add other things you are able to add Dockerfile commands to
+`flavors/<flavor>/flavor-customization/Dockerfile`, for an example look [here](flavors/standard-EXASOL-7.0.0/flavor_customization/Dockerfile). Please follow the instruction in in there, if you add Dockerfile commands. 
 
-```Dockerfile
-RUN <command>
-```
+**Note: For more details about the flavors please checkout their [documentation](flavors/README.md).**
 
-For example, to install new software you can use:
-
-```Dockerfile
-RUN apt-get -y update && \
-    apt-get install \<packages> && \
-    apt-get -y clean && \
-    apt-get -y autoremove
-```
-    
-You need to run apt-get update, because any previous step clears the cache of apt to keep the docker images small. 
-The commands 
-
-```Dockerfile
-apt-get -y clean and apt-get -y autoremove 
-```
-
-clear the cache.
-
-You can add to the flavor-customization directory additional files which you can use in the Dockerfile via:
-
-```Dockerfile
-COPY flavor-customization/<your-file-or-directory> <destination>
-```
-
-or 
-
-```Dockerfile
-ADD flavor-customization/<your-file-or-directory> <destination>
-```
 
 Your changes on the file system will then be merged with the file system of the script client
 which contains all necessary libraries that are required to run the script language runtime.
@@ -138,13 +115,13 @@ which are necessary for the script client they will be restored in the final con
 After you finished your changes, rebuild with 
 
 ```bash
-$ ./exaslct export --flavor-path=flavors/<flavor-name>
+./exaslct export --flavor-path=flavors/<flavor-name>
 ```
 
 or upload it directly into your BuckerFS (currently http only, https follows soon)
 
 ```bash
-$ ./exaslct upload --flavor-path=flavors/<flavor-name> --database-host <hostname-or-ip> --bucketfs-port <port> \ 
+./exaslct upload --flavor-path=flavors/<flavor-name> --database-host <hostname-or-ip> --bucketfs-port <port> \ 
                    --bucketfs-username w --bucketfs-password <password>  --bucketfs-name <bucketfs-name> \
                    --bucket-name <bucket-name> --path-in-bucket <path/in/bucket>
 ```
@@ -154,7 +131,7 @@ Note: The tool `exaslct` tries to reuse as much as possible of the previous buil
 ## Force a rebuild
 
 Sometimes it is necessary to force a rebuild of a flavor. 
-A typical reason is to update the dependencies in order to
+A typical reason to update the dependencies is to
 fix bugs and security vulnerabilities in the installed dependencies.
 To force a rebuild the command line option --force-rebuild can be used 
 with basically all commands of ./exaslct, except the clean commands.
@@ -182,6 +159,7 @@ otherwise they would not proceed.
 If you want to build several different build-stages at once, you can repeat the --goal option.
 
 The following build-stage are currently available:
+
 * udfclient-deps
 * language-deps
 * build-deps
@@ -234,7 +212,7 @@ You can specify the repository name, as below:
 To test the script language container you can execute the following command:
 
 ```bash
-$ ./exaslct run-db-test --flavor-path=flavors/<flavor-name>
+./exaslct run-db-test --flavor-path=flavors/<flavor-name>
 ```
 
 **Note: you need docker in privileged mode to execute the tests**

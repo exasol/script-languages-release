@@ -1,7 +1,7 @@
 FROM {{udfclient_deps}}
 
 COPY language_deps/packages /build_info/packages/language_deps
-RUN /scripts/install_via_apt.pl --file /build_info/packages/language_deps/apt_get_packages --with-versions
+RUN /scripts/install_scripts/install_via_apt.pl --file /build_info/packages/language_deps/apt_get_packages --with-versions
 
 ENV PYTHON2_PREFIX /usr
 ENV PYTHON2_VERSION python2.7

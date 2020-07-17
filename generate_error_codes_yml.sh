@@ -27,7 +27,7 @@ function trim(s) { return rtrim(ltrim(s)); }
   print "  \"description\":"
   print "  - \"" trim(cmdout) "\""
   print "  - \"\""
-  print "  \"recommandations\":"
+  print "  \"recommendations\":"
   print "  - \"\""
 }
 '

@@ -26,7 +26,7 @@ COPY flavor_customization/packages/python2_pip_packages /build_info/packages/fla
 RUN /scripts/install_scripts/install_via_pip.pl --file /build_info/packages/flavor_customization/python2_pip_packages --python-binary python2 --with-versions --allow-no-version
 
 COPY flavor_customization/packages/r_cran_packages /build_info/packages/flavor_customization
-RUN /scripts/install_scripts/install_via_r_remotes.pl --file /build_info/packages/flavor_customization/r_cran_packages --rscript-binary Rscript --with-versions --allow-no-version
+RUN /scripts/install_scripts/install_via_r_versions.pl --file /build_info/packages/flavor_customization/r_cran_packages --rscript-binary Rscript --with-versions --allow-no-version
 
 ##########################################################################
 ##########################################################################

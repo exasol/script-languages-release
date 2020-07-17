@@ -27,7 +27,7 @@ RUN /scripts/install_scripts/install_via_r_remotes.pl --file /build_info/package
 # Below this text you can add any Dockerfile commands except of FROM.            
 # However only commands which change the filesystem will be              
 # reflected to the final script-language container.                      
-# We recommand to use only RUN, COPY and ADD. For example, WORKDIR, USER 
+# We recommend to use only RUN, COPY and ADD. For example, WORKDIR, USER 
 # and ENV will be not carried over into the final container. For more 
 # information about Dockerfile commands, please check the reference 
 # https://docs.docker.com/engine/reference/builder/#dockerfile-reference 

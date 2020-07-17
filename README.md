@@ -220,7 +220,7 @@ To test the script language container you can execute the following command:
 ## Cleaning up after your are finished
 
 The creation of scripting language container creates or downloads several docker images
-which can consume a lot of disk space. Therefore, we recommand to remove the Docker images
+which can consume a lot of disk space. Therefore, we recommend to remove the Docker images
 of a flavor after working with them.
 
 This can be done as follows:

@@ -21,7 +21,7 @@ RUN /scripts/install_scripts/install_via_apt.pl --file /build_info/packages/buil
     apt-get -y clean && \
     apt-get -y autoremove
 	  
-RUN curl -L -o swig-2.0.4.tar.gz prdownloads.sourceforge.net/swig/swig-2.0.4.tar.gz && \
+RUN curl -L -o swig-2.0.4.tar.gz https://storage.googleapis.com/exasol-script-languages-dependencies/swig-2.0.4.tar.gz && \
     tar zxf swig-2.0.4.tar.gz && \
     (cd swig-2.0.4 && ./configure --prefix=/usr && make && make install) && \
     rm -rf swig-2.0.4 swig-2.0.4.tar.gz

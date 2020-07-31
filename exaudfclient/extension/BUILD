@@ -131,10 +131,10 @@ cc_binary(
 
 EXAUDFCLIENT_GENRULE_SRCS=["@script_languages//:libexaudflib_complete.so",
                            "@script_languages//:wrapper_generator_bin",
-                           "@script_languages//:exaudfclient.template.sh"]+\
+                           "//:exaudfclient.template.sh"]+\
                           DEBUG_UDFCLIENT_WRAPPER_SCRIPTS
 
-SLOW_WRAPPER_BINARY_PY2="""$(location @script_languages//:wrapper_generator_bin) "$(location exaudfclient_bin)" "$(location exaudfclient)" "$(location @script_languages//:exaudfclient.template.sh)" """
+SLOW_WRAPPER_BINARY_PY2="""$(location @script_languages//:wrapper_generator_bin) "$(location exaudfclient_bin)" "$(location exaudfclient)" "$(location //:exaudfclient.template.sh)" """
 FAST_BINARY_PY2="""cp "$(location exaudfclient_bin)" "$(location exaudfclient)" """
 CREATE_BINARY_PY2_SCRIPT=select({
         "@script_languages//:fast_binary": FAST_BINARY_PY2,
@@ -149,7 +149,7 @@ genrule(
     output_to_bindir = True
 )
 
-SLOW_WRAPPER_BINARY_DLOPEN_PY2="""$(location @script_languages//:wrapper_generator_bin) "$(location exaudfclient_dlopen_bin)" "$(location exaudfclient_dlopen)" "$(location @script_languages//:exaudfclient.template.sh)" """
+SLOW_WRAPPER_BINARY_DLOPEN_PY2="""$(location @script_languages//:wrapper_generator_bin) "$(location exaudfclient_dlopen_bin)" "$(location exaudfclient_dlopen)" "$(location //:exaudfclient.template.sh)" """
 FAST_BINARY_DLOPEN_PY2="""cp "$(location exaudfclient_dlopen_bin)" "$(location exaudfclient_dlopen)" """
 CREATE_BINARY_DLOPEN_PY2_SCRIPT=select({
         "@script_languages//:fast_binary": FAST_BINARY_DLOPEN_PY2,
@@ -164,7 +164,7 @@ genrule(
     output_to_bindir = True
 )
 
-SLOW_WRAPPER_BINARY_PY3="""$(location @script_languages//:wrapper_generator_bin) "$(location exaudfclient_py3_bin)" "$(location exaudfclient_py3)" "$(location @script_languages//:exaudfclient.template.sh)" """
+SLOW_WRAPPER_BINARY_PY3="""$(location @script_languages//:wrapper_generator_bin) "$(location exaudfclient_py3_bin)" "$(location exaudfclient_py3)" "$(location //:exaudfclient.template.sh)" """
 FAST_BINARY_PY3="""cp "$(location exaudfclient_py3_bin)" "$(location exaudfclient_py3)" """
 CREATE_BINARY_PY3_SCRIPT=select({
         "@script_languages//:fast_binary": FAST_BINARY_PY3,
@@ -180,7 +180,7 @@ genrule(
 )
 
 
-SLOW_WRAPPER_BINARY_DLOPEN_PY3="""$(location @script_languages//:wrapper_generator_bin) "$(location exaudfclient_dlopen_py3_bin)" "$(location exaudfclient_dlopen_py3)" "$(location @script_languages//:exaudfclient.template.sh)" """
+SLOW_WRAPPER_BINARY_DLOPEN_PY3="""$(location @script_languages//:wrapper_generator_bin) "$(location exaudfclient_dlopen_py3_bin)" "$(location exaudfclient_dlopen_py3)" "$(location //:exaudfclient.template.sh)" """
 FAST_BINARY_DLOPEN_PY3="""cp "$(location exaudfclient_dlopen_py3_bin)" "$(location exaudfclient_dlopen_py3)" """
 CREATE_BINARY_DLOPEN_PY3_SCRIPT=select({
         "@script_languages//:fast_binary": FAST_BINARY_DLOPEN_PY3,

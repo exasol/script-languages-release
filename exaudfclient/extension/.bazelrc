@@ -1,12 +1,12 @@
-build --copt='-std=c++14' --force_pic --action_env=PROTOBUF_BIN --action_env=PROTOBUF_LIBRARY_PREFIX --action_env=PROTOBUF_INCLUDE_PREFIX 
+build --copt='-std=c++14' --force_pic --action_env=PROTOBUF_BIN --action_env=PROTOBUF_LIBRARY_PREFIX --action_env=PROTOBUF_INCLUDE_PREFIX --copt=-fstack-protector-strong --copt=-fomit-frame-pointer --copt=-ffunction-sections --copt=-fdata-sections --copt="-U_FORTIFY_SOURCE" 
 # TODO add environment variables for R libraries
 build:benchmark --define benchmark=true
 build:r --define r=true
 build:java  --define java=true --action_env=JAVA_PREFIX
 build:python --define python=true  --action_env=PYTHON2_SYSPATH --action_env=PYTHON2_PREFIX --action_env=PYTHON2_VERSION --action_env=NUMPY_PREFIX --action_env=PYTHON3_SYSPATH --action_env=PYTHON3_PREFIX --action_env=PYTHON3_VERSION --action_env=EXAUDF_BASEPATH
 
-build:custom_libexaudflib_path --copt='-DCUSTOM_LIBEXAUDFLIB_PATH="/exaudf/external/libexaudflib_complete.so"'
-build:custom_libexaudflib_debug_path --copt='-DCUSTOM_LIBEXAUDFLIB_PATH="/exaudf_debug/external/libexaudflib_complete.so"'
+build:custom_libexaudflib_path --copt='-DCUSTOM_LIBEXAUDFLIB_PATH="/exaudf/external/script-languages/libexaudflib_complete.so"'
+build:custom_libexaudflib_debug_path --copt='-DCUSTOM_LIBEXAUDFLIB_PATH="/exaudf_debug/external/script-languages/libexaudflib_complete.so"'
 
 build:fast-binary-dlmopen-py2 --define binary_type=fast_binary //:exaudfclient
 build:fast-binary-dlmopen-py3 --define binary_type=fast_binary //:exaudfclient_py3
@@ -25,6 +25,7 @@ build:slow-wrapper-both --config=slow-wrapper-py2 --config=slow-wrapper-py3
 
 #TODO test linkopts="-flto"
 build:optimize --copt="-DNDEBUG" --copt="-O3" --copt="-flto"
+build:optimize-r --define r-unroll-loops=true --config=r
 build:debug-base --copt="-g" --strip=never
 build:debug-optimized --config=debug-base --config=optimize 
 build:debug-unoptimized --config=debug-base --copt="-O0"

@@ -19,4 +19,6 @@ COPY --from={{flavor_customization}} /build_info /build_info
 RUN ldconfig
 
 COPY --from={{build_run}} /exaudf /exaudf
+COPY --from={{build_run}} /exaudf_debug /exaudf_debug
+COPY --from={{build_run}} /exaudf_debug_optimized /exaudf_debug_optimized
 COPY --from={{build_run}} /build_info /build_info

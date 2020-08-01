@@ -6,7 +6,8 @@ build:java  --define java=true --action_env=JAVA_PREFIX
 build:python --define python=true  --action_env=PYTHON2_SYSPATH --action_env=PYTHON2_PREFIX --action_env=PYTHON2_VERSION --action_env=NUMPY_PREFIX --action_env=PYTHON3_SYSPATH --action_env=PYTHON3_PREFIX --action_env=PYTHON3_VERSION --action_env=EXAUDF_BASEPATH
 
 build:custom_libexaudflib_path --copt='-DCUSTOM_LIBEXAUDFLIB_PATH="/exaudf/external/script_languages/libexaudflib_complete.so"'
-build:custom_libexaudflib_debug_path --copt='-DCUSTOM_LIBEXAUDFLIB_PATH="/exaudf/external/script_languages/libexaudflib_complete.so"'
+build:custom_libexaudflib_debug_path --copt='-DCUSTOM_LIBEXAUDFLIB_PATH="/exaudf_debug/external/script_languages/libexaudflib_complete.so"'
+build:custom_libexaudflib_debug_optimized_path --copt='-DCUSTOM_LIBEXAUDFLIB_PATH="/exaudf_debug_optimized/external/script_languages/libexaudflib_complete.so"'
 
 build:fast-binary-dlmopen-py2 --define binary_type=fast_binary //:exaudfclient
 build:fast-binary-dlmopen-py3 --define binary_type=fast_binary //:exaudfclient_py3
@@ -19,13 +20,16 @@ build:fast-binary-debug-py2 --config=custom_libexaudflib_debug_path --config=fas
 build:fast-binary-debug-py3 --config=custom_libexaudflib_debug_path --config=fast-binary-dlmopen-py3 //:exaudfclient_dlopen_py3
 build:fast-binary-debug-both --config=fast-binary-debug-py2 --config=fast-binary-debug-py3
 
+build:fast-binary-debug-optimized-py2 --config=custom_libexaudflib_debug_optimized_path --config=fast-binary-dlmopen-py2 //:exaudfclient_dlopen
+build:fast-binary-debug-optimized-py3 --config=custom_libexaudflib_debug_optimized_path --config=fast-binary-dlmopen-py3 //:exaudfclient_dlopen_py3
+build:fast-binary-debug-optimized-both --config=fast-binary-debug-optimized-py2 --config=fast-binary-debug-optimized-py3
+
 build:slow-wrapper-py2 --define binary_type=slow_wrapper //:exaudfclient //:exaudfclient_dlopen
 build:slow-wrapper-py3 --define binary_type=slow_wrapper //:exaudfclient_py3 //:exaudfclient_dlopen_py3
 build:slow-wrapper-both --config=slow-wrapper-py2 --config=slow-wrapper-py3 
 
-#TODO test linkopts="-flto"
-build:optimize --copt="-DNDEBUG" --copt="-O3" --copt="-flto"
 build:optimize-r --define r-unroll-loops=true --config=r
+build:optimize --copt="-DNDEBUG" --copt="-O3" --copt="-flto" --config=optimize-r #TODO test linkopts="-flto"
 build:debug-base --copt="-g" --strip=never
 build:debug-optimized --config=debug-base --config=optimize 
 build:debug-unoptimized --config=debug-base --copt="-O0"

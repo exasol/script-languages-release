@@ -9,26 +9,17 @@ COPY --from={{build_deps}} /env /env
 
 RUN ldconfig
 
-RUN mkdir /exaudfclient /exaudf /exaudf/src
+RUN mkdir /exaudfclient
 COPY /exaudfclient /exaudfclient
 
-WORKDIR /exaudfclient/extension
-RUN ["/bin/bash", "-c", "source /env && bash build.sh --config no-tty --config optimize --config python --config java --config optimize-r --config fast-binary-both"]
-RUN cp -r -L bazel-bin/* /exaudf && rm -r /exaudf/external/bazel_tools/
-RUN mkdir -p /exaudf/python/python3/ /exaudf/javacontainer
-RUN ln -s /exaudf/external/script_languages/python/python3/pyextdataframe.so /exaudf/python/python3/pyextdataframe.so
-RUN ln -s /exaudf/external/script_languages/javacontainer/libexaudf.jar /exaudf/javacontainer/libexaudf.jar
-
-
-# These source files is required for the building of the protegrity client
-WORKDIR /exaudfclient/base
-RUN cp debug_message.h exaudfclient.cc exaudflib/exaudflib.cc exaudflib/exaudflib.h exaudflib/zmqcontainer.proto /exaudf/src
-RUN ./test_udfclient.sh /exaudf/exaudfclient
-RUN ./test_udfclient.sh /exaudf/exaudfclient_py3
-
-WORKDIR /exaudf/
+WORKDIR /exaudfclient
+RUN extension/build_in_container.sh "/exaudf" --config no-tty --config optimize --config python --config java --config optimize-r --config fast-binary-both
+RUN extension/build_in_container.sh "/exaudf_debug" --config no-tty --config python --config java --config debug-unoptimized --config fast-binary-debug-both
+RUN extension/build_in_container.sh "/exaudf_debug_optimized" --config no-tty --config python --config java --config debug-optimized --config fast-binary-debug-optimized-both
 
 RUN rm -r /exaudfclient
+
+WORKDIR /exaudf/
 
 COPY --from={{build_deps}} /build_info /build_info
 

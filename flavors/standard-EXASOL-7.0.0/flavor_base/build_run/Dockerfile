@@ -13,6 +13,7 @@ RUN mkdir /exaudfclient
 COPY /exaudfclient /exaudfclient
 
 WORKDIR /exaudfclient
+
 RUN extension/build_in_container.sh "/exaudf" --config no-tty --config optimize --config python --config java --config optimize-r --config fast-binary-both
 RUN extension/build_in_container.sh "/exaudf_debug" --config no-tty --config python --config java --config debug-unoptimized --config fast-binary-debug-both
 RUN extension/build_in_container.sh "/exaudf_debug_optimized" --config no-tty --config python --config java --config debug-optimized --config fast-binary-debug-optimized-both

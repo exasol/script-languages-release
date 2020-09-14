@@ -2,6 +2,7 @@ FROM {{udfclient_deps}}
 
 RUN mkdir -p /build_info/packages
 COPY language_deps/packages /build_info/packages/language_deps
+COPY scripts /scripts
 
 # ppa:marutter/rrutter3.5 needed for R 3.5
 RUN apt-get update && \

@@ -11,7 +11,6 @@ RUN apt-get -y update && \
     apt-get -y autoremove && \
     ldconfig
 
-COPY scripts /scripts
 COPY flavor_base_deps/packages/cran_packages /build_info/packages/flavor_base_deps
 RUN /scripts/install_scripts/install_packages_batch.sh "CRAN" "Rscript -e 'install.packages(c(<<list>>),repos=\"http://cran.r-project.org\")'" '"<<package>>"' "," /build_info/packages/flavor_base_deps/cran_packages
 COPY flavor_base_deps/packages/pip_packages /build_info/packages/flavor_base_deps

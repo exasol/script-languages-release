@@ -13,7 +13,7 @@ RUN apt-get -y update && \
     ldconfig
 
 RUN curl -o get-pip.py https://bootstrap.pypa.io/get-pip.py && \
-    python3.6 get-pip.py && \
+    python2.7 get-pip.py && \
     rm get-pip.py
 
 ENV PYTHON2_PREFIX /usr

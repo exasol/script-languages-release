@@ -12,6 +12,10 @@ RUN apt-get -y update && \
     apt-get -y autoremove && \
     ldconfig
 
+RUN curl -o get-pip.py https://bootstrap.pypa.io/get-pip.py && \
+    python3.6 get-pip.py && \
+    rm get-pip.py
+
 ENV PYTHON2_PREFIX /usr
 ENV PYTHON2_VERSION python2.7
 ENV JAVA_PREFIX /usr/lib/jvm/java-9-openjdk-amd64

@@ -2,6 +2,7 @@ FROM {{udfclient_deps}}
 
 RUN mkdir -p /build_info/packages
 COPY language_deps/packages /build_info/packages/language_deps
+COPY scripts /scripts
 
 RUN apt-get -y update && \
     apt-get -y install --no-install-recommends $(cat /build_info/packages/language_deps/apt_get_packages) && \

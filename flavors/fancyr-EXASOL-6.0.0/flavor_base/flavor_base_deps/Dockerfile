@@ -11,7 +11,6 @@ RUN apt-get -y update && \
     apt-get -y autoremove && \
     ldconfig
 
-COPY scripts /scripts
 COPY flavor_base_deps/packages/cran_packages /build_info/packages/flavor_base_deps
 
 RUN R CMD javareconf

@@ -38,4 +38,4 @@ jobs:
       uses: dschep/install-pipenv-action@v1
 
     - name: Run db test
-      run: "./exaslct run-db-test --flavor-path flavors/${{ matrix.flavor }}"
+      run: "./exaslct run-db-test --flavor-path flavors/${{ matrix.flavor }} --force-rebuild"

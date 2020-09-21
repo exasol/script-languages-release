@@ -3,9 +3,10 @@ name: Trigger Nightly Rebuild of origin/master
 on:
   schedule:
     - cron:  '0 1 * * *'
-  push:
-    branches-ignore:
-      - master
+# Push trigger is only for test purposes
+#  push:
+#    branches-ignore:
+#      - master
 
 jobs:
   trigger_nightly_rebuild:
@@ -19,7 +20,7 @@ jobs:
 
     - name: Get Time
       id: time
-      run: echo "::set-output name=time::$(date -u +'+%Y_%m_%d_%H_%M_%S')"
+      run: echo "::set-output name=time::$(date -u '+%Y_%m_%d_%H_%M_%S')"
 
     - name: Create new empty commit 
       run: |

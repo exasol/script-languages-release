@@ -1,15 +1,11 @@
-name: Nightly
+name: Trigger Nightly Rebuild of origin/master
 
 on:
-  push:
-    branches-ignore:
-      - "master"
-  # schedule:
-  #   # * is a special character in YAML so you have to quote this string
-  #   - cron:  '0 1 * * *'
+  schedule:
+    - cron:  '0 1 * * *'
 
 jobs:
-  test:
+  trigger_nightly_rebuild:
     runs-on: ubuntu-latest
 
     steps:

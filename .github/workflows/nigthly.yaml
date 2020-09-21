@@ -3,6 +3,9 @@ name: Trigger Nightly Rebuild of origin/master
 on:
   schedule:
     - cron:  '0 1 * * *'
+  push:
+    branches-ignore:
+      - master
 
 jobs:
   trigger_nightly_rebuild:
@@ -16,10 +19,7 @@ jobs:
 
     - name: Get Time
       id: time
-      uses: nanzm/get-time-action@v1.0
-      with:
-        timeZone: 0
-        format: 'YYYY_MM_DD_HH_mm_ss'
+      run: echo "::set-output name=time::$(date -u +'+%Y_%m_%d_%H_%M_%S')"
 
     - name: Create new empty commit 
       run: |

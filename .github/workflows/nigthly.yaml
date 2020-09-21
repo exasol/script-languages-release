@@ -1,0 +1,41 @@
+name: Nightly
+
+on:
+  push:
+    branches-ignore:
+      - "master"
+  # schedule:
+  #   # * is a special character in YAML so you have to quote this string
+  #   - cron:  '0 1 * * *'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        flavor:
+        - standard-EXASOL-7.0.0
+        - standard-EXASOL-6.1.0
+        - standard-EXASOL-6.0.0
+        - python3-ds-EXASOL-6.1.0
+        - python3-ds-EXASOL-6.0.0
+        - fancyr-EXASOL-6.1.0
+        - fancyr-EXASOL-6.0.0
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Init submodules
+      run: git submodule update --init --recursive
+
+    - name: Setup Python 3.6 for integration-test-docker-environment
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.6
+
+    - name: Install pipenv
+      uses: dschep/install-pipenv-action@v1
+
+    - name: Run db test
+      run: "./exaslct run-db-test --flavor-path flavors/${{ matrix.flavor }}"

@@ -25,11 +25,9 @@ jobs:
         timeZone: 0
         format: 'YYYY_MM_DD_HH_mm_ss'
 
-    - name: Create new branch
-      run: "git checkout -b rebuild/nightly_${{ steps.time.outputs.time }}"
-
     - name: Create new empty commit 
       run: |
+        git checkout -b rebuild/nightly_${{ steps.time.outputs.time }}
         git config --local user.email "opensource@exasol.com"
         git config --local user.name "GitHub Action"
         git commit --allow-empty -m 'nightly_${{ steps.time.outputs.time }}'
@@ -38,4 +36,4 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-
+        branch: rebuild/nightly_${{ steps.time.outputs.time }}

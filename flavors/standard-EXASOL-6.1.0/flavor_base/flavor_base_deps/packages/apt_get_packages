@@ -47,6 +47,7 @@ python-boto
 python-pycurl
 python-requests
 python-paramiko
+python-simplejson
 python3-setuptools
 python3-pycurl
 python3-redis
@@ -71,6 +72,7 @@ python3-requests
 python3-boto
 python3-ujson
 python3-paramiko
+python3-simplejson
 r-base
 r-cran-rcurl
 r-cran-xml

@@ -1,0 +1,36 @@
+name: Trigger Nightly Rebuild of origin/master
+
+on:
+  schedule:
+    - cron:  '0 1 * * *'
+# Push trigger is only for test purposes
+#  push:
+#    branches-ignore:
+#      - master
+
+jobs:
+  trigger_nightly_rebuild:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Init submodules
+      run: git submodule update --init --recursive
+
+    - name: Get Time
+      id: time
+      run: echo "::set-output name=time::$(date -u '+%Y_%m_%d_%H_%M_%S')"
+
+    - name: Create new empty commit 
+      run: |
+        git checkout -b rebuild/nightly_${{ steps.time.outputs.time }}
+        git config --local user.email "opensource@exasol.com"
+        git config --local user.name "GitHub Action"
+        git commit --allow-empty -m 'nightly_${{ steps.time.outputs.time }}'
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: rebuild/nightly_${{ steps.time.outputs.time }}

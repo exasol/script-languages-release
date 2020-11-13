@@ -3,7 +3,6 @@ coreutils
 locales
 unzip
 wget
-curl
 git
 build-essential
 openjdk-11-jdk-headless

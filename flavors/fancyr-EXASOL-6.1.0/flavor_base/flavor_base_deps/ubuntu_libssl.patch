@@ -1,0 +1,11 @@
+--- debian/rules	2019-01-31 14:01:23.367996930 +0100
++++ debian/rules	2019-01-31 13:54:43.762851216 +0100
+@@ -20,7 +20,7 @@
+ 	--with-zsh-functions-dir=/usr/share/zsh/vendor-completions
+ 
+ ifeq ($(shell dpkg-vendor --derives-from Ubuntu && echo yes),yes)
+-	CONFIGURE_ARGS += --without-libssh2
++	CONFIGURE_ARGS += --with-libssh2 --with-libssh
+ endif
+ 
+ %:

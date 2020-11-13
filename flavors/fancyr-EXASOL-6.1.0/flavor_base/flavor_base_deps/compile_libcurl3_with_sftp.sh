@@ -4,29 +4,44 @@ set -e
 set -u
 set -o pipefail
 
-apt-get -y --no-install-recommends install wget build-essential debhelper libssh-dev
+
+pushd /tmp
+mkdir compile_curl
+pushd compile_curl
+
+apt-get -y --no-install-recommends install wget build-essential debhelper libssh2-1-dev libssh-dev
 apt-get source curl
 apt-get build-dep -y --no-install-recommends curl
 
-cd curl-*
+pushd curl-*
 
-cat debian/rules
-
-wget https://launchpadlibrarian.net/409184445/ubuntu_libssl.patch
+mv /tmp/ubuntu_libssl.patch ubuntu_libssl.patch
 patch debian/rules < ubuntu_libssl.patch
 
-dpkg-buildpackage -uc -us -b
+DEB_BUILD_OPTIONS=nocheck dpkg-buildpackage -uc -us -b
 # -us Do not sign the source package.
 # -uc Do not sign the .changes file.
 
-cd ..
+popd
+
+ls -l *.deb
 
 dpkg -i curl_*.deb
-dpkg -i libcurl3-*.deb
 dpkg -i libcurl3-gnutls_*.deb
+dpkg -i libcurl3-nss_*.deb
+dpkg -i libcurl4_*.deb
+
+popd
+
+rm -rf compile_curl
 
 apt-mark hold curl
 apt-mark hold libcurl3
 apt-mark hold libcurl3-gnutls
+apt-mark hold libcurl3-nss
+apt-mark hold libcurl4
 
-curl --v 2>&1 | grep sftp
+
+apt-get -f install
+
+curl --version

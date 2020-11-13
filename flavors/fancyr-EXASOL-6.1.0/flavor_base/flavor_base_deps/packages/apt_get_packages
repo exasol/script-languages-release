@@ -6,6 +6,7 @@ wget
 git
 build-essential
 openjdk-11-jdk-headless
-r-base
+r-base=3.4.4-1ubuntu1
+r-recommended=3.4.4-1ubuntu1
 libxml2-dev
 libcurl4-openssl-dev

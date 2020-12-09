@@ -62,11 +62,9 @@ prepare_variables() {
   EXARUNTIME_PATH="$EXARUNTIME"
   TOOLCHAIN="/usr/opt/${EXASUITE}/${EXARUNTIME_PATH}"
   export PATH="$TOOLCHAIN/bin:$PATH"
-  INSTALL_PATH="$BUILDSYSTEM_LINKDIR/install"
 }
 
 prepare_exaslct() {
-  git submodule update
   c4 initialize wait docker
   prepare_variables
   mkdir -p "$EXASLCT_BASE_TMP"
@@ -75,12 +73,39 @@ prepare_exaslct() {
   EXASLCT_OPTIONS=(--temporary-base-directory "$EXASLCT_BASE_TMP" --output-directory "$EXASLCT_BUILD_OUTPUT")
 }
 
+_cmd_build_container() {
+  echo _cmd_build_container
+  if [[ "$BUILDSYSTEM_ALIAS" =~ .*\.params.*\.-flavor=\'([^\']+)\'.* ]]
+  then
+    echo found flacor
+    echo "$BUILDSYSTEM_ALIAS" | sed -E "s/.*\.params.*\.-flavor='([^']+)'.*/\1/g"
+  fi
+#  prepare_exaslct
+#  PIP_INSTALL=YES ./exaslct export --flavor-path="flavors/${FLAVOR}" --export-path "$EXPORT_PATH" "${EXASLCT_OPTIONS[@]}" \
+#  && mkdir -p "$INSTALL_PATH" \
+#  && for f in "$EXPORT_PATH/"*.gz; do echo "Extracting $f" ;tar xfC "$f" "$INSTALL_PATH"; done
+}
+
+_cmd_build_src_package() {
+  echo "build_src_package"
+}
+
 _cmd_build() {
-  prepare_exaslct
   mkdir -p "$BUILDSYSTEM_LINKDIR"
-  PIP_INSTALL=YES ./exaslct export --flavor-path="flavors/${FLAVOR}" --export-path "$EXPORT_PATH" "${EXASLCT_OPTIONS[@]}" \
-  && mkdir -p "$INSTALL_PATH" \
-  && for f in "$EXPORT_PATH/"*.gz; do echo "Extracting $f" ;tar xfC "$f" "$INSTALL_PATH"; done
+  INSTALL_PATH="$BUILDSYSTEM_LINKDIR/install"
+  git submodule update
+  echo BUILDSYSTEM_ALIAS "$BUILDSYSTEM_ALIAS"
+  if [[ "$BUILDSYSTEM_ALIAS" =~ .*\.params.*\.-package=\'src\'.* ]]
+  then
+    _cmd_build_src_package
+  elif [[ "$BUILDSYSTEM_ALIAS" =~ .*\.params.*\.-package=\'container\'.* ]]
+  then
+    echo params _cmd_build_container
+    _cmd_build_container
+  else
+    echo default _cmd_build_container
+    _cmd_build_container
+  fi
 }
 
 _cmd_clean() {
@@ -103,7 +128,9 @@ _cmd_test() {
 if [ "$1" = prefix ]; then
   _cmd_prefix
 elif [ "$1" = make ]; then
-  _cmd_build
+  {
+    _cmd_build
+  } > build.log
 elif [ "$1" = "clean" ]; then
   _cmd_clean
 elif [ "$1" = provides ]; then

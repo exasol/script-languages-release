@@ -1,6 +1,6 @@
 pytz
 azure-storage==0.36.0
-git+http://github.com/EXASOL/websocket-api.git#egg=exasol-ws-api&subdirectory=python
+git+http://github.com/EXASOL/websocket-api.git#egg=exasol-db-api&subdirectory=python
 pysftp
 boto3
 urllib3==1.25.11 #we need urllib3 1.25.11 to get requests running

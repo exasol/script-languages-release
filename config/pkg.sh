@@ -24,7 +24,7 @@ case "$1" in
     done
     ;;
   tar)
-    gunzip --stdout "$(ls *.tar.gz | head -n 1)"
+    tar -cz pkg.sh install
     ;;
   methods)
     echo "extract methods tar" | xargs -n1 echo

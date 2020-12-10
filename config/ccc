@@ -28,27 +28,35 @@ FLAVOR=standard-EXASOL-7.0.0
 EXASLCT_TMP="$HOME/exaslct-tmp"
 EXASLCT_BASE_TMP="$EXASLCT_TMP/tmp"
 EXASLCT_BUILD_OUTPUT="$EXASLCT_TMP/.build_output"
-EXPORT_PATH="$BUILDSYSTEM_LINKDIR"
+EXPORT_PATH="$BUILDSYSTEM_LINKDIR/export"
+INSTALL_PATH="$BUILDSYSTEM_LINKDIR/install"
 
 get_image_hash()
 {
-  cat "$BUILDSYSTEM_LINKDIR/install/build_info/image_info/$FLAVOR-release" \
+  cat "$INSTALL_PATH/build_info/image_info/$FLAVOR-release" \
   | jq -r .hash | cut -c 1-8
 }
 
 ## CMD Functions: General C4 Query Commands - Not explicitly used by the user 
 _cmd_prefix() {
     prepare_variables
-    HASH=$(get_image_hash)
-    HASH=${HASH:-NOHASH}
+    if [ "$MODE" != "SRC" ]
+    then
+      HASH=$(get_image_hash)
+      HASH=${HASH:-NOHASH}
 
-    PREFIX=/usr/opt/${EXASUITE}/ScriptLanguages-${FLAVOR}-${HASH}
-    echo "$PREFIX"
-    exit "$?"
+      PREFIX=/usr/opt/${EXASUITE}/ScriptLanguages-${FLAVOR}-${MODE}-${HASH}
+      echo "$PREFIX"
+      exit "$?"
+    else
+      PREFIX=/usr/opt/${EXASUITE}/ScriptLanguages-${FLAVOR}-${MODE}
+      echo "$PREFIX"
+      exit "$?"
+    fi
 }
 
 _cmd_provides() {
-  echo script-language-${FLAVOR}
+  echo script-language-${FLAVOR}-$[MODE]
 }
 
 _cmd_requires() {
@@ -74,37 +82,70 @@ prepare_exaslct() {
 }
 
 _cmd_build_container() {
-  echo _cmd_build_container
-  if [[ "$BUILDSYSTEM_ALIAS" =~ .*\.params.*\.-flavor=\'([^\']+)\'.* ]]
-  then
-    echo found flacor
-    echo "$BUILDSYSTEM_ALIAS" | sed -E "s/.*\.params.*\.-flavor='([^']+)'.*/\1/g"
-  fi
-#  prepare_exaslct
-#  PIP_INSTALL=YES ./exaslct export --flavor-path="flavors/${FLAVOR}" --export-path "$EXPORT_PATH" "${EXASLCT_OPTIONS[@]}" \
-#  && mkdir -p "$INSTALL_PATH" \
-#  && for f in "$EXPORT_PATH/"*.gz; do echo "Extracting $f" ;tar xfC "$f" "$INSTALL_PATH"; done
+  ls -l -R
+  echo _cmd_build_container $*
+  MODE="$1"
+  FLAVOR="$2"
+  prepare_exaslct
+  PIP_INSTALL=YES ./exaslct export --flavor-path="flavors/${FLAVOR}" --export-path "$EXPORT_PATH" "${EXASLCT_OPTIONS[@]}"
+  mkdir -p "$INSTALL_PATH"
+  for f in "$EXPORT_PATH/"*.gz
+  do 
+    echo "Extracting $f"
+    tar xfC "$f" "$INSTALL_PATH"
+  done
 }
 
 _cmd_build_src_package() {
   echo "build_src_package"
+  mkdir -p "$INSTALL_PATH" \
+  && cp exaudfclient/base/{debug_message.h,exaudfclient.cc,exaudflib/exaudflib.cc,exaudflib/exaudflib.h,exaudflib/zmqcontainer.proto}  "$INSTALL_PATH";
+}
+
+_parse_parameters() {
+  FLAVORS=("standard-EXASOL-7.0.0" "standard-EXASOL-6.2.0" "standard-EXASOL-6.1.0" "python3-ds-EXASOL-6.1.0" "python3-ds-cuda-preview-EXASOL-6.1.0" "fancyr-EXASOL-6.1.0")
+
+  echo "BUILDSYSTEM_ALIAS: $BUILDSYSTEM_ALIAS"
+  echo "ALIAS_PATTERN=.params__<MODE>(__<FLAVOR_NUMBER>)"
+  echo "MODE: SRC RELEASE LIGHT TEST"
+  
+  echo "FLAVOR_NUMBER:"
+  total=${#FLAVORS[*]}
+  for (( i=0; i<=$(( $total -1 )); i++ ))
+  do 
+    echo "  $i: ${FLAVORS[$i]}"
+  done
+  
+  ALIAS_PARAMETERS=$(echo "$BUILDSYSTEM_ALIAS" | sed -E "s/.*\.params__(SRC|RELEASE|LIGHT|TEST)(__([0-9]+))?$/\1 \3/g")
+  echo ALIAS_PARAMETERS: $ALIAS_PARAMETERS
+  MODE="CONTAINER"
+  FLAVOR_NUMBER=0
+  if [ "$ALIAS_PARAMETERS" != "$BUILDSYSTEM_ALIAS" ]
+  then
+    MODE=$(echo "$ALIAS_PARAMETERS" | cut -f1 -d " ")
+    FLAVOR_NUMBER=$(echo "$ALIAS_PARAMETERS" | cut -f2 -d " ")
+    echo MODE: $MODE
+    echo FLAVOR_NUMBER: $FLAVOR_NUMBER
+  fi  
+  if [ -n "$FLAVOR_NUMBER" ]
+  then
+    FLAVOR="${FLAVORS[$FLAVOR_NUMBER]}"
+  fi
+  echo FLAVOR: $FLAVOR
 }
 
 _cmd_build() {
   mkdir -p "$BUILDSYSTEM_LINKDIR"
-  INSTALL_PATH="$BUILDSYSTEM_LINKDIR/install"
-  git submodule update
-  echo BUILDSYSTEM_ALIAS "$BUILDSYSTEM_ALIAS"
-  if [[ "$BUILDSYSTEM_ALIAS" =~ .*\.params.*\.-package=\'src\'.* ]]
+  if [ -d .git ]
+  then
+    git submodule update
+  fi
+  
+  if [ "$MODE" == "SRC" ] 
   then
     _cmd_build_src_package
-  elif [[ "$BUILDSYSTEM_ALIAS" =~ .*\.params.*\.-package=\'container\'.* ]]
-  then
-    echo params _cmd_build_container
-    _cmd_build_container
   else
-    echo default _cmd_build_container
-    _cmd_build_container
+    _cmd_build_container "$MODE" "$FLAVOR"
   fi
 }
 
@@ -123,14 +164,12 @@ _cmd_test() {
   PIP_INSTALL=YES ./exaslct run-db-test --flavor-path "flavors/${FLAVOR}" "${EXASLCT_OPTIONS[@]}"
 }
 
-
+_parse_parameters
 ## Command Switch
 if [ "$1" = prefix ]; then
   _cmd_prefix
 elif [ "$1" = make ]; then
-  {
-    _cmd_build
-  } > build.log
+  _cmd_build
 elif [ "$1" = "clean" ]; then
   _cmd_clean
 elif [ "$1" = provides ]; then

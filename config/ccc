@@ -3,7 +3,7 @@ set -ue
 
 echoerr ()
 {
-  echo "$@" 1>2
+  echo "$@" 1>&2
 }
 
 ## CMD Functions: Help
@@ -52,7 +52,6 @@ get_image_hash()
 
 ## CMD Functions: General C4 Query Commands - Not explicitly used by the user 
 _cmd_prefix() {
-    echoerr prefix call
     prepare_variables
     if [ "$MODE" != "SRC" ]
     then
@@ -119,24 +118,24 @@ _cmd_build_src_package() {
 _parse_parameters() {
   FLAVORS=("standard-EXASOL-7.0.0" "standard-EXASOL-6.2.0" "standard-EXASOL-6.1.0" "python3-ds-EXASOL-6.1.0" "python3-ds-cuda-preview-EXASOL-6.1.0" "fancyr-EXASOL-6.1.0")
 
-  echoerr "BUILDSYSTEM_ALIAS: $BUILDSYSTEM_ALIAS"
+  echo "BUILDSYSTEM_ALIAS: $BUILDSYSTEM_ALIAS"
   
   ALIAS_PARAMETERS=$(echo "$BUILDSYSTEM_ALIAS" | sed -E "s/.*\.params__(SRC|RELEASE|LIGHT|TEST)(__([0-9]+))?$/\1 \3/g")
-  echoerr ALIAS_PARAMETERS: $ALIAS_PARAMETERS
+  echo ALIAS_PARAMETERS: $ALIAS_PARAMETERS
   MODE="CONTAINER"
   FLAVOR_NUMBER=0
   if [ "$ALIAS_PARAMETERS" != "$BUILDSYSTEM_ALIAS" ]
   then
     MODE=$(echo "$ALIAS_PARAMETERS" | cut -f1 -d " ")
     FLAVOR_NUMBER=$(echo "$ALIAS_PARAMETERS" | cut -f2 -d " ")
-    echoerr MODE: $MODE
-    echoerr FLAVOR_NUMBER: $FLAVOR_NUMBER
+    echo MODE: $MODE
+    echo FLAVOR_NUMBER: $FLAVOR_NUMBER
   fi  
   if [ -n "$FLAVOR_NUMBER" ]
   then
     FLAVOR="${FLAVORS[$FLAVOR_NUMBER]}"
   fi
-  echoerr FLAVOR: $FLAVOR
+  echo FLAVOR: $FLAVOR
 }
 
 _cmd_build() {
@@ -170,11 +169,11 @@ _cmd_test() {
 }
 
 echoerr cli parameter "$@"
-_parse_parameters
 ## Command Switch
 if [ "$1" = prefix ]; then
   _cmd_prefix
 elif [ "$1" = build ]; then
+_parse_parameters
   shift 1
   remaining_args="$@"
   if [ "$#" -ge 1 ]; then
@@ -204,5 +203,6 @@ elif [ "$1" = test ]; then
 elif [ "$1" = "help-more" ]; then # help is already in use by main c4 path
   _cmd_help
 else
-  _cmd_help
+_parse_parameters
+  _cmd_build
 fi

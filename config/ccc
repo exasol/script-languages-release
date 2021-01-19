@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -ue
 
+echoerr ()
+{
+  echo "$@" 1>2
+}
 
 ## CMD Functions: Help
 _cmd_help()
@@ -8,20 +12,26 @@ _cmd_help()
   cat <<EOF
 Usage:
 
-    c4 make [CMD]
+    c4 make
+    c4 make build [MODE [FLAVOR_NAME]]
+    
+    Modes: SRC RELEASE LIGHT TEST
+    
+    If you run the build via 
 
-Defined build and install interface of C4 for generic integration of the nvidia driver libraries into c4.
+    c4 new --make true --upload true -AC script-languages-release+<branch> <alias>
 
-Commands:
+    you can configure the build via special aliases
 
-    c4 make                  # build and install of nvidia driver user libraries
-    c4 make build            # build of nvidia driver user libraries
-    c4 make install          # install of nvidia driver user libraries
-    c4 make clean            # remove all artifacts
-
-    c4 make test             # Run tests - CURRENTLY UNUSED
+    WorkingCopy Alias Pattern: .params__<MODE>(__<FLAVOR_NUMBER>)
+    Flavor Numbers:
 
 EOF
+  total=${#FLAVORS[*]}
+  for (( i=0; i<=$(( $total -1 )); i++ ))
+  do 
+    echo "      $i: ${FLAVORS[$i]}"
+  done
 }
 
 FLAVOR=standard-EXASOL-7.0.0
@@ -33,12 +43,16 @@ INSTALL_PATH="$BUILDSYSTEM_LINKDIR/install"
 
 get_image_hash()
 {
-  cat "$INSTALL_PATH/build_info/image_info/$FLAVOR-release" \
-  | jq -r .hash | cut -c 1-8
+  RELEASE_INFO_PATH="$INSTALL_PATH/build_info/image_info/$FLAVOR-release"
+  if [ -e "$RELEASE_INFO_PATH" ]
+  then
+    cat "$RELEASE_INFO_PATH" | jq -r .hash | cut -c 1-8
+  fi
 }
 
 ## CMD Functions: General C4 Query Commands - Not explicitly used by the user 
 _cmd_prefix() {
+    echoerr prefix call
     prepare_variables
     if [ "$MODE" != "SRC" ]
     then
@@ -56,7 +70,7 @@ _cmd_prefix() {
 }
 
 _cmd_provides() {
-  echo script-language-${FLAVOR}-$[MODE]
+  echo script-language-${FLAVOR}-${MODE}
 }
 
 _cmd_requires() {
@@ -82,7 +96,6 @@ prepare_exaslct() {
 }
 
 _cmd_build_container() {
-  ls -l -R
   echo _cmd_build_container $*
   MODE="$1"
   FLAVOR="$2"
@@ -94,6 +107,7 @@ _cmd_build_container() {
     echo "Extracting $f"
     tar xfC "$f" "$INSTALL_PATH"
   done
+  cp config/pkg.sh "$BUILDSYSTEM_LINKDIR" # We need to copy the pkg.sh, because c4 sees it as part of the final package and you could have different pkg.sh for different build modes
 }
 
 _cmd_build_src_package() {
@@ -105,33 +119,24 @@ _cmd_build_src_package() {
 _parse_parameters() {
   FLAVORS=("standard-EXASOL-7.0.0" "standard-EXASOL-6.2.0" "standard-EXASOL-6.1.0" "python3-ds-EXASOL-6.1.0" "python3-ds-cuda-preview-EXASOL-6.1.0" "fancyr-EXASOL-6.1.0")
 
-  echo "BUILDSYSTEM_ALIAS: $BUILDSYSTEM_ALIAS"
-  echo "ALIAS_PATTERN=.params__<MODE>(__<FLAVOR_NUMBER>)"
-  echo "MODE: SRC RELEASE LIGHT TEST"
-  
-  echo "FLAVOR_NUMBER:"
-  total=${#FLAVORS[*]}
-  for (( i=0; i<=$(( $total -1 )); i++ ))
-  do 
-    echo "  $i: ${FLAVORS[$i]}"
-  done
+  echoerr "BUILDSYSTEM_ALIAS: $BUILDSYSTEM_ALIAS"
   
   ALIAS_PARAMETERS=$(echo "$BUILDSYSTEM_ALIAS" | sed -E "s/.*\.params__(SRC|RELEASE|LIGHT|TEST)(__([0-9]+))?$/\1 \3/g")
-  echo ALIAS_PARAMETERS: $ALIAS_PARAMETERS
+  echoerr ALIAS_PARAMETERS: $ALIAS_PARAMETERS
   MODE="CONTAINER"
   FLAVOR_NUMBER=0
   if [ "$ALIAS_PARAMETERS" != "$BUILDSYSTEM_ALIAS" ]
   then
     MODE=$(echo "$ALIAS_PARAMETERS" | cut -f1 -d " ")
     FLAVOR_NUMBER=$(echo "$ALIAS_PARAMETERS" | cut -f2 -d " ")
-    echo MODE: $MODE
-    echo FLAVOR_NUMBER: $FLAVOR_NUMBER
+    echoerr MODE: $MODE
+    echoerr FLAVOR_NUMBER: $FLAVOR_NUMBER
   fi  
   if [ -n "$FLAVOR_NUMBER" ]
   then
     FLAVOR="${FLAVORS[$FLAVOR_NUMBER]}"
   fi
-  echo FLAVOR: $FLAVOR
+  echoerr FLAVOR: $FLAVOR
 }
 
 _cmd_build() {
@@ -164,11 +169,28 @@ _cmd_test() {
   PIP_INSTALL=YES ./exaslct run-db-test --flavor-path "flavors/${FLAVOR}" "${EXASLCT_OPTIONS[@]}"
 }
 
+echoerr cli parameter "$@"
 _parse_parameters
 ## Command Switch
 if [ "$1" = prefix ]; then
   _cmd_prefix
-elif [ "$1" = make ]; then
+elif [ "$1" = build ]; then
+  shift 1
+  remaining_args="$@"
+  if [ "$#" -ge 1 ]; then
+    current_arg="${remaining_args[0]}"
+    if [ -n "$current_arg" ]
+    then
+      MODE="$current_arg"
+    fi
+  fi
+  if [ "$#" -ge 2 ]; then
+    current_arg="${remaining_args[1]}"
+    if [ -n "$current_arg" ]
+    then
+      FLAVOR="$current_arg"
+    fi
+  fi
   _cmd_build
 elif [ "$1" = "clean" ]; then
   _cmd_clean
@@ -179,7 +201,7 @@ elif [ "$1" = requires ]; then
 elif [ "$1" = test ]; then
   shift
   _cmd_test "$@"
-elif [ "$1" = help-more ]; then # help is already in use by main c4 path
+elif [ "$1" = "help-more" ]; then # help is already in use by main c4 path
   _cmd_help
 else
   _cmd_help

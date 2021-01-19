@@ -24,7 +24,7 @@ case "$1" in
     done
     ;;
   tar)
-    tar -cz pkg.sh install
+    tar c .pkg.sh install
     ;;
   methods)
     echo "extract methods tar" | xargs -n1 echo

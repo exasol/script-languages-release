@@ -1,0 +1,7 @@
+tele:
+  sync:
+    - --include=build/
+    - --include=.bcc/
+    - --include=.bcc/build 
+    - --include=.bcc/build/*
+    - --include=.bcc/build/*/.bcc

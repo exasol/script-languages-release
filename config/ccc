@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
 set -ue
 
-echoerr ()
-{
-  echo "$@" 1>&2
-}
+FLAVORS=("standard-EXASOL-7.0.0" "standard-EXASOL-6.2.0" "standard-EXASOL-6.1.0" "python3-ds-EXASOL-6.1.0" "python3-ds-cuda-preview-EXASOL-6.1.0" "fancyr-EXASOL-6.1.0")
+FLAVOR=standard-EXASOL-7.0.0
+MODE=FULL
+EXASLCT_TMP="$HOME/exaslct-tmp"
+EXASLCT_BASE_TMP="$EXASLCT_TMP/tmp"
+EXASLCT_BUILD_OUTPUT="$EXASLCT_TMP/.build_output"
+EXPORT_PATH="$BUILDSYSTEM_LINKDIR/export"
+INSTALL_PATH="$BUILDSYSTEM_LINKDIR/install"
 
 ## CMD Functions: Help
 _cmd_help()
@@ -34,12 +38,6 @@ EOF
   done
 }
 
-FLAVOR=standard-EXASOL-7.0.0
-EXASLCT_TMP="$HOME/exaslct-tmp"
-EXASLCT_BASE_TMP="$EXASLCT_TMP/tmp"
-EXASLCT_BUILD_OUTPUT="$EXASLCT_TMP/.build_output"
-EXPORT_PATH="$BUILDSYSTEM_LINKDIR/export"
-INSTALL_PATH="$BUILDSYSTEM_LINKDIR/install"
 
 get_image_hash()
 {
@@ -115,33 +113,26 @@ _cmd_build_src_package() {
   && cp exaudfclient/base/{debug_message.h,exaudfclient.cc,exaudflib/exaudflib.cc,exaudflib/exaudflib.h,exaudflib/zmqcontainer.proto}  "$INSTALL_PATH";
 }
 
-_parse_parameters() {
-  FLAVORS=("standard-EXASOL-7.0.0" "standard-EXASOL-6.2.0" "standard-EXASOL-6.1.0" "python3-ds-EXASOL-6.1.0" "python3-ds-cuda-preview-EXASOL-6.1.0" "fancyr-EXASOL-6.1.0")
-
-  echo "BUILDSYSTEM_ALIAS: $BUILDSYSTEM_ALIAS"
-  
+_parse_alias_parameters() {
   ALIAS_PARAMETERS=$(echo "$BUILDSYSTEM_ALIAS" | sed -E "s/.*\.params__(SRC|RELEASE|LIGHT|TEST)(__([0-9]+))?$/\1 \3/g")
-  echo ALIAS_PARAMETERS: $ALIAS_PARAMETERS
-  MODE="CONTAINER"
   FLAVOR_NUMBER=0
   if [ "$ALIAS_PARAMETERS" != "$BUILDSYSTEM_ALIAS" ]
   then
     MODE=$(echo "$ALIAS_PARAMETERS" | cut -f1 -d " ")
     FLAVOR_NUMBER=$(echo "$ALIAS_PARAMETERS" | cut -f2 -d " ")
-    echo MODE: $MODE
-    echo FLAVOR_NUMBER: $FLAVOR_NUMBER
   fi  
   if [ -n "$FLAVOR_NUMBER" ]
   then
     FLAVOR="${FLAVORS[$FLAVOR_NUMBER]}"
   fi
-  echo FLAVOR: $FLAVOR
 }
 
 _cmd_build() {
   mkdir -p "$BUILDSYSTEM_LINKDIR"
+  env
   if [ -d .git ]
   then
+    echo "Update submodule"
     git submodule update
   fi
   
@@ -156,7 +147,7 @@ _cmd_build() {
 _cmd_clean() {
   prepare_exaslct
   echo "Cleaning"
-  PIP_INSTALL=YES ./exaslct clean-flavor-images --flavor-path "flavors/${FLAVOR}" "${EXASLCT_OPTIONS[@]}"
+#  PIP_INSTALL=YES ./exaslct clean-flavor-images --flavor-path "flavors/${FLAVOR}" "${EXASLCT_OPTIONS[@]}"
   rm -rf "$EXASLCT_TMP"
   rm -rf "$INSTALL_PATH"
   rm -rf "$EXPORT_PATH/"*.gz
@@ -168,12 +159,11 @@ _cmd_test() {
   PIP_INSTALL=YES ./exaslct run-db-test --flavor-path "flavors/${FLAVOR}" "${EXASLCT_OPTIONS[@]}"
 }
 
-echoerr cli parameter "$@"
+_parse_alias_parameters
 ## Command Switch
 if [ "$1" = prefix ]; then
   _cmd_prefix
 elif [ "$1" = build ]; then
-_parse_parameters
   shift 1
   remaining_args="$@"
   if [ "$#" -ge 1 ]; then
@@ -190,7 +180,7 @@ _parse_parameters
       FLAVOR="$current_arg"
     fi
   fi
-  _cmd_build
+  _cmd_build 2>&1 | tee c4-make.log 
 elif [ "$1" = "clean" ]; then
   _cmd_clean
 elif [ "$1" = provides ]; then
@@ -203,6 +193,5 @@ elif [ "$1" = test ]; then
 elif [ "$1" = "help-more" ]; then # help is already in use by main c4 path
   _cmd_help
 else
-_parse_parameters
-  _cmd_build
+  _cmd_build 2>&1 | tee c4-make.log 
 fi

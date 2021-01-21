@@ -164,7 +164,7 @@ if [ "$1" = prefix ]; then
   _cmd_prefix
 elif [ "$1" = build ]; then
   shift 1
-  remaining_args="$@"
+  remaining_args=( "$@" )
   if [ "$#" -ge 1 ]; then
     current_arg="${remaining_args[0]}"
     if [ -n "$current_arg" ]

@@ -129,10 +129,9 @@ _parse_alias_parameters() {
 
 _cmd_build() {
   mkdir -p "$BUILDSYSTEM_LINKDIR"
-  env
-  if [ -d .git ]
+  if [ -d .git ] && [ -e .ccc/c4_play_init ]
   then
-    echo "Update submodule"
+    echo "Update submodule as workaround for missing recursive checkout"
     git submodule update
   fi
   

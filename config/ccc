@@ -1,0 +1,196 @@
+#!/usr/bin/env bash
+set -ue
+
+FLAVORS=("standard-EXASOL-7.0.0" "standard-EXASOL-6.2.0" "standard-EXASOL-6.1.0" "python3-ds-EXASOL-6.1.0" "python3-ds-cuda-preview-EXASOL-6.1.0" "fancyr-EXASOL-6.1.0")
+FLAVOR=standard-EXASOL-7.0.0
+MODE=FULL
+EXASLCT_TMP="$HOME/exaslct-tmp"
+EXASLCT_BASE_TMP="$EXASLCT_TMP/tmp"
+EXASLCT_BUILD_OUTPUT="$EXASLCT_TMP/.build_output"
+EXPORT_PATH="$BUILDSYSTEM_LINKDIR/export"
+INSTALL_PATH="$BUILDSYSTEM_LINKDIR/install"
+
+## CMD Functions: Help
+_cmd_help()
+{
+  cat <<EOF
+Usage:
+
+    c4 make
+    c4 make build [MODE [FLAVOR_NAME]]
+    
+    Modes: SRC RELEASE LIGHT TEST
+    
+    If you run the build via 
+
+    c4 new --make true --upload true -AC script-languages-release+<branch> <alias>
+
+    you can configure the build via special aliases
+
+    WorkingCopy Alias Pattern: .params__<MODE>(__<FLAVOR_NUMBER>)
+    Flavor Numbers:
+
+EOF
+  total=${#FLAVORS[*]}
+  for (( i=0; i<=$(( $total -1 )); i++ ))
+  do 
+    echo "      $i: ${FLAVORS[$i]}"
+  done
+}
+
+
+get_image_hash()
+{
+  RELEASE_INFO_PATH="$INSTALL_PATH/build_info/image_info/$FLAVOR-release"
+  if [ -e "$RELEASE_INFO_PATH" ]
+  then
+    cat "$RELEASE_INFO_PATH" | jq -r .hash | cut -c 1-8
+  fi
+}
+
+## CMD Functions: General C4 Query Commands - Not explicitly used by the user 
+_cmd_prefix() {
+    prepare_variables
+    if [ "$MODE" != "SRC" ]
+    then
+      HASH=$(get_image_hash)
+      HASH=${HASH:-NOHASH}
+
+      PREFIX=/usr/opt/${EXASUITE}/ScriptLanguages-${FLAVOR}-${MODE}-${HASH}
+      echo "$PREFIX"
+      exit "$?"
+    else
+      PREFIX=/usr/opt/${EXASUITE}/ScriptLanguages-${FLAVOR}-${MODE}
+      echo "$PREFIX"
+      exit "$?"
+    fi
+}
+
+_cmd_provides() {
+  echo script-language-${FLAVOR}-${MODE}
+}
+
+_cmd_requires() {
+  echo
+}
+
+prepare_variables() {
+  # TODO: TOOLCHAIN will be provided in CURRENTTOOLCHAIN and EXARUNTIME will be provided in CCC_BUILDENV_TOOLCHAIN when branch ic.config got merged
+  EXASUITE=EXASuite-7
+  EXARUNTIME=$(cat ./config/build-env | sed -E "s/ +/ /g" | grep "exaruntime = " | cut -f 3 -d " ")  
+  EXARUNTIME_PATH="$EXARUNTIME"
+  TOOLCHAIN="/usr/opt/${EXASUITE}/${EXARUNTIME_PATH}"
+  export PATH="$TOOLCHAIN/bin:$PATH"
+}
+
+prepare_exaslct() {
+  c4 initialize wait docker
+  prepare_variables
+  mkdir -p "$EXASLCT_BASE_TMP"
+  mkdir -p "$EXASLCT_BUILD_OUTPUT"
+  "$CCC_CCC" extract -m "@${EXARUNTIME}"
+  EXASLCT_OPTIONS=(--temporary-base-directory "$EXASLCT_BASE_TMP" --output-directory "$EXASLCT_BUILD_OUTPUT")
+}
+
+_cmd_build_container() {
+  echo _cmd_build_container $*
+  MODE="$1"
+  FLAVOR="$2"
+  prepare_exaslct
+  PIP_INSTALL=YES ./exaslct export --flavor-path="flavors/${FLAVOR}" --export-path "$EXPORT_PATH" "${EXASLCT_OPTIONS[@]}"
+  mkdir -p "$INSTALL_PATH"
+  for f in "$EXPORT_PATH/"*.gz
+  do 
+    echo "Extracting $f"
+    tar xfC "$f" "$INSTALL_PATH"
+  done
+  cp config/pkg.sh "$BUILDSYSTEM_LINKDIR" # We need to copy the pkg.sh, because c4 sees it as part of the final package and you could have different pkg.sh for different build modes
+}
+
+_cmd_build_src_package() {
+  echo "build_src_package"
+  mkdir -p "$INSTALL_PATH" \
+  && cp exaudfclient/base/{debug_message.h,exaudfclient.cc,exaudflib/exaudflib.cc,exaudflib/exaudflib.h,exaudflib/zmqcontainer.proto}  "$INSTALL_PATH";
+}
+
+_parse_alias_parameters() {
+  ALIAS_PARAMETERS=$(echo "$BUILDSYSTEM_ALIAS" | sed -E "s/.*\.params__(SRC|RELEASE|LIGHT|TEST)(__([0-9]+))?$/\1 \3/g")
+  FLAVOR_NUMBER=0
+  if [ "$ALIAS_PARAMETERS" != "$BUILDSYSTEM_ALIAS" ]
+  then
+    MODE=$(echo "$ALIAS_PARAMETERS" | cut -f1 -d " ")
+    FLAVOR_NUMBER=$(echo "$ALIAS_PARAMETERS" | cut -f2 -d " ")
+  fi  
+  if [ -n "$FLAVOR_NUMBER" ]
+  then
+    FLAVOR="${FLAVORS[$FLAVOR_NUMBER]}"
+  fi
+}
+
+_cmd_build() {
+  mkdir -p "$BUILDSYSTEM_LINKDIR"
+  if [ -d .git ] && [ -e .ccc/c4_play_init ]
+  then
+    echo "Update submodule as workaround for missing recursive checkout"
+    git submodule update
+  fi
+  
+  if [ "$MODE" == "SRC" ] 
+  then
+    _cmd_build_src_package
+  else
+    _cmd_build_container "$MODE" "$FLAVOR"
+  fi
+}
+
+_cmd_clean() {
+  prepare_exaslct
+  echo "Cleaning"
+#  PIP_INSTALL=YES ./exaslct clean-flavor-images --flavor-path "flavors/${FLAVOR}" "${EXASLCT_OPTIONS[@]}"
+  rm -rf "$EXASLCT_TMP"
+  rm -rf "$INSTALL_PATH"
+  rm -rf "$EXPORT_PATH/"*.gz
+  rm -rf "$BUILDSYSTEM_LINKDIR"
+}
+
+_cmd_test() {
+  prepare_exaslct
+  PIP_INSTALL=YES ./exaslct run-db-test --flavor-path "flavors/${FLAVOR}" "${EXASLCT_OPTIONS[@]}"
+}
+
+_parse_alias_parameters
+## Command Switch
+if [ "$1" = prefix ]; then
+  _cmd_prefix
+elif [ "$1" = build ]; then
+  shift 1
+  remaining_args="$@"
+  if [ "$#" -ge 1 ]; then
+    current_arg="${remaining_args[0]}"
+    if [ -n "$current_arg" ]
+    then
+      MODE="$current_arg"
+    fi
+  fi
+  if [ "$#" -ge 2 ]; then
+    current_arg="${remaining_args[1]}"
+    if [ -n "$current_arg" ]
+    then
+      FLAVOR="$current_arg"
+    fi
+  fi
+  _cmd_build 2>&1 | tee c4-make.log 
+elif [ "$1" = "clean" ]; then
+  _cmd_clean
+elif [ "$1" = provides ]; then
+  _cmd_provides
+elif [ "$1" = requires ]; then
+  _cmd_requires
+elif [ "$1" = test ]; then
+  shift
+  _cmd_test "$@"
+elif [ "$1" = "help-more" ]; then # help is already in use by main c4 path
+  _cmd_help
+else
+  _cmd_build 2>&1 | tee c4-make.log 
+fi

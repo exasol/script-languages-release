@@ -4,7 +4,7 @@ set -euo pipefail
 
 FILE_PREFIX="$1"
 
-echo "$AWS_GET_ROLE" | sed "s/.*(curl).*/\1/g"
+echo "Secret $AWS_GET_ROLE"
 
 RESPONSE=$($AWS_GET_ROLE)
 AWS_ACCESS_KEY_ID=$(echo "$RESPONSE" | jq -r .AWSAccessKeyID)

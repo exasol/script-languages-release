@@ -9,7 +9,11 @@ AWS_SESSION_TOKEN=$(echo "$RESPONSE" | jq -r .AWSSessionToken)
 
 CREDENTIALS_FILE="$FILE_PREFIX/credentials"
 
-echo '[default-mfa]' > "$CREDENTIALS_FILE"
+echo '[default]' > "$CREDENTIALS_FILE"
+echo "aws_secret_access_key = $AWS_SECRET_ACCESS_KEY" >> "$CREDENTIALS_FILE"
+echo "aws_session_token = $AWS_SESSION_TOKEN" >> "$CREDENTIALS_FILE"
+echo "aws_access_key_id = $AWS_ACCESS_KEY_ID" >> "$CREDENTIALS_FILE"
+echo '[default-mfa]' >> "$CREDENTIALS_FILE"
 echo "aws_secret_access_key = $AWS_SECRET_ACCESS_KEY" >> "$CREDENTIALS_FILE"
 echo "aws_session_token = $AWS_SESSION_TOKEN" >> "$CREDENTIALS_FILE"
 echo "aws_access_key_id = $AWS_ACCESS_KEY_ID" >> "$CREDENTIALS_FILE"
@@ -17,6 +21,8 @@ echo "aws_access_key_id = $AWS_ACCESS_KEY_ID" >> "$CREDENTIALS_FILE"
 
 CONFIG_FILE="$FILE_PREFIX/config"
 
-echo '[profile default-mfa]' > "$CONFIG_FILE"
+echo '[default]' > "$CONFIG_FILE"
+echo 'region = eu-west-1' >>  "$CONFIG_FILE"
+echo '[profile default-mfa]' >> "$CONFIG_FILE"
 echo 'region = eu-west-1' >>  "$CONFIG_FILE"
 

@@ -8,7 +8,7 @@ FILE_PATH="$1"
 
 ls -l ~/.ssh
 
-echo "FILE_PATH $FILE_PATH"
+echo "FILE_PATH X${FILE_PATH}X"
 
 echo "$SSH_KEY_PEM" > "$FILE_PATH"
 

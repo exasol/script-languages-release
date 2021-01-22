@@ -39,7 +39,7 @@ jobs:
     - name: Create c4 config
       run: |
         mkdir $HOME/.ccc/
-        CCC_AWS_KEY_PAIR_FILE=$HOME/$CCC_AWS_KEY_PAIR_FILE_RELATIVE
+        export CCC_AWS_KEY_PAIR_FILE=$HOME/$CCC_AWS_KEY_PAIR_FILE_RELATIVE
         bash .github/workflows/create_c4_config.sh $HOME/.ccc/
       env:
         CCC_USER_BLAU_USER: ${{ secrets.CCC_USER_BLAU_USER }}

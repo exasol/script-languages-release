@@ -7,6 +7,8 @@ on:
 jobs:
   build:
     environment: c4_ci
+    env:
+      CCC_AWS_KEY_PAIR_FILE: ~/.ssh/id_rsa
     runs-on: ubuntu-latest
 
     steps:
@@ -27,4 +29,23 @@ jobs:
         aws s3 --profile default-mfa --region eu-west-1 cp s3://x-u/tag/ccc-release .
         aws s3 --profile default-mfa --region eu-west-1 cp s3://x-u/$(cat ccc-release | sed s@-@/@).tar.gz ccc.tar.gz
         tar xf ccc.tar.gz ./bin/c4.static
-
+    - name: Greate SSH Private Key
+      run: |
+        mkdir ~/.ssh/
+        bash .github/workflows/create_aws_config.sh $CCC_AWS_KEY_PAIR_FILE
+      env:
+        SSH_KEY_PEM: ${{ secrets.SSH_KEY_PEM }}
+    - name: Create c4 config
+      run: |
+        mkdir ~/.ccc/
+        bash .github/workflows/create_c4_config.sh ~/.ccc/
+      env:
+        CCC_USER_BLAU_USER: ${{ secrets.CCC_USER_BLAU_USER }}
+        CCC_USER_EMAIL: ${{ secrets.CCC_USER_EMAIL }}
+        CCC_USER_FULLNAME: ${{ secrets.CCC_USER_FULLNAME }}
+        CCC_USER_GITHUB_USER: ${{ secrets.CCC_USER_GITHUB_USER }}
+        CCC_USER_USERNAME: ${{ secrets.CCC_USER_USERNAME }}
+        SSH_KEY_NAME: ${{ secrets.SSH_KEY_NAME }}
+    - name: Create c4 working copy
+      run: |
+       c4 new git.script-languages-release 

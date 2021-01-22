@@ -23,7 +23,7 @@ jobs:
         AWS_GET_ROLE: ${{ secrets.AWS_GET_ROLE }}
     - name: Get c4 release
       run: |
-        aws s3 --profile default-mfa cp s3://x-u/tag/ccc-release .
-        aws s3 --profile default-mfa cp s3://x-u/$(cat ccc-release | sed s@-@/@).tar.gz ccc.tar.gz
+        aws s3 --profile default-mfa --region eu-west-1 cp s3://x-u/tag/ccc-release .
+        aws s3 --profile default-mfa --region eu-west-1 cp s3://x-u/$(cat ccc-release | sed s@-@/@).tar.gz ccc.tar.gz
         tar xf ccc.tar.gz ./bin/c4.static
 

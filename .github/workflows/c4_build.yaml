@@ -51,4 +51,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Create c4 working copy
       run: |
-       c4 new git.script-languages-release 
+       c4.static new git.script-languages-release 

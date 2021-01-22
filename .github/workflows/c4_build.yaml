@@ -29,7 +29,7 @@ jobs:
         aws s3 --profile default-mfa --region eu-west-1 cp s3://x-u/tag/ccc-release .
         aws s3 --profile default-mfa --region eu-west-1 cp s3://x-u/$(cat ccc-release | sed s@-@/@).tar.gz ccc.tar.gz
         tar xf ccc.tar.gz ./bin/c4.static
-        chmod +x c4.static
+        chmod +x ./bin/c4.static
 
     - name: Greate SSH Private Key
       run: |
@@ -53,4 +53,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Create c4 working copy
       run: |
-        ./c4.static new git.script-languages-release 
+        ./bin/c4.static new git.script-languages-release 

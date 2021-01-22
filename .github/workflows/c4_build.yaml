@@ -48,6 +48,7 @@ jobs:
         CCC_USER_GITHUB_USER: ${{ secrets.CCC_USER_GITHUB_USER }}
         CCC_USER_USERNAME: ${{ secrets.CCC_USER_USERNAME }}
         SSH_KEY_NAME: ${{ secrets.SSH_KEY_NAME }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Create c4 working copy
       run: |
        c4 new git.script-languages-release 

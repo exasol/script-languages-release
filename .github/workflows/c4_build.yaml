@@ -32,7 +32,7 @@ jobs:
     - name: Greate SSH Private Key
       run: |
         mkdir ~/.ssh/
-        bash .github/workflows/create_aws_config.sh $CCC_AWS_KEY_PAIR_FILE
+        bash .github/workflows/create_ssh_key.sh $CCC_AWS_KEY_PAIR_FILE
       env:
         SSH_KEY_PEM: ${{ secrets.SSH_KEY_PEM }}
     - name: Create c4 config

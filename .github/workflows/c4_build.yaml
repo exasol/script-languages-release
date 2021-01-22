@@ -8,7 +8,7 @@ jobs:
   build:
     environment: c4_ci
     env:
-      CCC_AWS_KEY_PAIR_FILE: ~/.ssh/id_rsa
+      CCC_AWS_KEY_PAIR_FILE: $HOME/.ssh/id_rsa
     runs-on: ubuntu-latest
 
     steps:
@@ -20,8 +20,8 @@ jobs:
         sudo ./aws/install
     - name: Create AWS Config
       run: |
-        mkdir ~/.aws/
-        bash .github/workflows/create_aws_config.sh ~/.aws/
+        mkdir $HOME/.aws/
+        bash .github/workflows/create_aws_config.sh $HOME/.aws/
       env:
         AWS_GET_ROLE: ${{ secrets.AWS_GET_ROLE }}
     - name: Get c4 release
@@ -31,14 +31,14 @@ jobs:
         tar xf ccc.tar.gz ./bin/c4.static
     - name: Greate SSH Private Key
       run: |
-        mkdir ~/.ssh/
+        mkdir $HOME/.ssh/
         bash .github/workflows/create_ssh_key.sh $CCC_AWS_KEY_PAIR_FILE
       env:
         SSH_KEY_PEM: ${{ secrets.SSH_KEY_PEM }}
     - name: Create c4 config
       run: |
-        mkdir ~/.ccc/
-        bash .github/workflows/create_c4_config.sh ~/.ccc/
+        mkdir $HOME/.ccc/
+        bash .github/workflows/create_c4_config.sh $HOME/.ccc/
       env:
         CCC_USER_BLAU_USER: ${{ secrets.CCC_USER_BLAU_USER }}
         CCC_USER_EMAIL: ${{ secrets.CCC_USER_EMAIL }}

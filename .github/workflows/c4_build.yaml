@@ -1,0 +1,29 @@
+name: Build with c4
+
+on:
+  push:
+    branches:
+      - "*"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install AWS CLI
+      run: |
+        curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+        unzip awscliv2.zip
+        sudo ./aws/install
+    - name: Create AWS Config
+      run: |
+        mkdir ~/.aws/
+        bash .github/workflows/create_aws_config.sh ~/.aws/
+      env:
+        AWS_GET_ROLE: ${{ secrets.AWS_GET_ROLE }}
+    - name: Get c4 release
+      run: |
+        aws s3 --profile default-mfa cp s3://x-u/tag/ccc-release .
+        aws s3 --profile default-mfa cp s3://x-u/$(cat ccc-release | sed s@-@/@).tar.gz ccc.tar.gz
+        tar xf ccc.tar.gz ./bin/c4.static
+

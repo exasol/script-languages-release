@@ -8,7 +8,7 @@ jobs:
   build:
     environment: c4_ci
     env:
-      CCC_AWS_KEY_PAIR_FILE: $HOME/.ssh/id_rsa
+      CCC_AWS_KEY_PAIR_FILE_RELATIVE: .ssh/id_rsa
     runs-on: ubuntu-latest
 
     steps:
@@ -32,12 +32,14 @@ jobs:
     - name: Greate SSH Private Key
       run: |
         mkdir $HOME/.ssh/
+        CCC_AWS_KEY_PAIR_FILE=$HOME/$CCC_AWS_KEY_PAIR_FILE_RELATIVE
         bash .github/workflows/create_ssh_key.sh $CCC_AWS_KEY_PAIR_FILE
       env:
         SSH_KEY_PEM: ${{ secrets.SSH_KEY_PEM }}
     - name: Create c4 config
       run: |
         mkdir $HOME/.ccc/
+        CCC_AWS_KEY_PAIR_FILE=$HOME/$CCC_AWS_KEY_PAIR_FILE_RELATIVE
         bash .github/workflows/create_c4_config.sh $HOME/.ccc/
       env:
         CCC_USER_BLAU_USER: ${{ secrets.CCC_USER_BLAU_USER }}

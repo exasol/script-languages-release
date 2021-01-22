@@ -2,9 +2,9 @@
 
 set -euo pipefail
 
-FILE_PREFIX="$1"
+(
 
-echo "Secret $AWS_GET_ROLE"
+FILE_PREFIX="$1"
 
 RESPONSE=$($AWS_GET_ROLE)
 AWS_ACCESS_KEY_ID=$(echo "$RESPONSE" | jq -r .AWSAccessKeyID)
@@ -31,3 +31,4 @@ echo "region = $AWS_DEFAULT_REGION" >>  "$CONFIG_FILE"
 echo '[profile default-mfa]' >> "$CONFIG_FILE"
 echo "region = $AWS_DEFAULT_REGION" >>  "$CONFIG_FILE"
 
+) &> /dev/null

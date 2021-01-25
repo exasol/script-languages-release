@@ -29,12 +29,6 @@ We provide three flavors for different Exasol versions. The flavors only specify
   - Available languages: Java 11, Python 2.7, Python 3.6 and R 3.4
   - [Here](standard-EXASOL-6.1.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-- standard-EXASOL-6.0.0
-  - Base Image: ubuntu:16.04
-  - Compatible Exasol Versions: 7.0.0, 6.2.\*, 6.1.\*, 6.0.\*
-  - Available languages: Java 9, Python 2.7, Python 3.6 and R 3.2
-  - [Here](standard-EXASOL-6.0.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
-
 ### Python3-ds flavors
 
 The python3-ds-EXASOL flavors are focused on data-science use cases with Python3 and provide more machine learning and data science packages than the standard-EXASOL flavor.
@@ -45,17 +39,11 @@ The python3-ds-EXASOL flavors are focused on data-science use cases with Python3
   - Available languages: Python 3.6
   - [Here](https://github.com/exasol/script-languages/tree/master/flavors/python3-ds-EXASOL-6.1.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-- python3-ds-EXASOL-6.0.0
-  - Base Image: ubuntu:16.04
-  - Compatible Exasol Versions: 7.0.0, 6.2.\*, 6.1.\*, 6.0.\*
-  - Available languages: Python 3.6
-  - [Here](https://github.com/exasol/script-languages/tree/master/flavors/python3-ds-EXASOL-6.0.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
-
 #### Python3-ds-cuda-preview flavors
 
 The Python3-ds-cuda-preview-EXASOL flavor is derived from the python3-ds-EXASOL flavor and provide libraries necessary for the usage of Nvidia GPUs and the Nvidia CUDA SDK within the UDFs. Additionally, Furthermore, it also provides GPU enabled versions of some data-science and machine-learning libraries.
 
-- python3-ds-cuda-preview-EXASOL-
+- python3-ds-cuda-preview-EXASOL-6.1.0
   - Base Image: ubuntu:18.04
   - Compatible Exasol Versions: 7.0.0, 6.2.\*, 6.1.\*
   - Available languages: Python 3.6
@@ -68,12 +56,6 @@ The Python3-ds-cuda-preview-EXASOL flavor is derived from the python3-ds-EXASOL 
   - Compatible Exasol Versions: 7.0.0, 6.2.\*, 6.1.\*
   - Available languages: R 3.5
   - [Here](fancyr-EXASOL-6.1.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
-
-- fancyr-ds-EXASOL-6.0.0
-  - Base Image: ubuntu:16.04
-  - Compatible Exasol Versions: 7.0.0, 6.2.\*, 6.1.\*, 6.0.\*
-  - Available languages: R 3.5
-  - [Here](fancyr-EXASOL-6.0.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
 ## Flavor or Language-specific features
 
@@ -93,5 +75,4 @@ The naming convention is like this:
 This allows us to provide new versions of a flavor when new features become available in Exasol that are not supported in older flavors.
 For instance, the flavors for Exasol 6.1.0 support newer Linux distributions as their basis and hence, overall contain newer versions of libraries and languages.
 
-So, in order to find the correct version of a flavor for your version of Exasol, simply take the latest container with version less than or equal to your Exasol version.
-So for Exasol 6.1.1, you would use the `*-EXASOL-6.1.0` flavors, while for Exasol 6.0.14 you would use the `*-EXASOL-6.0.0` flavors.
+So, in order to find the correct version of a flavor for your version of Exasol, simply take the latest container with version less than or equal to your Exasol version. So for Exasol 6.1.1, you would use the `*-EXASOL-6.1.0` flavors.

@@ -51,6 +51,8 @@ jobs:
         CCC_USER_USERNAME: ${{ secrets.CCC_USER_USERNAME }}
         SSH_KEY_NAME: ${{ secrets.SSH_KEY_NAME }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Create c4 working copy
+    - name: Create c4 play
       run: |
-        ./bin/c4.static new git.script-languages-release 
+        ./bin/c4.static aws new --ccc-play-off true --make true --upload true -AC git.script-languages-release  2>&1 | tee c4_new.log
+        sleep 120
+        ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $(cat c4_new.log | grep "ubuntu@ec2") tail -n 10000000 -f */c4-make.log

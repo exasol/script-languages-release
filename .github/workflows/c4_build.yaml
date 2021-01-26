@@ -53,6 +53,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Create c4 play
       run: |
-        ./bin/c4.static aws new --ccc-play-off true --make true --upload true -AC git.script-languages-release  2>&1 | tee c4_new.log
-        sleep 120
-        ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $(cat c4_new.log | grep "ubuntu@ec2") tail -n 10000000 -f */c4-make.log
+        ./bin/c4.static aws diag
+        #set -x
+        #./bin/c4.static aws new --ccc-play-off true --make true --upload true -AC git.script-languages-release  2>&1 | tee c4_new.log
+        #sleep 120
+        #ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $(cat c4_new.log | grep "ubuntu@ec2") tail -n 10000000 -f */c4-make.log

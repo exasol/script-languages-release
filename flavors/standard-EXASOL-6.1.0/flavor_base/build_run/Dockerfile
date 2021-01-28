@@ -20,7 +20,7 @@ RUN ln -s /exaudf/external/script_languages/python/python3/pyextdataframe.so /ex
 RUN ln -s /exaudf/external/script_languages/javacontainer/libexaudf.jar /exaudf/javacontainer/libexaudf.jar
 
 
-# These source files is required for the building of the protegrity client
+# These source files are required for building internal udf plugins
 WORKDIR /exaudfclient/base
 RUN cp debug_message.h exaudfclient.cc exaudflib/exaudflib.cc exaudflib/exaudflib.h exaudflib/zmqcontainer.proto /exaudf/src
 RUN ./test_udfclient.sh /exaudf/exaudfclient

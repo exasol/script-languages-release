@@ -18,7 +18,7 @@ WORKDIR /exaudfclient/extension
 RUN ["/bin/bash", "-c", "source /env && bash build.sh --config no-tty -c dbg --config r --config slow-wrapper-py2"]
 RUN cp -r -L bazel-bin/* /exaudf
 
-# These source files is required for the building of the protegrity client
+# These source files are required for building internal udf plugins
 WORKDIR /exaudfclient/base
 RUN ./test_udfclient.sh /exaudf/exaudfclient
 

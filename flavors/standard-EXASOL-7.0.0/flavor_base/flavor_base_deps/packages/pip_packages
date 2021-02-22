@@ -3,4 +3,4 @@ azure-storage==0.36.0
 git+http://github.com/EXASOL/websocket-api.git#egg=exasol-db-api&subdirectory=python
 pysftp==0.2.9
 boto3==1.11.17
-rsa==4.7
+rsa==4.5

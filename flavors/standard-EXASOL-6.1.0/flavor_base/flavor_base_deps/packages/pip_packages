@@ -5,4 +5,4 @@ pysftp
 boto3
 urllib3==1.25.11 #we need urllib3 1.25.11 to get requests running
 requests==2.24.0 #we need a newer requests version, because older use non public modules from urllib3
-
+rsa==4.5

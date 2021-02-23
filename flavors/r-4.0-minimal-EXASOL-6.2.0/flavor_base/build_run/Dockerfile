@@ -14,7 +14,7 @@ COPY /exaudfclient /exaudfclient
 
 WORKDIR /exaudfclient/extension
 RUN ["/bin/bash", "-c", "source /env && bash build.sh --config no-tty --config optimize --config optimize-r --config fast-binary-both"]
-RUN cp -r -L bazel-bin/* /exaudf && rm -r /exaudf/external/bazel_tools/
+RUN cp -r -L bazel-bin/* /exaudf
 
 WORKDIR /exaudfclient/base
 RUN ./test_udfclient.sh /exaudf/exaudfclient

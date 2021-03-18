@@ -1,0 +1,2 @@
+generic_language_tests=python3 python java r
+test_folders=python python3 java r standard-flavor

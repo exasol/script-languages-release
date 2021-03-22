@@ -1,9 +1,0 @@
-pytz==2018.3
-azure-storage-blob==12.8.0 
-azure-storage-file-share==12.4.1 
-azure-storage-file-datalake==12.3.0
-azure-storage-queue==12.1.5
-git+http://github.com/EXASOL/websocket-api.git#egg=exasol-db-api&subdirectory=python
-pysftp==0.2.9
-boto3==1.17.30 
-rsa==4.5

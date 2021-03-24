@@ -26,6 +26,7 @@ python-pykickstart|1.83-2
 python-pyodbc|4.0.17-1
 python-openssl|17.5.0-1ubuntu1
 python-pypdf2|1.26.0-2
+libldb1|2:1.2.3-1ubuntu0.1 # Pinned, because conflict "python-ldb : Depends: libldb1 (= 2:1.2.3-1ubuntu0.1) but 2:1.2.3-1ubuntu0.2 is to be installed"
 python-ldb|2:1.2.3-1ubuntu0.1
 python-ldap|3.0.0-1ubuntu0.1
 python-roman|2.0.0-3

@@ -54,7 +54,7 @@ Note: The option --recurse-submodules clones the submodule [script-languages](ht
 
 ## How to build an existing flavor?
 
-Choose a flavor. Currently we have several pre-defined flavors available, e.g., `mini-EXASOL-6.0.0`, and `standard-EXASOL-6.1.0`.
+Choose a flavor. Currently we have several pre-defined flavors available, e.g., `standard-EXASOL-6.2.0`.
 This project supports different versions of script language environments with different libraries and languages.
 We call these versions _flavors_. The pre-defined flavors can be modified and extended to create customized flavors.
 Each pre-defined flavor has its own set of Dockerfiles in a corresponding sub directory of [flavors](flavors). 

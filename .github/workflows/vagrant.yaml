@@ -1,0 +1,17 @@
+name: vagrant-up
+
+on: [push]
+
+jobs:
+  vagrant-up:
+    runs-on: macos-10.15
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Run vagrant up 
+      run: vagrant up --provider=virtualbox
+      working-directory: "./vagrant" 
+
+    - name: ssh into box after boot
+      run: vagrant ssh -c "echo 'hello world!'"

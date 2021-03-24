@@ -1,0 +1,39 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "generic/ubuntu1804"
+  config.vm.hostname = "script-languages"
+  config.vm.network :forwarded_port, guest: 8888, host: 8888
+  config.vm.network :forwarded_port, guest: 6666, host: 6666
+  config.vm.synced_folder ".", "/vagrant", type: "rsync", rsync__exclude: ".git/"
+  config.vm.synced_folder "..", "/script-languages-release", type: "rsync", rsync__exclude: ".git/"
+
+  config.vm.provider :libvirt do |v|
+    v.qemu_use_session = true
+    v.cpus = 2
+    v.memory = 6000
+    v.machine_virtual_size = 100
+  end
+
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 6000
+    v.cpus = 2
+  end
+
+  config.trigger.before [:provision] do |trigger|
+    trigger.run = { inline: "vagrant rsync"}
+  end
+
+  #config.vm.provision "shell" do |s|
+  #   s.path="provisioning/resize-disk.sh"
+  #end
+
+  config.vm.provision "shell" do |s|
+    s.path="provisioning/dns.sh"
+  end
+
+  config.vm.provision "shell" do |s|
+    s.path="provisioning/install.sh"
+  end
+
+
+end
+

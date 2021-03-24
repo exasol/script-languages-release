@@ -17,5 +17,5 @@ jobs:
       working-directory: "./vagrant" 
 
     - name: Run exaslct in vagrant
-      run: vagrant ssh -c "cd /script-languages-release; ./exaslct build --flavor-path flavors/standard-EXASOL-7.0.0/ --goal udf_client_deps"
+      run: vagrant ssh -c "cd /script-languages-release; ./exaslct build --flavor-path flavors/standard-EXASOL-7.0.0/ --goal udfclient_deps"
       working-directory: "./vagrant" 

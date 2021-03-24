@@ -1,4 +1,4 @@
-# Details for Python-ds-EXASOL-6.1.0 flavor
+# Details for fancyr-EXASOL-6.1.0 flavor
 
 ## Packages
 

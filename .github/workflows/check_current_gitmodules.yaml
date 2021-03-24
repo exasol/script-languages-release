@@ -1,0 +1,27 @@
+name: Check if .current_submodules is up to date
+
+on: [push, pull_request]
+
+jobs:
+  check_setup_py:
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [3.6]
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Init submodules
+      run: git submodule update --init --recursive
+    - name: Run update_current_submodules_file.sh
+      run: bash githooks/update_current_submodules_file.sh
+    - name: Show changes on working copy
+      run: git status --porcelain=v1 -uno
+    - name: Show diff on working copy
+      run: git diff --cached; git diff --cached --summary; 
+    - name: Show gitsubmodules status
+      run: git submodule status
+    - name: Check if .current_submodules file is changed
+      run: |
+        [ -z "$(git status --porcelain=v1 -uno 2>/dev/null)" ]

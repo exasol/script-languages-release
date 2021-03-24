@@ -26,7 +26,8 @@ python-pykickstart|1.83-2
 python-pyodbc|4.0.17-1
 python-openssl|17.5.0-1ubuntu1
 python-pypdf2|1.26.0-2
-python-ldb|2:1.2.3-1ubuntu0.1
+libldb1|2:1.2.3-1ubuntu0.2
+python-ldb|2:1.2.3-1ubuntu0.2
 python-ldap|3.0.0-1ubuntu0.1
 python-roman|2.0.0-3
 python-samba|2:4.7.6+dfsg~ubuntu-0ubuntu2.21

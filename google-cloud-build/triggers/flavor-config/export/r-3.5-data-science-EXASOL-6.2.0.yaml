@@ -1,2 +1,2 @@
-flavor: "fancyr-EXASOL-6.1.0"
+flavor: "r-3.5-data-science-EXASOL-6.2.0"
 trigger_template_file: "export.json.jinja2"

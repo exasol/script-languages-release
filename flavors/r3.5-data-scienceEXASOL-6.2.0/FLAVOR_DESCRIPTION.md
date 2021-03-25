@@ -1,4 +1,4 @@
-# Details for fancyr-EXASOL-6.1.0 flavor
+# Details for R-3.5-data-science-EXASOL-6.2.0 flavor
 
 ## Packages
 

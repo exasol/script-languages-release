@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -ue
 
-FLAVORS=("standard-EXASOL-7.0.0" "standard-EXASOL-6.2.0" "standard-EXASOL-6.1.0" "python3-ds-EXASOL-6.1.0" "python3-ds-cuda-preview-EXASOL-6.1.0" "r-3.5-data-science-EXASOL-6.1.0")
+FLAVORS=("standard-EXASOL-7.0.0" "standard-EXASOL-6.2.0" "standard-EXASOL-6.1.0" "python3-ds-EXASOL-6.1.0" "python3-ds-cuda-EXASOL-6.1.0" "r-3.5-data-science-EXASOL-6.1.0")
 FLAVOR=standard-EXASOL-7.0.0
 MODE=FULL
 EXASLCT_TMP="$HOME/exaslct-tmp"

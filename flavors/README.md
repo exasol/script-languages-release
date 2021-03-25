@@ -7,7 +7,7 @@ Script Language Flavors are configurations of languages and libraries to be avai
 Currently, we provide
 
 - the `standard` flavors: These flavors include three langauage implementations: Java, Python, and R and a collection of typical libraries
-- the `python3.6-ds` flavors: These flavors include Python3 as language and a number of typical data science and machine learning libraries
+- the `python3.6-data-science` flavors: These flavors include Python3 as language and a number of typical data science and machine learning libraries
 - the `fancyr` flavors: These flavors include R as language and a large collection of popular R packages.
 
 ### Standard flavors
@@ -29,25 +29,25 @@ We provide three flavors for different Exasol versions. The flavors only specify
   - Available languages: Java 11, Python 2.7, Python 3.6 and R 3.4
   - [Here](standard-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-### Python3.6-ds flavors
+### Python3.6-data-science flavors
 
-The python3.6-ds-EXASOL flavors are focused on data-science use cases with Python3 and provide more machine learning and data science packages than the standard-EXASOL flavor.
+The python3.6-data-science-EXASOL flavors are focused on data-science use cases with Python3 and provide more machine learning and data science packages than the standard-EXASOL flavor.
 
-- python3.6-ds-EXASOL-6.2.0
+- python3.6-data-science-EXASOL-6.2.0
   - Base Image: ubuntu:18.04
   - Compatible Exasol Versions: 7.0.\*, 6.2.\*
   - Available languages: Python 3.6
-  - [Here](https://github.com/exasol/script-languages/tree/master/flavors/python3.6-ds-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+  - [Here](https://github.com/exasol/script-languages/tree/master/flavors/python3.6-data-science-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-#### Python3.6-ds-cuda-preview flavors
+#### Python3.6-data-science-cuda-preview flavors
 
-The Python3.6-ds-cuda-preview-EXASOL flavor is derived from the python3.6-ds-EXASOL flavor and provide libraries necessary for the usage of Nvidia GPUs and the Nvidia CUDA SDK within the UDFs. Additionally, Furthermore, it also provides GPU enabled versions of some data-science and machine-learning libraries.
+The python3.6-data-science-cuda-preview-EXASOL flavor is derived from the python3.6-data-science-EXASOL flavor and provides libraries necessary for the usage of Nvidia GPUs and the Nvidia CUDA SDK within the UDFs. Additionally, Furthermore, it also provides GPU enabled versions of some data-science and machine-learning libraries.
 
-- python3.6-ds-cuda-preview-EXASOL-6.2.0
+- python3.6-data-science-cuda-preview-EXASOL-6.2.0
   - Base Image: ubuntu:18.04
   - Compatible Exasol Versions: 7.0.\*, 6.2.\*
   - Available languages: Python 3.6
-  - [Here](https://github.com/exasol/script-languages/tree/master/flavors/python3.6-ds-cuda-preview-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+  - [Here](https://github.com/exasol/script-languages/tree/master/flavors/python3.6-data-science-cuda-preview-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
 ### Fancyr flavors
 

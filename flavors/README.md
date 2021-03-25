@@ -7,7 +7,7 @@ Script Language Flavors are configurations of languages and libraries to be avai
 Currently, we provide
 
 - the `standard` flavors: These flavors include three langauage implementations: Java, Python, and R and a collection of typical libraries
-- the `python3.6-data-science` flavors: These flavors include Python3 as language and a number of typical data science and machine learning libraries
+- the `python-3.6-data-science` flavors: These flavors include Python3 as language and a number of typical data science and machine learning libraries
 - the `r-3.5-data-science` flavors: These flavors include R as language and a large collection of popular R packages.
 
 ### Standard flavors
@@ -29,25 +29,25 @@ We provide three flavors for different Exasol versions. The flavors only specify
   - Available languages: Java 11, Python 2.7, Python 3.6 and R 3.4
   - [Here](standard-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-### Python3.6-data-science flavors
+### Python-3.6-data-science flavors
 
-The python3.6-data-science-EXASOL flavors are focused on data-science use cases with Python3 and provide more machine learning and data science packages than the standard-EXASOL flavor.
+The python-3.6-data-science-EXASOL flavors are focused on data-science use cases with Python3 and provide more machine learning and data science packages than the standard-EXASOL flavor.
 
-- python3.6-data-science-EXASOL-6.2.0
+- python-3.6-data-science-EXASOL-6.2.0
   - Base Image: ubuntu:18.04
   - Compatible Exasol Versions: 7.0.\*, 6.2.\*
   - Available languages: Python 3.6
-  - [Here](https://github.com/exasol/script-languages/tree/master/flavors/python3.6-data-science-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+  - [Here](https://github.com/exasol/script-languages/tree/master/flavors/python-3.6-data-science-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-#### Python3.6-data-science-cuda-preview flavors
+#### Python-3.6-data-science-cuda-preview flavors
 
-The python3.6-data-science-cuda-preview-EXASOL flavor is derived from the python3.6-data-science-EXASOL flavor and provides libraries necessary for the usage of Nvidia GPUs and the Nvidia CUDA SDK within the UDFs. Additionally, Furthermore, it also provides GPU enabled versions of some data-science and machine-learning libraries.
+The python-3.6-data-science-cuda-preview-EXASOL flavor is derived from the python-3.6-data-science-EXASOL flavor and provides libraries necessary for the usage of Nvidia GPUs and the Nvidia CUDA SDK within the UDFs. Additionally, Furthermore, it also provides GPU enabled versions of some data-science and machine-learning libraries.
 
-- python3.6-data-science-cuda-preview-EXASOL-6.2.0
+- python-3.6-data-science-cuda-preview-EXASOL-6.2.0
   - Base Image: ubuntu:18.04
   - Compatible Exasol Versions: 7.0.\*, 6.2.\*
   - Available languages: Python 3.6
-  - [Here](https://github.com/exasol/script-languages/tree/master/flavors/python3.6-data-science-cuda-preview-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+  - [Here](https://github.com/exasol/script-languages/tree/master/flavors/python-3.6-data-science-cuda-preview-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
 ### R-3.5-data-science flavors
 
@@ -59,11 +59,11 @@ The R-3.5-data-science flavor provides the language R 3.5 and a large collection
   - Available languages: R 3.5
   - [Here](r-3.5-data-science-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-### R 4.0 minimal flavors
+### R-4.0-minimal flavors
 
-The R 4.0 minimal flavor provides the language R 4.0 with only absolute necessary packages. This allows very simple customization because you control almost all dependencies.
+The R-4.0-minimal flavor provides the language R 4.0 with only absolute necessary packages. This allows very simple customization because you control almost all dependencies.
 
-- r-4.0-EXASOL-6.2.0
+- r-4.0-minimal-EXASOL-6.2.0
   - Base Image: ubuntu:18.04
   - Compatible Exasol Versions: 7.0.\*, 6.2.\*
   - Available languages: R 4.0

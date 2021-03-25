@@ -7,8 +7,8 @@ Script Language Flavors are configurations of languages and libraries to be avai
 Currently, we provide
 
 - the `standard` flavors: These flavors include three langauage implementations: Java, Python, and R and a collection of typical libraries
-- the `python3-ds` flavors: These flavors include Python3 as language and a number of typical data science and machine learning libraries
-- the `fancyr` flavors: These flavors include R as language and a large collection of popular R packages.
+- the `python-3.6-data-science` flavors: These flavors include Python3 as language and a number of typical data science and machine learning libraries
+- the `r-3.5-data-science` flavors: These flavors include R as language and a large collection of popular R packages.
 
 ### Standard flavors
 
@@ -19,59 +19,53 @@ We provide three flavors for different Exasol versions. The flavors only specify
 
 - standard-EXASOL-7.0.0
   - Base Image: ubuntu:18.04
-  - Compatible Exasol Versions: 7.0.\* (but likely also with 6.2.\* and 6.1.\*)
+  - Compatible Exasol Versions: 7.0.\* (but likely also with 6.2.\*) 
   - Available languages: Java 11, Python 2.7, Python 3.6 and R 3.4
   - [Here](standard-EXASOL-7.0.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
 - standard-EXASOL-6.2.0
   - Base Image: ubuntu:18.04
-  - Compatible Exasol Versions: 7.0.\*, 6.2.\*, 6.1.\*
+  - Compatible Exasol Versions: 7.0.\*, 6.2.\*
   - Available languages: Java 11, Python 2.7, Python 3.6 and R 3.4
   - [Here](standard-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-- standard-EXASOL-6.1.0
+### Python-3.6-data-science flavors
+
+The python-3.6-data-science-EXASOL flavors are focused on data-science use cases with Python3 and provide more machine learning and data science packages than the standard-EXASOL flavor.
+
+- python-3.6-data-science-EXASOL-6.2.0
   - Base Image: ubuntu:18.04
-  - Compatible Exasol Versions: 7.0.\*, 6.2.\*, 6.1.\*
-  - Available languages: Java 11, Python 2.7, Python 3.6 and R 3.4
-  - [Here](standard-EXASOL-6.1.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
-
-### Python3-ds flavors
-
-The python3-ds-EXASOL flavors are focused on data-science use cases with Python3 and provide more machine learning and data science packages than the standard-EXASOL flavor.
-
-- python3-ds-EXASOL-6.1.0
-  - Base Image: ubuntu:18.04
-  - Compatible Exasol Versions: 7.0.0, 6.2.\*, 6.1.\*
+  - Compatible Exasol Versions: 7.0.\*, 6.2.\*
   - Available languages: Python 3.6
-  - [Here](https://github.com/exasol/script-languages/tree/master/flavors/python3-ds-EXASOL-6.1.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+  - [Here](https://github.com/exasol/script-languages/tree/master/flavors/python-3.6-data-science-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-#### Python3-ds-cuda-preview flavors
+#### Python-3.6-data-science-cuda flavors
 
-The Python3-ds-cuda-preview-EXASOL flavor is derived from the python3-ds-EXASOL flavor and provide libraries necessary for the usage of Nvidia GPUs and the Nvidia CUDA SDK within the UDFs. Additionally, Furthermore, it also provides GPU enabled versions of some data-science and machine-learning libraries.
+The python-3.6-data-science-cuda-EXASOL flavor is derived from the python-3.6-data-science-EXASOL flavor and provides libraries necessary for the usage of Nvidia GPUs and the Nvidia CUDA SDK within the UDFs. Additionally, Furthermore, it also provides GPU enabled versions of some data-science and machine-learning libraries.
 
-- python3-ds-cuda-preview-EXASOL-6.1.0
+- python-3.6-data-science-cuda-EXASOL-6.2.0
   - Base Image: ubuntu:18.04
-  - Compatible Exasol Versions: 7.0.0, 6.2.\*, 6.1.\*
+  - Compatible Exasol Versions: 7.0.\*, 6.2.\*
   - Available languages: Python 3.6
-  - [Here](https://github.com/exasol/script-languages/tree/master/flavors/python3-ds-cuda-preview-EXASOL-6.1.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+  - [Here](https://github.com/exasol/script-languages/tree/master/flavors/python-3.6-data-science-cuda-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-### Fancyr flavors
+### R-3.5-data-science flavors
 
-The Fancyr flavor provides the language R 3.5 and a large collection of pre-installed packages.
+The R-3.5-data-science flavor provides the language R 3.5 and a large collection of pre-installed packages.
 
-- fancyr-ds-EXASOL-6.1.0
+- r-3.5-data-science-EXASOL-6.2.0
   - Base Image: ubuntu:18.04
-  - Compatible Exasol Versions: 7.0.0, 6.2.\*, 6.1.\*
+  - Compatible Exasol Versions: 7.0.\*, 6.2.\*
   - Available languages: R 3.5
-  - [Here](fancyr-EXASOL-6.1.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+  - [Here](r-3.5-data-science-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-### R 4.0 minimal flavors
+### R-4.0-minimal flavors
 
-The R 4.0 minimal flavor provides the language R 4.0 with only absolute necessary packages. This allows very simple customization because you control almost all dependencies.
+The R-4.0-minimal flavor provides the language R 4.0 with only absolute necessary packages. This allows very simple customization because you control almost all dependencies.
 
-- r-4.0-EXASOL-6.2.0
+- r-4.0-minimal-EXASOL-6.2.0
   - Base Image: ubuntu:18.04
-  - Compatible Exasol Versions: 7.0.0, 6.2.\*, 6.1.\*
+  - Compatible Exasol Versions: 7.0.\*, 6.2.\*
   - Available languages: R 4.0
   - [Here](r-4.0-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
@@ -91,6 +85,5 @@ The naming convention is like this:
 `<flavor-name>-EXASOL-<minimum-Exasol-Version>`
 
 This allows us to provide new versions of a flavor when new features become available in Exasol that are not supported in older flavors.
-For instance, the flavors for Exasol 6.1.0 support newer Linux distributions as their basis and hence, overall contain newer versions of libraries and languages.
 
-So, in order to find the correct version of a flavor for your version of Exasol, simply take the latest container with version less than or equal to your Exasol version. So for Exasol 6.1.1, you would use the `*-EXASOL-6.1.0` flavors.
+So, in order to find the correct version of a flavor for your version of Exasol, simply take the latest container with version less than or equal to your Exasol version. So for Exasol 6.2.13, you would use the `*-EXASOL-6.2.0` flavors.

@@ -2,7 +2,7 @@
 
 ## Summary
 
-This release introduces a new standard flavor for Exasol 7.1. Additionally, a minimal flavor for R 4.0 with only the minimal set of installed packages to simplify the customization. Furthermore, flavors for Exasol 6.0 or 6.1 were removed or updated to at least Exasol 6.2. The flavors python3-ds-* and fancyr-* where renamed to python-3.6-data-science* and r-3.5-data-science, respectively. Besides, these larger changes, this release provides bug fixes, small improvements and minor package updates. 
+This release introduces a new standard flavor for Exasol 7.1. Additionally, a minimal flavor for R 4.0 with only the minimal set of installed packages to simplify the customization. Furthermore, flavors for Exasol 6.0 or 6.1 were removed or updated to at least Exasol 6.2. The flavors python3-ds-* and fancyr-* were renamed to python-3.6-data-science* and r-3.5-data-science, respectively. Besides, these larger changes, this release provides bug fixes, small improvements and minor package updates. 
 
 ## Package Version Comparison to Release 1.0.0
 

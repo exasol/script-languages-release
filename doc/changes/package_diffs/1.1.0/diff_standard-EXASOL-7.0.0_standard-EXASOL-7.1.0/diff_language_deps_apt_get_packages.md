@@ -1,6 +1,6 @@
 |    | Package                 | standard-EXASOL-7.0.0 in 1.0.0                  | standard-EXASOL-7.1.0 in 1.1.0                | Status   |
 |---:|:------------------------|:---------------------------|:-------------------------|:---------|
-|  0 | curl                    |                            | 7.58.0-2ubuntu3.12       | NEW      |
+|  0 | curl                    |                            | 7.58.0-2ubuntu3.13       | NEW      |
 |  1 | python-distutils-extra  |                            | 2.41ubuntu1              | NEW      |
 |  2 | python3-distutils       |                            | 3.6.9-1~18.04            | NEW      |
 |  3 | openjdk-11-jdk-headless | 11.0.9+11-0ubuntu1~18.04.1 | 11.0.10+9-0ubuntu1~18.04 | UPDATED  |

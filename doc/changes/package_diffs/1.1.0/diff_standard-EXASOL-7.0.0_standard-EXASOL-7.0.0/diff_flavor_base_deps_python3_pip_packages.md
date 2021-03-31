@@ -1,4 +1,4 @@
-|    | Package                                                                              | Version_x     | Version_y     | Status   |
+|    | Package                                                                              | standard-EXASOL-7.0.0 in 1.0.0     | standard-EXASOL-7.0.0 in 1.1.0     | Status   |
 |---:|:-------------------------------------------------------------------------------------|:--------------|:--------------|:---------|
 |  0 | git+http://github.com/EXASOL/websocket-api.git#egg=exasol-db-api&subdirectory=python |               | Not specified | NEW      |
 |  1 | git+http://github.com/EXASOL/websocket-api.git#egg=exasol-ws-api&subdirectory=python | Not specified |               | REMOVED  |

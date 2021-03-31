@@ -1,4 +1,4 @@
-|    | Package    | Version_x   | Version_y   | Status   |
+|    | Package    | standard-EXASOL-6.2.0 in 1.0.0   | standard-EXASOL-6.2.0 in 1.1.0   | Status   |
 |---:|:-----------|:------------|:------------|:---------|
 |  0 | htmltools  | 0.3.6       | 0.4.0       | UPDATED  |
 |  1 | data.table | 1.12.8      | 1.12.8      |          |

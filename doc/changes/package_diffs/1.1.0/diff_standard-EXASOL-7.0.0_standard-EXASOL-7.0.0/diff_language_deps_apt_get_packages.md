@@ -1,4 +1,4 @@
-|    | Package                 | Version_x                  | Version_y                | Status   |
+|    | Package                 | standard-EXASOL-7.0.0 in 1.0.0                  | standard-EXASOL-7.0.0 in 1.1.0                | Status   |
 |---:|:------------------------|:---------------------------|:-------------------------|:---------|
 |  0 | curl                    |                            | 7.58.0-2ubuntu3.12       | NEW      |
 |  1 | python-distutils-extra  |                            | 2.41ubuntu1              | NEW      |

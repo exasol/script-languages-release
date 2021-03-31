@@ -1,4 +1,4 @@
-|    | Package                    | Version_x                | Version_y                | Status   |
+|    | Package                    | standard-EXASOL-7.0.0 in 1.0.0                | standard-EXASOL-7.0.0 in 1.1.0                | Status   |
 |---:|:---------------------------|:-------------------------|:-------------------------|:---------|
 |  0 | libssl-dev                 | 1.1.1-1ubuntu2.1~18.04.6 | 1.1.1-1ubuntu2.1~18.04.9 | UPDATED  |
 |  1 | coreutils                  | 8.28-1ubuntu1            | 8.28-1ubuntu1            |          |

@@ -2,6 +2,14 @@
 
 ## Summary
 
+This release introduces a new standard flavor for Exasol 7.1. Additionally, a minimal flavor for R 4.0 with only the minimal set of installed packages to simplify the customization. Furthermore, flavors for Exasol 6.0 or 6.1 were removed or updated to at least Exasol 6.2. The flavors python3-ds-* and fancyr-* where renamed to python-3.6-data-science* and r-3.5-data-science, respectively. Besides, these larger changes, this release provides bug fixes, small improvements and minor package updates. 
+
+## Package Version Comparison to Release 1.0.0
+
+* [Comparison of standard-EXASOL-7.0.0 in 1.0.0 with standard-EXASOL-7.1.0 in 1.1.0](package_diffs/1.1.0/diff_standard-EXASOL-7.0.0_standard-EXASOL-7.1.0/README.md)
+* [Comparison of standard-EXASOL-7.0.0 in 1.0.0 with standard-EXASOL-7.0.0 in 1.1.0](package_diffs/1.1.0/diff_standard-EXASOL-7.0.0_standard-EXASOL-7.0.0/README.md)
+* [Comparison of standard-EXASOL-6.2.0 in 1.0.0 with standard-EXASOL-6.2.0 in 1.1.0](package_diffs/1.1.0/diff_standard-EXASOL-6.2.0_standard-EXASOL-6.2.0/README.md)
+
 ## Bug Fixes
 
 * Script-Language Containers:
@@ -19,7 +27,7 @@
   * #167: Nightly builds sometimes don't fail when errors during the build happen
   * #160: CLI option --path-in-bucket still required for container upload
   * #127: Fix incorrect file extension for checksum files of the flavors
-  * #63: Check alter session generation for all flavors
+  * #63: Fix alter session generation for standard-EXASOL-7.0.0
   * #64: SyntaxWarning: "is not" with a literal in docker_utils.py
 
 
@@ -37,8 +45,8 @@
 ## Refactoring
 
 * Script-Language Containers:
-  * #216: Rename data science flavors and remove standard-EXASOL-6.1.0 flavor
-  * #215: Rename all flavors which still stand on 6.1.0 to 6.2.0 or remove them if a flavor for 6.2.0 already exists
+  * #216: Remove standard-EXASOL-6.1.0 flavor
+  * #215: Update flavors for Exasol 6.1.0 to Exasol 6.2.0, because Exasol 6.1 reached EOL
   * #209: Rename python3-ds flavor to python-3.6-data-sience 
   * #208: Rename fancyr flavors to r-4.0-data-science
   * #184: Pin rsa python package for standard flavors

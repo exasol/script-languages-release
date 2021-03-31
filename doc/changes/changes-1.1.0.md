@@ -20,7 +20,7 @@ This release introduces a new standard flavor for Exasol 7.1 with selected Pytho
   * #166: Flavor builds fails with Syntax Error while installing pip with get-pip.py
   * #151: Enable legacy resolver in install_via_pip.pl to avoid pip resolution issues
 
-* Exaslct
+* Script-Language-Container-Tool (Exaslct)
   * #177: Fix comparision in find_images_by_tag in docker_utils.py
   * #176: Make the --path-in-bucket commandline argument optional for the upload command
   * #170: Fix the exit code of the exaslct start script
@@ -52,7 +52,7 @@ This release introduces a new standard flavor for Exasol 7.1 with selected Pytho
   * #184: Pin rsa python package for standard flavors
   * #117: Remove 6.0 flavors, because Exasol 6.0 reached EOL
 
-* Exaslct
+* Script-Language-Container-Tool (Exaslct)
   * #113: Update test environment and import it as a python package instead as a git submodule
 
 

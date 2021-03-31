@@ -1,21 +1,21 @@
-# script-languages-release 1.1.0, released 2020-XX-XX
+# script-languages-release 1.1.0, released 2020-03-31
 
 ## Summary
 
-This release introduces a new standard flavor for Exasol 7.1. Additionally, a minimal flavor for R 4.0 with only the minimal set of installed packages to simplify the customization. Furthermore, flavors for Exasol 6.0 or 6.1 were removed or updated to at least Exasol 6.2. The flavors python3-ds-* and fancyr-* were renamed to python-3.6-data-science* and r-3.5-data-science, respectively. Besides, these larger changes, this release provides bug fixes, small improvements and minor package updates. 
+This release introduces a new standard flavor for Exasol 7.1 with selected Python libraries for the Google Cloud API and Microsoft Azure SDK. Additionally, a minimal flavor for R 4.0 with only the minimal set of packages to simplify customization. Furthermore, flavors for Exasol 6.0 or 6.1 were removed or updated to at least Exasol 6.2. The flavors python3-ds-* and fancyr-* were renamed to python-3.6-data-science* and r-3.5-data-science, respectively. Besides, these larger changes, this release provides bug fixes, small improvements and minor package updates. 
 
 ## Package Version Comparison to Release 1.0.0
 
-* [Comparison of standard-EXASOL-7.0.0 in 1.0.0 with standard-EXASOL-7.1.0 in 1.1.0](package_diffs/1.1.0/diff_standard-EXASOL-7.0.0_standard-EXASOL-7.1.0/README.md)
-* [Comparison of standard-EXASOL-7.0.0 in 1.0.0 with standard-EXASOL-7.0.0 in 1.1.0](package_diffs/1.1.0/diff_standard-EXASOL-7.0.0_standard-EXASOL-7.0.0/README.md)
-* [Comparison of standard-EXASOL-6.2.0 in 1.0.0 with standard-EXASOL-6.2.0 in 1.1.0](package_diffs/1.1.0/diff_standard-EXASOL-6.2.0_standard-EXASOL-6.2.0/README.md)
+* [Comparison of standard-EXASOL-7.1.0 in 1.1.0 with standard-EXASOL-7.0.0 in 1.0.0](package_diffs/1.1.0/diff_standard-EXASOL-7.0.0_standard-EXASOL-7.1.0/README.md)
+* [Comparison of standard-EXASOL-7.0.0 in 1.1.0 with standard-EXASOL-7.0.0 in 1.0.0](package_diffs/1.1.0/diff_standard-EXASOL-7.0.0_standard-EXASOL-7.0.0/README.md)
+* [Comparison of standard-EXASOL-6.2.0 in 1.1.0 with standard-EXASOL-6.2.0 in 1.0.0](package_diffs/1.1.0/diff_standard-EXASOL-6.2.0_standard-EXASOL-6.2.0/README.md)
 
 ## Bug Fixes
 
 * Script-Language Containers:
-  * #204: Bump jinja2 in Pipfile from 2.10.3 to 2.11.3
+  * #204: Update jinja2 in Pipfile from 2.10.3 to 2.11.3
   * #201: Fix url for get-pip.py in install_python2.7_pip.sh
-  * #182: Newest rsa package version doesn't work with Python 2
+  * #182: Pin rsa package to 4.5 for Python 2, because newer versions don't work with Python 2 
   * #169: Pin the pip version in flavors to lower than version 21.0 and use special install script for Python 2.7
   * #166: Flavor builds fails with Syntax Error while installing pip with get-pip.py
   * #151: Enable legacy resolver in install_via_pip.pl to avoid pip resolution issues

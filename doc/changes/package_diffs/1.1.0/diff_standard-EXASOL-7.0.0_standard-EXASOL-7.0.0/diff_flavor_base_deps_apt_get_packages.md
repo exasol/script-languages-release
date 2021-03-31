@@ -6,8 +6,8 @@
 |   3 | python3-pip           | 9.0.1-2.3~ubuntu1.18.04.4       |                                 | REMOVED  |
 |   4 | git                   | 1:2.17.1-1ubuntu0.7             | 1:2.17.1-1ubuntu0.8             | UPDATED  |
 |   5 | python-ldb            | 2:1.2.3-1ubuntu0.1              | 2:1.2.3-1ubuntu0.2              | UPDATED  |
-|   6 | python-lxml           | 4.2.1-1ubuntu0.1                | 4.2.1-1ubuntu0.3                | UPDATED  |
-|   7 | python3-lxml          | 4.2.1-1ubuntu0.1                | 4.2.1-1ubuntu0.3                | UPDATED  |
+|   6 | python-lxml           | 4.2.1-1ubuntu0.1                | 4.2.1-1ubuntu0.4                | UPDATED  |
+|   7 | python3-lxml          | 4.2.1-1ubuntu0.1                | 4.2.1-1ubuntu0.4                | UPDATED  |
 |   8 | unzip                 | 6.0-21ubuntu1                   | 6.0-21ubuntu1.1                 | UPDATED  |
 |   9 | coreutils             | 8.28-1ubuntu1                   | 8.28-1ubuntu1                   |          |
 |  10 | ipython               | 5.5.0-1                         | 5.5.0-1                         |          |

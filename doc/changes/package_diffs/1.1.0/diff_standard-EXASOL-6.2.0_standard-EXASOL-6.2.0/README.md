@@ -1,4 +1,4 @@
-# Package Version Comparison between Standard-EXASOL-7.0.0 flavor in release 1.0.0 and Standard-EXASOL-7.1.0 flavor in release 1.1.0
+# Package Version Comparison between Standard-EXASOL-6.2.0 flavor in release 1.0.0 and Standard-EXASOL-6.2.0 flavor in release 1.1.0
 
 * [UDFClient Dependencies](diff_udfclient_deps_apt_get_packages.md)
 * [Language Dependencies](diff_language_deps_apt_get_packages.md)

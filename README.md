@@ -1,48 +1,22 @@
 # EXASOL Script Languages
 
 ###### Please note that this is an open source project which is officially supported by EXASOL. For any question, you can contact our support team.
+## Overview
 
-## Table of Contents
+This project contains script-language containers for the user-defined functions (UDF's) that can be used in the EXASOL database (version 6.2.0 or later). Using script-language containers, user can extend the UDF's with additional libraries and tools, such as Python or R packages and their dependencies.
 
-1. [About](#about)
-2. [Prerequisites](#prerequisites)
-3. [Getting Started](#getting-started)
-4. [How to build an existing flavor?](#how-to-build-an-existing-flavor)
-5. [How to activate a script language container in the database](#how-to-activate-the-script-language-container-in-the-database)
-6. [How to customize an existing flavor?](#how-to-customize-an-existing-flavor)
-7. [Partial builds or rebuilds](#partial-builds-and-rebuilds)
-8. [Using your own remote cache](#using-your-own-remote-cache)
-9. [Testing an existing flavor](#testing-an-existing-flavor)
-10. [Cleaning up after your are finished](#cleaning-up-after-your-are-finished)
+A script language container consists of a Linux container with a complete Linux distribution and all required libraries and a script client. The script client is responsible for the communication with the database and for executing the UDF code.
 
-## About
+We provide in this repository several [flavors](flavors) of script-language containers, such as the current standard implementation of the [script client](https://github.com/exasol/script-languages/blob/master/exaudfclient/base) with support for Python 2/3, R und Java. A flavor contains the build description of a container. We will show below how to customize and build the different script-language containers. 
 
-This project contains script language containers for user defined functions (UDF's) 
-that can be used in the EXASOL database (version 6.0.0 or later). 
-A script language container consists of a Linux container with a complete linux distribution and all required libraries, 
-such as a script client. A script client is responsible for the communication with the database and for executing the script code.
-We provide in this repository several [flavors](flavors) of script language containers, 
-such as the current standard implementation of the [script client](https://github.com/exasol/script-languages/blob/master/exaudfclient/base) with support for Python 2/3, R und Java. 
-We will show here how to customize and build the different flavors of the script language containers. 
-Pre-built containers can you find in the [release section](https://github.com/exasol/script-languages-release/releases) of this repository.
+You can find pre-built containers in the [release section](https://github.com/exasol/script-languages-release/releases) of this repository.
 If you are interested in the script client you find more details [here](https://github.com/exasol/script-languages/blob/master/exaudfclient/base/README.md).
 
-## Prerequisites
+## In a Nutshell
+### Prerequisites
 
-In order to build this project, you need:
-
-* Linux or Mac OS X (experimental) with bash and tar
-* Docker >= 17.05 [multi-stage builds required](https://docs.docker.com/develop/develop-images/multistage-build/)
-* Python >=3.6 with pip
-* We recommend at least 50 GB free disk space on the partition 
-  where Docker stores its images, on linux Docker typically stores 
-  the images at /var/lib/docker.
-* For the partition where the output directory (default: ./.build_output) 
-  is located we recommend additionally at least 10 GB free disk space.
-
-Further, prerequisites might be necessary for specific tasks. These are listed under the corresponding section.
-
-## Getting Started
+We are using the [script-languages-container-tool](https://github.com/exasol/script-languages-container-tool) (exaslct) to build the containers. The script-languages-container-tool is already installed into this repository and will fetch all required Docker images when they are not already present. As this you only need to fulfil the [prerequisites for running the script-languages-container-tool](https://github.com/exasol/script-languages-container-tool#for-running).
+### Getting Started
 
 If you only want to use pre-built containers, you can find them in the [release section](https://github.com/exasol/script-languages-release/releases) of this repository. However, if you want build custom container you need to clone this repository.
 
@@ -52,12 +26,12 @@ git clone --recurse-submodules https://github.com/exasol/script-languages-releas
 
 Note: The option --recurse-submodules clones the submodule [script-languages](https://github.com/exasol/script-languages)
 
-## How to build an existing flavor?
+### How to build an existing flavor?
 
-Choose a flavor. Currently we have several pre-defined flavors available, e.g., `standard-EXASOL-6.2.0`.
+First, you need to choose a flavor. Currently, we have several pre-defined flavors available, e.g., `standard-EXASOL-6.2.0`.
 This project supports different versions of script language environments with different libraries and languages.
 We call these versions _flavors_. The pre-defined flavors can be modified and extended to create customized flavors.
-Each pre-defined flavor has its own set of Dockerfiles in a corresponding sub directory of [flavors](flavors). 
+Each pre-defined flavor has its own set of Dockerfiles in a corresponding sub-directory of [flavors](flavors). 
 
 **For more details about the flavors please checkout their [documentation](flavors/README.md).**
 
@@ -67,7 +41,7 @@ Create the language container and export it to the local file system
 ./exaslct export --flavor-path=flavors/<flavor-name> --export-path <export-path>
 ```
 
-or upload it directly into your BuckerFS (currently http only, https follows soon)
+or upload it directly into your BucketFS (currently http only, https follows soon)
 
 ```bash
 ./exaslct upload --flavor-path=flavors/<flavor-name> --database-host <hostname-or-ip> --bucketfs-port <port> \ 
@@ -78,9 +52,9 @@ or upload it directly into your BuckerFS (currently http only, https follows soo
 Once it is successfully uploaded, it will print the ALTER SESSION statement
 that can be used to activate the script language container in the database.
 
-## How to activate a script language container in the database
+### How to activate a script language container in the database
 
-If you uploaded a container manually you can generate the language activation statement with
+If you uploaded a container manually, you can generate the language activation statement with
 
 ```bash
 ./exaslct generate-language-activation --flavor-path=flavors/<flavor-name> --bucketfs-name <bucketfs-name> \
@@ -89,18 +63,18 @@ If you uploaded a container manually you can generate the language activation st
 
 where \<container-name> is the name of the uploaded archive without its file extension. To activate the language, execute the generated statement in your database session to activate the container for the current session or system wide.
 
-This command will print a SQL statement to activate the language similiar to the following one:
+This command will print a SQL statement to activate the language similar to the following one:
 
 ```bash
 ALTER SESSION SET SCRIPT_LANGUAGES='<LANGUAGE_ALIAS>=localzmq+protobuf:///<bucketfs-name>/<bucket-name>/<path-in-bucket>/<container-name>?lang=<language>#buckets/<bucketfs-name>/<bucket-name>/<path-in-bucket>/<container-name>/exaudf/exaudfclient[_py3]';
 ```
 
-## How to customize an existing flavor?
+### How to customize an existing flavor?
 
 To customize an existing flavor you can add your specific needs to the Dockerfile in the `flavors/<flavor>/flavor_customization` directory. The easiest way to extend a flavor is by installing additional packages.
 Under `flavors/<flavor>/flavor_customization/packages` you can find files which list packages which will 
 get installed, for an example look [here](flavors/standard-EXASOL-7.0.0/flavor_customization/packages). If you want to change or add other things you are able to add Dockerfile commands to
-`flavors/<flavor>/flavor-customization/Dockerfile`, for an example look [here](flavors/standard-EXASOL-7.0.0/flavor_customization/Dockerfile). Please follow the instruction in in there, if you add Dockerfile commands. 
+`flavors/<flavor>/flavor-customization/Dockerfile`, for an example look [here](flavors/standard-EXASOL-7.0.0/flavor_customization/Dockerfile). Please follow the instruction in there, if you add Dockerfile commands. 
 
 **Note: For more details about the flavors please checkout their [documentation](flavors/README.md).**
 
@@ -118,7 +92,7 @@ After you finished your changes, rebuild with
 ./exaslct export --flavor-path=flavors/<flavor-name>
 ```
 
-or upload it directly into your BuckerFS (currently http only, https follows soon)
+or upload it directly into your BucketFS (currently http only, https follows soon)
 
 ```bash
 ./exaslct upload --flavor-path=flavors/<flavor-name> --database-host <hostname-or-ip> --bucketfs-port <port> \ 
@@ -126,114 +100,23 @@ or upload it directly into your BuckerFS (currently http only, https follows soo
                    --bucket-name <bucket-name> --path-in-bucket <path/in/bucket>
 ```
 
-Note: The tool `exaslct` tries to reuse as much as possible of the previous build or tries to pull already exising images from Docker Hub.
+Note: The tool `exaslct` tries to reuse as much as possible of the previous build or tries to pull already existing images from Docker Hub.
 
-## Force a rebuild
+**Please, refer to the [User Guide of exaslct](https://github.com/exasol/script-languages-container-tool/blob/main/doc/user_guide/user_guide.md) for more detailed information, how to use exalsct.**
 
-Sometimes it is necessary to force a rebuild of a flavor. 
-A typical reason to update the dependencies is to
-fix bugs and security vulnerabilities in the installed dependencies.
-To force a rebuild the command line option --force-rebuild can be used 
-with basically all commands of ./exaslct, except the clean commands.
+## Features
 
-## Partial builds and rebuilds
+* Build a script language container as docker images
+* Export a script language container as an archive which can be used for extending Exasol UDFs
+* Upload a script language container as an archive to the Exasol DB's BucketFS
+* Generating the activation command for a script language container
+* Can use Docker registries, such as Docker Hub, as a cache to avoid rebuilding image without changes
+* Can push Docker images to Docker registries
+* Run tests for you container against an Exasol DB (docker-db or external db)
 
-In some circumstances you want to build or rebuild 
-only some parts of the flavor. Most likely during development or during CI. 
-You can specify for a build upper bounds (also called goals) 
-until which the flavor should be build and for rebuilds 
-you can define lower bounds from where the rebuild get forced.
+## Table of Contents
 
-You can define upper bounds with the commandline option --goal 
-for the ./exaslct commands build and push. 
-The build command only rebuilds the docker images, 
-but does not export a new container.
-All other commands don't support the --goal option, 
-because they require specific images to be built,
-otherwise they would not proceed.
+### Information for Users
 
-```bash
-./exaslct build --flavor-path=<path-to-flavor> --goal <build-stage>
-```
-
-If you want to build several different build-stages at once, you can repeat the --goal option.
-
-The following build-stage are currently available:
-
-* udfclient-deps
-* language-deps
-* build-deps
-* build-run
-* base-test-deps
-* base-test-build-run
-* flavor-test-build-run
-* flavor-base-deps
-* flavor-customization
-* release
-
-
-With the option --force-rebuild-from, you can specify from where the rebuild should be forced.
-All previous build-stages before this will use cached versions where possible.
-However, if a single stage is built, it will trigger a build for all following build-stages.
-The option --force-rebuild-from only has an effect together with the option --force-rebuild, 
-without it is ignored.
-
-```bash
-./exaslct build --flavor-path=<path-to-flavor> --force-rebuild --force-rebuild-from <build-stage>
-```
-
-Similar, as for the --goal option, you can specify multiple lower bounds 
-by repeating the --force-rebuild-from with different build-stages.
-
-## Using your own remote cache
-
-Exaslct caches images locally and remotely. 
-For remote caching exaslct can use a docker registry. 
-The default registry is configured to Docker Hub. 
-With the command line options --repository-name 
-you can configure your own docker registry as cache. 
-The --repository-name option can be used with all 
-./exaslct commands that could trigger a build, 
-which include build, export, upload and run-db-test commands.
-Furthermore, it can be used with the push command which
-uploads the build images to the docker registry.
-In this case the --repository-name option specifies 
-not only from where to pull cached images during the build,
-but also to which cache the built images should be pushed.
-
-You can specify the repository name, as below:
-
-```bash
-./exaslct export --flavor-path=<path-to-flavor> --repository-name <hostname>[:port]/<user>/<repository-name>
-```
-
-## Testing an existing flavor
-
-To test the script language container you can execute the following command:
-
-```bash
-./exaslct run-db-test --flavor-path=flavors/<flavor-name>
-```
-
-**Note: you need docker in privileged mode to execute the tests**
-
-## Cleaning up after your are finished
-
-The creation of scripting language container creates or downloads several docker images
-which can consume a lot of disk space. Therefore, we recommend to remove the Docker images
-of a flavor after working with them.
-
-This can be done as follows:
-
-```bash
-./exaslct clean-flavor-images --flavor-path=flavors/<flavor-name>
-```
-
-To remove all images of all flavors you can use:
-
-```bash
-./exaslct clean-all-images
-```
-
-**Please note that this script does not delete the Linux image that is used as basis for the images that were build in the previous steps. 
-Furthermore, this command doesn't delete cached files in the output directory. The default path for the output directory is .build-output.**
+* [User Guide of exaslct](https://github.com/exasol/script-languages-container-tool/blob/main/doc/user_guide/user_guide.md)
+* [Changelog](doc/changes/changelog.md)

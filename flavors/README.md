@@ -73,7 +73,7 @@ The R-4.0-minimal flavor provides the language R 4.0 with only absolute necessar
   - Base Image: ubuntu:18.04
   - Compatible Exasol Versions: 7.0.\*, 6.2.\*
   - Available languages: R 4.0
-  - [Here](r-4.0-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+  - [Here](r-4.0-minimal-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
 ## Flavor or Language-specific features
 

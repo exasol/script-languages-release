@@ -43,6 +43,7 @@ We provide three flavors for different Exasol versions. The flavors only specify
   - Available languages: Python 3.6
   - [Here](https://github.com/exasol/script-languages/tree/master/flavors/python-3.6-minimal-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
+
 ### Python-3.6-data-science flavors
 
 The python-3.6-data-science-EXASOL flavors are focused on data-science use cases with Python3 and provide more machine learning and data science packages than the standard-EXASOL flavor.

@@ -35,6 +35,8 @@ We provide three flavors for different Exasol versions. The flavors only specify
   - Available languages: Java 11, Python 2.7, Python 3.6 and R 3.4
   - [Here](standard-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
+### Python-3.6-minimal flavors
+
 - python-3.6-minimal-6.2.0
   - Base Image: ubuntu:18.04
   - Compatible Exasol Versions: 7.0.\*, 6.2.\*

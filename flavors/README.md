@@ -35,6 +35,15 @@ We provide three flavors for different Exasol versions. The flavors only specify
   - Available languages: Java 11, Python 2.7, Python 3.6 and R 3.4
   - [Here](standard-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
+### Python-3.6-minimal flavors
+
+- python-3.6-minimal-6.2.0
+  - Base Image: ubuntu:18.04
+  - Compatible Exasol Versions: 7.0.\*, 6.2.\*
+  - Available languages: Python 3.6
+  - [Here](https://github.com/exasol/script-languages/tree/master/flavors/python-3.6-minimal-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+
+
 ### Python-3.6-data-science flavors
 
 The python-3.6-data-science-EXASOL flavors are focused on data-science use cases with Python3 and provide more machine learning and data science packages than the standard-EXASOL flavor.
@@ -73,7 +82,7 @@ The R-4.0-minimal flavor provides the language R 4.0 with only absolute necessar
   - Base Image: ubuntu:18.04
   - Compatible Exasol Versions: 7.0.\*, 6.2.\*
   - Available languages: R 4.0
-  - [Here](r-4.0-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+  - [Here](r-4.0-minimal-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
 ## Flavor or Language-specific features
 

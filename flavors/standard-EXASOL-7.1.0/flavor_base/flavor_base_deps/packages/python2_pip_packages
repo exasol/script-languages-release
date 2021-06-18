@@ -1,8 +1,8 @@
-azure-storage-blob|12.8.0
-azure-storage-file-datalake|12.3.0
-azure-storage-file-share|12.4.1
-azure-storage-queue|12.1.5
-boto3|1.17.33
+azure-storage-blob|12.8.1
+azure-storage-file-datalake|12.4.0
+azure-storage-file-share|12.5.0
+azure-storage-queue|12.1.6
+boto3|1.17.96
 git+http://github.com/EXASOL/websocket-api.git#egg=exasol-db-api&subdirectory=python
 pysftp|0.2.9
 pytz|2021.1

@@ -37,6 +37,8 @@ This release uses version 0.1.0 of the container tool, all relevant changes can 
 - #226: Create python 3.6 minimal flavor for easier customization
 - #261: Check links in markdown files automatically
 - #254: Updated script-languages-container-tools to v0.1.0
+- #255: Updated selected Python libraries, including the Google Cloud API, Microsoft Azure SDK and AWS SDK
+- #270: Prepared release notes and changelog for v1.2.0
 
 
 ## Refactoring

@@ -9,9 +9,9 @@ This release uses the first release of the script-languages-container-tool. It a
 
 ## Package Version Comparison to Release 1.1.0
 
-* [Comparison of standard-EXASOL-7.1.0 in 1.2.0 with standard-EXASOL-7.1.0 in 1.1.0](package_diffs/2.0.0/diff_standard-EXASOL-7.1.0_standard-EXASOL-7.1.0/README.md)
-* [Comparison of standard-EXASOL-7.0.0 in 1.2.0 with standard-EXASOL-7.0.0 in 1.1.0](package_diffs/2.0.0/diff_standard-EXASOL-7.0.0_standard-EXASOL-7.0.0/README.md)
-* [Comparison of standard-EXASOL-6.2.0 in 1.2.0 with standard-EXASOL-6.2.0 in 1.1.0](package_diffs/2.0.0/diff_standard-EXASOL-6.2.0_standard-EXASOL-6.2.0/README.md)
+* [Comparison of standard-EXASOL-7.1.0 in 2.0.0 with standard-EXASOL-7.1.0 in 1.1.0](package_diffs/2.0.0/diff_standard-EXASOL-7.1.0_standard-EXASOL-7.1.0/README.md)
+* [Comparison of standard-EXASOL-7.0.0 in 2.0.0 with standard-EXASOL-7.0.0 in 1.1.0](package_diffs/2.0.0/diff_standard-EXASOL-7.0.0_standard-EXASOL-7.0.0/README.md)
+* [Comparison of standard-EXASOL-6.2.0 in 2.0.0 with standard-EXASOL-6.2.0 in 1.1.0](package_diffs/2.0.0/diff_standard-EXASOL-6.2.0_standard-EXASOL-6.2.0/README.md)
 
 ## Script-Language-Container-Tool (Exaslct)
 
@@ -34,7 +34,7 @@ This release uses version 0.1.0 of the container tool, all relevant changes can 
   - #261: Check links in markdown files automatically
   - #254: Updated script-languages-container-tools to v0.1.0
   - #255: Updated selected Python libraries, including the Google Cloud API, Microsoft Azure SDK and AWS SDK
-  - #270: Prepared release notes and changelog for v1.2.0
+  - #270: Prepared release notes and changelog for v2.0.0
 
 
 ## Refactoring

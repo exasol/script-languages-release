@@ -1,4 +1,4 @@
-|    | Package                                                                              | standard-EXASOL-7.1.0 in 1.1.0     | standard-EXASOL-7.1.0 in 1.2.0     | Status   |
+|    | Package                                                                              | standard-EXASOL-7.1.0 in 1.1.0     | standard-EXASOL-7.1.0 in 2.0.0     | Status   |
 |---:|:-------------------------------------------------------------------------------------|:--------------|:--------------|:---------|
 |  0 | azure-storage-blob                                                                   | 12.8.0        | 12.8.1        | UPDATED  |
 |  1 | azure-storage-file-datalake                                                          | 12.3.0        | 12.4.0        | UPDATED  |

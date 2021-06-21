@@ -1,4 +1,4 @@
-# script-languages-release 1.2.0, released 2021-06-21
+# script-languages-release 2.0.0, released 2021-06-21
 
 Code name: Use initial release of [script-languages-container-tool](https://github.com/exasol/script-languages-container-tool)
 
@@ -8,9 +8,9 @@ This release uses the first release of the script-languages-container-tool. It a
 
 ## Package Version Comparison to Release 1.1.0
 
-* [Comparison of standard-EXASOL-7.1.0 in 1.2.0 with standard-EXASOL-7.1.0 in 1.1.0](package_diffs/1.2.0/diff_standard-EXASOL-7.1.0_standard-EXASOL-7.1.0/README.md)
-* [Comparison of standard-EXASOL-7.0.0 in 1.2.0 with standard-EXASOL-7.0.0 in 1.1.0](package_diffs/1.2.0/diff_standard-EXASOL-7.0.0_standard-EXASOL-7.0.0/README.md)
-* [Comparison of standard-EXASOL-6.2.0 in 1.2.0 with standard-EXASOL-6.2.0 in 1.1.0](package_diffs/1.2.0/diff_standard-EXASOL-6.2.0_standard-EXASOL-6.2.0/README.md)
+* [Comparison of standard-EXASOL-7.1.0 in 1.2.0 with standard-EXASOL-7.1.0 in 1.1.0](package_diffs/2.0.0/diff_standard-EXASOL-7.1.0_standard-EXASOL-7.1.0/README.md)
+* [Comparison of standard-EXASOL-7.0.0 in 1.2.0 with standard-EXASOL-7.0.0 in 1.1.0](package_diffs/2.0.0/diff_standard-EXASOL-7.0.0_standard-EXASOL-7.0.0/README.md)
+* [Comparison of standard-EXASOL-6.2.0 in 1.2.0 with standard-EXASOL-6.2.0 in 1.1.0](package_diffs/2.0.0/diff_standard-EXASOL-6.2.0_standard-EXASOL-6.2.0/README.md)
 
 ## Script-Language-Container-Tool (Exaslct)
 

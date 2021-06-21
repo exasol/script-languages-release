@@ -40,3 +40,4 @@ This release uses version 0.1.0 of the container tool, all relevant changes can 
 ## Refactoring
 
   - #243: Remove exaslct implementation and replace it by the starter scripts of exasol/script-languages-container-tool
+  - #270: Removed pip files

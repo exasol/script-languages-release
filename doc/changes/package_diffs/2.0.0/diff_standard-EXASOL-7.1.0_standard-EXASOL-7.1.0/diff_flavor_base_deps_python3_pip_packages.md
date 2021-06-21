@@ -1,4 +1,4 @@
-|    | Package                                                                              | standard-EXASOL-7.1.0 in 1.1.0     | standard-EXASOL-7.1.0 in 1.2.0     | Status   |
+|    | Package                                                                              | standard-EXASOL-7.1.0 in 1.1.0     | standard-EXASOL-7.1.0 in 2.0.0     | Status   |
 |---:|:-------------------------------------------------------------------------------------|:--------------|:--------------|:---------|
 |  0 | azure-batch                                                                          | 10.0.0        | 10.0.0        |          |
 |  1 | azure-cosmos                                                                         | 4.2.0         | 4.2.0         |          |

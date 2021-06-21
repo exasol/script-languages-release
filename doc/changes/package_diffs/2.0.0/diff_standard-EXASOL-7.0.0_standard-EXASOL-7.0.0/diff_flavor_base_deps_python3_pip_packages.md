@@ -1,4 +1,4 @@
-|    | Package                                                                              | standard-EXASOL-7.0.0 in 1.1.0     | standard-EXASOL-7.0.0 in 1.2.0     | Status   |
+|    | Package                                                                              | standard-EXASOL-7.0.0 in 1.1.0     | standard-EXASOL-7.0.0 in 2.0.0     | Status   |
 |---:|:-------------------------------------------------------------------------------------|:--------------|:--------------|:---------|
 |  0 | git+http://github.com/EXASOL/websocket-api.git#egg=exasol-db-api&subdirectory=python |               | Not specified |          |
 |  2 | boto3                                                                                | 1.11.17       | 1.17.96       | UPDATED  |

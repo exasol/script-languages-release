@@ -4,7 +4,8 @@ Code name: Use initial release of [script-languages-container-tool](https://gith
 
 ## Summary
 
-This release uses the first release of the script-languages-container-tool. It also updates selected Python libraries, including the Google Cloud API, Microsoft Azure SDK and AWS SDK. Besides, this release provides bug fixes, small improvements. 
+This release uses the first release of the script-languages-container-tool. It also updates selected Python libraries, including the Google Cloud API, Microsoft Azure SDK and AWS SDK. Besides, this release provides bug fixes, small improvements.
+**Please note that due to the restructuring in version 2.0.0 the file *build_steps.py* has been changed. If you have your own flavors, you need to change the import of the exaslct package.**
 
 ## Package Version Comparison to Release 1.1.0
 
@@ -15,7 +16,7 @@ This release uses the first release of the script-languages-container-tool. It a
 ## Script-Language-Container-Tool (Exaslct)
 
 This release uses version 0.1.0 of the container tool, all relevant changes can be found [here](https://github.com/exasol/script-languages-container-tool/releases/tag/0.1.0).
-
+Please not 
 
 ## Bug Fixes
 

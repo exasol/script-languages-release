@@ -16,6 +16,11 @@ If you are interested in the script client you find more details [here](https://
 ### Prerequisites
 
 We are using the [script-languages-container-tool](https://github.com/exasol/script-languages-container-tool) (exaslct) to build the containers. The script-languages-container-tool is already installed into this repository and will fetch all required Docker images when they are not already present. So, you only need to fulfil the [prerequisites for running the script-languages-container-tool](https://github.com/exasol/script-languages-container-tool#for-running).
+
+Minimum requirements are:
+* Docker
+* Bash 4.2
+
 ### Getting Started
 
 If you only want to use pre-built containers, you can find them in the [release section](https://github.com/exasol/script-languages-release/releases) of this repository. However, if you want build custom container you need to clone this repository.

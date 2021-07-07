@@ -27,8 +27,8 @@ RUN mkdir /exaudfclient /exaudf
 COPY /exaudfclient /exaudfclient
 
 WORKDIR /exaudfclient/extension
-RUN ["/bin/bash", "-c", "source /env && bash build.sh --config no-tty -c dbg --config python --config java --config r --config slow-wrapper-both"]
-RUN cp -r -L bazel-bin/* /exaudf  && rm -r /exaudf/exaudfclient
+RUN ["/bin/bash", "-c", "source /env && bash build.sh --config no-tty -c dbg --config python --config java --config r --config slow-wrapper-py3"]
+RUN cp -r -L bazel-bin/* /exaudf
 RUN mkdir -p /exaudf/python/python3/ /exaudf/javacontainer
 RUN ln -s /exaudf/external/script_languages/python/python3/pyextdataframe.so /exaudf/python/python3/pyextdataframe.so
 RUN ln -s /exaudf/external/script_languages/javacontainer/libexaudf.jar /exaudf/javacontainer/libexaudf.jar

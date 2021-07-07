@@ -1,5 +1,3 @@
-python-protobuf
-python-zmq
 gdb
 valgrind
 gdbserver

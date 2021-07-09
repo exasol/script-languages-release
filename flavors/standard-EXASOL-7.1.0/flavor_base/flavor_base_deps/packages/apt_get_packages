@@ -8,7 +8,6 @@ libldb1|2:1.2.3-1ubuntu0.2
 python3-setuptools|39.0.1-2
 python3-pycurl|7.43.0.1-0.2
 python3-redis|2.10.6-2ubuntu1
-python3-smbc|1.0.15.6-1build2
 python3-roman|2.0.0-3
 python3-ldap|3.0.0-1ubuntu0.1
 python3-leveldb|0~svn68-3build3

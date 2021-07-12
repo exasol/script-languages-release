@@ -1,4 +1,4 @@
-# Details for python-2.7-EXASOL-7.1.0 flavor
+# Details for standard-EXASOL-7.1.0-python2.7 flavor
 
 ## Packages
 

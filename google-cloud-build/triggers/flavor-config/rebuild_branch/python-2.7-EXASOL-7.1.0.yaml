@@ -1,0 +1,3 @@
+flavor: "python-2.7-EXASOL-7.1.0"
+trigger_template_file: "build_branch.json.jinja2"
+build_mode: "rebuild"

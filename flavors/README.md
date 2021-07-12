@@ -9,6 +9,7 @@ Currently, we provide
 - the `standard` flavors: These flavors include three langauage implementations: Java, Python, and R and a collection of typical libraries
 - the `python-3.6-data-science` flavors: These flavors include Python3 as language and a number of typical data science and machine learning libraries
 - the `r-3.5-data-science` flavors: These flavors include R as language and a large collection of popular R packages.
+- the `python-2.7-legacy` flavor: Same as standard flavor, but also provides support for Python2.7.
 
 ### Standard flavors
 
@@ -20,7 +21,7 @@ We provide three flavors for different Exasol versions. The flavors only specify
 - standard-EXASOL-7.1.0
   - Base Image: ubuntu:18.04
   - Compatible Exasol Versions: 7.1.\* (but likely also with 7.0 and 6.2.\*) 
-  - Available languages: Java 11, Python 2.7, Python 3.6 and R 3.4
+  - Available languages: Java 11, Python 3.6 and R 3.4
   - [Here](standard-EXASOL-7.1.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
 - standard-EXASOL-7.0.0
@@ -83,6 +84,18 @@ The R-4.0-minimal flavor provides the language R 4.0 with only absolute necessar
   - Compatible Exasol Versions: 7.0.\*, 6.2.\*
   - Available languages: R 4.0
   - [Here](r-4.0-minimal-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+
+
+### Python2 Legacy support
+
+Due to EOL of Python2, it was removed from standard-EXASOL-7.1.0. However, in order to provide backwards
+compatibility, EXASOL still provides this flavor, which can be installed separately onto the database.
+
+- -python-2.7-EXASOL-7.1.0
+  - Base Image: ubuntu:18.04
+  - Compatible Exasol Versions: 7.1.\* (but likely also with 7.0 and 6.2.\*) 
+  - Available languages: Java 11, Python2.7, Python 3.6 and R 3.4
+  - [Here](python-2.7-EXASOL-7.1.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
 ## Flavor or Language-specific features
 

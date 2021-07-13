@@ -20,17 +20,17 @@ We provide three flavors for different Exasol versions. The flavors only specify
 
 Due to EOL of Python2, it there is split standard-EXASOL contairs: one with Python2.7 support, and one without it.
 
-- standard-EXASOL-7.1.0
+- standard-EXASOL-7.1.0-without-python2.7
   - Base Image: ubuntu:18.04
   - Compatible Exasol Versions: 7.1.\* (but likely also with 7.0 and 6.2.\*) 
   - Available languages: Java 11, Python 3.6 and R 3.4
-  - [Here](standard-EXASOL-7.1.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+  - [Here](standard-EXASOL-7.1.0-without-python2.7/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-- standard-EXASOL-7.1.0-python2.7
+- standard-EXASOL-7.1.0
   - Base Image: ubuntu:18.04
   - Compatible Exasol Versions: 7.1.\* (but likely also with 7.0 and 6.2.\*) 
   - Available languages: Java 11, Python2.7, Python 3.6 and R 3.4
-  - [Here](standard-EXASOL-7.1.0-python2.7/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+  - [Here](standard-EXASOL-7.1.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
 - standard-EXASOL-7.0.0
   - Base Image: ubuntu:18.04

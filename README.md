@@ -1,7 +1,10 @@
-# EXASOL Script Languages
+
+# EXASOL Script Languages 
 
 ###### Please note that this is an open source project which is officially supported by EXASOL. For any question, you can contact our support team.
 ## Overview
+
+![drawing](script-languages-container-logo.png)
 
 This project contains script-language containers for the user-defined functions (UDF's) that can be used in the EXASOL database (version 6.2.0 or later). Using script-language containers, user can extend the UDF's with additional libraries and tools, such as Python or R packages and their dependencies.
 

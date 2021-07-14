@@ -17,6 +17,14 @@ It provides the languages Java, Python 2/3 and R.
 
 We provide three flavors for different Exasol versions. The flavors only specify the minimal Exasol version with which they are compatible.
 
+Due to EOL of Python2, there is split of the standard-EXASOL-7.1.0 container: one with Python2.7 support, and one without it.
+
+- standard-EXASOL-7.1.0-without-python2.7
+  - Base Image: ubuntu:18.04
+  - Compatible Exasol Versions: 7.1.\* (but likely also with 7.0 and 6.2.\*) 
+  - Available languages: Java 11, Python 3.6 and R 3.4
+  - [Here](standard-EXASOL-7.1.0-without-python2.7/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+
 - standard-EXASOL-7.1.0
   - Base Image: ubuntu:18.04
   - Compatible Exasol Versions: 7.1.\* (but likely also with 7.0 and 6.2.\*) 
@@ -83,6 +91,7 @@ The R-4.0-minimal flavor provides the language R 4.0 with only absolute necessar
   - Compatible Exasol Versions: 7.0.\*, 6.2.\*
   - Available languages: R 4.0
   - [Here](r-4.0-minimal-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+  
 
 ## Flavor or Language-specific features
 

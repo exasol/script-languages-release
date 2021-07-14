@@ -82,16 +82,15 @@ The R-3.5-data-science flavor provides the language R 3.5 and a large collection
   - Available languages: R 3.5
   - [Here](r-3.5-data-science-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-### R-4.0-minimal flavors
+### R-4-minimal flavors
 
-The R-4.0-minimal flavor provides the language R 4.0 with only absolute necessary packages. This allows very simple customization because you control almost all dependencies.
+The R-4-minimal flavor provides the language R 4.1 with only absolute necessary packages. This allows very simple customization because you control almost all dependencies.
 
-- r-4.0-minimal-EXASOL-6.2.0
+- r-4-minimal-EXASOL-6.2.0
   - Base Image: ubuntu:18.04
   - Compatible Exasol Versions: 7.0.\*, 6.2.\*
-  - Available languages: R 4.0
-  - [Here](r-4.0-minimal-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
-  
+  - Available languages: R 4.1
+  - [Here](r-4-minimal-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
 ## Flavor or Language-specific features
 

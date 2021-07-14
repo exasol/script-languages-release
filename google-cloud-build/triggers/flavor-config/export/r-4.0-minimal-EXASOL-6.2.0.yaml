@@ -1,2 +1,2 @@
-flavor: "r-4.0-minimal-EXASOL-6.2.0"
+flavor: "r-4-minimal-EXASOL-6.2.0"
 trigger_template_file: "export.json.jinja2"

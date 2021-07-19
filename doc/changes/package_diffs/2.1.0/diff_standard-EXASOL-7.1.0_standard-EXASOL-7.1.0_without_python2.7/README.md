@@ -1,4 +1,4 @@
-# Package Version Comparison between Standard-EXASOL-7.0.0 flavor in 2.0.0 and Standard-EXASOL-7.0.0 flavor in 1.1.0
+# Package Version Comparison between Standard-EXASOL-7.1.0_without_python2.7 flavor in 2.1.0 and Standard-EXASOL-7.1.0 flavor in 2.1.0
 
 * [UDFClient Dependencies](diff_udfclient_deps_apt_get_packages.md)
 * [Language Dependencies](diff_language_deps_apt_get_packages.md)

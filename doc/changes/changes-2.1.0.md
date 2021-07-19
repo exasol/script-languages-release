@@ -6,7 +6,7 @@ Code name: New flavor without Python 2
 
 This release introduces a new flavor: standard-EXASOL-7.1.0-without-python2.7.
 Background: Python 2 went officially out of support on January 1st 2020. From this point on, no updates have been provided anymore. This includes security updates.
-Exasol plans to remove Python2 support for UDF's in future releases, and thus this new flavor will become the standard flavor in the database.
+Exasol plans to remove Python2 support for UDF's in future releases, and thus this new flavor will become then the standard flavor in the database.
 
 
 ## Package Version Comparison to Release 2.0.0
@@ -34,5 +34,5 @@ This release uses version 0.1.0 of the container tool.
 
 
 ## Refactoring
-  - #284:Remove python2 from standard-EXASOL-7.1.0 (#285)
+  - #284: Remove python2 from standard-EXASOL-7.1.0 (#285)
   - #284: Created new flavor EXASOL-7.1.0-without-python2.7. (#286)

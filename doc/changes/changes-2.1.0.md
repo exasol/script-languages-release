@@ -13,6 +13,7 @@ Exasol plans to remove Python2 support for UDF's in future releases, and thus th
 
 * ```r-4.0-minimal-EXASOL-6.2.0 in 2.0.0``` was renamed to ```r-4-minimal-EXASOL-6.2.0 in 2.1.0```. r-base-core and r-base-dev were increased to version 4.1.0-1.1804.0.
 * [Comparison of standard-EXASOL-7.1.0 with standard-EXASOL-7.1.0_without_python2.7](package_diffs/2.1.0/diff_standard-EXASOL-7.1.0_standard-EXASOL-7.1.0_without_python2.7/README.md)
+  - Please be aware that ```python3-smbc``` was removed in this flavor, too, as it has an implicit dependency to the python2 libs.
 * standard-EXASOL flavors (6.2/7.0/7.1): pinned EXASOL/websocket-api to latest version compatible with Python2.
   
   (Packages in other flavors have not been changed)

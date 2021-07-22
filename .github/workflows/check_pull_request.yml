@@ -1,9 +1,8 @@
-name: Check for rebuild
+name: Check PullRequest
 
 on:
-  push:
-    branches-ignore:
-      - "master"
+  pull_request:
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,4 +14,4 @@ jobs:
       run: git submodule update --init --recursive
 
     - name: Check if the branch triggers a rebuild
-      run: "bash .github/workflows/check_for_rebuild_branch.sh"
+      run: "bash .github/workflows/check_pull_request.sh ${{ github.event.pull_request.head.ref }} ${{ github.event.pull_request.base.ref }}"

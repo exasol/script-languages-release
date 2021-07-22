@@ -3,11 +3,7 @@ name: Check if .current_submodules is up to date
 on: [push, pull_request]
 
 jobs:
-  check_setup_py:
-    strategy:
-      fail-fast: false
-      matrix:
-        python-version: [3.6]
+  check_current_gitmodules:
     runs-on: ubuntu-latest
 
     steps:

@@ -10,3 +10,5 @@ jobs:
       - name: Init submodules
         run: git submodule update --init --recursive
       - uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          config-file: '.github/markdown_check_config.json'

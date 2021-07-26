@@ -25,3 +25,4 @@ This release uses version 0.2.0 of the container tool.
 
 
 ## Refactoring
+ - #138: Removed duplicated line in ExaWrapper.java

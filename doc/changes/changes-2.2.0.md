@@ -14,7 +14,7 @@ t.b.d.
   
 ## Script-Language-Container-Tool (Exaslct)
 
-This release uses version 0.2.0 of the container tool.
+This release uses version 0.2.1 of the container tool.
 
 ## Bug Fixes
  - #293: Remove python-distutils-extra package from python-3.6-minimal-EXASOL-6.2.0 
@@ -22,7 +22,7 @@ This release uses version 0.2.0 of the container tool.
 ## Features / Enhancements
  - #298 Fix Gcloud Trigger for develop branch
  - #294: Created develop branch (#297)
-
+ - #308: Update script-language-container-tool to version 0.2.1
 
 ## Refactoring
  - #138: Removed duplicated line in ExaWrapper.java

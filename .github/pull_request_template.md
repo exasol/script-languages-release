@@ -1,5 +1,6 @@
 ### All Submissions:
 
+* [ ] Check if your pull request goes to the correct bash branch (develop or master)?
 * [ ] Is the title of the Pull Request correct?
 * [ ] Is the title of the corresponding issue correct?
 * [ ] Have you updated the changelog?

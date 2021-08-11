@@ -23,6 +23,7 @@ This release uses version 0.2.1 of the container tool.
  - #298 Fix Gcloud Trigger for develop branch
  - #294: Created develop branch (#297)
  - #308: Update script-language-container-tool to version 0.2.1
+ - #312: Updated libssl
 
 ## Refactoring
  - #138: Removed duplicated line in ExaWrapper.java

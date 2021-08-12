@@ -17,7 +17,8 @@ t.b.d.
 This release uses version 0.2.1 of the container tool.
 
 ## Bug Fixes
- - #293: Remove python-distutils-extra package from python-3.6-minimal-EXASOL-6.2.0 
+ - #293: Remove python-distutils-extra package from python-3.6-minimal-EXASOL-6.2.0
+ - #317: Fix install_via_r_remotes.pl for long depenendency list 
 
 ## Features / Enhancements
  - #298 Fix Gcloud Trigger for develop branch

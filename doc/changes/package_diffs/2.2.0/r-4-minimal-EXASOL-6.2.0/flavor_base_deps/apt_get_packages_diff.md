@@ -1,3 +1,5 @@
+<!-- markdown-link-check-disable -->
+
 |    | Package   | Version in 2.1.0    | Version in 2.2.0    | Status   |
 |---:|:----------|:--------------------|:--------------------|:---------|
 |  0 | coreutils | 8.28-1ubuntu1       | 8.28-1ubuntu1       |          |

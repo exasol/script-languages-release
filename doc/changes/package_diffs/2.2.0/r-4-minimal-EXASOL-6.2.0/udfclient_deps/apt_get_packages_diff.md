@@ -1,3 +1,5 @@
+<!-- markdown-link-check-disable -->
+
 |    | Package                    | Version in 2.1.0         | Version in 2.2.0          | Status   |
 |---:|:---------------------------|:-------------------------|:--------------------------|:---------|
 |  0 | libssl-dev                 | 1.1.1-1ubuntu2.1~18.04.9 | 1.1.1-1ubuntu2.1~18.04.10 | UPDATED  |

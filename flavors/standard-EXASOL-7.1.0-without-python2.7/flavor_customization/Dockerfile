@@ -74,6 +74,6 @@ RUN /scripts/install_scripts/install_via_r_remotes.pl --file /build_info/package
 # if you want to copy files or directories located in the same directory as this Dockerfile
 # -----------------------------------------------------------------------------------------------------
 
-# COPY flavor_customization/packages/pip3_packages /build_info/packages/flavor_base_deps
+# COPY flavor_customization/packages/python3_pip_packages /build_info/packages/flavor_customization
 # ADD flavor_customization/code.tar.gz /code
 

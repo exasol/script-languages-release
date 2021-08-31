@@ -13,7 +13,7 @@ t.b.d.
 This release uses version 0.2.1 of the container tool.
 
 ## Bug Fixes
- - #169: Removed duplicated push
+ - #169: Removed duplicated push in CI
 
 ## Features / Enhancements
  n/a

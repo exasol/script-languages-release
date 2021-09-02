@@ -2,7 +2,7 @@
 
 |    | Package                    | Version in 2.3.0     | Version in 2.4.0     | Status   |
 |---:|:---------------------------|:---------------------|:---------------------|:---------|
-|  0 | software-properties-common | No version specified | No version specified |          |
+|  0 | software-properties-common | No version specified |                      | REMOVED  |
 |  1 | coreutils                  | No version specified | No version specified |          |
 |  2 | locales                    | No version specified | No version specified |          |
 |  3 | unzip                      | No version specified | No version specified |          |

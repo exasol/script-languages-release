@@ -2,7 +2,7 @@
 
 |    | Package                    | Version in 2.3.0          | Version in 2.4.0          | Status   |
 |---:|:---------------------------|:--------------------------|:--------------------------|:---------|
-|  0 | software-properties-common | 0.96.24.32.14             | 0.96.24.32.14             |          |
+|  0 | software-properties-common | 0.96.24.32.14             |                           | REMOVED  |
 |  1 | coreutils                  | 8.28-1ubuntu1             | 8.28-1ubuntu1             |          |
 |  2 | locales                    | 2.27-3ubuntu1.2           | 2.27-3ubuntu1.2           |          |
 |  3 | libnss-db                  | 2.2.3pre1-6build2         | 2.2.3pre1-6build2         |          |

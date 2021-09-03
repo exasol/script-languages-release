@@ -10,7 +10,7 @@
 |  5 | git                        | No version specified | 1:2.17.1-1ubuntu0.8      | UPDATED  |
 |  6 | build-essential            | No version specified | 12.4ubuntu1              | UPDATED  |
 |  7 | openjdk-11-jdk-headless    | No version specified | 11.0.11+9-0ubuntu2~18.04 | UPDATED  |
-|  8 | r-base                     | No version specified | 4.1.1-1.1804.0           | UPDATED  |
+|  8 | r-base                     | No version specified | 3.6.3-1bionic            | UPDATED  |
 |  9 | libxml2-dev                | No version specified | 2.9.4+dfsg1-6.1ubuntu1.4 | UPDATED  |
 | 10 | libcurl4-openssl-dev       | No version specified | 7.58.0-2ubuntu3.14       | UPDATED  |
 | 11 | software-properties-common | No version specified |                          | REMOVED  |

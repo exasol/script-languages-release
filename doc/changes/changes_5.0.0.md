@@ -27,6 +27,7 @@ n/a
 ## Refactoring
 
  - #588: Removed virtualschema-jdbc-adapter.jar
+ - #329: Splitted exaudflib cc into several files
 
 ## Security
 

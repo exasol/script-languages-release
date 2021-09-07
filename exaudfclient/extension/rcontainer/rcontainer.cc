@@ -1,4 +1,3 @@
-#include "exaudflib/exaudflib.h"
 #include "rcontainer.h"
 #include <R.h>
 #include <Rdefines.h>
@@ -9,6 +8,7 @@
 #include <R_ext/Boolean.h>
 #include "exascript_r.h"
 #include "exascript_r_int.h"
+#include "exaudflib/swig/swig_result_handler.h"
 
 using namespace SWIGVMContainers;
 using namespace std;

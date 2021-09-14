@@ -3,7 +3,7 @@ locales|2.27-3ubuntu1.2
 unzip|6.0-21ubuntu1.1
 wget|1.19.4-1ubuntu2.2
 maven|3.6.0-1~18.04.1
-git|1:2.17.1-1ubuntu0.8
+git|1:2.17.1-1ubuntu0.9
 libldb1|2:1.2.3-1ubuntu0.2
 python3-setuptools|39.0.1-2
 python3-pycurl|7.43.0.1-0.2

@@ -20,6 +20,7 @@ This release uses version 0.2.1 of the container tool.
 
 
 ## Features / Enhancements
- n/a
+ - #345: Update git package
+
 ## Refactoring
  n/a

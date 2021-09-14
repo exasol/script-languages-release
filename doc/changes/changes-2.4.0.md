@@ -15,7 +15,7 @@ This release uses version 0.2.1 of the container tool.
 ## Bug Fixes
  - #169: Removed duplicated push in CI
  - #260: Moved ppa management into separate script
-
+ - #342: Specify python2 for bazel steps 
 ## Features / Enhancements
  n/a
 ## Refactoring

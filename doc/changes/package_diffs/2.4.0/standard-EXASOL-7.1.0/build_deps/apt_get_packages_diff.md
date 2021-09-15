@@ -8,7 +8,7 @@
 |  3 | locales                    | No version specified | 2.27-3ubuntu1.4          | UPDATED  |
 |  4 | locales                    | No version specified | 2.27-3ubuntu1.4          | UPDATED  |
 |  5 | tar                        | No version specified | 1.29b-2ubuntu0.2         | UPDATED  |
-|  6 | curl                       | No version specified | 7.58.0-2ubuntu3.14       | UPDATED  |
+|  6 | curl                       | No version specified | 7.58.0-2ubuntu3.15       | UPDATED  |
 |  7 | openjdk-11-jdk             | No version specified | 11.0.11+9-0ubuntu2~18.04 | UPDATED  |
 |  8 | build-essential            | No version specified | 12.4ubuntu1              | UPDATED  |
 |  9 | libpcre3-dev               | No version specified | 2:8.39-9                 | UPDATED  |

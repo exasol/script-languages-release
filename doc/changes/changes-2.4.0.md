@@ -22,7 +22,8 @@ This release uses version 0.2.1 of the container tool.
 ## Features / Enhancements
  - #345: Update git package
  - #349: Update curl and libcurl4-openssl-dev packages
- - #354 Updated to exaslct v0.3.0
+ - #354: Updated to exaslct v0.3.0
+ - #335: Add requirements/limitations for MacOsX to README
 
 ## Refactoring
  n/a

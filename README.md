@@ -21,8 +21,12 @@ If you are interested in the script client you find more details [here](https://
 We are using the [script-languages-container-tool](https://github.com/exasol/script-languages-container-tool) (exaslct) to build the containers. The script-languages-container-tool is already installed into this repository and will fetch all required Docker images when they are not already present. So, you only need to fulfil the [prerequisites for running the script-languages-container-tool](https://github.com/exasol/script-languages-container-tool#for-running).
 
 Minimum requirements are:
-* Docker >= 17.05 
-* Bash 4.2
+
+* bash
+  * on Linux >= 4.2
+  * on MacOsX >= 3.2 (Please see limitations on [MacOsX](#macosx-limitations))
+* Docker >= 17.05
+
 
 ### Getting Started
 
@@ -121,6 +125,10 @@ Note: The tool `exaslct` tries to reuse as much as possible of the previous buil
 * Can use Docker registries, such as Docker Hub, as a cache to avoid rebuilding image without changes
 * Can push Docker images to Docker registries
 * Run tests for you container against an Exasol DB (docker-db or external db)
+
+### MacOsX Limitations
+  
+* On MacOsX all arguments (flavors path, output directory, etc.) must point to locations within the current directory (background is that the MacOsX version does not support mount binding additional directories).
 
 ## Table of Contents
 

@@ -1,16 +1,18 @@
-# script-languages-release 2.4.0, released t.b.d.
+# script-languages-release 2.4.0, released 2021-09-16
 
-Code name: t.b.d.
+Code name: MacOsX support and package updates for git and curl.
 
 ## Summary
 
-t.b.d. 
+This release upgraded to the Script-Languages-Container-Tools version 0.3.0.
+With that, it enables building script-language container under MacOsX (with some limitation, check [Readme](../../README.md)).
+It also contains several minor bugfixes and updates the git and curl packages.
 
 ## [Package Version Comparison between Release 2.3.0 and 2.4.0](package_diffs/2.4.0/README.md)
   
 ## Script-Language-Container-Tool (Exaslct)
 
-This release uses version 0.2.1 of the container tool.
+This release uses version 0.3.0 of the container tool.
 
 ## Bug Fixes
  - #169: Removed duplicated push in CI
@@ -22,6 +24,8 @@ This release uses version 0.2.1 of the container tool.
 ## Features / Enhancements
  - #345: Update git package
  - #349: Update curl and libcurl4-openssl-dev packages
- - 
+ - #354: Updated to exaslct v0.3.0
+ - #335: Add requirements/limitations for MacOsX to README
+
 ## Refactoring
  n/a

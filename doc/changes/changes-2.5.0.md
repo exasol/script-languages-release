@@ -17,6 +17,7 @@ n/a
 
 ## Features / Enhancements
  - #336 Add the SageMaker Python SDK to the standard flavors 
+ - #341: New tests for linker namespace
 
 ## Refactoring
  n/a
@@ -24,5 +25,3 @@ n/a
 ## Security
  - #359: Update curl and libcurl4-openssl-dev packages
  - #362: Update ca-certificates package
-
-

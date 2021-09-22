@@ -27,7 +27,7 @@ RUN mkdir /exaudfclient /exaudf
 COPY /exaudfclient /exaudfclient
 
 WORKDIR /exaudfclient/extension
-RUN ["/bin/bash", "-c", "source /env && bash build.sh --config no-tty -c dbg --config python --config java --config r --config slow-wrapper-py3"]
+RUN ["/bin/bash", "-c", "source /env && bash build.sh --config no-tty -c dbg --config python --config java --config r --config test-binaries-both"]
 RUN cp -r -L bazel-bin/* /exaudf
 RUN mkdir -p /exaudf/python/python3/ /exaudf/javacontainer
 RUN ln -s /exaudf/external/script_languages/python/python3/pyextdataframe.so /exaudf/python/python3/pyextdataframe.so
@@ -36,6 +36,7 @@ RUN ln -s /exaudf/external/script_languages/javacontainer/libexaudf.jar /exaudf/
 # These source files are required for building internal udf plugins
 WORKDIR /exaudfclient/base
 RUN ./test_udfclient.sh /exaudf/exaudfclient_py3
+RUN ./test_udfclient.sh /exaudf/exaudfclient_py3_static
 
 WORKDIR /
 RUN mkdir /exasol_emulator

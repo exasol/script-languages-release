@@ -1,0 +1,15 @@
+# Package Version Comparison between Python-3.7-minimal-exasol-6.2.0 flavor in 2.5.0 and Python-3.7-minimal-exasol-6.2.0 flavor in 2.4.0
+
+- Comparison of build step Udfclient_deps
+  - [New package list Apt Get Packages](udfclient_deps/apt_get_packages_diff.md)
+- Comparison of build step Language_deps
+  - [New package list Apt Get Packages](language_deps/apt_get_packages_diff.md)
+  - [New package list Apt Get Packages Python](language_deps/apt_get_packages_python_diff.md)
+  - [New package list Python3 Pip Packages](language_deps/python3_pip_packages_diff.md)
+- Comparison of build step Flavor_base_deps
+  - [New package list Apt Get Packages](flavor_base_deps/apt_get_packages_diff.md)
+  - [New package list Python3 Pip Packages](flavor_base_deps/python3_pip_packages_diff.md)
+- Comparison of build step Build_deps
+  - [New package list Apt Get Packages](build_deps/apt_get_packages_diff.md)
+- Comparison of build step Base_test_deps
+  - [New package list Apt Get Packages](base_test_deps/apt_get_packages_diff.md)

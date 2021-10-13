@@ -13,7 +13,7 @@ t.b.d.
 This release uses version 0.3.0 of the container tool.
 
 ## Bug Fixes
-n/a
+ - #369: Script for generating package diffs may generate the wrong column order in the markdown files
 
 ## Features / Enhancements
  - #330: Add Python 3.7 minimal flavor

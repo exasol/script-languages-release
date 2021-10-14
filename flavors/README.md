@@ -39,18 +39,29 @@ Due to EOL of Python2, there is split of the standard-EXASOL-7.1.0 container: on
 
 - standard-EXASOL-6.2.0
   - Base Image: ubuntu:18.04
-  - Compatible Exasol Versions: 7.0.\*, 6.2.\*
+  - Compatible Exasol Versions: 7.1.\*, 7.0.\*, 6.2.\*
   - Available languages: Java 11, Python 2.7, Python 3.6 and R 3.4
   - [Here](standard-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
 ### Python-3.6-minimal flavors
 
+The Python-3.6-minimal flavor provides the language Python 3.6 with only absolute necessary packages. This allows very simple customization because you control almost all dependencies.
+
 - python-3.6-minimal-6.2.0
   - Base Image: ubuntu:18.04
-  - Compatible Exasol Versions: 7.0.\*, 6.2.\*
+  - Compatible Exasol Versions: 7.1.\*, 7.0.\*, 6.2.\*
   - Available languages: Python 3.6
   - [Here](https://github.com/exasol/script-languages/tree/master/flavors/python-3.6-minimal-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
+### Python-3.7-minimal flavors
+
+The Python-3.7-minimal flavor provides the language Python 3.7 with only absolute necessary packages. This allows very simple customization because you control almost all dependencies.
+
+- python-3.7-minimal-6.2.0
+  - Base Image: ubuntu:18.04
+  - Compatible Exasol Versions: 7.1.\*, 7.0.\*, 6.2.\*
+  - Available languages: Python 3.7
+  - [Here](https://github.com/exasol/script-languages/tree/master/flavors/python-3.7-minimal-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
 ### Python-3.6-data-science flavors
 
@@ -58,7 +69,7 @@ The python-3.6-data-science-EXASOL flavors are focused on data-science use cases
 
 - python-3.6-data-science-EXASOL-6.2.0
   - Base Image: ubuntu:18.04
-  - Compatible Exasol Versions: 7.0.\*, 6.2.\*
+  - Compatible Exasol Versions: 7.1.\*, 7.0.\*, 6.2.\*
   - Available languages: Python 3.6
   - [Here](https://github.com/exasol/script-languages/tree/master/flavors/python-3.6-data-science-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
@@ -68,7 +79,7 @@ The python-3.6-data-science-cuda-EXASOL flavor is derived from the python-3.6-da
 
 - python-3.6-data-science-cuda-EXASOL-6.2.0
   - Base Image: ubuntu:18.04
-  - Compatible Exasol Versions: 7.0.\*, 6.2.\*
+  - Compatible Exasol Versions: 7.1.\*, 7.0.\*, 6.2.\*
   - Available languages: Python 3.6
   - [Here](https://github.com/exasol/script-languages/tree/master/flavors/python-3.6-data-science-cuda-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
@@ -78,7 +89,7 @@ The R-3.5-data-science flavor provides the language R 3.5 and a large collection
 
 - r-3.5-data-science-EXASOL-6.2.0
   - Base Image: ubuntu:18.04
-  - Compatible Exasol Versions: 7.0.\*, 6.2.\*
+  - Compatible Exasol Versions: 7.1.\*, 7.0.\*, 6.2.\*
   - Available languages: R 3.5
   - [Here](r-3.5-data-science-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
@@ -88,7 +99,7 @@ The R-4-minimal flavor provides the language R 4.1 with only absolute necessary 
 
 - r-4-minimal-EXASOL-6.2.0
   - Base Image: ubuntu:18.04
-  - Compatible Exasol Versions: 7.0.\*, 6.2.\*
+  - Compatible Exasol Versions: 7.1.\*, 7.0.\*, 6.2.\*
   - Available languages: R 4.1
   - [Here](r-4-minimal-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 

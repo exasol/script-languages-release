@@ -22,6 +22,10 @@ This release uses version 0.3.0 of the container tool.
  - #336: Add the SageMaker Python SDK to the standard flavors 
  - #341: New tests for linker namespace
 
+## Documentation
+
+ - #371: Prepare release of version 2.5.0
+
 ## Refactoring
 
  n/a

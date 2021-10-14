@@ -4,7 +4,7 @@ Code name: Add new Python 3.7 minimal flavor and the SageMaker Python SDK to the
 
 ## Summary
 
-This release add a new Python 3.7 minimal flavor and  added the SageMaker Python SDK to the standard flavor. Besides that, we also fixed a few bugs, applied a few security updates and extented the tests.
+This release added a new Python 3.7 minimal flavor and the SageMaker Python SDK to the standard flavor. Besides that, we also fixed a few bugs, applied a few security updates and extented the tests.
 
 ## [Package Version Comparison between Release 2.4.0 and 2.5.0](package_diffs/2.5.0/README.md)
   

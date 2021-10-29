@@ -17,7 +17,7 @@ This release uses version 0.5.0 of the container tool.
  - #377: Synchronize Dockerfiles between flavors
 
 ## Features / Enhancements
-n/a
+ - #384: Use exasol python test framework package and update tests to Python3
 
 ## Documentation
 n/a

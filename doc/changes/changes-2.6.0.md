@@ -13,7 +13,8 @@ t.b.d.
 This release uses version 0.3.0 of the container tool.
 
 ## Bug Fixes
-n/a
+
+ - #377: Synchronize Dockerfiles between flavors
 
 ## Features / Enhancements
 n/a

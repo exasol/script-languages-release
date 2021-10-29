@@ -1,4 +1,4 @@
-# script-languages-release 2.6.0, released t.b.d.
+# script-languages-release 3.0.0, released t.b.d.
 
 Code name: t.b.d.
 
@@ -6,11 +6,11 @@ Code name: t.b.d.
 
 t.b.d.
 
-## [Package Version Comparison between Release 2.5.0 and 2.6.0](package_diffs/2.6.0/README.md)
+## [Package Version Comparison between Release 2.5.0 and 3.0.0](package_diffs/3.0.0/README.md)
   
 ## Script-Language-Container-Tool (Exaslct)
 
-This release uses version 0.3.0 of the container tool.
+This release uses version 0.5.0 of the container tool.
 
 ## Bug Fixes
 

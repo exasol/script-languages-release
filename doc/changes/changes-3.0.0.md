@@ -17,7 +17,9 @@ This release uses version 0.5.0 of the container tool.
  - #377: Synchronize Dockerfiles between flavors
 
 ## Features / Enhancements
+
  - #384: Use exasol python test framework package and update tests to Python3
+ - #379: Add commit prefix "security" to GCloud triggers
 
 ## Documentation
 n/a

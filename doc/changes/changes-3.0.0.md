@@ -15,6 +15,7 @@ This release uses version 0.5.0 of the container tool.
 ## Bug Fixes
 
  - #377: Synchronize Dockerfiles between flavors
+ - #386: Fix Network Test for r-4-minimal
 
 ## Features / Enhancements
 

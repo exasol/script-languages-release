@@ -1,4 +1,4 @@
-# Package Version Comparison between R-4-minimal-exasol-6.2.0 flavor in 2.6.0 and R-4-minimal-exasol-6.2.0 flavor in 2.5.0
+# Package Version Comparison between R-4-minimal-exasol-6.2.0 flavor in 3.0.0 and R-4-minimal-exasol-6.2.0 flavor in 2.5.0
 
 - Comparison of build step Udfclient_deps
   - [Comparison of package list Apt Get Packages](udfclient_deps/apt_get_packages_diff.md)

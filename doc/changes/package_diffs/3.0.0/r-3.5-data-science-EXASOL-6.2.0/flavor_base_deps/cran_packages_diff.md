@@ -1,6 +1,6 @@
 <!-- markdown-link-check-disable -->
 
-|    | Package       | Version in 2.5.0     | Version in 2.6.0     | Status   |
+|    | Package       | Version in 2.5.0     | Version in 3.0.0     | Status   |
 |---:|:--------------|:---------------------|:---------------------|:---------|
 |  0 | BH            | No version specified | No version specified |          |
 |  1 | foreach       | No version specified | No version specified |          |

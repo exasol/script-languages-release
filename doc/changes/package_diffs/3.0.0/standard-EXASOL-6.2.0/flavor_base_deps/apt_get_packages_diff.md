@@ -1,6 +1,6 @@
 <!-- markdown-link-check-disable -->
 
-|     | Package               | Version in 2.5.0                | Version in 2.6.0                | Status   |
+|     | Package               | Version in 2.5.0                | Version in 3.0.0                | Status   |
 |----:|:----------------------|:--------------------------------|:--------------------------------|:---------|
 |   0 | locales               | 2.27-3ubuntu1.2                 | 2.27-3ubuntu1.4                 | UPDATED  |
 |   1 | python3-lxml          | 4.2.1-1ubuntu0.4                | 4.2.1-1ubuntu0.4                |          |

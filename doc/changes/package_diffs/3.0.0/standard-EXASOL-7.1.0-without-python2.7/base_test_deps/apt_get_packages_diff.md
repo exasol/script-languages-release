@@ -1,6 +1,6 @@
 <!-- markdown-link-check-disable -->
 
-|    | Package   | Version in 2.5.0       | Version in 2.6.0       | Status   |
+|    | Package   | Version in 2.5.0       | Version in 3.0.0       | Status   |
 |---:|:----------|:-----------------------|:-----------------------|:---------|
 |  0 | binutils  | 2.30-21ubuntu1~18.04.5 | 2.30-21ubuntu1~18.04.7 | UPDATED  |
 |  1 | gdb       | 8.1.1-0ubuntu1         | 8.1.1-0ubuntu1         |          |

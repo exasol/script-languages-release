@@ -1,6 +1,6 @@
 <!-- markdown-link-check-disable -->
 
-|    | Package           | Version in 2.5.0         | Version in 2.6.0         | Status   |
+|    | Package           | Version in 2.5.0         | Version in 3.0.0         | Status   |
 |---:|:------------------|:-------------------------|:-------------------------|:---------|
 |  0 | coreutils         | 8.28-1ubuntu1            | 8.28-1ubuntu1            |          |
 |  1 | locales           | 2.27-3ubuntu1.4          | 2.27-3ubuntu1.4          |          |

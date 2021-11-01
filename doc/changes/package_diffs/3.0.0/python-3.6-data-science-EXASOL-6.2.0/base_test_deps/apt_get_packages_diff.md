@@ -1,6 +1,6 @@
 <!-- markdown-link-check-disable -->
 
-|    | Package         | Version in 2.5.0       | Version in 2.6.0       | Status   |
+|    | Package         | Version in 2.5.0       | Version in 3.0.0       | Status   |
 |---:|:----------------|:-----------------------|:-----------------------|:---------|
 |  0 | binutils        | 2.30-21ubuntu1~18.04.5 | 2.30-21ubuntu1~18.04.7 | UPDATED  |
 |  1 | python-protobuf | 3.0.0-9.1ubuntu1       | 3.0.0-9.1ubuntu1       |          |

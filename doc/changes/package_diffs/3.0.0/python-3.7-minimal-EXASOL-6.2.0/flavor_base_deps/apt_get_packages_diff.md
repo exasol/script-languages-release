@@ -1,6 +1,6 @@
 <!-- markdown-link-check-disable -->
 
-|    | Package              | Version in 2.5.0    | Version in 2.6.0    | Status   |
+|    | Package              | Version in 2.5.0    | Version in 3.0.0    | Status   |
 |---:|:---------------------|:--------------------|:--------------------|:---------|
 |  0 | unzip                | 6.0-21ubuntu1.1     | 6.0-21ubuntu1.1     |          |
 |  1 | wget                 | 1.19.4-1ubuntu2.2   | 1.19.4-1ubuntu2.2   |          |

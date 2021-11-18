@@ -10,7 +10,7 @@ t.b.d.
   
 ## Script-Language-Container-Tool (Exaslct)
 
-This release uses version 0.5.0 of the container tool.
+This release uses version 0.6.0 of the container tool.
 
 ## Bug Fixes
 
@@ -18,7 +18,7 @@ n/a
 
 ## Features / Enhancements
 
-n/a
+ - #401: Integrate script-languages-container-tool v0.6.0 
 
 ## Documentation
 

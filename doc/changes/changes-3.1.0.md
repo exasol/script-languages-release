@@ -14,7 +14,7 @@ This release uses version 0.6.0 of the container tool.
 
 ## Bug Fixes
 
-n/a
+ - #395: Avoid creating wheel cache in install_via_pip
 
 ## Features / Enhancements
 

@@ -1,5 +1,5 @@
 # Pandas DataFrame support
-The `python-3.6-data-science-*` flavors now have direct DataFrame support for accessing and emitting data in Exasol.
+All flavors with Python 3 support now have direct Pandas DataFrame support for accessing and emitting data in Exasol.
 
 ## Accessing data
 Instead of accessing each column of a row individually and calling `next()` for every row, the `get_dataframe(num_rows, start_col)` function can now be called which returns a block of data as a Pandas DataFrame.
@@ -8,15 +8,18 @@ The parameters of `get_dataframe` are the following.
 
 | Parameter | Value | Description |
 | ----- | ----- | ----- |
-| num_rows | 'all' or a positive integer. Default 1. | The number of rows to be returned in the DataFrame.<br>Please keep memory usage in mind when setting this value. |
+| num_rows | 'all' or a positive integer. Default 1. | The number of rows to be returned in the DataFrame.<br>**Please keep memory usage in mind when setting this value.** |
 | start_col | A nonnegative integer. Default 0. | The UDF column (0-based) which specifies the start of the data to be included in the returned DataFrame. The data for `start_col` and all columns thereafter will be included in the DataFrame. |
 
-`get_dataframe` will return a DataFrame containing `num_rows` rows or a lesser number if `num_rows` are not available. If there are zero rows available, `get_dataframe` will return `None`. The DataFrame column labels will be set to the corresponding UDF parameter names for the columns. After calling `get_dataframe`, the UDF data iterator will point to the next row (i.e. following the last row in the DataFrame) just as with `next()`.
+`get_dataframe` will return a DataFrame containing `num_rows` rows or a lesser number if `num_rows` are not available. If there are zero rows available, `get_dataframe` will return `None`. The DataFrame column labels will be set to the corresponding UDF parameter names for the columns, except in case of a dynamic parameter list, then the column labels will be '0','1',.. . After calling `get_dataframe`, the UDF data iterator will point to the next row (i.e. following the last row in the DataFrame) just as with `next()`.
 
 ## Emitting data
-An entire DataFrame can be emitted by passing it to `emit()` just as with single values. Each column of the DataFrame will be  automatically converted to a column in the result set.
+An entire DataFrame can be emitted by passing it to `emit()` just as with single values. Each column of the DataFrame will be  automatically converted to a column in the result set. The columns will be matched by their position to the columns in the emit-clause. The column label in the DataFrame will be ignored.
 
 ## Example
+
+### Get and emit DataFrame
+
 ```python
 CREATE OR REPLACE TABLE DF_TEST_TABLE(C0 DOUBLE, C1 INT, C2 VARCHAR(50));
 INSERT INTO DF_TEST_TABLE VALUES (0.1, 1, 'a'), (0.2, 2, 'b');
@@ -25,6 +28,7 @@ CREATE OR REPLACE PYTHON3 SET SCRIPT DF_TEST(C0 DOUBLE, C1 INT, C2 VARCHAR(50))
 EMITS (C1 INT, C2 VARCHAR(50), C3 BOOL) AS
 def run(ctx):
   df = ctx.get_dataframe(num_rows='all', start_col=1)
+  df['C1']=df['C1']*2
   df['BOOLS'] = [True, False]
   ctx.emit(df)
 /
@@ -35,9 +39,28 @@ Output:
 
 | C1<br>(Type: INT) | C2<br>(Type: VARCHAR(50)) | C3<br>(Type: BOOL) |
 | --- | --- | --- |
-| 1 | a | TRUE |
-| 2 | b | FALSE |
+| 2 | a | TRUE |
+| 4 | b | FALSE |
 
+### Dynamic Parameter List
+
+```
+CREATE OR REPLACE TABLE DF_TEST_TABLE_DYN(C4 int, C5 INT);
+
+INSERT INTO DF_TEST_TABLE_DYN VALUES (1, 2), (3, 4);
+
+CREATE OR REPLACE PYTHON3 SET SCRIPT DF_TEST_DYN(...) EMITS (...) AS
+def run(ctx):
+  df = ctx.get_dataframe(num_rows='all')
+  ctx.emit(str(df.columns))
+/
+
+SELECT DF_TEST_DYN(C4, C5) emits(res varchar(100500)) FROM DF_TEST_TABLE_DYN;
+```
+
+RES                              |
+---------------------------------|
+Index(['0', '1'], dtype='object')|
 
 ## Mixed usage of get_dataframe() and iterator
 

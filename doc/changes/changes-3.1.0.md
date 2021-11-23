@@ -22,7 +22,7 @@ This release uses version 0.6.0 of the container tool.
 
 ## Documentation
 
-n/a
+ - #225: Improve py_dataframe documentation and moved it to user guide
 
 ## Refactoring
 

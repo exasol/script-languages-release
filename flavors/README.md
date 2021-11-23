@@ -119,7 +119,7 @@ Some flavors or Languages provide additional features.
 
 ### Pandas DataFrame support
 
-All flavors which support Python3 as a language now have direct DataFrame support for accessing and emitting data in Exasol. Please see the [documentation](docs/py_dataframe.md) for more information and example usage.
+All flavors which support Python3 as a language now have direct DataFrame support for accessing and emitting data in Exasol. Please see the [documentation](../doc/user_guide/py_dataframe.md) for more information and example usage.
 
 ## Naming convention
 

@@ -14,7 +14,7 @@ This release uses version 0.6.0 of the container tool.
 
 ## Bug Fixes
 
-n/a
+ - #395: Avoid creating wheel cache in install_via_pip
 
 ## Features / Enhancements
 
@@ -22,7 +22,7 @@ n/a
 
 ## Documentation
 
-n/a
+ - #225: Improve py_dataframe documentation and moved it to user guide
 
 ## Refactoring
 
@@ -31,4 +31,5 @@ n/a
 ## Security
 
  - #399: Update libssl-dev in python-3.8-minimal flavor
+ - $409: Update Python packages
  

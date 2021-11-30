@@ -29,7 +29,7 @@ genrule(
     name = "exascript_r_int",
     cmd = """
             cp $(locations :exascript_r_tmp_cc) $(location exascript_r_wrap.R) $(location exascript_r_preset.R) . && 
-            python $(location @script_languages//:build_integrated.py) "$(location exascript_r_int.h)" exascript_r.R"" "exascript_r_wrap.R" "exascript_r_preset.R"
+            python3 $(location @script_languages//:build_integrated.py) "$(location exascript_r_int.h)" exascript_r.R"" "exascript_r_wrap.R" "exascript_r_preset.R"
         """,
     outs = ["exascript_r_int.h"],
     srcs = ["exascript_r_wrap.R", "exascript_r_preset.R", ":exascript_r_tmp_cc"],
@@ -38,7 +38,7 @@ genrule(
 
 genrule(
     name = "filter_swig_code_exascript_r_h",
-    cmd = 'python $(location @script_languages//:filter_swig_code.py) "$@" "$<"',
+    cmd = 'python3 $(location @script_languages//:filter_swig_code.py) "$@" "$<"',
     outs = ["exascript_r.h"],
     srcs = [":exascript_r_tmp_h"],
     tools = ["@script_languages//:filter_swig_code.py"]
@@ -48,7 +48,7 @@ genrule(
     name = "filter_swig_code_exascript_r_cc",
     cmd = """
             cp $(locations :exascript_r_tmp_cc) .
-            python $(location @script_languages//:filter_swig_code.py) "$@" "exascript_r_tmp.cc"
+            python3 $(location @script_languages//:filter_swig_code.py) "$@" "exascript_r_tmp.cc"
             """,
     outs = ["exascript_r.cc"],
     srcs = [":exascript_r_tmp_cc"],

@@ -19,7 +19,8 @@ This release uses version 0.6.0 of the container tool.
 
 ## Features / Enhancements
 
- - #401: Integrate script-languages-container-tool v0.6.0 
+ - #401: Integrate script-languages-container-tool v0.6.0
+ - #343: Change bazel python scripts to Python3
 
 ## Documentation
 

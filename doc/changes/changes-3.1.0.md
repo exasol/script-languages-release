@@ -17,6 +17,7 @@ This release uses version 0.6.0 of the container tool.
  - #395: Avoid creating wheel cache in install_via_pip
  - #139: Check Java exceptions
  - #415: Fix build break
+ - #422: Remove maven from r-4-minimum flavor
 
 ## Features / Enhancements
 

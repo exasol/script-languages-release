@@ -15,10 +15,13 @@ This release uses version 0.6.0 of the container tool.
 ## Bug Fixes
 
  - #395: Avoid creating wheel cache in install_via_pip
+ - #139: Check Java exceptions
+ - #415: Fix build break
 
 ## Features / Enhancements
 
- - #401: Integrate script-languages-container-tool v0.6.0 
+ - #401: Integrate script-languages-container-tool v0.6.0
+ - #343: Change bazel python scripts to Python3
 
 ## Documentation
 
@@ -32,4 +35,5 @@ This release uses version 0.6.0 of the container tool.
 
  - #399: Update libssl-dev in python-3.8-minimal flavor
  - $409: Update Python packages
+ - #418: Update python-samba and python-pandas
  

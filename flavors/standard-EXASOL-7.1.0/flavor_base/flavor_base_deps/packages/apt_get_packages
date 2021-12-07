@@ -30,13 +30,13 @@ libldb1|2:1.2.3-1ubuntu0.2
 python-ldb|2:1.2.3-1ubuntu0.2
 python-ldap|3.0.0-1ubuntu0.1
 python-roman|2.0.0-3
-python-samba|2:4.7.6+dfsg~ubuntu-0ubuntu2.24
+python-samba|2:4.7.6+dfsg~ubuntu-0ubuntu2.26
 python-sklearn|0.19.1-3
 python-talloc|2.1.10-2ubuntu1
 python-cjson|1.1.0-2
 python-lxml|4.2.1-1ubuntu0.4
 python-numpy|1:1.13.3-2ubuntu1
-python-pandas|0.22.0-4
+python-pandas|0.22.0-4ubuntu1
 python-redis|2.10.6-2ubuntu1
 python-scipy|0.19.1-2ubuntu1
 python-boto|2.44.0-1ubuntu2.18.04.1

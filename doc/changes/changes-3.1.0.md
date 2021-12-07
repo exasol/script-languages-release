@@ -22,6 +22,7 @@ This release uses version 0.6.0 of the container tool.
 
  - #401: Integrate script-languages-container-tool v0.6.0
  - #343: Change bazel python scripts to Python3
+ - #383: Added security scan for flavors 
 
 ## Documentation
 

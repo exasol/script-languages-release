@@ -135,6 +135,7 @@ class AnalyzeRelease(DockerFlavorAnalyzeImageTask):
     def get_path_in_flavor(self):
         return "flavor_base"
 
+
 class SecurityScan(DockerFlavorAnalyzeImageTask):
     def get_build_step(self) -> str:
         return "security_scan"

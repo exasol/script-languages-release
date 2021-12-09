@@ -38,4 +38,4 @@ This release uses version 0.6.0 of the container tool.
  - #399: Update libssl-dev in python-3.8-minimal flavor
  - $409: Update Python packages
  - #418: Update python-samba and python-pandas
- 
+ - #425: Update libssl-dev 

@@ -2,7 +2,7 @@
 
 |    | Package         | Version in 3.0.0   | Version in 3.1.0   | Status   |
 |---:|:----------------|:-------------------|:-------------------|:---------|
-|  0 | libssl-dev      | 1.1.1f-1ubuntu2.8  | 1.1.1f-1ubuntu2.9  | UPDATED  |
+|  0 | libssl-dev      | 1.1.1f-1ubuntu2.8  | 1.1.1f-1ubuntu2.10 | UPDATED  |
 |  1 | coreutils       | 8.30-3ubuntu2      | 8.30-3ubuntu2      |          |
 |  2 | locales         | 2.31-0ubuntu9.2    | 2.31-0ubuntu9.2    |          |
 |  3 | libnss-db       | 2.2.3pre1-6build6  | 2.2.3pre1-6build6  |          |

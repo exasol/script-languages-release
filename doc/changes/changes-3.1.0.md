@@ -1,16 +1,17 @@
-# script-languages-release 3.1.0, released t.b.d.
+# script-languages-release 3.1.0, released 2021-12-13
 
-Code name: t.b.d.
+Code name: Security scan
 
 ## Summary
 
-t.b.d.
+This release runs security scans on all supported flavors. Also, the implementation of handling of Java exceptions has been changed, and the respective tests have been extended.
+The script-language container tool was updated to version 0.7.0. Besides, there were several minor fixes and some packages where updated.  
 
 ## [Package Version Comparison between Release 3.0.0 and 3.1.0](package_diffs/3.1.0/README.md)
   
 ## Script-Language-Container-Tool (Exaslct)
 
-This release uses version 0.6.0 of the container tool.
+This release uses version 0.7.0 of the container tool.
 
 ## Bug Fixes
 
@@ -18,6 +19,7 @@ This release uses version 0.6.0 of the container tool.
  - #139: Check Java exceptions
  - #415: Fix build break
  - #422: Remove maven from r-4-minimum flavor
+ - #424: Fix deployment of security scan report in Gcloud builds
 
 ## Features / Enhancements
 

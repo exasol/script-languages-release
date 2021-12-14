@@ -3,7 +3,7 @@
 |     | Package               | Version in 3.0.0                | Version in 3.1.0                | Status   |
 |----:|:----------------------|:--------------------------------|:--------------------------------|:---------|
 |   0 | python3-pygments      | 2.2.0+dfsg-1                    | 2.2.0+dfsg-1ubuntu0.2           | UPDATED  |
-|   1 | python-samba          | 2:4.7.6+dfsg~ubuntu-0ubuntu2.23 | 2:4.7.6+dfsg~ubuntu-0ubuntu2.26 | UPDATED  |
+|   1 | python-samba          | 2:4.7.6+dfsg~ubuntu-0ubuntu2.23 | 2:4.7.6+dfsg~ubuntu-0ubuntu2.27 | UPDATED  |
 |   2 | python-pygments       | 2.2.0+dfsg-1                    | 2.2.0+dfsg-1ubuntu0.2           | UPDATED  |
 |   3 | python-pandas         | 0.22.0-4                        | 0.22.0-4ubuntu1                 | UPDATED  |
 |   4 | coreutils             | 8.28-1ubuntu1                   | 8.28-1ubuntu1                   |          |

@@ -1,4 +1,4 @@
-# script-languages-release 3.1.0, released 2021-12-13
+# script-languages-release 3.1.0, released 2021-12-14
 
 Code name: Security scan
 

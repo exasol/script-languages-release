@@ -2,7 +2,7 @@
 
 |    | Package                 | Version in 3.1.0         | Version in 3.2.0         | Status   |
 |---:|:------------------------|:-------------------------|:-------------------------|:---------|
-|  0 | openjdk-11-jdk-headless | 11.0.11+9-0ubuntu2~18.04 | 11.0.13+8-0ubuntu2~18.04 | UPDATED  |
+|  0 | openjdk-11-jdk-headless | 11.0.11+9-0ubuntu2~18.04 | 11.0.13+8-0ubuntu1~18.04 | UPDATED  |
 |  1 | python3.6-dev           | 3.6.9-1~18.04ubuntu1.4   | 3.6.9-1~18.04ubuntu1.6   | UPDATED  |
 |  2 | python2.7-dev           | 2.7.17-1~18.04ubuntu1.6  | 2.7.17-1~18.04ubuntu1.6  |          |
 |  3 | python-distutils-extra  | 2.41ubuntu1              | 2.41ubuntu1              |          |

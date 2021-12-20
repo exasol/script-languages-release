@@ -31,3 +31,4 @@ n/a
 ## Security
 
  - #434: Update Python3.6 and Python3.8
+ - #437: Update openjdk-11-jdk-headless

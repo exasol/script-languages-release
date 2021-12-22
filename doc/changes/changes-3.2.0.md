@@ -18,7 +18,7 @@ n/a
 
 ## Features / Enhancements
 
-n/a
+ - #440: Updated exaslct to 0.8.0 
 
 ## Documentation
 

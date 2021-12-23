@@ -1,4 +1,4 @@
-# script-languages-release 3.1.0, released t.b.d.
+# script-languages-release 3.2.0, released t.b.d.
 
 Code name: t.b.d.
 
@@ -10,7 +10,7 @@ t.b.d.
   
 ## Script-Language-Container-Tool (Exaslct)
 
-This release uses version 0.7.0 of the container tool.
+This release uses version 0.8.0 of the container tool.
 
 ## Bug Fixes
 
@@ -18,7 +18,8 @@ n/a
 
 ## Features / Enhancements
 
-n/a
+ - #440: Updated exaslct to 0.8.0
+ - #441: updated to exasol python test framework 0.3.0
 
 ## Documentation
 

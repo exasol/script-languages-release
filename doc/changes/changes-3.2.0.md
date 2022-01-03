@@ -33,3 +33,4 @@ n/a
 
  - #434: Update Python3.6 and Python3.8
  - #437: Update openjdk-11-jdk-headless
+ - #447: Added tensorflow to ignore list on Python3.6-data-science flavor

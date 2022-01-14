@@ -14,7 +14,7 @@ This release uses version 0.8.0 of the container tool.
 
 ## Bug Fixes
 
-n/a
+ - #461: Fix Security scan for r-3.5-data-science flavor
 
 ## Features / Enhancements
 

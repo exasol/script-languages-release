@@ -1,0 +1,3 @@
+cython|0.29.21
+pandas|0.22.0
+git+https://github.com/numpy/numpy.git@maintenance/1.19.x

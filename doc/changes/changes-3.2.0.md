@@ -37,3 +37,4 @@ n/a
  - #437: Update openjdk-11-jdk-headless
  - #447: Added tensorflow to ignore list on Python3.6-data-science flavor
  - #453: Ignore CVE-2021-33430 on Python3.6 flavors
+ - #457: Use source package of numpy for all flavors.

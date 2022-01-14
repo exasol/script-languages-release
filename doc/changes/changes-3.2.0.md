@@ -14,13 +14,14 @@ This release uses version 0.8.0 of the container tool.
 
 ## Bug Fixes
 
-n/a
+ - #461: Fix Security scan for r-3.5-data-science flavor
 
 ## Features / Enhancements
 
  - #440: Updated exaslct to 0.8.0
  - #441: updated to exasol python test framework 0.3.0
  - #446: Add shellcheck GH actions
+ - #454: Java UDF conditional compilation
 
 ## Documentation
 
@@ -36,3 +37,4 @@ n/a
  - #437: Update openjdk-11-jdk-headless
  - #447: Added tensorflow to ignore list on Python3.6-data-science flavor
  - #453: Ignore CVE-2021-33430 on Python3.6 flavors
+ - #457: Use source package of numpy for all flavors. Undo of #453 and fix for CVE-2021-33430 (for major flavors).

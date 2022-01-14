@@ -21,6 +21,7 @@ n/a
  - #440: Updated exaslct to 0.8.0
  - #441: updated to exasol python test framework 0.3.0
  - #446: Add shellcheck GH actions
+ - #454: Java UDF conditional compilation
 
 ## Documentation
 

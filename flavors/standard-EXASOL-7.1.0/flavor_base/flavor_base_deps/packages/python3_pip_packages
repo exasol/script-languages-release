@@ -40,4 +40,5 @@ pyexasol|0.20.0
 pykickstart|3.33
 pysftp|0.2.9
 pytz|2021.1
+git+https://github.com/numpy/numpy.git@maintenance/1.19.x
 sagemaker|2.59.5

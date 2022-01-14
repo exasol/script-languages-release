@@ -21,16 +21,23 @@ RUN true # workaround for https://github.com/moby/moby/issues/37965
 
 RUN ldconfig
 
-RUN mkdir /exaudfclient /exaudf
-COPY exaudfclient/base /exaudfclient/base
+RUN mkdir /exaudfclient /exaudf /exaudf/src
+COPY /exaudfclient /exaudfclient
 
+WORKDIR /exaudfclient/extension
+RUN ["/bin/bash", "-c", "source /env && bash build.sh --config no-tty --config optimize --config python --config java --config optimize-r --config fast-binary-py3"]
+RUN cp -r -L bazel-bin/* /exaudf && rm -r /exaudf/external/bazel_tools/
+RUN mkdir -p /exaudf/python/python3/ /exaudf/javacontainer
+RUN ln -s /exaudf/external/script_languages/python/python3/pyextdataframe.so /exaudf/python/python3/pyextdataframe.so
+RUN ln -s /exaudf/external/script_languages/javacontainer/libexaudf.jar /exaudf/javacontainer/libexaudf.jar
+
+
+# These source files are required for building internal udf plugins
 WORKDIR /exaudfclient/base
-RUN ["/bin/bash", "-c", "source /env && bash build.sh --config no-tty --config optimize --config python --config fast-binary-py3"]
-RUN cp -r -L bazel-bin/* /exaudf
-
+RUN cp debug_message.h exaudfclient.cc exaudflib/exaudflib.cc exaudflib/exaudflib.h exaudflib/zmqcontainer.proto /exaudf/src
 RUN ./test_udfclient.sh /exaudf/exaudfclient_py3
 
-WORKDIR /exaudf
+WORKDIR /exaudf/
 
 RUN rm -r /exaudfclient
 

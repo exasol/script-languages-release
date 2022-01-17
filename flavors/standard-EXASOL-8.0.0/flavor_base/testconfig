@@ -1,2 +1,2 @@
 generic_language_tests=python3 python java r
-test_folders=python python3/all python3/external_modules python3-no-python2 java r standard-flavor/all standard-flavor/7.1
+test_folders=python python3/all python3/external_modules python3-no-python2 java r standard-flavor/all standard-flavor/7.1 standard-flavor/8.0

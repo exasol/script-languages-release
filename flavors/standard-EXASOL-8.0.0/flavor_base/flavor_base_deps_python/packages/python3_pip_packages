@@ -62,3 +62,5 @@ scikit-learn|1.0.2
 plyvel|1.4.0
 python-ldap|3.4.0
 pyOpenSSL|21.0.0 
+git+http://github.com/EXASOL/websocket-api.git@758d57d6d076c495b449c9017db3083498c44445#egg=exasol-db-api&subdirectory=python|
+debugpy|1.5.1

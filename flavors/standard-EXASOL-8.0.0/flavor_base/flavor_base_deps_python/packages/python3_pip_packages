@@ -46,7 +46,7 @@ redis|4.1.0
 roman|3.3
 pyodbc|4.0.32
 lxml|4.7.1
-scipy|1.7.3
+scipy|1.6.2
 pygments|2.9.0
 pyftpdlib|1.5.6
 pycparser|2.21
@@ -64,3 +64,12 @@ python-ldap|3.4.0
 pyOpenSSL|21.0.0 
 git+http://github.com/EXASOL/websocket-api.git@d45fa3724662a2adeb7ad8f2690788599a9b3d47#egg=exasol-db-api&subdirectory=python|
 debugpy|1.5.1
+pybase64|1.2.1 
+pysimdjson|4.0.3
+numba|0.55.0
+pyarrow|6.0.1
+bitarray|2.3.5
+pybloomfiltermmap3|0.5.5
+bitsets|0.8.3
+numba-scipy|0.3.0
+pyyaml|6.0

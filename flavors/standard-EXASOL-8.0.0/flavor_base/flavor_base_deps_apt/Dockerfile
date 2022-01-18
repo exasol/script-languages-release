@@ -7,5 +7,5 @@ RUN /scripts/install_scripts/install_via_apt.pl --file /build_info/packages/flav
 
 RUN curl -s https://aquasecurity.github.io/trivy-repo/deb/public.key | apt-key add - &&\
    /scripts/install_scripts/install_ppa.pl --ppa 'deb https://aquasecurity.github.io/trivy-repo/deb focal main' --out-file trivy.list
-RUN /scripts/install_scripts/install_via_apt.pl --file /build_info/packages/security_scan/apt_get_packages_trivy
+RUN /scripts/install_scripts/install_via_apt.pl --file /build_info/packages/flavor_base_deps_apt/apt_get_packages_trivy
 

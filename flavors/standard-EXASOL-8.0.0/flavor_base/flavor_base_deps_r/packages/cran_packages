@@ -41,3 +41,13 @@ rredis|1.7.0
 scales|1.1.1
 stringr|1.4.0
 XML|3.99-0.8
+dplyr|1.0.7
+jsonlite|1.7.3
+purrr|0.3.4
+rjson|0.2.21
+tidyr|1.1.4
+tibble|3.1.6
+yaml|2.2.1
+httr|1.4.2
+glue|1.6.0
+oysteR|0.1.1

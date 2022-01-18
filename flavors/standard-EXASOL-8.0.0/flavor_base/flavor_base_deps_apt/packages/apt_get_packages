@@ -13,3 +13,5 @@ slapd|2.4.49+dfsg-2ubuntu1.8 # Needed by python-ldap
 ldap-utils|2.4.49+dfsg-2ubuntu1.8 # Needed by python-ldap
 unixodbc-dev|2.3.6-0.1build1 # Needed by pyodbc and RODBC
 libxml2-dev|2.9.10+dfsg-5ubuntu0.20.04.1 # Needed by R XML package
+apt-transport-https|2.0.2ubuntu0.2
+gnupg|2.2.19-3ubuntu2

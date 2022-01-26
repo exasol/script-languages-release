@@ -4,7 +4,7 @@ Code name: New standard container for Exasol 8.0 and Java UDF conditional compil
 
 ## Summary
 
-This release adds the new standard container for Exasol 8.0 with Ubuntu 20.04, Python 3.8, Java 11 and R 4.1. Furthermore, we added conditional compilation to Java UDF, which only invokes the Java compiler if the script contains Java code. If it only contains %jar and %scriptClass options it doesn't get used which saves considerable amount of time during startup of the UDFs. 
+This release adds the new standard container for Exasol 8.0 with Ubuntu 20.04, Python 3.8, Java 11 and R 4.1. Furthermore, we added conditional compilation to Java UDF, which only invokes the Java compiler if the script contains Java code. If it only contains %jar and %scriptClass options it doesn't get used which saves considerable amount of time during startup of the UDFs. Finally, we also improved the startup time of Python3 UDFs. 
 
 ## [Package Version Comparison between Release 3.1.0 and 3.2.0](package_diffs/3.2.0/README.md)
   

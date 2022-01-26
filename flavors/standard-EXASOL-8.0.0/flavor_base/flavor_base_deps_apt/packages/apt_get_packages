@@ -17,3 +17,5 @@ apt-transport-https|2.0.2ubuntu0.2
 gnupg|2.2.19-3ubuntu2.1
 libhiredis-dev|0.14.0-6 # Needed by R redux package
 libsmbclient|2:4.13.14+dfsg-0ubuntu0.20.04.4
+libsmbclient-dev|2:4.13.14+dfsg-0ubuntu0.20.04.4
+smbclient|2:4.13.14+dfsg-0ubuntu0.20.04.4

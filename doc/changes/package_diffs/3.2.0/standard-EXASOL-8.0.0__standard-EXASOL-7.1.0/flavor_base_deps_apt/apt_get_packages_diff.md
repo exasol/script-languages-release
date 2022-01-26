@@ -127,3 +127,6 @@
 | 122 | libldb2               |                                 | 2:2.2.3-0ubuntu0.20.04.2     | NEW      |
 | 123 | libcurl4-openssl-dev  |                                 | 7.68.0-1ubuntu2.7            | NEW      |
 | 124 | libhiredis-dev        |                                 | 0.14.0-6                     | NEW      |
+| 125 | libsmbclient          |                                 | 2:4.13.14+dfsg-0ubuntu0.20.04.4 | NEW      |
+| 126 | libsmbclient-dev      |                                 | 2:4.13.14+dfsg-0ubuntu0.20.04.4 | NEW      |
+| 127 | smbclient             |                                 | 2:4.13.14+dfsg-0ubuntu0.20.04.4 | NEW      |

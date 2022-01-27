@@ -1,4 +1,4 @@
-# script-languages-release 3.2.0, released t.b.d.
+# script-languages-release 3.2.0, released 2022-01-27
 
 Code name: New standard container for Exasol 8.0 and Java UDF conditional compilation. 
 

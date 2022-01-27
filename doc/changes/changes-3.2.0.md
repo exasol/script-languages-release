@@ -16,6 +16,7 @@ This release uses version 0.8.0 of the container tool.
 
  - #461: Fix Security scan for r-3.5-data-science flavor
  - #118: rredis package got discontinued and the new flavor standard-8.0.0-Exasol replaces with redux
+ - #466: Remove unconditional pandas import in Python3 UDFs to improve startup time
 
 ## Features / Enhancements
 
@@ -25,6 +26,7 @@ This release uses version 0.8.0 of the container tool.
  - #454: Java UDF conditional compilation
  - #382: Add new standard flavor for Exasol 8.0
  - #333: Use the new pip dependency resolver in the new flavor standard-8.0.0-Exasol
+ - #428: Add a security-scan script to the latest standard container
 
 ## Documentation
 

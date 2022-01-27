@@ -1,10 +1,10 @@
 # script-languages-release 3.2.0, released t.b.d.
 
-Code name: t.b.d.
+Code name: New standard container for Exasol 8.0 and Java UDF conditional compilation. 
 
 ## Summary
 
-t.b.d.
+This release adds the new standard container for Exasol 8.0 with Ubuntu 20.04, Python 3.8, Java 11 and R 4.1. Furthermore, we added conditional compilation to Java UDF, which only invokes the Java compiler if the script contains Java code. If it only contains %jar and %scriptClass options it doesn't get used which saves considerable amount of time during startup of the UDFs. Finally, we also improved the startup time of Python3 UDFs. 
 
 ## [Package Version Comparison between Release 3.1.0 and 3.2.0](package_diffs/3.2.0/README.md)
   
@@ -15,6 +15,8 @@ This release uses version 0.8.0 of the container tool.
 ## Bug Fixes
 
  - #461: Fix Security scan for r-3.5-data-science flavor
+ - #118: rredis package got discontinued and the new flavor standard-8.0.0-Exasol replaces with redux
+ - #466: Remove unconditional pandas import in Python3 UDFs to improve startup time
 
 ## Features / Enhancements
 
@@ -22,6 +24,9 @@ This release uses version 0.8.0 of the container tool.
  - #441: updated to exasol python test framework 0.3.0
  - #446: Add shellcheck GH actions
  - #454: Java UDF conditional compilation
+ - #382: Add new standard flavor for Exasol 8.0
+ - #333: Use the new pip dependency resolver in the new flavor standard-8.0.0-Exasol
+ - #428: Add a security-scan script to the latest standard container
 
 ## Documentation
 

@@ -2,9 +2,9 @@
 
 |    | Package                                                                              | Version in 3.1.0     | Version in 3.2.0     | Status   |
 |---:|:-------------------------------------------------------------------------------------|:---------------------|:---------------------|:---------|
-|  0 | git+https://github.com/numpy/numpy.git@maintenance/1.19.x                            |                      | No version specified | NEW      |
-|  1 | azure-cosmos                                                                         | 4.2.0                | 4.2.0                |          |
-|  2 | google-cloud-containeranalysis                                                       | 2.3.0                | 2.3.0                |          |
+|  0 | grafeas                                                                              |                      | 1.4.0                | NEW      |
+|  1 | git+https://github.com/numpy/numpy.git@maintenance/1.19.x                            |                      | No version specified | NEW      |
+|  2 | google-cloud-spanner                                                                 | 3.5.0                | 3.5.0                |          |
 |  3 | google-cloud-datacatalog                                                             | 3.2.1                | 3.2.1                |          |
 |  4 | google-cloud-datastore                                                               | 2.1.3                | 2.1.3                |          |
 |  5 | google-cloud-firestore                                                               | 2.1.3                | 2.1.3                |          |
@@ -13,8 +13,8 @@
 |  8 | google-cloud-monitoring                                                              | 2.2.1                | 2.2.1                |          |
 |  9 | google-cloud-ndb                                                                     | 1.9.0                | 1.9.0                |          |
 | 10 | google-cloud-pubsub                                                                  | 2.5.0                | 2.5.0                |          |
-| 11 | google-cloud-spanner                                                                 | 3.5.0                | 3.5.0                |          |
-| 12 | google-cloud-storage                                                                 | 1.38.0               | 1.38.0               |          |
+| 11 | google-cloud-storage                                                                 | 1.38.0               | 1.38.0               |          |
+| 12 | google-cloud-bigtable                                                                | 2.2.0                | 2.2.0                |          |
 | 13 | google-cloud-trace                                                                   | 1.2.0                | 1.2.0                |          |
 | 14 | martian                                                                              | 1.4                  | 1.4                  |          |
 | 15 | protobuf                                                                             | 3.17.3               | 3.17.3               |          |
@@ -23,10 +23,10 @@
 | 18 | pysftp                                                                               | 0.2.9                | 0.2.9                |          |
 | 19 | pytz                                                                                 | 2021.1               | 2021.1               |          |
 | 20 | sagemaker                                                                            | 2.59.5               | 2.59.5               |          |
-| 21 | google-cloud-bigtable                                                                | 2.2.0                | 2.2.0                |          |
+| 21 | google-cloud-containeranalysis                                                       | 2.3.0                | 2.3.0                |          |
 | 22 | azure-batch                                                                          | 10.0.0               | 10.0.0               |          |
-| 23 | google-cloud-bigquery                                                                | 2.20.0               | 2.20.0               |          |
-| 24 | azure-keyvault-secrets                                                               | 4.2.0                | 4.2.0                |          |
+| 23 | azure-cosmos                                                                         | 4.2.0                | 4.2.0                |          |
+| 24 | google-cloud-bigquery                                                                | 2.20.0               | 2.20.0               |          |
 | 25 | azure-eventgrid                                                                      | 4.3.0                | 4.3.0                |          |
 | 26 | azure-eventhub                                                                       | 5.5.0                | 5.5.0                |          |
 | 27 | azure-eventhub-checkpointstoreblob                                                   | 1.1.4                | 1.1.4                |          |
@@ -35,8 +35,8 @@
 | 30 | azure-keyvault                                                                       | 4.1.0                | 4.1.0                |          |
 | 31 | azure-keyvault-certificates                                                          | 4.2.1                | 4.2.1                |          |
 | 32 | azure-keyvault-keys                                                                  | 4.3.1                | 4.3.1                |          |
-| 33 | azure-kusto-data                                                                     | 2.1.3                | 2.1.3                |          |
-| 34 | google-cloud-asset                                                                   | 3.1.0                | 3.1.0                |          |
+| 33 | azure-keyvault-secrets                                                               | 4.2.0                | 4.2.0                |          |
+| 34 | azure-kusto-data                                                                     | 2.1.3                | 2.1.3                |          |
 | 35 | azure-loganalytics                                                                   | 0.1.0                | 0.1.0                |          |
 | 36 | azure-servicebus                                                                     | 7.3.0                | 7.3.0                |          |
 | 37 | azure-storage-blob                                                                   | 12.8.1               | 12.8.1               |          |
@@ -45,4 +45,5 @@
 | 40 | azure-storage-queue                                                                  | 12.1.6               | 12.1.6               |          |
 | 41 | boto3                                                                                | 1.17.96              | 1.17.96              |          |
 | 42 | git+http://github.com/EXASOL/websocket-api.git#egg=exasol-db-api&subdirectory=python | No version specified | No version specified |          |
-| 43 | google-cloud-bigquery-storage                                                        | 2.4.0                | 2.4.0                |          |
+| 43 | google-cloud-asset                                                                   | 3.1.0                | 3.1.0                |          |
+| 44 | google-cloud-bigquery-storage                                                        | 2.4.0                | 2.4.0                |          |

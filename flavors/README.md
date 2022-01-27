@@ -21,7 +21,7 @@ Due to EOL of Python2, there is split of the standard-EXASOL-7.1.0 container: on
 
 - standard-EXASOL-8.0.0
   - Base Image: ubuntu:20.04
-  - Compatible Exasol Versions: 8.9.\* (but likely also with 7.*.\*) 
+  - Compatible Exasol Versions: 8.0.\* (but likely also with 7.*.\*) 
   - Available languages: Java 11, Python 3.8 and R 4.1
   - [Here](standard-EXASOL-8.0.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 

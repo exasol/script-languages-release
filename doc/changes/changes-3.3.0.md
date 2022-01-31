@@ -1,0 +1,33 @@
+# script-languages-release 3.3.0, released t.b.d.
+
+Code name: t.b.d. 
+
+## Summary
+
+t.b.d. 
+
+## [Package Version Comparison between Release 3.1.0 and 3.2.0](package_diffs/3.2.0/README.md)
+  
+## Script-Language-Container-Tool (Exaslct)
+
+This release uses version 0.8.0 of the container tool.
+
+## Bug Fixes
+
+ - #472: Fix github upload script
+
+## Features / Enhancements
+
+n/a
+
+## Documentation
+
+n/a
+
+## Refactoring
+
+n/a
+
+## Security
+
+n/a

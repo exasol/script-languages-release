@@ -1,0 +1,77 @@
+<!-- markdown-link-check-disable -->
+
+|    | Package                                                                                                                       | Version in 3.2.0     | Version in 3.3.0     | Status   |
+|---:|:------------------------------------------------------------------------------------------------------------------------------|:---------------------|:---------------------|:---------|
+|  0 | azure-batch                                                                                                                   | 11.0.0               | 11.0.0               |          |
+|  1 | pyexasol                                                                                                                      | 0.23.3               | 0.23.3               |          |
+|  2 | ujson                                                                                                                         | 5.1.0                | 5.1.0                |          |
+|  3 | requests                                                                                                                      | 2.27.1               | 2.27.1               |          |
+|  4 | docutils                                                                                                                      | 0.18.1               | 0.18.1               |          |
+|  5 | cffi                                                                                                                          | 1.15.0               | 1.15.0               |          |
+|  6 | jinja2                                                                                                                        | 3.0.3                | 3.0.3                |          |
+|  7 | pyftpdlib                                                                                                                     | 1.5.6                | 1.5.6                |          |
+|  8 | scipy                                                                                                                         | 1.6.2                | 1.6.2                |          |
+|  9 | lxml                                                                                                                          | 4.7.1                | 4.7.1                |          |
+| 10 | pyodbc                                                                                                                        | 4.0.32               | 4.0.32               |          |
+| 11 | roman                                                                                                                         | 3.3                  | 3.3                  |          |
+| 12 | redis                                                                                                                         | 4.1.0                | 4.1.0                |          |
+| 13 | pycurl                                                                                                                        | 7.44.1               | 7.44.1               |          |
+| 14 | setuptools                                                                                                                    | 60.5.0               | 60.5.0               |          |
+| 15 | sagemaker                                                                                                                     | 2.72.3               | 2.72.3               |          |
+| 16 | pytz                                                                                                                          | 2021.3               | 2021.3               |          |
+| 17 | paramiko                                                                                                                      | 2.9.2                | 2.9.2                |          |
+| 18 | simplejson                                                                                                                    | 3.17.6               | 3.17.6               |          |
+| 19 | scikit-learn                                                                                                                  | 1.0.2                | 1.0.2                |          |
+| 20 | pyarrow                                                                                                                       | 6.0.1                | 6.0.1                |          |
+| 21 | https://github.com/exasol/bucketfs-utils-python/releases/download/0.1.0/exasol_bucketfs_utils_python-0.1.0-py3-none-any.whl   | No version specified | No version specified |          |
+| 22 | pyyaml                                                                                                                        | 6.0                  | 6.0                  |          |
+| 23 | numba-scipy                                                                                                                   | 0.3.0                | 0.3.0                |          |
+| 24 | bitsets                                                                                                                       | 0.8.3                | 0.8.3                |          |
+| 25 | pybloomfiltermmap3                                                                                                            | 0.5.5                | 0.5.5                |          |
+| 26 | bitarray                                                                                                                      | 2.3.5                | 2.3.5                |          |
+| 27 | numba                                                                                                                         | 0.55.0               | 0.55.0               |          |
+| 28 | plyvel                                                                                                                        | 1.4.0                | 1.4.0                |          |
+| 29 | pysimdjson                                                                                                                    | 4.0.3                | 4.0.3                |          |
+| 30 | pybase64                                                                                                                      | 1.2.1                | 1.2.1                |          |
+| 31 | debugpy                                                                                                                       | 1.5.1                | 1.5.1                |          |
+| 32 | git+http://github.com/EXASOL/websocket-api.git@5150f964388412788bf5e47752a7916a5a8624c5#egg=exasol-db-api&subdirectory=python | No version specified | No version specified |          |
+| 33 | pyOpenSSL                                                                                                                     | 21.0.0               | 21.0.0               |          |
+| 34 | python-ldap                                                                                                                   | 3.4.0                | 3.4.0                |          |
+| 35 | pysftp                                                                                                                        | 0.2.9                | 0.2.9                |          |
+| 36 | protobuf                                                                                                                      | 3.19.3               | 3.19.3               |          |
+| 37 | azure-cosmos                                                                                                                  | 4.2.0                | 4.2.0                |          |
+| 38 | martian                                                                                                                       | 1.4                  | 1.4                  |          |
+| 39 | azure-storage-file-share                                                                                                      | 12.6.0               | 12.6.0               |          |
+| 40 | azure-storage-file-datalake                                                                                                   | 12.5.0               | 12.5.0               |          |
+| 41 | azure-storage-blob                                                                                                            | 12.9.0               | 12.9.0               |          |
+| 42 | azure-servicebus                                                                                                              | 7.5.0                | 7.5.0                |          |
+| 43 | azure-loganalytics                                                                                                            | 0.1.1                | 0.1.1                |          |
+| 44 | azure-kusto-data                                                                                                              | 2.3.2                | 2.3.2                |          |
+| 45 | azure-keyvault-secrets                                                                                                        | 4.3.0                | 4.3.0                |          |
+| 46 | azure-keyvault-keys                                                                                                           | 4.4.0                | 4.4.0                |          |
+| 47 | azure-keyvault-certificates                                                                                                   | 4.3.0                | 4.3.0                |          |
+| 48 | azure-keyvault                                                                                                                | 4.1.0                | 4.1.0                |          |
+| 49 | azure-identity                                                                                                                | 1.6.1                | 1.6.1                |          |
+| 50 | azure-eventhub-checkpointstoreblob-aio                                                                                        | 1.1.4                | 1.1.4                |          |
+| 51 | azure-eventhub-checkpointstoreblob                                                                                            | 1.1.4                | 1.1.4                |          |
+| 52 | azure-eventhub                                                                                                                | 5.7.0                | 5.7.0                |          |
+| 53 | azure-eventgrid                                                                                                               | 4.7.1                | 4.7.1                |          |
+| 54 | azure-storage-queue                                                                                                           | 12.1.6               | 12.1.6               |          |
+| 55 | boto3                                                                                                                         | 1.20.37              | 1.20.37              |          |
+| 56 | google-cloud-asset                                                                                                            | 3.7.1                | 3.7.1                |          |
+| 57 | google-cloud-logging                                                                                                          | 2.7.0                | 2.7.0                |          |
+| 58 | google-cloud-trace                                                                                                            | 1.5.1                | 1.5.1                |          |
+| 59 | google-cloud-storage                                                                                                          | 2.0.0                | 2.0.0                |          |
+| 60 | google-cloud-spanner                                                                                                          | 3.12.1               | 3.12.1               |          |
+| 61 | google-cloud-pubsub                                                                                                           | 2.9.0                | 2.9.0                |          |
+| 62 | google-cloud-ndb                                                                                                              | 1.11.1               | 1.11.1               |          |
+| 63 | google-cloud-monitoring                                                                                                       | 2.8.0                | 2.8.0                |          |
+| 64 | google-cloud-kms                                                                                                              | 2.10.1               | 2.10.1               |          |
+| 65 | google-cloud-bigquery                                                                                                         | 2.32.0               | 2.32.0               |          |
+| 66 | google-cloud-firestore                                                                                                        | 2.3.4                | 2.3.4                |          |
+| 67 | google-cloud-datastore                                                                                                        | 1.15.3               | 1.15.3               |          |
+| 68 | google-cloud-datacatalog                                                                                                      | 3.6.2                | 3.6.2                |          |
+| 69 | google-cloud-containeranalysis                                                                                                | 2.6.3                | 2.6.3                |          |
+| 70 | google-cloud-bigtable                                                                                                         | 2.4.0                | 2.4.0                |          |
+| 71 | google-cloud-bigquery-storage                                                                                                 | 2.11.0               | 2.11.0               |          |
+| 72 | pysmbc                                                                                                                        | 1.0.23               | 1.0.23               |          |

@@ -6,7 +6,7 @@ Code name: t.b.d.
 
 t.b.d. 
 
-## [Package Version Comparison between Release 3.1.0 and 3.2.0](package_diffs/3.2.0/README.md)
+## [Package Version Comparison between Release 3.2.0 and 3.3.0](package_diffs/3.3.0/README.md)
   
 ## Script-Language-Container-Tool (Exaslct)
 
@@ -15,6 +15,7 @@ This release uses version 0.8.0 of the container tool.
 ## Bug Fixes
 
  - #472: Fix github upload script
+ - #474: Fix Python3.6 installation script
 
 ## Features / Enhancements
 

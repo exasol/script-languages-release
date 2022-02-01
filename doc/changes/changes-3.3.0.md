@@ -32,3 +32,4 @@ n/a
 ## Security
 
  - #476: Resolve datascience security issues
+ - #478: Update standard-container packages

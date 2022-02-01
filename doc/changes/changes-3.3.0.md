@@ -31,4 +31,4 @@ n/a
 
 ## Security
 
-n/a
+ - #476: Resolve datascience security issues

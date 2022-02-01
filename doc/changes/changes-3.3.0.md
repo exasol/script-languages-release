@@ -16,6 +16,7 @@ This release uses version 0.8.0 of the container tool.
 
  - #472: Fix github upload script
  - #474: Fix Python3.6 installation script
+ - #480: Fix R security scan script
 
 ## Features / Enhancements
 

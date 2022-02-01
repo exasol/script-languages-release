@@ -2,9 +2,9 @@
 
 |     | Package               | Version in 3.2.0                | Version in 3.3.0                | Status   |
 |----:|:----------------------|:--------------------------------|:--------------------------------|:---------|
-|   0 | coreutils             | 8.28-1ubuntu1                   | 8.28-1ubuntu1                   |          |
-|   1 | r-base                | 3.4.4-1ubuntu1                  | 3.4.4-1ubuntu1                  |          |
-|   2 | r-cran-gridextra      | 2.3-1.1                         | 2.3-1.1                         |          |
+|   0 | python-samba          | 2:4.7.6+dfsg~ubuntu-0ubuntu2.27 | 2:4.7.6+dfsg~ubuntu-0ubuntu2.28 | UPDATED  |
+|   1 | coreutils             | 8.28-1ubuntu1                   | 8.28-1ubuntu1                   |          |
+|   2 | r-base                | 3.4.4-1ubuntu1                  | 3.4.4-1ubuntu1                  |          |
 |   3 | r-cran-gbm            | 2.1.3-2                         | 2.1.3-2                         |          |
 |   4 | r-cran-fastcluster    | 1.1.24-1                        | 1.1.24-1                        |          |
 |   5 | r-cran-e1071          | 1.6-8-2build1                   | 1.6-8-2build1                   |          |
@@ -16,7 +16,7 @@
 |  11 | r-cran-xml            | 3.98-1.10-1                     | 3.98-1.10-1                     |          |
 |  12 | r-cran-rcurl          | 1.95-4.8-4build1                | 1.95-4.8-4build1                |          |
 |  13 | python3-simplejson    | 3.13.2-1                        | 3.13.2-1                        |          |
-|  14 | python3-lxml          | 4.2.1-1ubuntu0.6                | 4.2.1-1ubuntu0.6                |          |
+|  14 | r-cran-gtable         | 0.2.0-2                         | 0.2.0-2                         |          |
 |  15 | python3-paramiko      | 2.0.0-1ubuntu1.2                | 2.0.0-1ubuntu1.2                |          |
 |  16 | python3-ujson         | 1.35-2                          | 1.35-2                          |          |
 |  17 | python3-boto          | 2.44.0-1ubuntu2.18.04.1         | 2.44.0-1ubuntu2.18.04.1         |          |
@@ -28,10 +28,10 @@
 |  23 | python3-pyftpdlib     | 1.5.1-4ubuntu1                  | 1.5.1-4ubuntu1                  |          |
 |  24 | python3-pygments      | 2.2.0+dfsg-1ubuntu0.2           | 2.2.0+dfsg-1ubuntu0.2           |          |
 |  25 | python3-scipy         | 0.19.1-2ubuntu1                 | 0.19.1-2ubuntu1                 |          |
-|  26 | r-cran-gtable         | 0.2.0-2                         | 0.2.0-2                         |          |
+|  26 | r-cran-gridextra      | 2.3-1.1                         | 2.3-1.1                         |          |
 |  27 | r-cran-latticeextra   | 0.6-28-2build1                  | 0.6-28-2build1                  |          |
-|  28 | r-cran-randomforest   | 4.6-12-2                        | 4.6-12-2                        |          |
-|  29 | r-cran-bradleyterry2  | 1.0-8-1                         | 1.0-8-1                         |          |
+|  28 | python3-lxml          | 4.2.1-1ubuntu0.6                | 4.2.1-1ubuntu0.6                |          |
+|  29 | r-cran-lme4           | 1.1-15-1                        | 1.1-15-1                        |          |
 |  30 | r-cran-scales         | 0.5.0-1ubuntu1                  | 0.5.0-1ubuntu1                  |          |
 |  31 | r-cran-reshape2       | 1.4.2-1build1                   | 1.4.2-1build1                   |          |
 |  32 | r-cran-rcppeigen      | 0.3.3.4.0-1                     | 0.3.3.4.0-1                     |          |
@@ -43,8 +43,8 @@
 |  38 | r-cran-munsell        | 0.4.3-2                         | 0.4.3-2                         |          |
 |  39 | r-cran-minqa          | 1.2.4-1build1                   | 1.2.4-1build1                   |          |
 |  40 | r-cran-magrittr       | 1.5-4                           | 1.5-4                           |          |
-|  41 | r-cran-lme4           | 1.1-15-1                        | 1.1-15-1                        |          |
-|  42 | r-cran-labeling       | 0.3-2                           | 0.3-2                           |          |
+|  41 | r-cran-labeling       | 0.3-2                           | 0.3-2                           |          |
+|  42 | r-cran-randomforest   | 4.6-12-2                        | 4.6-12-2                        |          |
 |  43 | r-cran-iterators      | 1.0.9-1                         | 1.0.9-1                         |          |
 |  44 | r-cran-gtools         | 3.5.0-2build1                   | 3.5.0-2build1                   |          |
 |  45 | r-cran-ggplot2        | 2.2.1-3                         | 2.2.1-3                         |          |
@@ -55,11 +55,11 @@
 |  50 | r-cran-caret          | 6.0-78+dfsg1-1                  | 6.0-78+dfsg1-1                  |          |
 |  51 | r-cran-car            | 2.1-6-1                         | 2.1-6-1                         |          |
 |  52 | r-cran-brglm          | 0.6.1-1                         | 0.6.1-1                         |          |
-|  53 | python3-sklearn       | 0.19.1-3                        | 0.19.1-3                        |          |
-|  54 | python3-pyodbc        | 4.0.17-1                        | 4.0.17-1                        |          |
-|  55 | locales               | 2.27-3ubuntu1.4                 | 2.27-3ubuntu1.4                 |          |
-|  56 | python-jinja2         | 2.10-1ubuntu0.18.04.1           | 2.10-1ubuntu0.18.04.1           |          |
-|  57 | python-pyodbc         | 4.0.17-1                        | 4.0.17-1                        |          |
+|  53 | r-cran-bradleyterry2  | 1.0-8-1                         | 1.0-8-1                         |          |
+|  54 | python3-sklearn       | 0.19.1-3                        | 0.19.1-3                        |          |
+|  55 | python3-pyodbc        | 4.0.17-1                        | 4.0.17-1                        |          |
+|  56 | locales               | 2.27-3ubuntu1.4                 | 2.27-3ubuntu1.4                 |          |
+|  57 | python-openssl        | 17.5.0-1ubuntu1                 | 17.5.0-1ubuntu1                 |          |
 |  58 | python-pykickstart    | 1.83-2                          | 1.83-2                          |          |
 |  59 | python-pygments       | 2.2.0+dfsg-1ubuntu0.2           | 2.2.0+dfsg-1ubuntu0.2           |          |
 |  60 | python-pyftpdlib      | 1.5.1-4ubuntu1                  | 1.5.1-4ubuntu1                  |          |
@@ -70,8 +70,8 @@
 |  65 | python-pyasn1         | 0.4.2-3                         | 0.4.2-3                         |          |
 |  66 | python-protobuf       | 3.0.0-9.1ubuntu1                | 3.0.0-9.1ubuntu1                |          |
 |  67 | python-martian        | 0.14-0ubuntu1                   | 0.14-0ubuntu1                   |          |
-|  68 | ipython               | 5.5.0-1                         | 5.5.0-1                         |          |
-|  69 | python3-openssl       | 17.5.0-1ubuntu1                 | 17.5.0-1ubuntu1                 |          |
+|  68 | python-jinja2         | 2.10-1ubuntu0.18.04.1           | 2.10-1ubuntu0.18.04.1           |          |
+|  69 | ipython               | 5.5.0-1                         | 5.5.0-1                         |          |
 |  70 | python-ipaddress      | 1.0.17-1                        | 1.0.17-1                        |          |
 |  71 | python-idna           | 2.6-1                           | 2.6-1                           |          |
 |  72 | python-enum34         | 1.1.6-2                         | 1.1.6-2                         |          |
@@ -83,10 +83,10 @@
 |  78 | maven                 | 3.6.0-1~18.04.1                 | 3.6.0-1~18.04.1                 |          |
 |  79 | wget                  | 1.19.4-1ubuntu2.2               | 1.19.4-1ubuntu2.2               |          |
 |  80 | unzip                 | 6.0-21ubuntu1.1                 | 6.0-21ubuntu1.1                 |          |
-|  81 | python-openssl        | 17.5.0-1ubuntu1                 | 17.5.0-1ubuntu1                 |          |
+|  81 | python-pyodbc         | 4.0.17-1                        | 4.0.17-1                        |          |
 |  82 | python-pypdf2         | 1.26.0-2                        | 1.26.0-2                        |          |
-|  83 | libldb1               | 2:1.2.3-1ubuntu0.2              | 2:1.2.3-1ubuntu0.2              |          |
-|  84 | python-ldb            | 2:1.2.3-1ubuntu0.2              | 2:1.2.3-1ubuntu0.2              |          |
+|  83 | python3-openssl       | 17.5.0-1ubuntu1                 | 17.5.0-1ubuntu1                 |          |
+|  84 | libldb1               | 2:1.2.3-1ubuntu0.2              | 2:1.2.3-1ubuntu0.2              |          |
 |  85 | python3-leveldb       | 0~svn68-3build3                 | 0~svn68-3build3                 |          |
 |  86 | python3-ldap          | 3.0.0-1ubuntu0.1                | 3.0.0-1ubuntu0.1                |          |
 |  87 | python3-roman         | 2.0.0-3                         | 2.0.0-3                         |          |
@@ -107,7 +107,7 @@
 | 102 | python-cjson          | 1.1.0-2                         | 1.1.0-2                         |          |
 | 103 | python-talloc         | 2.1.10-2ubuntu1                 | 2.1.10-2ubuntu1                 |          |
 | 104 | python-sklearn        | 0.19.1-3                        | 0.19.1-3                        |          |
-| 105 | python-samba          | 2:4.7.6+dfsg~ubuntu-0ubuntu2.27 | 2:4.7.6+dfsg~ubuntu-0ubuntu2.27 |          |
-| 106 | python-roman          | 2.0.0-3                         | 2.0.0-3                         |          |
-| 107 | python-ldap           | 3.0.0-1ubuntu0.1                | 3.0.0-1ubuntu0.1                |          |
+| 105 | python-roman          | 2.0.0-3                         | 2.0.0-3                         |          |
+| 106 | python-ldap           | 3.0.0-1ubuntu0.1                | 3.0.0-1ubuntu0.1                |          |
+| 107 | python-ldb            | 2:1.2.3-1ubuntu0.2              | 2:1.2.3-1ubuntu0.2              |          |
 | 108 | r-cran-stringr        | 1.3.0-1ubuntu1                  | 1.3.0-1ubuntu1                  |          |

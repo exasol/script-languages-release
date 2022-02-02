@@ -1,0 +1,38 @@
+# script-languages-release 3.3.0, released t.b.d.
+
+Code name: t.b.d. 
+
+## Summary
+
+
+t.b.d. 
+
+## [Package Version Comparison between Release 3.2.0 and 4.0.0](package_diffs/4.0.0/README.md)
+  
+## Script-Language-Container-Tool (Exaslct)
+
+This release uses version 0.8.0 of the container tool.
+
+## Bug Fixes
+
+ - #472: Fix github upload script
+ - #474: Fix Python3.6 installation script
+ - #480: Fix R security scan script
+ - #484: Update exaslct to 0.9.0
+
+## Features / Enhancements
+
+n/a
+
+## Documentation
+
+n/a
+
+## Refactoring
+
+ - #482: Increase version to 4.0
+
+## Security
+
+ - #476: Resolve datascience security issues
+ - #478: Update standard-container packages

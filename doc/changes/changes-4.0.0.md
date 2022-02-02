@@ -1,11 +1,11 @@
-# script-languages-release 3.3.0, released t.b.d.
+# script-languages-release 4.0.0, released 2022-02-02
 
-Code name: t.b.d. 
+Code name: Pandas upgrade to 1.1.5
 
 ## Summary
 
-
-t.b.d. 
+This release contains a breaking change in the standard containers, because due to a security fix Pandas Python3 package was updated to version 1.1.5 (from 0.22.0). Please note that this version might break existing UDF's using Pandas (Read [Pandas Release notes](https://pandas.pydata.org/pandas-docs/stable/whatsnew/v1.0.0.html#) for more information).
+Also, this release contains minor bug fixes and other security fixes.
 
 ## [Package Version Comparison between Release 3.2.0 and 4.0.0](package_diffs/4.0.0/README.md)
   

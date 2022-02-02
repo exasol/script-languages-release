@@ -11,7 +11,7 @@ Also, this release contains minor bug fixes and other security fixes.
   
 ## Script-Language-Container-Tool (Exaslct)
 
-This release uses version 0.8.0 of the container tool.
+This release uses version 0.9.0 of the container tool.
 
 ## Bug Fixes
 

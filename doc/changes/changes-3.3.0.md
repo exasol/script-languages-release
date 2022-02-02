@@ -4,6 +4,7 @@ Code name: t.b.d.
 
 ## Summary
 
+
 t.b.d. 
 
 ## [Package Version Comparison between Release 3.2.0 and 3.3.0](package_diffs/3.3.0/README.md)
@@ -17,6 +18,7 @@ This release uses version 0.8.0 of the container tool.
  - #472: Fix github upload script
  - #474: Fix Python3.6 installation script
  - #480: Fix R security scan script
+ - #484: Update exaslct to 0.9.0
 
 ## Features / Enhancements
 

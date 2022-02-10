@@ -30,4 +30,4 @@ n/a
 
 ## Security
 
-n/a
+ - #493: Ignore CVE-2022-0492

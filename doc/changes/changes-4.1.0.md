@@ -26,7 +26,7 @@ n/a
 
 ## Refactoring
 
-n/a
+ - #344: Removed log file exaudfclient/base/file.txt 
 
 ## Security
 

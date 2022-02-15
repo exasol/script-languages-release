@@ -18,7 +18,7 @@ This release uses version 0.9.0 of the container tool.
 
 ## Features / Enhancements
 
-n/a
+ - #150: Remove usage of pip-legacy-dependency-resolver
 
 ## Documentation
 

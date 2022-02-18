@@ -27,6 +27,7 @@ n/a
 ## Refactoring
 
  - #344: Removed log file exaudfclient/base/file.txt 
+ - #491: Cleaned up datascience flavors
 
 ## Security
 

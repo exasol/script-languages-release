@@ -18,7 +18,7 @@ This release uses version 0.9.0 of the container tool.
 
 ## Features / Enhancements
 
-n/a
+ - #150: Remove usage of pip-legacy-dependency-resolver
 
 ## Documentation
 
@@ -26,7 +26,8 @@ n/a
 
 ## Refactoring
 
-n/a
+ - #344: Removed log file exaudfclient/base/file.txt 
+ - #491: Cleaned up datascience flavors
 
 ## Security
 

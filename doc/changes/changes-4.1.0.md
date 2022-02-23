@@ -32,3 +32,4 @@ n/a
 ## Security
 
  - #493: Ignore CVE-2022-0492
+ - #505: Update libsasl2-dev

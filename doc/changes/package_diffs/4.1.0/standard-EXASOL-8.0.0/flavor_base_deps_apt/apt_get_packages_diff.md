@@ -2,7 +2,7 @@
 
 |    | Package              | Version in 4.0.0                | Version in 4.1.0                | Status   |
 |---:|:---------------------|:--------------------------------|:--------------------------------|:---------|
-|  0 | unzip                | 6.0-25ubuntu1                   | 6.0-25ubuntu1                   |          |
+|  0 | libsasl2-dev         | 2.1.27+dfsg-2                   | 2.1.27+dfsg-2ubuntu0.1          | UPDATED  |
 |  1 | slapd                | 2.4.49+dfsg-2ubuntu1.8          | 2.4.49+dfsg-2ubuntu1.8          |          |
 |  2 | libsmbclient-dev     | 2:4.13.17~dfsg-0ubuntu0.21.04.1 | 2:4.13.17~dfsg-0ubuntu0.21.04.1 |          |
 |  3 | libsmbclient         | 2:4.13.17~dfsg-0ubuntu0.21.04.1 | 2:4.13.17~dfsg-0ubuntu0.21.04.1 |          |
@@ -12,7 +12,7 @@
 |  7 | libxml2-dev          | 2.9.10+dfsg-5ubuntu0.20.04.1    | 2.9.10+dfsg-5ubuntu0.20.04.1    |          |
 |  8 | unixodbc-dev         | 2.3.6-0.1build1                 | 2.3.6-0.1build1                 |          |
 |  9 | ldap-utils           | 2.4.49+dfsg-2ubuntu1.8          | 2.4.49+dfsg-2ubuntu1.8          |          |
-| 10 | libsasl2-dev         | 2.1.27+dfsg-2                   | 2.1.27+dfsg-2                   |          |
+| 10 | unzip                | 6.0-25ubuntu1                   | 6.0-25ubuntu1                   |          |
 | 11 | git                  | 1:2.25.1-1ubuntu3.2             | 1:2.25.1-1ubuntu3.2             |          |
 | 12 | libldap2-dev         | 2.4.49+dfsg-2ubuntu1.8          | 2.4.49+dfsg-2ubuntu1.8          |          |
 | 13 | openssl              | 1.1.1f-1ubuntu2.10              | 1.1.1f-1ubuntu2.10              |          |

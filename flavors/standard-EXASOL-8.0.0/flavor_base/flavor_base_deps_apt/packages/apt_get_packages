@@ -8,7 +8,7 @@ libldb2|2:2.2.3-0ubuntu0.20.04.2
 libleveldb1d|1.22-3ubuntu2
 openssl|1.1.1f-1ubuntu2.10
 libldap2-dev|2.4.49+dfsg-2ubuntu1.8 # Needed by python-ldap
-libsasl2-dev|2.1.27+dfsg-2 # Needed by python-ldap
+libsasl2-dev|2.1.27+dfsg-2ubuntu0.1 # Needed by python-ldap
 slapd|2.4.49+dfsg-2ubuntu1.8 # Needed by python-ldap
 ldap-utils|2.4.49+dfsg-2ubuntu1.8 # Needed by python-ldap
 unixodbc-dev|2.3.6-0.1build1 # Needed by pyodbc and RODBC

@@ -2,11 +2,11 @@
 
 |    | Package           | Version in 4.0.0         | Version in 4.1.0         | Status   |
 |---:|:------------------|:-------------------------|:-------------------------|:---------|
-|  0 | coreutils         | 8.28-1ubuntu1            | 8.28-1ubuntu1            |          |
-|  1 | locales           | 2.27-3ubuntu1.4          | 2.27-3ubuntu1.4          |          |
-|  2 | locales           | 2.27-3ubuntu1.4          | 2.27-3ubuntu1.4          |          |
-|  3 | locales           | 2.27-3ubuntu1.4          | 2.27-3ubuntu1.4          |          |
-|  4 | locales           | 2.27-3ubuntu1.4          | 2.27-3ubuntu1.4          |          |
+|  0 | locales           | 2.27-3ubuntu1.4          | 2.27-3ubuntu1.5          | UPDATED  |
+|  1 | locales           | 2.27-3ubuntu1.4          | 2.27-3ubuntu1.5          | UPDATED  |
+|  2 | locales           | 2.27-3ubuntu1.4          | 2.27-3ubuntu1.5          | UPDATED  |
+|  3 | locales           | 2.27-3ubuntu1.4          | 2.27-3ubuntu1.5          | UPDATED  |
+|  4 | coreutils         | 8.28-1ubuntu1            | 8.28-1ubuntu1            |          |
 |  5 | tar               | 1.29b-2ubuntu0.2         | 1.29b-2ubuntu0.2         |          |
 |  6 | curl              | 7.58.0-2ubuntu3.16       | 7.58.0-2ubuntu3.16       |          |
 |  7 | openjdk-11-jdk    | 11.0.11+9-0ubuntu2~18.04 | 11.0.11+9-0ubuntu2~18.04 |          |

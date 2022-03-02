@@ -1,7 +1,5 @@
 # Package Version Comparison between Python-3.6-data-science-cuda-exasol-6.2.0 flavor in 4.1.0 and Python-3.6-data-science-cuda-exasol-6.2.0 flavor in 4.0.0
 
-## All machine learning Python libraries have been removed in this release!
-
 - Comparison of build step Udfclient_deps
   - [Comparison of package list Apt Get Packages](udfclient_deps/apt_get_packages_diff.md)
 - Comparison of build step Security_scan

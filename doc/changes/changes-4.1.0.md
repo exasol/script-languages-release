@@ -33,3 +33,5 @@ n/a
 
  - #493: Ignore CVE-2022-0492
  - #505: Update libsasl2-dev
+ - #510: update locales apt package
+ - #513: Update locales apt package in 20.04 flavors 

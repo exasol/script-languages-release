@@ -36,4 +36,4 @@ n/a
  - #510: update locales apt package
  - #513: Update locales apt package in 20.04 flavors
  - #511: Updated generate_package_diffs_for_flavors to Python3.8
- - #517: Update openjdk-11-jdk-headless and libssl-dev
+ - #517: Update openjdk-11-jdk-headless, libssl-dev and openssl

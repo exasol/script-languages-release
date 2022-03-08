@@ -34,4 +34,6 @@ n/a
  - #493: Ignore CVE-2022-0492
  - #505: Update libsasl2-dev
  - #510: update locales apt package
- - #513: Update locales apt package in 20.04 flavors 
+ - #513: Update locales apt package in 20.04 flavors
+ - #511: Updated generate_package_diffs_for_flavors to Python3.8
+ - #517: Update openjdk-11-jdk-headless, libssl-dev and openssl

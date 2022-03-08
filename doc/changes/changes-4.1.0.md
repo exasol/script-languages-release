@@ -28,11 +28,11 @@ n/a
 
  - #344: Removed log file exaudfclient/base/file.txt 
  - #491: Cleaned up datascience flavors
- - #511: Updated generate_package_diffs_for_flavors to Python3.8
 
 ## Security
 
  - #493: Ignore CVE-2022-0492
  - #505: Update libsasl2-dev
  - #510: update locales apt package
- - #513: Update locales apt package in 20.04 flavors 
+ - #513: Update locales apt package in 20.04 flavors
+ - #511: Updated generate_package_diffs_for_flavors to Python3.8

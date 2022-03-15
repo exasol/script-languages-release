@@ -38,3 +38,4 @@ n/a
  - #511: Updated generate_package_diffs_for_flavors to Python3.8
  - #517: Update openjdk-11-jdk-headless, libssl-dev and openssl
  - #520: Ignored Kernel CVE's
+ - #525: Update package libxml2-dev on standard-8.0 flavor

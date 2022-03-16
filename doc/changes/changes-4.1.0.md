@@ -39,3 +39,4 @@ n/a
  - #517: Update openjdk-11-jdk-headless, libssl-dev and openssl
  - #520: Ignored Kernel CVE's
  - #525: Update package libxml2-dev on standard-8.0 flavor
+ - #528: Update libssl-dev

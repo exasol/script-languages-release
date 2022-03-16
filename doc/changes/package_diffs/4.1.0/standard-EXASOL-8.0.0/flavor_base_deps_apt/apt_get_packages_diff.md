@@ -4,7 +4,7 @@
 |---:|:---------------------|:--------------------------------|:--------------------------------|:---------|
 |  0 | libsasl2-dev         | 2.1.27+dfsg-2                   | 2.1.27+dfsg-2ubuntu0.1          | UPDATED  |
 |  1 | libxml2-dev          | 2.9.10+dfsg-5ubuntu0.20.04.1    | 2.9.10+dfsg-5ubuntu0.20.04.2    | UPDATED  |
-|  2 | openssl              | 1.1.1f-1ubuntu2.10              | 1.1.1f-1ubuntu2.11              | UPDATED  |
+|  2 | openssl              | 1.1.1f-1ubuntu2.10              | 1.1.1f-1ubuntu2.12              | UPDATED  |
 |  3 | slapd                | 2.4.49+dfsg-2ubuntu1.8          | 2.4.49+dfsg-2ubuntu1.8          |          |
 |  4 | libsmbclient-dev     | 2:4.13.17~dfsg-0ubuntu0.21.04.1 | 2:4.13.17~dfsg-0ubuntu0.21.04.1 |          |
 |  5 | libsmbclient         | 2:4.13.17~dfsg-0ubuntu0.21.04.1 | 2:4.13.17~dfsg-0ubuntu0.21.04.1 |          |

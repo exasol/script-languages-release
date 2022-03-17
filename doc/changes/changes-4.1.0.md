@@ -1,10 +1,11 @@
-# script-languages-release 4.1.0, released t.b.d.
+# script-languages-release 4.1.0, released 2022-03-17
 
-Code name: t.b.d.
+Code name: Removed datascience flavors and security updates
 
 ## Summary
 
-t.b.d.
+This release removed two datascience flavors (namely python-3.6-data-science-EXASOL-6.2.0 and r-3.5-data-science-EXASOL-6.2.0). 
+Also, it contains many security updates and some cleanup.
 
 ## [Package Version Comparison between Release 4.0.0 and 4.1.0](package_diffs/4.1.0/README.md)
   
@@ -22,7 +23,7 @@ This release uses version 0.9.0 of the container tool.
 
 ## Documentation
 
-n/a
+ - #533: Prepare release 4.1.0
 
 ## Refactoring
 
@@ -40,3 +41,4 @@ n/a
  - #520: Ignored Kernel CVE's
  - #525: Update package libxml2-dev on standard-8.0 flavor
  - #528: Update libssl-dev
+ - #537: Updated Python3.7

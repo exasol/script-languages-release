@@ -41,3 +41,4 @@ This release uses version 0.9.0 of the container tool.
  - #520: Ignored Kernel CVE's
  - #525: Update package libxml2-dev on standard-8.0 flavor
  - #528: Update libssl-dev
+ - #537: Updated Python3.7

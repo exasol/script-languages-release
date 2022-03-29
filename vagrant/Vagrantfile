@@ -4,7 +4,7 @@ Vagrant.configure("2") do |config|
   config.vm.network :forwarded_port, guest: 8888, host: 8888
   config.vm.network :forwarded_port, guest: 6666, host: 6666
   config.vm.synced_folder ".", "/home/vagrant/vagrant", type: "rsync", rsync__exclude: ".git/"
-  config.vm.synced_folder "..", "/home/vagrant/script-languages-release", type: "rsync", rsync__exclude: [".git/",".build_output"], rsync__args: ["--verbose", "--archive", "-z", "--links"], rsync__verbose: true
+  config.vm.synced_folder "..", "/home/vagrant/script-languages-release", type: "rsync", rsync__exclude: [".git/",".build_output"], rsync__args: ["--verbose", "--archive", "-z", "--links", "--delete"], rsync__verbose: true
 
   config.vm.provider :libvirt do |v|
     v.qemu_use_session = true

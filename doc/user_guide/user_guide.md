@@ -2,6 +2,6 @@
 
 ## Table of Content
 
-- [Using this Repositoriy](usage.md)
+- [Using this Repository](usage.md)
 - [Python Dataframe Support](py_dataframe.md)
-- [Using Vagrant as Development Environment](vagrant.md)
+- [Using Vagrant as development environment](vagrant.md)

@@ -81,3 +81,19 @@ We recommend to install also the following vagrant plugin to simplify working wi
     ```
 
     With `vagrant rsync-auto` vagrant observes the repository for changes and will sync them automatically.
+
+7. You can shutdown your VM with
+
+    ```
+    vagrant halt
+    ```
+
+    With `vagrant up` you start it again.
+
+
+7. You can destroy your VM with (Caution: This is irreversible)
+
+    ```
+    vagrant destroy
+    ```
+

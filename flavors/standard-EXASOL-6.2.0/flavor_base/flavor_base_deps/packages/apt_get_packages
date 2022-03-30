@@ -65,7 +65,7 @@ python3-docutils|0.14+dfsg-3
 python3-requests|2.18.4-2ubuntu0.1
 python3-boto|2.44.0-1ubuntu2.18.04.1
 python3-ujson|1.35-2
-python3-paramiko|2.0.0-1ubuntu1.2
+python3-paramiko|2.0.0-1ubuntu1.3
 python3-simplejson|3.13.2-1
 r-base|3.4.4-1ubuntu1
 r-cran-rcurl|1.95-4.8-4build1

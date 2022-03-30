@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
     v.qemu_use_session = true
     v.cpus = 2
     v.memory = 6000
-    v.machine_virtual_size = 100
+    v.machine_virtual_size = 100 # This only increases the size of the image, it can decrease it, if the box is already larger
     v.random_hostname = true
     v.default_prefix = config.vm.hostname + "_"
   end
@@ -19,9 +19,9 @@ Vagrant.configure("2") do |config|
     trigger.run = { inline: "vagrant rsync"}
   end
 
-  #config.vm.provision "shell" do |s|
-  #   s.path="provisioning/resize-disk.sh"
-  #end
+ config.vm.provision "shell" do |s|
+    s.path="provisioning/resize-disk.sh" # Needed, if you want use larger disks than the box provides
+ end
 
   config.vm.provision "shell" do |s|
     s.path="provisioning/dns.sh"
@@ -31,6 +31,10 @@ Vagrant.configure("2") do |config|
     s.path="provisioning/install.sh"
   end
 
+  config.vm.provision "shell" do |s|
+    s.privileged=false 
+    s.path="provisioning/install_poetry.sh"
+  end
 
 end
 

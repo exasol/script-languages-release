@@ -42,7 +42,7 @@ python-scipy|0.19.1-2ubuntu1
 python-boto|2.44.0-1ubuntu2.18.04.1
 python-pycurl|7.43.0.1-0.2
 python-requests|2.18.4-2ubuntu0.1
-python-paramiko|2.0.0-1ubuntu1.2
+python-paramiko|2.0.0-1ubuntu1.3
 python-simplejson|3.13.2-1
 python3-setuptools|39.0.1-2
 python3-pycurl|7.43.0.1-0.2

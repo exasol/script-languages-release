@@ -29,4 +29,4 @@ This release uses version 0.x.0 of the container tool.
 
 ## Security
 
-- 541: Update packages python-dev and paramiko and ignore CVE-2022-0492
+- #541: Update packages python-dev, openjdk, paramiko and ignore CVE-2022-0492

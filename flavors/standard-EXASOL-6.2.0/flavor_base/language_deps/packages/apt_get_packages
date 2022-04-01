@@ -1,7 +1,7 @@
 git|1:2.17.1-1ubuntu0.9
-openjdk-11-jdk-headless|11.0.14+9-0ubuntu2~18.04
-python2.7-dev|2.7.17-1~18.04ubuntu1.6
-python3.6-dev|3.6.9-1~18.04ubuntu1.6
+openjdk-11-jdk-headless|11.0.14.1+1-0ubuntu1~18.04
+python2.7-dev|2.7.17-1~18.04ubuntu1.7
+python3.6-dev|3.6.9-1~18.04ubuntu1.7
 python-distutils-extra|2.41ubuntu1
 python3-distutils|3.6.9-1~18.04
 r-base-core|3.4.4-1ubuntu1

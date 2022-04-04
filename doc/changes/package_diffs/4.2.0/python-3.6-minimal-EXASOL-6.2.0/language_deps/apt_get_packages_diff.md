@@ -1,6 +1,6 @@
 <!-- markdown-link-check-disable -->
 
-|    | Package           | Version in 4.0.0       | Version in 4.2.0       | Status   |
+|    | Package           | Version in 4.1.0       | Version in 4.2.0       | Status   |
 |---:|:------------------|:-----------------------|:-----------------------|:---------|
 |  0 | python3.6-dev     | 3.6.9-1~18.04ubuntu1.6 | 3.6.9-1~18.04ubuntu1.7 | UPDATED  |
 |  1 | ca-certificates   | 20210119~18.04.2       | 20210119~18.04.2       |          |

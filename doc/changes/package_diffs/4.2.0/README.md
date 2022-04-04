@@ -1,4 +1,4 @@
-# Package Version Comparison between 4.2.0 and 4.0.0
+# Package Version Comparison between 4.2.0 and 4.1.0
 
 - [Comparison of flavor Standard-exasol-7.1.0-without-python2.7](standard-EXASOL-7.1.0-without-python2.7/README.md)
 - [Comparison of flavor Standard-exasol-7.1.0](standard-EXASOL-7.1.0/README.md)

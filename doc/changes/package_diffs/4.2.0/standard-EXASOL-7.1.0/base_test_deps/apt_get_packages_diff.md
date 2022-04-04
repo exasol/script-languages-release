@@ -1,6 +1,6 @@
 <!-- markdown-link-check-disable -->
 
-|    | Package         | Version in 4.0.0       | Version in 4.2.0       | Status   |
+|    | Package         | Version in 4.1.0       | Version in 4.2.0       | Status   |
 |---:|:----------------|:-----------------------|:-----------------------|:---------|
 |  0 | python-protobuf | 3.0.0-9.1ubuntu1       | 3.0.0-9.1ubuntu1       |          |
 |  1 | python-zmq      | 16.0.2-2build2         | 16.0.2-2build2         |          |

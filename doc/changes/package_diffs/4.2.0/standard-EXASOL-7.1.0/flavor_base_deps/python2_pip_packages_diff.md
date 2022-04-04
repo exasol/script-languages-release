@@ -1,6 +1,6 @@
 <!-- markdown-link-check-disable -->
 
-|    | Package                                                                                                                       | Version in 4.0.0     | Version in 4.2.0     | Status   |
+|    | Package                                                                                                                       | Version in 4.1.0     | Version in 4.2.0     | Status   |
 |---:|:------------------------------------------------------------------------------------------------------------------------------|:---------------------|:---------------------|:---------|
 |  0 | azure-storage-blob                                                                                                            | 12.8.1               | 12.8.1               |          |
 |  1 | azure-storage-file-datalake                                                                                                   | 12.4.0               | 12.4.0               |          |

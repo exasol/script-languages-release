@@ -1,6 +1,6 @@
 <!-- markdown-link-check-disable -->
 
-|    | Package              | Version in 4.0.0    | Version in 4.2.0    | Status   |
+|    | Package              | Version in 4.1.0    | Version in 4.2.0    | Status   |
 |---:|:---------------------|:--------------------|:--------------------|:---------|
 |  0 | unzip                | 6.0-25ubuntu1       | 6.0-25ubuntu1       |          |
 |  1 | git                  | 1:2.25.1-1ubuntu3.2 | 1:2.25.1-1ubuntu3.2 |          |

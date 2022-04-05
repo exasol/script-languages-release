@@ -1,6 +1,6 @@
 <!-- markdown-link-check-disable -->
 
-|    | Package         | Version in 4.0.0     | Version in 4.2.0     | Status   |
+|    | Package         | Version in 4.1.0     | Version in 4.2.0     | Status   |
 |---:|:----------------|:---------------------|:---------------------|:---------|
 |  0 | python-protobuf | 3.6.1.3-2ubuntu5     | 3.6.1.3-2ubuntu5     |          |
 |  1 | gdb             | 9.2-0ubuntu1~20.04.1 | 9.2-0ubuntu1~20.04.1 |          |

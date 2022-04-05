@@ -1,4 +1,4 @@
-# Package Version Comparison between Python-3.7-minimal-exasol-6.2.0 flavor in 4.2.0 and Python-3.7-minimal-exasol-6.2.0 flavor in 4.0.0
+# Package Version Comparison between Python-3.7-minimal-exasol-6.2.0 flavor in 4.2.0 and Python-3.7-minimal-exasol-6.2.0 flavor in 4.1.0
 
 - Comparison of build step Udfclient_deps
   - [Comparison of package list Apt Get Packages](udfclient_deps/apt_get_packages_diff.md)

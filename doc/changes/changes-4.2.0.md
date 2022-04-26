@@ -13,7 +13,7 @@ This release uses version 0.x.0 of the container tool.
 
 ## Bug Fixes
 
-- n/a
+ - #561: Fixed emit of Pandas Dataframe for np.float32 dtype 
 
 ## Features / Enhancements
 
@@ -33,3 +33,4 @@ This release uses version 0.x.0 of the container tool.
  - #553: Ignored CVE-2022-23648
  - #558: Update git package
  - #562: Ignored CVE-2022-27191
+ - #567: Updated Python3.7 packages

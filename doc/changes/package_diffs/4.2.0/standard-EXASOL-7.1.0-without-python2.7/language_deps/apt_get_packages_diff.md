@@ -2,7 +2,7 @@
 
 |    | Package                 | Version in 4.1.0                    | Version in 4.2.0                    | Status   |
 |---:|:------------------------|:------------------------------------|:------------------------------------|:---------|
-|  0 | git                     | 1:2.17.1-1ubuntu0.9                 | 1:2.17.1-1ubuntu0.10                | UPDATED  |
+|  0 | git                     | 1:2.17.1-1ubuntu0.9                 | 1:2.17.1-1ubuntu0.11                | UPDATED  |
 |  1 | openjdk-11-jdk-headless | 11.0.14+9-0ubuntu2~18.04            | 11.0.14.1+1-0ubuntu1~18.04          | UPDATED  |
 |  2 | python3.6-dev           | 3.6.9-1~18.04ubuntu1.6              | 3.6.9-1~18.04ubuntu1.7              | UPDATED  |
 |  3 | python3-distutils       | 3.6.9-1~18.04                       | 3.6.9-1~18.04                       |          |

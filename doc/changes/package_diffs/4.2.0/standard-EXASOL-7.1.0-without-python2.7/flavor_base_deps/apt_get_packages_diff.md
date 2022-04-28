@@ -3,7 +3,7 @@
 |    | Package              | Version in 4.1.0        | Version in 4.2.0        | Status   |
 |---:|:---------------------|:------------------------|:------------------------|:---------|
 |  0 | python3-paramiko     | 2.0.0-1ubuntu1.2        | 2.0.0-1ubuntu1.3        | UPDATED  |
-|  1 | git                  | 1:2.17.1-1ubuntu0.9     | 1:2.17.1-1ubuntu0.10    | UPDATED  |
+|  1 | git                  | 1:2.17.1-1ubuntu0.9     | 1:2.17.1-1ubuntu0.11    | UPDATED  |
 |  2 | r-cran-bradleyterry2 | 1.0-8-1                 | 1.0-8-1                 |          |
 |  3 | r-cran-digest        | 0.6.15-1                | 0.6.15-1                |          |
 |  4 | r-cran-dichromat     | 1:2.0-0-1               | 1:2.0-0-1               |          |

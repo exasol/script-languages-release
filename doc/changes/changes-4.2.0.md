@@ -34,3 +34,4 @@ This release uses version 0.x.0 of the container tool.
  - #558: Update git package
  - #562: Ignored CVE-2022-27191
  - #567: Updated Python3.7 packages
+ - #570: Updated Ubuntu packages

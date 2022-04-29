@@ -1,5 +1,5 @@
-git|1:2.17.1-1ubuntu0.10
-openjdk-11-jdk-headless|11.0.14.1+1-0ubuntu1~18.04
+git|1:2.17.1-1ubuntu0.11
+openjdk-11-jdk-headless|11.0.15+10-0ubuntu0.18.04.1
 python3.6-dev|3.6.9-1~18.04ubuntu1.7
 python3-distutils|3.6.9-1~18.04
 libexpat1|2.2.5-3ubuntu0.7 #Overrides version used by r-base-core/r-base-dev
@@ -8,4 +8,4 @@ libsasl2-2|2.1.27~101-g0780600+dfsg-3ubuntu2.4 #Overrides version used by r-base
 libsasl2-modules-db|2.1.27~101-g0780600+dfsg-3ubuntu2.4 #Overrides version used by r-base-core/r-base-dev
 r-base-core|3.4.4-1ubuntu1
 r-base-dev|3.4.4-1ubuntu1 #Note that this package has a transitive dependency to libblas-dev, liblapack-dev and gcc, which we need for compiling numpy
-curl|7.58.0-2ubuntu3.16
+curl|7.58.0-2ubuntu3.17

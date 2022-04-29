@@ -8,4 +8,4 @@ libsasl2-2|2.1.27~101-g0780600+dfsg-3ubuntu2.4 #Overrides version used by r-base
 libsasl2-modules-db|2.1.27~101-g0780600+dfsg-3ubuntu2.4 #Overrides version used by r-base-core/r-base-dev
 r-base-core|3.4.4-1ubuntu1
 r-base-dev|3.4.4-1ubuntu1 #Note that this package has a transitive dependency to libblas-dev, liblapack-dev and gcc, which we need for compiling numpy
-curl|7.58.0-2ubuntu3.16
+curl|7.58.0-2ubuntu3.17

@@ -1,9 +1,12 @@
-# script-languages-release 4.1.0, released t.b.d.
+# script-languages-release 4.2.0, released 2022-05-02
 
-Code name: 
+Code name: Vagrant setup and bugfix for Pandas Dataframe
 
 ## Summary
 
+This release fixes a bug in the Python UDF client which occurred when emitting Pandas dataframes.
+Also, it adds initial support for setting up a virtual machine via Vagrant, which can be used to build this project.
+Besides, this releases contains several security fixes.
 
 ## [Package Version Comparison between Release 4.1.0 and 4.2.0](package_diffs/4.2.0/README.md)
   
@@ -21,7 +24,7 @@ This release uses version 0.x.0 of the container tool.
 
 ## Documentation
 
-- n/a
+- #578: Prepared release 4.2.0
 
 ## Refactoring
 

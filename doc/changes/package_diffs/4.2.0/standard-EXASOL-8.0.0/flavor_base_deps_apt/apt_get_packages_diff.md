@@ -6,7 +6,7 @@
 |  1 | libcurl4-openssl-dev | 7.68.0-1ubuntu2.7               | 7.68.0-1ubuntu2.10              | UPDATED  |
 |  2 | libsmbclient-dev     | 2:4.13.17~dfsg-0ubuntu0.21.04.1 | 2:4.13.17~dfsg-0ubuntu0.21.04.2 | UPDATED  |
 |  3 | libsmbclient         | 2:4.13.17~dfsg-0ubuntu0.21.04.1 | 2:4.13.17~dfsg-0ubuntu0.21.04.2 | UPDATED  |
-|  4 | git                  | 1:2.25.1-1ubuntu3.2             | 1:2.25.1-1ubuntu3.3             | UPDATED  |
+|  4 | git                  | 1:2.25.1-1ubuntu3.2             | 1:2.25.1-1ubuntu3.4             | UPDATED  |
 |  5 | ldap-utils           | 2.4.49+dfsg-2ubuntu1.8          | 2.4.49+dfsg-2ubuntu1.8          |          |
 |  6 | libhiredis-dev       | 0.14.0-6                        | 0.14.0-6                        |          |
 |  7 | gnupg                | 2.2.19-3ubuntu2.1               | 2.2.19-3ubuntu2.1               |          |

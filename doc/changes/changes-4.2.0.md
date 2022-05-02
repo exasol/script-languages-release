@@ -4,7 +4,7 @@ Code name: Vagrant setup and bugfix for Pandas Dataframe
 
 ## Summary
 
-This release fixes a bug in the UDF client which occurred when emitting Pandas dataframes.
+This release fixes a bug in the Python UDF client which occurred when emitting Pandas dataframes.
 Also, it adds initial support for setting up a virtual machine via vagrant, which can be used to build this project.
 Besides, this releases contains several security fixes.
 

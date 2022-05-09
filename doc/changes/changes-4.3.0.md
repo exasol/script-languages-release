@@ -26,7 +26,7 @@ n/a
 
 ## Refactoring
 
-- n/a
+- #220: Removed virtualschema-jdbc-adapter.jar
 
 ## Security
 

@@ -18,7 +18,7 @@ n/a
 
 ## Features / Enhancements
 
-n/a
+ - #433: Removed the source of the udflclient from the standard containers
 
 ## Documentation
 

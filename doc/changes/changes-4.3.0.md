@@ -22,7 +22,7 @@ n/a
 
 ## Documentation
 
-n/a
+ - #78: Added Docker socket section to prerequisites in usage documentation
 
 ## Refactoring
 

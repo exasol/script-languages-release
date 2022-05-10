@@ -10,6 +10,9 @@ Minimum requirements are:
   * on MacOsX >= 3.2 (Please see limitations on [MacOsX](#macosx-limitations))
 * Docker >= 17.05
 
+#### Docker access
+
+You need to have proper access to the Docker socket in order to build the script language containers. This can be achieved by running `exaslct` as root, by using the `sudo` command, or by adding the current user to the docker group. Check the [Docker documentation](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) for more information.
 
 ### Getting Started
 

@@ -24,6 +24,7 @@ n/a
 ## Documentation
 
  - #78: Added Docker socket section to prerequisites in usage documentation
+ - #107: Referenced EXA_toolbox.upload_github_release_file_to_bucketfs in documentation
 
 ## Refactoring
 

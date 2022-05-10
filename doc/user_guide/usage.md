@@ -122,7 +122,7 @@ It is also possible to run the tests for a specific docker-db version, for examp
 
 Also, you can use an existing database instance for the execution of the tests:
 ```bash
-./exaslct run-db-test --flavor-path=flavors/<flavor-name> --external-exasol-db-host <database host> --external-exasol-db-port <database port> --external-exasol-bucketfs-port <BucketFS port> --external-exasol-db-user <database user>  --external-exasol-db-password <database password> --external-exasol-bucketfs-write-password <BucketFS password>   
+./exaslct run-db-test --flavor-path=flavors/<flavor-name> --environment-type external_db --external-exasol-db-host <database host> --external-exasol-db-port <database port> --external-exasol-bucketfs-port <BucketFS port> --external-exasol-db-user <database user>  --external-exasol-db-password <database password> --external-exasol-bucketfs-write-password <BucketFS password>   
 ```
 The `exaslct` tool will upload your script languages container to the BucketFS on the database instance, configure the container and automatically execute the tests.
 

@@ -18,6 +18,7 @@ n/a
 
 ## Features / Enhancements
 
+ - #433: Removed the source of the udflclient from the standard containers
  - #147: Added tests for JVM owned native libs
 
 ## Documentation

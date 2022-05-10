@@ -24,6 +24,11 @@ git clone --recurse-submodules https://github.com/exasol/script-languages-releas
 
 Note: The option --recurse-submodules clones the submodule [script-languages](https://github.com/exasol/script-languages)
 
+### How to upload prebuilt containers
+
+Please see the [official Exasol documentation](https://docs.exasol.com/db/latest/database_concepts/udf_scripts/adding_new_packages_script_languages.htm?Highlight=container) about how to upload prebuilt containers to BucketFS.
+If your database has internet access, you can also use [the Exa-toolbox](https://github.com/exasol/exa-toolbox/blob/master/utilities/README.md#upload_github_release_file_to_bucketfs) to upload prebuilt script language containers directly from the [release page](https://github.com/exasol/script-languages-release/releases). 
+
 ### How to build an existing flavor?
 
 First, you need to choose a flavor. Currently, we have several pre-defined flavors available, e.g., `standard-EXASOL-6.2.0`.

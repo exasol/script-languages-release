@@ -5,3 +5,4 @@
 - [Using this Repository](usage.md)
 - [Python Dataframe Support](py_dataframe.md)
 - [Using Vagrant as development environment](vagrant.md)
+- [FAQ](FAQ.md)

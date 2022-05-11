@@ -26,6 +26,7 @@ n/a
  - #78: Added Docker socket section to prerequisites in usage documentation
  - #107: Referenced EXA_toolbox.upload_github_release_file_to_bucketfs in documentation
  - #22: Added documentation about testing
+ - #161: Created FAQ and added solution for /tmp directory
 
 ## Refactoring
 

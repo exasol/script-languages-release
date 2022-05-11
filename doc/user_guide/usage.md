@@ -107,6 +107,31 @@ Note: The tool `exaslct` tries to reuse as much as possible of the previous buil
 
 **Please, refer to the [User Guide](https://github.com/exasol/script-languages-container-tool/blob/main/doc/user_guide/user_guide.md) of the script-languages-container-tool project for more detailed information about the usage of exalsct.**
 
+
+### How to run integration tests
+
+This repository contains several integration tests which can be executed on the specific flavor using the `exaslct` tool:
+```bash
+./exaslct run-db-test --flavor-path=flavors/<flavor-name>
+```
+
+It is also possible to run the tests for a specific docker-db version, for example:
+```bash
+./exaslct run-db-test --flavor-path=flavors/<flavor-name> --docker-db-image-version 7.1.10
+```
+
+Also, you can use an existing database instance for the execution of the tests:
+```bash
+./exaslct run-db-test --flavor-path=flavors/<flavor-name> --environment-type external_db --external-exasol-db-host <database host> --external-exasol-db-port <database port> --external-exasol-bucketfs-port <BucketFS port> --external-exasol-db-user <database user>  --external-exasol-db-password <database password> --external-exasol-bucketfs-write-password <BucketFS password>   
+```
+The `exaslct` tool will upload your script languages container to the BucketFS on the database instance, configure the container and automatically execute the tests.
+
+Please note that each flavor contains a configuration file for the tests under `flavors/<flavor>/flavor-base/testconfig`. This file describes the programming languages and folders which should be used for the test execution. You can customize the used folder using the `--test-folder` or `--test-file` parameter.
+For a full list of options please check:
+```bash
+./exaslct run-db-test --help   
+```
+
 ### MacOsX Limitations
   
 * On MacOsX all arguments (flavors path, output directory, etc.) must point to locations within the current directory (background is that the MacOsX version does not support mount binding additional directories).

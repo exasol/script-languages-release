@@ -27,6 +27,7 @@ n/a
  - #107: Referenced EXA_toolbox.upload_github_release_file_to_bucketfs in documentation
  - #22: Added documentation about testing
  - #161: Created FAQ and added solution for /tmp directory
+ - #181: Added faq about how to start exaslct from within a docker container
 
 ## Refactoring
 

@@ -15,7 +15,7 @@ Use the `--temporary-base-directory` parameter of `exaslct` to indicate another 
 
 #### Problem
 
-`exaslct` itself uses docker. Because of that it needs access to the docker socket and also input/output-directories must not be hidden inside the build containers by docker's filesystem overlays.
+`exaslct` itself uses docker. Because of that it needs access to the docker socket and also input/output-directories must not be hidden inside the build containers by docker's filesystem overlays.  This means, you must mount the input/output-directories to the same path as they have on the host.
 
 #### Solution
 

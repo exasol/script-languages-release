@@ -11,7 +11,7 @@ Furthermore, they contain some information which might help you during developme
 
 You can contribute to this project at several levels:
 - In any case we suggest you to create a new Github issue, be it for bug reports, improvements or new flavors, before implementing any change. Thus, we can give you feedback soon. 
-- If, you are more experienced, we are happy about any pull request: 
+- If you are more experienced, we are happy about any pull request: 
     - **However, be aware that the Script Language Container are tightly integrated into the Exasol Database. 
     Because of that we need to check any contribution thoroughly and might reject pull requests which may break this integration. 
     So, again, please open first a Github Issue and discuss the changes with us.**

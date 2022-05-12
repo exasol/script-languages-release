@@ -36,3 +36,4 @@ n/a
 ## Security
 
  - #582: Updated libssl
+ - #596: Updated packages

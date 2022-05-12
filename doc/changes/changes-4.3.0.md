@@ -14,7 +14,7 @@ This release uses version 0.9.0 of the container tool.
 
 ## Bug Fixes
 
-n/a
+ - #599: Fixed duplicated packages
 
 ## Features / Enhancements
 

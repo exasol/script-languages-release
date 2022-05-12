@@ -28,6 +28,7 @@ n/a
  - #22: Added documentation about testing
  - #161: Created FAQ and added solution for /tmp directory
  - #181: Added faq about how to start exaslct from within a docker container
+ - #595: Fixed content of contributing.md
 
 ## Refactoring
 

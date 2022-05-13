@@ -1,4 +1,4 @@
-name: Check if .current_submodules is up to date
+name: Check if package diff tool
 
 on:
   push:
@@ -25,9 +25,6 @@ jobs:
       uses: abatilo/actions-poetry@v2.0.0
       with:
         poetry-version: 1.1.13
-
-    - name: Setup poetry env
-      run:  bash scripts/setup_poetry_env.sh "python3.8"
 
     - name: Setup Poetry
       run: |

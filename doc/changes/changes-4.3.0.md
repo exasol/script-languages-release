@@ -32,7 +32,7 @@ This release uses version 0.9.0 of the container tool.
 
 ## Refactoring
 
-- n/a
+- #601: Sorted packages in package diff alphabetically
 
 ## Security
 

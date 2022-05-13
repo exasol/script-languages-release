@@ -28,7 +28,7 @@ jobs:
 
     - name: Setup Poetry
       run: |
-        PYTHON_BIN=$(command -v "$PYTHON_VERSION")
+        PYTHON_BIN=$(command -v "python3.8")
         poetry env use "$PYTHON_BIN"
         poetry install
         poetry_env_path=$(poetry env info --path)

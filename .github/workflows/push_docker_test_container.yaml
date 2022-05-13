@@ -15,12 +15,18 @@ jobs:
       - uses: actions/checkout@v2
       - name: Init submodules
         run: git submodule update --init --recursive
+      - name: Docker login
+        run: echo "$SECRET_DOCKER_TOKEN" | docker login --username "$SECRET_DOCKER_USER_NAME" --password-stdin
+        env: # Set the secret as an input
+          SECRET_DOCKER_USER_NAME: ${{ secrets.DOCKER_USER_NAME }}
+          SECRET_DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+
       - name: Build TestContainer
-        run: ./exaslct build-test-container --force-rebuild
+        run: sudo ./exaslct build-test-container --force-rebuild
       - name: Push TestContainer image
         if: ${{ (github.ref == 'refs/heads/master') || (github.ref == 'refs/heads/main') }}
         run: |
-          ./exaslct push-test-container --source-docker-username "$SECRET_DOCKER_USER_NAME" --target-docker-username "$SECRET_DOCKER_USER_NAME" --force-push
+          sudo ./exaslct push-test-container --source-docker-username "$SECRET_DOCKER_USER_NAME" --target-docker-username "$SECRET_DOCKER_USER_NAME" --force-push
         env: # Set the secret as an input
           SECRET_DOCKER_USER_NAME: ${{ secrets.DOCKER_USER_NAME }}
           TARGET_DOCKER_PASSWORD: ${{ secrets.DOCKER_TOKEN }}
@@ -28,7 +34,7 @@ jobs:
       - name: Push  ci-release-test TestContainer image
         if: ${{ (github.ref != 'refs/heads/master') && (github.ref != 'refs/heads/main') }}
         run: |
-          ./exaslct push-test-container --source-docker-username "$SECRET_DOCKER_USER_NAME" --target-docker-username "$SECRET_DOCKER_USER_NAME" --force-push --source-docker-tag-prefix ci_release_test --target-docker-tag-prefix ci_release_test
+          sudo ./exaslct push-test-container --source-docker-username "$SECRET_DOCKER_USER_NAME" --target-docker-username "$SECRET_DOCKER_USER_NAME" --force-push --source-docker-tag-prefix ci_release_test --target-docker-tag-prefix ci_release_test
         env: # Set the secret as an input
           SECRET_DOCKER_USER_NAME: ${{ secrets.DOCKER_USER_NAME }}
           TARGET_DOCKER_PASSWORD: ${{ secrets.DOCKER_TOKEN }}

@@ -15,6 +15,7 @@ This release uses version 0.9.0 of the container tool.
 ## Bug Fixes
 
  - #599: Fixed duplicated packages
+ - #573: Pushed test container to Dockerhub
 
 ## Features / Enhancements
 

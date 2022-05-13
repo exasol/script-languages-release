@@ -1,6 +1,12 @@
 name: Check if .current_submodules is up to date
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+      - develop
+  pull_request:
+
 
 jobs:
   check_current_gitmodules:

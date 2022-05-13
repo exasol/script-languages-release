@@ -4,7 +4,7 @@
 |---:|:----------------|:--------------------------|:--------------------------|:---------|
 |  0 | libssl-dev      | 1.1.1-1ubuntu2.1~18.04.15 | 1.1.1-1ubuntu2.1~18.04.17 | UPDATED  |
 |  1 | coreutils       | 8.28-1ubuntu1             | 8.28-1ubuntu1             |          |
-|  2 | locales         | 2.27-3ubuntu1.5           | 2.27-3ubuntu1.5           |          |
-|  3 | libnss-db       | 2.2.3pre1-6build2         | 2.2.3pre1-6build2         |          |
+|  2 | libnss-db       | 2.2.3pre1-6build2         | 2.2.3pre1-6build2         |          |
+|  3 | libprotobuf-dev | 3.0.0-9.1ubuntu1          | 3.0.0-9.1ubuntu1          |          |
 |  4 | libzmq3-dev     | 4.2.5-1ubuntu0.2          | 4.2.5-1ubuntu0.2          |          |
-|  5 | libprotobuf-dev | 3.0.0-9.1ubuntu1          | 3.0.0-9.1ubuntu1          |          |
+|  5 | locales         | 2.27-3ubuntu1.5           | 2.27-3ubuntu1.5           |          |

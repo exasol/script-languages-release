@@ -10,6 +10,9 @@ Minimum requirements are:
   * on MacOsX >= 3.2 (Please see limitations on [MacOsX](#macosx-limitations))
 * Docker >= 17.05
 
+#### Docker access
+
+You need to have proper access to the Docker socket in order to build the script language containers. This can be achieved by running `exaslct` as root, by using the `sudo` command, or by adding the current user to the docker group. Check the [Docker documentation](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) for more information.
 
 ### Getting Started
 
@@ -20,6 +23,11 @@ git clone --recurse-submodules https://github.com/exasol/script-languages-releas
 ```
 
 Note: The option --recurse-submodules clones the submodule [script-languages](https://github.com/exasol/script-languages)
+
+### How to upload prebuilt containers
+
+Please see the [official Exasol documentation](https://docs.exasol.com/db/latest/database_concepts/udf_scripts/adding_new_packages_script_languages.htm?Highlight=container) about how to upload prebuilt containers to BucketFS.
+If your database has internet access, you can also use [the Exa-toolbox](https://github.com/exasol/exa-toolbox/blob/master/utilities/README.md#upload_github_release_file_to_bucketfs) to upload prebuilt script language containers directly from the [release page](https://github.com/exasol/script-languages-release/releases). 
 
 ### How to build an existing flavor?
 
@@ -98,6 +106,31 @@ or upload it directly into your BucketFS (currently http only, https follows soo
 Note: The tool `exaslct` tries to reuse as much as possible of the previous build or tries to pull already existing images from Docker Hub.
 
 **Please, refer to the [User Guide](https://github.com/exasol/script-languages-container-tool/blob/main/doc/user_guide/user_guide.md) of the script-languages-container-tool project for more detailed information about the usage of exalsct.**
+
+
+### How to run integration tests
+
+This repository contains several integration tests which can be executed on the specific flavor using the `exaslct` tool:
+```bash
+./exaslct run-db-test --flavor-path=flavors/<flavor-name>
+```
+
+It is also possible to run the tests for a specific docker-db version, for example:
+```bash
+./exaslct run-db-test --flavor-path=flavors/<flavor-name> --docker-db-image-version 7.1.10
+```
+
+Also, you can use an existing database instance for the execution of the tests:
+```bash
+./exaslct run-db-test --flavor-path=flavors/<flavor-name> --environment-type external_db --external-exasol-db-host <database host> --external-exasol-db-port <database port> --external-exasol-bucketfs-port <BucketFS port> --external-exasol-db-user <database user>  --external-exasol-db-password <database password> --external-exasol-bucketfs-write-password <BucketFS password>   
+```
+The `exaslct` tool will upload your script languages container to the BucketFS on the database instance, configure the container and automatically execute the tests.
+
+Please note that each flavor contains a configuration file for the tests under `flavors/<flavor>/flavor-base/testconfig`. This file describes the programming languages and folders which should be used for the test execution. You can customize the used folder using the `--test-folder` or `--test-file` parameter.
+For a full list of options please check:
+```bash
+./exaslct run-db-test --help   
+```
 
 ### MacOsX Limitations
   

@@ -2,8 +2,8 @@
 
 |    | Package                 | Version in 4.2.0            | Version in 4.3.0            | Status   |
 |---:|:------------------------|:----------------------------|:----------------------------|:---------|
-|  0 | ca-certificates         | 20210119~20.04.2            | 20210119~20.04.2            |          |
-|  1 | python3.8-dev           | 3.8.10-0ubuntu1~20.04.4     | 3.8.10-0ubuntu1~20.04.4     |          |
-|  2 | python3-distutils       | 3.8.10-0ubuntu1~20.04       | 3.8.10-0ubuntu1~20.04       |          |
-|  3 | curl                    | 7.68.0-1ubuntu2.10          | 7.68.0-1ubuntu2.10          |          |
-|  4 | openjdk-11-jdk-headless | 11.0.15+10-0ubuntu0.20.04.1 | 11.0.15+10-0ubuntu0.20.04.1 |          |
+|  0 | curl                    | 7.68.0-1ubuntu2.10          | 7.68.0-1ubuntu2.11          | UPDATED  |
+|  1 | ca-certificates         | 20210119~20.04.2            | 20210119~20.04.2            |          |
+|  2 | openjdk-11-jdk-headless | 11.0.15+10-0ubuntu0.20.04.1 | 11.0.15+10-0ubuntu0.20.04.1 |          |
+|  3 | python3-distutils       | 3.8.10-0ubuntu1~20.04       | 3.8.10-0ubuntu1~20.04       |          |
+|  4 | python3.8-dev           | 3.8.10-0ubuntu1~20.04.4     | 3.8.10-0ubuntu1~20.04.4     |          |

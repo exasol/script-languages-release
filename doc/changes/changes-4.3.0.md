@@ -39,3 +39,4 @@ This release uses version 0.9.0 of the container tool.
  - #582: Updated libssl
  - #596: Updated packages
  - #605: Updated packages
+ - #607: Ignored CVE-2022-1116

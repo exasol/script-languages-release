@@ -41,13 +41,6 @@ batch:
       buildspec: ./aws-code-build/ci/build_buildspec.yaml
       privileged-mode: true
       type: BUILD_GENERAL1_MEDIUM
-    - identifier: build_standard_EXASOL_620
-      env:
-        variables:
-          FLAVOR: standard-EXASOL-6.2.0
-      buildspec: ./aws-code-build/ci/build_buildspec.yaml
-      privileged-mode: true
-      type: BUILD_GENERAL1_MEDIUM
     - identifier: build_standard_EXASOL_700
       env:
         variables:

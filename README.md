@@ -6,7 +6,7 @@
 
 ![drawing](script-languages-container-logo.png)
 
-This project contains script-language containers for the user-defined functions (UDF's) that can be used in the EXASOL database (version 6.2.0 or later). Using script-language containers, user can extend the UDF's with additional libraries and tools, such as Python or R packages and their dependencies.
+This project contains script-language containers for the user-defined functions (UDF's) that can be used in the EXASOL database (version 7.0.0 or later). Using script-language containers, user can extend the UDF's with additional libraries and tools, such as Python or R packages and their dependencies.
 
 A script language container consists of a Linux container with a complete Linux distribution and all required libraries and a script client. The script client is responsible for the communication with the database and for executing the UDF code.
 

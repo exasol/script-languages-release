@@ -33,6 +33,7 @@ This release uses version 0.9.0 of the container tool.
 ## Refactoring
 
 - #601: Sorted packages in package diff alphabetically
+- #610: Removed flavor standard-6.2.0
 
 ## Security
 

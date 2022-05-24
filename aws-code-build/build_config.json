@@ -1,0 +1,7 @@
+{"build_ignore":
+  {"ignored_paths":
+    [".github", "config", "doc", "emulator", "githooks", "google-cloud-build", "vagrant",
+      ".gitignore", "clone.sh", "contributing.md", "generate_error_codes_yml.sh",
+      "LICENSE", "README.md", "replace_error_codes.sh", "script-languages-container-logo.png"]
+  }
+}

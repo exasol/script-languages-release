@@ -1,10 +1,11 @@
-name: Check if package diff tool
+name: Check package diff tool
 
 on:
   push:
     branches:
-      - master
       - develop
+#      - master
+#      - main
   pull_request:
 
 jobs:

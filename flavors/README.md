@@ -42,12 +42,6 @@ Due to EOL of Python2, there is split of the standard-EXASOL-7.1.0 container: on
   - Available languages: Java 11, Python 2.7, Python 3.6 and R 3.4
   - [Here](standard-EXASOL-7.0.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-- standard-EXASOL-6.2.0
-  - Base Image: ubuntu:18.04
-  - Compatible Exasol Versions: 7.1.\*, 7.0.\*, 6.2.\*
-  - Available languages: Java 11, Python 2.7, Python 3.6 and R 3.4
-  - [Here](standard-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
-
 ### Python-3.6-minimal flavors
 
 The Python-3.6-minimal flavor provides the language Python 3.6 with only absolute necessary packages. This allows very simple customization because you control almost all dependencies.

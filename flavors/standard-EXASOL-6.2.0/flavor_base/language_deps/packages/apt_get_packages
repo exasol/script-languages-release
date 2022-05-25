@@ -1,9 +1,0 @@
-git|1:2.17.1-1ubuntu0.9
-openjdk-11-jdk-headless|11.0.15+10-0ubuntu0.18.04.1
-python2.7-dev|2.7.17-1~18.04ubuntu1.7
-python3.6-dev|3.6.9-1~18.04ubuntu1.7
-python-distutils-extra|2.41ubuntu1
-python3-distutils|3.6.9-1~18.04
-r-base-core|3.4.4-1ubuntu1
-r-base-dev|3.4.4-1ubuntu1 #Note that this package has a transitive dependency to libblas-dev, liblapack-dev and gcc, which we need for compiling numpy
-curl|7.58.0-2ubuntu3.16

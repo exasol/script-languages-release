@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 RUN mkdir /conf /buckets
 
 COPY --from={{language_deps}} /usr /usr

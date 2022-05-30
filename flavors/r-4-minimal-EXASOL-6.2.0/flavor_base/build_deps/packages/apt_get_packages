@@ -7,4 +7,4 @@ build-essential|12.4ubuntu1
 libpcre3-dev|2:8.39-9
 protobuf-compiler|3.0.0-9.1ubuntu1
 chrpath|0.16-2
-python3.8|3.8.10-0ubuntu1~20.04.4
+python3|3.8.10-0ubuntu1~20.04.4

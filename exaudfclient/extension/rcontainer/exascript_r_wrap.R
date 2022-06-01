@@ -169,7 +169,7 @@ INTERNAL_CLEANUP_WRAPPER__ <- function() {
 }
 
 INTERNAL_SINGLE_CALL_WRAPPER__ <- function(name, argDTO=NA) {
-    if (is.na(argDTO)) {
+    if (any(is.na(argDTO))) {
         return(do.call(name,list()))
     } else {
        return(do.call(name,list(argDTO)))

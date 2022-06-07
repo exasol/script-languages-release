@@ -45,3 +45,4 @@ This release uses version 0.9.0 of the container tool.
  - #605: Updated packages
  - #607: Ignored CVE-2022-1116
  - #613: Ignored CVE-2022-29581 
+ - #621: Fixed CVE-2022-21499

@@ -14,5 +14,6 @@ RUN /scripts/install_scripts/install_via_r_remotes.pl --file /build_info/package
 
 ENV SECURITY_SCANNERS="trivy oyster"
 COPY /security_scan/.trivyignore /.trivyignore
+COPY /security_scan/trivy-secret.yaml /trivy-secret.yaml
 
 ENTRYPOINT ["/scripts/security_scan/run.sh"]

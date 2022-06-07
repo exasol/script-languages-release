@@ -15,6 +15,9 @@ This release uses version 0.9.0 of the container tool.
 ## Bug Fixes
 
  - #599: Fixed duplicated packages
+ - #573: Pushed test container to Dockerhub
+ - #616: Performed login to dockerhub for specific tests
+
 
 ## Features / Enhancements
 
@@ -40,5 +43,8 @@ This release uses version 0.9.0 of the container tool.
  - #582: Updated libssl
  - #596: Updated packages
  - #605: Updated packages
- - #607: Ignored CVE-2022-1116
- - #613: Ignored CVE-2022-29581 
+ - #607: Ignored CVE-2022-1116 as it affects the Linux kernel only
+ - #613: Ignored CVE-2022-29581 as it affects the Linux kernel only
+ - #621: Ignored CVE-2022-21499 as it affects the Linux kernel only
+ - #620: Fixed trivy false positive during secret scan 
+ - #623: Removed CVE-2021-43816 from ignore list

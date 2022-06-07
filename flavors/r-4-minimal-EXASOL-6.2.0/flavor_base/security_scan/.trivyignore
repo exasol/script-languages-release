@@ -1,5 +1,3 @@
-#CVE-2021-43816 was caused by bug in trivy, no idea when a new debian package will be released (https://github.com/aquasecurity/trivy/issues/1680)
-CVE-2021-43816
 #the following CVE's affect kernel, no issue for container
 CVE-2022-0847
 CVE-2022-0001
@@ -7,6 +5,7 @@ CVE-2022-0002
 CVE-2022-1015
 CVE-2022-1116
 CVE-2022-29581
+CVE-2022-21499
 #CVE-2022-23648 is a bug in containerd, not issue for containers
 CVE-2022-23648
 #issue in cgroups, but no threat for ScriptLanguageContainer

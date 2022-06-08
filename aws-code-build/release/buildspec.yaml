@@ -10,62 +10,62 @@ batch:
       env:
         variables:
           FLAVOR: python-3.6-data-science-cuda-EXASOL-6.2.0
+        compute-type: BUILD_GENERAL1_MEDIUM
+        privileged-mode: true
       buildspec: ./aws-code-build/release/build_buildspec.yaml
-      privileged-mode: true
-      type: BUILD_GENERAL1_MEDIUM
     - identifier: build_python_36_minimal_EXASOL_620
       env:
         variables:
           FLAVOR: python-3.6-minimal-EXASOL-6.2.0
+        compute-type: BUILD_GENERAL1_MEDIUM
+        privileged-mode: true
       buildspec: ./aws-code-build/release/build_buildspec.yaml
-      privileged-mode: true
-      type: BUILD_GENERAL1_MEDIUM
     - identifier: build_python_37_minimal_EXASOL_620
       env:
         variables:
           FLAVOR: python-3.7-minimal-EXASOL-6.2.0
+        compute-type: BUILD_GENERAL1_MEDIUM
+        privileged-mode: true
       buildspec: ./aws-code-build/release/build_buildspec.yaml
-      privileged-mode: true
-      type: BUILD_GENERAL1_MEDIUM
     - identifier: build_python_38_minimal_EXASOL_620
       env:
         variables:
           FLAVOR: python-3.8-minimal-EXASOL-6.2.0
+        compute-type: BUILD_GENERAL1_MEDIUM
+        privileged-mode: true
       buildspec: ./aws-code-build/release/build_buildspec.yaml
-      privileged-mode: true
-      type: BUILD_GENERAL1_MEDIUM
     - identifier: build_r_4_minimal_EXASOL_620
       env:
         variables:
           FLAVOR: r-4-minimal-EXASOL-6.2.0
+        compute-type: BUILD_GENERAL1_MEDIUM
+        privileged-mode: true
       buildspec: ./aws-code-build/release/build_buildspec.yaml
-      privileged-mode: true
-      type: BUILD_GENERAL1_MEDIUM
     - identifier: build_standard_EXASOL_700
       env:
         variables:
           FLAVOR: standard-EXASOL-7.0.0
+        compute-type: BUILD_GENERAL1_MEDIUM
+        privileged-mode: true
       buildspec: ./aws-code-build/release/build_buildspec.yaml
-      privileged-mode: true
-      type: BUILD_GENERAL1_MEDIUM
     - identifier: build_standard_EXASOL_710
       env:
         variables:
           FLAVOR: standard-EXASOL-7.1.0
+        compute-type: BUILD_GENERAL1_MEDIUM
+        privileged-mode: true
       buildspec: ./aws-code-build/release/build_buildspec.yaml
-      privileged-mode: true
-      type: BUILD_GENERAL1_MEDIUM
     - identifier: build_standard_EXASOL_710_without_python27
       env:
         variables:
           FLAVOR: standard-EXASOL-7.1.0-without-python2.7
+        compute-type: BUILD_GENERAL1_MEDIUM
+        privileged-mode: true
       buildspec: ./aws-code-build/release/build_buildspec.yaml
-      privileged-mode: true
-      type: BUILD_GENERAL1_MEDIUM
     - identifier: build_standard_EXASOL_800
       env:
         variables:
           FLAVOR: standard-EXASOL-8.0.0
+        compute-type: BUILD_GENERAL1_MEDIUM
+        privileged-mode: true
       buildspec: ./aws-code-build/release/build_buildspec.yaml
-      privileged-mode: true
-      type: BUILD_GENERAL1_MEDIUM

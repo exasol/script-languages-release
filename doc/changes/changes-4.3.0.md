@@ -23,6 +23,7 @@ This release uses version 0.9.0 of the container tool.
 
  - #433: Removed the source of the udflclient from the standard containers
  - #147: Added tests for JVM owned native libs
+ - #628: Added release GH actions
 
 ## Documentation
 

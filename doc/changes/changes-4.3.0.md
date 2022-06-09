@@ -6,7 +6,7 @@ Code name: AWS CI Build and removal of standard-6.2.0 container
 
 This release now uses AWS for CI and release builds (instead of GClouds). The old standard-6.2.0 container has been removed. 
 It also contains minor changes regarding the documentation of the packages in the container. The deployment of test container on Dockerhub has been fixed.
-The source code of the exa-udf-client has been now removed from the script-languages-container. Some integration tests for JVM owned native libraries have been added.
+The source code of the exaudfclient has been now removed from the script-languages-container. Some integration tests for JVM owned native libraries have been added.
 Besides, it contains several security related updates and the documentation has been improved.
 
 ## [Package Version Comparison between Release 4.2.0 and 4.3.0](package_diffs/4.3.0/README.md)
@@ -40,8 +40,8 @@ This release uses version 0.14.0 of the container tool.
 
 ## Refactoring
 
-- #601: Sorted packages in package diff alphabetically
-- #610: Removed flavor standard-6.2.0
+ - #601: Sorted packages in package diff alphabetically
+ - #610: Removed flavor standard-6.2.0
 
 ## Security
 

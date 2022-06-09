@@ -1,4 +1,4 @@
-# script-languages-release 4.3.0, released 2022-06-09
+# script-languages-release 4.3.0, released 2022-06-10
 
 Code name: AWS CI Build and removal of standard-6.2.0 container
 
@@ -37,6 +37,7 @@ This release uses version 0.14.0 of the container tool.
  - #181: Added faq about how to start exaslct from within a docker container
  - #595: Fixed content of contributing.md
  - #632: Prepared release 4.3.0
+ - #638: Adapted changelog to release-droid format 
 
 ## Refactoring
 

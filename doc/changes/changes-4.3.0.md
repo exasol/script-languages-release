@@ -1,24 +1,26 @@
-# script-languages-release 4.3.0, released t.b.d.
+# script-languages-release 4.3.0, released 2022-06-09
 
-Code name: t.b.d.
+Code name: AWS CI Build and removal of standard-6.2.0 container
 
 ## Summary
 
-t.b.d.
+This release now uses AWS for CI and release builds (instead of GClouds). The old standard-6.2.0 container has been removed. 
+It also contains minor changes regarding the documentation of the packages in the container. The deployment of test container on Dockerhub has been fixed.
+The source code of the exaudfclient has been now removed from the script-languages-container. Some integration tests for JVM owned native libraries have been added.
+Besides, it contains several security related updates and the documentation has been improved.
 
 ## [Package Version Comparison between Release 4.2.0 and 4.3.0](package_diffs/4.3.0/README.md)
   
 ## Script-Language-Container-Tool (Exaslct)
 
-This release uses version 0.9.0 of the container tool.
+This release uses version 0.14.0 of the container tool.
 
 ## Bug Fixes
 
  - #599: Fixed duplicated packages
  - #573: Pushed test container to Dockerhub
  - #616: Performed login to dockerhub for specific tests
- - #631: Updated script-languages-container-ci-setup and script-languages-container-ci 
-
+ - #631: Updated script-languages-container-ci-setup and script-languages-container-ci
 
 ## Features / Enhancements
 
@@ -34,11 +36,12 @@ This release uses version 0.9.0 of the container tool.
  - #161: Created FAQ and added solution for /tmp directory
  - #181: Added faq about how to start exaslct from within a docker container
  - #595: Fixed content of contributing.md
+ - #632: Prepared release 4.3.0
 
 ## Refactoring
 
-- #601: Sorted packages in package diff alphabetically
-- #610: Removed flavor standard-6.2.0
+ - #601: Sorted packages in package diff alphabetically
+ - #610: Removed flavor standard-6.2.0
 
 ## Security
 

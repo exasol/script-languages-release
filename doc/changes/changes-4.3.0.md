@@ -53,3 +53,4 @@ This release uses version 0.14.0 of the container tool.
  - #621: Ignored CVE-2022-21499 as it affects the Linux kernel only
  - #620: Fixed trivy false positive during secret scan 
  - #623: Removed CVE-2021-43816 from ignore list
+ - #636: Updated Ubuntu packages

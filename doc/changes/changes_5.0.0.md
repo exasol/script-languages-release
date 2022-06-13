@@ -14,20 +14,21 @@ This release uses version 0.14.0 of the container tool.
 
 ## Bug Fixes
 
-n/a
+ n/a
 
 ## Features / Enhancements
 
-n/a
+ n/a
 
 ## Documentation
 
-n/a
+ n/a
 
 ## Refactoring
 
  - #588: Removed virtualschema-jdbc-adapter.jar
+ - #329: Splitted exaudflib cc into several files
 
 ## Security
 
-n/a
+ n/a

@@ -4,25 +4,25 @@ genrule(
     name = "exascript_r_tmp_cc",
     cmd = """
       mkdir -p build_exascript_r_tmp_cc/exaudflib
-      cp "$(location @script_languages//exaudflib:script_data_transfer_objects_wrapper.h)" "$(location @script_languages//exaudflib:exascript.i)" build_exascript_r_tmp_cc/exaudflib
+      cp "$(location @script_languages//exaudflib:swig/script_data_transfer_objects_wrapper.h)" "$(location @script_languages//exaudflib:exascript.i)" build_exascript_r_tmp_cc/exaudflib
       cd build_exascript_r_tmp_cc
       swig -v -O -DEXTERNAL_PROCESS -Wall -c++ -r -addextern -module exascript_r -o "../$(location exascript_r_tmp.cc)" exaudflib/exascript.i
     """,
     outs = ["exascript_r_tmp.cc","exascript_r.R"],
-    srcs = ["@script_languages//exaudflib:exascript.i","@script_languages//exaudflib:script_data_transfer_objects_wrapper.h"]
+    srcs = ["@script_languages//exaudflib:exascript.i","@script_languages//exaudflib:swig/script_data_transfer_objects_wrapper.h"]
 )
 
 genrule(
     name = "exascript_r_tmp_h",
     cmd = """
         mkdir build_exascript_r_tmp_h
-        cp "$(location @script_languages//exaudflib:script_data_transfer_objects_wrapper.h)" "$(location @script_languages//exaudflib:exascript.i)" build_exascript_r_tmp_h
+        cp "$(location @script_languages//exaudflib:swig/script_data_transfer_objects_wrapper.h)" "$(location @script_languages//exaudflib:exascript.i)" build_exascript_r_tmp_h
         cp "$(location exascript_r_tmp.cc)"  "$(location exascript_r.R)" build_exascript_r_tmp_h
         cd build_exascript_r_tmp_h
         swig -DEXTERNAL_PROCESS -c++ -r -external-runtime "../$(location exascript_r_tmp.h)"
       """,
     outs = ["exascript_r_tmp.h"],
-    srcs = ["@script_languages//exaudflib:exascript.i","@script_languages//exaudflib:script_data_transfer_objects_wrapper.h", ":exascript_r_tmp.cc", ":exascript_r.R"]
+    srcs = ["@script_languages//exaudflib:exascript.i","@script_languages//exaudflib:swig/script_data_transfer_objects_wrapper.h", ":exascript_r_tmp.cc", ":exascript_r.R"]
 )
 
 genrule(

@@ -60,7 +60,7 @@ VM_ENABLED_DEFINES=VM_ENABLED_DEFINES+R_VM_ENABLED_DEFINE
 
 cc_binary(
     name = "exaudfclient_bin",
-    srcs = ["exaudfclient.cc"],
+    srcs = ["exaudfclient.cc", "@script_languages//:load_dynamic.cc"],
     linkopts = ["-ldl"], # needed for dynamicly loading libexaudflib_complete.so into another linker namespace
     deps = ["@script_languages//exaudflib:header", "@script_languages//:debug_message_h"]+VM_ENABLED_DEPS+VM_PYTHON2_DEPS+VM_R_DEPS+
             ["@script_languages//exaudflib:exaudflib-deps"],
@@ -70,7 +70,7 @@ cc_binary(
 
 cc_binary(
     name = "exaudfclient_py3_bin",
-    srcs = ["exaudfclient.cc"],
+    srcs = ["exaudfclient.cc", "@script_languages//:load_dynamic.cc"],
     linkopts = ["-ldl"], # needed for dynamicly loading libexaudflib_complete.so into another linker namespace
     deps = ["@script_languages//exaudflib:header", "@script_languages//:debug_message_h"]+VM_ENABLED_DEPS+VM_PYTHON3_DEPS+VM_R_DEPS+
             ["@script_languages//exaudflib:exaudflib-deps"],
@@ -93,7 +93,7 @@ cc_binary(
 
 cc_binary(
     name = "exaudfclient_py2_static_bin",
-    srcs = ["exaudfclient.cc"],
+    srcs = ["exaudfclient.cc", "@script_languages//:load_dynamic.cc"],
     linkopts = ["-ldl"], # needed for dynamicly loading libexaudflib_complete.so into another linker namespace
     deps = ["@script_languages//exaudflib:header", "@script_languages//:debug_message_h"]+VM_ENABLED_DEPS+VM_PYTHON2_DEPS+VM_R_DEPS+
             ["@script_languages//exaudflib:exaudflib-deps"] + [ "@zmq//:zmqlib", "@protobuf//:protobuf"],
@@ -103,7 +103,7 @@ cc_binary(
 
 cc_binary(
     name = "exaudfclient_py3_static_bin",
-    srcs = ["exaudfclient.cc"],
+    srcs = ["exaudfclient.cc",  "@script_languages//:load_dynamic.cc"],
     linkopts = ["-ldl"], # needed for dynamicly loading libexaudflib_complete.so into another linker namespace
     deps = ["@script_languages//exaudflib:header", "@script_languages//:debug_message_h"]+VM_ENABLED_DEPS+VM_PYTHON3_DEPS+VM_R_DEPS+
             ["@script_languages//exaudflib:exaudflib-deps"] + [ "@zmq//:zmqlib", "@protobuf//:protobuf"],

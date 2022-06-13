@@ -14,15 +14,15 @@ This release uses version 0.14.0 of the container tool.
 
 ## Bug Fixes
 
-n/a
+ n/a
 
 ## Features / Enhancements
 
-n/a
+ n/a
 
 ## Documentation
 
-n/a
+ n/a
 
 ## Refactoring
 
@@ -31,4 +31,4 @@ n/a
 
 ## Security
 
-n/a
+ n/a

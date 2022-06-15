@@ -1,3 +1,0 @@
-flavor: "standard-EXASOL-7.1.0-without-python2.7"
-trigger_template_file: "build_pull_request.json.jinja2"
-disabled: false

@@ -13,7 +13,7 @@ slapd|2.4.49+dfsg-2ubuntu1.9 # Needed by python-ldap
 ldap-utils|2.4.49+dfsg-2ubuntu1.9 # Needed by python-ldap
 unixodbc-dev|2.3.6-0.1build1 # Needed by pyodbc and RODBC
 libxml2-dev|2.9.10+dfsg-5ubuntu0.20.04.3 # Needed by R XML package
-apt-transport-https|2.0.8
+apt-transport-https|2.0.9
 gnupg|2.2.19-3ubuntu2.1
 libhiredis-dev|0.14.0-6 # Needed by R redux package
 libsmbclient|2:4.13.17~dfsg-0ubuntu0.21.04.2

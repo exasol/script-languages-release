@@ -31,4 +31,4 @@ This release uses version 0.14.0 of the container tool.
 
 ## Security
 
- n/a
+ - #645: Updated apt-transport-https #645

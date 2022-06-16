@@ -2,7 +2,7 @@
 
 |    | Package              | Version in 4.3.0                | Version in 5.0.0                | Status   |
 |---:|:---------------------|:--------------------------------|:--------------------------------|:---------|
-|  0 | apt-transport-https  | 2.0.8                           | 2.0.8                           |          |
+|  0 | apt-transport-https  | 2.0.8                           | 2.0.9                           | UPDATED  |
 |  1 | build-essential      | 12.8ubuntu1.1                   | 12.8ubuntu1.1                   |          |
 |  2 | git                  | 1:2.25.1-1ubuntu3.4             | 1:2.25.1-1ubuntu3.4             |          |
 |  3 | gnupg                | 2.2.19-3ubuntu2.1               | 2.2.19-3ubuntu2.1               |          |

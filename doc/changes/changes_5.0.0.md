@@ -28,7 +28,8 @@ This release uses version 0.14.0 of the container tool.
 
  - #588: Removed virtualschema-jdbc-adapter.jar
  - #329: Splitted exaudflib cc into several files
+ - #646: Updated ci dependencies and removed GCloud CI
 
 ## Security
 
- n/a
+ - #645: Updated apt-transport-https #645

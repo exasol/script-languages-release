@@ -1,1 +1,0 @@
-../script-languages/google-cloud-build/cancel_all_builds.sh

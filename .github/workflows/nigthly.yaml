@@ -2,7 +2,7 @@ name: Trigger Nightly Rebuild of origin/master
 
 on:
   schedule:
-    - cron:  '0 1 * * *'
+    - cron:  '0 1 * * 1,2,3,4,5'
 # Push trigger is only for test purposes
 #  push:
 #    branches-ignore:

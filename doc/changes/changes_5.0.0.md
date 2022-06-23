@@ -30,7 +30,8 @@ This release uses version 0.14.0 of the container tool.
  - #329: Splitted exaudflib cc into several files
  - #646: Updated ci dependencies and removed GCloud CI
  - #650: Changed nightly cron and avoid running nightly builds during the weekend
- - #648: Moved swig-2.0.4.tar.gz to AWS 
+ - #648: Moved swig-2.0.4.tar.gz to AWS
+ - #572: Refactored package import tests
 
 ## Security
 

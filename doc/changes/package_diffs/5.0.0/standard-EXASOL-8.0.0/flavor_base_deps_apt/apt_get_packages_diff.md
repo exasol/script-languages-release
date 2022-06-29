@@ -3,12 +3,12 @@
 |    | Package              | Version in 4.3.0                | Version in 5.0.0                | Status   |
 |---:|:---------------------|:--------------------------------|:--------------------------------|:---------|
 |  0 | apt-transport-https  | 2.0.8                           | 2.0.9                           | UPDATED  |
-|  1 | openssl              | 1.1.1f-1ubuntu2.13              | 1.1.1f-1ubuntu2.15              | UPDATED  |
-|  2 | build-essential      | 12.8ubuntu1.1                   | 12.8ubuntu1.1                   |          |
-|  3 | git                  | 1:2.25.1-1ubuntu3.4             | 1:2.25.1-1ubuntu3.4             |          |
-|  4 | gnupg                | 2.2.19-3ubuntu2.1               | 2.2.19-3ubuntu2.1               |          |
-|  5 | ldap-utils           | 2.4.49+dfsg-2ubuntu1.9          | 2.4.49+dfsg-2ubuntu1.9          |          |
-|  6 | libcurl4-openssl-dev | 7.68.0-1ubuntu2.11              | 7.68.0-1ubuntu2.11              |          |
+|  1 | libcurl4-openssl-dev | 7.68.0-1ubuntu2.11              | 7.68.0-1ubuntu2.12              | UPDATED  |
+|  2 | openssl              | 1.1.1f-1ubuntu2.13              | 1.1.1f-1ubuntu2.15              | UPDATED  |
+|  3 | build-essential      | 12.8ubuntu1.1                   | 12.8ubuntu1.1                   |          |
+|  4 | git                  | 1:2.25.1-1ubuntu3.4             | 1:2.25.1-1ubuntu3.4             |          |
+|  5 | gnupg                | 2.2.19-3ubuntu2.1               | 2.2.19-3ubuntu2.1               |          |
+|  6 | ldap-utils           | 2.4.49+dfsg-2ubuntu1.9          | 2.4.49+dfsg-2ubuntu1.9          |          |
 |  7 | libhiredis-dev       | 0.14.0-6                        | 0.14.0-6                        |          |
 |  8 | libldap2-dev         | 2.4.49+dfsg-2ubuntu1.9          | 2.4.49+dfsg-2ubuntu1.9          |          |
 |  9 | libldb2              | 2:2.2.3-0ubuntu0.20.04.2        | 2:2.2.3-0ubuntu0.20.04.2        |          |

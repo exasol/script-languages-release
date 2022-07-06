@@ -4,7 +4,7 @@
 |---:|:---------------------|:--------------------------------|:--------------------------------|:---------|
 |  0 | apt-transport-https  | 2.0.8                           | 2.0.9                           | UPDATED  |
 |  1 | libcurl4-openssl-dev | 7.68.0-1ubuntu2.11              | 7.68.0-1ubuntu2.12              | UPDATED  |
-|  2 | openssl              | 1.1.1f-1ubuntu2.13              | 1.1.1f-1ubuntu2.15              | UPDATED  |
+|  2 | openssl              | 1.1.1f-1ubuntu2.13              | 1.1.1f-1ubuntu2.16              | UPDATED  |
 |  3 | build-essential      | 12.8ubuntu1.1                   | 12.8ubuntu1.1                   |          |
 |  4 | git                  | 1:2.25.1-1ubuntu3.4             | 1:2.25.1-1ubuntu3.4             |          |
 |  5 | gnupg                | 2.2.19-3ubuntu2.1               | 2.2.19-3ubuntu2.1               |          |

@@ -72,6 +72,17 @@ The Python-3.8-minimal flavor provides the language Python 3.8 with only absolut
   - Available languages: Python 3.8
   - [Here](https://github.com/exasol/script-languages/tree/master/flavors/python-3.8-minimal-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
+### template-Exasol-all-python-3.8-conda
+
+The template-Exasol-all-python-3.8-conda flavor provides the language Python 3.8  with only absolute necessary packages. This allows very simple customization because you control almost all dependencies. In contrast to Python-3.8-minimal, it also allows the installation of conda packages.
+
+- template-Exasol-all-python-3.8-conda
+  - Base Image: ubuntu:20.04
+  - Compatible Exasol Versions: 7.1.\*, 7.0.\*
+  - Available languages: Python 3.8
+  - Supported Package Manager: conda, pip
+  - [Here](https://github.com/exasol/script-languages/tree/master/flavors/template-Exasol-all-python-3.8-conda/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+
 #### Python-3.6-data-science-cuda flavors
 
 The python-3.6-data-science-cuda-EXASOL flavor has been changed recently. All machine-learning libraries were removed in order to reduce any security risk. This flavor contains only the CUDA installation on Ubuntu18.04.

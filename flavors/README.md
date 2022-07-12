@@ -20,7 +20,7 @@ Due to EOL of Python2, there is split of the standard-EXASOL-7.1.0 container: on
 
 - standard-EXASOL-8.0.0
   - Base Image: ubuntu:20.04
-  - Compatible Exasol Versions: 8.0.\* (but likely also with 7.*.\*) 
+  - Compatible Exasol Versions: 8.0.\* (but likely also with 7.\*.\*) 
   - Available languages: Java 11, Python 3.8 and R 4.1
   - [Here](standard-EXASOL-8.0.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
@@ -78,7 +78,7 @@ The template-Exasol-all-python-3.8-conda flavor provides the language Python 3.8
 
 - template-Exasol-all-python-3.8-conda
   - Base Image: ubuntu:20.04
-  - Compatible Exasol Versions: 7.1.\*, 7.0.\*
+  - Compatible Exasol Versions: 8.0.\*,7.1.\*, 7.0.\*
   - Available languages: Python 3.8
   - Supported Package Manager: conda, pip
   - [Here](https://github.com/exasol/script-languages/tree/master/flavors/template-Exasol-all-python-3.8-conda/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.

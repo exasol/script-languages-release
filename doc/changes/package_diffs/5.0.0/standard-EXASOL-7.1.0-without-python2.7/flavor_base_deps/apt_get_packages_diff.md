@@ -3,15 +3,15 @@
 |    | Package              | Version in 4.3.0        | Version in 5.0.0        | Status   |
 |---:|:---------------------|:------------------------|:------------------------|:---------|
 |  0 | locales              | 2.27-3ubuntu1.5         | 2.27-3ubuntu1.6         | UPDATED  |
-|  1 | coreutils            | 8.28-1ubuntu1           | 8.28-1ubuntu1           |          |
-|  2 | git                  | 1:2.17.1-1ubuntu0.11    | 1:2.17.1-1ubuntu0.11    |          |
-|  3 | libldb1              | 2:1.2.3-1ubuntu0.2      | 2:1.2.3-1ubuntu0.2      |          |
-|  4 | maven                | 3.6.0-1~18.04.1         | 3.6.0-1~18.04.1         |          |
-|  5 | python3-boto         | 2.44.0-1ubuntu2.18.04.1 | 2.44.0-1ubuntu2.18.04.1 |          |
-|  6 | python3-cffi         | 1.11.5-1                | 1.11.5-1                |          |
-|  7 | python3-docutils     | 0.14+dfsg-3             | 0.14+dfsg-3             |          |
-|  8 | python3-jinja2       | 2.10-1ubuntu0.18.04.1   | 2.10-1ubuntu0.18.04.1   |          |
-|  9 | python3-ldap         | 3.0.0-1ubuntu0.1        | 3.0.0-1ubuntu0.1        |          |
+|  1 | python3-ldap         | 3.0.0-1ubuntu0.1        | 3.0.0-1ubuntu0.2        | UPDATED  |
+|  2 | coreutils            | 8.28-1ubuntu1           | 8.28-1ubuntu1           |          |
+|  3 | git                  | 1:2.17.1-1ubuntu0.11    | 1:2.17.1-1ubuntu0.11    |          |
+|  4 | libldb1              | 2:1.2.3-1ubuntu0.2      | 2:1.2.3-1ubuntu0.2      |          |
+|  5 | maven                | 3.6.0-1~18.04.1         | 3.6.0-1~18.04.1         |          |
+|  6 | python3-boto         | 2.44.0-1ubuntu2.18.04.1 | 2.44.0-1ubuntu2.18.04.1 |          |
+|  7 | python3-cffi         | 1.11.5-1                | 1.11.5-1                |          |
+|  8 | python3-docutils     | 0.14+dfsg-3             | 0.14+dfsg-3             |          |
+|  9 | python3-jinja2       | 2.10-1ubuntu0.18.04.1   | 2.10-1ubuntu0.18.04.1   |          |
 | 10 | python3-leveldb      | 0~svn68-3build3         | 0~svn68-3build3         |          |
 | 11 | python3-lxml         | 4.2.1-1ubuntu0.6        | 4.2.1-1ubuntu0.6        |          |
 | 12 | python3-openssl      | 17.5.0-1ubuntu1         | 17.5.0-1ubuntu1         |          |

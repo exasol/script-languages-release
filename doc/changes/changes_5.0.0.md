@@ -40,3 +40,4 @@ This release uses version 0.14.0 of the container tool.
  - #659: Updated Curl
  - #662: Updated libssl-dev and gnupg
  - #668: Updated python-ldap
+ - #671: Updated git package

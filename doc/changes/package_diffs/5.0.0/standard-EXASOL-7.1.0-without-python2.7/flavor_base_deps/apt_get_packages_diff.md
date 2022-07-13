@@ -2,10 +2,10 @@
 
 |    | Package              | Version in 4.3.0        | Version in 5.0.0        | Status   |
 |---:|:---------------------|:------------------------|:------------------------|:---------|
-|  0 | locales              | 2.27-3ubuntu1.5         | 2.27-3ubuntu1.6         | UPDATED  |
-|  1 | python3-ldap         | 3.0.0-1ubuntu0.1        | 3.0.0-1ubuntu0.2        | UPDATED  |
-|  2 | coreutils            | 8.28-1ubuntu1           | 8.28-1ubuntu1           |          |
-|  3 | git                  | 1:2.17.1-1ubuntu0.11    | 1:2.17.1-1ubuntu0.11    |          |
+|  0 | git                  | 1:2.17.1-1ubuntu0.11    | 1:2.17.1-1ubuntu0.12    | UPDATED  |
+|  1 | locales              | 2.27-3ubuntu1.5         | 2.27-3ubuntu1.6         | UPDATED  |
+|  2 | python3-ldap         | 3.0.0-1ubuntu0.1        | 3.0.0-1ubuntu0.2        | UPDATED  |
+|  3 | coreutils            | 8.28-1ubuntu1           | 8.28-1ubuntu1           |          |
 |  4 | libldb1              | 2:1.2.3-1ubuntu0.2      | 2:1.2.3-1ubuntu0.2      |          |
 |  5 | maven                | 3.6.0-1~18.04.1         | 3.6.0-1~18.04.1         |          |
 |  6 | python3-boto         | 2.44.0-1ubuntu2.18.04.1 | 2.44.0-1ubuntu2.18.04.1 |          |

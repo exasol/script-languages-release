@@ -3,11 +3,11 @@
 |    | Package              | Version in 4.3.0                | Version in 5.0.0                | Status   |
 |---:|:---------------------|:--------------------------------|:--------------------------------|:---------|
 |  0 | apt-transport-https  | 2.0.8                           | 2.0.9                           | UPDATED  |
-|  1 | gnupg                | 2.2.19-3ubuntu2.1               | 2.2.19-3ubuntu2.2               | UPDATED  |
-|  2 | libcurl4-openssl-dev | 7.68.0-1ubuntu2.11              | 7.68.0-1ubuntu2.12              | UPDATED  |
-|  3 | openssl              | 1.1.1f-1ubuntu2.13              | 1.1.1f-1ubuntu2.16              | UPDATED  |
-|  4 | build-essential      | 12.8ubuntu1.1                   | 12.8ubuntu1.1                   |          |
-|  5 | git                  | 1:2.25.1-1ubuntu3.4             | 1:2.25.1-1ubuntu3.4             |          |
+|  1 | git                  | 1:2.25.1-1ubuntu3.4             | 1:2.25.1-1ubuntu3.5             | UPDATED  |
+|  2 | gnupg                | 2.2.19-3ubuntu2.1               | 2.2.19-3ubuntu2.2               | UPDATED  |
+|  3 | libcurl4-openssl-dev | 7.68.0-1ubuntu2.11              | 7.68.0-1ubuntu2.12              | UPDATED  |
+|  4 | openssl              | 1.1.1f-1ubuntu2.13              | 1.1.1f-1ubuntu2.16              | UPDATED  |
+|  5 | build-essential      | 12.8ubuntu1.1                   | 12.8ubuntu1.1                   |          |
 |  6 | ldap-utils           | 2.4.49+dfsg-2ubuntu1.9          | 2.4.49+dfsg-2ubuntu1.9          |          |
 |  7 | libhiredis-dev       | 0.14.0-6                        | 0.14.0-6                        |          |
 |  8 | libldap2-dev         | 2.4.49+dfsg-2ubuntu1.9          | 2.4.49+dfsg-2ubuntu1.9          |          |

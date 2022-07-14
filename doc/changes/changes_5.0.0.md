@@ -18,7 +18,7 @@ This release uses version 0.14.0 of the container tool.
 
 ## Features / Enhancements
 
- n/a
+ - #666: Make package diffs more robust for CI
 
 ## Documentation
 
@@ -39,3 +39,5 @@ This release uses version 0.14.0 of the container tool.
  - #654: Updated Ubuntu packages
  - #659: Updated Curl
  - #662: Updated libssl-dev and gnupg
+ - #668: Updated python-ldap
+ - #671: Updated git package

@@ -2,50 +2,50 @@
 
 |    | Package                                                                                                                       | Version in 4.3.0     | Version in 5.0.0     | Status   |
 |---:|:------------------------------------------------------------------------------------------------------------------------------|:---------------------|:---------------------|:---------|
-|  0 | azure-batch                                                                                                                   | 11.0.0               | 11.0.0               |          |
-|  1 | azure-cosmos                                                                                                                  | 4.2.0                | 4.2.0                |          |
-|  2 | azure-eventgrid                                                                                                               | 4.7.1                | 4.7.1                |          |
-|  3 | azure-eventhub                                                                                                                | 5.7.0                | 5.7.0                |          |
-|  4 | azure-eventhub-checkpointstoreblob                                                                                            | 1.1.4                | 1.1.4                |          |
-|  5 | azure-eventhub-checkpointstoreblob-aio                                                                                        | 1.1.4                | 1.1.4                |          |
-|  6 | azure-identity                                                                                                                | 1.6.1                | 1.6.1                |          |
-|  7 | azure-keyvault                                                                                                                | 4.1.0                | 4.1.0                |          |
-|  8 | azure-keyvault-certificates                                                                                                   | 4.3.0                | 4.3.0                |          |
-|  9 | azure-keyvault-keys                                                                                                           | 4.4.0                | 4.4.0                |          |
-| 10 | azure-keyvault-secrets                                                                                                        | 4.3.0                | 4.3.0                |          |
-| 11 | azure-kusto-data                                                                                                              | 2.3.2                | 2.3.2                |          |
-| 12 | azure-loganalytics                                                                                                            | 0.1.1                | 0.1.1                |          |
-| 13 | azure-servicebus                                                                                                              | 7.5.0                | 7.5.0                |          |
-| 14 | azure-storage-blob                                                                                                            | 12.9.0               | 12.9.0               |          |
-| 15 | azure-storage-file-datalake                                                                                                   | 12.5.0               | 12.5.0               |          |
-| 16 | azure-storage-file-share                                                                                                      | 12.6.0               | 12.6.0               |          |
-| 17 | azure-storage-queue                                                                                                           | 12.1.6               | 12.1.6               |          |
-| 18 | bitarray                                                                                                                      | 2.3.5                | 2.3.5                |          |
-| 19 | bitsets                                                                                                                       | 0.8.3                | 0.8.3                |          |
-| 20 | boto3                                                                                                                         | 1.20.37              | 1.20.37              |          |
-| 21 | cffi                                                                                                                          | 1.15.0               | 1.15.0               |          |
-| 22 | debugpy                                                                                                                       | 1.5.1                | 1.5.1                |          |
-| 23 | docutils                                                                                                                      | 0.18.1               | 0.18.1               |          |
-| 24 | git+http://github.com/EXASOL/websocket-api.git@5150f964388412788bf5e47752a7916a5a8624c5#egg=exasol-db-api&subdirectory=python | No version specified | No version specified |          |
-| 25 | google-cloud-asset                                                                                                            | 3.7.1                | 3.7.1                |          |
-| 26 | google-cloud-bigquery                                                                                                         | 2.32.0               | 2.32.0               |          |
-| 27 | google-cloud-bigquery-storage                                                                                                 | 2.11.0               | 2.11.0               |          |
-| 28 | google-cloud-bigtable                                                                                                         | 2.4.0                | 2.4.0                |          |
-| 29 | google-cloud-containeranalysis                                                                                                | 2.6.3                | 2.6.3                |          |
-| 30 | google-cloud-datacatalog                                                                                                      | 3.6.2                | 3.6.2                |          |
-| 31 | google-cloud-datastore                                                                                                        | 1.15.3               | 1.15.3               |          |
-| 32 | google-cloud-firestore                                                                                                        | 2.3.4                | 2.3.4                |          |
-| 33 | google-cloud-kms                                                                                                              | 2.10.1               | 2.10.1               |          |
-| 34 | google-cloud-logging                                                                                                          | 2.7.0                | 2.7.0                |          |
-| 35 | google-cloud-monitoring                                                                                                       | 2.8.0                | 2.8.0                |          |
-| 36 | google-cloud-ndb                                                                                                              | 1.11.1               | 1.11.1               |          |
-| 37 | google-cloud-pubsub                                                                                                           | 2.9.0                | 2.9.0                |          |
-| 38 | google-cloud-spanner                                                                                                          | 3.12.1               | 3.12.1               |          |
-| 39 | google-cloud-storage                                                                                                          | 2.0.0                | 2.0.0                |          |
-| 40 | google-cloud-trace                                                                                                            | 1.5.1                | 1.5.1                |          |
-| 41 | https://github.com/exasol/bucketfs-utils-python/releases/download/0.1.0/exasol_bucketfs_utils_python-0.1.0-py3-none-any.whl   | No version specified | No version specified |          |
-| 42 | jinja2                                                                                                                        | 3.0.3                | 3.0.3                |          |
-| 43 | lxml                                                                                                                          | 4.7.1                | 4.7.1                |          |
+|  0 | lxml                                                                                                                          | 4.7.1                | 4.9.1                | UPDATED  |
+|  1 | azure-batch                                                                                                                   | 11.0.0               | 11.0.0               |          |
+|  2 | azure-cosmos                                                                                                                  | 4.2.0                | 4.2.0                |          |
+|  3 | azure-eventgrid                                                                                                               | 4.7.1                | 4.7.1                |          |
+|  4 | azure-eventhub                                                                                                                | 5.7.0                | 5.7.0                |          |
+|  5 | azure-eventhub-checkpointstoreblob                                                                                            | 1.1.4                | 1.1.4                |          |
+|  6 | azure-eventhub-checkpointstoreblob-aio                                                                                        | 1.1.4                | 1.1.4                |          |
+|  7 | azure-identity                                                                                                                | 1.6.1                | 1.6.1                |          |
+|  8 | azure-keyvault                                                                                                                | 4.1.0                | 4.1.0                |          |
+|  9 | azure-keyvault-certificates                                                                                                   | 4.3.0                | 4.3.0                |          |
+| 10 | azure-keyvault-keys                                                                                                           | 4.4.0                | 4.4.0                |          |
+| 11 | azure-keyvault-secrets                                                                                                        | 4.3.0                | 4.3.0                |          |
+| 12 | azure-kusto-data                                                                                                              | 2.3.2                | 2.3.2                |          |
+| 13 | azure-loganalytics                                                                                                            | 0.1.1                | 0.1.1                |          |
+| 14 | azure-servicebus                                                                                                              | 7.5.0                | 7.5.0                |          |
+| 15 | azure-storage-blob                                                                                                            | 12.9.0               | 12.9.0               |          |
+| 16 | azure-storage-file-datalake                                                                                                   | 12.5.0               | 12.5.0               |          |
+| 17 | azure-storage-file-share                                                                                                      | 12.6.0               | 12.6.0               |          |
+| 18 | azure-storage-queue                                                                                                           | 12.1.6               | 12.1.6               |          |
+| 19 | bitarray                                                                                                                      | 2.3.5                | 2.3.5                |          |
+| 20 | bitsets                                                                                                                       | 0.8.3                | 0.8.3                |          |
+| 21 | boto3                                                                                                                         | 1.20.37              | 1.20.37              |          |
+| 22 | cffi                                                                                                                          | 1.15.0               | 1.15.0               |          |
+| 23 | debugpy                                                                                                                       | 1.5.1                | 1.5.1                |          |
+| 24 | docutils                                                                                                                      | 0.18.1               | 0.18.1               |          |
+| 25 | git+http://github.com/EXASOL/websocket-api.git@5150f964388412788bf5e47752a7916a5a8624c5#egg=exasol-db-api&subdirectory=python | No version specified | No version specified |          |
+| 26 | google-cloud-asset                                                                                                            | 3.7.1                | 3.7.1                |          |
+| 27 | google-cloud-bigquery                                                                                                         | 2.32.0               | 2.32.0               |          |
+| 28 | google-cloud-bigquery-storage                                                                                                 | 2.11.0               | 2.11.0               |          |
+| 29 | google-cloud-bigtable                                                                                                         | 2.4.0                | 2.4.0                |          |
+| 30 | google-cloud-containeranalysis                                                                                                | 2.6.3                | 2.6.3                |          |
+| 31 | google-cloud-datacatalog                                                                                                      | 3.6.2                | 3.6.2                |          |
+| 32 | google-cloud-datastore                                                                                                        | 1.15.3               | 1.15.3               |          |
+| 33 | google-cloud-firestore                                                                                                        | 2.3.4                | 2.3.4                |          |
+| 34 | google-cloud-kms                                                                                                              | 2.10.1               | 2.10.1               |          |
+| 35 | google-cloud-logging                                                                                                          | 2.7.0                | 2.7.0                |          |
+| 36 | google-cloud-monitoring                                                                                                       | 2.8.0                | 2.8.0                |          |
+| 37 | google-cloud-ndb                                                                                                              | 1.11.1               | 1.11.1               |          |
+| 38 | google-cloud-pubsub                                                                                                           | 2.9.0                | 2.9.0                |          |
+| 39 | google-cloud-spanner                                                                                                          | 3.12.1               | 3.12.1               |          |
+| 40 | google-cloud-storage                                                                                                          | 2.0.0                | 2.0.0                |          |
+| 41 | google-cloud-trace                                                                                                            | 1.5.1                | 1.5.1                |          |
+| 42 | https://github.com/exasol/bucketfs-utils-python/releases/download/0.1.0/exasol_bucketfs_utils_python-0.1.0-py3-none-any.whl   | No version specified | No version specified |          |
+| 43 | jinja2                                                                                                                        | 3.0.3                | 3.0.3                |          |
 | 44 | martian                                                                                                                       | 1.4                  | 1.4                  |          |
 | 45 | numba                                                                                                                         | 0.55.0               | 0.55.0               |          |
 | 46 | numba-scipy                                                                                                                   | 0.3.0                | 0.3.0                |          |

@@ -41,4 +41,4 @@ This release uses version 0.14.0 of the container tool.
  - #662: Updated libssl-dev and gnupg
  - #668: Updated python-ldap
  - #671: Updated git package
- - #674: Updated Python, Python-dev and lxml
+ - #674: Updated Python, Python-dev and Python packages

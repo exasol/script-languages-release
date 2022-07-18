@@ -19,6 +19,7 @@ This release uses version 0.14.0 of the container tool.
 ## Features / Enhancements
 
  - #666: Make package diffs more robust for CI
+ - #677: Improved poetry project structure
 
 ## Documentation
 

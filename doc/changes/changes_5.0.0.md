@@ -33,6 +33,7 @@ This release uses version 0.14.0 of the container tool.
  - #648: Moved swig-2.0.4.tar.gz to AWS
  - #572: Refactored package import tests
  - #677: Improved poetry project structure
+ - #679: Added a duplicated pyproject.toml 
 
 ## Security
 

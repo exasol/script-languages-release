@@ -83,15 +83,19 @@ The template-Exasol-all-python-3.8-conda flavor provides the language Python 3.8
   - Supported Package Manager: conda, pip
   - [Here](https://github.com/exasol/script-languages/tree/master/flavors/template-Exasol-all-python-3.8-conda/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-#### Python-3.6-data-science-cuda flavors
+### template-Exasol-all-python-3.8-cuda-conda
 
-The python-3.6-data-science-cuda-EXASOL flavor has been changed recently. All machine-learning libraries were removed in order to reduce any security risk. This flavor contains only the CUDA installation on Ubuntu18.04.
+The template-Exasol-all-python-3.8-cuda-conda flavor provides the language Python 3.8 with NVIDIA GPU support and with only absolute necessary packages. This allows very simple customization because you control almost all dependencies. In contrast to Python-3.8-minimal, it also allows the installation of conda packages.
 
-- python-3.6-data-science-cuda-EXASOL-6.2.0
-  - Base Image: ubuntu:18.04
-  - Compatible Exasol Versions: 7.1.\*, 7.0.\*, 6.2.\*
-  - Available languages: Python 3.6
-  - [Here](https://github.com/exasol/script-languages/tree/master/flavors/python-3.6-data-science-cuda-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+- template-Exasol-all-python-3.8-conda
+  - Base Image: ubuntu:20.04
+  - Compatible Exasol Versions: 8.0.\*,7.1.\*, 7.0.\*
+  - Available languages: Python 3.8
+  - Supported Package Manager: conda, pip
+  - Supported NVIDIA Driver: 510.47.0
+  - Installed CudaToolkit: 11.3.1
+  - Installed CuDNN: 8.1.0.77
+  - [Here](https://github.com/exasol/script-languages/tree/master/flavors/template-Exasol-all-python-3.8-cuda-conda/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
 ### R-4-minimal flavors
 

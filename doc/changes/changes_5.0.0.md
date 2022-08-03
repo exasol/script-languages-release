@@ -43,3 +43,4 @@ This release uses version 0.14.0 of the container tool.
  - #668: Updated python-ldap
  - #671: Updated git package
  - #674: Updated Python, Python-dev and Python packages
+ - #683: Updated smb packages 

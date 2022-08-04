@@ -14,7 +14,7 @@ This release uses version 0.14.0 of the container tool.
 
 ## Bug Fixes
 
- n/a
+ - #686: Fixed bazel crashes on conda flavor
 
 ## Features / Enhancements
 

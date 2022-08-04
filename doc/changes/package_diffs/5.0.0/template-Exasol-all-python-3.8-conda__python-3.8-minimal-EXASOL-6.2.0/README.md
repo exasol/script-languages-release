@@ -16,7 +16,6 @@
 - Comparison of build step Conda_deps
   - [New Apt Get Packages](conda_deps/apt_get_packages_diff.md)
 - Comparison of build step Build_deps
-  - [Comparison of Apt Get Packages](build_deps/apt_get_packages_diff.md)
   - [New Conda Channels](build_deps/conda_channels_diff.md)
   - [New Conda Packages](build_deps/conda_packages_diff.md)
 - Comparison of build step Base_test_deps

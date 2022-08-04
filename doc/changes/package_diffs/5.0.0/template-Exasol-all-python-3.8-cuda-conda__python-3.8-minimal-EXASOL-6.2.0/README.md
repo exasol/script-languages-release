@@ -1,0 +1,22 @@
+# Package Version Comparison between Template-exasol-all-python-3.8-cuda-conda flavor in 5.0.0 and Python-3.8-minimal-exasol-6.2.0 flavor in 4.3.0
+
+- Comparison of build step Udfclient_deps
+  - [New Conda Channels](udfclient_deps/conda_channels_diff.md)
+  - [New Conda Packages](udfclient_deps/conda_packages_diff.md)
+- Comparison of build step Security_scan
+  - [Comparison of Apt Get Packages](security_scan/apt_get_packages_diff.md)
+  - [Comparison of Apt Get Packages Trivy Deps](security_scan/apt_get_packages_trivy_deps_diff.md)
+- Comparison of build step Nvidia_driver_deps
+  - [New Apt Get Packages](nvidia_driver_deps/apt_get_packages_diff.md)
+- Comparison of build step Language_deps
+  - [New Conda Channels](language_deps/conda_channels_diff.md)
+  - [New Conda Packages](language_deps/conda_packages_diff.md)
+- Comparison of build step Flavor_base_deps
+  - [New Conda Channels](flavor_base_deps/conda_channels_diff.md)
+  - [New Conda Packages](flavor_base_deps/conda_packages_diff.md)
+  - [Comparison of Python3 Pip Packages](flavor_base_deps/python3_pip_packages_diff.md)
+- Comparison of build step Build_deps
+  - [New Conda Channels](build_deps/conda_channels_diff.md)
+  - [New Conda Packages](build_deps/conda_packages_diff.md)
+- Comparison of build step Base_test_deps
+  - [Comparison of Apt Get Packages](base_test_deps/apt_get_packages_diff.md)

@@ -87,7 +87,7 @@ The template-Exasol-all-python-3.8-conda flavor provides the language Python 3.8
 
 The template-Exasol-all-python-3.8-cuda-conda flavor provides the language Python 3.8 with NVIDIA GPU support and with only absolute necessary packages. This allows very simple customization because you control almost all dependencies. In contrast to Python-3.8-minimal, it also allows the installation of conda packages.
 
-- template-Exasol-all-python-3.8-conda
+- template-Exasol-all-python-3.8-cuda-conda
   - Base Image: ubuntu:20.04
   - Compatible Exasol Versions: 8.0.\*,7.1.\*, 7.0.\*
   - Available languages: Python 3.8

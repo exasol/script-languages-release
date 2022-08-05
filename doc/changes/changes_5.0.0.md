@@ -36,6 +36,7 @@ This release uses version 0.14.0 of the container tool.
  - #677: Improved poetry project structure
  - #679: Added a duplicated pyproject.toml
  - #451: Removed legacy install scripts
+ - #503: Added flavor template-Exasol-all-python-3.8-cuda-conda
 
 ## Security
 

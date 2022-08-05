@@ -14,11 +14,12 @@ This release uses version 0.14.0 of the container tool.
 
 ## Bug Fixes
 
- n/a
+ - #686: Fixed bazel crashes on conda flavor
 
 ## Features / Enhancements
 
  - #666: Make package diffs more robust for CI
+ - #673: Added dev-tools-script to test container
 
 ## Documentation
 
@@ -32,6 +33,10 @@ This release uses version 0.14.0 of the container tool.
  - #650: Changed nightly cron and avoid running nightly builds during the weekend
  - #648: Moved swig-2.0.4.tar.gz to AWS
  - #572: Refactored package import tests
+ - #677: Improved poetry project structure
+ - #679: Added a duplicated pyproject.toml
+ - #451: Removed legacy install scripts
+ - #503: Added flavor template-Exasol-all-python-3.8-cuda-conda
 
 ## Security
 
@@ -42,3 +47,5 @@ This release uses version 0.14.0 of the container tool.
  - #668: Updated python-ldap
  - #671: Updated git package
  - #674: Updated Python, Python-dev and Python packages
+ - #683: Updated smb packages
+ - #690: Updated OpenJDK and libxml2-dev

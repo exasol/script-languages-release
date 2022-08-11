@@ -4,7 +4,7 @@ Code name: Conda-Container and UDF client refactoring
 
 ## Summary
 
-This release adds two new python-flavors, which use the conda-package manager: A conda minimal Python3.8 flavor (template-Exasol-all-python-3.8-conda) and a conda cuda Python3.8 flavor (template-Exasol-all-python-3.8-cuda-conda), which replaces the old cuda Python3.6 container.  
+This release adds two new python flavors, which use the conda-package manager: A conda minimal Python3.8 flavor (`template-Exasol-all-python-3.8-conda`) and a conda cuda Python3.8 flavor (`template-Exasol-all-python-3.8-cuda-conda`), which replaces the old cuda Python3.6 container.  
 Also, the C++ part of the UDF client was refactored. Besides, there are several minor refactorings and features and many security updates for Ubuntu and Python packages. 
 
 ## [Package Version Comparison between Release 4.3.0 and 5.0.0](package_diffs/5.0.0/README.md)

@@ -1,10 +1,11 @@
-# script-languages-release 5.0.0, released t.b.d.
+# script-languages-release 5.0.0, released 2022-08-11
 
-Code name: t.b.d.
+Code name: Conda-Container and UDF client refactoring
 
 ## Summary
 
-t.b.d.
+This release adds two new python-flavors, which use the conda-package manager: A template flavor for Python3.8 with conda (template-Exasol-all-python-3.8-conda) and a template flavor for Python3.8 with conda and cuda (template-Exasol-all-python-3.8-cuda-conda), which replaces the old cuda Python3.6 container.  
+Also, the C++ part of the UDF client was refactored. Besides, there are several minor refactorings and features and many security updates for Ubuntu and Python packages. 
 
 ## [Package Version Comparison between Release 4.3.0 and 5.0.0](package_diffs/5.0.0/README.md)
   
@@ -19,6 +20,7 @@ This release uses version 0.14.0 of the container tool.
 ## Features / Enhancements
 
  - #666: Make package diffs more robust for CI
+ - #590: Added flavor template-Exasol-all-python-3.8-conda
  - #673: Added dev-tools-script to test container
 
 ## Documentation

@@ -28,6 +28,7 @@ This release uses version 0.14.0 of the container tool.
 
  - #697: Disabled version check GH action for master branch
  - #702: Updated toolchain dependencies
+ - #706: Updated script-languages-container-ci-setup dependency
 
 ## Security
 

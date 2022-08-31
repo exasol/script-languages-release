@@ -1,3 +1,4 @@
 poetry.lock linguist-generated=true
 setup.py linguist-generated=true
 aws-code-build/ci/*.yaml linguist-generated=true
+aws-code-build/release/*.yaml linguist-generated=true

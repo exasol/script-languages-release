@@ -3,4 +3,4 @@ setup.py linguist-generated=true
 aws-code-build/ci/*.yaml linguist-generated=true
 aws-code-build/release/*.yaml linguist-generated=true
 .current_gitmodules linguist-generated=true
-doc/changes/package_diffs/**.md linguist-generated=true
+doc/changes/package_diffs/**/*.md linguist-generated=true

@@ -15,6 +15,7 @@ This release uses version 0.14.0 of the container tool.
 ## Bug Fixes
 
  - #703: Fixed package diff workflow
+ - #714: Pinned Python3 cryptography package on legacy standard containers
 
 ## Features / Enhancements
 

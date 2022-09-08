@@ -34,3 +34,4 @@ This release uses version 0.14.0 of the container tool.
 ## Security
 
  - #710: Updated curl
+ - #713: Updated Python3.7

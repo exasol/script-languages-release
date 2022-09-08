@@ -16,6 +16,7 @@ azure-storage-blob|12.8.1
 azure-storage-file-datalake|12.4.0
 azure-storage-file-share|12.5.0
 azure-storage-queue|12.1.6
+cryptography|37.0.4
 boto3|1.17.96
 git+http://github.com/EXASOL/websocket-api.git#egg=exasol-db-api&subdirectory=python|
 google-cloud-asset|3.1.0

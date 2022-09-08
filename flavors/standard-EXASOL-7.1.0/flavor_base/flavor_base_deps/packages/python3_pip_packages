@@ -15,7 +15,7 @@ azure-servicebus|7.3.0
 azure-storage-blob|12.8.1
 azure-storage-file-datalake|12.4.0
 azure-storage-file-share|12.5.0
-azure-storage-queue|12.1.
+azure-storage-queue|12.1.6
 cryptography|37.0.4
 boto3|1.17.96
 git+http://github.com/EXASOL/websocket-api.git@758d57d6d076c495b449c9017db3083498c44445#egg=exasol-db-api&subdirectory=python|

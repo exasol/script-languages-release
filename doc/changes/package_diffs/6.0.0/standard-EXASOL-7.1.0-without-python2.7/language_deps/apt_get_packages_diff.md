@@ -3,7 +3,7 @@
 |    | Package                 | Version in 5.0.0                    | Version in 6.0.0                    | Status   |
 |---:|:------------------------|:------------------------------------|:------------------------------------|:---------|
 |  0 | curl                    | 7.58.0-2ubuntu3.19                  | 7.58.0-2ubuntu3.20                  | UPDATED  |
-|  1 | git                     | 1:2.17.1-1ubuntu0.12                | 1:2.17.1-1ubuntu0.12                |          |
+|  1 | git                     | 1:2.17.1-1ubuntu0.12                | 1:2.17.1-1ubuntu0.13                | UPDATED  |
 |  2 | libexpat1               | 2.2.5-3ubuntu0.7                    | 2.2.5-3ubuntu0.7                    |          |
 |  3 | libexpat1-dev           | 2.2.5-3ubuntu0.7                    | 2.2.5-3ubuntu0.7                    |          |
 |  4 | libsasl2-2              | 2.1.27~101-g0780600+dfsg-3ubuntu2.4 | 2.1.27~101-g0780600+dfsg-3ubuntu2.4 |          |

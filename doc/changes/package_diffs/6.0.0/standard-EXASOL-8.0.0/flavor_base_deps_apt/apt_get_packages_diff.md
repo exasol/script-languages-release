@@ -2,10 +2,10 @@
 
 |    | Package              | Version in 5.0.0                | Version in 6.0.0                | Status   |
 |---:|:---------------------|:--------------------------------|:--------------------------------|:---------|
-|  0 | libcurl4-openssl-dev | 7.68.0-1ubuntu2.12              | 7.68.0-1ubuntu2.13              | UPDATED  |
-|  1 | apt-transport-https  | 2.0.9                           | 2.0.9                           |          |
-|  2 | build-essential      | 12.8ubuntu1.1                   | 12.8ubuntu1.1                   |          |
-|  3 | git                  | 1:2.25.1-1ubuntu3.5             | 1:2.25.1-1ubuntu3.5             |          |
+|  0 | git                  | 1:2.25.1-1ubuntu3.5             | 1:2.25.1-1ubuntu3.6             | UPDATED  |
+|  1 | libcurl4-openssl-dev | 7.68.0-1ubuntu2.12              | 7.68.0-1ubuntu2.13              | UPDATED  |
+|  2 | apt-transport-https  | 2.0.9                           | 2.0.9                           |          |
+|  3 | build-essential      | 12.8ubuntu1.1                   | 12.8ubuntu1.1                   |          |
 |  4 | gnupg                | 2.2.19-3ubuntu2.2               | 2.2.19-3ubuntu2.2               |          |
 |  5 | ldap-utils           | 2.4.49+dfsg-2ubuntu1.9          | 2.4.49+dfsg-2ubuntu1.9          |          |
 |  6 | libhiredis-dev       | 0.14.0-6                        | 0.14.0-6                        |          |

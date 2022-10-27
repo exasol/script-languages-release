@@ -1,5 +1,5 @@
 cryptography|37.0.4
-protobuf|3.17.3
+protobuf|3.18.3
 martian|1.4
 git+http://github.com/EXASOL/websocket-api.git@758d57d6d076c495b449c9017db3083498c44445#egg=exasol-db-api&subdirectory=python|
 pyexasol|0.20.0

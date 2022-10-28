@@ -36,7 +36,7 @@ google-cloud-spanner|3.5.0
 google-cloud-storage|1.38.0
 google-cloud-trace|1.2.0
 martian|1.4
-protobuf|3.17.3
+protobuf|3.18.3
 pyexasol|0.20.0
 pykickstart|3.33
 pysftp|0.2.9

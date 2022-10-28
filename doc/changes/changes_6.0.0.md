@@ -35,3 +35,7 @@ This release uses version 0.14.0 of the container tool.
 
  - #710: Updated curl
  - #713: Updated Python3.7
+ - #720: Updated ubuntu dependencies
+ - #723: Updated curl
+ - #725: Updated pip protobuf package on standard flavors
+ - #727: Ignored CVE-2022-23960

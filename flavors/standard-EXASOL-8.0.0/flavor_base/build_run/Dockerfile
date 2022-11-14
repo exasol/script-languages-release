@@ -29,7 +29,7 @@ RUN ["/bin/bash", "-c", "source /env && bash build.sh --config no-tty --config o
 RUN cp -r -L bazel-bin/* /exaudf && rm -r /exaudf/external/bazel_tools/
 RUN mkdir -p /exaudf/python/python3/ /exaudf/javacontainer
 RUN ln -s /exaudf/external/script_languages/python/python3/pyextdataframe.so /exaudf/python/python3/pyextdataframe.so
-RUN ln -s /exaudf/external/script_languages/javacontainer/libexaudf.jar /exaudf/javacontainer/libexaudf.jar
+RUN ln -s /exaudf/external/script_languages/javacontainer/exaudf_deploy.jar /exaudf/javacontainer/libexaudf.jar
 
 
 # These source files are required for building internal udf plugins

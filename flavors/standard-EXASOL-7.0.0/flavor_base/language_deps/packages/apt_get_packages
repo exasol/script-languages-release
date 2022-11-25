@@ -4,8 +4,8 @@ python2.7-dev|2.7.17-1~18.04ubuntu1.8
 python3.6-dev|3.6.9-1~18.04ubuntu1.8
 python-distutils-extra|2.41ubuntu1
 python3-distutils|3.6.9-1~18.04
-libexpat1|2.2.5-3ubuntu0.8 #Overrides version used by r-base-core/r-base-dev
-libexpat1-dev|2.2.5-3ubuntu0.8 #Overrides version used by r-base-core/r-base-dev
+libexpat1|2.2.5-3ubuntu0.9 #Overrides version used by r-base-core/r-base-dev
+libexpat1-dev|2.2.5-3ubuntu0.9 #Overrides version used by r-base-core/r-base-dev
 libsasl2-2|2.1.27~101-g0780600+dfsg-3ubuntu2.4 #Overrides version used by r-base-core/r-base-dev
 libsasl2-modules-db|2.1.27~101-g0780600+dfsg-3ubuntu2.4 #Overrides version used by r-base-core/r-base-dev
 r-base-core|3.4.4-1ubuntu1

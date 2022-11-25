@@ -41,3 +41,4 @@ This release uses version 0.14.0 of the container tool.
  - #727: Ignored CVE-2022-23960
  - #732: Update openjdk for standard flavors
  - #734: Ignored CVE-2022-43945 and update Ubuntu packages
+ - #737: Updated ubuntu packages

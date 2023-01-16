@@ -1,6 +1,7 @@
 # Package Version Comparison between 6.0.0 and 5.0.0
 
-- [Comparison of flavor Python-3.6-minimal-exasol-6.2.0](python-3.6-minimal-EXASOL-6.2.0/README.md)
+Python-3.6-minimal-exasol-6.2.0 flavor was removed.
+
 - [Comparison of flavor Python-3.7-minimal-exasol-6.2.0](python-3.7-minimal-EXASOL-6.2.0/README.md)
 - [Comparison of flavor Python-3.8-minimal-exasol-6.2.0](python-3.8-minimal-EXASOL-6.2.0/README.md)
 - [Comparison of flavor R-4-minimal-exasol-6.2.0](r-4-minimal-EXASOL-6.2.0/README.md)

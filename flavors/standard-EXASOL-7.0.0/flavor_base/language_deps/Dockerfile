@@ -7,7 +7,7 @@ RUN /scripts/install_scripts/install_python2.7_pip.sh
 RUN /scripts/install_scripts/install_python3.7_pip.sh
 
 COPY language_deps/packages/python3_pip_packages /build_info/packages/language_deps
-RUN /scripts/install_scripts/install_via_pip.pl --file /build_info/packages/language_deps/python3_pip_packages --with-versions --allow-no-version-for-urls --python-binary python3
+RUN /scripts/install_scripts/install_via_pip.pl --file /build_info/packages/language_deps/python3_pip_packages --with-versions --allow-no-version-for-urls --python-binary python3.7
 
 
 ENV PYTHON2_PREFIX /usr

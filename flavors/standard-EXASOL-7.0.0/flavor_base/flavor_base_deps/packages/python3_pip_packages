@@ -6,7 +6,7 @@ pyexasol|0.20.0
 pysftp|0.2.9
 boto3|1.17.96
 pykickstart|3.33
-setuptools|60.5.0
+setuptools|65.5.1
 pycurl|7.44.1
 redis|4.1.0
 pysmbc|1.0.23

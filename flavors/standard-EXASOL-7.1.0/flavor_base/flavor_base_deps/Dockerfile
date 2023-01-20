@@ -9,7 +9,7 @@ COPY flavor_base_deps/packages/python2_pip_packages /build_info/packages/flavor_
 RUN /scripts/install_scripts/install_via_pip.pl --file /build_info/packages/flavor_base_deps/python2_pip_packages --with-versions --allow-no-version-for-urls --python-binary python --use-deprecated-legacy-resolver --ignore-installed
 
 COPY flavor_base_deps/packages/python3_pip_packages /build_info/packages/flavor_base_deps
-RUN /scripts/install_scripts/install_via_pip.pl --file /build_info/packages/flavor_base_deps/python3_pip_packages --with-versions --allow-no-version-for-urls --python-binary python3 --use-deprecated-legacy-resolver --ignore-installed
+RUN /scripts/install_scripts/install_via_pip.pl --file /build_info/packages/flavor_base_deps/python3_pip_packages --with-versions --allow-no-version-for-urls --python-binary python3.7 --use-deprecated-legacy-resolver --ignore-installed
 
 COPY flavor_base_deps/packages/cran_packages /build_info/packages/flavor_base_deps
 RUN /scripts/install_scripts/install_via_r_remotes.pl --file /build_info/packages/flavor_base_deps/cran_packages --rscript-binary Rscript --with-versions

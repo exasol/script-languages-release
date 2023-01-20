@@ -39,7 +39,7 @@ pyexasol|0.23.3
 pysftp|0.2.9
 pytz|2021.3
 sagemaker|2.72.3
-setuptools|60.5.0
+setuptools|65.5.1
 pycurl|7.44.1
 redis|4.1.0
 roman|3.3
@@ -71,3 +71,4 @@ numba-scipy|0.3.0
 pyyaml|6.0
 https://github.com/exasol/bucketfs-utils-python/releases/download/0.1.0/exasol_bucketfs_utils_python-0.1.0-py3-none-any.whl|
 pysmbc|1.0.23
+cryptography|38.0.4

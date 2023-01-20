@@ -10,7 +10,7 @@ t.b.d.
   
 ## Script-Language-Container-Tool (Exaslct)
 
-This release uses version 0.14.0 of the container tool.
+This release uses version 0.15.0 of the container tool.
 
 ## Bug Fixes
 
@@ -44,3 +44,4 @@ This release uses version 0.14.0 of the container tool.
  - #737: Updated ubuntu packages
  - #740: Updated Ubuntu packages
  - #745: Updated Ubuntu python packages
+ - #748: Updated Ubuntu packages and removed Python 3.6

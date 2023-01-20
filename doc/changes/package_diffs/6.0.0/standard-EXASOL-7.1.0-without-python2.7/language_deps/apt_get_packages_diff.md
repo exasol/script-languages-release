@@ -3,7 +3,7 @@
 |    | Package                 | Version in 5.0.0                    | Version in 6.0.0                    | Status   |
 |---:|:------------------------|:------------------------------------|:------------------------------------|:---------|
 |  0 | curl                    | 7.58.0-2ubuntu3.19                  | 7.58.0-2ubuntu3.22                  | UPDATED  |
-|  1 | git                     | 1:2.17.1-1ubuntu0.12                | 1:2.17.1-1ubuntu0.14                | UPDATED  |
+|  1 | git                     | 1:2.17.1-1ubuntu0.12                | 1:2.17.1-1ubuntu0.15                | UPDATED  |
 |  2 | libexpat1               | 2.2.5-3ubuntu0.7                    | 2.2.5-3ubuntu0.9                    | UPDATED  |
 |  3 | libexpat1-dev           | 2.2.5-3ubuntu0.7                    | 2.2.5-3ubuntu0.9                    | UPDATED  |
 |  4 | openjdk-11-jdk-headless | 11.0.16+8-0ubuntu1~18.04            | 11.0.17+8-1ubuntu2~18.04            | UPDATED  |

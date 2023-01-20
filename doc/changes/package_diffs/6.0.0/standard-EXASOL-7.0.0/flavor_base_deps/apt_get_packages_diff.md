@@ -2,7 +2,7 @@
 
 |     | Package               | Version in 5.0.0                | Version in 6.0.0                    | Status   |
 |----:|:----------------------|:--------------------------------|:------------------------------------|:---------|
-|   0 | git                   | 1:2.17.1-1ubuntu0.12            | 1:2.17.1-1ubuntu0.14                | UPDATED  |
+|   0 | git                   | 1:2.17.1-1ubuntu0.12            | 1:2.17.1-1ubuntu0.15                | UPDATED  |
 |   1 | python-samba          | 2:4.7.6+dfsg~ubuntu-0ubuntu2.28 | 2:4.7.6+dfsg~ubuntu-0ubuntu2.29     | UPDATED  |
 |   2 | unzip                 | 6.0-21ubuntu1.1                 | 6.0-21ubuntu1.2                     | UPDATED  |
 |   3 | python3-boto          | 2.44.0-1ubuntu2.18.04.1         |                                     | REMOVED  |

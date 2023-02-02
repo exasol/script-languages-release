@@ -11,3 +11,4 @@ Python-3.6-minimal-exasol-6.2.0 flavor was removed. Also, Standard-exasol-7.x we
 - [Comparison of flavor Standard-exasol-8.0.0](standard-EXASOL-8.0.0/README.md)
 - [Comparison of flavor Standard-exasol-7.1.0-without-python2.7](standard-EXASOL-7.1.0-without-python2.7/README.md)
 - [Comparison of flavor R-4-minimal-exasol-6.2.0](r-4-minimal-EXASOL-6.2.0/README.md)
+

@@ -4,10 +4,10 @@
 |---:|:---------------------|:--------------------------------|:--------------------------------|:---------|
 |  0 | git                  | 1:2.25.1-1ubuntu3.5             | 1:2.25.1-1ubuntu3.8             | UPDATED  |
 |  1 | libcurl4-openssl-dev | 7.68.0-1ubuntu2.12              | 7.68.0-1ubuntu2.15              | UPDATED  |
-|  2 | libsmbclient         | 2:4.13.17~dfsg-0ubuntu1.20.04.1 | 2:4.13.17~dfsg-0ubuntu1.20.04.2 | UPDATED  |
-|  3 | libsmbclient-dev     | 2:4.13.17~dfsg-0ubuntu1.20.04.1 | 2:4.13.17~dfsg-0ubuntu1.20.04.2 | UPDATED  |
+|  2 | libsmbclient         | 2:4.13.17~dfsg-0ubuntu1.20.04.1 | 2:4.13.17~dfsg-0ubuntu1.20.04.5 | UPDATED  |
+|  3 | libsmbclient-dev     | 2:4.13.17~dfsg-0ubuntu1.20.04.1 | 2:4.13.17~dfsg-0ubuntu1.20.04.5 | UPDATED  |
 |  4 | libxml2-dev          | 2.9.10+dfsg-5ubuntu0.20.04.4    | 2.9.10+dfsg-5ubuntu0.20.04.5    | UPDATED  |
-|  5 | smbclient            | 2:4.13.17~dfsg-0ubuntu1.20.04.1 | 2:4.13.17~dfsg-0ubuntu1.20.04.2 | UPDATED  |
+|  5 | smbclient            | 2:4.13.17~dfsg-0ubuntu1.20.04.1 | 2:4.13.17~dfsg-0ubuntu1.20.04.5 | UPDATED  |
 |  6 | unzip                | 6.0-25ubuntu1                   | 6.0-25ubuntu1.1                 | UPDATED  |
 |  7 | apt-transport-https  | 2.0.9                           | 2.0.9                           |          |
 |  8 | build-essential      | 12.8ubuntu1.1                   | 12.8ubuntu1.1                   |          |

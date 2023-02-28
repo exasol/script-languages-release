@@ -12,7 +12,7 @@ libldap2-dev|2.4.45+dfsg-1ubuntu1.11 # Needed by python3-ldap
 libsasl2-dev|2.1.27~101-g0780600+dfsg-3ubuntu2.4 # Needed by python3-ldap
 ldap-utils|2.4.45+dfsg-1ubuntu1.11
 unixodbc-dev|2.3.4-1.1ubuntu3
-python-setuptools|39.0.1-2
+python-setuptools|39.0.1-2ubuntu0.1
 python-cffi|1.11.5-1
 python-cryptography|2.1.4-1ubuntu1.4
 python-docutils|0.14+dfsg-3

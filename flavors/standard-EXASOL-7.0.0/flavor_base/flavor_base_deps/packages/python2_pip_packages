@@ -1,6 +1,0 @@
-pytz|2021.1
-azure-storage|0.36.0 #v0.37.0 is deprecated and breaks the build.
-git+http://github.com/EXASOL/websocket-api.git@758d57d6d076c495b449c9017db3083498c44445#egg=exasol-db-api&subdirectory=python|
-pysftp|0.2.9
-boto3|1.17.96
-rsa|4.5 # higher version of the rsa package don't support python2

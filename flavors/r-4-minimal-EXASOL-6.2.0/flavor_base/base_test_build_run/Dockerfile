@@ -31,7 +31,7 @@ RUN ["/bin/bash", "-c", "source /env && bash build.sh --config no-tty -c dbg --c
 RUN cp -r -L bazel-bin/* /exaudf
 
 WORKDIR /exaudfclient/base
-RUN ./test_udfclient.sh /exaudf/exaudfclient
+RUN ./test_udfclient.sh /exaudf/exaudfclient_py3
 
 WORKDIR /
 RUN mkdir /exasol_emulator

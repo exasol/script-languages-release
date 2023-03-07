@@ -57,7 +57,7 @@ simplejson|3.17.6
 scikit-learn|1.0.2
 plyvel|1.4.0
 python-ldap|3.4.0
-pyOpenSSL|21.0.0 
+pyOpenSSL|23.0.0 
 git+http://github.com/EXASOL/websocket-api.git@5150f964388412788bf5e47752a7916a5a8624c5#egg=exasol-db-api&subdirectory=python|
 debugpy|1.5.1
 pybase64|1.2.1 
@@ -71,4 +71,4 @@ numba-scipy|0.3.0
 pyyaml|6.0
 https://github.com/exasol/bucketfs-utils-python/releases/download/0.1.0/exasol_bucketfs_utils_python-0.1.0-py3-none-any.whl|
 pysmbc|1.0.23
-cryptography|38.0.4
+cryptography|39.0.1

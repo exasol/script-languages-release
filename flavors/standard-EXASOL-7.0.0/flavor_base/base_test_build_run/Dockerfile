@@ -35,7 +35,6 @@ RUN ln -s /exaudf/external/script_languages/javacontainer/libexaudf.jar /exaudf/
 
 # These source files are required for building internal udf plugins
 WORKDIR /exaudfclient/base
-RUN ./test_udfclient.sh /exaudf/exaudfclient
 RUN ./test_udfclient.sh /exaudf/exaudfclient_py3
 RUN ./test_udfclient.sh /exaudf/exaudfclient_py3_static
 

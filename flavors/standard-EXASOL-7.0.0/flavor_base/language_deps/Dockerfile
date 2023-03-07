@@ -3,7 +3,6 @@ FROM {{udfclient_deps}}
 COPY language_deps/packages /build_info/packages/language_deps
 RUN /scripts/install_scripts/install_via_apt.pl --file /build_info/packages/language_deps/apt_get_packages --with-versions
 
-RUN /scripts/install_scripts/install_python2.7_pip.sh
 RUN /scripts/install_scripts/install_python3.7_pip.sh
 
 COPY language_deps/packages/python3_pip_packages /build_info/packages/language_deps

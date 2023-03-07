@@ -27,7 +27,7 @@ RUN mkdir /exaudfclient /exaudf
 COPY /exaudfclient /exaudfclient
 
 WORKDIR /exaudfclient/extension
-RUN ["/bin/bash", "-c", "source /env && bash build.sh --config no-tty -c dbg --config r --config slow-wrapper-both"]
+RUN ["/bin/bash", "-c", "source /env && bash build.sh --config no-tty -c dbg --config r --config slow-wrapper-py3"]
 RUN cp -r -L bazel-bin/* /exaudf
 
 WORKDIR /exaudfclient/base

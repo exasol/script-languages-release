@@ -25,7 +25,7 @@ RUN mkdir /exaudfclient /exaudf /exaudf/src
 COPY /exaudfclient /exaudfclient
 
 WORKDIR /exaudfclient/extension
-RUN ["/bin/bash", "-c", "source /env && bash build.sh --config no-tty --config optimize --config optimize-r --config fast-binary-both"]
+RUN ["/bin/bash", "-c", "source /env && bash build.sh --config no-tty --config optimize --config optimize-r --config fast-binary-py3"]
 RUN cp -r -L bazel-bin/* /exaudf
 
 WORKDIR /exaudfclient/base

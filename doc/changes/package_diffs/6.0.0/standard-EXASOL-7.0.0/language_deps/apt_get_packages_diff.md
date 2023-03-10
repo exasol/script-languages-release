@@ -2,13 +2,13 @@
 
 |    | Package                 | Version in 5.0.0                    | Version in 6.0.0                    | Status   |
 |---:|:------------------------|:------------------------------------|:------------------------------------|:---------|
-|  0 | curl                    | 7.58.0-2ubuntu3.19                  | 7.58.0-2ubuntu3.22                  | UPDATED  |
-|  1 | git                     | 1:2.17.1-1ubuntu0.12                | 1:2.17.1-1ubuntu0.16                | UPDATED  |
+|  0 | curl                    | 7.58.0-2ubuntu3.19                  | 7.58.0-2ubuntu3.23                  | UPDATED  |
+|  1 | git                     | 1:2.17.1-1ubuntu0.12                | 1:2.17.1-1ubuntu0.17                | UPDATED  |
 |  2 | libexpat1               | 2.2.5-3ubuntu0.7                    | 2.2.5-3ubuntu0.9                    | UPDATED  |
 |  3 | libexpat1-dev           | 2.2.5-3ubuntu0.7                    | 2.2.5-3ubuntu0.9                    | UPDATED  |
-|  4 | openjdk-11-jdk-headless | 11.0.16+8-0ubuntu1~18.04            | 11.0.17+8-1ubuntu2~18.04            | UPDATED  |
-|  5 | python2.7-dev           | 2.7.17-1~18.04ubuntu1.8             | 2.7.17-1~18.04ubuntu1.10            | UPDATED  |
-|  6 | python-distutils-extra  | 2.41ubuntu1                         |                                     | REMOVED  |
+|  4 | openjdk-11-jdk-headless | 11.0.16+8-0ubuntu1~18.04            | 11.0.18+10-0ubuntu1~18.04.1         | UPDATED  |
+|  5 | python-distutils-extra  | 2.41ubuntu1                         |                                     | REMOVED  |
+|  6 | python2.7-dev           | 2.7.17-1~18.04ubuntu1.8             |                                     | REMOVED  |
 |  7 | python3.6-dev           | 3.6.9-1~18.04ubuntu1.8              |                                     | REMOVED  |
 |  8 | python3.7               |                                     | 3.7.5-2ubuntu1~18.04.2              | NEW      |
 |  9 | python3.7-dev           |                                     | 3.7.5-2ubuntu1~18.04.2              | NEW      |

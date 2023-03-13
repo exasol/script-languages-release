@@ -18,7 +18,7 @@ azure-storage-file-share|12.5.0
 azure-storage-queue|12.1.6
 cryptography|39.0.1
 boto3|1.17.96
-git+http://github.com/EXASOL/websocket-api.git@758d57d6d076c495b449c9017db3083498c44445#egg=exasol-db-api&subdirectory=python|
+git+http://github.com/EXASOL/websocket-api.git#egg=exasol-db-api&subdirectory=python|
 google-cloud-asset|3.1.0
 google-cloud-bigquery|2.20.0
 google-cloud-bigquery-storage|2.4.0
@@ -47,7 +47,6 @@ grafeas|1.4.0
 setuptools|65.5.1
 pycurl|7.44.1
 redis|4.1.0
-pysmbc|1.0.23
 roman|3.3
 python-ldap|3.4.0
 leveldb|0.201

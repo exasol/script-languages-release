@@ -1,10 +1,10 @@
 # script-languages-release 6.0.0, released t.b.d.
 
-Code name: t.b.d.
+Code name: Python 2 and Python 3.6 Removal
 
 ## Summary
 
-t.b.d. 
+In this release, we removed Python 3.6 and Python 2 from the flavors and replaced it with Python 3.7, because the former ones are long time end of life and don't receive security fixes anymore.
 
 ## [Package Version Comparison between Release 5.0.0 and 6.0.0](package_diffs/6.0.0/README.md)
   
@@ -48,3 +48,5 @@ This release uses version 0.15.0 of the container tool.
  - #752: Updated ubuntu packages
  - #756: Updated Ubuntu packages
  - #759: Updated Ubuntu packages
+ - #762: Update Conda/Ubuntu/Pypi packages
+ - #764: Remove Python 2 from the flavors

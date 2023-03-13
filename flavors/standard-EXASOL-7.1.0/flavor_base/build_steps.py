@@ -137,7 +137,6 @@ class AnalyzeRelease(DockerFlavorAnalyzeImageTask):
 
 
 
-
 class SecurityScan(DockerFlavorAnalyzeImageTask):
     def get_build_step(self) -> str:
         return "security_scan"

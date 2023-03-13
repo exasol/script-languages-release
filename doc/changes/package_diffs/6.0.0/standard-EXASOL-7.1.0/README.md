@@ -11,7 +11,6 @@
 - Comparison of build step Flavor_base_deps
   - [Comparison of Apt Get Packages](flavor_base_deps/apt_get_packages_diff.md)
   - [Comparison of Cran Packages](flavor_base_deps/cran_packages_diff.md)
-  - [Comparison of Python2 Pip Packages](flavor_base_deps/python2_pip_packages_diff.md)
   - [Comparison of Python3 Pip Packages](flavor_base_deps/python3_pip_packages_diff.md)
 - Comparison of build step Build_deps
   - [Comparison of Apt Get Packages](build_deps/apt_get_packages_diff.md)

@@ -2,7 +2,7 @@
 
 |    | Package           | Version in 5.0.0         | Version in 6.0.0         | Status   |
 |---:|:------------------|:-------------------------|:-------------------------|:---------|
-|  0 | curl              | 7.58.0-2ubuntu3.19       | 7.58.0-2ubuntu3.22       | UPDATED  |
+|  0 | curl              | 7.58.0-2ubuntu3.19       | 7.58.0-2ubuntu3.23       | UPDATED  |
 |  1 | openjdk-11-jdk    | 11.0.11+9-0ubuntu2~18.04 | 11.0.17+8-1ubuntu2~18.04 | UPDATED  |
 |  2 | build-essential   | 12.4ubuntu1              | 12.4ubuntu1              |          |
 |  3 | chrpath           | 0.16-2                   | 0.16-2                   |          |

@@ -8,7 +8,7 @@ boto3|1.17.96
 pykickstart|3.33
 setuptools|65.5.1
 pycurl|7.44.1
-redis|4.1.0
+redis|4.5.3
 roman|3.3
 python-ldap|3.4.0
 leveldb|0.201

@@ -46,7 +46,7 @@ sagemaker|2.59.5
 grafeas|1.4.0
 setuptools|65.5.1
 pycurl|7.44.1
-redis|4.1.0
+redis|4.5.3
 roman|3.3
 python-ldap|3.4.0
 leveldb|0.201

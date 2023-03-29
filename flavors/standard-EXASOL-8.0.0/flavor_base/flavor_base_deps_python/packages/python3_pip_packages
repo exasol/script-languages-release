@@ -41,7 +41,7 @@ pytz|2021.3
 sagemaker|2.72.3
 setuptools|65.5.1
 pycurl|7.44.1
-redis|4.1.0
+redis|4.5.3
 roman|3.3
 pyodbc|4.0.32
 lxml|4.9.1

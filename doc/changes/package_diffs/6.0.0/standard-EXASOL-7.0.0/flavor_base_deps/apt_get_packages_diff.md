@@ -67,7 +67,7 @@
 |  62 | python3-smbc          | 1.0.15.6-1build2                |                                     | REMOVED  |
 |  63 | python3-ujson         | 1.35-2                          |                                     | REMOVED  |
 |  64 | ldap-utils            |                                 | 2.4.45+dfsg-1ubuntu1.11             | NEW      |
-|  65 | libcurl4-openssl-dev  |                                 | 7.58.0-2ubuntu3.23                  | NEW      |
+|  65 | libcurl4-openssl-dev  |                                 | 7.58.0-2ubuntu3.24                  | NEW      |
 |  66 | libldap2-dev          |                                 | 2.4.45+dfsg-1ubuntu1.11             | NEW      |
 |  67 | libsasl2-dev          |                                 | 2.1.27~101-g0780600+dfsg-3ubuntu2.4 | NEW      |
 |  68 | unixodbc-dev          |                                 | 2.3.4-1.1ubuntu3                    | NEW      |

@@ -3,7 +3,7 @@
 |    | Package              | Version in 5.0.0                | Version in 6.0.0                | Status   |
 |---:|:---------------------|:--------------------------------|:--------------------------------|:---------|
 |  0 | git                  | 1:2.25.1-1ubuntu3.5             | 1:2.25.1-1ubuntu3.10            | UPDATED  |
-|  1 | libcurl4-openssl-dev | 7.68.0-1ubuntu2.12              | 7.68.0-1ubuntu2.16              | UPDATED  |
+|  1 | libcurl4-openssl-dev | 7.68.0-1ubuntu2.12              | 7.68.0-1ubuntu2.18              | UPDATED  |
 |  2 | libldb2              | 2:2.2.3-0ubuntu0.20.04.3        | 2:2.4.4-0ubuntu0.20.04.1        | UPDATED  |
 |  3 | libsmbclient         | 2:4.13.17~dfsg-0ubuntu1.20.04.1 | 2:4.15.13+dfsg-0ubuntu0.20.04.1 | UPDATED  |
 |  4 | libsmbclient-dev     | 2:4.13.17~dfsg-0ubuntu1.20.04.1 | 2:4.15.13+dfsg-0ubuntu0.20.04.1 | UPDATED  |

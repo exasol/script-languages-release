@@ -53,3 +53,4 @@ This release uses version 0.15.0 of the container tool.
  - #762: Update Conda/Ubuntu/Pypi packages
  - #764: Remove Python 2 from the flavors
  - #767: Update libprotobuf-dev 
+ - #775: Update dependencies

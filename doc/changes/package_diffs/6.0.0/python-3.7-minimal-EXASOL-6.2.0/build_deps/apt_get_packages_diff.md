@@ -2,7 +2,7 @@
 
 |    | Package           | Version in 5.0.0         | Version in 6.0.0         | Status   |
 |---:|:------------------|:-------------------------|:-------------------------|:---------|
-|  0 | curl              | 7.58.0-2ubuntu3.19       | 7.58.0-2ubuntu3.23       | UPDATED  |
+|  0 | curl              | 7.58.0-2ubuntu3.19       | 7.58.0-2ubuntu3.24       | UPDATED  |
 |  1 | build-essential   | 12.4ubuntu1              | 12.4ubuntu1              |          |
 |  2 | chrpath           | 0.16-2                   | 0.16-2                   |          |
 |  3 | coreutils         | 8.28-1ubuntu1            | 8.28-1ubuntu1            |          |

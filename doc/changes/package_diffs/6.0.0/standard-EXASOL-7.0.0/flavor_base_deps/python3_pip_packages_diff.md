@@ -18,7 +18,7 @@
 | 13 | pyftpdlib                                                                                                                     |                      | 1.5.6                | NEW      |
 | 14 | pyodbc                                                                                                                        |                      | 4.0.32               | NEW      |
 | 15 | python-ldap                                                                                                                   |                      | 3.4.0                | NEW      |
-| 16 | redis                                                                                                                         |                      | 4.1.0                | NEW      |
+| 16 | redis                                                                                                                         |                      | 4.5.3                | NEW      |
 | 17 | requests                                                                                                                      |                      | 2.27.1               | NEW      |
 | 18 | roman                                                                                                                         |                      | 3.3                  | NEW      |
 | 19 | scikit-learn                                                                                                                  |                      | 1.0.2                | NEW      |

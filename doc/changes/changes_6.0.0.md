@@ -33,6 +33,7 @@ This release uses version 0.15.0 of the container tool.
  - #702: Updated toolchain dependencies
  - #706: Updated script-languages-container-ci-setup dependency
  - #774: Updated CI to the version released on PyPi
+ - #768: Removed or replaced Python 2 tests
 
 ## Security
 

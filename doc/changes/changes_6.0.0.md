@@ -32,6 +32,7 @@ This release uses version 0.15.0 of the container tool.
  - #697: Disabled version check GH action for master branch
  - #702: Updated toolchain dependencies
  - #706: Updated script-languages-container-ci-setup dependency
+ - #774: Updated CI to the version released on PyPi
 
 ## Security
 
@@ -41,7 +42,7 @@ This release uses version 0.15.0 of the container tool.
  - #723: Updated curl
  - #725: Updated pip protobuf package on standard flavors
  - #727: Ignored CVE-2022-23960
- - #732: Update openjdk for standard flavors
+ - #732: Updated openjdk for standard flavors
  - #734: Ignored CVE-2022-43945 and update Ubuntu packages
  - #737: Updated ubuntu packages
  - #740: Updated Ubuntu packages
@@ -50,7 +51,7 @@ This release uses version 0.15.0 of the container tool.
  - #752: Updated ubuntu packages
  - #756: Updated Ubuntu packages
  - #759: Updated Ubuntu packages
- - #762: Update Conda/Ubuntu/Pypi packages
- - #764: Remove Python 2 from the flavors
- - #767: Update libprotobuf-dev 
- - #775: Update dependencies
+ - #762: Updated Conda/Ubuntu/Pypi packages
+ - #764: Removed Python 2 from the flavors
+ - #767: Updated libprotobuf-dev 
+ - #775: Updated dependencies

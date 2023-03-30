@@ -124,7 +124,11 @@ INTERNAL_RUN_WRAPPER_BODY__ <- function(meta, inp, out) {
                 if (!is.null(data)) {
                   emitfun(data)
                   if (!nextfun()) break
-                } else break;
+                } else {
+                  emitfun(NA)
+                  if (!nextfun()) break
+                  #stop(paste("F-UDF-CL-SL-R-: R null value not allowed as return value, please use NA to return a SQL NULL Value"))
+		};
             }
             eo("F-UDF-CL-SL-R-1047",ResultHandler_flush)
         } else if (em("F-UDF-CL-SL-R-1048",Metadata_outputType) == "MULTIPLE") {

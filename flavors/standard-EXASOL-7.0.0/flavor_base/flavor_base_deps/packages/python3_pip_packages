@@ -1,4 +1,4 @@
-cryptography|37.0.4
+cryptography|39.0.1
 protobuf|3.18.3
 martian|1.4
 git+http://github.com/EXASOL/websocket-api.git@758d57d6d076c495b449c9017db3083498c44445#egg=exasol-db-api&subdirectory=python|
@@ -8,12 +8,11 @@ boto3|1.17.96
 pykickstart|3.33
 setuptools|65.5.1
 pycurl|7.44.1
-redis|4.1.0
-pysmbc|1.0.23
+redis|4.5.3
 roman|3.3
 python-ldap|3.4.0
 leveldb|0.201
-pyOpenSSL|21.0.0
+pyOpenSSL|23.0.0
 pyodbc|4.0.32
 lxml|4.9.1
 scikit-learn|1.0.2

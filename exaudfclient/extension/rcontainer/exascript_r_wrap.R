@@ -123,8 +123,10 @@ INTERNAL_RUN_WRAPPER_BODY__ <- function(meta, inp, out) {
                 data <- run(context)
                 if (!is.null(data)) {
                   emitfun(data)
-                  if (!nextfun()) break
-                } else break;
+                } else {
+                  emitfun(NA)
+		};
+                if (!nextfun()) break
             }
             eo("F-UDF-CL-SL-R-1047",ResultHandler_flush)
         } else if (em("F-UDF-CL-SL-R-1048",Metadata_outputType) == "MULTIPLE") {

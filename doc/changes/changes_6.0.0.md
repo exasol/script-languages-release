@@ -1,4 +1,4 @@
-# script-languages-release 6.0.0, released t.b.d.
+# script-languages-release 6.0.0, released 2023-03-31
 
 Code name: Python 2 and Python 3.6 Removal
 
@@ -6,7 +6,7 @@ Code name: Python 2 and Python 3.6 Removal
 
 In this release, we removed Python 3.6 and Python 2 from the flavors and replaced it with Python 3.7, because the former ones are long time end of life and don't receive security fixes anymore. 
 
-**Note**: We had to remove samba support from the standard flavor 7.\*, because they depended on Python 2. If you need samba support, please use the standard flavor 8.0.
+**Note**: We had to remove samba support from the standard flavor 7.\*, because it depended on Python 2. If you need samba support, please use the standard flavor 8.0.
 
 Furthermore, this release fixed a bug with R SCALAR RETURNS UDFs where either a empty run function or returning null from the run function lead to a hanging  UDF, which will fail after a while with a out of memory error.
 

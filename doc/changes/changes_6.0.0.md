@@ -8,6 +8,8 @@ In this release, we removed Python 3.6 and Python 2 from the flavors and replace
 
 **Note**: We had to remove samba support from the standard flavor 7.\*, because they depended on Python 2. If you need samba support, please use the standard flavor 8.0.
 
+Furthermore, this release fixed a bug with R SCALAR RETURNS UDFs where either a empty run function or returning null from the run function lead to a hanging  UDF, which will fail after a while with a out of memory error.
+
 ## [Package Version Comparison between Release 5.0.0 and 6.0.0](package_diffs/6.0.0/README.md)
   
 ## Script-Language-Container-Tool (Exaslct)
@@ -18,6 +20,7 @@ This release uses version 0.15.0 of the container tool.
 
  - #703: Fixed package diff workflow
  - #714: Pinned Python3 cryptography package on legacy standard containers
+ - #754: Fixed R SCALAR RETURNS UDFs with empty run function hangs 
 
 ## Features / Enhancements
 

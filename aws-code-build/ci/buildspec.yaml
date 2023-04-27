@@ -41,6 +41,13 @@ batch:
         compute-type: BUILD_GENERAL1_MEDIUM
         privileged-mode: true
       buildspec: ./aws-code-build/ci/build_buildspec.yaml
+    - identifier: build_standard_EXASOL_710_without_python27
+      env:
+        variables:
+          FLAVOR: standard-EXASOL-7.1.0-without-python2.7
+        compute-type: BUILD_GENERAL1_MEDIUM
+        privileged-mode: true
+      buildspec: ./aws-code-build/ci/build_buildspec.yaml
     - identifier: build_standard_EXASOL_800
       env:
         variables:

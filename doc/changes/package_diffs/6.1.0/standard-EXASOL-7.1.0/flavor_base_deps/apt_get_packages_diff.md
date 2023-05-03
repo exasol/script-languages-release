@@ -2,8 +2,8 @@
 
 |    | Package              | Version in 6.0.0                    | Version in 6.1.0                    | Status   |
 |---:|:---------------------|:------------------------------------|:------------------------------------|:---------|
-|  0 | coreutils            | 8.28-1ubuntu1                       | 8.28-1ubuntu1                       |          |
-|  1 | git                  | 1:2.17.1-1ubuntu0.17                | 1:2.17.1-1ubuntu0.17                |          |
+|  0 | git                  | 1:2.17.1-1ubuntu0.17                | 1:2.17.1-1ubuntu0.18                | UPDATED  |
+|  1 | coreutils            | 8.28-1ubuntu1                       | 8.28-1ubuntu1                       |          |
 |  2 | ldap-utils           | 2.4.45+dfsg-1ubuntu1.11             | 2.4.45+dfsg-1ubuntu1.11             |          |
 |  3 | libcurl4-openssl-dev | 7.58.0-2ubuntu3.24                  | 7.58.0-2ubuntu3.24                  |          |
 |  4 | libldap2-dev         | 2.4.45+dfsg-1ubuntu1.11             | 2.4.45+dfsg-1ubuntu1.11             |          |

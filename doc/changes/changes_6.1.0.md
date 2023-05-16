@@ -10,11 +10,11 @@ t.b.d.
   
 ## Script-Language-Container-Tool (Exaslct)
 
-This release uses version 0.16.0 of the container tool.
+This release uses version 0.17.0 of the container tool.
 
 ## Bug Fixes
 
-n/a
+ - #792: Fixes Github workflow publish-test-container by updating script-languages-container-tool to 0.17.0 and script-languages-container-ci to 1.1.0
 
 ## Features / Enhancements
 

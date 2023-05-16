@@ -2,8 +2,8 @@ name: Check package diff tool
 
 on:
   push:
-    branches-ignore:
-      - master
+    branches:
+      - develop
 
 jobs:
   check_package_diff:
@@ -11,8 +11,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
+    
+    - name: Init submodules
+      run: git submodule update --init --recursive
 
     - uses: ./.github/actions/prepare_poetry_env
 
@@ -28,4 +29,4 @@ jobs:
     - name: Run generate_package_diffs_for_flavors
       run: |
         source "${{ env.poetry_env_path }}/bin/activate"
-        python3 scripts/generate_package_diffs_for_flavors/generate_package_diffs_for_flavors.py --output-directory /tmp/output --current-working-copy-name test --compare-to-commit master
+        python3 scripts/generate_package_diffs_for_flavors/generate_package_diffs_for_flavors.py --output-directory /tmp/output --current-working-copy-name test

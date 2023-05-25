@@ -31,6 +31,7 @@ n/a
 ## Security
 
  - #785: Updated Ubuntu packages
- - #789: Update Ubuntu packages
- - #777: Update redis-py to fix CVE-2023-28859
+ - #789: Updated Ubuntu packages
+ - #777: Updated redis-py to fix CVE-2023-28859
  - #800: Updated Ubuntu packages
+ - #803: Updated Ubuntu packages

@@ -2,7 +2,7 @@
 
 |    | Package   | Version in 6.0.0       | Version in 6.1.0       | Status   |
 |---:|:----------|:-----------------------|:-----------------------|:---------|
-|  0 | binutils  | 2.30-21ubuntu1~18.04.8 | 2.30-21ubuntu1~18.04.8 |          |
+|  0 | binutils  | 2.30-21ubuntu1~18.04.8 | 2.30-21ubuntu1~18.04.9 | UPDATED  |
 |  1 | chrpath   | 0.16-2                 | 0.16-2                 |          |
 |  2 | gdb       | 8.1.1-0ubuntu1         | 8.1.1-0ubuntu1         |          |
 |  3 | gdbserver | 8.1.1-0ubuntu1         | 8.1.1-0ubuntu1         |          |

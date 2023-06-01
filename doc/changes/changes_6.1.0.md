@@ -4,7 +4,7 @@ Code name: t.b.d.
 
 ## Summary
 
-This releases adds support for Pandas 2 pyarrow dtype columns for emitting data from Python UDFs. Furthermore, it fixes a silent data corruption when emitting dateframes with float16 dtype columns from Python UDFs.
+This releases adds support for Pandas 2 pyarrow dtype columns for emitting dataframes from Python UDFs. Furthermore, it fixes a silent data corruption when emitting dateframes with float16 dtype columns from Python UDFs.
 
 ## [Package Version Comparison between Release 6.0.0 and 6.1.0](package_diffs/6.1.0/README.md)
   

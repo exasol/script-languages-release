@@ -52,7 +52,7 @@ The following table describes which conversions between DType/Python-Type and Da
 
 - Before SLC version 6.1.0, emitting float16 lead to a silent data corruption of the emitted values.
 - Since SLC version 6.1.0 DateFrame Columns with DType object also support pandas.NaN for NULL. 
-- We only DType timestamp[ns, tz=UTC][pyarrow] and datetime64[ns], because Exasol doesn't support timezones. We also drop the timezone before using the timestamp in Exasol. Furthermore, Exasol 7.* only supports miliseconds precision timestamps, the nanoseconds will be truncated.
+- We only support DType timestamp[ns, tz=UTC][pyarrow] and datetime64[ns], because Exasol doesn't support timezones. We also drop the timezone before using the timestamp in Exasol. Furthermore, Exasol 7.* only supports miliseconds precision timestamps, the nanoseconds will be truncated.
 - Conversions from float* to DECIMAL can include rounding down to the precision and scale of the DECIMAL. 
 - Conversions from (u)int*,decimal128,decimal.Decimal to DOUBLE can be also imprecise, in case DOUBLE can't represent the number precisily.
 

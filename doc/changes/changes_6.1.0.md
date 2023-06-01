@@ -19,7 +19,7 @@ This release uses version 0.17.0 of the container tool.
 
 ## Features / Enhancements
 
- - #793: Added support Pandas 2 pyarrow dtype columns for emitting data from Python UDFs
+ - #793: Added support for Pandas 2 pyarrow dtype columns for emitting data from Python UDFs
 
 ## Documentation
 

@@ -7,7 +7,7 @@
 |  2 | libsmbclient         | 2:4.15.13+dfsg-0ubuntu0.20.04.1 | 2:4.15.13+dfsg-0ubuntu0.20.04.2 | UPDATED  |
 |  3 | libsmbclient-dev     | 2:4.15.13+dfsg-0ubuntu0.20.04.1 | 2:4.15.13+dfsg-0ubuntu0.20.04.2 | UPDATED  |
 |  4 | libxml2-dev          | 2.9.10+dfsg-5ubuntu0.20.04.5    | 2.9.10+dfsg-5ubuntu0.20.04.6    | UPDATED  |
-|  5 | openssl              | 1.1.1f-1ubuntu2.17              | 1.1.1f-1ubuntu2.18              | UPDATED  |
+|  5 | openssl              | 1.1.1f-1ubuntu2.17              | 1.1.1f-1ubuntu2.19              | UPDATED  |
 |  6 | smbclient            | 2:4.15.13+dfsg-0ubuntu0.20.04.1 | 2:4.15.13+dfsg-0ubuntu0.20.04.2 | UPDATED  |
 |  7 | apt-transport-https  | 2.0.9                           | 2.0.9                           |          |
 |  8 | build-essential      | 12.8ubuntu1.1                   | 12.8ubuntu1.1                   |          |

@@ -2,7 +2,7 @@
 
 |    | Package         | Version in 6.0.0          | Version in 6.1.0          | Status   |
 |---:|:----------------|:--------------------------|:--------------------------|:---------|
-|  0 | libssl-dev      | 1.1.1-1ubuntu2.1~18.04.21 | 1.1.1-1ubuntu2.1~18.04.22 | UPDATED  |
+|  0 | libssl-dev      | 1.1.1-1ubuntu2.1~18.04.21 | 1.1.1-1ubuntu2.1~18.04.23 | UPDATED  |
 |  1 | coreutils       | 8.28-1ubuntu1             | 8.28-1ubuntu1             |          |
 |  2 | libnss-db       | 2.2.3pre1-6build2         | 2.2.3pre1-6build2         |          |
 |  3 | libprotobuf-dev | 3.0.0-9.1ubuntu1.1        | 3.0.0-9.1ubuntu1.1        |          |

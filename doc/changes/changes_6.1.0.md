@@ -36,3 +36,4 @@ n/a
  - #777: Updated redis-py to fix CVE-2023-28859
  - #800: Updated Ubuntu packages
  - #803: Updated Ubuntu packages
+ - #815: Updated Ubuntu packages and poetry.lock

@@ -1,6 +1,6 @@
-# script-languages-release 6.1.0, released t.b.d.
+# script-languages-release 6.1.0, released 2023-06-02
 
-Code name: t.b.d.
+Code name: Pandas 2 support
 
 ## Summary
 

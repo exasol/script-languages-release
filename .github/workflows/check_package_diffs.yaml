@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - develop
-#      - master
-#      - main
-  pull_request:
 
 jobs:
   check_package_diff:
@@ -14,18 +11,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
     - name: Init submodules
       run: git submodule update --init --recursive
 
-    - name: Setup Python 3.8
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
-
-    - name: Install Poetry
-      uses: abatilo/actions-poetry@v2
-      with:
-        poetry-version: 1.2.0
+    - uses: ./.github/actions/prepare_poetry_env
 
     - name: Setup Poetry
       run: |

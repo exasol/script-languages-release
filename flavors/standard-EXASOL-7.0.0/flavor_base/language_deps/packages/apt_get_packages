@@ -1,5 +1,5 @@
 git|1:2.17.1-1ubuntu0.18
-openjdk-11-jdk-headless|11.0.18+10-0ubuntu1~18.04.1
+openjdk-11-jdk-headless|11.0.19+7~us1-0ubuntu1~18.04.1
 python3.7-dev|3.7.5-2ubuntu1~18.04.2
 python3.7|3.7.5-2ubuntu1~18.04.2
 python3-distutils|3.6.9-1~18.04 # Note: required by install_python3.7_pip.sh

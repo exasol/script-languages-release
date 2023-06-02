@@ -14,7 +14,47 @@ The parameters of `get_dataframe` are the following.
 `get_dataframe` will return a DataFrame containing `num_rows` rows or a lesser number if `num_rows` are not available. If there are zero rows available, `get_dataframe` will return `None`. The DataFrame column labels will be set to the corresponding UDF parameter names for the columns, except in case of a dynamic parameter list, then the column labels will be '0','1',.. . After calling `get_dataframe`, the UDF data iterator will point to the next row (i.e. following the last row in the DataFrame) just as with `next()`.
 
 ## Emitting data
-An entire DataFrame can be emitted by passing it to `emit()` just as with single values. Each column of the DataFrame will be  automatically converted to a column in the result set. The columns will be matched by their position to the columns in the emit-clause. The column label in the DataFrame will be ignored.
+An entire DataFrame can be emitted by passing it to `emit()` just as with single values. Each column of the DataFrame will be automatically converted to a column in the result set. The columns will be matched by their position to the columns in the emit-clause. The column label in the DataFrame will be ignored.
+
+The following table describes which conversions between DType/Python-Type and Database-Type are possible:
+
+| Pandas-DType                   | Python-Type      | Database-Type | Flavors                        | SLC Version | NULL handling                     |
+|--------------------------------|------------------|---------------|--------------------------------|-------------|-----------------------------------|
+| (u)int*                        | -                | DECIMAL       | all standard and python3       | all         | (u)int* does not support NULL     |
+| (u)int*                        | -                | DOUBLE        | all standard and python3       | all         | (u)int* does not support NULL     |
+| float*                         | -                | DECIMAL       | all standard and python3       | all         | Uses numpy.nan for NULL           |
+| float*                         | -                | DOUBLE        | all standard and python3       | all         | Uses numpy.nan for NULL           |
+| string                         | -                | (VAR)CHAR     | all standard and python3       | >=6.1.0     | Uses pandas.NaN for NULL          |
+| bool_                          | -                | BOOLEAN       | all standard and python3       | all         | Pandas will convert None to False |
+| boolean                        | -                | BOOLEAN       | all standard and python3       | >=6.1.0     | Uses pandas.NaN for NULL          |
+| datetime64[ns]                 | -                | TIMESTAMP     | all standard and python3       | all         | Uses pandas.NaT for NULL          |
+| object                         | int              | DECIMAL       | all standard and python3       | all         | Uses None for NULL                |
+| object                         | int              | DOUBLE        | all standard and python3       | all         | Uses None for NULL                |
+| object                         | float            | DECIMAL       | all standard and python3       | all         | Uses None or numpy.NaN for NULL   |
+| object                         | float            | DOUBLE        | all standard and python3       | all         | Uses None or numpy.NaN for NULL   |
+| object                         | decimal.Decimal  | DECIMAL       | all standard and python3       | all         | Uses None for NULL                |
+| object                         | decimal.Decimal  | DOUBLE        | all standard and python3       | all         | Uses None for NULL                |
+| object                         | bool             | BOOLEAN       | all standard and python3       | all         | Uses None for NULL                |
+| object                         | str              | (VAR)CHAR     | all standard and python3       | all         | Uses None for NULL                |
+| object                         | pandas.Timestamp | TIMESTAMP     | all standard and python3       | >=6.1.0     | Uses None or pandas.NaN for NULL  |
+| object                         | datetime.date    | DATE          | all standard and python3       | all         | Uses None for NULL                |
+| (u)int*[pyarrow]               | -                | DECIMAL       | standard-8.0.0 and all python3 | >=6.1.0     | Native NULL support               |
+| (u)int*[pyarrow]               | -                | DOUBLE        | standard-8.0.0 and all python3 | >=6.1.0     | Native NULL support               |
+| float*[pyarrow]                | -                | DECIMAL       | standard-8.0.0 and all python3 | >=6.1.0     | Native NULL support               |
+| float*[pyarrow]                | -                | DOUBLE        | standard-8.0.0 and all python3 | >=6.1.0     | Native NULL support               |
+| string[pyarrow]                | -                | (VAR)CHAR     | standard-8.0.0 and all python3 | >=6.1.0     | Native NULL support               |
+| bool[pyarrow]                  | -                | BOOLEAN       | standard-8.0.0 and all python3 | >=6.1.0     | Native NULL support               |
+| decimal128(*)[pyarrow]         | -                | DECIMAL       | standard-8.0.0 and all python3 | >=6.1.0     | Native NULL support               |
+| decimal128(*)[pyarrow]         | -                | DOUBLE        | standard-8.0.0 and all python3 | >=6.1.0     | Native NULL support               |
+| timestamp[ns, tz=UTC][pyarrow] | -                | TIMESTAMP     | standard-8.0.0 and all python3 | >=6.1.0     | Native NULL support.              |
+
+**Note**:
+
+- Before SLC version 6.1.0, emitting float16 lead to a silent data corruption of the emitted values.
+- Since SLC version 6.1.0 DateFrame Columns with DType object also support pandas.NaN for NULL. 
+- We only support DType timestamp[ns, tz=UTC][pyarrow] and datetime64[ns], because Exasol doesn't support timezones. We also drop the timezone before using the timestamp in Exasol. Furthermore, Exasol 7.* only supports miliseconds precision timestamps, the nanoseconds will be truncated.
+- Conversions from float* to DECIMAL can include rounding down to the precision and scale of the DECIMAL. 
+- Conversions from (u)int*,decimal128,decimal.Decimal to DOUBLE can be also imprecise, in case DOUBLE can't represent the number precisily.
 
 ## Example
 

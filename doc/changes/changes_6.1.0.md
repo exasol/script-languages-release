@@ -16,6 +16,7 @@ This release uses version 0.17.0 of the container tool.
 
  - #792: Fixed Github workflow publish-test-container by updating script-languages-container-tool to 0.17.0 and script-languages-container-ci to 1.1.0
  - #796: Fixed silent data corruption when emitting dataframes with float16 dtype columns from Python UDFs
+ - #819: Fixed CI, adapted project to Exasol 8 and updated apt packages
 
 ## Features / Enhancements
 

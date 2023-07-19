@@ -2,7 +2,7 @@
 
 |    | Package   | Version in 6.0.0     | Version in 6.1.0     | Status   |
 |---:|:----------|:---------------------|:---------------------|:---------|
-|  0 | binutils  | 2.34-6ubuntu1.4      | 2.34-6ubuntu1.5      | UPDATED  |
+|  0 | binutils  | 2.34-6ubuntu1.4      | 2.34-6ubuntu1.6      | UPDATED  |
 |  1 | gdb       | 9.2-0ubuntu1~20.04.1 | 9.2-0ubuntu1~20.04.1 |          |
 |  2 | gdbserver | 9.2-0ubuntu1~20.04.1 | 9.2-0ubuntu1~20.04.1 |          |
 |  3 | patchelf  | 0.10-2build1         | 0.10-2build1         |          |

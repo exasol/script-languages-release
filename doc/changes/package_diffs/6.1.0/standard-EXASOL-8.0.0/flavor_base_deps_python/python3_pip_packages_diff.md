@@ -6,22 +6,22 @@
 |  1 | cryptography                                                                                                                  | 39.0.1               | 40.0.2               | UPDATED  |
 |  2 | debugpy                                                                                                                       | 1.5.1                | 1.6.7                | UPDATED  |
 |  3 | numba                                                                                                                         | 0.55.0               | 0.57.0               | UPDATED  |
-|  4 | numba-scipy                                                                                                                   | 0.3.0                | 0.3.1                | UPDATED  |
-|  5 | paramiko                                                                                                                      | 2.9.2                | 3.1.0                | UPDATED  |
-|  6 | plyvel                                                                                                                        | 1.4.0                | 1.5.0                | UPDATED  |
-|  7 | protobuf                                                                                                                      | 3.19.5               | 3.20.3               | UPDATED  |
-|  8 | pyOpenSSL                                                                                                                     | 23.0.0               | 23.1.1               | UPDATED  |
-|  9 | pyarrow                                                                                                                       | 6.0.1                | 12.0.0               | UPDATED  |
-| 10 | pyexasol                                                                                                                      | 0.23.3               | 0.25.2               | UPDATED  |
-| 11 | pysimdjson                                                                                                                    | 4.0.3                | 5.0.2                | UPDATED  |
-| 12 | python-ldap                                                                                                                   | 3.4.0                | 3.4.3                | UPDATED  |
-| 13 | pytz                                                                                                                          | 2021.3               | 2023.3               | UPDATED  |
-| 14 | pyyaml                                                                                                                        | 6.0                  | 5.4.1                | UPDATED  |
-| 15 | redis                                                                                                                         | 4.5.3                | 4.5.4                | UPDATED  |
-| 16 | sagemaker                                                                                                                     | 2.72.3               | 2.151.0              | UPDATED  |
-| 17 | scikit-learn                                                                                                                  | 1.0.2                | 1.2.2                | UPDATED  |
-| 18 | scipy                                                                                                                         | 1.6.2                | 1.7.3                | UPDATED  |
-| 19 | https://github.com/exasol/bucketfs-utils-python/releases/download/0.1.0/exasol_bucketfs_utils_python-0.1.0-py3-none-any.whl   | No version specified |                      | REMOVED  |
+|  4 | paramiko                                                                                                                      | 2.9.2                | 3.1.0                | UPDATED  |
+|  5 | plyvel                                                                                                                        | 1.4.0                | 1.5.0                | UPDATED  |
+|  6 | protobuf                                                                                                                      | 3.19.5               | 3.20.3               | UPDATED  |
+|  7 | pyOpenSSL                                                                                                                     | 23.0.0               | 23.1.1               | UPDATED  |
+|  8 | pyarrow                                                                                                                       | 6.0.1                | 12.0.0               | UPDATED  |
+|  9 | pyexasol                                                                                                                      | 0.23.3               | 0.25.2               | UPDATED  |
+| 10 | pysimdjson                                                                                                                    | 4.0.3                | 5.0.2                | UPDATED  |
+| 11 | python-ldap                                                                                                                   | 3.4.0                | 3.4.3                | UPDATED  |
+| 12 | pytz                                                                                                                          | 2021.3               | 2023.3               | UPDATED  |
+| 13 | pyyaml                                                                                                                        | 6.0                  | 5.4.1                | UPDATED  |
+| 14 | redis                                                                                                                         | 4.5.3                | 4.5.4                | UPDATED  |
+| 15 | sagemaker                                                                                                                     | 2.72.3               | 2.151.0              | UPDATED  |
+| 16 | scikit-learn                                                                                                                  | 1.0.2                | 1.2.2                | UPDATED  |
+| 17 | scipy                                                                                                                         | 1.6.2                | 1.10.1               | UPDATED  |
+| 18 | https://github.com/exasol/bucketfs-utils-python/releases/download/0.1.0/exasol_bucketfs_utils_python-0.1.0-py3-none-any.whl   | No version specified |                      | REMOVED  |
+| 19 | numba-scipy                                                                                                                   | 0.3.0                |                      | REMOVED  |
 | 20 | exasol-bucketfs                                                                                                               |                      | 0.8.0                | NEW      |
 | 21 | azure-batch                                                                                                                   | 11.0.0               | 11.0.0               |          |
 | 22 | azure-cosmos                                                                                                                  | 4.2.0                | 4.2.0                |          |

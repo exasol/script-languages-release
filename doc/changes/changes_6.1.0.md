@@ -1,4 +1,4 @@
-# script-languages-release 6.1.0, released 2023-07-21
+# script-languages-release 6.1.0, released 2023-07-25
 
 Code name: Pandas 2 support
 
@@ -6,7 +6,7 @@ Code name: Pandas 2 support
 
 This releases adds support for Pandas 2 pyarrow dtype columns for emitting dataframes from Python UDFs. Furthermore, it fixes a silent data corruption when emitting dateframes with float16 dtype columns from Python UDFs.
 
-**Note:** We could not update scipy in the standard 7.* flavors such that these still contain CVE-2023-29824, because the fixed scipy version is not available for Python 3.7 which is still used in these flavors. We are going to replace Python 3.7 with Python 3.8 in the next release and than also update scipy.
+**Note:** We could not update scipy in the standard 7.* flavors such that these still contain CVE-2023-29824, because the fixed scipy version is not available for Python 3.7 which is still used in these flavors. We are going to replace Python 3.7 with Python 3.8 in the next release and than also update scipy. See also following [GitHub issue](https://github.com/exasol/script-languages-release/issues/824).
 
 ## [Package Version Comparison between Release 6.0.0 and 6.1.0](package_diffs/6.1.0/README.md)
   

@@ -18,3 +18,5 @@ CVE-2022-27191
 CVE-2022-23960
 # No fix yet for CVE-2023-28859
 CVE-2023-28859
+# Fixed Scipy version 1.8.0 not available for Python 3.7, see  https://github.com/exasol/script-languages-release/issues/824
+CVE-2023-29824

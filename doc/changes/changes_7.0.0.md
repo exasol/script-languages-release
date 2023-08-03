@@ -31,3 +31,4 @@ n/a
 ## Security
 
  - #805: Upgraded r-4-minimal flavor to R 4.3 and Ubuntu 22.04
+ - #806: Removed flavor python-3.7-minimal-EXASOL-6.2.0

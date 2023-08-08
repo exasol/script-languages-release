@@ -25,3 +25,5 @@ CVE-2022-27191
 CVE-2022-23960
 # No fix yet for CVE-2023-28859
 CVE-2023-28859
+# Trivy's information https://avd.aquasec.com/nvd/2023/cve-2023-37276/ is incorrect version aiohttp 3.8.5 fixed the CVE, see https://github.com/advisories/GHSA-45c4-8wx5-qw6w
+CVE-2023-37276

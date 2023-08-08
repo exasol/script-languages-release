@@ -57,7 +57,7 @@ simplejson|3.17.6
 scikit-learn|1.2.2
 plyvel|1.5.0
 python-ldap|3.4.3
-pyOpenSSL|23.1.1 
+pyOpenSSL|23.2.0 
 git+http://github.com/EXASOL/websocket-api.git@5150f964388412788bf5e47752a7916a5a8624c5#egg=exasol-db-api&subdirectory=python|
 debugpy|1.6.7
 pybase64|1.2.1 

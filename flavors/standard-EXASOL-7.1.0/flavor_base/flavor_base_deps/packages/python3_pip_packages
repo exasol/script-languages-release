@@ -50,7 +50,7 @@ redis|4.5.3
 roman|3.3
 python-ldap|3.4.0
 leveldb|0.201
-pyOpenSSL|23.0.0
+pyOpenSSL|23.2.0
 pyodbc|4.0.32
 lxml|4.9.1
 scikit-learn|1.0.2

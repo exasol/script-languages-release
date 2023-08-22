@@ -8,6 +8,9 @@ CVE-2022-1116
 CVE-2022-29581
 CVE-2022-21499
 CVE-2022-43945
+CVE-2023-3611
+CVE-2023-3776
+CVE-2023-3609
 #CVE-2022-23648 is a bug in containerd, not issue for containers
 CVE-2022-23648
 #issue in cgroups, but no threat for ScriptLanguageContainer
@@ -20,3 +23,5 @@ CVE-2022-23960
 CVE-2023-28859
 # Fixed Scipy version 1.8.0 not available for Python 3.7, see  https://github.com/exasol/script-languages-release/issues/824
 CVE-2023-29824
+# Trivy's information https://avd.aquasec.com/nvd/2023/cve-2023-37276/ is incorrect version aiohttp 3.8.5 fixed the CVE, see https://github.com/advisories/GHSA-45c4-8wx5-qw6w
+CVE-2023-37276

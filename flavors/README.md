@@ -12,11 +12,9 @@ Currently, we provide
 ### Standard flavors
 
 From the standard-EXASOL flavors, we built the built-in container which we deliver with each Exasol Version.
-It provides the languages Java, Python 2/3 and R.
+It provides the languages Java, Python 3 and R.
 
 We provide three flavors for different Exasol versions. The flavors only specify the minimal Exasol version with which they are compatible.
-
-Due to EOL of Python2, there is split of the standard-EXASOL-7.1.0 container: one with Python2.7 support, and one without it.
 
 - standard-EXASOL-8.0.0
   - Base Image: ubuntu:20.04
@@ -29,23 +27,6 @@ Due to EOL of Python2, there is split of the standard-EXASOL-7.1.0 container: on
   - Compatible Exasol Versions: 7.1.\* (but likely also with 7.0 and 6.2.\*) 
   - Available languages: Java 11, Python 3.7 and R 3.4
   - [Here](standard-EXASOL-7.1.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
-
-
-- standard-EXASOL-7.0.0
-  - Base Image: ubuntu:18.04
-  - Compatible Exasol Versions: 7.0.\* (but likely also with 6.2.\*) 
-  - Available languages: Java 11, Python 3.7 and R 3.4
-  - [Here](standard-EXASOL-7.0.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
-
-### Python-3.7-minimal flavors
-
-The Python-3.7-minimal flavor provides the language Python 3.7 with only absolute necessary packages. This allows very simple customization because you control almost all dependencies.
-
-- python-3.7-minimal-6.2.0
-  - Base Image: ubuntu:18.04
-  - Compatible Exasol Versions: 7.1.\*, 7.0.\*, 6.2.\*
-  - Available languages: Python 3.7
-  - [Here](https://github.com/exasol/script-languages/tree/master/flavors/python-3.7-minimal-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
 ### Python-3.8-minimal flavors
 

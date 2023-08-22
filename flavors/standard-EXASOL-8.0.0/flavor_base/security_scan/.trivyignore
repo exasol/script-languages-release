@@ -12,6 +12,9 @@ CVE-2022-43945
 CVE-2023-3389
 CVE-2023-3390
 CVE-2023-3090
+CVE-2023-3611
+CVE-2023-3776
+CVE-2023-3609
 #CVE-2022-23648 is a bug in containerd, not issue for containers
 CVE-2022-23648
 #issue in cgroups, but no threat for ScriptLanguageContainer
@@ -22,3 +25,5 @@ CVE-2022-27191
 CVE-2022-23960
 # No fix yet for CVE-2023-28859
 CVE-2023-28859
+# Trivy's information https://avd.aquasec.com/nvd/2023/cve-2023-37276/ is incorrect version aiohttp 3.8.5 fixed the CVE, see https://github.com/advisories/GHSA-45c4-8wx5-qw6w
+CVE-2023-37276

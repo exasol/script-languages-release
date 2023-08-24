@@ -34,3 +34,4 @@ n/a
  - #806: Removed flavor python-3.7-minimal-EXASOL-6.2.0
  - #807: Removed flavor standard-EXASOL-7.0.0
  - #827: Update packages and ignore kernel CVEs
+ - #831: Update conda flavors to cryptography 41.0.3 and openssl 3.1.2

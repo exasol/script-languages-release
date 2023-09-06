@@ -35,4 +35,4 @@ n/a
  - #807: Removed flavor standard-EXASOL-7.0.0
  - #827: Updated packages and ignore kernel CVEs
  - #831: Updated conda flavors to cryptography 41.0.3 and openssl 3.1.2
- - #839: Updated dependencies
+ - #839: Updated dependencies and ignore CVE-2023-4563 and CVE-2023-4569 in r-4-minimal-EXASOL-6.2.0 and standard-EXASOL-8.0.0

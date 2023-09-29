@@ -26,7 +26,7 @@ n/a
 
 ## Refactoring
 
-n/a
+ - #376: Removed unused and outdated cpp and python clients (update script-languages ref)
 
 ## Security
 
@@ -36,3 +36,10 @@ n/a
  - #827: Updated packages and ignore kernel CVEs
  - #831: Updated conda flavors to cryptography 41.0.3 and openssl 3.1.2
  - #839: Updated dependencies and ignore kernel CVEs
+
+Attention: The CVE's bellow can't be fixed by the container itself, rather need to be addressed by the host system executing them.
+(Updated script-languages ref)
+
+ - Ignored CVE-2023-4622, CVE-2023-4623, CVE-2023-4921, because they are kernel issues and not container issues
+ - Ignored CVE-2023-20569, because it is an issue of the host system (AMD CPUs)
+

@@ -2,15 +2,15 @@
 
 |    | Package              | Version in 6.1.0                | Version in 7.0.0                | Status   |
 |---:|:---------------------|:--------------------------------|:--------------------------------|:---------|
-|  0 | libsmbclient         | 2:4.15.13+dfsg-0ubuntu0.20.04.3 | 2:4.15.13+dfsg-0ubuntu0.20.04.4 | UPDATED  |
-|  1 | libsmbclient-dev     | 2:4.15.13+dfsg-0ubuntu0.20.04.3 | 2:4.15.13+dfsg-0ubuntu0.20.04.4 | UPDATED  |
-|  2 | smbclient            | 2:4.15.13+dfsg-0ubuntu0.20.04.3 | 2:4.15.13+dfsg-0ubuntu0.20.04.4 | UPDATED  |
-|  3 | apt-transport-https  | 2.0.9                           | 2.0.9                           |          |
-|  4 | build-essential      | 12.8ubuntu1.1                   | 12.8ubuntu1.1                   |          |
-|  5 | git                  | 1:2.25.1-1ubuntu3.11            | 1:2.25.1-1ubuntu3.11            |          |
-|  6 | gnupg                | 2.2.19-3ubuntu2.2               | 2.2.19-3ubuntu2.2               |          |
-|  7 | ldap-utils           | 2.4.49+dfsg-2ubuntu1.9          | 2.4.49+dfsg-2ubuntu1.9          |          |
-|  8 | libcurl4-openssl-dev | 7.68.0-1ubuntu2.19              | 7.68.0-1ubuntu2.19              |          |
+|  0 | libcurl4-openssl-dev | 7.68.0-1ubuntu2.19              | 7.68.0-1ubuntu2.20              | UPDATED  |
+|  1 | libsmbclient         | 2:4.15.13+dfsg-0ubuntu0.20.04.3 | 2:4.15.13+dfsg-0ubuntu0.20.04.7 | UPDATED  |
+|  2 | libsmbclient-dev     | 2:4.15.13+dfsg-0ubuntu0.20.04.3 | 2:4.15.13+dfsg-0ubuntu0.20.04.7 | UPDATED  |
+|  3 | smbclient            | 2:4.15.13+dfsg-0ubuntu0.20.04.3 | 2:4.15.13+dfsg-0ubuntu0.20.04.7 | UPDATED  |
+|  4 | apt-transport-https  | 2.0.9                           | 2.0.9                           |          |
+|  5 | build-essential      | 12.8ubuntu1.1                   | 12.8ubuntu1.1                   |          |
+|  6 | git                  | 1:2.25.1-1ubuntu3.11            | 1:2.25.1-1ubuntu3.11            |          |
+|  7 | gnupg                | 2.2.19-3ubuntu2.2               | 2.2.19-3ubuntu2.2               |          |
+|  8 | ldap-utils           | 2.4.49+dfsg-2ubuntu1.9          | 2.4.49+dfsg-2ubuntu1.9          |          |
 |  9 | libhiredis-dev       | 0.14.0-6                        | 0.14.0-6                        |          |
 | 10 | libldap2-dev         | 2.4.49+dfsg-2ubuntu1.9          | 2.4.49+dfsg-2ubuntu1.9          |          |
 | 11 | libldb2              | 2:2.4.4-0ubuntu0.20.04.2        | 2:2.4.4-0ubuntu0.20.04.2        |          |

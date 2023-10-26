@@ -1,12 +1,12 @@
 unzip|6.0-25ubuntu1.1
 git|1:2.25.1-1ubuntu3.11
-libcurl4-openssl-dev|7.68.0-1ubuntu2.19
+libcurl4-openssl-dev|7.68.0-1ubuntu2.20
 build-essential|12.8ubuntu1.1
 wget|1.20.3-1ubuntu2
 maven|3.6.3-1
 libldb2|2:2.4.4-0ubuntu0.20.04.2
 libleveldb1d|1.22-3ubuntu2
-openssl|1.1.1f-1ubuntu2.19
+openssl|1.1.1f-1ubuntu2.20
 libldap2-dev|2.4.49+dfsg-2ubuntu1.9 # Needed by python-ldap
 libsasl2-dev|2.1.27+dfsg-2ubuntu0.1 # Needed by python-ldap
 slapd|2.4.49+dfsg-2ubuntu1.9 # Needed by python-ldap
@@ -16,6 +16,6 @@ libxml2-dev|2.9.10+dfsg-5ubuntu0.20.04.6 # Needed by R XML package
 apt-transport-https|2.0.9
 gnupg|2.2.19-3ubuntu2.2
 libhiredis-dev|0.14.0-6 # Needed by R redux package
-libsmbclient|2:4.15.13+dfsg-0ubuntu0.20.04.4
-libsmbclient-dev|2:4.15.13+dfsg-0ubuntu0.20.04.4
-smbclient|2:4.15.13+dfsg-0ubuntu0.20.04.4
+libsmbclient|2:4.15.13+dfsg-0ubuntu0.20.04.7
+libsmbclient-dev|2:4.15.13+dfsg-0ubuntu0.20.04.7
+smbclient|2:4.15.13+dfsg-0ubuntu0.20.04.7

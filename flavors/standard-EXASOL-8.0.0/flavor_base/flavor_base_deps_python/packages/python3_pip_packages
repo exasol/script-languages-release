@@ -16,6 +16,7 @@ azure-storage-blob|12.9.0
 azure-storage-file-datalake|12.5.0
 azure-storage-file-share|12.6.0
 azure-storage-queue|12.1.6
+awscrt|0.19.6
 boto3|1.26.125
 google-cloud-asset|3.7.1
 google-cloud-bigquery|2.32.0

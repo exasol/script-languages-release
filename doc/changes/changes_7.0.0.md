@@ -14,7 +14,7 @@ This release uses version 0.17.0 of the container tool.
 
 ## Bug Fixes
 
-n/a
+ - #836: ModuleNotFoundError: No module named 'numpy.testing.nosetester'
 
 ## Features / Enhancements
 
@@ -38,6 +38,8 @@ n/a
  - #831: Updated conda flavors to cryptography 41.0.3 and openssl 3.1.2
  - #839: Updated dependencies and ignore kernel CVEs
  - #847: Updated packages and ignore Kernel CVEs
+ - #808: Updated standard-EXASOL-7.1.0 flavor to Ubuntu 20.04
+ - #824: Updated scipy for standard 7.* flavor to fix CVE-2023-29824
 
 Attention: The CVE's bellow can't be fixed by the container itself, rather need to be addressed by the host system executing them.
 (Updated script-languages ref)

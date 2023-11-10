@@ -19,3 +19,4 @@ libhiredis-dev|0.14.0-6 # Needed by R redux package
 libsmbclient|2:4.15.13+dfsg-0ubuntu0.20.04.7
 libsmbclient-dev|2:4.15.13+dfsg-0ubuntu0.20.04.7
 smbclient|2:4.15.13+dfsg-0ubuntu0.20.04.7
+cmake|3.16.3-1ubuntu1

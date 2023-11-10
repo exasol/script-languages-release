@@ -15,6 +15,7 @@ This release uses version 0.17.0 of the container tool.
 ## Bug Fixes
 
  - #836: ModuleNotFoundError: No module named 'numpy.testing.nosetester'
+ - #850: Fixed package management tests by updating Ubuntu 20.04
 
 ## Features / Enhancements
 

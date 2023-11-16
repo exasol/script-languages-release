@@ -41,6 +41,7 @@ n/a
  - #847: Updated packages and ignore Kernel CVEs
  - #808: Updated standard-EXASOL-7.1.0 flavor to Ubuntu 20.04
  - #824: Updated scipy for standard 7.* flavor to fix CVE-2023-29824
+ - #854: Updated pyarrow to fix CVE-2023-47248
 
 Attention: The CVE's bellow can't be fixed by the container itself, rather need to be addressed by the host system executing them.
 (Updated script-languages ref)

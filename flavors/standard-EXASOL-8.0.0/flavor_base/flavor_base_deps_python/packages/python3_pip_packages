@@ -64,7 +64,7 @@ debugpy|1.6.7
 pybase64|1.2.1 
 pysimdjson|5.0.2
 numba|0.57.0
-pyarrow|12.0.0
+pyarrow|14.0.1
 bitarray|2.3.5
 pybloomfiltermmap3|0.5.5
 bitsets|0.8.3

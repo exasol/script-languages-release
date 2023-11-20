@@ -16,10 +16,11 @@ This release uses version 0.17.0 of the container tool.
 
  - #836: ModuleNotFoundError: No module named 'numpy.testing.nosetester'
  - #850: Fixed package management tests by updating Ubuntu 20.04
+ - #851: Fixed AvailableRPackages tests fail for standard flavor 8.0
 
 ## Features / Enhancements
 
-n/a
+ - #857: Updated R to 4.3 and updated R packages in standard 7.1 flavor
 
 ## Documentation
 

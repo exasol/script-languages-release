@@ -1,12 +1,6 @@
-FROM {{ language_deps }}
+FROM {{ flavor_base_deps_python }}
 
-RUN mkdir -p /build_info/packages/flavor_base_deps
+COPY --from={{flavor_base_deps_r}} /usr/local/lib/R/site-library /usr/local/lib/R/site-library
+RUN true # workaround for https://github.com/moby/moby/issues/37965
 
-COPY flavor_base_deps/packages/apt_get_packages /build_info/packages/flavor_base_deps
-RUN /scripts/install_scripts/install_via_apt.pl --file /build_info/packages/flavor_base_deps/apt_get_packages --with-versions
-
-COPY flavor_base_deps/packages/python3_pip_packages /build_info/packages/flavor_base_deps
-RUN /scripts/install_scripts/install_via_pip.pl --file /build_info/packages/flavor_base_deps/python3_pip_packages --with-versions --allow-no-version-for-urls --python-binary python3.8
-
-COPY flavor_base_deps/packages/cran_packages /build_info/packages/flavor_base_deps
-RUN /scripts/install_scripts/install_via_r_remotes.pl --file /build_info/packages/flavor_base_deps/cran_packages --rscript-binary Rscript --with-versions
+COPY --from={{flavor_base_deps_r}} /build_info /build_info

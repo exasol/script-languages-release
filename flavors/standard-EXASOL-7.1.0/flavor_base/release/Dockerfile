@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 RUN mkdir /conf /buckets
 
 COPY --from={{language_deps}} /usr /usr
@@ -59,5 +59,5 @@ RUN true # workaround for https://github.com/moby/moby/issues/37965
 
 RUN mkdir -p /build_info/actual_installed_packages/release && \
     /scripts/list_installed_scripts/list_installed_apt.sh > /build_info/actual_installed_packages/release/apt_get_packages && \
-    /scripts/list_installed_scripts/list_installed_pip.sh python3.7 > /build_info/actual_installed_packages/release/python3_pip_packages && \
+    /scripts/list_installed_scripts/list_installed_pip.sh python3.8 > /build_info/actual_installed_packages/release/python3_pip_packages && \
     /scripts/list_installed_scripts/list_installed_R.sh > /build_info/actual_installed_packages/release/r_packages

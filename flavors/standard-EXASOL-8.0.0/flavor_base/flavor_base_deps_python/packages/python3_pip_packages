@@ -16,6 +16,7 @@ azure-storage-blob|12.9.0
 azure-storage-file-datalake|12.5.0
 azure-storage-file-share|12.6.0
 azure-storage-queue|12.1.6
+awscrt|0.19.6
 boto3|1.26.125
 google-cloud-asset|3.7.1
 google-cloud-bigquery|2.32.0
@@ -63,7 +64,7 @@ debugpy|1.6.7
 pybase64|1.2.1 
 pysimdjson|5.0.2
 numba|0.57.0
-pyarrow|12.0.0
+pyarrow|14.0.1
 bitarray|2.3.5
 pybloomfiltermmap3|0.5.5
 bitsets|0.8.3

@@ -1,24 +1,31 @@
-# script-languages-release 7.0.0, released t.b.d
+# script-languages-release 7.0.0, released 2023-11-22
 
-Code name: t.b.d
+Code name: Flavor were Upgraded to at least Ubuntu 20.04
 
 ## Summary
 
-t.b.d
+This release upgrades all flavors at least to Ubuntu 20.04 or newer.
+- The standard-EXASOL-7.1.0 flavor was upgraded to Python 3.8, R 4.3 and Ubuntu 20.04
+- The r-4-minimal flavor was upgraded to R 4.3 and Ubuntu 22.04
+- The flavors python-3.7-minimal-EXASOL-6.2.0 and flavor standard-EXASOL-7.0.0 were removed, because EOL
+Furthermore, many bugs and security issues were fixed and packages updated.
 
 ## [Package Version Comparison between Release 6.1.0 and 7.0.0](package_diffs/7.0.0/README.md)
-  
+
 ## Script-Language-Container-Tool (Exaslct)
 
-This release uses version 0.17.0 of the container tool.
+This release uses version 0.17.0 of the container tool. 
+
 
 ## Bug Fixes
 
-n/a
+ - #836: ModuleNotFoundError: No module named 'numpy.testing.nosetester'
+ - #850: Fixed package management tests by updating Ubuntu 20.04
+ - #851: Fixed AvailableRPackages tests fail for standard flavor 8.0
 
 ## Features / Enhancements
 
-n/a
+ - #857: Updated R to 4.3 and updated R packages in standard 7.1 flavor
 
 ## Documentation
 
@@ -38,6 +45,9 @@ n/a
  - #831: Updated conda flavors to cryptography 41.0.3 and openssl 3.1.2
  - #839: Updated dependencies and ignore kernel CVEs
  - #847: Updated packages and ignore Kernel CVEs
+ - #808: Updated standard-EXASOL-7.1.0 flavor to Ubuntu 20.04
+ - #824: Updated scipy for standard 7.* flavor to fix CVE-2023-29824
+ - #854: Updated pyarrow to fix CVE-2023-47248
 
 Attention: The CVE's bellow can't be fixed by the container itself, rather need to be addressed by the host system executing them.
 (Updated script-languages ref)

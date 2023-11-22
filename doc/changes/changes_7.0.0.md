@@ -1,16 +1,21 @@
-# script-languages-release 7.0.0, released t.b.d
+# script-languages-release 7.0.0, released 2023-11-22
 
-Code name: t.b.d
+Code name: Flavor were Upgraded to at least Ubuntu 20.04
 
 ## Summary
 
-t.b.d
+This release upgrades all flavors at least to Ubuntu 20.04 or newer.
+- The standard-EXASOL-7.1.0 flavor was upgraded to Python 3.8, R 4.3 and Ubuntu 20.04
+- The r-4-minimal flavor was upgraded to R 4.3 and Ubuntu 22.04
+- The flavors python-3.7-minimal-EXASOL-6.2.0 and flavor standard-EXASOL-7.0.0 were removed, because EOL
+Furthermore, many bugs and security issues were fixed and packages updated.
 
 ## [Package Version Comparison between Release 6.1.0 and 7.0.0](package_diffs/7.0.0/README.md)
-  
+
 ## Script-Language-Container-Tool (Exaslct)
 
-This release uses version 0.17.0 of the container tool.
+This release uses version 0.17.0 of the container tool. 
+
 
 ## Bug Fixes
 

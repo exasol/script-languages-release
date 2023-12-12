@@ -2,7 +2,7 @@
 
 |    | Package   | Version in 7.0.0     | Version in 7.1.0     | Status   |
 |---:|:----------|:---------------------|:---------------------|:---------|
-|  0 | binutils  | 2.34-6ubuntu1.6      | 2.34-6ubuntu1.6      |          |
+|  0 | binutils  | 2.34-6ubuntu1.6      | 2.34-6ubuntu1.7      | UPDATED  |
 |  1 | chrpath   | 0.16-2               | 0.16-2               |          |
 |  2 | gdb       | 9.2-0ubuntu1~20.04.1 | 9.2-0ubuntu1~20.04.1 |          |
 |  3 | gdbserver | 9.2-0ubuntu1~20.04.1 | 9.2-0ubuntu1~20.04.1 |          |

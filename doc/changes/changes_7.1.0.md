@@ -1,4 +1,4 @@
-# script-languages-release 7.1.0, released 2023-12-14
+# script-languages-release 7.1.0, released 2023-12-15
 
 Code name: Template flavor with Python 3.10 support
 

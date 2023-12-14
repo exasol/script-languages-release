@@ -34,9 +34,19 @@ The Python-3.8-minimal flavor provides the language Python 3.8 with only absolut
 
 - python-3.8-minimal-6.2.0
   - Base Image: ubuntu:20.04
-  - Compatible Exasol Versions: 7.1.\*, 7.0.\*, 6.2.\*
+  - Compatible Exasol Versions: 8.0.\*, 7.1.\*, 7.0.\*, 6.2.\*
   - Available languages: Python 3.8
   - [Here](https://github.com/exasol/script-languages/tree/master/flavors/python-3.8-minimal-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+
+### template-Exasol-all-python-3.10
+
+The template-Exasol-all-python-3.10 flavor provides the language Python 3.10 with only absolute necessary packages. This allows very simple customization because you control almost all dependencies.
+
+- template-Exasol-all-python-3.10
+  - Base Image: ubuntu:22.04
+  - Compatible Exasol Versions: 8.0.\*, 7.1.\*, 7.0.\*, 6.2.\*
+  - Available languages: Python 3.10
+  - [Here](https://github.com/exasol/script-languages/tree/master/flavors/template-Exasol-all-python-3.10/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
 ### template-Exasol-all-python-3.8-conda
 
@@ -68,9 +78,9 @@ The template-Exasol-all-python-3.8-cuda-conda flavor provides the language Pytho
 The R-4-minimal flavor provides the language R 4.1 with only absolute necessary packages. This allows very simple customization because you control almost all dependencies.
 
 - r-4-minimal-EXASOL-6.2.0
-  - Base Image: ubuntu:18.04
-  - Compatible Exasol Versions: 7.1.\*, 7.0.\*, 6.2.\*
-  - Available languages: R 4.1
+  - Base Image: ubuntu:22.04
+  - Compatible Exasol Versions: 8.0.\*, 7.1.\*, 7.0.\*, 6.2.\*
+  - Available languages: R 4.3
   - [Here](r-4-minimal-EXASOL-6.2.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
 ## Flavor or Language-specific features

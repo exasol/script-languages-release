@@ -6,3 +6,4 @@
 - [Comparison of flavor Standard-exasol-8.0.0](standard-EXASOL-8.0.0/README.md)
 - [Comparison of flavor Template-exasol-all-python-3.8-conda](template-Exasol-all-python-3.8-conda/README.md)
 - [Comparison of flavor Template-exasol-all-python-3.8-cuda-conda](template-Exasol-all-python-3.8-cuda-conda/README.md)
+- [Comparison of flavor Template-exasol-all-python-3.10](template-Exasol-all-python-3.10__python-3.8-minimal-EXASOL-6.2.0/README.md)

@@ -1,5 +1,5 @@
-coreutils|8.32-4.1ubuntu1
-locales|2.35-0ubuntu3.5
+coreutils|8.32-4.1ubuntu1.1
+locales|2.35-0ubuntu3.6
 tar|1.34+dfsg-1ubuntu0.1.22.04.1
 curl|7.81.0-1ubuntu1.15
 openjdk-11-jdk|11.0.21+9-0ubuntu1~22.04

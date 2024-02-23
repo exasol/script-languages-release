@@ -71,4 +71,4 @@ bitsets|0.8.3
 pyyaml|5.4.1
 exasol-bucketfs|0.8.0
 pysmbc|1.0.23
-cryptography|41.0.3
+cryptography|42.0.4

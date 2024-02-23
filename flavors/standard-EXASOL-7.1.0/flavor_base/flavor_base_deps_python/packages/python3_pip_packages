@@ -20,7 +20,7 @@ azure-storage-queue|12.6.0
 boto|2.49.0
 boto3|1.28.39
 cffi|1.15.1
-cryptography|41.0.5
+cryptography|42.0.4
 docutils|0.20.1
 git+http://github.com/EXASOL/websocket-api.git#egg=exasol-db-api&subdirectory=python|
 google-cloud-asset|3.20.0

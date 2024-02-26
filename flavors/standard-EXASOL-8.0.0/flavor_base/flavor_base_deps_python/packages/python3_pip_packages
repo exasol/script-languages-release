@@ -63,7 +63,7 @@ git+http://github.com/EXASOL/websocket-api.git@5150f964388412788bf5e47752a7916a5
 debugpy|1.8.1
 pybase64|1.3.2
 pysimdjson|5.0.2
-numba|0.59.0
+numba|0.58.1
 pyarrow|14.0.2
 bitarray|2.9.2
 pybloomfiltermmap3|0.5.7

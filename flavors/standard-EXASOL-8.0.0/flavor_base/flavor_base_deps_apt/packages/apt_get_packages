@@ -6,7 +6,7 @@ wget|1.20.3-1ubuntu2
 maven|3.6.3-1ubuntu0.1
 libldb2|2:2.4.4-0ubuntu0.20.04.2
 libleveldb1d|1.22-3ubuntu2
-openssl|1.1.1f-1ubuntu2.21
+openssl|1.1.1f-1ubuntu2.22
 libldap2-dev|2.4.49+dfsg-2ubuntu1.10
 libsasl2-dev|2.1.27+dfsg-2ubuntu0.1 # Needed by python-ldap
 slapd|2.4.49+dfsg-2ubuntu1.10

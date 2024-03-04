@@ -6,7 +6,7 @@ Code name: t.b.d
 
 This release fixed the conda-based SLC builds and updated packages.
 
-## [Package Version Comparison between Release 7.0.1 and 7.2.0](package_diffs/7.1.0/README.md)
+## [Package Version Comparison between Release 7.1.0 and 7.2.0](package_diffs/7.2.0/README.md)
 
 ## Script-Language-Container-Tool (Exaslct)
 

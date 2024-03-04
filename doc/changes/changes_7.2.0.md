@@ -37,4 +37,4 @@ Attention: The CVE's below can't be fixed by the container itself, rather need t
  - CVE-2024-0646
  - CVE-2024-1085
  - CVE-2024-1086
- 
+ - CVE-2024-26597

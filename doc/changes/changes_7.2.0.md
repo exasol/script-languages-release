@@ -14,7 +14,7 @@ This release uses version 0.18.2 of the container tool.
 
 ## Bug Fixes
 
-n/a
+ - #870: Added tests for pyexasol export/import and that sys.executable returns a comparable python interpreter to the UDF
 
 ## Features / Enhancements
 

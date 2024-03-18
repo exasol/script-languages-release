@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:22.04",
 ENV DEBIAN_FRONTEND=noninteractive
 
 ENV ARCHIVE_UBUNTU_PREFIX=""
@@ -34,4 +34,4 @@ RUN locale-gen en_US.UTF-8 && \
 
 RUN touch /env && \
     echo "export PROTOBUF_BIN=/usr/bin/protoc" >> /env && \
-    echo "export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64" >> /env
+    echo "export JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64" >> /env

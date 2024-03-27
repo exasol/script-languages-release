@@ -7,3 +7,4 @@
 - [Comparison of flavor Template-exasol-all-python-3.10](template-Exasol-all-python-3.10/README.md)
 - [Comparison of flavor Template-exasol-all-python-3.8-conda](template-Exasol-all-python-3.8-conda/README.md)
 - [Comparison of flavor Template-exasol-all-python-3.8-cuda-conda](template-Exasol-all-python-3.8-cuda-conda/README.md)
+- [Comparison of flavor Template-exasol-all-java-17](template-Exasol-all-java-17/README.md)

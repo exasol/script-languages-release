@@ -2,7 +2,7 @@
 
 |    | Package         | Version in 7.2.0        | Status   |
 |---:|:----------------|:------------------------|:---------|
-|  0 | coreutils       | 8.32-4.1ubuntu1.1       | NEW      |
+|  0 | coreutils       | 8.32-4.1ubuntu1.2       | NEW      |
 |  1 | libnss-db       | 2.2.3pre1-6ubuntu3      | NEW      |
 |  2 | libprotobuf-dev | 3.12.4-1ubuntu7.22.04.1 | NEW      |
 |  3 | libssl-dev      | 3.0.2-0ubuntu1.15       | NEW      |

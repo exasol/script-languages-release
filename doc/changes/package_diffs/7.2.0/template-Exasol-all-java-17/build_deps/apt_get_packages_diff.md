@@ -4,8 +4,8 @@
 |---:|:------------------------|:-----------------------------|:---------|
 |  0 | build-essential         | 12.9ubuntu3                  | NEW      |
 |  1 | chrpath                 | 0.16-2                       | NEW      |
-|  2 | coreutils               | 8.32-4.1ubuntu1.1            | NEW      |
-|  3 | curl                    | 7.81.0-1ubuntu1.15           | NEW      |
+|  2 | coreutils               | 8.32-4.1ubuntu1.2            | NEW      |
+|  3 | curl                    | 7.81.0-1ubuntu1.16           | NEW      |
 |  4 | libpcre3-dev            | 2:8.39-13ubuntu0.22.04.1     | NEW      |
 |  5 | locales                 | 2.35-0ubuntu3.6              | NEW      |
 |  6 | openjdk-17-jdk-headless | 17.0.10+7-1~22.04.1          | NEW      |

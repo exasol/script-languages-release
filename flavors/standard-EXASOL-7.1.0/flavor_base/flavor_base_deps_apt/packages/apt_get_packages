@@ -8,4 +8,4 @@ libcurl4-openssl-dev|7.68.0-1ubuntu2.22
 libldap2-dev|2.4.49+dfsg-2ubuntu1.10
 libsasl2-dev|2.1.27+dfsg-2ubuntu0.1
 ldap-utils|2.4.49+dfsg-2ubuntu1.10
-unixodbc-dev|2.3.6-0.1build1
+unixodbc-dev|2.3.6-0.1ubuntu0.1 # Needed by pyodbc and RODBC

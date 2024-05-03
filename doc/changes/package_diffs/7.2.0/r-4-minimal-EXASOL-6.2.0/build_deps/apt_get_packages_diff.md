@@ -4,7 +4,7 @@
 |---:|:------------------|:-----------------------------|:-----------------------------|:---------|
 |  0 | coreutils         | 8.32-4.1ubuntu1              | 8.32-4.1ubuntu1.2            | UPDATED  |
 |  1 | curl              | 7.81.0-1ubuntu1.15           | 7.81.0-1ubuntu1.16           | UPDATED  |
-|  2 | locales           | 2.35-0ubuntu3.5              | 2.35-0ubuntu3.6              | UPDATED  |
+|  2 | locales           | 2.35-0ubuntu3.5              | 2.35-0ubuntu3.7              | UPDATED  |
 |  3 | openjdk-11-jdk    | 11.0.21+9-0ubuntu1~22.04     | 11.0.22+7-0ubuntu2~22.04.1   | UPDATED  |
 |  4 | tar               | 1.34+dfsg-1ubuntu0.1.22.04.1 | 1.34+dfsg-1ubuntu0.1.22.04.2 | UPDATED  |
 |  5 | build-essential   | 12.9ubuntu3                  | 12.9ubuntu3                  |          |

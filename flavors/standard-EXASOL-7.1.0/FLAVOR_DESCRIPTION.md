@@ -1,4 +1,4 @@
-# Details for standard-EXASOL-7.1.0 flavor
+# Details for standard-EXASOL-8.0.0 flavor
 
 ## Packages
 

@@ -1,5 +1,6 @@
-ca-certificates|20230311ubuntu0.20.04.1
-python3.8-dev|3.8.10-0ubuntu1~20.04.9
-python3-distutils|3.8.10-0ubuntu1~20.04
-curl|7.68.0-1ubuntu2.22
-openjdk-11-jdk-headless|11.0.22+7-0ubuntu2~20.04.1
+ca-certificates|20230311ubuntu0.22.04.1
+python3.10-dev|3.10.12-1~22.04.3
+python3-distutils|3.10.8-1~22.04
+curl|7.81.0-1ubuntu1.16
+openjdk-11-jdk-headless|11.0.22+7-0ubuntu2~22.04.1
+

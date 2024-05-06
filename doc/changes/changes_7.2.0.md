@@ -18,7 +18,7 @@ This release uses version 0.18.2 of the container tool.
 
 ## Features / Enhancements
 
-n/a
+- #883: Updated Standard 8.0 SLC
 
 ## Documentation
 

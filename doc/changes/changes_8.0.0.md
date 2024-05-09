@@ -8,7 +8,7 @@ Standard flavors (7.1 and 8.0) are simplified into a single flavor. The standard
 This release fixed the conda-based SLC builds and updated packages.
 
 
-## [Package Version Comparison between Release 7.1.0 and 8.0.0](package_diffs/7.2.0/README.md)
+## [Package Version Comparison between Release 7.1.0 and 8.0.0](package_diffs/8.0.0/README.md)
 
 ## Script-Language-Container-Tool (Exaslct)
 

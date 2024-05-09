@@ -16,17 +16,13 @@ It provides the languages Java, Python 3 and R.
 
 We provide three flavors for different Exasol versions. The flavors only specify the minimal Exasol version with which they are compatible.
 
-- standard-EXASOL-8.0.0
-  - Base Image: ubuntu:20.04
-  - Compatible Exasol Versions: 8.0.\* (but likely also with 7.1.\*) 
-  - Available languages: Java 11, Python 3.8 and R 4.1
-  - [Here](standard-EXASOL-8.0.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
-
-- standard-EXASOL-7.1.0
-  - Base Image: ubuntu:20.04
-  - Compatible Exasol Versions: 7.1.\* (but likely also with 8.0.\*) 
-  - Available languages: Java 11, Python 3.8 and R 4.3
-  - [Here](standard-EXASOL-7.1.0/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+- standard-EXASOL-all
+  - Base Image: ubuntu:22.04
+  - Compatible Exasol Versions: 
+    - 8.0.\* 
+    - 7.1.\* 
+  - Available languages: Java 11, Python 3.10 and R 4.4
+  - [Here](standard-EXASOL-all/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
 ### Python-3.8-minimal flavors
 

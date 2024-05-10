@@ -1,11 +1,11 @@
-# script-languages-release 8.0.0, released t.b.d
+# script-languages-release 8.0.0, released 2024-05-13
 
-Code name: t.b.d
+Code name: Single standard container 
 
 ## Summary
 
 Standard flavors (7.1 and 8.0) are simplified into a single flavor. The standard flavor now is based on Ubuntu 22.04 and supports Python3.10 and R4.4.
-This release fixed the conda-based SLC builds and updated packages.
+This release fixed the conda-based SLC builds and updated packages. Additionally, new integration tests using a module-based Java UDF have been added. 
 
 
 ## [Package Version Comparison between Release 7.1.0 and 8.0.0](package_diffs/8.0.0/README.md)

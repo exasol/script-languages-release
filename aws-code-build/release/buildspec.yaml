@@ -34,13 +34,6 @@ batch:
         compute-type: BUILD_GENERAL1_MEDIUM
         privileged-mode: true
       buildspec: ./aws-code-build/release/build_buildspec.yaml
-    - identifier: build_standard_EXASOL_all
-      env:
-        variables:
-          FLAVOR: standard-EXASOL-all
-        compute-type: BUILD_GENERAL1_MEDIUM
-        privileged-mode: true
-      buildspec: ./aws-code-build/release/build_buildspec.yaml
     - identifier: build_template_Exasol_all_java_17
       env:
         variables:

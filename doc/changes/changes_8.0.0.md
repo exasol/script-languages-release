@@ -4,7 +4,7 @@ Code name: t.b.d
 
 ## Summary
 
-Standard flavors (7.1 and 8.0) are simplified into a single flavor. The standard flavor now is based on Ubuntu 22.04 and support Python3.10 and R4.4.
+Standard flavors (7.1 and 8.0) are simplified into a single flavor. The standard flavor now is based on Ubuntu 22.04 and supports Python3.10 and R4.4.
 This release fixed the conda-based SLC builds and updated packages.
 
 
@@ -20,7 +20,7 @@ This release uses version 0.18.2 of the container tool.
 
 ## Features / Enhancements
 
-- #883: Updated Standard 8.0 SLC
+- #883: Merged standard flavors
 
 ## Documentation
 

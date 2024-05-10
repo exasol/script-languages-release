@@ -26,7 +26,7 @@ n/a
 
 ## Refactoring
 
-n/a
+ - #877: Add tests using a module-based Java UDF
 
 ## Security
 

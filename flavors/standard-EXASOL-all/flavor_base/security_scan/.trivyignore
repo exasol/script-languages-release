@@ -23,6 +23,7 @@ CVE-2024-26597
 CVE-2024-26583
 CVE-2024-26828
 CVE-2024-26865
+CVE-2024-26585
 #CVE-2022-23648 is a bug in containerd, not issue for containers
 CVE-2022-23648
 #issue in cgroups, but no threat for ScriptLanguageContainer

@@ -34,6 +34,7 @@ n/a
 
  - #867: Fixed conda-based SLC builds, updated packages and ignore Kernel CVEs
  - #879: Updated package
+ - #891: Ignored Kernel CVE
 
 Attention: The CVE's below can't be fixed by the container itself, rather need to be addressed by the host system executing them.
 
@@ -44,3 +45,4 @@ Attention: The CVE's below can't be fixed by the container itself, rather need t
  - CVE-2024-26583
  - CVE-2024-26828
  - CVE-2024-26865
+ - CVE-2024-26585

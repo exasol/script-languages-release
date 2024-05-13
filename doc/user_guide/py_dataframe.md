@@ -24,9 +24,9 @@ The following table describes which conversions between DType/Python-Type and Da
 | (u)int*                        | -                | DOUBLE        | all standard and python3       | all         | (u)int* does not support NULL     |
 | float*                         | -                | DECIMAL       | all standard and python3       | all         | Uses numpy.nan for NULL           |
 | float*                         | -                | DOUBLE        | all standard and python3       | all         | Uses numpy.nan for NULL           |
-| string                         | -                | (VAR)CHAR     | all standard and python3       | >=6.1.0     | Uses pandas.NaN for NULL          |
+| string                         | -                | (VAR)CHAR     | all standard and python3       | \>=6.1.0    | Uses pandas.NaN for NULL          |
 | bool_                          | -                | BOOLEAN       | all standard and python3       | all         | Pandas will convert None to False |
-| boolean                        | -                | BOOLEAN       | all standard and python3       | >=6.1.0     | Uses pandas.NaN for NULL          |
+| boolean                        | -                | BOOLEAN       | all standard and python3       | \>=6.1.0    | Uses pandas.NaN for NULL          |
 | datetime64[ns]                 | -                | TIMESTAMP     | all standard and python3       | all         | Uses pandas.NaT for NULL          |
 | object                         | int              | DECIMAL       | all standard and python3       | all         | Uses None for NULL                |
 | object                         | int              | DOUBLE        | all standard and python3       | all         | Uses None for NULL                |
@@ -36,17 +36,17 @@ The following table describes which conversions between DType/Python-Type and Da
 | object                         | decimal.Decimal  | DOUBLE        | all standard and python3       | all         | Uses None for NULL                |
 | object                         | bool             | BOOLEAN       | all standard and python3       | all         | Uses None for NULL                |
 | object                         | str              | (VAR)CHAR     | all standard and python3       | all         | Uses None for NULL                |
-| object                         | pandas.Timestamp | TIMESTAMP     | all standard and python3       | >=6.1.0     | Uses None or pandas.NaN for NULL  |
+| object                         | pandas.Timestamp | TIMESTAMP     | all standard and python3       | \>=6.1.0    | Uses None or pandas.NaN for NULL  |
 | object                         | datetime.date    | DATE          | all standard and python3       | all         | Uses None for NULL                |
-| (u)int*[pyarrow]               | -                | DECIMAL       | standard-8.0.0 and all python3 | >=6.1.0     | Native NULL support               |
-| (u)int*[pyarrow]               | -                | DOUBLE        | standard-8.0.0 and all python3 | >=6.1.0     | Native NULL support               |
-| float*[pyarrow]                | -                | DECIMAL       | standard-8.0.0 and all python3 | >=6.1.0     | Native NULL support               |
-| float*[pyarrow]                | -                | DOUBLE        | standard-8.0.0 and all python3 | >=6.1.0     | Native NULL support               |
-| string[pyarrow]                | -                | (VAR)CHAR     | standard-8.0.0 and all python3 | >=6.1.0     | Native NULL support               |
-| bool[pyarrow]                  | -                | BOOLEAN       | standard-8.0.0 and all python3 | >=6.1.0     | Native NULL support               |
-| decimal128(*)[pyarrow]         | -                | DECIMAL       | standard-8.0.0 and all python3 | >=6.1.0     | Native NULL support               |
-| decimal128(*)[pyarrow]         | -                | DOUBLE        | standard-8.0.0 and all python3 | >=6.1.0     | Native NULL support               |
-| timestamp[ns, tz=UTC][pyarrow] | -                | TIMESTAMP     | standard-8.0.0 and all python3 | >=6.1.0     | Native NULL support.              |
+| (u)int*[pyarrow]               | -                | DECIMAL       | standard-8.0.0 and all python3 | \>=6.1.0    | Native NULL support               |
+| (u)int*[pyarrow]               | -                | DOUBLE        | standard-8.0.0 and all python3 | \>=6.1.0    | Native NULL support               |
+| float*[pyarrow]                | -                | DECIMAL       | standard-8.0.0 and all python3 | \>=6.1.0    | Native NULL support               |
+| float*[pyarrow]                | -                | DOUBLE        | standard-8.0.0 and all python3 | \>=6.1.0    | Native NULL support               |
+| string[pyarrow]                | -                | (VAR)CHAR     | standard-8.0.0 and all python3 | \>=6.1.0    | Native NULL support               |
+| bool[pyarrow]                  | -                | BOOLEAN       | standard-8.0.0 and all python3 | \>=6.1.0    | Native NULL support               |
+| decimal128(*)[pyarrow]         | -                | DECIMAL       | standard-8.0.0 and all python3 | \>=6.1.0    | Native NULL support               |
+| decimal128(*)[pyarrow]         | -                | DOUBLE        | standard-8.0.0 and all python3 | \>=6.1.0    | Native NULL support               |
+| timestamp[ns, tz=UTC][pyarrow] | -                | TIMESTAMP     | standard-8.0.0 and all python3 | \>=6.1.0    | Native NULL support.              |
 
 **Note**:
 

@@ -30,7 +30,7 @@ n/a
 
 ## Security
 
-n/a
+- #898: Ignored new Linux Kernel CVE's 
 
 Attention: The CVE's below can't be fixed by the container itself, rather need to be addressed by the host system executing them.
 
@@ -42,3 +42,11 @@ Attention: The CVE's below can't be fixed by the container itself, rather need t
  - CVE-2024-26828
  - CVE-2024-26865
  - CVE-2024-26585
+ - CVE-2023-52433
+ - CVE-2024-26642
+ - CVE-2024-26643
+ - CVE-2024-26800
+ - CVE-2024-26921
+ - CVE-2024-26923
+ - CVE-2024-26924
+ - CVE-2024-26925

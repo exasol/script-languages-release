@@ -7,4 +7,5 @@
 |  2 | nss           | 3.77               | 3.100              | UPDATED  |
 |  3 | openssl       | 3.2.1              | 3.3.0              | UPDATED  |
 |  4 | zeromq        | 4.3.4              | 4.3.5              | UPDATED  |
-|  5 | _openmp_mutex | 4.5=2_kmp_llvm     | 4.5=2_kmp_llvm     |          |
+|  5 | libzlib       |                    | 1.2.13             | NEW      |
+|  6 | _openmp_mutex | 4.5=2_kmp_llvm     | 4.5=2_kmp_llvm     |          |

@@ -33,6 +33,7 @@ n/a
 - #898: Ignored new Linux Kernel CVE's
 - #904: Ignored Kernel CVE
 - #906: Updated APT package
+- #910: Updated APT package
 
 Attention: The CVE's below can't be fixed by the container itself, rather need to be addressed by the host system executing them.
 

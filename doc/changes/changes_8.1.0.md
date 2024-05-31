@@ -26,7 +26,7 @@ n/a
 
 ## Refactoring
 
-n/a
+- #908: Pinned conda package
 
 ## Security
 

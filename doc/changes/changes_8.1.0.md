@@ -14,7 +14,7 @@ This release uses version 0.18.2 of the container tool.
 
 ## Bug Fixes
 
- n/a
+- #895: Fixed GH Action 'Publish Docker Test Container' 
 
 ## Features / Enhancements
 

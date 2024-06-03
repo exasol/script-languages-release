@@ -20,6 +20,7 @@ This release uses version 0.18.2 of the container tool.
 
 - #889: Upgraded all python template flavors
 - #892: Filtered out Linux Kernel related CVE's
+- #856: Changed mirror for installing R packages
 
 ## Documentation
 

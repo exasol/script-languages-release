@@ -22,4 +22,4 @@ jobs:
 
       
       - name: Check Release
-        run: ./scripts/check_release.sh "python3.4"
+        run: ./scripts/check_release.sh

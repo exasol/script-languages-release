@@ -29,6 +29,7 @@ n/a
 ## Refactoring
 
 - #908: Pinned conda package
+- #915: Updated Python
 
 ## Security
 

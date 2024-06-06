@@ -38,22 +38,4 @@ n/a
 - #910: Updated APT package
 - #917: Updated Ubuntu JDK package
 
-Attention: The CVE's below can't be fixed by the container itself, rather need to be addressed by the host system executing them.
-
- - CVE-2024-0646
- - CVE-2024-1085
- - CVE-2024-1086
- - CVE-2024-26597
- - CVE-2024-26583
- - CVE-2024-26828
- - CVE-2024-26865
- - CVE-2024-26585
- - CVE-2023-52433
- - CVE-2024-26642
- - CVE-2024-26643
- - CVE-2024-26800
- - CVE-2024-26921
- - CVE-2024-26923
- - CVE-2024-26924
- - CVE-2024-26925
- - CVE-2024-27397 
+Attention: Kernel CVE's can't be fixed by the container itself, rather need to be addressed by the host system executing them.

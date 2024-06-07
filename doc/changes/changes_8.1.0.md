@@ -14,7 +14,8 @@ This release uses version 0.18.2 of the container tool.
 
 ## Bug Fixes
 
-- #895: Fixed GH Action 'Publish Docker Test Container' 
+- #895: Fixed GH Action 'Publish Docker Test Container'
+- #902: fixed memory related bugs with emit dataframe 
 
 ## Features / Enhancements
 

@@ -1,16 +1,17 @@
-# script-languages-release 8.1.0, released t.b.d.
+# script-languages-release 8.1.0, released 2024-06-19
 
-Code name: t.b.d.
+Code name: Fixed memory leak for Python Dataframe Extension
 
 ## Summary
 
-t.b.d.
+This release fixes 3 memory related bugs in the Python Dataframe Extension, which were the root cause of a memory leak. Besides,
+this version uses the latest version of `exaslct` (0.19.0) and Python3.10 as runtime for the CI builds. The security scanner was changed in order to ignore all Linux Kernel related CVE's during the CI and release builds.
 
 ## [Package Version Comparison between Release 8.0.0 and 8.1.0](package_diffs/8.1.0/README.md)
 
 ## Script-Language-Container-Tool (Exaslct)
 
-This release uses version 0.18.2 of the container tool. 
+This release uses version 0.19.0 of the container tool. 
 
 ## Bug Fixes
 
@@ -22,6 +23,7 @@ This release uses version 0.18.2 of the container tool.
 - #889: Upgraded all python template flavors
 - #892: Filtered out Linux Kernel related CVE's
 - #856: Changed mirror for installing R packages
+- #921: Use exasol-python-test-framework 0.5.0
 
 ## Documentation
 

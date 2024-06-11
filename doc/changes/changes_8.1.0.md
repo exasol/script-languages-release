@@ -1,4 +1,4 @@
-# script-languages-release 8.1.0, released 2024-06-19
+# script-languages-release 8.1.0, released 2024-06-11
 
 Code name: Fixed memory leak for Python Dataframe Extension
 
@@ -33,6 +33,7 @@ n/a
 
 - #908: Pinned conda package
 - #915: Updated Python
+- #923: Use exasol-python-test-framework 0.5.1
 
 ## Security
 

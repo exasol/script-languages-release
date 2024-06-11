@@ -2,10 +2,10 @@
 
 |    | Package              | Version in 8.0.0             | Version in 8.1.0             | Status   |
 |---:|:---------------------|:-----------------------------|:-----------------------------|:---------|
-|  0 | apt-transport-https  | 2.4.12                       | 2.4.12                       |          |
-|  1 | build-essential      | 12.9ubuntu3                  | 12.9ubuntu3                  |          |
-|  2 | cmake                | 3.22.1-1ubuntu1.22.04.2      | 3.22.1-1ubuntu1.22.04.2      |          |
-|  3 | git                  | 1:2.34.1-1ubuntu1.10         | 1:2.34.1-1ubuntu1.10         |          |
+|  0 | git                  | 1:2.34.1-1ubuntu1.10         | 1:2.34.1-1ubuntu1.11         | UPDATED  |
+|  1 | apt-transport-https  | 2.4.12                       | 2.4.12                       |          |
+|  2 | build-essential      | 12.9ubuntu3                  | 12.9ubuntu3                  |          |
+|  3 | cmake                | 3.22.1-1ubuntu1.22.04.2      | 3.22.1-1ubuntu1.22.04.2      |          |
 |  4 | gnupg                | 2.2.27-3ubuntu2.1            | 2.2.27-3ubuntu2.1            |          |
 |  5 | ldap-utils           | 2.5.17+dfsg-0ubuntu0.22.04.1 | 2.5.17+dfsg-0ubuntu0.22.04.1 |          |
 |  6 | libcurl4-openssl-dev | 7.81.0-1ubuntu1.16           | 7.81.0-1ubuntu1.16           |          |

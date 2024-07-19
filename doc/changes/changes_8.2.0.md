@@ -30,6 +30,6 @@ n/a
 
 ## Security
 
-n/a
+ - #930: Updated Packages 
 
 Attention: Kernel CVE's can't be fixed by the container itself, rather need to be addressed by the host system executing them.

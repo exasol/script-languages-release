@@ -1,10 +1,10 @@
-# script-languages-release 8.2.0, released t.b.d.
+# script-languages-release 8.2.0, released 2024-07-23.
 
-Code name: t.b.d.
+Code name: Package updates.
 
 ## Summary
 
-t.b.d.
+This release updates some Ubuntu and Python packages. Also, it fixes a bug where a Pip package could be downgraded during the Script-Languages-Container build process.
 
 ## [Package Version Comparison between Release 8.1.0 and 8.2.0](package_diffs/8.2.0/README.md)
 
@@ -30,6 +30,6 @@ n/a
 
 ## Security
 
-n/a
+ - #930: Updated Packages 
 
 Attention: Kernel CVE's can't be fixed by the container itself, rather need to be addressed by the host system executing them.

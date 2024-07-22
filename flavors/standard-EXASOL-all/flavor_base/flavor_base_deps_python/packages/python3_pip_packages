@@ -40,7 +40,7 @@ pyexasol|0.25.2
 pysftp|0.2.9
 pytz|2024.1
 sagemaker|2.218.1
-setuptools|69.5.1
+setuptools|70.0.0
 pycurl|7.45.3
 redis|5.0.4
 roman|4.2

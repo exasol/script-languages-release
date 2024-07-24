@@ -7,4 +7,4 @@ Code name:
 
 ## Refactorings
 
-* #933: Added file release_config.yml
+* #933: Added file `release_config.yml`

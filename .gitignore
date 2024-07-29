@@ -12,3 +12,6 @@ emulator/zmqcontainer_pb2.py
 luigi.cfg
 .bcc/
 .vagrant
+
+# Emacs
+TAGS

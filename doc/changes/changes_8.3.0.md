@@ -8,6 +8,7 @@ Code name:
 ## Security Issues
 
 * #935: Update dependencies
+* #939: Updated exaslct,slcci & slccisetup
 
 ## Refactorings
 

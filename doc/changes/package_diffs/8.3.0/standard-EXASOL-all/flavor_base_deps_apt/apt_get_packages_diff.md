@@ -3,15 +3,15 @@
 |    | Package              | Version in 8.2.0             | Version in 8.3.0             | Status   |
 |---:|:---------------------|:-----------------------------|:-----------------------------|:---------|
 |  0 | ldap-utils           | 2.5.18+dfsg-0ubuntu0.22.04.1 | 2.5.18+dfsg-0ubuntu0.22.04.2 | UPDATED  |
-|  1 | libldap2-dev         | 2.5.18+dfsg-0ubuntu0.22.04.1 | 2.5.18+dfsg-0ubuntu0.22.04.2 | UPDATED  |
-|  2 | openssl              | 3.0.2-0ubuntu1.16            | 3.0.2-0ubuntu1.17            | UPDATED  |
-|  3 | slapd                | 2.5.18+dfsg-0ubuntu0.22.04.1 | 2.5.18+dfsg-0ubuntu0.22.04.2 | UPDATED  |
-|  4 | apt-transport-https  | 2.4.12                       | 2.4.12                       |          |
-|  5 | build-essential      | 12.9ubuntu3                  | 12.9ubuntu3                  |          |
-|  6 | cmake                | 3.22.1-1ubuntu1.22.04.2      | 3.22.1-1ubuntu1.22.04.2      |          |
-|  7 | git                  | 1:2.34.1-1ubuntu1.11         | 1:2.34.1-1ubuntu1.11         |          |
-|  8 | gnupg                | 2.2.27-3ubuntu2.1            | 2.2.27-3ubuntu2.1            |          |
-|  9 | libcurl4-openssl-dev | 7.81.0-1ubuntu1.16           | 7.81.0-1ubuntu1.16           |          |
+|  1 | libcurl4-openssl-dev | 7.81.0-1ubuntu1.16           | 7.81.0-1ubuntu1.17           | UPDATED  |
+|  2 | libldap2-dev         | 2.5.18+dfsg-0ubuntu0.22.04.1 | 2.5.18+dfsg-0ubuntu0.22.04.2 | UPDATED  |
+|  3 | openssl              | 3.0.2-0ubuntu1.16            | 3.0.2-0ubuntu1.17            | UPDATED  |
+|  4 | slapd                | 2.5.18+dfsg-0ubuntu0.22.04.1 | 2.5.18+dfsg-0ubuntu0.22.04.2 | UPDATED  |
+|  5 | apt-transport-https  | 2.4.12                       | 2.4.12                       |          |
+|  6 | build-essential      | 12.9ubuntu3                  | 12.9ubuntu3                  |          |
+|  7 | cmake                | 3.22.1-1ubuntu1.22.04.2      | 3.22.1-1ubuntu1.22.04.2      |          |
+|  8 | git                  | 1:2.34.1-1ubuntu1.11         | 1:2.34.1-1ubuntu1.11         |          |
+|  9 | gnupg                | 2.2.27-3ubuntu2.1            | 2.2.27-3ubuntu2.1            |          |
 | 10 | libhiredis-dev       | 0.14.1-2                     | 0.14.1-2                     |          |
 | 11 | libldb2              | 2:2.4.4-0ubuntu0.22.04.2     | 2:2.4.4-0ubuntu0.22.04.2     |          |
 | 12 | libleveldb1d         | 1.23-3build1                 | 1.23-3build1                 |          |

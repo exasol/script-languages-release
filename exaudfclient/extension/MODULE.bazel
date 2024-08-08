@@ -4,14 +4,28 @@ bazel_dep(name = "bazel_skylib", version = "1.7.1")
 
 local_repository = use_repo_rule("@bazel_tools//tools/build_defs/repo:local.bzl", "local_repository")
 
-
 local_repository(
     name = "script_languages",
     path = "../base",
 )
 
 
+local_repository(
+    name = "zmq_repository",
+    path = "../base/zmq_repository.bzl",
+)
 
-zmq_local_repository = use_repo_rule("@script_languages//:zmq_repository.bzl", "zmq_local_repository")
-zmq_local_repository(name = "zmq")
+local_repository(
+    name = "protobuf_repository",
+    path = "../base/protobuf_repository.bzl",
+)
 
+local_repository(
+    name = "python_repository",
+    path = "../base/python_repository.bzl",
+)
+
+local_repository(
+    name = "numpy_repository",
+    path = "../base/numpy_repository.bzl",
+)

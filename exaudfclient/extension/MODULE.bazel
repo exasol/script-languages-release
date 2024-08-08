@@ -1,0 +1,17 @@
+module(name="exaudfclient_ext", version = "1.0")
+
+bazel_dep(name = "bazel_skylib", version = "1.7.1")
+
+local_repository = use_repo_rule("@bazel_tools//tools/build_defs/repo:local.bzl", "local_repository")
+
+
+local_repository(
+    name = "script_languages",
+    path = "../base",
+)
+
+
+
+zmq_local_repository = use_repo_rule("@script_languages//:zmq_repository.bzl", "zmq_local_repository")
+zmq_local_repository(name = "zmq")
+

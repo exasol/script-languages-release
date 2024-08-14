@@ -13,3 +13,4 @@ Code name:
 ## Refactorings
 
 * #933: Added file `release_config.yml`
+* #685: Updated Bazel

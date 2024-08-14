@@ -13,7 +13,7 @@ A script language container consists of a Linux container with a complete Linux 
 We provide in this repository several [flavors](flavors) of script-language containers, such as the current standard implementation of the [script client](https://github.com/exasol/script-languages/blob/master/exaudfclient/base) with support for Python 2/3, R und Java. A flavor contains the build description of a container. We will show below how to customize and build the different script-language containers. 
 
 You can find pre-built containers in the [release section](https://github.com/exasol/script-languages-release/releases) of this repository.
-If you are interested in the script client you find more details [here](https://github.com/exasol/script-languages/blob/master/exaudfclient/base/README.md).
+If you are interested in the script client you find more details [here](https://github.com/exasol/script-languages/blob/master/exaudfclient/README.md).
 
 ## Features
 

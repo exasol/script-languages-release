@@ -13,4 +13,4 @@ Code name:
 ## Refactorings
 
 * #933: Added file `release_config.yml`
-* #685: Updated Bazel
+* #685: Updated Bazel and removed freeze-install from the conda flavors

@@ -1,0 +1,20 @@
+module(name="exaudfclient_ext", version = "1.0")
+
+include("//base:base.MODULE.bazel")
+
+
+new_local_repository = use_repo_rule("@bazel_tools//tools/build_defs/repo:local.bzl", "new_local_repository")
+
+new_local_repository(
+    name = "R_linux",
+    path = "/usr",
+    build_file_content = """
+cc_library(
+    name = "r-lib",
+    srcs = glob(["lib/R/lib/libR.so"]),
+    hdrs = glob(["share/R/include/*/*.h","share/R/include/*.h"]),
+    includes = ["share/R/include"],
+    visibility = ["//visibility:public"]
+)
+    """
+)

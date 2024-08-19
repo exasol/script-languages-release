@@ -1,23 +1,23 @@
-load("@script_languages//:variables.bzl", "VM_ENABLED_DEFINES")
+load("//:variables.bzl", "VM_ENABLED_DEFINES")
 
-alias(
+config_setting(
     name = "benchmark",
-    actual = "@script_languages//:benchmark"
+    define_values = {"benchmark": "true"},
 )
 
-alias(
+config_setting(
     name = "python",
-    actual = "@script_languages//:python"
+    define_values = {"python": "true"},
 )
 
-alias(
+config_setting(
     name = "java",
-    actual = "@script_languages//:java"
+    define_values = {"java": "true"},
 )
 
-alias(
+config_setting(
     name = "bash",
-    actual = "@script_languages//:bash"
+    define_values = {"bash": "true"},
 )
 
 config_setting(
@@ -25,57 +25,84 @@ config_setting(
     define_values = {"r": "true"},
 )
 
+config_setting(
+    name = "fast_binary",
+    define_values = {
+        "binary_type": "fast_binary",
+        },
+)
+
+config_setting(
+    name = "slow_wrapper",
+    define_values = {
+        "binary_type": "slow_wrapper",
+        },
+)
+
+
+config_setting(
+    name = "valgrind_wrapper",
+    define_values = {
+        "wrapper_type": "valgrind_wrapper",
+        },
+)
+
+config_setting(
+    name = "valgrind_massif_wrapper",
+    define_values = {
+        "wrapper_type": "valgrind_massif_wrapper",
+        },
+)
+
+config_setting(
+    name = "stdout_to_bucketfs",
+    define_values = {
+        "wrapper_type": "stdout_to_bucketfs",
+        },
+)
+
 
 VM_ENABLED_DEPS=select({
-        "//:benchmark": ["@script_languages//benchmark_container:benchmark_container"],
+        "//:benchmark": ["//base/benchmark_container:benchmark_container"],
         "//conditions:default": []
     }) + select({
-        "//:java": ["@script_languages//javacontainer:javacontainer"],
+        "//:java": ["//base/javacontainer:javacontainer"],
         "//conditions:default": []
     }) + select({
-        "//:bash": ["@script_languages//streaming_container:streamingcontainer"],
+        "//:bash": ["//base/streaming_container:streamingcontainer"],
         "//conditions:default": []
     })
 
-VM_PYTHON2_DEPS=select({
-        "//:python": ["@script_languages//python/python2:pythoncontainer"],
-        "//conditions:default": []
-    }) 
-
 VM_PYTHON3_DEPS=select({
-        "//:python": ["@script_languages//python/python3:pythoncontainer"],
+        "//:python": ["//base/python/python3:pythoncontainer"],
         "//conditions:default": []
-    }) 
+    })
+
 
 VM_R_DEPS=select({
         ":r": ["//rcontainer:rcontainer"],
         "//conditions:default": []
     })
 
-R_VM_ENABLED_DEFINE=select({
-        "//:r": ["ENABLE_R_VM"],
-        "//conditions:default": []
-    })
-VM_ENABLED_DEFINES=VM_ENABLED_DEFINES+R_VM_ENABLED_DEFINE
 
 cc_binary(
     name = "exaudfclient_bin",
-    srcs = ["exaudfclient.cc", "@script_languages//:load_dynamic.cc"],
+    srcs = ["exaudfclient.cc", "//base:load_dynamic"],
     linkopts = ["-ldl"], # needed for dynamicly loading libexaudflib_complete.so into another linker namespace
-    deps = ["@script_languages//exaudflib:header", "@script_languages//:debug_message_h"]+VM_ENABLED_DEPS+VM_PYTHON2_DEPS+VM_R_DEPS+
-            ["@script_languages//exaudflib:exaudflib-deps"],
+    deps = ["//base/exaudflib:header", "//base:debug_message_h"]+VM_ENABLED_DEPS+VM_R_DEPS+
+            ["//base/exaudflib:exaudflib-deps"],
     defines = VM_ENABLED_DEFINES,
-    data = ["@script_languages//:libexaudflib_complete.so"]
+    data = ["//base:libexaudflib_complete.so"]
 )
 
 cc_binary(
     name = "exaudfclient_py3_bin",
-    srcs = ["exaudfclient.cc", "@script_languages//:load_dynamic.cc"],
+    srcs = ["exaudfclient.cc", "//base:load_dynamic"],
     linkopts = ["-ldl"], # needed for dynamicly loading libexaudflib_complete.so into another linker namespace
-    deps = ["@script_languages//exaudflib:header", "@script_languages//:debug_message_h"]+VM_ENABLED_DEPS+VM_PYTHON3_DEPS+VM_R_DEPS+
-            ["@script_languages//exaudflib:exaudflib-deps"],
+    deps = ["//base/exaudflib:header", "//base:debug_message_h"]+VM_ENABLED_DEPS+VM_PYTHON3_DEPS+VM_R_DEPS+
+            ["//base/exaudflib:exaudflib-deps"],
     defines = VM_ENABLED_DEFINES,
-    data = ["@script_languages//:libexaudflib_complete.so"]
+    data = ["//base:libexaudflib_complete.so"]
 )
 
 ## The purpose of the static binaries is to verify if the linker namespace test work correctly.
@@ -87,18 +114,18 @@ cc_binary(
 ## Besides this the test under test/python3/all/linker_namespace.py checks the normal build, which expects
 ## not to find any occurence of the dependencies (protobuf/zmq) in the primary linker namespace.
 ##
-## We need to explicitly declare the dependency of protobuf/zmq here, as the exaudflib is a static lib (//exaudflib:exaudflib)
+## We need to explicitly declare the dependency of protobuf/zmq here, as the exaudflib is a static lib (//base/exaudflib:exaudflib)
 ## and hence does not contain dependency information. We cannot declare the shared lib (:exaudflib_complete.so)
 ## as dependency as it is a binary for bazel.
 
 cc_binary(
     name = "exaudfclient_py3_static_bin",
-    srcs = ["exaudfclient.cc",  "@script_languages//:load_dynamic.cc"],
+    srcs = ["exaudfclient.cc",  "//base:load_dynamic"],
     linkopts = ["-ldl"], # needed for dynamicly loading libexaudflib_complete.so into another linker namespace
-    deps = ["@script_languages//exaudflib:header", "@script_languages//:debug_message_h"]+VM_ENABLED_DEPS+VM_PYTHON3_DEPS+VM_R_DEPS+
-            ["@script_languages//exaudflib:exaudflib-deps"] + [ "@zmq//:zmq", "@protobuf//:protobuf"],
+    deps = ["//base/exaudflib:header", "//base:debug_message_h"]+VM_ENABLED_DEPS+VM_PYTHON3_DEPS+VM_R_DEPS+
+            ["//base/exaudflib:exaudflib-deps"] + [ "@zmq//:zmq", "@protobuf//:protobuf"],
     defines = VM_ENABLED_DEFINES,
-    data = ["@script_languages//:libexaudflib_complete.so"],
+    data = ["//base:libexaudflib_complete.so"],
 )
 
 # Workarround for the hardcoded paths in exaudfclient for libexaudflib_complete.so and python_ext_dataframe.cc
@@ -109,26 +136,37 @@ cc_binary(
 # - For performance reason, we can not wrap the binary into a shell script, as such this is only for local debugging and testing
 #   and we hardcode the paths for the production container
 
-SLOW_WRAPPER_BINARY_PY3="""$(location @script_languages//:wrapper_generator_bin) "$(location exaudfclient_py3_bin)" "$(location exaudfclient_py3)" "$(location exaudfclient.template.sh)" """
+sh_library(
+    name = "wrapper_generator_bin",
+    srcs=select({
+        "//:valgrind_wrapper": ["//base:create_binary_wrapper_valgrind.sh"],
+        "//:valgrind_massif_wrapper": ["//base:create_binary_wrapper_valgrind_massif.sh"],
+        "//:stdout_to_bucketfs": ["//base:create_binary_wrapper_stdout_to_bucketfs.sh"],
+        "//conditions:default": ["//base:create_binary_wrapper.sh"]
+    })
+)
+
+
+SLOW_WRAPPER_BINARY_PY3="""$(location //:wrapper_generator_bin) "$(location exaudfclient_py3_bin)" "$(location exaudfclient_py3)" "$(location //base:exaudfclient.template.sh)" """
 FAST_BINARY_PY3="""cp "$(location exaudfclient_py3_bin)" "$(location exaudfclient_py3)" """
 CREATE_BINARY_PY3_SCRIPT=select({
-        "@script_languages//:fast_binary": FAST_BINARY_PY3,
-        "@script_languages//:slow_wrapper": SLOW_WRAPPER_BINARY_PY3,
+        "//:fast_binary": FAST_BINARY_PY3,
+        "//:slow_wrapper": SLOW_WRAPPER_BINARY_PY3,
         "//conditions:default": FAST_BINARY_PY3
     })
 genrule(
     name = "exaudfclient_py3",
     cmd = CREATE_BINARY_PY3_SCRIPT,
     outs = ["exaudfclient_py3"],
-    srcs = [":exaudfclient_py3_bin", "@script_languages//:libexaudflib_complete.so", "exaudfclient.template.sh", "@script_languages//:wrapper_generator_bin"],
+    srcs = [":exaudfclient_py3_bin", "//base:libexaudflib_complete.so", "//base:exaudfclient.template.sh", "//:wrapper_generator_bin"],
     output_to_bindir = True
 )
 
-SLOW_WRAPPER_STATIC_BINARY_PY3="""$(location @script_languages//:wrapper_generator_bin) "$(location exaudfclient_py3_static_bin)" "$(location exaudfclient_py3_static)" "$(location exaudfclient.template.sh)" """
+SLOW_WRAPPER_STATIC_BINARY_PY3="""$(location //:wrapper_generator_bin) "$(location exaudfclient_py3_static_bin)" "$(location exaudfclient_py3_static)" "$(location //base:exaudfclient.template.sh)" """
 FAST_BINARY_STATIC_PY3="""cp "$(location exaudfclient_py3_static_bin)" "$(location exaudfclient_py3_static)" """
 CREATE_STATIC_BINARY_PY3_SCRIPT=select({
-        "@script_languages//:fast_binary": FAST_BINARY_STATIC_PY3,
-        "@script_languages//:slow_wrapper": SLOW_WRAPPER_STATIC_BINARY_PY3,
+        "//:fast_binary": FAST_BINARY_STATIC_PY3,
+        "//:slow_wrapper": SLOW_WRAPPER_STATIC_BINARY_PY3,
         "//conditions:default": FAST_BINARY_STATIC_PY3
     })
 
@@ -136,7 +174,6 @@ genrule(
     name = "exaudfclient_py3_static",
     cmd = CREATE_STATIC_BINARY_PY3_SCRIPT,
     outs = ["exaudfclient_py3_static"],
-    srcs = [":exaudfclient_py3_static_bin", "@script_languages//:libexaudflib_complete.so", "exaudfclient.template.sh", "@script_languages//:wrapper_generator_bin"],
+    srcs = [":exaudfclient_py3_static_bin", "//base:libexaudflib_complete.so", "//base:exaudfclient.template.sh", "//:wrapper_generator_bin"],
     output_to_bindir = True
 )
-

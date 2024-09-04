@@ -1,6 +1,6 @@
 # script-languages-release 8.3.0, released 2024-09-05
 
-Code name: Updated exaslct and Exasol manifest
+Code name: Updated exaslct to 1.0.0 and Exasol manifest
 
 ## Summary
 

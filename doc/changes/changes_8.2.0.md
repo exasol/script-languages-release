@@ -1,4 +1,4 @@
-**# script-languages-release 8.2.0, released 2024-07-23.
+# script-languages-release 8.2.0, released 2024-07-23.
 
 Code name: Package updates.
 
@@ -10,7 +10,7 @@ This release updates some Ubuntu and Python packages. Also, it fixes a bug where
 
 ## Script-Language-Container-Tool (Exaslct)
 
-This** release uses version 0.19.0 of the container tool. 
+This release uses version 0.19.0 of the container tool. 
 
 ## Bug Fixes
 

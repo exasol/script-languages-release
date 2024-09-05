@@ -2,7 +2,7 @@
 
 |    | Package         | Version in 8.2.0        | Version in 8.3.0        | Status   |
 |---:|:----------------|:------------------------|:------------------------|:---------|
-|  0 | libssl-dev      | 3.0.2-0ubuntu1.16       | 3.0.2-0ubuntu1.17       | UPDATED  |
+|  0 | libssl-dev      | 3.0.2-0ubuntu1.16       | 3.0.2-0ubuntu1.18       | UPDATED  |
 |  1 | coreutils       | 8.32-4.1ubuntu1.2       | 8.32-4.1ubuntu1.2       |          |
 |  2 | libnss-db       | 2.2.3pre1-6ubuntu3      | 2.2.3pre1-6ubuntu3      |          |
 |  3 | libprotobuf-dev | 3.12.4-1ubuntu7.22.04.1 | 3.12.4-1ubuntu7.22.04.1 |          |

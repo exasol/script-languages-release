@@ -5,7 +5,7 @@
 |  0 | ldap-utils           | 2.5.18+dfsg-0ubuntu0.22.04.1 | 2.5.18+dfsg-0ubuntu0.22.04.2 | UPDATED  |
 |  1 | libcurl4-openssl-dev | 7.81.0-1ubuntu1.16           | 7.81.0-1ubuntu1.17           | UPDATED  |
 |  2 | libldap2-dev         | 2.5.18+dfsg-0ubuntu0.22.04.1 | 2.5.18+dfsg-0ubuntu0.22.04.2 | UPDATED  |
-|  3 | openssl              | 3.0.2-0ubuntu1.16            | 3.0.2-0ubuntu1.17            | UPDATED  |
+|  3 | openssl              | 3.0.2-0ubuntu1.16            | 3.0.2-0ubuntu1.18            | UPDATED  |
 |  4 | slapd                | 2.5.18+dfsg-0ubuntu0.22.04.1 | 2.5.18+dfsg-0ubuntu0.22.04.2 | UPDATED  |
 |  5 | apt-transport-https  | 2.4.12                       | 2.4.12                       |          |
 |  6 | build-essential      | 12.9ubuntu3                  | 12.9ubuntu3                  |          |

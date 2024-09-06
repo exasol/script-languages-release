@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "exasol-script-languages-release"
-version = "8.3.0"
+version = "8.4.0"
 description = "Script Languages Release"
 
 license = "MIT"
@@ -8,6 +8,12 @@ license = "MIT"
 authors = [
     "Torsten Kilias <torsten.kilias@exasol.com>",
     "Thomas Uebensee <ext.thomas.uebensee@exasol.com>"
+]
+
+packages = [
+    {include = "README.md"},
+    {include = "LICENSE"},
+    {include = "exasol"},
 ]
 
 readme = 'README.md'  # Markdown files are supported

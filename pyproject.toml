@@ -10,6 +10,12 @@ authors = [
     "Thomas Uebensee <ext.thomas.uebensee@exasol.com>"
 ]
 
+packages = [
+    {include = "README.md"},
+    {include = "LICENSE"},
+    {include = "exasol"},
+]
+
 readme = 'README.md'  # Markdown files are supported
 
 repository = "https://github.com/exasol/script-languages-release"

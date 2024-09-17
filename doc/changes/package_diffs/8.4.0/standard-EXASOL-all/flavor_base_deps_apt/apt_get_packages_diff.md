@@ -2,13 +2,13 @@
 
 |    | Package              | Version in 8.3.0             | Version in 8.4.0             | Status   |
 |---:|:---------------------|:-----------------------------|:-----------------------------|:---------|
-|  0 | apt-transport-https  | 2.4.12                       | 2.4.12                       |          |
-|  1 | build-essential      | 12.9ubuntu3                  | 12.9ubuntu3                  |          |
-|  2 | cmake                | 3.22.1-1ubuntu1.22.04.2      | 3.22.1-1ubuntu1.22.04.2      |          |
-|  3 | git                  | 1:2.34.1-1ubuntu1.11         | 1:2.34.1-1ubuntu1.11         |          |
-|  4 | gnupg                | 2.2.27-3ubuntu2.1            | 2.2.27-3ubuntu2.1            |          |
-|  5 | ldap-utils           | 2.5.18+dfsg-0ubuntu0.22.04.2 | 2.5.18+dfsg-0ubuntu0.22.04.2 |          |
-|  6 | libcurl4-openssl-dev | 7.81.0-1ubuntu1.17           | 7.81.0-1ubuntu1.17           |          |
+|  0 | libcurl4-openssl-dev | 7.81.0-1ubuntu1.17           | 7.81.0-1ubuntu1.18           | UPDATED  |
+|  1 | apt-transport-https  | 2.4.12                       | 2.4.12                       |          |
+|  2 | build-essential      | 12.9ubuntu3                  | 12.9ubuntu3                  |          |
+|  3 | cmake                | 3.22.1-1ubuntu1.22.04.2      | 3.22.1-1ubuntu1.22.04.2      |          |
+|  4 | git                  | 1:2.34.1-1ubuntu1.11         | 1:2.34.1-1ubuntu1.11         |          |
+|  5 | gnupg                | 2.2.27-3ubuntu2.1            | 2.2.27-3ubuntu2.1            |          |
+|  6 | ldap-utils           | 2.5.18+dfsg-0ubuntu0.22.04.2 | 2.5.18+dfsg-0ubuntu0.22.04.2 |          |
 |  7 | libhiredis-dev       | 0.14.1-2                     | 0.14.1-2                     |          |
 |  8 | libldap2-dev         | 2.5.18+dfsg-0ubuntu0.22.04.2 | 2.5.18+dfsg-0ubuntu0.22.04.2 |          |
 |  9 | libldb2              | 2:2.4.4-0ubuntu0.22.04.2     | 2:2.4.4-0ubuntu0.22.04.2     |          |

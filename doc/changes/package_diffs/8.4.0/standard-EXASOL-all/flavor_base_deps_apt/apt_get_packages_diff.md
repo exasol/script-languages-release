@@ -2,8 +2,8 @@
 
 |    | Package              | Version in 8.3.0             | Version in 8.4.0             | Status   |
 |---:|:---------------------|:-----------------------------|:-----------------------------|:---------|
-|  0 | libcurl4-openssl-dev | 7.81.0-1ubuntu1.17           | 7.81.0-1ubuntu1.18           | UPDATED  |
-|  1 | apt-transport-https  | 2.4.12                       | 2.4.12                       |          |
+|  0 | apt-transport-https  | 2.4.12                       | 2.4.13                       | UPDATED  |
+|  1 | libcurl4-openssl-dev | 7.81.0-1ubuntu1.17           | 7.81.0-1ubuntu1.18           | UPDATED  |
 |  2 | build-essential      | 12.9ubuntu3                  | 12.9ubuntu3                  |          |
 |  3 | cmake                | 3.22.1-1ubuntu1.22.04.2      | 3.22.1-1ubuntu1.22.04.2      |          |
 |  4 | git                  | 1:2.34.1-1ubuntu1.11         | 1:2.34.1-1ubuntu1.11         |          |

@@ -1,4 +1,4 @@
-libexpat1|2.4.7-1ubuntu0.3 #Overrides version used by r-base-core/r-base-dev
-libexpat1-dev|2.4.7-1ubuntu0.3 #Overrides version used by r-base-core/r-base-dev
-r-base-core|4.4.0-1.2204.0
-r-base-dev|4.4.0-1.2204.0
+libexpat1|2.4.7-1ubuntu0.4 #Overrides version used by r-base-core/r-base-dev
+libexpat1-dev|2.4.7-1ubuntu0.4 #Overrides version used by r-base-core/r-base-dev
+r-base-core|4.4.1-3.2204.0
+r-base-dev|4.4.1-3.2204.0

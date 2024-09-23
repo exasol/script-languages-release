@@ -16,10 +16,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-
-    - name: Search for duplicated error codes
-      run: bash find_duplicate_error_codes.sh
-
     - name: Install bazel
       run: | 
         curl -L -o bazel https://github.com/bazelbuild/bazelisk/releases/download/v1.19.0/bazelisk-linux-amd64

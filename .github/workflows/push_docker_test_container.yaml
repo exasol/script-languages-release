@@ -12,9 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     environment: publish
     steps:
-      - uses: actions/checkout@v3
-      - name: Init submodules
-        run: git submodule update --init --recursive
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: 'recursive'
       - name: Build TestContainer
         run: ./exaslct build-test-container --force-rebuild
       - name: Push TestContainer image

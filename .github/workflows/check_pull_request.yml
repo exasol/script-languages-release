@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-
-    - name: Init submodules
-      run: git submodule update --init --recursive
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        submodules: 'recursive'
 
     - name: Check if the branch triggers a rebuild
       run: "bash .github/workflows/check_pull_request.sh ${{ github.event.pull_request.head.ref }} ${{ github.event.pull_request.base.ref }}"

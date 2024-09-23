@@ -14,8 +14,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Init submodules
-      run: git submodule update --init --recursive
+      with:
+        fetch-depth: 0
+        submodules: 'recursive'
     - name: Run update_current_submodules_file.sh
       run: bash githooks/update_current_submodules_file.sh
     - name: Show changes on working copy

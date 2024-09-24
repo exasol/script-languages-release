@@ -2,8 +2,8 @@ name: Update trivy cache
 
 on:
   workflow_dispatch:
-  pull_request:
-  push:
+  schedule:
+    - cron: "30 0 * * *"
 
 jobs:
   update_trivy_cache:
@@ -21,7 +21,6 @@ jobs:
           DEBIAN_FRONTEND: noninteractive
       - name: Fetch trivy databases
         run: |
-          cat /tmp/not_there
           trivy image --download-java-db-only
           trivy image --download-db-only
 
@@ -41,7 +40,7 @@ jobs:
         with:
           status: ${{ job.status }}
           token: ${{ github.token }}
-          notification_title: "Release build in {repo} has {status_message}"
+          notification_title: "Update trivy build in {repo} has {status_message}"
           message_format: "{emoji} *{workflow}* {status_message} in <{repo_url}|{repo}>"
           notify_when: "failure,cancelled,warnings,skipped"
         env:

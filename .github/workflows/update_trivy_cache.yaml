@@ -26,7 +26,7 @@ jobs:
           trivy image --download-java-db-only
           trivy image --download-db-only
       - name: Copy trivy databases
-          aws s3 cp --recursive "$HOME/.cache/trivy/" "$TRIVY_CACHE_LOCATION"
+        run: aws s3 cp --recursive "$HOME/.cache/trivy/" "$TRIVY_CACHE_LOCATION"
         env: # Set the secret as an env variable
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_SECRET }}

@@ -21,6 +21,7 @@ jobs:
           DEBIAN_FRONTEND: noninteractive
       - name: Fetch trivy databases
         run: |
+          cat /tmp/not_there
           trivy image --download-java-db-only
           trivy image --download-db-only
 
@@ -31,3 +32,17 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_SECRET }}
           AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
           TRIVY_CACHE_LOCATION: ${{ secrets.TRIVY_CACHE_LOCATION }}
+
+      - name: Report failure Status to Slack channel
+        id: report-failure-status-slack
+        # Also run this step in case of failures
+        if: ${{ always() }}
+        uses: ravsamhq/notify-slack-action@v2
+        with:
+          status: ${{ job.status }}
+          token: ${{ github.token }}
+          notification_title: "Release build in {repo} has {status_message}"
+          message_format: "{emoji} *{workflow}* {status_message} in <{repo_url}|{repo}>"
+          notify_when: "failure,cancelled,warnings,skipped"
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.INTEGRATION_TEAM_SLACK_NOTIFICATION_WEBHOOK }}

@@ -1,0 +1,34 @@
+name: Update trivy cache
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update_trivy_cache:
+    environment: AWS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run install dependencies
+        run: |
+          apt update && apt install -y awscli curl wget apt-transport-https gnupg lsb-release
+          wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | apt-key add -
+          echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | tee -a /etc/apt/sources.list.d/trivy.list
+          apt-get update
+          apt-get install trivy
+
+      - name: Fetch trivy databases
+        run: |
+          trivy image --download-java-db-only
+          trivy image --download-db-only
+
+      - name: Fetch trivy databases
+        run: |
+          trivy image --download-java-db-only
+          trivy image --download-db-only
+      - name: Copy trivy databases
+          aws s3 cp --recursive "$HOME/.cache/trivy/" "$TRIVY_CACHE_LOCATION"
+        env: # Set the secret as an env variable
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_SECRET }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
+          TRIVY_CACHE_LOCATION: ${{ secrets.TRIVY_CACHE_LOCATION }}

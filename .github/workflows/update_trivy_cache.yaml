@@ -12,21 +12,18 @@ jobs:
     steps:
       - name: Run install dependencies
         run: |
-          apt update && apt install -y awscli curl wget apt-transport-https gnupg lsb-release
-          wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | apt-key add -
-          echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | tee -a /etc/apt/sources.list.d/trivy.list
-          apt-get update
-          apt-get install trivy
-
+          sudo apt update && sudo apt install -y awscli curl wget apt-transport-https gnupg lsb-release
+          wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+          echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
+          sudo apt-get update
+          sudo apt-get install trivy
+        env:
+          DEBIAN_FRONTEND: noninteractive
       - name: Fetch trivy databases
         run: |
           trivy image --download-java-db-only
           trivy image --download-db-only
 
-      - name: Fetch trivy databases
-        run: |
-          trivy image --download-java-db-only
-          trivy image --download-db-only
       - name: Copy trivy databases
         run: aws s3 cp --recursive "$HOME/.cache/trivy/" "$TRIVY_CACHE_LOCATION"
         env: # Set the secret as an env variable

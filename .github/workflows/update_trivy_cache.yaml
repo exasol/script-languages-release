@@ -2,6 +2,7 @@ name: Update trivy cache
 
 on:
   workflow_dispatch:
+  pull_request:
   schedule:
     - cron: "30 0 * * *"
 
@@ -19,13 +20,18 @@ jobs:
           sudo apt-get install trivy
         env:
           DEBIAN_FRONTEND: noninteractive
+
       - name: Fetch trivy databases
         run: |
           trivy image --download-java-db-only
           trivy image --download-db-only
 
+      - name: Create tar gz databases
+        run: tar -czf trivy_cache.tar.gz ./trivy
+        working-directory: "$HOME/.cache"
+
       - name: Copy trivy databases
-        run: aws s3 cp --recursive "$HOME/.cache/trivy/" "$TRIVY_CACHE_LOCATION"
+        run: aws s3 cp  "$HOME/.cache/trivy_cache.tar.gz" "$TRIVY_CACHE_LOCATION/trivy_cache.tar.gz"
         env: # Set the secret as an env variable
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_SECRET }}

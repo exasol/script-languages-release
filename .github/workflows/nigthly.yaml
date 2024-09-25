@@ -14,9 +14,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-
-    - name: Init submodules
-      run: git submodule update --init --recursive
+      with:
+        fetch-depth: 0
+        submodules: 'recursive'
 
     - name: Get Time
       id: time

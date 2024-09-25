@@ -17,7 +17,7 @@ This release uses version 1.0.0 of the container tool.
 
 ## Refactorings
 
- n/a
+  - #950: Refactored existing script-options parser
  
 ## Doc
 

@@ -27,8 +27,10 @@ jobs:
           trivy image --download-db-only
 
       - name: Create tar gz databases
-        run: tar -czf trivy_cache.tar.gz ./trivy
-        working-directory: "$HOME/.cache"
+        run: |
+          pushd $HOME/.cache
+          tar -czf trivy_cache.tar.gz ./trivy
+          popd
 
       - name: Copy trivy databases
         run: aws s3 cp  "$HOME/.cache/trivy_cache.tar.gz" "$TRIVY_CACHE_LOCATION/trivy_cache.tar.gz"

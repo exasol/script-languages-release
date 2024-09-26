@@ -13,7 +13,7 @@ This release uses version 1.0.0 of the container tool.
 
 ## Features
 
- - #962: Add a GH workflow which uploads trivy databases
+ - #962: Add a GH workflow which uploads trivy databases and updated Ubuntu packages
 
 ## Security Issues
 

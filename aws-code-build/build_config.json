@@ -1,6 +1,6 @@
 {
   "build": {
-    "base_branch": "develop",
+    "base_branch": "origin/develop",
     "ignore": {
       "paths": [
         ".github",

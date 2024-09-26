@@ -34,6 +34,8 @@ phases:
         - echo "$(date)" > .build_output/metadata/start_date
         - echo "$CODEBUILD_SOURCE_VERSION" > .build_output/metadata/commit_sha
         - echo "$CURRENT_BRANCH" > .build_output/metadata/branch
+        - echo "RUNNING GIT LOG"
+        - git log
   build:
       commands:
         - poetry run python3 -m exasol_script_languages_container_ci.main run-ci --flavor $FLAVOR --branch-name "$CURRENT_BRANCH" --docker-user "$DOCKER_USER" --docker-password "$DOCKER_PASSWORD" --docker-build-repository "$BUILD_DOCKER_REPOSITORY" --docker-release-repository "$RELEASE_DOCKER_REPOSITORY" --commit-sha "$CODEBUILD_SOURCE_VERSION" --config-file aws-code-build/build_config.json

@@ -697,7 +697,7 @@ setuptools = "^73.0.0"
 type = "git"
 url = "https://github.com/exasol/script-languages-container-ci.git"
 reference = "test"
-resolved_reference = "78898473ef4c91d54d6af542c17686b400dca570"
+resolved_reference = "57b03858465607634b44d0b007b3e3a1dd4b5873"
 
 [[package]]
 name = "exasol-script-languages-container-ci-setup"

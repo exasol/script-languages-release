@@ -1,0 +1,16 @@
+name: Validate PR
+
+on:
+  pull_request:
+
+
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+
+      - name: Show Source Branch
+        run: echo {{github.ref_name}}
+      - name: Show Target Branch
+        run: echo {{github.base_ref}}

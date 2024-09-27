@@ -17,11 +17,11 @@ jobs:
           fetch-depth: 0
           submodules: 'recursive'
       - name: Build TestContainer
-        run: ./exaslct build-test-container --force-rebuild
+        run: exaslct build-test-container --force-rebuild
       - name: Push TestContainer image
         if: ${{ (github.ref == 'refs/heads/master') || (github.ref == 'refs/heads/main') }}
         run: |
-          ./exaslct push-test-container --source-docker-username "$SECRET_DOCKER_USER_NAME" --target-docker-username "$SECRET_DOCKER_USER_NAME" --force-push true
+          exaslct push-test-container --source-docker-username "$SECRET_DOCKER_USER_NAME" --target-docker-username "$SECRET_DOCKER_USER_NAME" --force-push true
         env: # Set the secret as an input
           SECRET_DOCKER_USER_NAME: ${{ secrets.DOCKER_USER_NAME }}
           TARGET_DOCKER_PASSWORD: ${{ secrets.DOCKER_TOKEN }}
@@ -29,7 +29,7 @@ jobs:
       - name: Push  ci-release-test TestContainer image
         if: ${{ (github.ref != 'refs/heads/master') && (github.ref != 'refs/heads/main') }}
         run: |
-          ./exaslct push-test-container --source-docker-username "$SECRET_DOCKER_USER_NAME" --target-docker-username "$SECRET_DOCKER_USER_NAME" --force-push true --source-docker-tag-prefix ci_release_test --target-docker-tag-prefix ci_release_test
+          exaslct push-test-container --source-docker-username "$SECRET_DOCKER_USER_NAME" --target-docker-username "$SECRET_DOCKER_USER_NAME" --force-push true --source-docker-tag-prefix ci_release_test --target-docker-tag-prefix ci_release_test
         env: # Set the secret as an input
           SECRET_DOCKER_USER_NAME: ${{ secrets.DOCKER_USER_NAME }}
           TARGET_DOCKER_PASSWORD: ${{ secrets.DOCKER_TOKEN }}

@@ -22,3 +22,7 @@ This release uses version 1.0.0 of the container tool.
 ## Doc
 
  - #954: added release checklist
+
+## Bugs
+
+ - #965: Fixed Publish Docker Test Container GH workflow

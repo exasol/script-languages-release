@@ -1,0 +1,42 @@
+name: Check Bazel Tests
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      USE_BAZEL_VERSION: 7.2.1
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        submodules: 'recursive'
+
+    - name: Install bazel
+      run: | 
+        curl -L -o bazel https://github.com/bazelbuild/bazelisk/releases/download/v1.19.0/bazelisk-linux-amd64
+        chmod +x bazel
+    - name: Install JDK and ZMQ
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y openjdk-11-jdk libzmq3-dev
+    - name: Java Tests
+      run: |
+        bazel test //base/javacontainer/test/...
+      working-directory: ./exaudfclient/
+    - name: ExaudfLib Tests
+      run: |
+        bazel test //base/exaudflib/test/...
+      working-directory: ./exaudfclient/
+    - name: Script Options Parser Tests
+      run: |
+        bazel test //base/script_options_parser/test/...
+      working-directory: ./exaudfclient/
+

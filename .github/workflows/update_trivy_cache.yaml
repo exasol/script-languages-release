@@ -1,0 +1,54 @@
+name: Update trivy cache
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 0 * * *"
+
+jobs:
+  update_trivy_cache:
+    environment: AWS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run install dependencies
+        run: |
+          sudo apt update && sudo apt install -y awscli curl wget apt-transport-https gnupg lsb-release
+          wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+          echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
+          sudo apt-get update
+          sudo apt-get install trivy
+        env:
+          DEBIAN_FRONTEND: noninteractive
+
+      - name: Fetch trivy databases
+        run: |
+          trivy image --download-java-db-only
+          trivy image --download-db-only
+
+      - name: Create tar gz databases
+        run: |
+          pushd $HOME/.cache
+          tar -czf trivy_cache.tar.gz ./trivy
+          popd
+
+      - name: Copy trivy databases
+        run: aws s3 cp  "$HOME/.cache/trivy_cache.tar.gz" "$TRIVY_CACHE_LOCATION/trivy_cache.tar.gz"
+        env: # Set the secret as an env variable
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_SECRET }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
+          TRIVY_CACHE_LOCATION: ${{ secrets.TRIVY_CACHE_LOCATION }}
+
+      - name: Report failure Status to Slack channel
+        id: report-failure-status-slack
+        # Also run this step in case of failures
+        if: ${{ always() }}
+        uses: ravsamhq/notify-slack-action@v2
+        with:
+          status: ${{ job.status }}
+          token: ${{ github.token }}
+          notification_title: "Update trivy build in {repo} has {status_message}"
+          message_format: "{emoji} *{workflow}* {status_message} in <{repo_url}|{repo}>"
+          notify_when: "failure,cancelled,warnings,skipped"
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.INTEGRATION_TEAM_SLACK_NOTIFICATION_WEBHOOK }}

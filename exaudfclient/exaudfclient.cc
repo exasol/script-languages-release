@@ -38,7 +38,7 @@
 #include <inttypes.h>
 
 #ifdef ENABLE_JAVA_VM
-#include "base/javacontainer/javacontainer.h"
+#include "base/javacontainer/javacontainer_builder.h"
 #endif //ENABLE_JAVA_VM
 
 #ifdef ENABLE_PYTHON_VM
@@ -170,7 +170,7 @@ int main(int argc, char **argv) {
     } else if (strcmp(argv[2], "lang=java")==0)
     {
 #ifdef ENABLE_JAVA_VM
-        vmMaker = [&](){return new SWIGVMContainers::JavaVMach(false, swigFactory);};
+        vmMaker = [&](){return SWIGVMContainers::JavaContainerBuilder().build();};
 #else
         throw SWIGVM::exception("this exaudfclient has been compilied without Java support");
 #endif

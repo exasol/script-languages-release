@@ -25,12 +25,12 @@ RUN mkdir /exaudfclient /exaudf
 COPY /exaudfclient /exaudfclient
 
 WORKDIR /exaudfclient/
-RUN ["/bin/bash", "-c", "source /env && bash build.sh --config no-tty --config optimize --config python --config java --config optimize-r --config fast-binary-py3"]
+RUN ["/bin/bash", "-c", "source /env && bash build.sh --config no-tty --config optimize --config python --config java --config optimize-r --config fast-binary"]
 RUN cp -r -L bazel-bin/* /exaudf && rm -r /exaudf/external
 
 
 WORKDIR /exaudfclient/base
-RUN ./test_udfclient.sh /exaudf/exaudfclient_py3
+RUN ./test_udfclient.sh /exaudf/exaudfclient
 
 WORKDIR /exaudf/
 

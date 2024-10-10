@@ -24,6 +24,8 @@ This release uses version 1.0.0 of the container tool.
   - #950: Refactored existing script-options parser
   - #944: Removed exaudfclient_bin_py3
   - #967: Added ctpg script options parser
+  - #972: Refactor exception handling for Script Options parser
+  - #973: Support new lines in script options values
  
 ## Doc
 

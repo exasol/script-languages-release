@@ -89,7 +89,7 @@ cc_binary(
     name = "exaudfclient_bin",
     srcs = ["exaudfclient.cc", "//base:load_dynamic"],
     linkopts = ["-ldl"], # needed for dynamicly loading libexaudflib_complete.so into another linker namespace
-    deps = ["//base/exaudflib:header", "//base:debug_message_h"]+VM_ENABLED_DEPS+VM_PYTHON3_DEPS+VM_R_DEPS+
+    deps = ["//base/exaudflib:header", "//base/utils:debug_message_h"]+VM_ENABLED_DEPS+VM_PYTHON3_DEPS+VM_R_DEPS+
             ["//base/exaudflib:exaudflib-deps", "//base/swig_factory:swig_factory"],
     defines = VM_ENABLED_DEFINES,
     data = ["//base:libexaudflib_complete.so"]
@@ -112,7 +112,7 @@ cc_binary(
     name = "exaudfclient_static_bin",
     srcs = ["exaudfclient.cc",  "//base:load_dynamic"],
     linkopts = ["-ldl"], # needed for dynamicly loading libexaudflib_complete.so into another linker namespace
-    deps = ["//base/exaudflib:header", "//base:debug_message_h"]+VM_ENABLED_DEPS+VM_PYTHON3_DEPS+VM_R_DEPS+
+    deps = ["//base/exaudflib:header", "//base/utils:debug_message_h"]+VM_ENABLED_DEPS+VM_PYTHON3_DEPS+VM_R_DEPS+
             ["//base/exaudflib:exaudflib-deps", "//base/swig_factory:swig_factory"] + [ "@zmq//:zmq", "@protobuf//:protobuf"],
     defines = VM_ENABLED_DEFINES,
     data = ["//base:libexaudflib_complete.so"],

@@ -25,6 +25,9 @@ This release uses version 1.0.0 of the container tool.
   - #944: Removed exaudfclient_bin_py3
   - #967: Added ctpg script options parser
  
+## Bugs
+  - #977: Fixed Trivy update cache workflow
+
 ## Doc
 
  - #954: added release checklist

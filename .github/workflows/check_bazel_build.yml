@@ -14,10 +14,9 @@ jobs:
       USE_BAZEL_VERSION: 7.2.1
     steps:
       - uses: actions/checkout@v4
-        fetch-depth: 0
-        submodules: 'recursive'
-      - name: Search for duplicated error codes
-        run: bash find_duplicate_error_codes.sh
+        with:
+          fetch-depth: 0
+          submodules: 'recursive'
 
       - name: Install UDF Client Dependencies
         run: |

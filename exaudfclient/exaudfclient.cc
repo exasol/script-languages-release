@@ -138,7 +138,6 @@ int main(int argc, char **argv) {
     ::setlocale(LC_ALL, "en_US.utf8");
 
     std::function<SWIGVMContainers::SWIGVM*()>vmMaker=[](){return nullptr;}; // the initial vm maker returns NULL
-    SwigFactoryImpl swigFactory;
 #ifdef UDF_PLUGIN_CLIENT
     vmMaker = [](){return new SWIGVMContainers::Protegrity(false);};
 #else

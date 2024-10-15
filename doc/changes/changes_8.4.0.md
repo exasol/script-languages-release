@@ -22,7 +22,14 @@ This release uses version 1.0.0 of the container tool.
 ## Refactorings
 
   - #950: Refactored existing script-options parser
+  - #944: Removed exaudfclient_bin_py3
+  - #967: Added ctpg script options parser
+  - #972: Refactor exception handling for Script Options parser
+  - #973: Support new lines and white spaces at the beginning in script options values
  
+## Bugs
+  - #977: Fixed Trivy update cache workflow
+
 ## Doc
 
  - #954: added release checklist

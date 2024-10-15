@@ -11,7 +11,7 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     env:
-      USE_BAZEL_VERSION: 7.2.1
+      UDF_CLIENT_ENV_FILE: /tmp/.udf_client_env
     steps:
       - uses: actions/checkout@v4
         with:

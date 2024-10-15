@@ -49,8 +49,6 @@
 #include "protegrityclient.h"
 #endif
 
-#include "base/swig_factory/swig_factory_impl.h"
-
 using namespace std;
 using namespace SWIGVMContainers;
 

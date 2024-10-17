@@ -28,6 +28,7 @@ This release uses version 1.0.0 of the container tool.
   - #973: Support new lines and white spaces at the beginning in script options values
   - #969: Use new CTPG Parser in Java VM
   - #980: Moved flavor template-Exasol-all-java-17 to script-languages repo
+  - #971: Removed dead code in Java VM
 
 ## Bugs
   - #977: Fixed Trivy update cache workflow

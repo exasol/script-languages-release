@@ -29,6 +29,8 @@ This release uses version 1.0.0 of the container tool.
   - #969: Use new CTPG Parser in Java VM
   - #980: Moved flavor template-Exasol-all-java-17 to script-languages repo
   - #971: Removed dead code in Java VM
+  - #982: Added a performance test for ScriptOptions parser for a single line UDF
+  - #983: Refactor CTPG script options Java parser code
 
 ## Bugs
   - #977: Fixed Trivy update cache workflow

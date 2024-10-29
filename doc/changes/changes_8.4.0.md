@@ -31,9 +31,13 @@ This release uses version 1.0.0 of the container tool.
   - #971: Removed dead code in Java VM
   - #982: Added a performance test for ScriptOptions parser for a single line UDF
   - #983: Refactor CTPG script options Java parser code
+  - #986: Added environment variable for new ScriptOptionsLine parser in UDF client
+  - #990: Forward JAR options without changing order to classpath
+  - #989: Trim script class and import script options
 
 ## Bugs
   - #977: Fixed Trivy update cache workflow
+  - #993: Added escape sequence for backslash in new Script Options parser
 
 ## Doc
 

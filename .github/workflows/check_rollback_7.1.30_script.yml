@@ -8,7 +8,7 @@ on:
 
 jobs:
   Check:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
         with:
@@ -31,8 +31,8 @@ jobs:
         working-directory: /tmp
       - name: Check if get_original_script_languages_parameters.sql works
         run: |
-          exaplus -c localhost:8888 -u sys -p exasol -f ./get_original_script_languages_parameter.sql
-          #echo $RESULT | grep "ALTER SYSTEM SET SCRIPT_LANGUAGES='R=builtin_r JAVA=builtin_java PYTHON3=builtin_python3'" || (echo SCRIPT_LANGUAGES parameter not as expected && exit 1)
+          $RESULT=`exaplus -c localhost:8888 -u sys -p exasol -f ./get_original_script_languages_parameter.sql`
+          echo $RESULT | grep "ALTER SYSTEM SET SCRIPT_LANGUAGES='R=builtin_r JAVA=builtin_java PYTHON3=builtin_python3'" || (echo SCRIPT_LANGUAGES parameter not as expected && exit 1)
         working-directory: doc/user_guide/resources
       - name: Check if get_original_script_languages_parameters.sql works
         run: |
@@ -69,3 +69,4 @@ jobs:
           echo $RESULT | grep "ALTER SYSTEM SET SCRIPT_LANGUAGES='JAVA=builtin_java PYTHON3=builtin_python3 R=localzmq+protobuf:///bfsdefault/default//standard-EXASOL-7.1.0_release.tar.gz/?lang=r#/buckets/bfsdefault/default//standard-EXASOL-7.1.0_release.tar.gz/exaudf/exaudfclient_py3';"
           exaplus exaplus -q -c localhost:8888 -u sys -p exasol -sql $RESULT
           exaplus -q -c localhost:8888 -u sys -p exasol -sql "SELECT TEST.R_DEMO();"
+        working-directory: doc/user_guide/resources

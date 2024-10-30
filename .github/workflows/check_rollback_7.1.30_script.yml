@@ -22,14 +22,15 @@ jobs:
           poetry-version: '1.8.2'
       - name: Start ITDE
         run: poetry run itde spawn-test-environment --environment-name exasol_test --database-port-forward 8888 --bucketfs-port-forward 6583 --docker-db-image-version=7.1.29;
+      - name: Install dependencies
+        run: apt update && apt install -y perl default-jre
       - name: Install EXAPlus
         run: curl -o exaplus.tar.gz https://exasol-script-languages-dependencies.s3.eu-central-1.amazonaws.com/EXAplus-7.0.11.tar.gz && tar xf exaplus.tar.gz
         working-directory: /tmp
       - name: Check if get_original_script_languages_parameters.sql works
         run: |
-          ls /tmp
-          ls /tmp/EXAplus-7.0.11
           alias exaplus="/tmp/EXAplus-7.0.11/exaplus"
+          exaplus --help
           RESULT=`exaplus -q -c localhost:8888 -u sys -p exasol -f ./get_original_script_languages_parameter.sql`
           echo $RESULT | grep "ALTER SYSTEM SET SCRIPT_LANGUAGES='R=builtin_r JAVA=builtin_java PYTHON3=builtin_python3'" || (echo SCRIPT_LANGUAGES parameter not as expected && exit 1)
       - name: Check if get_original_script_languages_parameters.sql works

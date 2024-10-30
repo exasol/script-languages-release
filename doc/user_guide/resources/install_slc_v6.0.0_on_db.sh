@@ -9,12 +9,11 @@ if [ $# -lt 6 ]; then
     exit 1
 fi
 
-#TMPDIR=`mktemp -d`
-TMPDIR="/tmp"
-#trap 'rm -rf "$TMPDIR"' EXIT
+TMPDIR=`mktemp -d`
+trap 'rm -rf "$TMPDIR"' EXIT
 pushd $TMPDIR &>/dev/null
-#curl -s -LO "https://github.com/exasol/script-languages-release/releases/download/6.0.0/standard-EXASOL-7.1.0_release.tar.gz"
-#curl -s -LO "https://github.com/exasol/script-languages-release/releases/download/6.0.0/standard-EXASOL-7.1.0_release.tar.gz.sha512sum"
+curl -s -LO "https://github.com/exasol/script-languages-release/releases/download/6.0.0/standard-EXASOL-7.1.0_release.tar.gz"
+curl -s -LO "https://github.com/exasol/script-languages-release/releases/download/6.0.0/standard-EXASOL-7.1.0_release.tar.gz.sha512sum"
 sed -i 's/standard-EXASOL-7.1.0-release-VYP23K363DK7WSX66BHZKSO5JFUOIZJMEGFY3LOJ7LTR6KH7VSUA\.tar\.gz/standard-EXASOL-7.1.0_release\.tar\.gz/g' standard-EXASOL-7.1.0_release.tar.gz.sha512sum
 sha512sum --quiet --strict -c standard-EXASOL-7.1.0_release.tar.gz.sha512sum || (echo Checksum of download container does not match. && exit 1)
 
@@ -38,5 +37,5 @@ container_file_in_bucket="standard-EXASOL-7.1.0_release.tar.gz"
 curl -vkX PUT -T "$local_container_file" "$protocol://w:$write_password@$bucketfs_host:$bucketfs_port/$bucket_name/$path_in_bucket$container_file_in_bucket"
 
 
-#popd &>/dev/null
-#rm -rf $TMPDIR
+popd &>/dev/null
+rm -rf $TMPDIR

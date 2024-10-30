@@ -27,6 +27,8 @@ jobs:
         working-directory: /tmp
       - name: Check if get_original_script_languages_parameters.sql works
         run: |
+          ls /tmp
+          ls /tmp/EXAplus-7.0.11
           alias exaplus="/tmp/EXAplus-7.0.11/exaplus"
           RESULT=`exaplus -q -c localhost:8888 -u sys -p exasol -f ./get_original_script_languages_parameter.sql`
           echo $RESULT | grep "ALTER SYSTEM SET SCRIPT_LANGUAGES='R=builtin_r JAVA=builtin_java PYTHON3=builtin_python3'" || (echo SCRIPT_LANGUAGES parameter not as expected && exit 1)

@@ -23,6 +23,50 @@ jobs:
           poetry-version: '1.8.2'
       - name: Start ITDE
         run: poetry run itde spawn-test-environment --environment-name exasol_test --database-port-forward 8888 --bucketfs-port-forward 6583 --docker-db-image-version=7.1.29;
-      - name: Run Skript
-        run: bash install_slc_v6.0.0_on_db.sh localhost 6583 write bfsdefault default HTTP
+      - name: Install EXAPlus
+        run: curl -o exaplus.tar.xz https://exasol-script-languages-dependencies.s3.eu-central-1.amazonaws.com/EXAplus-7.0.11.tar.gz && tar xf exaplus.tar.xz
+        working-directory: /tmp
+      - name: Check if get_original_script_languages_parameters.sql works
+        run: |
+          alias exaplus=/tmp/EXAplus-7.0.11/exaplus
+          RESULT=`exaplus -q -c localhost:8888 -u sys -p exasol -f ./get_original_script_languages_parameter.sql`
+          echo $RESULT | grep "ALTER SYSTEM SET SCRIPT_LANGUAGES='R=builtin_r JAVA=builtin_java PYTHON3=builtin_python3'" || (echo SCRIPT_LANGUAGES parameter not as expected && exit 1)
+      - name: Check if get_original_script_languages_parameters.sql works
+        run: |
+          alias exaplus=/tmp/EXAplus-7.0.11/exaplus
+          RESULT=`exaplus -q -c localhost:8888 -u sys -p exasol -f ./get_original_script_languages_parameter.sql`
+          echo $RESULT | grep "ALTER SYSTEM SET SCRIPT_LANGUAGES='R=builtin_r JAVA=builtin_java PYTHON3=builtin_python3'" || (echo SCRIPT_LANGUAGES parameter not as expected && exit 1)
+      - name: Install a simple R UDF
+        run: |
+          alias exaplus=/tmp/EXAplus-7.0.11/exaplus
+          exaplus -q -c localhost:8888 -u sys -p exasol -f install_r_udf.sql
+          exaplus -q -c localhost:8888 -u sys -p exasol -sql "SELECT TEST.R_DEMO();"
+        working-directory: .github/workflows/scripts
+      - name: Check if pre_update_check.sql works
+        run: |
+          alias exaplus=/tmp/EXAplus-7.0.11/exaplus
+          RESULT=`exaplus -q -c localhost:8888 -u sys -p exasol -f ./pre_update_check.sql`
+          echo $RESULT | grep "You have 1 UDFs using the pre-shipped R"
         working-directory: doc/user_guide/resources
+      - name: Check if construct_alter_system_command_before_update.sql works
+        run: |
+          alias exaplus=/tmp/EXAplus-7.0.11/exaplus
+          RESULT=`exaplus -q -c localhost:8888 -u sys -p exasol -f ./construct_alter_system_command_before_update.sql`
+          echo $RESULT | grep "ALTER SYSTEM SET SCRIPT_LANGUAGES='JAVA=builtin_java PYTHON3=builtin_python3 R=localzmq+protobuf:///bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v6.0.0-VYP23K36/?lang=r#/buckets/bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v6.0.0-VYP23K36/exaudf/exaudfclient_py3';"
+          exaplus exaplus -q -c localhost:8888 -u sys -p exasol -sql $RESULT
+          exaplus -q -c localhost:8888 -u sys -p exasol -sql "SELECT TEST.R_DEMO();"
+        working-directory: doc/user_guide/resources
+      - name: Run Skript
+        run: bash install_slc_v6.0.0_on_db.sh localhost 6583 write default HTTP
+        working-directory: doc/user_guide/resources
+      - name: Check if construct_alter_system_command_from_downloaded.sql works
+        run: |
+          alias exaplus=/tmp/EXAplus-7.0.11/exaplus
+          sed -i 's/<bucketfs_name>/bfsdefault/g' construct_alter_system_command_from_downloaded_container.sql
+          sed -i 's/<bucket_name>/default/g' construct_alter_system_command_from_downloaded_container.sql
+          sed -i 's/<path_in_bucket>//g' construct_alter_system_command_from_downloaded_container.sql
+          sed -i 's/<container_name>/standard-EXASOL-7.1.0_release\.tar\.gz/g' construct_alter_system_command_from_downloaded_container.sql
+          RESULT=`exaplus -q -c localhost:8888 -u sys -p exasol -f ./construct_alter_system_command_from_downloaded_container.sql`
+          echo $RESULT | grep "ALTER SYSTEM SET SCRIPT_LANGUAGES='JAVA=builtin_java PYTHON3=builtin_python3 R=localzmq+protobuf:///bfsdefault/default//standard-EXASOL-7.1.0_release.tar.gz/?lang=r#/buckets/bfsdefault/default//standard-EXASOL-7.1.0_release.tar.gz/exaudf/exaudfclient_py3';"
+          exaplus exaplus -q -c localhost:8888 -u sys -p exasol -sql $RESULT
+          exaplus -q -c localhost:8888 -u sys -p exasol -sql "SELECT TEST.R_DEMO();"

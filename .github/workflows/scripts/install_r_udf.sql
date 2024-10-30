@@ -1,0 +1,9 @@
+CREATE SCHEMA IF NOT EXISTS TEST;
+
+--/
+CREATE OR REPLACE R SCALAR SCRIPT TEST.R_DEMO() RETURNS VARCHAR(2000) AS
+
+run <- function(ctx) {
+ "Minimal R language UDF"
+}
+/

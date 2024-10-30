@@ -3,9 +3,11 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-if [ $# -lt 6 ]; then
+curl --help &>/dev/null || (echo This script requires `curl` command. && exit 1)
+
+if [ $# -lt 5 ]; then
     me=$(basename "$0")
-    echo "Usage: $me BucketFSHost BucketFSPort BucketFSWritePassword BucketFSName BucketName HTTP/HTTPS <PathInBucket>"
+    echo "Usage: $me BucketFSHost BucketFSPort BucketFSWritePassword BucketName HTTP/HTTPS"
     exit 1
 fi
 
@@ -21,21 +23,17 @@ local_container_file="$TMPDIR/standard-EXASOL-7.1.0_release.tar.gz"
 bucketfs_host=$1
 bucketfs_port=$2
 write_password=$3
-bucketfs_name=$4
-bucket_name=$5
-protocol=$6 # HTTP or HTTPS
-
+bucket_name=$4
+protocol=$5 # HTTP or HTTPS
 path_in_bucket=""
 
-if [ $# -gt 6 ]; then
-  path_in_bucket=$7
-fi
 
 container_file_in_bucket="standard-EXASOL-7.1.0_release.tar.gz"
 
+curl --silent -vkX PUT -T "$local_container_file" "$protocol://w:$write_password@$bucketfs_host:$bucketfs_port/$bucket_name/$path_in_bucket$container_file_in_bucket"
 
-curl -vkX PUT -T "$local_container_file" "$protocol://w:$write_password@$bucketfs_host:$bucketfs_port/$bucket_name/$path_in_bucket$container_file_in_bucket"
-
+echo Upload completed.
+echo The file was uploaded to \""$protocol"://"$bucketfs_host":"$bucketfs_port"/"$bucket_name"/"$path_in_bucket""$container_file_in_bucket"\"
 
 popd &>/dev/null
 rm -rf $TMPDIR

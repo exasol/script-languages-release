@@ -68,7 +68,7 @@ If you do a fresh install of the latest 7.1 release, or if you update from Exaso
 
 For more details of how to install a script language container, see [Adding New Packages to Existing Script Languages](https://docs.exasol.com/db/7.1/database_concepts/udf_scripts/adding_new_packages_script_languages.htm).
 
-Under Linux/MacOsX, for steps 1-3,  you can use the following script to download the container from Github and upload it to BucketFS: [install_slc_v6.0.0_on_db.sh](./resource/install_slc_v6.0.0_on_db.sh) 
+Under Linux/MacOsX, for steps 1-3,  you can use the following script to download the container from Github and upload it to BucketFS: [install_slc_v6.0.0_on_db.sh](./resources/install_slc_v6.0.0_on_db.sh) 
 
 1. Download the latest version of the container that contained R 3.6:
 

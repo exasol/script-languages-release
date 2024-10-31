@@ -16,7 +16,7 @@ See [pre_update_check.sql](./resources/pre_update_check.sql)
 
 ## Update From 7.1.x To 7.1.30 or newer
 
-After the Script-Languages-Contaier was installed in BucketFS, it necessary to change the SCRIPT_LANGUAGES parameter to activate a script language container that supports R 3.6. The new parameter value can be generated automatically or manually.
+After the Script-Languages-Contaier was installed in BucketFS, it necessary to change the SCRIPT_LANGUAGES parameter to activate a script language container that supports R 3.x. The new parameter value can be generated automatically or manually.
 
 ### Automatic generation of the new SCRIPT_LANGUAGES parameter value
 
@@ -70,7 +70,7 @@ For more details of how to install a script language container, see [Adding New 
 
 Under Linux/MacOsX, for steps 1-3,  you can use the following script to download the container from Github and upload it to BucketFS: [install_slc_v6.0.0_on_db.sh](./resources/install_slc_v6.0.0_on_db.sh) 
 
-1. Download the latest version of the container that contained R 3.6:
+1. Download the latest version of the container that contained R 3.x:
 
 Container: https://github.com/exasol/script-languages-release/releases/download/6.0.0/standard-EXASOL-7.1.0_release.tar.gz
 

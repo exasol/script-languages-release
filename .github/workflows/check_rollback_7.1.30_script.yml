@@ -52,9 +52,7 @@ jobs:
       - name: Check if construct_alter_system_command_before_update.sql works
         run: |
           RESULT=`exaplus -c localhost:8888 -u sys -p exasol -f ./construct_alter_system_command_before_update.sql`
-          echo "$RESULT"
-          echo --------------
-          echo "$RESULT" | grep "ALTER SYSTEM SET SCRIPT_LANGUAGES='JAVA=builtin_java PYTHON3=builtin_python3 R=localzmq+protobuf:///bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v6.0.0-VYP23K36/?lang=r#/buckets/bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v6.0.0-VYP23K36/exaudf/exaudfclient_py3';"
+          echo "$RESULT" | tr -d '\n' | grep "ALTER SYSTEM SET SCRIPT_LANGUAGES='JAVA=builtin_java PYTHON3=builtin_python3 R=localzmq+protobuf:///bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v6.0.0-VYP23K36/?lang=r#/buckets/bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v6.0.0-VYP23K36/exaudf/exaudfclient_py3';"
           exaplus -q -c localhost:8888 -u sys -p exasol -sql "$RESULT"
           exaplus -q -c localhost:8888 -u sys -p exasol -sql "SELECT TEST.R_DEMO();"
         working-directory: doc/user_guide/resources
@@ -68,7 +66,7 @@ jobs:
           sed -i 's/<path_in_bucket>//g' construct_alter_system_command_from_downloaded_container.sql
           sed -i 's/<container_name>/standard-EXASOL-7.1.0_release\.tar\.gz/g' construct_alter_system_command_from_downloaded_container.sql
           RESULT=`exaplus -q -c localhost:8888 -u sys -p exasol -f ./construct_alter_system_command_from_downloaded_container.sql`
-          echo "$RESULT" | grep "ALTER SYSTEM SET SCRIPT_LANGUAGES='JAVA=builtin_java PYTHON3=builtin_python3 R=localzmq+protobuf:///bfsdefault/default//standard-EXASOL-7.1.0_release.tar.gz/?lang=r#/buckets/bfsdefault/default//standard-EXASOL-7.1.0_release.tar.gz/exaudf/exaudfclient_py3';"
+          echo "$RESULT" | tr -d '\n' | grep "ALTER SYSTEM SET SCRIPT_LANGUAGES='JAVA=builtin_java PYTHON3=builtin_python3 R=localzmq+protobuf:///bfsdefault/default//standard-EXASOL-7.1.0_release.tar.gz/?lang=r#/buckets/bfsdefault/default//standard-EXASOL-7.1.0_release.tar.gz/exaudf/exaudfclient_py3';"
           exaplus exaplus -q -c localhost:8888 -u sys -p exasol -sql "$RESULT"
           exaplus -q -c localhost:8888 -u sys -p exasol -sql "SELECT TEST.R_DEMO();"
         working-directory: doc/user_guide/resources

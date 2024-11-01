@@ -37,7 +37,7 @@ jobs:
           python-version: "3.10"
           poetry-version: '1.8.2'
       - name: Start ITDE
-        run: poetry run itde spawn-test-environment --environment-name exasol_test --database-port-forward 8888 --bucketfs-port-forward 6583 --docker-db-image-version "7.1.29"
+        run: poetry run itde spawn-test-environment --environment-name exasol_test --database-port-forward 8888 --bucketfs-port-forward 6583 --docker-db-image-version "${{ matrix.db-version }}"
       - name: Install dependencies
         run: sudo apt update && sudo apt install -y perl default-jre
       - name: Install EXAPlus

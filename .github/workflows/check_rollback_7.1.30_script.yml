@@ -37,7 +37,7 @@ jobs:
           python-version: "3.10"
           poetry-version: '1.8.2'
       - name: Start ITDE
-        run: poetry run itde spawn-test-environment --environment-name exasol_test --database-port-forward 8888 --bucketfs-port-forward 6583 --docker-db-image-version=${{ matrix.db-version }};
+        run: poetry run itde spawn-test-environment --environment-name exasol_test --database-port-forward 8888 --bucketfs-port-forward 6583 --docker-db-image-version="${{ matrix.db-version }}";
       - name: Install dependencies
         run: sudo apt update && sudo apt install -y perl default-jre
       - name: Install EXAPlus
@@ -48,7 +48,7 @@ jobs:
       - name: Check if get_original_script_languages_parameters.sql works
         run: |
           RESULT=`exaplus -x -q -c localhost:8888 -u sys -p exasol -f ./get_original_script_languages_parameter.sql`
-          echo "$RESULT" | grep  ${{ matrix.expected-original-alter-system-parameter }} || (echo SCRIPT_LANGUAGES parameter not as expected && exit 1)
+          echo "$RESULT" | grep  "${{ matrix.expected-original-alter-system-parameter }}" || (echo SCRIPT_LANGUAGES parameter not as expected && exit 1)
         working-directory: doc/user_guide/resources
       - name: Install a simple R UDF
         run: |
@@ -62,7 +62,7 @@ jobs:
           exaplus -x -q -c localhost:8888 -u sys -p exasol -sql "SELECT TEST.TEST_PYTHON_VERSION();"
         working-directory: .github/workflows/scripts
       - name: Check if pre_update_check.sql works for R only
-        if:  ${{ matrix.support-python2=='yes' }}
+        if:  ${{ matrix.support-python2=='no' }}
         run: |
           RESULT=`exaplus -x -q -c localhost:8888 -u sys -p exasol -f ./pre_update_check.sql`
           echo "$RESULT" | grep "You have 1 UDFs using the pre-shipped R/Python2"

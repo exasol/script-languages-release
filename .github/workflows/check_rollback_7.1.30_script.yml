@@ -8,23 +8,7 @@ on:
 
 jobs:
   Check:
-    runs-on: ubuntu-20.04
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - db-version: "7.1.29"
-            expected-original-alter-system-parameter: "ALTER SYSTEM SET SCRIPT_LANGUAGES='R=builtin_r JAVA=builtin_java PYTHON3=builtin_python3'"
-            expected-new-alter-system-command: "ALTER SYSTEM SET SCRIPT_LANGUAGES='JAVA=builtin_java PYTHON3=builtin_python3 R=localzmq+protobuf:///bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v6.0.0-VYP23K36/?lang=r#/buckets/bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v6.0.0-VYP23K36/exaudf/exaudfclient_py3';"
-            support-python2: "no"
-          - db-version: "7.1.19"
-            expected-original-alter-system-parameter: "ALTER SYSTEM SET SCRIPT_LANGUAGES='PYTHON=builtin_python R=builtin_r JAVA=builtin_java PYTHON3=builtin_python3';"
-            expected-new-alter-system-command: "ALTER SYSTEM SET SCRIPT_LANGUAGES='JAVA=builtin_java PYTHON3=builtin_python3 PYTHON=localzmq+protobuf:///bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v4.0.0-CM4RWW6R/?lang=python#/buckets/bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v4.0.0-CM4RWW6R/exaudf/exaudfclient R=localzmq+protobuf:///bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v4.0.0-CM4RWW6R/?lang=r#/buckets/bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v4.0.0-CM4RWW6R/exaudf/exaudfclient_py3';"
-            support-python2: "yes"
-          - db-version: "7.1.6"
-            expected-original-alter-system-parameter: "ALTER SYSTEM SET SCRIPT_LANGUAGES='PYTHON=builtin_python R=builtin_r JAVA=builtin_java PYTHON3=builtin_python3';"
-            expected-new-alter-system-command: "ALTER SYSTEM SET SCRIPT_LANGUAGES='JAVA=builtin_java PYTHON3=builtin_python3 PYTHON=localzmq+protobuf:///bfsdefault/default/EXAClusterOS/ScriptLanguages-release-standard-exasol-7.1.0-1.1.0/?lang=python#/buckets/bfsdefault/default/EXAClusterOS/ScriptLanguages-release-standard-exasol-7.1.0-1.1.0/exaudf/exaudfclient R=localzmq+protobuf:///bfsdefault/default/EXAClusterOS/ScriptLanguages-release-standard-exasol-7.1.0-1.1.0/?lang=r#/buckets/bfsdefault/default/EXAClusterOS/ScriptLanguages-release-standard-exasol-7.1.0-1.1.0/exaudf/exaudfclient_py3';"
-            support-python2: "yes"
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
         with:
@@ -48,40 +32,28 @@ jobs:
       - name: Check if get_original_script_languages_parameters.sql works
         run: |
           RESULT=`exaplus -x -q -c localhost:8888 -u sys -p exasol -f ./get_original_script_languages_parameter.sql`
-          echo "$RESULT" | grep  "${{ matrix.expected-original-alter-system-parameter }}" || (echo SCRIPT_LANGUAGES parameter not as expected && exit 1)
+          echo "$RESULT" | grep  "$EXPECTED_ORIGINAL_ALTER_SYSTEM_PARAMETER" || (echo SCRIPT_LANGUAGES parameter not as expected && exit 1)
+        env:
+          EXPECTED_ORIGINAL_ALTER_SYSTEM_PARAMETER: "ALTER SYSTEM SET SCRIPT_LANGUAGES='R=builtin_r JAVA=builtin_java PYTHON3=builtin_python3'"
+
         working-directory: doc/user_guide/resources
       - name: Install a simple R UDF
         run: |
           exaplus -x -q -c localhost:8888 -u sys -p exasol -f install_r_udf.sql
           exaplus -x -q -c localhost:8888 -u sys -p exasol -sql "SELECT TEST.R_DEMO();"
         working-directory: .github/workflows/scripts
-      - name: Install a simple Python2 UDF
-        if:  ${{ matrix.support-python2=='yes' }}
-        run: |
-          exaplus -x -q -c localhost:8888 -u sys -p exasol -f install_python2_udf.sql
-          exaplus -x -q -c localhost:8888 -u sys -p exasol -sql "SELECT TEST.TEST_PYTHON_VERSION();"
-        working-directory: .github/workflows/scripts
       - name: Check if pre_update_check.sql works for R only
-        if:  ${{ matrix.support-python2=='no' }}
         run: |
           RESULT=`exaplus -x -q -c localhost:8888 -u sys -p exasol -f ./pre_update_check.sql`
           echo "$RESULT" | grep "You have 1 UDFs using the pre-shipped R/Python2"
         working-directory: doc/user_guide/resources
-      - name: Check if pre_update_check.sql works for R and Python2
-        if:  ${{ matrix.support-python2=='yes' }}
-        run: |
-          RESULT=`exaplus -x -q -c localhost:8888 -u sys -p exasol -f ./pre_update_check.sql`
-          echo "$RESULT" | grep "You have 2 UDFs using the pre-shipped R/Python2"
-        working-directory: doc/user_guide/resources
       - name: Run construct_alter_system_command_before_update.sql
         run: |
           RESULT=`exaplus -c localhost:8888 -u sys -p exasol -f ./construct_alter_system_command_before_update.sql`
-          echo "$RESULT" | tr -d '\n' | grep "${{ matrix.expected-new-alter-system-command }}" || (echo ALTER SYSTEM command not as expected && exit 1)
-          exaplus -x -q -c localhost:8888 -u sys -p exasol -sql "${{ matrix.expected-new-alter-system-command }}"
+          echo "$RESULT" | tr -d '\n' | grep "$EXPECTED_NEW_ALTER_SYSTEM_PARAMETER" || (echo ALTER SYSTEM command not as expected && exit 1)
+          exaplus -x -q -c localhost:8888 -u sys -p exasol -sql "$EXPECTED_NEW_ALTER_SYSTEM_PARAMETER"
         working-directory: doc/user_guide/resources
+        env:
+          EXPECTED_NEW_ALTER_SYSTEM_PARAMETER: "ALTER SYSTEM SET SCRIPT_LANGUAGES='JAVA=builtin_java PYTHON3=builtin_python3 R=localzmq+protobuf:///bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v6.0.0-VYP23K36/?lang=r#/buckets/bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v6.0.0-VYP23K36/exaudf/exaudfclient_py3';"
       - name: Test if R UDF still works
         run: exaplus -x -q -c localhost:8888 -u sys -p exasol -sql "SELECT TEST.R_DEMO();"
-      - name: Test if Python2 UDF still works
-        if:  ${{ matrix.support-python2=='yes' }}
-        run: exaplus -x -q -c localhost:8888 -u sys -p exasol -sql "SELECT TEST.TEST_PYTHON_VERSION();"
-

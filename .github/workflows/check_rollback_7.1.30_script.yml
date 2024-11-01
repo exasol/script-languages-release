@@ -57,13 +57,25 @@ jobs:
         run: |
           sleep 120
           exaplus -x -q -c localhost:8888 -u sys -p exasol -f install_r_udf.sql
-          sleep 120
           exaplus -x -q -c localhost:8888 -u sys -p exasol -sql "SELECT TEST.R_DEMO();"
         working-directory: .github/workflows/scripts
+      - name: Install a simple Python2 UDF
+        if:  ${{ matrix.support-python2=='yes' }}
+        run: |
+          exaplus -x -q -c localhost:8888 -u sys -p exasol -f install_python2_udf.sql
+          exaplus -x -q -c localhost:8888 -u sys -p exasol -sql "SELECT TEST.TEST_PYTHON_VERSION();"
+        working-directory: .github/workflows/scripts
       - name: Check if pre_update_check.sql works for R only
+        if:  ${{ matrix.support-python2=='no' }}
         run: |
           RESULT=`exaplus -x -q -c localhost:8888 -u sys -p exasol -f ./pre_update_check.sql`
           echo "$RESULT" | grep "You have 1 UDFs using the pre-shipped R/Python2"
+        working-directory: doc/user_guide/resources
+      - name: Check if pre_update_check.sql works for R and Python2
+        if:  ${{ matrix.support-python2=='yes' }}
+        run: |
+          RESULT=`exaplus -x -q -c localhost:8888 -u sys -p exasol -f ./pre_update_check.sql`
+          echo "$RESULT" | grep "You have 2 UDFs using the pre-shipped R/Python2"
         working-directory: doc/user_guide/resources
       - name: Run construct_alter_system_command_before_update.sql
         run: |
@@ -75,3 +87,6 @@ jobs:
           EXPECTED_NEW_ALTER_SYSTEM_PARAMETER: "${{ matrix.expected-new-alter-system-command }}"
       - name: Test if R UDF still works
         run: exaplus -x -q -c localhost:8888 -u sys -p exasol -sql "SELECT TEST.R_DEMO();"
+      - name: Test if Python2 UDF still works
+        if:  ${{ matrix.support-python2=='yes' }}
+        run: exaplus -x -q -c localhost:8888 -u sys -p exasol -sql "SELECT TEST.TEST_PYTHON_VERSION();"

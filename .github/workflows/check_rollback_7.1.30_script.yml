@@ -68,6 +68,8 @@ jobs:
           echo babla1
           RESULT=`exaplus -x -q -c localhost:8888 -u sys -p exasol -f ./construct_alter_system_command_from_downloaded_container.sql`
           echo babla2
+          echo "$RESULT"
+          echo blabla2.1
           echo "$RESULT" | tr -d '\n' | grep "ALTER SYSTEM SET SCRIPT_LANGUAGES='JAVA=builtin_java PYTHON3=builtin_python3 R=localzmq+protobuf:///bfsdefault/default//standard-EXASOL-7.1.0_release.tar.gz/?lang=r#/buckets/bfsdefault/default//standard-EXASOL-7.1.0_release.tar.gz/exaudf/exaudfclient_py3';"
           echo babla3
           exaplus -x -q -c localhost:8888 -u sys -p exasol -sql "ALTER SYSTEM SET SCRIPT_LANGUAGES='JAVA=builtin_java PYTHON3=builtin_python3 R=localzmq+protobuf:///bfsdefault/default//standard-EXASOL-7.1.0_release.tar.gz/?lang=r#/buckets/bfsdefault/default//standard-EXASOL-7.1.0_release.tar.gz/exaudf/exaudfclient_py3';"

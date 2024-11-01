@@ -8,7 +8,7 @@ on:
 
 jobs:
   Check:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
       matrix:
@@ -55,7 +55,9 @@ jobs:
         working-directory: doc/user_guide/resources
       - name: Install a simple R UDF
         run: |
+          sleep 120
           exaplus -x -q -c localhost:8888 -u sys -p exasol -f install_r_udf.sql
+          sleep 120
           exaplus -x -q -c localhost:8888 -u sys -p exasol -sql "SELECT TEST.R_DEMO();"
         working-directory: .github/workflows/scripts
       - name: Check if pre_update_check.sql works for R only

@@ -48,9 +48,16 @@ new_alias_content as (
   union all
   select
     alias_name,
+    'localzmq+protobuf:///bfsdefault/default/EXAClusterOS/' || container_name || '/?lang=python#/buckets/bfsdefault/default/EXAClusterOS/' || container_name || '/exaudf/exaudfclient'  as alias_content
+  from container_name
+  join parsed_lang_pairs on true
+  where alias_content='builtin_python'
+  union all
+  select
+    alias_name,
     alias_content
   from parsed_lang_pairs
-  where alias_content<>'builtin_r'
+  where alias_content<>'builtin_r' and alias_content<>'builtin_python'
 ),
 new_system_value as (
   select GROUP_CONCAT(alias_name || '=' || alias_content SEPARATOR ' ') as new_system_value

@@ -29,8 +29,8 @@ num_of_pairs as(
 )
 select
     case
-        when count(*) = 0 then 'You are not using the pre-shipped R in UDFs.'
-        else 'You have '||to_char(count(*))||' UDFs using the pre-shipped R:
+        when count(*) = 0 then 'You are not using the pre-shipped R/Python2 in UDFs.'
+        else 'You have '||to_char(count(*))||' UDFs using the pre-shipped R/Python2:
 
 ' || GROUP_CONCAT('"'||s.script_schema||'"."'||s.script_name||'"' separator '
 ')
@@ -41,5 +41,5 @@ FROM
         on upper(p.alias_name)=s.script_language
 WHERE
     1=1
-    and p.alias_content = 'builtin_r'
+    and (p.alias_content = 'builtin_r' or p.alias_content = 'builtin_python')
 ;

@@ -11,20 +11,20 @@ jobs:
     runs-on: ubuntu-24.04
     strategy:
       fail-fast: false
-    matrix:
-      include:
-        - db-version: "7.1.29"
-          expected-original-alter-system-parameter: "ALTER SYSTEM SET SCRIPT_LANGUAGES='R=builtin_r JAVA=builtin_java PYTHON3=builtin_python3'"
-          expected-new-alter-system-command: "ALTER SYSTEM SET SCRIPT_LANGUAGES='JAVA=builtin_java PYTHON3=builtin_python3 R=localzmq+protobuf:///bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v6.0.0-VYP23K36/?lang=r#/buckets/bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v6.0.0-VYP23K36/exaudf/exaudfclient_py3';"
-          support-python2: "no"
-        - db-version: "7.1.19"
-          expected-original-alter-system-parameter: "ALTER SYSTEM SET SCRIPT_LANGUAGES='PYTHON=builtin_python R=builtin_r JAVA=builtin_java PYTHON3=builtin_python3';"
-          expected-new-alter-system-command: "ALTER SYSTEM SET SCRIPT_LANGUAGES='JAVA=builtin_java PYTHON3=builtin_python3 PYTHON=localzmq+protobuf:///bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v4.0.0-CM4RWW6R/?lang=python#/buckets/bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v4.0.0-CM4RWW6R/exaudf/exaudfclient R=localzmq+protobuf:///bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v4.0.0-CM4RWW6R/?lang=r#/buckets/bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v4.0.0-CM4RWW6R/exaudf/exaudfclient_py3';"
-          support-python2: "yes"
-        - db-version: "7.1.6"
-          expected-original-alter-system-parameter: "ALTER SYSTEM SET SCRIPT_LANGUAGES='PYTHON=builtin_python R=builtin_r JAVA=builtin_java PYTHON3=builtin_python3';"
-          expected-new-alter-system-command: "ALTER SYSTEM SET SCRIPT_LANGUAGES='JAVA=builtin_java PYTHON3=builtin_python3 PYTHON=localzmq+protobuf:///bfsdefault/default/EXAClusterOS/ScriptLanguages-release-standard-exasol-7.1.0-1.1.0/?lang=python#/buckets/bfsdefault/default/EXAClusterOS/ScriptLanguages-release-standard-exasol-7.1.0-1.1.0/exaudf/exaudfclient R=localzmq+protobuf:///bfsdefault/default/EXAClusterOS/ScriptLanguages-release-standard-exasol-7.1.0-1.1.0/?lang=r#/buckets/bfsdefault/default/EXAClusterOS/ScriptLanguages-release-standard-exasol-7.1.0-1.1.0/exaudf/exaudfclient_py3';"
-          support-python2: "yes"
+      matrix:
+        include:
+          - db-version: "7.1.29"
+            expected-original-alter-system-parameter: "ALTER SYSTEM SET SCRIPT_LANGUAGES='R=builtin_r JAVA=builtin_java PYTHON3=builtin_python3'"
+            expected-new-alter-system-command: "ALTER SYSTEM SET SCRIPT_LANGUAGES='JAVA=builtin_java PYTHON3=builtin_python3 R=localzmq+protobuf:///bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v6.0.0-VYP23K36/?lang=r#/buckets/bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v6.0.0-VYP23K36/exaudf/exaudfclient_py3';"
+            support-python2: "no"
+          - db-version: "7.1.19"
+            expected-original-alter-system-parameter: "ALTER SYSTEM SET SCRIPT_LANGUAGES='PYTHON=builtin_python R=builtin_r JAVA=builtin_java PYTHON3=builtin_python3';"
+            expected-new-alter-system-command: "ALTER SYSTEM SET SCRIPT_LANGUAGES='JAVA=builtin_java PYTHON3=builtin_python3 PYTHON=localzmq+protobuf:///bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v4.0.0-CM4RWW6R/?lang=python#/buckets/bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v4.0.0-CM4RWW6R/exaudf/exaudfclient R=localzmq+protobuf:///bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v4.0.0-CM4RWW6R/?lang=r#/buckets/bfsdefault/default/EXAClusterOS/ScriptLanguages-standard-EXASOL-7.1.0-slc-v4.0.0-CM4RWW6R/exaudf/exaudfclient_py3';"
+            support-python2: "yes"
+          - db-version: "7.1.6"
+            expected-original-alter-system-parameter: "ALTER SYSTEM SET SCRIPT_LANGUAGES='PYTHON=builtin_python R=builtin_r JAVA=builtin_java PYTHON3=builtin_python3';"
+            expected-new-alter-system-command: "ALTER SYSTEM SET SCRIPT_LANGUAGES='JAVA=builtin_java PYTHON3=builtin_python3 PYTHON=localzmq+protobuf:///bfsdefault/default/EXAClusterOS/ScriptLanguages-release-standard-exasol-7.1.0-1.1.0/?lang=python#/buckets/bfsdefault/default/EXAClusterOS/ScriptLanguages-release-standard-exasol-7.1.0-1.1.0/exaudf/exaudfclient R=localzmq+protobuf:///bfsdefault/default/EXAClusterOS/ScriptLanguages-release-standard-exasol-7.1.0-1.1.0/?lang=r#/buckets/bfsdefault/default/EXAClusterOS/ScriptLanguages-release-standard-exasol-7.1.0-1.1.0/exaudf/exaudfclient_py3';"
+            support-python2: "yes"
     steps:
       - uses: actions/checkout@v4
         with:

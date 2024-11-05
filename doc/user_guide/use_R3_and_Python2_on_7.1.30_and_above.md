@@ -2,9 +2,9 @@
 
 ## Background
 
-The Script-Languages-Container was updated to version [8.1.0](https://github.com/exasol/script-languages-release/releases/tag/8.1.0) in Database v7.1.30. Release 8.1.0 included a major update for the Python and R languages compared to 6.0.0. For R we detected some performance drops in special circumstances: Newer versions of R have a higher memory consumption which has direct impact on the execution of UDF's in parallel. 
+The Script-Languages-Container was updated to version [8.1.0](https://github.com/exasol/script-languages-release/releases/tag/8.1.0) in Database v7.1.30. Release 8.1.0 included a major update for the Python and R languages compared to 6.0.0. For R we detected some performance drops in special circumstances: Newer versions of R have a higher memory consumption which can lead to throttling of the UDFs and decrease their performance. 
 Also, some R packages were removed. 
-In case, customers want to use the previous Script-Languages-Container [6.0.0](https://github.com/exasol/script-languages-release/releases/tag/6.0.0), they can follow the steps described in this document.
+In case, customers want to use the previous Script-Languages-Container [6.0.0](https://github.com/exasol/script-languages-release/releases/tag/6.0.0), they can follow the steps described in this document. Alternatively, if the customer experiences performance drops with R UDF's, [limiting the number](https://docs.exasol.com/db/latest/database_concepts/udf_scripts/udf_instance_limit.htm) of UDF instances might avoid this problem.
 
 ⚠️These script language containers are provided as is and are not maintained anymore.
 

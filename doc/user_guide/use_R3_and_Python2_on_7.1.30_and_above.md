@@ -2,7 +2,8 @@
 
 ## Background
 
-The Script-Languages-Container was updated to version [8.1.0](https://github.com/exasol/script-languages-release/releases/tag/8.1.0) in Database v7.1.30. Release 8.1.0 included a major update for the Python and R languages compared to 6.0.0. For R we detected some performance drops in special circumstances. Also, some R packages were removed.
+The Script-Languages-Container was updated to version [8.1.0](https://github.com/exasol/script-languages-release/releases/tag/8.1.0) in Database v7.1.30. Release 8.1.0 included a major update for the Python and R languages compared to 6.0.0. For R we detected some performance drops in special circumstances: Newer versions of R have a higher memory consumption which has direct impact on the execution of UDF's in parallel. 
+Also, some R packages were removed. 
 In case, customers want to use the previous Script-Languages-Container [6.0.0](https://github.com/exasol/script-languages-release/releases/tag/6.0.0), they can follow the steps described in this document.
 
 ⚠️These script language containers are provided as is and are not maintained anymore.

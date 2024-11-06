@@ -35,6 +35,7 @@ This release uses version 1.0.0 of the container tool.
   - #990: Forward JAR options without changing order to classpath
   - #989: Trim script class and import script options
   - #988: Adapted Java integration tests for new ScriptOptions parser
+  - #878: Fixed jvmoption and parameters containing a space
 
 ## Bugs
   - #977: Fixed Trivy update cache workflow

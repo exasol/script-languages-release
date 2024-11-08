@@ -22,8 +22,8 @@ jobs:
 
       - name: Fetch trivy databases
         run: |
-          trivy image --download-java-db-only
-          trivy image --download-db-only
+          trivy image --download-java-db-only || (echo "Falling back to ECR repository...." && trivy image --download-java-db-only --java-db-repository public.ecr.aws/aquasecurity/trivy-java-db)
+          trivy image --download-db-only || (echo "Falling back to ECR repository....." && trivy image --download-db-only --db-repository public.ecr.aws/aquasecurity/trivy-db)
 
       - name: Create tar gz databases
         run: |

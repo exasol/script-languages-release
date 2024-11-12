@@ -42,6 +42,8 @@ This release uses version 1.0.0 of the container tool.
   - #977: Fixed Trivy update cache workflow
   - #993: Added escape sequence for backslash in new Script Options parser
   - #1002: Use ECR fallback repository for Trivy caching
+  - #958: Fix conda version conflict
+
 ## Doc
 
  - #954: added release checklist

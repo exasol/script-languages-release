@@ -37,6 +37,7 @@ This release uses version 1.0.0 of the container tool.
   - #989: Trim script class and import script options
   - #988: Adapted Java integration tests for new ScriptOptions parser
   - #878: Fixed jvmoption and parameters containing a space
+  - #1009: Removed NVIDIA GPU Driver Libraries from template-CUDA SLC
 
 ## Bugs
   - #977: Fixed Trivy update cache workflow

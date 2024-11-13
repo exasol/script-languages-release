@@ -45,19 +45,19 @@ The template-Exasol-all-python-3.10-conda flavor provides the language Python 3.
   - Supported Package Manager: conda, pip
   - [Here](template-Exasol-all-python-3.10-conda/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-### template-Exasol-all-python-3.10-cuda-conda
+### template-Exasol-8-python-3.10-cuda-conda
 
-The template-Exasol-all-python-3.10-cuda-conda flavor provides the language Python 3.10 with NVIDIA GPU support and with only absolute necessary packages. This allows very simple customization because you control almost all dependencies. In contrast to template-Exasol-all-python-3.10, it also allows the installation of conda packages.
+The template-Exasol-8-python-3.10-cuda-conda flavor provides the language Python 3.10 with NVIDIA GPU support and with only absolute necessary packages. This allows very simple customization because you control almost all dependencies. In contrast to template-Exasol-all-python-3.10, it also allows the installation of conda packages.
 
-- template-Exasol-all-python-3.10-cuda-conda
+- template-Exasol-8-python-3.10-cuda-conda
   - Base Image: ubuntu:22.04
   - Compatible Exasol Versions: 8.0.\*,7.1.\*, 7.0.\*
   - Available languages: Python 3.10
   - Supported Package Manager: conda, pip
-  - Supported NVIDIA Driver: 550.54.15
+  - Withou NVIDIA Driver
   - Installed CudaToolkit: 11.8
   - Installed CuDNN: 8.1.0.77
-  - [Here](template-Exasol-all-python-3.10-cuda-conda/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+  - [Here](template-Exasol-8-python-3.10-cuda-conda/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
 ### template-Exasol-all-r-4
 

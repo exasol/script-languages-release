@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Run install dependencies
         run: |
-          sudo apt update && sudo apt install -y awscli curl wget apt-transport-https gnupg lsb-release
+          sudo apt update && sudo apt install -y curl wget apt-transport-https gnupg lsb-release
           wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
           echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
           sudo apt-get update
@@ -22,8 +22,8 @@ jobs:
 
       - name: Fetch trivy databases
         run: |
-          trivy image --download-java-db-only
-          trivy image --download-db-only
+          trivy image --download-java-db-only || (echo "Falling back to ECR repository...." && trivy image --download-java-db-only --java-db-repository public.ecr.aws/aquasecurity/trivy-java-db)
+          trivy image --download-db-only || (echo "Falling back to ECR repository....." && trivy image --download-db-only --db-repository public.ecr.aws/aquasecurity/trivy-db)
 
       - name: Create tar gz databases
         run: |

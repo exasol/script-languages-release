@@ -4,7 +4,6 @@
     "ignore": {
       "paths": [
         ".github",
-        "config",
         "doc",
         "emulator",
         "githooks",

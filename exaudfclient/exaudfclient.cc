@@ -26,7 +26,7 @@
 #include "base/streaming_container/streamingcontainer.h"
 #endif
 #include <functional>
-#include "base/debug_message.h"
+#include "base/utils/debug_message.h"
 #include <stdio.h>
 #include <stddef.h>
 #include <stdint.h>
@@ -38,7 +38,7 @@
 #include <inttypes.h>
 
 #ifdef ENABLE_JAVA_VM
-#include "base/javacontainer/javacontainer.h"
+#include "base/javacontainer/javacontainer_builder.h"
 #endif //ENABLE_JAVA_VM
 
 #ifdef ENABLE_PYTHON_VM
@@ -48,8 +48,6 @@
 #ifdef UDF_PLUGIN_CLIENT
 #include "protegrityclient.h"
 #endif
-
-#include "base/swig_factory/swig_factory_impl.h"
 
 using namespace std;
 using namespace SWIGVMContainers;
@@ -131,6 +129,10 @@ int main(int argc, char **argv) {
         cerr << "Usage: " << argv[0] << " <socket> lang=python|lang=r|lang=java|lang=streaming|lang=benchmark" << endl;
         return 1;
     }
+    const char* script_options_parser_env_val = ::getenv("SCRIPT_OPTIONS_PARSER_VERSION");
+    const bool useCtpgScriptOptionsParser = script_options_parser_env_val != nullptr &&
+                                            ::strcmp(script_options_parser_env_val, "2") == 0;
+
 #endif
 
     if (::setenv("HOME", "/tmp", 1) == -1)
@@ -140,7 +142,6 @@ int main(int argc, char **argv) {
     ::setlocale(LC_ALL, "en_US.utf8");
 
     std::function<SWIGVMContainers::SWIGVM*()>vmMaker=[](){return nullptr;}; // the initial vm maker returns NULL
-    SwigFactoryImpl swigFactory;
 #ifdef UDF_PLUGIN_CLIENT
     vmMaker = [](){return new SWIGVMContainers::Protegrity(false);};
 #else
@@ -170,7 +171,12 @@ int main(int argc, char **argv) {
     } else if (strcmp(argv[2], "lang=java")==0)
     {
 #ifdef ENABLE_JAVA_VM
-        vmMaker = [&](){return new SWIGVMContainers::JavaVMach(false, swigFactory);};
+        if (useCtpgScriptOptionsParser) {
+            vmMaker = [&](){return SWIGVMContainers::JavaContainerBuilder().useCtpgParser().build();};
+        } else {
+            vmMaker = [&](){return SWIGVMContainers::JavaContainerBuilder().build();};
+        }
+
 #else
         throw SWIGVM::exception("this exaudfclient has been compilied without Java support");
 #endif

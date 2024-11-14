@@ -16,12 +16,18 @@ jobs:
         with:
           fetch-depth: 0
           submodules: 'recursive'
+      - name: Setup Python & Poetry Environment
+        uses: exasol/python-toolbox/.github/actions/python-environment@0.14.0
+        with:
+          python-version: "3.10"
+          poetry-version: '1.8.2'
+
       - name: Build TestContainer
-        run: ./exaslct build-test-container --force-rebuild
+        run: poetry run exaslct build-test-container --force-rebuild
       - name: Push TestContainer image
         if: ${{ (github.ref == 'refs/heads/master') || (github.ref == 'refs/heads/main') }}
         run: |
-          ./exaslct push-test-container --source-docker-username "$SECRET_DOCKER_USER_NAME" --target-docker-username "$SECRET_DOCKER_USER_NAME" --force-push true
+          poetry run exaslct push-test-container --source-docker-username "$SECRET_DOCKER_USER_NAME" --target-docker-username "$SECRET_DOCKER_USER_NAME" --force-push true
         env: # Set the secret as an input
           SECRET_DOCKER_USER_NAME: ${{ secrets.DOCKER_USER_NAME }}
           TARGET_DOCKER_PASSWORD: ${{ secrets.DOCKER_TOKEN }}
@@ -29,7 +35,7 @@ jobs:
       - name: Push  ci-release-test TestContainer image
         if: ${{ (github.ref != 'refs/heads/master') && (github.ref != 'refs/heads/main') }}
         run: |
-          ./exaslct push-test-container --source-docker-username "$SECRET_DOCKER_USER_NAME" --target-docker-username "$SECRET_DOCKER_USER_NAME" --force-push true --source-docker-tag-prefix ci_release_test --target-docker-tag-prefix ci_release_test
+          poetry run exaslct push-test-container --source-docker-username "$SECRET_DOCKER_USER_NAME" --target-docker-username "$SECRET_DOCKER_USER_NAME" --force-push true --source-docker-tag-prefix ci_release_test --target-docker-tag-prefix ci_release_test
         env: # Set the secret as an input
           SECRET_DOCKER_USER_NAME: ${{ secrets.DOCKER_USER_NAME }}
           TARGET_DOCKER_PASSWORD: ${{ secrets.DOCKER_TOKEN }}

@@ -45,6 +45,7 @@ This release uses version 1.0.0 of the container tool.
   - #993: Added escape sequence for backslash in new Script Options parser
   - #1002: Use ECR fallback repository for Trivy caching
   - #958: Fix conda version conflict
+  - #1014: Fixed Push Docker Test Container workflow
 
 ## Doc
 

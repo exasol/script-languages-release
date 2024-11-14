@@ -1,4 +1,4 @@
-# Package Version Comparison between Template-exasol-all-python-3.10-cuda-conda flavor in 8.4.0 and Template-exasol-all-python-3.10-cuda-conda flavor in 8.3.0
+# Package Version Comparison between Template-exasol-8-python-3.10-cuda-conda flavor in 8.4.0 and Template-exasol-all-python-3.10-cuda-conda flavor in 8.3.0
 
 - Comparison of build step Udfclient_deps
   - [Comparison of Conda Channels](udfclient_deps/conda_channels_diff.md)
@@ -6,8 +6,6 @@
 - Comparison of build step Security_scan
   - [Comparison of Apt Get Packages](security_scan/apt_get_packages_diff.md)
   - [Comparison of Apt Get Packages Trivy Deps](security_scan/apt_get_packages_trivy_deps_diff.md)
-- Comparison of build step Nvidia_driver_deps
-  - [Comparison of Apt Get Packages](nvidia_driver_deps/apt_get_packages_diff.md)
 - Comparison of build step Language_deps
   - [Comparison of Conda Channels](language_deps/conda_channels_diff.md)
   - [Comparison of Conda Packages](language_deps/conda_packages_diff.md)
@@ -15,6 +13,8 @@
   - [Comparison of Conda Channels](flavor_base_deps/conda_channels_diff.md)
   - [Comparison of Conda Packages](flavor_base_deps/conda_packages_diff.md)
   - [Comparison of Python3 Pip Packages](flavor_base_deps/python3_pip_packages_diff.md)
+- Comparison of build step Conda_deps
+  - [New Apt Get Packages](conda_deps/apt_get_packages_diff.md)
 - Comparison of build step Build_deps
   - [Comparison of Conda Channels](build_deps/conda_channels_diff.md)
   - [Comparison of Conda Packages](build_deps/conda_packages_diff.md)

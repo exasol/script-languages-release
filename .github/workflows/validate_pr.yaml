@@ -11,6 +11,6 @@ jobs:
     steps:
 
       - name: Show Source Branch
-        run: echo ${{github.ref_name}}
+        run: echo ${{github.head_ref}}
       - name: Show Target Branch
         run: echo ${{github.base_ref}}

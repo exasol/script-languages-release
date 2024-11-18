@@ -3,14 +3,11 @@ name: Validate PR
 on:
   pull_request:
 
-
-
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
 
-      - name: Show Source Branch
-        run: echo ${{github.head_ref}}
-      - name: Show Target Branch
-        run: echo ${{github.base_ref}}
+      - name: Check master
+        if: ${{github.base_ref == 'master' && github.base_ref != 'develop'}}
+        run: echo You must not merge to master && exit 1

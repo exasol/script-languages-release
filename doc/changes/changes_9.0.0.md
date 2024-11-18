@@ -46,6 +46,7 @@ This release uses version 1.0.0 of the container tool.
   - #1002: Use ECR fallback repository for Trivy caching
   - #958: Fix conda version conflict
   - #1014: Fixed Push Docker Test Container workflow
+  - #1017: Implemented a GH workflow which validates correct target branch of PR
 
 ## Doc
 

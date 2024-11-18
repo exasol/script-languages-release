@@ -4,10 +4,9 @@ on:
   pull_request:
 
 jobs:
-  build:
+  validate-pr:
     runs-on: ubuntu-24.04
     steps:
-
       - name: Check master
-        if: ${{github.base_ref == 'master' && github.base_ref != 'develop'}}
-        run: echo You must not merge to master && exit 1
+        if: ${{github.base_ref == 'master' && github.ref_name != 'develop'}}
+        run: echo You must not merge directly to master. Instead merge to 'develop' first. && exit 1

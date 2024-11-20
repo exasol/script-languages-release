@@ -18,7 +18,8 @@ This release uses version 1.0.0 of the container tool.
 ## Security Issues
 
  - #956: Updated dependencies
- - #1006: Updated Dependencies on top of 8.4.0 
+ - #1006: Updated Dependencies on top of 8.4.0
+ - #1019: Update Dependencies on top of 8.3.0 
 
 ## Refactorings
 

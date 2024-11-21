@@ -2,7 +2,7 @@
 
 |    | Package                 | Version in 8.3.0             | Version in 9.0.0             | Status   |
 |---:|:------------------------|:-----------------------------|:-----------------------------|:---------|
-|  0 | curl                    | 7.81.0-1ubuntu1.17           | 7.81.0-1ubuntu1.18           | UPDATED  |
+|  0 | curl                    | 7.81.0-1ubuntu1.17           | 7.81.0-1ubuntu1.19           | UPDATED  |
 |  1 | openjdk-17-jdk-headless | 17.0.12+7-1ubuntu2~22.04     | 17.0.13+11-2ubuntu1~22.04    | UPDATED  |
 |  2 | build-essential         | 12.9ubuntu3                  | 12.9ubuntu3                  |          |
 |  3 | chrpath                 | 0.16-2                       | 0.16-2                       |          |

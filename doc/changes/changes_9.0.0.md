@@ -18,7 +18,8 @@ This release uses version 1.0.0 of the container tool.
 ## Security Issues
 
  - #956: Updated dependencies
- - #1006: Updated Dependencies on top of 8.4.0 
+ - #1006: Updated Dependencies on top of 8.3.0
+ - #1019: Update Dependencies on top of 8.3.0 
 
 ## Refactorings
 
@@ -46,6 +47,7 @@ This release uses version 1.0.0 of the container tool.
   - #1002: Use ECR fallback repository for Trivy caching
   - #958: Fix conda version conflict
   - #1014: Fixed Push Docker Test Container workflow
+  - #1017: Implemented a GH workflow which validates correct target branch of PR
 
 ## Doc
 

@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Check master
-        if: ${{github.base_ref == 'master' && github.ref_name != 'develop'}}
-        run: echo You must not merge directly to master. Instead merge to 'develop' first. && exit 1
+        if: ${{github.base_ref == 'master' && github.head_ref != 'develop'}}
+        run: Target=${{github.base_ref}} Source=${{github.head_ref}}. echo You must not merge directly to master. Instead merge to 'develop' first. && exit 1

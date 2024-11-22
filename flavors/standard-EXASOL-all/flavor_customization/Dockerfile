@@ -23,7 +23,7 @@ COPY flavor_customization/packages/python3_pip_packages /build_info/packages/fla
 RUN /scripts/install_scripts/install_via_pip.pl --file /build_info/packages/flavor_customization/python3_pip_packages --python-binary python3 --with-versions --allow-no-version --ignore-installed --ancestor-pip-package-root-path /build_info/packages
 
 COPY flavor_customization/packages/r_cran_packages /build_info/packages/flavor_customization
-RUN /scripts/install_scripts/install_via_r_remotes.pl --file /build_info/packages/flavor_customization/r_cran_packages --rscript-binary Rscript --with-versions --allow-no-version
+RUN /scripts/install_scripts/install_via_r_remotes.pl --file /build_info/packages/flavor_customization/r_cran_packages --rscript-binary Rscript --with-versions --allow-no-version --no-version-validation
 
 ##########################################################################
 ##########################################################################

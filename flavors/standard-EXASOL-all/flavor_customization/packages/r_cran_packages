@@ -7,4 +7,4 @@
 # If a line starts with # the whole line is a comment, however you can
 # also start a comment after the package definition.
 
-stringr|1.4.0
+#mlr3|0.21.1

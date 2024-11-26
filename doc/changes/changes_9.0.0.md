@@ -1,4 +1,4 @@
-# script-languages-release 9.0.0, released 2024-11-25
+# script-languages-release 9.0.0, released 2024-11-26
 
 Code name: New script options parser
 

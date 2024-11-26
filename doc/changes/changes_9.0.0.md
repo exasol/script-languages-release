@@ -4,7 +4,8 @@ Code name: New script options parser
 
 ## Summary
 
-This release introduces the new Script Options parser used in the Java UDF's. The new parser provides additional escape syntax which allows a more flexible definition of option values.
+This release introduces the new Script Options parser used in the Java UDF's. The new parser provides additional escape syntax which allows a more flexible definition of option values. 
+Note: In this release, the old options parser is still the default parser, the new parser needs to be activated manually.
 Additionally, the release contains several bugfixes for the internal toolchain of building script languages containers, and updates several dependencies.
 The flavor `template-Exasol-all-python-3.10-cuda-conda` was renamed to `template-Exasol-8-python-3.10-cuda-conda`.
 

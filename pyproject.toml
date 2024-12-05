@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "exasol-script-languages-release"
-version = "9.0.0"
+version = "9.1.0"
 description = "Script Languages Release"
 
 license = "MIT"

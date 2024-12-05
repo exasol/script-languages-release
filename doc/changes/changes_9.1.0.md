@@ -18,7 +18,7 @@ This release uses version 1.0.0 of the container tool.
 
 ## Security Issues
 
- n/a
+  - #1029: Extended trivy rego for Kernel CVE's
 
 ## Refactorings
 

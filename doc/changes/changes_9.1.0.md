@@ -14,7 +14,8 @@ This release uses version 1.0.0 of the container tool.
 
 ## Features
 
- n/a
+ - #1026: created test cuda ml flavor
+
 
 ## Security Issues
 

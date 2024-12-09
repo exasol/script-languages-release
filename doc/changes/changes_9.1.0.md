@@ -14,7 +14,7 @@ This release uses version 1.0.0 of the container tool.
 
 ## Features
 
- - #1026: created test cuda ml flavor
+ - #1026: Created test-Exasol-8-cuda-ml flavor
 
 
 ## Security Issues

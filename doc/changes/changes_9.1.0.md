@@ -10,15 +10,17 @@ t.b.d.
 
 ## Script-Language-Container-Tool (Exaslct)
 
-This release uses version 1.0.0 of the container tool. 
+This release uses version 1.0.0 of the container tool.
 
 ## Features
 
- n/a
+ - #1026: Created test-Exasol-8-cuda-ml flavor
+
 
 ## Security Issues
 
   - #1029: Extended trivy rego for Kernel CVE's
+  - #1038: Updated Dependencies on top of 9.0.0
 
 ## Refactorings
 
@@ -31,4 +33,3 @@ This release uses version 1.0.0 of the container tool.
 ## Doc
 
  n/a
- 

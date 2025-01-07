@@ -24,7 +24,7 @@ This release uses version 1.0.0 of the container tool.
 
 ## Refactorings
 
- n/a
+  - #1036: Added pytorch and numba integration test compatible with CPU only VM
 
 ## Bugs
 

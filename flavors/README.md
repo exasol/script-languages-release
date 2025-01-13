@@ -19,7 +19,7 @@ We provide one flavor, which can be used in all currently active Exasol versions
 - standard-EXASOL-all
   - Base Image: ubuntu:22.04
   - Compatible Exasol Versions: 
-    - 8.0.\* 
+    - 8.\* 
     - 7.1.\* 
   - Available languages: Java 11, Python 3.10 and R 4.4
   - [Here](standard-EXASOL-all/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
@@ -30,7 +30,7 @@ The template-Exasol-all-python-3.10 flavor provides language Python 3.10 with on
 
 - template-Exasol-all-python-3.10
   - Base Image: ubuntu:22.04
-  - Compatible Exasol Versions: 8.0.\*, 7.1.\*
+  - Compatible Exasol Versions: 8.\*, 7.1.\*
   - Available languages: Python 3.10
   - [Here](template-Exasol-all-python-3.10/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
@@ -40,24 +40,26 @@ The template-Exasol-all-python-3.10-conda flavor provides the language Python 3.
 
 - template-Exasol-all-python-3.10-conda
   - Base Image: ubuntu:22.04
-  - Compatible Exasol Versions: 8.0.\*,7.1.\*, 7.0.\*
+  - Compatible Exasol Versions: 8.\*,7.1.\*, 7.0.\*
   - Available languages: Python 3.10
   - Supported Package Manager: conda, pip
   - [Here](template-Exasol-all-python-3.10-conda/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
 ### template-Exasol-8-python-3.10-cuda-conda
 
-The template-Exasol-8-python-3.10-cuda-conda flavor provides the language Python 3.10 with NVIDIA GPU support and with only absolute necessary packages. This allows very simple customization because you control almost all dependencies. In contrast to template-Exasol-all-python-3.10, it also allows the installation of conda packages.
+The template-Exasol-8-python-3.10-cuda-conda flavor provides the language Python 3.10 with NVIDIA GPU support and with only absolute necessary packages. The flavor contains the Cuda-SDK and is prepared to work with the Nvidia-Driver, which however needs to be provided by the Host OS. This allows very simple customization because you control almost all dependencies. In contrast to template-Exasol-all-python-3.10, it also allows the installation of conda packages.
 
 - template-Exasol-8-python-3.10-cuda-conda
   - Base Image: ubuntu:22.04
-  - Compatible Exasol Versions: 8.0.\*,7.1.\*, 7.0.\*
+  - Compatible Exasol Versions: 8.?
   - Available languages: Python 3.10
   - Supported Package Manager: conda, pip
-  - Withou NVIDIA Driver
+  - Without NVIDIA Driver
   - Installed CudaToolkit: 11.8
   - Installed CuDNN: 8.1.0.77
   - [Here](template-Exasol-8-python-3.10-cuda-conda/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+
+**Important**: Currently, there us no compatible Exasol DB version with this flavor (will come later).
 
 ### template-Exasol-all-r-4
 
@@ -65,9 +67,10 @@ The R-4-minimal flavor provides the language R 4.4 with only absolute necessary 
 
 - template-Exasol-all-r-4
   - Base Image: ubuntu:22.04
-  - Compatible Exasol Versions: 8.0.\*, 7.1.\*
+  - Compatible Exasol Versions: 8.\*, 7.1.\*
   - Available languages: R 4.4
   - [Here](template-Exasol-all-r-4/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+
 
 ## Flavor or Language-specific features
 

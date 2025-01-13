@@ -1,10 +1,10 @@
-# script-languages-release 9.1.0, released t.b.d.
+# script-languages-release 9.1.0, released 2025-01-25
 
-Code name: t.b.d.
+Code name: Test-Cuda-ML flavor
 
 ## Summary
 
-t.b.d.
+This release adds the new Test-Cuda-ML flavor and provides several dependency updates. 
 
 ## [Package Version Comparison between Release 9.0.0 and 9.1.0](package_diffs/9.1.0/README.md)
 
@@ -24,7 +24,7 @@ This release uses version 1.0.0 of the container tool.
 
 ## Refactorings
 
- n/a
+  - #1036: Added pytorch and numba integration test compatible with CPU only VM
 
 ## Bugs
 

@@ -68,7 +68,7 @@ bitarray|2.9.2
 pybloomfiltermmap3|0.5.7
 bitsets|0.8.4
 pyyaml|6.0.1
-exasol-bucketfs|1.0.0
+exasol-bucketfs|0.13.0
 pysmbc|1.0.25.1
 cryptography|42.0.6
 h2|4.1.0

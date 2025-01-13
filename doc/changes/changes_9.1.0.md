@@ -1,10 +1,10 @@
-# script-languages-release 9.1.0, released t.b.d.
+# script-languages-release 9.1.0, released 2025-01-25
 
-Code name: t.b.d.
+Code name: Test-Cuda-ML flavor
 
 ## Summary
 
-t.b.d.
+This release adds the new Test-Cuda-ML flavor and provides several dependency updates. 
 
 ## [Package Version Comparison between Release 9.0.0 and 9.1.0](package_diffs/9.1.0/README.md)
 

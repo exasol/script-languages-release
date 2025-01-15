@@ -23,7 +23,7 @@ n/a
 
 ## Refactorings
 
-n/a
+ - #1034: Moved activate_conda script to ext and reuse and updated dependencies
 
 ## Bugs
 

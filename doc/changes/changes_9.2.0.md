@@ -19,7 +19,7 @@ This release uses version 1.0.0 of the container tool.
 
 ## Security Issues
 
-n/a
+ - #1050: Updated dependencies
 
 ## Refactorings
 

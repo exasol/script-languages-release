@@ -1,5 +1,5 @@
 ca-certificates|20240203~22.04.1
-python3.10-dev|3.10.12-1~22.04.7
+python3.10-dev|3.10.12-1~22.04.8
 python3-distutils|3.10.8-1~22.04
 curl|7.81.0-1ubuntu1.20
 openjdk-11-jdk-headless|11.0.25+9-1ubuntu1~22.04

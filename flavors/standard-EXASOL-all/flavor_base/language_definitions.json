@@ -5,8 +5,8 @@
     {
       "protocol": "localzmq+protobuf",
       "aliases": ["JAVA", "JAVA11"],
-      "language": "",
-      "parameters": ["lang=java"],
+      "language": "java",
+      "parameters": [[{"key": "lang", "value": ["java"]}]],
       "udf_client_path": {
         "executable": "/exaudf/exaudfclient"
       },
@@ -15,8 +15,8 @@
     {
       "protocol": "localzmq+protobuf",
       "aliases": ["PYTHON3", "PYTHON310"],
-      "language": "",
-      "parameters": ["lang=python"],
+      "language": "python",
+      "parameters": [{"key": "lang", "value": ["python"]}],
       "udf_client_path": {
         "executable": "/exaudf/exaudfclient"
       },
@@ -25,8 +25,8 @@
     {
       "protocol": "localzmq+protobuf",
       "aliases": ["R", "R44"],
-      "language": "",
-      "parameters": ["lang=r"],
+      "language": "r",
+      "parameters": [[{"key": "lang", "value": ["r"]}]],
       "udf_client_path": {
         "executable": "/exaudf/exaudfclient"
       },

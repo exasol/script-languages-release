@@ -9,7 +9,8 @@
       "parameters": [],
       "udf_client_path": {
         "executable": "/exaudf/exaudfclient"
-      }
+      },
+      "deprecation": null
     },
     {
       "protocol": "localzmq+protobuf",
@@ -18,7 +19,8 @@
       "parameters": [],
       "udf_client_path": {
         "executable": "/exaudf/exaudfclient"
-      }
+      },
+      "deprecation": null
     },
     {
       "protocol": "localzmq+protobuf",
@@ -27,7 +29,8 @@
       "parameters": [],
       "udf_client_path": {
         "executable": "/exaudf/exaudfclient"
-      }
+      },
+      "deprecation": null
     }
   ]
 }

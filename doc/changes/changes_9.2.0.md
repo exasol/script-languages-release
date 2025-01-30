@@ -21,6 +21,7 @@ This release uses version 1.1.0 of the container tool.
 
  - #1050: Updated dependencies
  - #1054: Updated dependencies
+ - #1059: Update Dependencies on top of 9.1.0
 
 ## Refactorings
 

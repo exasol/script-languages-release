@@ -181,7 +181,6 @@ class AnalyzeRelease(DockerFlavorAnalyzeImageTask):
         return "language_definitions.json"
 
 
-
 class SecurityScan(DockerFlavorAnalyzeImageTask):
     def get_build_step(self) -> str:
         return "security_scan"

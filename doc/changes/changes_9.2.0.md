@@ -10,17 +10,18 @@ t.b.d.
 
 ## Script-Language-Container-Tool (Exaslct)
 
-This release uses version 1.0.0 of the container tool.
+This release uses version 1.1.0 of the container tool.
 
 ## Features
 
- n/a
+  - #1057: Added language_definitions.json for standard SLC
 
 
 ## Security Issues
 
  - #1050: Updated dependencies
  - #1054: Updated dependencies
+ - #1059: Updated Dependencies on top of 9.1.0
 
 ## Refactorings
 

@@ -1,0 +1,36 @@
+
+{
+  "schema_version": 1,
+  "language_definitions": [
+    {
+      "protocol": "localzmq+protobuf",
+      "aliases": ["JAVA", "JAVA11"],
+      "language": "java",
+      "parameters": [[{"key": "lang", "value": ["java"]}]],
+      "udf_client_path": {
+        "executable": "/exaudf/exaudfclient"
+      },
+      "deprecation": null
+    },
+    {
+      "protocol": "localzmq+protobuf",
+      "aliases": ["PYTHON3", "PYTHON310"],
+      "language": "python",
+      "parameters": [{"key": "lang", "value": ["python"]}],
+      "udf_client_path": {
+        "executable": "/exaudf/exaudfclient"
+      },
+      "deprecation": null
+    },
+    {
+      "protocol": "localzmq+protobuf",
+      "aliases": ["R", "R44"],
+      "language": "r",
+      "parameters": [[{"key": "lang", "value": ["r"]}]],
+      "udf_client_path": {
+        "executable": "/exaudf/exaudfclient"
+      },
+      "deprecation": null
+    }
+  ]
+}

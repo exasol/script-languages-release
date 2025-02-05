@@ -15,6 +15,7 @@ This release uses version 2.0.0 of the container tool.
 ## Features
 
   - #1057: Added language_definitions.json for standard SLC
+  - #1064: Update script-languages-container-tools to 2.0.0 
 
 
 ## Security Issues
@@ -26,10 +27,6 @@ This release uses version 2.0.0 of the container tool.
 ## Refactorings
 
  - #1034: Moved activate_conda script to ext and reuse and updated dependencies
-
-## Dependencies
-
- - Updated exaslct to 2.0.0
 
 ## Bugs
 

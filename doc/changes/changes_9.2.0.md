@@ -10,7 +10,7 @@ t.b.d.
 
 ## Script-Language-Container-Tool (Exaslct)
 
-This release uses version 1.1.0 of the container tool.
+This release uses version 2.0.0 of the container tool.
 
 ## Features
 
@@ -26,6 +26,10 @@ This release uses version 1.1.0 of the container tool.
 ## Refactorings
 
  - #1034: Moved activate_conda script to ext and reuse and updated dependencies
+
+## Dependencies
+
+ - Updated exaslct to 2.0.0
 
 ## Bugs
 

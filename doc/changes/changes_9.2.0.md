@@ -29,7 +29,7 @@ This release uses version 1.1.0 of the container tool.
 
 ## Bugs
 
- n/a
+  - #1060: Fixed Pandas Memory leakage Tests
 
 ## Doc
 

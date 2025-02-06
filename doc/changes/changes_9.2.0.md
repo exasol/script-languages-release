@@ -1,10 +1,10 @@
-# script-languages-release 9.2.0, released t.b.d.
+# script-languages-release 9.2.0, released 2025-02-06
 
-Code name: t.b.d.
+Code name: Language-Definitions JSON and exaslct 2.0.0
 
 ## Summary
 
-t.b.d. 
+This release adds the `language_definitions.json` to the standard Script-Languages-Container. `exaslct` was updated to version 2.0.0. Besides, it contains several package updates.
 
 ## [Package Version Comparison between Release 9.1.0 and 9.2.0](package_diffs/9.2.0/README.md)
 

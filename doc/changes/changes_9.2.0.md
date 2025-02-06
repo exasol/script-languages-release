@@ -32,6 +32,9 @@ This release uses version 2.0.0 of the container tool.
 ## Bugs
 
   - #1060: Fixed Pandas Memory leakage Tests
+     - Adjusted numbers for pandas dataframe memory leak test 
+     - Added sleep in dataframe_memory_leak test after gc collection
+
 
 ## Doc
 

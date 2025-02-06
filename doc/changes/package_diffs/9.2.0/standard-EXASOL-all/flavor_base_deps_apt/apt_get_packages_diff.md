@@ -3,20 +3,20 @@
 |    | Package              | Version in 9.1.0             | Version in 9.2.0             | Status   |
 |---:|:---------------------|:-----------------------------|:-----------------------------|:---------|
 |  0 | git                  | 1:2.34.1-1ubuntu1.11         | 1:2.34.1-1ubuntu1.12         | UPDATED  |
-|  1 | apt-transport-https  | 2.4.13                       | 2.4.13                       |          |
-|  2 | build-essential      | 12.9ubuntu3                  | 12.9ubuntu3                  |          |
-|  3 | cmake                | 3.22.1-1ubuntu1.22.04.2      | 3.22.1-1ubuntu1.22.04.2      |          |
-|  4 | gnupg                | 2.2.27-3ubuntu2.1            | 2.2.27-3ubuntu2.1            |          |
-|  5 | ldap-utils           | 2.5.18+dfsg-0ubuntu0.22.04.2 | 2.5.18+dfsg-0ubuntu0.22.04.2 |          |
-|  6 | libcurl4-openssl-dev | 7.81.0-1ubuntu1.20           | 7.81.0-1ubuntu1.20           |          |
-|  7 | libhiredis-dev       | 0.14.1-2                     | 0.14.1-2                     |          |
-|  8 | libldap2-dev         | 2.5.18+dfsg-0ubuntu0.22.04.2 | 2.5.18+dfsg-0ubuntu0.22.04.2 |          |
-|  9 | libldb2              | 2:2.4.4-0ubuntu0.22.04.2     | 2:2.4.4-0ubuntu0.22.04.2     |          |
-| 10 | libleveldb1d         | 1.23-3build1                 | 1.23-3build1                 |          |
-| 11 | libsasl2-dev         | 2.1.27+dfsg2-3ubuntu1.2      | 2.1.27+dfsg2-3ubuntu1.2      |          |
-| 12 | libsmbclient         | 2:4.15.13+dfsg-0ubuntu1.6    | 2:4.15.13+dfsg-0ubuntu1.6    |          |
-| 13 | libsmbclient-dev     | 2:4.15.13+dfsg-0ubuntu1.6    | 2:4.15.13+dfsg-0ubuntu1.6    |          |
-| 14 | libxml2-dev          | 2.9.13+dfsg-1ubuntu0.4       | 2.9.13+dfsg-1ubuntu0.4       |          |
+|  1 | libxml2-dev          | 2.9.13+dfsg-1ubuntu0.4       | 2.9.13+dfsg-1ubuntu0.5       | UPDATED  |
+|  2 | apt-transport-https  | 2.4.13                       | 2.4.13                       |          |
+|  3 | build-essential      | 12.9ubuntu3                  | 12.9ubuntu3                  |          |
+|  4 | cmake                | 3.22.1-1ubuntu1.22.04.2      | 3.22.1-1ubuntu1.22.04.2      |          |
+|  5 | gnupg                | 2.2.27-3ubuntu2.1            | 2.2.27-3ubuntu2.1            |          |
+|  6 | ldap-utils           | 2.5.18+dfsg-0ubuntu0.22.04.2 | 2.5.18+dfsg-0ubuntu0.22.04.2 |          |
+|  7 | libcurl4-openssl-dev | 7.81.0-1ubuntu1.20           | 7.81.0-1ubuntu1.20           |          |
+|  8 | libhiredis-dev       | 0.14.1-2                     | 0.14.1-2                     |          |
+|  9 | libldap2-dev         | 2.5.18+dfsg-0ubuntu0.22.04.2 | 2.5.18+dfsg-0ubuntu0.22.04.2 |          |
+| 10 | libldb2              | 2:2.4.4-0ubuntu0.22.04.2     | 2:2.4.4-0ubuntu0.22.04.2     |          |
+| 11 | libleveldb1d         | 1.23-3build1                 | 1.23-3build1                 |          |
+| 12 | libsasl2-dev         | 2.1.27+dfsg2-3ubuntu1.2      | 2.1.27+dfsg2-3ubuntu1.2      |          |
+| 13 | libsmbclient         | 2:4.15.13+dfsg-0ubuntu1.6    | 2:4.15.13+dfsg-0ubuntu1.6    |          |
+| 14 | libsmbclient-dev     | 2:4.15.13+dfsg-0ubuntu1.6    | 2:4.15.13+dfsg-0ubuntu1.6    |          |
 | 15 | maven                | 3.6.3-5                      | 3.6.3-5                      |          |
 | 16 | openssl              | 3.0.2-0ubuntu1.18            | 3.0.2-0ubuntu1.18            |          |
 | 17 | slapd                | 2.5.18+dfsg-0ubuntu0.22.04.2 | 2.5.18+dfsg-0ubuntu0.22.04.2 |          |

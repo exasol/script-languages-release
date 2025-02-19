@@ -86,59 +86,16 @@ class AnalyzeBaseTestBuildRun(DockerFlavorAnalyzeImageTask):
         return "flavor_base"
 
 
-class AnalyzeFlavorBaseDepsApt(DockerFlavorAnalyzeImageTask):
-
-    def get_build_step(self) -> str:
-        return "flavor_base_deps_apt"
-
-    def requires_tasks(self):
-        return {"language_deps": AnalyzeLanguageDeps}
-
-    def get_additional_build_directories_mapping(self):
-        return {"01_nodoc": "ext/01_nodoc", "scripts": "ext/scripts"}
-
-    def get_path_in_flavor(self):
-        return "flavor_base"
-
-class AnalyzeFlavorBaseDepsPython(DockerFlavorAnalyzeImageTask):
-
-    def get_build_step(self) -> str:
-        return "flavor_base_deps_python"
-
-    def requires_tasks(self):
-        return {"flavor_base_deps_apt": AnalyzeFlavorBaseDepsApt}
-
-    def get_additional_build_directories_mapping(self):
-        return {}
-
-    def get_path_in_flavor(self):
-        return "flavor_base"
-
-class AnalyzeFlavorBaseDepsR(DockerFlavorAnalyzeImageTask):
-
-    def get_build_step(self) -> str:
-        return "flavor_base_deps_r"
-
-    def requires_tasks(self):
-        return {"flavor_base_deps_apt": AnalyzeFlavorBaseDepsApt}
-
-    def get_additional_build_directories_mapping(self):
-        return {}
-
-    def get_path_in_flavor(self):
-        return "flavor_base"
-
 class AnalyzeFlavorBaseDeps(DockerFlavorAnalyzeImageTask):
 
     def get_build_step(self) -> str:
         return "flavor_base_deps"
 
     def requires_tasks(self):
-        return {"flavor_base_deps_python": AnalyzeFlavorBaseDepsPython,
-                "flavor_base_deps_r": AnalyzeFlavorBaseDepsR}
+        return {"language_deps": AnalyzeLanguageDeps}
 
     def get_additional_build_directories_mapping(self):
-        return {}
+        return {"01_nodoc": "ext/01_nodoc", "scripts": "ext/scripts"}
 
     def get_path_in_flavor(self):
         return "flavor_base"

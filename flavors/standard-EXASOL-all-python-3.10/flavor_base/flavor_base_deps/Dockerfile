@@ -1,6 +1,16 @@
-FROM {{ flavor_base_deps_python }}
+FROM {{ language_deps }}
 
-COPY --from={{flavor_base_deps_r}} /usr/local/lib/R/site-library /usr/local/lib/R/site-library
-RUN true # workaround for https://github.com/moby/moby/issues/37965
+RUN mkdir -p /build_info/packages
+COPY flavor_base_deps/packages /build_info/packages/flavor_base_deps
 
-COPY --from={{flavor_base_deps_r}} /build_info /build_info
+RUN /scripts/install_scripts/install_via_apt.pl --file /build_info/packages/flavor_base_deps/apt_get_packages --with-versions
+
+RUN curl -s https://aquasecurity.github.io/trivy-repo/deb/public.key | apt-key add - &&\
+   /scripts/install_scripts/install_ppa.pl --ppa 'deb https://aquasecurity.github.io/trivy-repo/deb jammy main' --out-file trivy.list
+RUN /scripts/install_scripts/install_via_apt.pl --file /build_info/packages/flavor_base_deps/apt_get_packages_trivy
+
+COPY flavor_base_deps/packages /build_info/packages/flavor_base_deps
+
+RUN /scripts/install_scripts/install_via_pip.pl --file /build_info/packages/flavor_base_deps/python3_pip_packages --python-binary python3 --with-versions --allow-no-version-for-urls --ancestor-pip-package-root-path /build_info/packages
+
+RUN apt remove build-essentials

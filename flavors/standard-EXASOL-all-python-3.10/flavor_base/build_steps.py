@@ -100,22 +100,13 @@ class AnalyzeFlavorBaseDeps(DockerFlavorAnalyzeImageTask):
     def get_path_in_flavor(self):
         return "flavor_base"
 
-class AnalyzeFlavorCustomization(DockerFlavorAnalyzeImageTask):
-
-    def get_build_step(self) -> str:
-        return "flavor_customization"
-
-    def requires_tasks(self):
-        return {"flavor_base_deps": AnalyzeFlavorBaseDeps}
-
-
 class AnalyzeFlavorTestBuildRun(DockerFlavorAnalyzeImageTask):
 
     def get_build_step(self) -> str:
         return "flavor_test_build_run"
 
     def requires_tasks(self):
-        return {"flavor_customization": AnalyzeFlavorCustomization,
+        return {"flavor_base_deps": AnalyzeFlavorBaseDeps,
                 "base_test_build_run": AnalyzeBaseTestBuildRun}
 
     def get_path_in_flavor(self):
@@ -127,7 +118,7 @@ class AnalyzeRelease(DockerFlavorAnalyzeImageTask):
         return "release"
 
     def requires_tasks(self):
-        return {"flavor_customization": AnalyzeFlavorCustomization,
+        return {"flavor_base_deps": AnalyzeFlavorBaseDeps,
                 "build_run": AnalyzeBuildRun,
                 "language_deps": AnalyzeLanguageDeps}
 

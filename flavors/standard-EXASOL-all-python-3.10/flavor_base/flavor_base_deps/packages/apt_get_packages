@@ -19,3 +19,4 @@ libsmbclient|2:4.15.13+dfsg-0ubuntu1.6
 libsmbclient-dev|2:4.15.13+dfsg-0ubuntu1.6
 smbclient|2:4.15.13+dfsg-0ubuntu1.6
 cmake|3.22.1-1ubuntu1.22.04.2
+pkg-config|0.29.2-1ubuntu3

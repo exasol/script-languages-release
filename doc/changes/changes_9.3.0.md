@@ -19,10 +19,11 @@ This release uses version 2.0.0 of the container tool.
 ## Security Issues
 
  - #1068: Updated Dependencies on top of 9.2.0 
+ - #1075: Updated Dependencies on top of 9.2.0
 
 ## Refactorings
 
- n/a
+ - #1074: Split Up standard SLC Tests
 
 ## Bugs
 

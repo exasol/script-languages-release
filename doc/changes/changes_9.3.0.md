@@ -14,7 +14,7 @@ This release uses version 2.0.0 of the container tool.
 
 ## Features
 
- n/a
+  - #1076: Added R Standard SLC Flavor
 
 ## Security Issues
 

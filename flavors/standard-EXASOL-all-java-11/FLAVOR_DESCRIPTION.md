@@ -1,4 +1,4 @@
-# Details for standard-EXASOL-8.0.0 flavor
+# Details for standard-EXASOL-all-java-11 flavor
 
 ## Packages
 

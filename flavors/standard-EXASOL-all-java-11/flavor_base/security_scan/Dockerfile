@@ -3,11 +3,11 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN mkdir -p /build_info/packages
 COPY security_scan/packages /build_info/packages/security_scan
-RUN /scripts/install_scripts/install_via_apt.pl --file /build_info/packages/security_scan/apt_get_packages_trivy_deps
+RUN /scripts/install_scripts/install_via_apt.pl --file /build_info/packages/security_scan/apt_get_packages_trivy_deps --with-version
 
 RUN curl -s https://aquasecurity.github.io/trivy-repo/deb/public.key | apt-key add - &&\
    /scripts/install_scripts/install_ppa.pl --ppa 'deb https://aquasecurity.github.io/trivy-repo/deb jammy main' --out-file trivy.list
-RUN /scripts/install_scripts/install_via_apt.pl --file /build_info/packages/security_scan/apt_get_packages_trivy
+RUN /scripts/install_scripts/install_via_apt.pl --file /build_info/packages/security_scan/apt_get_packages_trivy --with-version
 
 
 ENV SECURITY_SCANNERS="trivy"

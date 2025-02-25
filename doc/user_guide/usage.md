@@ -26,7 +26,7 @@ Then you need to prepare the virtual Python environment. In this document we use
 Using [Poetry](https://python-poetry.org/docs/), you can prepare the virtual environment with:
 ```bash
 cd script-languages-release
-poetry env use `which python3`
+poetry env use $(which python3)
 poetry install
 ```
 
@@ -37,12 +37,25 @@ If your database has internet access, you can also use [the Exa-toolbox](https:/
 
 ### How to build an existing flavor?
 
-First, you need to choose a flavor. Currently, we have several pre-defined flavors available, e.g., `standard-EXASOL-all`.
-This project supports different versions of script language environments with different libraries and languages.
-We call these versions _flavors_. The pre-defined flavors can be modified and extended to create customized flavors.
-Each pre-defined flavor has its own set of Dockerfiles in a corresponding sub-directory of [flavors](../../flavors). 
+This project supports different versions of script language environments with different libraries and languages. We call these versions _flavors_.
+Each pre-defined flavor has its own set of Dockerfiles in a corresponding sub-directory of [flavors](../../flavors).
+
+Currently, there are two kinds of flavors:
+- Standard flavors. 
+- Template flavors. 
+
+#### Standard Flavors
+ 
+e.g., `standard-EXASOL-all`. These flavors come with a predefined set of packages and are integrated to the Exasol DB as preinstalled Script-Languages-Container. These flavors are not intended to be used for customization.
+
+#### Template flavors
+ 
+e.g. `template-Exasol-all-python-3.10`. These flavors have a minimal set of packages and are intended to use for customization. They can be modified and extended to create customized flavors.
+
 
 **For more details about the flavors please checkout their [documentation](../../flavors/README.md).**
+
+#### Export a flavor
 
 Create the language container and export it to the local file system
 

@@ -10,7 +10,7 @@ You can use this repository with Python and Docker on the command line, see [Usi
 
 ### Ai-Lab
 
-For a more simple setup, Exasol provides the [AI-Lab](https://github.com/exasol/ai-lab), which allows you to build Script-Languages-Containers in a prepared Virtual-Machine or Docker container.
+For a more simple setup, Exasol provides the [AI-Lab](https://github.com/exasol/ai-lab), which allows you to build Script-Languages-Containers in a prepared Virtual-Machine or Docker container with Jupyter Notebook.
 
 ## Selected topics
 

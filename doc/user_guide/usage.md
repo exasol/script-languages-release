@@ -50,7 +50,7 @@ e.g., `standard-EXASOL-all`. These flavors come with a predefined set of package
 
 #### Template flavors
  
-e.g. `template-Exasol-all-python-3.10`. These flavors have a minimal set of packages and are intended to use for customization. They can be modified and extended to create customized flavors.
+e.g. `template-Exasol-all-python-3.10`. These flavors have a minimal set of packages and are intended to be used for customization. They can be modified and extended to create customized flavors. See the [section below](#How-to-customize-an-existing-flavor) for details.
 
 
 **For more details about the flavors please checkout their [documentation](../../flavors/README.md).**

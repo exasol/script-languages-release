@@ -31,4 +31,4 @@ This release uses version 2.0.0 of the container tool.
 
 ## Doc
 
- n/a
+  - #1079: Updated user guide

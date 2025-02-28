@@ -20,6 +20,7 @@ This release uses version 2.0.0 of the container tool.
 
  - #1068: Updated Dependencies on top of 9.2.0 
  - #1075: Updated Dependencies on top of 9.2.0
+ - #1085: Updated Dependencies on top of 9.2.0
 
 ## Refactorings
 

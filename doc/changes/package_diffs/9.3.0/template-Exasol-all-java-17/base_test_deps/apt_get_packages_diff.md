@@ -2,7 +2,7 @@
 
 |    | Package   | Version in 9.2.0      | Version in 9.3.0      | Status   |
 |---:|:----------|:----------------------|:----------------------|:---------|
-|  0 | binutils  | 2.38-4ubuntu2.6       | 2.38-4ubuntu2.6       |          |
+|  0 | binutils  | 2.38-4ubuntu2.6       | 2.38-4ubuntu2.7       | UPDATED  |
 |  1 | chrpath   | 0.16-2                | 0.16-2                |          |
 |  2 | gdb       | 12.1-0ubuntu1~22.04.2 | 12.1-0ubuntu1~22.04.2 |          |
 |  3 | gdbserver | 12.1-0ubuntu1~22.04.2 | 12.1-0ubuntu1~22.04.2 |          |

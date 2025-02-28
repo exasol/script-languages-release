@@ -5,10 +5,8 @@ We are using the [script-languages-container-tool](https://github.com/exasol/scr
 
 Minimum requirements are:
 
-* bash
-  * on Linux >= 4.2
-  * on MacOsX >= 3.2 (Please see limitations on [MacOsX](#macosx-limitations))
 * Docker >= 17.05
+* Python >= 3.10
 
 #### Docker access
 
@@ -24,6 +22,14 @@ git clone --recurse-submodules https://github.com/exasol/script-languages-releas
 
 Note: The option --recurse-submodules clones the submodule [script-languages](https://github.com/exasol/script-languages)
 
+Then you need to prepare the virtual Python environment. In this document we use Poetry, but you could use any other Python virtual environment tool. 
+Using [Poetry](https://python-poetry.org/docs/), you can prepare the virtual environment with:
+```bash
+cd script-languages-release
+poetry env use $(which python3)
+poetry install
+```
+
 ### How to upload prebuilt containers
 
 Please see the [official Exasol documentation](https://docs.exasol.com/db/latest/database_concepts/udf_scripts/adding_new_packages_script_languages.htm?Highlight=container) about how to upload prebuilt containers to BucketFS.
@@ -31,23 +37,36 @@ If your database has internet access, you can also use [the Exa-toolbox](https:/
 
 ### How to build an existing flavor?
 
-First, you need to choose a flavor. Currently, we have several pre-defined flavors available, e.g., `standard-EXASOL-6.2.0`.
-This project supports different versions of script language environments with different libraries and languages.
-We call these versions _flavors_. The pre-defined flavors can be modified and extended to create customized flavors.
-Each pre-defined flavor has its own set of Dockerfiles in a corresponding sub-directory of [flavors](../../flavors). 
+This project supports different versions of script language environments with different libraries and languages. We call these versions _flavors_.
+Each pre-defined flavor has its own set of Dockerfiles in a corresponding sub-directory of [flavors](../../flavors).
+
+Currently, there are two kinds of flavors:
+- Standard flavors. 
+- Template flavors. 
+
+#### Standard Flavors
+ 
+e.g., `standard-EXASOL-all`. These flavors come with a predefined set of packages and are integrated to the Exasol DB as preinstalled Script-Languages-Container. These flavors are not intended to be used for customization.
+
+#### Template flavors
+ 
+e.g. `template-Exasol-all-python-3.10`. These flavors have a minimal set of packages and are intended to be used for customization. They can be modified and extended to create customized flavors. See the [section below](#How-to-customize-an-existing-flavor) for details.
+
 
 **For more details about the flavors please checkout their [documentation](../../flavors/README.md).**
+
+#### Export a flavor
 
 Create the language container and export it to the local file system
 
 ```bash
-./exaslct export --flavor-path=flavors/<flavor-name> --export-path <export-path>
+poetry run exaslct export --flavor-path=flavors/<flavor-name> --export-path <export-path>
 ```
 
 or upload it directly into your BucketFS (currently http only, https follows soon)
 
 ```bash
-./exaslct upload --flavor-path=flavors/<flavor-name> --database-host <hostname-or-ip> --bucketfs-port <port> \ 
+poetry run exaslct upload --flavor-path=flavors/<flavor-name> --database-host <hostname-or-ip> --bucketfs-port <port> \ 
                    --bucketfs-username w --bucketfs-password <password>  --bucketfs-name <bucketfs-name> \
                    --bucket-name <bucket-name> --path-in-bucket <path/in/bucket>
 ```
@@ -60,7 +79,7 @@ that can be used to activate the script language container in the database.
 If you uploaded a container manually, you can generate the language activation statement with
 
 ```bash
-./exaslct generate-language-activation --flavor-path=flavors/<flavor-name> --bucketfs-name <bucketfs-name> \
+poetry run exaslct generate-language-activation --flavor-path=flavors/<flavor-name> --bucketfs-name <bucketfs-name> \
                                          --bucket-name <bucket-name> --path-in-bucket <path/in/bucket> --container-name <container-name>
 ```
 
@@ -92,13 +111,13 @@ which are necessary for the script client they will be restored in the final con
 After you finished your changes, rebuild with 
 
 ```bash
-./exaslct export --flavor-path=flavors/<flavor-name>
+poetry run exaslct export --flavor-path=flavors/<flavor-name>
 ```
 
 or upload it directly into your BucketFS (currently http only, https follows soon)
 
 ```bash
-./exaslct upload --flavor-path=flavors/<flavor-name> --database-host <hostname-or-ip> --bucketfs-port <port> \ 
+poetry run exaslct upload --flavor-path=flavors/<flavor-name> --database-host <hostname-or-ip> --bucketfs-port <port> \ 
                    --bucketfs-username w --bucketfs-password <password>  --bucketfs-name <bucketfs-name> \
                    --bucket-name <bucket-name> --path-in-bucket <path/in/bucket>
 ```
@@ -112,24 +131,24 @@ Note: The tool `exaslct` tries to reuse as much as possible of the previous buil
 
 This repository contains several integration tests which can be executed on the specific flavor using the `exaslct` tool:
 ```bash
-./exaslct run-db-test --flavor-path=flavors/<flavor-name>
+poetry run exaslct run-db-test --flavor-path=flavors/<flavor-name>
 ```
 
 It is also possible to run the tests for a specific docker-db version, for example:
 ```bash
-./exaslct run-db-test --flavor-path=flavors/<flavor-name> --docker-db-image-version 7.1.10
+poetry run exaslct run-db-test --flavor-path=flavors/<flavor-name> --docker-db-image-version 7.1.10
 ```
 
 Also, you can use an existing database instance for the execution of the tests:
 ```bash
-./exaslct run-db-test --flavor-path=flavors/<flavor-name> --environment-type external_db --external-exasol-db-host <database host> --external-exasol-db-port <database port> --external-exasol-bucketfs-port <BucketFS port> --external-exasol-db-user <database user>  --external-exasol-db-password <database password> --external-exasol-bucketfs-write-password <BucketFS password>   
+poetry run exaslct run-db-test --flavor-path=flavors/<flavor-name> --environment-type external_db --external-exasol-db-host <database host> --external-exasol-db-port <database port> --external-exasol-bucketfs-port <BucketFS port> --external-exasol-db-user <database user>  --external-exasol-db-password <database password> --external-exasol-bucketfs-write-password <BucketFS password>   
 ```
 The `exaslct` tool will upload your script languages container to the BucketFS on the database instance, configure the container and automatically execute the tests.
 
 Please note that each flavor contains a configuration file for the tests under `flavors/<flavor>/flavor-base/testconfig`. This file describes the programming languages and folders which should be used for the test execution. You can customize the used folder using the `--test-folder` or `--test-file` parameter.
 For a full list of options please check:
 ```bash
-./exaslct run-db-test --help   
+poetry run exaslct run-db-test --help   
 ```
 
 ### MacOsX Limitations

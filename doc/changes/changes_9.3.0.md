@@ -15,6 +15,7 @@ This release uses version 2.0.0 of the container tool.
 ## Features
 
   - #1078: Created Java Standard SLC
+  - #1072: Created Python Standard SLC 
 
 ## Security Issues
 

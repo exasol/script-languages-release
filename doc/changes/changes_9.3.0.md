@@ -14,12 +14,15 @@ This release uses version 2.0.0 of the container tool.
 
 ## Features
 
+  - #1078: Created Java Standard SLC
+  - #1072: Created Python Standard SLC 
   - #1076: Added R Standard SLC Flavor
 
 ## Security Issues
 
  - #1068: Updated Dependencies on top of 9.2.0 
  - #1075: Updated Dependencies on top of 9.2.0
+ - #1085: Updated Dependencies on top of 9.2.0
 
 ## Refactorings
 
@@ -31,4 +34,4 @@ This release uses version 2.0.0 of the container tool.
 
 ## Doc
 
- n/a
+  - #1079: Updated user guide

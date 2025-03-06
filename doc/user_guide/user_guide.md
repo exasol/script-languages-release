@@ -1,8 +1,19 @@
 # User Guide
 
-## Table of Content
+## Usage
 
-- [Using this Repository](usage.md)
+If you want to build Exasol Script-Languages-Container, you have two options:
+
+### Exaslct
+
+You can use this repository with Python and Docker on the command line, see [Using this Repository](usage.md) for details.
+
+### Ai-Lab
+
+For a more simple setup, Exasol provides the [AI-Lab](https://github.com/exasol/ai-lab), which allows you to build Script-Languages-Containers in a prepared Virtual-Machine or Docker container with Jupyter Notebook.
+
+## Selected topics
+
 - [Python Dataframe Support](py_dataframe.md)
 - [Using Vagrant as development environment](vagrant.md)
 - [FAQ](FAQ.md)

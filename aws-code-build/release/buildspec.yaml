@@ -27,6 +27,13 @@ batch:
         compute-type: BUILD_GENERAL1_MEDIUM
         privileged-mode: true
       buildspec: ./aws-code-build/release/build_buildspec.yaml
+    - identifier: build_standard_EXASOL_all_r_44
+      env:
+        variables:
+          FLAVOR: standard-EXASOL-all-r-4.4
+        compute-type: BUILD_GENERAL1_MEDIUM
+        privileged-mode: true
+      buildspec: ./aws-code-build/release/build_buildspec.yaml
     - identifier: build_template_Exasol_8_python_310_cuda_conda
       env:
         variables:

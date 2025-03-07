@@ -1,0 +1,15 @@
+
+{
+  "schema_version": 2,
+  "language_definitions": [
+    {
+      "protocol": "localzmq+protobuf",
+      "aliases": ["R", "R44"],
+      "parameters": [{"key": "lang", "value": "r"}],
+      "udf_client_path": {
+        "executable": "/exaudf/exaudfclient"
+      },
+      "deprecation": null
+    }
+  ]
+}

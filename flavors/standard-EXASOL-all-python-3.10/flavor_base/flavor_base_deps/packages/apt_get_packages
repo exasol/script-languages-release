@@ -9,3 +9,4 @@ ldap-utils|2.5.18+dfsg-0ubuntu0.22.04.3
 libsmbclient|2:4.15.13+dfsg-0ubuntu1.6
 libsmbclient-dev|2:4.15.13+dfsg-0ubuntu1.6
 smbclient|2:4.15.13+dfsg-0ubuntu1.6
+libgomp1|12.3.0-1ubuntu1~22.04

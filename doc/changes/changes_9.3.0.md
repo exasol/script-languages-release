@@ -17,6 +17,7 @@ This release uses version 2.0.0 of the container tool.
   - #1078: Created Java Standard SLC
   - #1072: Created Python Standard SLC 
   - #1076: Added R Standard SLC Flavor
+  - #1089: Optionally install build-essential during installation of Python packages
 
 ## Security Issues
 

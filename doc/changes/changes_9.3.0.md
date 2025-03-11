@@ -1,10 +1,15 @@
-# script-languages-release 9.3.0, released t.b.d.
+# script-languages-release 9.3.0, released 2025-03-11
 
-Code name: t.b.d.
+Code name: Split up standard flavors.
 
 ## Summary
 
-t.b.d. 
+This release provides additionally a standard script languages container per supported language:
+- standard-EXASOL-all-java-11
+- standard-EXASOL-all-python-3.10
+- standard-EXASOL-all-r-4.4
+
+Besides, it provides dependency updates for all flavors.
 
 ## [Package Version Comparison between Release 9.2.0 and 9.3.0](package_diffs/9.3.0/README.md)
 

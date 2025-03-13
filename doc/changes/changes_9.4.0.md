@@ -10,7 +10,7 @@ t.b.d.
 
 ## Script-Language-Container-Tool (Exaslct)
 
-This release uses version 2.0.0 of the container tool.
+This release uses version 3.0.0 of the container tool.
 
 ## Features
 
@@ -22,13 +22,14 @@ n/a
 
 ## Refactorings
 
-n/a
+ - #943: Use env variable for ssl dependencies
+ - #1043: Created a nox session for running OFT
+ - Updated poetry dependencies
 
 ## Bugs
 
  - #1088: Clear bazel cache in build_run step
 
-
 ## Doc
 
-  - #1079: Updated user guide
+n/a

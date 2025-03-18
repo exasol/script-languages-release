@@ -5,7 +5,8 @@
     {
       "protocol": "localzmq+protobuf",
       "aliases": [
-        "JAVA11"
+        "JAVA",
+        "JAVA17"
       ],
       "parameters": [
         {

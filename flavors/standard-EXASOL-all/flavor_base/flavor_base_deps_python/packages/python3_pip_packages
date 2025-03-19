@@ -73,3 +73,4 @@ pysmbc|1.0.25.1
 cryptography|42.0.6
 h2|4.1.0
 cython|3.0.10
+portalocker|3.1.1

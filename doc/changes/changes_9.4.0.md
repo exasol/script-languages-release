@@ -14,7 +14,7 @@ This release uses version 3.0.0 of the container tool.
 
 ## Features
 
-n/a
+ - Replaced flavor `template-Exasol-all-java-17` with `standard-EXASOL-all-java-17`
 
 ## Security Issues
 

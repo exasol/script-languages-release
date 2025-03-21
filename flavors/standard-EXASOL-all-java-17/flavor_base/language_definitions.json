@@ -12,6 +12,10 @@
         {
           "key": "lang",
           "value": "java"
+        },
+        {
+          "key": "scriptOptionsParserVersion",
+          "value": "2"
         }
       ],
       "udf_client_path": {

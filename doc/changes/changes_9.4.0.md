@@ -15,6 +15,7 @@ This release uses version 3.0.0 of the container tool.
 ## Features
 
  - Replaced flavor `template-Exasol-all-java-17` with `standard-EXASOL-all-java-17`
+ - #1098: Allow setting script-options-parser version via cli argument
 
 ## Security Issues
 

@@ -1,10 +1,10 @@
-# script-languages-release 9.4.0, released t.b.d.
+# script-languages-release 9.4.0, released 2025-03-24
 
-Code name: t.b.d.
+Code name: Java 17 standard flavor.
 
 ## Summary
 
-t.b.d. 
+This release adds the Java 17 standard flavor, which is a replacement of the Java 17 template flavor. Furthermore, the udf client accepts a new argument for the script options parser version for Java. `exaslct` was updated to version 3.0.0. Besides, the release provides several dependency updates and internal improvements.
 
 ## [Package Version Comparison between Release 9.3.0 and 9.4.0](package_diffs/9.4.0/README.md)
 

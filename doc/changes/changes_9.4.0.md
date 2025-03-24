@@ -26,6 +26,7 @@ n/a
  - #943: Use env variable for ssl dependencies
  - #1043: Created a nox session for running OFT
  - Updated poetry dependencies
+ - #1100: Ignore python module setuptools.command.bdist_wheel in import test 
 
 ## Bugs
 

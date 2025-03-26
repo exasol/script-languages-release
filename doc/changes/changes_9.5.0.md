@@ -1,4 +1,4 @@
-# script-languages-release 9.4.0, released t.b.d.
+# script-languages-release 9.5.0, released t.b.d.
 
 Code name: t.b.d.
 

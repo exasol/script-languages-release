@@ -23,6 +23,7 @@ n/a
 ## Refactorings
 
  - #1101: Remove setuptools.command.bdist_wheel from ignore list in import test
+ - #1107: Updated Poetry to 2.1.2
 
 ## Bugs
 

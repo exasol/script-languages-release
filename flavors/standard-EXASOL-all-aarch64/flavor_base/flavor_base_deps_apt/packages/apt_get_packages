@@ -1,0 +1,23 @@
+unzip|6.0-26ubuntu3.2
+git|1:2.34.1-1ubuntu1.12
+libcurl4-openssl-dev|7.81.0-1ubuntu1.20
+build-essential|12.9ubuntu3
+wget|1.21.2-2ubuntu1.1
+maven|3.6.3-5
+libldb2|2:2.4.4-0ubuntu0.22.04.2
+libleveldb1d|1.23-3build1
+libleveldb-dev|1.23-3build1
+openssl|3.0.2-0ubuntu1.19
+libldap2-dev|2.5.18+dfsg-0ubuntu0.22.04.3
+libsasl2-dev|2.1.27+dfsg2-3ubuntu1.2 # Needed by python-ldap
+slapd|2.5.18+dfsg-0ubuntu0.22.04.3
+ldap-utils|2.5.18+dfsg-0ubuntu0.22.04.3
+unixodbc-dev|2.3.9-5ubuntu0.1
+libxml2-dev|2.9.13+dfsg-1ubuntu0.6
+apt-transport-https|2.4.13
+gnupg|2.2.27-3ubuntu2.1
+libhiredis-dev|0.14.1-2
+libsmbclient|2:4.15.13+dfsg-0ubuntu1.6
+libsmbclient-dev|2:4.15.13+dfsg-0ubuntu1.6
+smbclient|2:4.15.13+dfsg-0ubuntu1.6
+cmake|3.22.1-1ubuntu1.22.04.2

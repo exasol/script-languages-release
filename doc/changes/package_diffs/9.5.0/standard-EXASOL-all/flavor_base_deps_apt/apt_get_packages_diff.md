@@ -2,11 +2,11 @@
 
 |    | Package              | Version in 9.4.0             | Version in 9.5.0             | Status   |
 |---:|:---------------------|:-----------------------------|:-----------------------------|:---------|
-|  0 | apt-transport-https  | 2.4.13                       | 2.4.13                       |          |
-|  1 | build-essential      | 12.9ubuntu3                  | 12.9ubuntu3                  |          |
-|  2 | cmake                | 3.22.1-1ubuntu1.22.04.2      | 3.22.1-1ubuntu1.22.04.2      |          |
-|  3 | git                  | 1:2.34.1-1ubuntu1.12         | 1:2.34.1-1ubuntu1.12         |          |
-|  4 | gnupg                | 2.2.27-3ubuntu2.1            | 2.2.27-3ubuntu2.1            |          |
+|  0 | gnupg                | 2.2.27-3ubuntu2.1            | 2.2.27-3ubuntu2.3            | UPDATED  |
+|  1 | apt-transport-https  | 2.4.13                       | 2.4.13                       |          |
+|  2 | build-essential      | 12.9ubuntu3                  | 12.9ubuntu3                  |          |
+|  3 | cmake                | 3.22.1-1ubuntu1.22.04.2      | 3.22.1-1ubuntu1.22.04.2      |          |
+|  4 | git                  | 1:2.34.1-1ubuntu1.12         | 1:2.34.1-1ubuntu1.12         |          |
 |  5 | ldap-utils           | 2.5.18+dfsg-0ubuntu0.22.04.3 | 2.5.18+dfsg-0ubuntu0.22.04.3 |          |
 |  6 | libcurl4-openssl-dev | 7.81.0-1ubuntu1.20           | 7.81.0-1ubuntu1.20           |          |
 |  7 | libhiredis-dev       | 0.14.1-2                     | 0.14.1-2                     |          |

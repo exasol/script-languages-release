@@ -19,6 +19,7 @@ n/a
 ## Security Issues
 
  - #1104: Updated Dependencies on top of 9.4.0
+ - #1110: Updated Dependencies on top of 9.4.0
 
 ## Refactorings
 

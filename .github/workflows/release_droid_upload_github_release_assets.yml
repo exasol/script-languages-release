@@ -22,7 +22,7 @@ jobs:
         uses: exasol/python-toolbox/.github/actions/python-environment@0.12.0
         with:
           python-version: "3.10"
-          poetry-version: '1.8.2'
+          poetry-version: '2.1.2'
 
       - name: Start release
         run: poetry run python -m exasol_script_languages_container_ci_setup.main start-release-build --log-level info --project "ScriptLanguagesRelease" --upload-url "${{ github.event.inputs.upload_url }}" --branch "$GITHUB_REF"

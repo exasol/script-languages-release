@@ -4,7 +4,7 @@ Code name: Copy Language Definition JSON into CUDA Test Flavor
 
 ## Summary
 
-This fixes `language_definitions.json` to the CUDA Test flavor.
+This hotfix release fixes the `language_definitions.json` in the CUDA Test flavor.
 
 ## [Package Version Comparison between Release 9.5.0 and 9.1.0](package_diffs/9.4.0/README.md)
 

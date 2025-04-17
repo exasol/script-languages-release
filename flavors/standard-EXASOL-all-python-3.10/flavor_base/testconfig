@@ -1,2 +1,2 @@
 generic_language_tests=python3
-test_folders=python3/all python3/external_modules python3-no-python2 standard-flavor/all/python standard-flavor/7.1/python standard-flavor/8.0/python pandas/all pandas/pandas2
+test_folders=python3/all python3/external_modules python3-no-python2 standard-flavor/all/python standard-flavor/7.1/python standard-flavor/8.0/python pandas/all pandas/pandas2 standard-flavor/setup

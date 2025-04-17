@@ -1,2 +1,2 @@
 generic_language_tests=r
-test_folders=r standard-flavor/all/r standard-flavor/8.0/r
+test_folders=r standard-flavor/all/r standard-flavor/8.0/r standard-flavor/setup

@@ -19,6 +19,7 @@ n/a
 ## Security Issues
 
  - #1122: Updated pytorch in test-Exasol-8-cuda-ml (fixes CVE-2025-32434)
+ - #1124: Updated Dependencies on top of 9.5.1
 
 ## Refactorings
 

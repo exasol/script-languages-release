@@ -1,6 +1,6 @@
 [project]
 name = "exasol-script-languages-release"
-version = "9.5.1"
+version = "9.5.2"
 description = "Script Languages Release"
 
 license = "MIT"

@@ -18,7 +18,7 @@ n/a
 
 ## Security Issues
 
- - relocked poetry dependencies to fix CVE-2025-43859 (transitive dependency h11)
+ - #1128: Updated dependencies on top of 9.5.2
 
 ## Refactorings
 
@@ -32,3 +32,6 @@ n/a
 
 n/a
 
+## Internal
+
+ - relocked poetry dependencies to fix CVE-2025-43859 (transitive dependency h11)

@@ -19,6 +19,7 @@ n/a
 ## Security Issues
 
  - #1128: Updated dependencies on top of 9.5.2
+ - #1130: Update dependencies
 
 ## Refactorings
 

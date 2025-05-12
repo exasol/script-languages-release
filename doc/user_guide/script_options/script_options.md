@@ -61,7 +61,8 @@ The same way, if required, it is possible to switch back to the v1 parser implem
 %env SCRIPT_OPTIONS_PARSER_VERSION=1;
 ```
 
-This might be useful if existing UDFs encounter unexpected problems with the new Script-Options parser implementation. However, we recommend fixing those problems as the v1 parser implementation will be removed at some point in the future.
+This might be useful if existing UDFs encounter unexpected problems with the new Script-Options parser implementation. However, we recommend fixing those problems as the v1 parser implementation will be removed at some point in the future. Please check the migration guide for updating your UDF's to the new parser:
+[Migration Guide](./migrations_guide.md)
 
 ## Additional Resources
 

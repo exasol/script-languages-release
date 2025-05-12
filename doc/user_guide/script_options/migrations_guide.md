@@ -45,22 +45,9 @@ Welcome to the migration guide for transitioning your User Defined Functions (UD
 4. **Multiple Options**:
    - Adjust handling for merging multiple options with the same key and different values.
 
-5. **Java-specific Changes**:
-   - **%scriptclass**: Ensure removal of all occurrences in your Java code.
-   - **%jar Options**: Update logic to maintain order.
-   - **%import**: Change handling to remove `%scriptclass` and manage imports correctly.
-
 #### Step 4: Testing and Verification
 
 - Conduct thorough testing to ensure script options are parsed correctly. Pay attention to exception handling for unknown options.
 
-#### Step 5: Update Your Projects
-
-- Make necessary modifications in your open-source or closed-source projects to accommodate the new parser library, ensuring compatibility across environments.
-
-### Additional Resources
-
-- For internal details, visit the [Exasol internal Confluence](https://exasol.atlassian.net/wiki).
-- If you have any issues or need further assistance, please contact the ITM ServiceDesk by opening a ticket [here](https://exasol.atlassian.net/servicedesk/customer/portals).
 
 By following these steps, you should be able to smoothly migrate your UDF scripts from Script Options V1 to V2. Enjoy the enhanced functionality and improved script management!

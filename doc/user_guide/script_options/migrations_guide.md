@@ -4,25 +4,15 @@ Welcome to the migration guide for transitioning your User Defined Functions (UD
 
 #### Step 1: Understanding Key Differences
 
-- **White Spaces Handling**:
-  - V1: All white spaces between the option key and value are treated as separators; trailing spaces are removed.
-  - V2: White spaces between the option key and value are ignored; escape sequences at the start are recognized.
+| Feature                  | v1                                                                                                           | v2                                                                                                                              | Action                                                                     | 
+|--------------------------|--------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------| 
+| White space handling     | All white spaces between the option key and value are treated as separators; trailing spaces are removed.    | All white spaces between the option key and value are treated as separators; trailing spaces are kept, except for `jar` option. | Check for trailing white spaces in script options and remove if necessary. |
+| Unknown Options Behavior | Unknown options remain in the script and might cause Java compiler errors.                                   | Unknown options cause the parser to throw an exception.                                                                         | n/a                                                                        |
+| `%scriptclass`           | Only the first occurrence is removed; other instances remain (and probably will cause a Java compiler error) | The parser throws an error if there is more than one `scriptclass` option.                                                      | n/a                                                                        |
+| `%jar`                   | Duplicates are unified and sorted alphabetically.                                                            | Duplicates are kept, and the order is preserved.                                                                                | Check if the order of %jar statements is important.                        |
+| `%import`                | `%scriptclass` is ignored but not removed; already imported scripts are not re-imported.                     | `%scriptclass` is removed; same logic for removal of already imported scripts.                                                  | n/a                                                                        |
+| `%jvm`                   | White space is interpreted as separator between JVM options.                                                 | White space is interpreted as separator between JVM options. But it is possible to encode white spaces with escape sequence.    | Use escape sequences for JVM options where you need white spaces.          |
 
-- **Unknown Options Behavior**:
-  - V1: Unknown options remain in the script and are handled by the Java compiler.
-  - V2: Unknown options cause the parser to throw an exception.
-
-- **%scriptclass Option Handling**:
-  - V1: Only the first occurrence is removed; other instances remain.
-  - V2: All occurrences are removed.
-
-- **%jar Option Handling**:
-  - V1: Duplicates are unified and sorted alphabetically.
-  - V2: Duplicates are kept, and the order is preserved.
-
-- **%import Option Handling**:
-  - V1: `%scriptclass` is ignored but not removed; already imported scripts are not re-imported.
-  - V2: `%scriptclass` is removed; same logic for removal of already imported scripts.
 
 #### Step 2: Preparing Your Environment
 

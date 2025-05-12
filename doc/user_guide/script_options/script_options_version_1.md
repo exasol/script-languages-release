@@ -16,19 +16,9 @@ This documentation describes the detailed behavior of the Script-Options Parser 
 
 Only the known script options will be removed from the UDF source code during execution. Unknown script options will be kept, which might result in unexpected Java compilation errors.
 
-### %scriptclass Option
+### Trailing white spaces in option values
 
-Only the first occurrence of the `%scriptclass` option will be removed. If there is more than one occurrence, it will cause a compile error.
-
-### %jar Option
-
-#### Duplicates
-
-The implementation removes duplicates of the `%jar` option and reorders them alphabetically.
-
-#### Trailing White Spaces
-
-Trailing white spaces for JAR option values will be removed.
+Trailing white spaces for all option values will be removed.
 
 ```
 %jar abc.jar   ;
@@ -36,7 +26,18 @@ Trailing white spaces for JAR option values will be removed.
 
 becomes `abc.jar`.
 
-### %jvmoption Option
+### `%scriptclass` Option
+
+Only the first occurrence of the `%scriptclass` option will be removed. If there is more than one occurrence, it will cause a compile error.
+
+### `%jar` Option
+
+#### Duplicates
+
+The implementation removes duplicates of the `%jar` option and reorders them alphabetically.
+
+
+### `%jvmoption` Option
 
 White spaces in the JVM option value will be handled as separators. For example:
 

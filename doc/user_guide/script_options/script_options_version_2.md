@@ -44,11 +44,21 @@ becomes `abc def`.
 
 Unknown script options will be detected and will cause an explicit error.
 
-### %scriptclass Option
+### Trailing white spaces in option values
+
+Trailing white spaces for most option values will not be removed. Only exception is the `%jar` option, see below for details.
+
+```
+%jvmoption abcdef   ;
+```
+
+becomes `abcdef   `.
+
+### `%scriptclass` Option
 
 Only the first occurrence of the `%scriptclass` option will be used; all other occurrences will be removed.
 
-### %jar Option
+### `%jar` Option
 
 #### Duplicates
 
@@ -70,7 +80,7 @@ However, it is possible to use escape sequences to add JAR files containing whit
 ```
 becomes `abc.jar `.
 
-### %jvmoption Option
+### `%jvmoption` Option
 
 It is possible to use escape sequences to encode whitespace characters in JVM options. For example:
 

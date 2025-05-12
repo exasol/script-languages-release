@@ -31,7 +31,7 @@ n/a
 
 ## Doc
 
-n/a
+ - #1120: Added Script-Options Documentation
 
 ## Internal
 

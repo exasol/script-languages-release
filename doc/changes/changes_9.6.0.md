@@ -23,7 +23,7 @@ n/a
 
 ## Refactorings
 
-n/a
+ - #1135: Use unpinned version of trivy
 
 ## Bugs
 

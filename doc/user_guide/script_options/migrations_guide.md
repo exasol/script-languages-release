@@ -20,20 +20,15 @@ Welcome to the migration guide for transitioning your User Defined Functions (UD
   - Database Administrators: Oversee execution and configuration.
   - Data Scientists and Developers: Adapt script implementations to new parser features.
 
+Both roles will need to cooperate: While the Data Scientist/Developer will have to modify the UDF scripts, the Database Administrator will have to deploy the updated scripts.
+
 #### Step 3: Modifying Your UDF Scripts
 
-1. **General Script Options Syntax**:
-   - Ensure options are formatted correctly using the `%<optionKey><white spaces><optionValue>;` syntax.
-
-2. **White Spaces**:
-   - Update scripts to handle white spaces according to V2 rules:
-      - Use escape sequences (`\ `, `\t`, `\f`, `\v`) where needed.
-
-3. **Escape Sequences**:
-   - Incorporate escape sequences like `\n`, `\r`, `\;` within script option values.
-
-4. **Multiple Options**:
-   - Adjust handling for merging multiple options with the same key and different values.
+1. Ensure options are formatted correctly using the `%<optionKey><white spaces><optionValue>;` syntax.
+2. Incorporate escape sequences like `\ `, `\t`, `\f`, `\v`, `\n`, `\r`, `\;` within script option values, where needed.
+3. Validate that there are no script options for Java UDF other than `scriptclass`, `jvmoption`, `import` and `jar`.
+4. Verify order of your `jar` options.
+5. Validate that there is only one `scriptclass` option per UDF.
 
 #### Step 4: Testing and Verification
 

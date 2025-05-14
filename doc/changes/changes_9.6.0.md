@@ -32,6 +32,7 @@ n/a
 ## Doc
 
  - #1120: Added Script-Options Documentation
+ - #1139: Fixed minor changes in script options docu
 
 ## Internal
 

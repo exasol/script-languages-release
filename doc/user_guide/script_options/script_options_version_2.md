@@ -36,7 +36,7 @@ becomes `    abc;def`.
 Note that whitespace characters in the middle of a value do not require escape sequences. For example:
 
 ```
-%jvmoption abc def;
+%jar abc def;
 ```
 becomes `abc def`.
 
@@ -82,9 +82,10 @@ becomes `abc.jar `.
 
 ### `%jvmoption` Option
 
-It is possible to use escape sequences to encode whitespace characters in JVM options. For example:
+It is possible to use escape sequences to encode whitespace characters in JVM options. Backslashes can be needs to be escaped, too: `\\`.
+For example:
 
 ```
-%jvmoption optionA=abc\ optionB=def;
+%jvmoption optionA=abc\ def optionB=ghi\\j;
 ```
-becomes `optionA=abc optionB=def`
+becomes [`optionA=abc def`, `ghj\j`]

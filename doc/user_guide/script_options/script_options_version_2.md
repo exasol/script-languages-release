@@ -82,7 +82,7 @@ becomes `abc.jar `.
 
 ### `%jvmoption` Option
 
-It is possible to use escape sequences to encode whitespace characters in JVM options. Backslashes needs to be escaped, too: `\\`.
+It is possible to use escape sequences to encode whitespace characters in JVM options. Backslashes need to be escaped, too: `\\`.
 For example:
 
 ```

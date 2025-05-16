@@ -20,6 +20,7 @@ n/a
 
  - #1128: Updated dependencies on top of 9.5.2
  - #1130: Update dependencies
+ - #1141: Updated Dependencies on top of 9.5.2
 
 ## Refactorings
 
@@ -32,6 +33,7 @@ n/a
 ## Doc
 
  - #1120: Added Script-Options Documentation
+ - #1139: Fixed minor changes in script options docu
 
 ## Internal
 

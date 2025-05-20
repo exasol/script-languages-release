@@ -21,10 +21,12 @@ n/a
  - #1128: Updated dependencies on top of 9.5.2
  - #1130: Update dependencies
  - #1141: Updated Dependencies on top of 9.5.2
+ - #1145: Ignored CVE-2025-47273 on flavor `test-Exasol-8-cuda-ml`
 
 ## Refactorings
 
  - #1135: Use unpinned version of trivy
+ - #1147: Removed unnecessary copy statements
 
 ## Bugs
 

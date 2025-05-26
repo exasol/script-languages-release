@@ -27,6 +27,7 @@ n/a
 
  - #1135: Use unpinned version of trivy
  - #1147: Removed unnecessary copy statements
+ - #1132: Use headless openjdk for all build buildsteps
 
 ## Bugs
 

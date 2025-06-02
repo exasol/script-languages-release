@@ -13,7 +13,7 @@ slapd|2.5.19+dfsg-0ubuntu0.22.04.1
 ldap-utils|2.5.19+dfsg-0ubuntu0.22.04.1
 unixodbc-dev|2.3.9-5ubuntu0.1
 libxml2-dev|2.9.13+dfsg-1ubuntu0.7
-apt-transport-https|2.4.13
+apt-transport-https|2.4.14
 gnupg|2.2.27-3ubuntu2.3
 libhiredis-dev|0.14.1-2
 libsmbclient|2:4.15.13+dfsg-0ubuntu1.6

@@ -12,5 +12,5 @@ echo "Searching for duplicated error codes in repository (pre-commit hook)"
 bash find_duplicate_error_codes.sh
 bash "$GITHOOKS_PATH/update_current_submodules_file.sh"
 #poetry run -- nox -s update-ci-github-workflows
-poetry run -- nox -s update-ci-github-workflows
+poetry run -- nox -s update-cd-github-workflows
 popd

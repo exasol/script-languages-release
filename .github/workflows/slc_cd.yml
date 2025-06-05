@@ -1,0 +1,94 @@
+# ---- AUTOMATICALLY GENERATED FILE ----
+# ---- DO NOT EDIT MANUALLY, BUT USE PYTHON MODULE "exasol.slc_ci_setup" ----
+# ---- from https://github.com/exasol/script-languages-container-ci-setup TO UPDATE ----
+
+
+name: SLC-CD
+
+on:
+  push:
+    tags:
+      - '**'
+
+env:
+  RELEASE_NAME: "SLC-${{ github.ref_name }}"
+
+jobs:
+  prepare-test-container:
+    uses: ./.github/workflows/slc_ci_prepare_test_container.yml
+    secrets: inherit
+
+  get-flavors:
+    needs: prepare-test-container
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python & Poetry Environment
+        uses: exasol/python-toolbox/.github/actions/python-environment@1.2.0
+        with:
+          python-version: '3.10'
+      - id: set-matrix
+        run: poetry run -- exaslc-ci get-flavors --github-output-var matrix
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+
+  cd:
+    needs: get-flavors
+    strategy:
+      fail-fast: true
+      matrix:
+        flavor: ${{fromJson(needs.get-flavors.outputs.matrix)}}
+    uses: ./.github/workflows/slc_cd_flavor.yml
+    secrets: inherit
+    with:
+      flavor: ${{ matrix.flavor }}
+
+  release:
+    needs: cd
+    name: Create Github release
+    runs-on: ubuntu-24.04
+    steps:
+      - name: SCM Checkout
+        uses: actions/checkout@v4
+
+      - name: Download Logs
+        id: download-logs
+        uses: actions/download-artifact@v4
+        with:
+          pattern: logs_*
+          merge-multiple: false
+          path: "logs"
+
+      - name: Zip logs
+        run: zip -r logs.zip logs
+
+      - name: GitHub Release
+        run: >
+          gh release create "$RELEASE_NAME"
+          --title "SLC ${GITHUB_REF_NAME}"
+          --notes-file "./doc/changes/changes_${GITHUB_REF_NAME}.md"
+          --draft
+          logs.zip
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  upload-release-slc:
+    needs: [get-flavors, release]
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: true
+      matrix:
+        flavor: ${{fromJson(needs.get-flavors.outputs.matrix)}}
+    steps:
+      - name: SCM Checkout
+        uses: actions/checkout@v4
+      - name: Download SLC
+        id: download-slc
+        uses: actions/download-artifact@v4
+        with:
+          name: slc-${{matrix.flavor}}-release
+          path: "slc"
+      - name: Upload to release
+        run: gh release upload "$RELEASE_NAME" slc/*
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

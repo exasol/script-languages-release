@@ -1,0 +1,32 @@
+{
+  "build_runner": "ubuntu-22.04",
+  "test_config": {
+    "default_test_runner": "ubuntu-22.04",
+    "test_sets": [
+      {
+        "name": "standard",
+        "folders": ["standard-flavor/setup"],
+        "goal": "release",
+        "generic_language_tests": []
+      },
+      {
+        "name": "java",
+        "folders": ["java"],
+        "goal": "release",
+        "generic_language_tests": []
+      },
+      {
+        "name": "linker_namespace",
+        "folders": ["linker_namespace_sanity"],
+        "goal": "base_test_build_run",
+        "generic_language_tests": []
+      },
+      {
+        "name": "generic",
+        "folders": [],
+        "goal": "release",
+        "generic_language_tests": ["java"]
+      }
+    ]
+  }
+}

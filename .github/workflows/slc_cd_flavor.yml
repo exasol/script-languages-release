@@ -1,0 +1,35 @@
+# ---- AUTOMATICALLY GENERATED FILE ----
+# ---- DO NOT EDIT MANUALLY, BUT USE PYTHON MODULE "exasol.slc_ci_setup" ----
+# ---- from https://github.com/exasol/script-languages-container-ci-setup TO UPDATE ----
+
+
+name: SLC-CD-Flavor
+
+on:
+  workflow_call:
+    inputs:
+      flavor:
+          description: 'A flavor'
+          required: true
+          type: string
+    secrets:
+      DOCKER_USERNAME:
+          required: true
+      DOCKER_PASSWORD:
+          required: true
+
+jobs:
+
+  build:
+    uses: ./.github/workflows/slc_ci_build_slc.yml
+    with:
+      flavor: ${{ inputs.flavor }}
+      additional-build-arguments: '--release'
+    secrets: inherit
+
+  test:
+    needs: [build]
+    uses: ./.github/workflows/slc_ci_test_slc.yml
+    with:
+      flavor: ${{ inputs.flavor }}
+    secrets: inherit

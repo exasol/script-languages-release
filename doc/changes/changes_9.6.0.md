@@ -14,7 +14,7 @@ This release uses version 3.1.0 of the container tool.
 
 ## Features
 
-n/a
+ - #1155: Use Github workflows for CI/CD
 
 ## Security Issues
 

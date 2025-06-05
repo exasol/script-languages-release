@@ -5,7 +5,7 @@
     "test_sets": [
       {
         "name": "python",
-        "folders": ["python3", "python3/all", "python3/external_modules", "python3-no-python2"],
+        "folders": ["python3/all", "python3/external_modules", "python3-no-python2"],
         "goal": "release",
         "generic_language_tests": []
       },

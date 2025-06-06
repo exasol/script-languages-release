@@ -14,7 +14,7 @@ This release uses version 3.1.0 of the container tool.
 
 ## Features
 
-n/a
+ - #1155: Use Github workflows for CI/CD
 
 ## Security Issues
 
@@ -26,6 +26,7 @@ n/a
     * CVE-2025-47287 in transitive productive dependency `tornado` via `luigi` by updating `tornado` to version `6.5.1`
     * CVE-2025-47273 in transitive dev dependency `setuptools` via `exasol-toolbox`, `bandit`, `stevedore` by updating `setuptools` to version `80.9.0`
  - #1153: Updated Dependencies on top of 9.5.2
+ - #1158: Updated Dependencies on top of 9.5.2
 
 ## Refactorings
 

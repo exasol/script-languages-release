@@ -1,0 +1,20 @@
+{
+  "build_runner": "ubuntu-22.04",
+  "test_config": {
+    "default_test_runner": "ubuntu-22.04",
+    "test_sets": [
+      {
+        "name": "r",
+        "folders": ["r"],
+        "goal": "release",
+        "generic_language_tests": []
+      },
+      {
+        "name": "generic",
+        "folders": [],
+        "goal": "release",
+        "generic_language_tests": ["r"]
+      }
+    ]
+  }
+}

@@ -10,11 +10,12 @@ t.b.d.
 
 ## Script-Language-Container-Tool (Exaslct)
 
-This release uses version 3.1.0 of the container tool.
+This release uses version 3.3.0 of the container tool.
 
 ## Features
 
  - #1155: Use Github workflows for CI/CD
+ - #1160: Added sqlglot to Python standard flavor
 
 ## Security Issues
 

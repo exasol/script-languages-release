@@ -4,3 +4,5 @@ aws-code-build/ci/*.yaml linguist-generated=true
 aws-code-build/release/*.yaml linguist-generated=true
 .current_gitmodules linguist-generated=true
 doc/changes/package_diffs/**/*.md linguist-generated=true
+.github/workflows/slc_ci*.yml linguist-generated=true
+.github/workflows/slc_cd*.yml linguist-generated=true

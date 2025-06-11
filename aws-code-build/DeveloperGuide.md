@@ -1,1 +1,0 @@
-../script-languages/aws-code-build/DeveloperGuide.md

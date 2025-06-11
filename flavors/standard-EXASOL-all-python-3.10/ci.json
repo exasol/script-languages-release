@@ -1,0 +1,42 @@
+{
+  "build_runner": "ubuntu-22.04",
+  "test_config": {
+    "default_test_runner": "ubuntu-22.04",
+    "test_sets": [
+      {
+        "name": "python",
+        "folders": ["python3/all", "python3/external_modules", "python3-no-python2"],
+        "goal": "release",
+        "generic_language_tests": []
+      },
+      {
+        "name": "standard",
+        "folders": ["standard-flavor/all/python",
+                    "standard-flavor/7.1/python",
+                    "standard-flavor/8.0/python",
+                    "standard-flavor/setup"],
+        "goal": "release",
+        "generic_language_tests": []
+      },
+      {
+        "name": "pandas",
+        "folders": ["pandas/all", "pandas/pandas2"],
+        "goal": "release",
+        "generic_language_tests": []
+      },
+      {
+        "name": "linker_namespace",
+        "folders": ["linker_namespace_sanity"],
+        "goal": "base_test_build_run",
+        "generic_language_tests": []
+      },
+
+      {
+        "name": "generic",
+        "folders": [],
+        "goal": "release",
+        "generic_language_tests": ["python3"]
+      }
+    ]
+  }
+}

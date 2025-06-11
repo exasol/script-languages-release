@@ -16,6 +16,7 @@ This release uses version 3.3.0 of the container tool.
 
  - #1155: Use Github workflows for CI/CD
  - #1160: Added sqlglot to Python standard flavor
+ - #1157: Force GPU usage for cuda tests
 
 ## Security Issues
 

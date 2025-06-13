@@ -6,3 +6,4 @@ aws-code-build/release/*.yaml linguist-generated=true
 doc/changes/package_diffs/**/*.md linguist-generated=true
 .github/workflows/slc_ci*.yml linguist-generated=true
 .github/workflows/slc_cd*.yml linguist-generated=true
+.github/workflows/slc_nightly*.yml linguist-generated=true

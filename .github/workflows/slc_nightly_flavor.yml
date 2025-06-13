@@ -3,7 +3,7 @@
 # ---- from https://github.com/exasol/script-languages-container-ci-setup TO UPDATE ----
 
 
-name: SLC-CD-Flavor
+name: SLC-NIGHTLY-Flavor
 
 on:
   workflow_call:
@@ -24,7 +24,7 @@ jobs:
     uses: ./.github/workflows/slc_ci_build_slc.yml
     with:
       flavor: ${{ inputs.flavor }}
-      build-mode: 'release'
+      build-mode: 'rebuild'
     secrets: inherit
 
   test:

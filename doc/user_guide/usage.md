@@ -124,7 +124,7 @@ poetry run exaslct upload --flavor-path=flavors/<flavor-name> --database-host <h
 
 Note: The tool `exaslct` tries to reuse as much as possible of the previous build or tries to pull already existing images from Docker Hub.
 
-**Please, refer to the [User Guide](https://github.com/exasol/script-languages-container-tool/blob/main/doc/user_guide/user_guide.md) of the script-languages-container-tool project for more detailed information about the usage of exalsct.**
+**Please, refer to the [User Guide](https://exasol.github.io/script-languages-container-tool/main/user_guide/user_guide.html) of the script-languages-container-tool project for more detailed information about the usage of exalsct.**
 
 
 ### How to run integration tests

@@ -30,6 +30,7 @@ This release uses version 3.3.0 of the container tool.
  - #1153: Updated Dependencies on top of 9.5.2
  - #1158: Updated Dependencies on top of 9.5.2
  - #1170: Updated Dependencies on top of 9.5.2
+ - Updated slc-ci and slc-ci-setup 
 
 ## Refactorings
 

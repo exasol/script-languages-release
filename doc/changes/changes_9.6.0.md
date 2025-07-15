@@ -31,6 +31,7 @@ This release uses version 3.3.0 of the container tool.
  - #1158: Updated Dependencies on top of 9.5.2
  - #1170: Updated Dependencies on top of 9.5.2
  - Updated slc-ci and slc-ci-setup 
+ - #1180: Updated Dependencies on top of 9.6.0
 
 ## Refactorings
 
@@ -38,10 +39,11 @@ This release uses version 3.3.0 of the container tool.
  - #1147: Removed unnecessary copy statements
  - #1132: Use headless openjdk for all build buildsteps
  - #1166: Update script-languages-container-ci version
+ - #1165: Fixed GPU Template Flavor
 
 ## Bugs
 
-n/a
+ - #1181: Fixed build error for conda based flavors
 
 ## Doc
 

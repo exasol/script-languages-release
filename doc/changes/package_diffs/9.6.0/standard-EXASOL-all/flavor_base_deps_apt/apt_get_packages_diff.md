@@ -3,12 +3,12 @@
 |    | Package              | Version in 9.5.2             | Version in 9.6.0             | Status   |
 |---:|:---------------------|:-----------------------------|:-----------------------------|:---------|
 |  0 | apt-transport-https  | 2.4.13                       | 2.4.14                       | UPDATED  |
-|  1 | ldap-utils           | 2.5.18+dfsg-0ubuntu0.22.04.3 | 2.5.19+dfsg-0ubuntu0.22.04.1 | UPDATED  |
-|  2 | libldap2-dev         | 2.5.18+dfsg-0ubuntu0.22.04.3 | 2.5.19+dfsg-0ubuntu0.22.04.1 | UPDATED  |
-|  3 | slapd                | 2.5.18+dfsg-0ubuntu0.22.04.3 | 2.5.19+dfsg-0ubuntu0.22.04.1 | UPDATED  |
-|  4 | build-essential      | 12.9ubuntu3                  | 12.9ubuntu3                  |          |
-|  5 | cmake                | 3.22.1-1ubuntu1.22.04.2      | 3.22.1-1ubuntu1.22.04.2      |          |
-|  6 | git                  | 1:2.34.1-1ubuntu1.12         | 1:2.34.1-1ubuntu1.12         |          |
+|  1 | git                  | 1:2.34.1-1ubuntu1.12         | 1:2.34.1-1ubuntu1.15         | UPDATED  |
+|  2 | ldap-utils           | 2.5.18+dfsg-0ubuntu0.22.04.3 | 2.5.19+dfsg-0ubuntu0.22.04.1 | UPDATED  |
+|  3 | libldap2-dev         | 2.5.18+dfsg-0ubuntu0.22.04.3 | 2.5.19+dfsg-0ubuntu0.22.04.1 | UPDATED  |
+|  4 | slapd                | 2.5.18+dfsg-0ubuntu0.22.04.3 | 2.5.19+dfsg-0ubuntu0.22.04.1 | UPDATED  |
+|  5 | build-essential      | 12.9ubuntu3                  | 12.9ubuntu3                  |          |
+|  6 | cmake                | 3.22.1-1ubuntu1.22.04.2      | 3.22.1-1ubuntu1.22.04.2      |          |
 |  7 | gnupg                | 2.2.27-3ubuntu2.3            | 2.2.27-3ubuntu2.3            |          |
 |  8 | libcurl4-openssl-dev | 7.81.0-1ubuntu1.20           | 7.81.0-1ubuntu1.20           |          |
 |  9 | libhiredis-dev       | 0.14.1-2                     | 0.14.1-2                     |          |

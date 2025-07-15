@@ -39,6 +39,7 @@ This release uses version 3.3.0 of the container tool.
  - #1147: Removed unnecessary copy statements
  - #1132: Use headless openjdk for all build buildsteps
  - #1166: Update script-languages-container-ci version
+ - #1165: Fixed GPU Template Flavor
 
 ## Bugs
 

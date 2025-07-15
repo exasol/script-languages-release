@@ -4,12 +4,12 @@
 |---:|:---------------------|:-----------------------------|:-----------------------------|:---------|
 |  0 | apt-transport-https  | 2.4.13                       | 2.4.14                       | UPDATED  |
 |  1 | git                  | 1:2.34.1-1ubuntu1.12         | 1:2.34.1-1ubuntu1.15         | UPDATED  |
-|  2 | ldap-utils           | 2.5.18+dfsg-0ubuntu0.22.04.3 | 2.5.19+dfsg-0ubuntu0.22.04.1 | UPDATED  |
-|  3 | libldap2-dev         | 2.5.18+dfsg-0ubuntu0.22.04.3 | 2.5.19+dfsg-0ubuntu0.22.04.1 | UPDATED  |
-|  4 | slapd                | 2.5.18+dfsg-0ubuntu0.22.04.3 | 2.5.19+dfsg-0ubuntu0.22.04.1 | UPDATED  |
-|  5 | build-essential      | 12.9ubuntu3                  | 12.9ubuntu3                  |          |
-|  6 | cmake                | 3.22.1-1ubuntu1.22.04.2      | 3.22.1-1ubuntu1.22.04.2      |          |
-|  7 | gnupg                | 2.2.27-3ubuntu2.3            | 2.2.27-3ubuntu2.3            |          |
+|  2 | gnupg                | 2.2.27-3ubuntu2.3            | 2.2.27-3ubuntu2.4            | UPDATED  |
+|  3 | ldap-utils           | 2.5.18+dfsg-0ubuntu0.22.04.3 | 2.5.19+dfsg-0ubuntu0.22.04.1 | UPDATED  |
+|  4 | libldap2-dev         | 2.5.18+dfsg-0ubuntu0.22.04.3 | 2.5.19+dfsg-0ubuntu0.22.04.1 | UPDATED  |
+|  5 | slapd                | 2.5.18+dfsg-0ubuntu0.22.04.3 | 2.5.19+dfsg-0ubuntu0.22.04.1 | UPDATED  |
+|  6 | build-essential      | 12.9ubuntu3                  | 12.9ubuntu3                  |          |
+|  7 | cmake                | 3.22.1-1ubuntu1.22.04.2      | 3.22.1-1ubuntu1.22.04.2      |          |
 |  8 | libcurl4-openssl-dev | 7.81.0-1ubuntu1.20           | 7.81.0-1ubuntu1.20           |          |
 |  9 | libhiredis-dev       | 0.14.1-2                     | 0.14.1-2                     |          |
 | 10 | libldb2              | 2:2.4.4-0ubuntu0.22.04.2     | 2:2.4.4-0ubuntu0.22.04.2     |          |

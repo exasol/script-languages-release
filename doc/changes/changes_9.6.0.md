@@ -4,7 +4,7 @@ Code name: New CI/CD
 
 ## Summary
 
-The CI/CD was migrated to Github workflows. The cuda integration tests are now executed on a GPU Github runner. The Python package `sqlglot` was added to the Python standard flavor. Documentation for Script Options was added. Besides, the release contains several internal refactorings and security fixes.
+The CI/CD was migrated to Github workflows. The Cuda template flavor is now compatible with Exasol DB GPU support. The cuda integration tests are now executed on a GPU Github runner. Python package `sqlglot` was added to the Python standard flavor. Documentation for Script Options was added. Besides, the release contains several internal refactorings and security fixes.
 
 ## [Package Version Comparison between Release 9.6.0 and 9.5.2](package_diffs/9.6.0/README.md)
 

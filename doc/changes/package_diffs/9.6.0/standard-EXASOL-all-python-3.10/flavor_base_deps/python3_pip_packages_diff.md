@@ -2,36 +2,36 @@
 
 |    | Package                                                                                                                       | Version in 9.5.2     | Version in 9.6.0     | Status   |
 |---:|:------------------------------------------------------------------------------------------------------------------------------|:---------------------|:---------------------|:---------|
-|  0 | protobuf                                                                                                                      | 4.25.3               | 4.25.8               | UPDATED  |
-|  1 | sqlglot[rs]                                                                                                                   |                      | 26.26.0              | NEW      |
-|  2 | awscrt                                                                                                                        | 0.20.9               | 0.20.9               |          |
-|  3 | azure-batch                                                                                                                   | 14.2.0               | 14.2.0               |          |
-|  4 | azure-cosmos                                                                                                                  | 4.6.0                | 4.6.0                |          |
-|  5 | azure-eventgrid                                                                                                               | 4.19.0               | 4.19.0               |          |
-|  6 | azure-eventhub                                                                                                                | 5.11.7               | 5.11.7               |          |
-|  7 | azure-eventhub-checkpointstoreblob                                                                                            | 1.1.4                | 1.1.4                |          |
-|  8 | azure-eventhub-checkpointstoreblob-aio                                                                                        | 1.1.4                | 1.1.4                |          |
-|  9 | azure-identity                                                                                                                | 1.16.0               | 1.16.0               |          |
-| 10 | azure-keyvault                                                                                                                | 4.2.0                | 4.2.0                |          |
-| 11 | azure-keyvault-certificates                                                                                                   | 4.8.0                | 4.8.0                |          |
-| 12 | azure-keyvault-keys                                                                                                           | 4.9.0                | 4.9.0                |          |
-| 13 | azure-keyvault-secrets                                                                                                        | 4.8.0                | 4.8.0                |          |
-| 14 | azure-kusto-data                                                                                                              | 4.4.0                | 4.4.0                |          |
-| 15 | azure-loganalytics                                                                                                            | 0.1.1                | 0.1.1                |          |
-| 16 | azure-servicebus                                                                                                              | 7.12.1               | 7.12.1               |          |
-| 17 | azure-storage-blob                                                                                                            | 12.19.1              | 12.19.1              |          |
-| 18 | azure-storage-file-datalake                                                                                                   | 12.14.0              | 12.14.0              |          |
-| 19 | azure-storage-file-share                                                                                                      | 12.15.0              | 12.15.0              |          |
-| 20 | azure-storage-queue                                                                                                           | 12.9.0               | 12.9.0               |          |
-| 21 | bitarray                                                                                                                      | 2.9.2                | 2.9.2                |          |
-| 22 | bitsets                                                                                                                       | 0.8.4                | 0.8.4                |          |
-| 23 | boto3                                                                                                                         | 1.34.98              | 1.34.98              |          |
-| 24 | cffi                                                                                                                          | 1.16.0               | 1.16.0               |          |
-| 25 | cryptography                                                                                                                  | 42.0.6               | 42.0.6               |          |
-| 26 | cython                                                                                                                        | 3.0.10               | 3.0.10               |          |
-| 27 | debugpy                                                                                                                       | 1.8.1                | 1.8.1                |          |
-| 28 | docutils                                                                                                                      | 0.21.2               | 0.21.2               |          |
-| 29 | exasol-bucketfs                                                                                                               | 1.0.1                | 1.0.1                |          |
+|  0 | exasol-bucketfs                                                                                                               | 1.0.1                | 2.0.0                | UPDATED  |
+|  1 | protobuf                                                                                                                      | 4.25.3               | 4.25.8               | UPDATED  |
+|  2 | sqlglot[rs]                                                                                                                   |                      | 26.26.0              | NEW      |
+|  3 | awscrt                                                                                                                        | 0.20.9               | 0.20.9               |          |
+|  4 | azure-batch                                                                                                                   | 14.2.0               | 14.2.0               |          |
+|  5 | azure-cosmos                                                                                                                  | 4.6.0                | 4.6.0                |          |
+|  6 | azure-eventgrid                                                                                                               | 4.19.0               | 4.19.0               |          |
+|  7 | azure-eventhub                                                                                                                | 5.11.7               | 5.11.7               |          |
+|  8 | azure-eventhub-checkpointstoreblob                                                                                            | 1.1.4                | 1.1.4                |          |
+|  9 | azure-eventhub-checkpointstoreblob-aio                                                                                        | 1.1.4                | 1.1.4                |          |
+| 10 | azure-identity                                                                                                                | 1.16.0               | 1.16.0               |          |
+| 11 | azure-keyvault                                                                                                                | 4.2.0                | 4.2.0                |          |
+| 12 | azure-keyvault-certificates                                                                                                   | 4.8.0                | 4.8.0                |          |
+| 13 | azure-keyvault-keys                                                                                                           | 4.9.0                | 4.9.0                |          |
+| 14 | azure-keyvault-secrets                                                                                                        | 4.8.0                | 4.8.0                |          |
+| 15 | azure-kusto-data                                                                                                              | 4.4.0                | 4.4.0                |          |
+| 16 | azure-loganalytics                                                                                                            | 0.1.1                | 0.1.1                |          |
+| 17 | azure-servicebus                                                                                                              | 7.12.1               | 7.12.1               |          |
+| 18 | azure-storage-blob                                                                                                            | 12.19.1              | 12.19.1              |          |
+| 19 | azure-storage-file-datalake                                                                                                   | 12.14.0              | 12.14.0              |          |
+| 20 | azure-storage-file-share                                                                                                      | 12.15.0              | 12.15.0              |          |
+| 21 | azure-storage-queue                                                                                                           | 12.9.0               | 12.9.0               |          |
+| 22 | bitarray                                                                                                                      | 2.9.2                | 2.9.2                |          |
+| 23 | bitsets                                                                                                                       | 0.8.4                | 0.8.4                |          |
+| 24 | boto3                                                                                                                         | 1.34.98              | 1.34.98              |          |
+| 25 | cffi                                                                                                                          | 1.16.0               | 1.16.0               |          |
+| 26 | cryptography                                                                                                                  | 42.0.6               | 42.0.6               |          |
+| 27 | cython                                                                                                                        | 3.0.10               | 3.0.10               |          |
+| 28 | debugpy                                                                                                                       | 1.8.1                | 1.8.1                |          |
+| 29 | docutils                                                                                                                      | 0.21.2               | 0.21.2               |          |
 | 30 | git+http://github.com/EXASOL/websocket-api.git@91bd9a7970941c578f246c07f2645699fc491d6c#egg=exasol-db-api&subdirectory=python | No version specified | No version specified |          |
 | 31 | google-cloud-asset                                                                                                            | 3.26.1               | 3.26.1               |          |
 | 32 | google-cloud-bigquery                                                                                                         | 3.21.0               | 3.21.0               |          |

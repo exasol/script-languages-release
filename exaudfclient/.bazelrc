@@ -16,3 +16,4 @@ build:no-tty --curses=no --color=no
 build:debug-build --sandbox_debug --config=verbose
 build:no-symlinks --symlink_prefix=/
 build:symlinks-to-tmp --symlink_prefix=/tmp/
+build:fix_conda_ar_tool --action_env=AR=x86_64-conda-linux-gnu-gcc-ar --features=-archive_param_file

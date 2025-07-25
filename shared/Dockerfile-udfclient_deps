@@ -1,0 +1,44 @@
+FROM ubuntu:22.04
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Optional: override Ubuntu mirror
+ENV ARCHIVE_UBUNTU_PREFIX=""
+RUN sed --in-place --regexp-extended "s|(//)(archive\.ubuntu)|\1$ARCHIVE_UBUNTU_PREFIX\2|" /etc/apt/sources.list
+
+# Reduce image size by skipping documentation
+COPY 01_nodoc /etc/dpkg/dpkg.cfg.d/01_nodoc
+COPY scripts /scripts
+
+# Install dependencies
+RUN mkdir -p /build_info/packages
+COPY udfclient_deps/packages /build_info/packages/udfclient_deps
+RUN /scripts/install_scripts/install_via_apt.pl --file /build_info/packages/udfclient_deps/apt_get_packages --with-versions
+
+# Create users and groups
+RUN set -e; \
+    addgroup --gid 1000 exasolution; \
+    adduser --disabled-login --uid 1000 --gid 1000 exasolution --gecos ""; \
+    addgroup --gid 500 exausers; \
+    adduser --disabled-login --uid 500 --gid 500 exadefusr --gecos ""
+
+# UTF-8 locale environment
+ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_US:en
+ENV LC_ALL=en_US.UTF-8
+
+# Dynamically set env vars based on architecture
+RUN set -e; \
+    ARCH=$(dpkg --print-architecture); \
+    if [ "$ARCH" = "amd64" ]; then \
+        OPENSSL_LIB="/usr/lib/x86_64-linux-gnu"; \
+    elif [ "$ARCH" = "arm64" ]; then \
+        OPENSSL_LIB="/usr/lib/aarch64-linux-gnu"; \
+    else \
+        echo "Unsupported architecture: $ARCH" && exit 1; \
+    fi; \
+    echo "export PROTOBUF_LIBRARY_PREFIX=/usr/lib/" > /env; \
+    echo "export PROTOBUF_INCLUDE_PREFIX=/usr/include/" >> /env; \
+    echo "export ZMQ_LIBRARY_PREFIX=/usr/lib" >> /env; \
+    echo "export ZMQ_INCLUDE_PREFIX=/usr/include" >> /env; \
+    echo "export OPENSSL_LIBRARY_PREFIX=$OPENSSL_LIB" >> /env; \
+    echo "export OPENSSL_INCLUDE_PREFIX=/usr/include/openssl" >> /env

@@ -22,7 +22,7 @@ n/a
 
 ## Refactorings
 
-n/a
+ - #1177: Splitted the pandas memory leak test cases file-wise
 
 ## Bugs
 

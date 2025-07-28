@@ -5,18 +5,21 @@
     "test_sets": [
       {
         "name": "standard",
+        "files": [],
         "folders": ["standard-flavor/setup"],
         "goal": "release",
         "generic_language_tests": []
       },
       {
         "name": "java",
+        "files": [],
         "folders": ["java"],
         "goal": "release",
         "generic_language_tests": []
       },
       {
         "name": "generic",
+        "files": [],
         "folders": [],
         "goal": "release",
         "generic_language_tests": ["java"]

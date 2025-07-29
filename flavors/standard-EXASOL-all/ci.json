@@ -12,6 +12,7 @@
       },
       {
         "name": "standard",
+        "files": [],
         "folders": ["standard-flavor/all",
                     "standard-flavor/all/python",
                     "standard-flavor/all/r",

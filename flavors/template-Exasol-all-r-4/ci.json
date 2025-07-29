@@ -5,12 +5,14 @@
     "test_sets": [
       {
         "name": "r",
+        "files": [],
         "folders": ["r"],
         "goal": "release",
         "generic_language_tests": []
       },
       {
         "name": "generic",
+        "files": [],
         "folders": [],
         "goal": "release",
         "generic_language_tests": ["r"]

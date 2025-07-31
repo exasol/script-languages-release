@@ -22,7 +22,8 @@ n/a
 
 ## Refactorings
 
- - #1177: Splitted the pandas memory leak test cases file-wise
+ - #1177: Splitted the pandas memory leak test cases file-wi
+ - #1164: Updated python packages to be compatible with CUDA 12.9
 
 ## Bugs
 

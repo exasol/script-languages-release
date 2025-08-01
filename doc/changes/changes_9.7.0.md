@@ -28,6 +28,7 @@ n/a
 ## Bugs
 
  - #1188: Fixed cuda conda build error
+ - #1196: Updated slc submodule containing fix for wrong dir ref
 
 ## Doc
 

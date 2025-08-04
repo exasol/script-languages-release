@@ -14,7 +14,7 @@ This release uses version 3.3.0 of the container tool.
 
 ## Features
 
-n/a
+ - #896: Added template-python3.12 flavor
 
 ## Security Issues
 

@@ -11,7 +11,7 @@ on:
       - '**'
 
 env:
-  RELEASE_NAME: "${{ github.ref_name }}"
+  RELEASE_NAME: "SLC-${{ github.ref_name }}"
 
 jobs:
   prepare-test-container:
@@ -81,7 +81,7 @@ jobs:
     needs: [get-flavors, release]
     runs-on: ubuntu-24.04
     strategy:
-      fail-fast: false
+      fail-fast: true
       matrix:
         flavor: ${{fromJson(needs.get-flavors.outputs.matrix)}}
     steps:
@@ -94,6 +94,6 @@ jobs:
           name: slc-${{matrix.flavor}}-release
           path: "slc"
       - name: Upload to release
-        run: gh release upload "$RELEASE_NAME" slc/* || echo "Upload failed due to size, see workflow logs."
+        run: gh release upload "$RELEASE_NAME" slc/*
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

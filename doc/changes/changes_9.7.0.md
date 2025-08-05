@@ -18,7 +18,7 @@ n/a
 
 ## Security Issues
 
-n/a
+ - #1193: Update Dependencies on top of 9.6.0
 
 ## Refactorings
 

@@ -5,6 +5,7 @@
     "test_sets": [
       {
         "name": "standard",
+        "files": [],
         "folders": ["standard-flavor/all/r",
                     "standard-flavor/8.0/r",
                     "standard-flavor/setup"],
@@ -13,12 +14,14 @@
       },
       {
         "name": "r",
+        "files": [],
         "folders": ["r"],
         "goal": "release",
         "generic_language_tests": []
       },
       {
         "name": "generic",
+        "files": [],
         "folders": [],
         "goal": "release",
         "generic_language_tests": ["r"]

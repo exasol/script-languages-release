@@ -24,6 +24,7 @@ This release uses version 3.3.0 of the container tool.
 
  - #1177: Splitted the pandas memory leak test cases file-wi
  - #1164: Updated python packages to be compatible with CUDA 12.9
+ - #1198: Migrated to latest SLC-CI-SETUP 3.3.2 and PTB 1.7.4
 
 ## Bugs
 
@@ -36,4 +37,4 @@ n/a
 
 ## Internal
 
-n/a
+ n/a

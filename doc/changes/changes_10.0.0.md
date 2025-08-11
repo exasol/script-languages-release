@@ -23,6 +23,7 @@ n/a
 ## Refactorings
 
  - #1207: Updated GPU Test Query
+ - #1206: Trimmed release docker images
 
 ## Bugs
 

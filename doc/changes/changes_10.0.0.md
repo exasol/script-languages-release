@@ -18,7 +18,7 @@ n/a
 
 ## Security Issues
 
-n/a
+ - #1210: Update Dependencies on top of 9.7.0
 
 ## Refactorings
 

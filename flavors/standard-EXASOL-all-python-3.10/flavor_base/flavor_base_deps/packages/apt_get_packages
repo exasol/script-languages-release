@@ -6,8 +6,8 @@ libsasl2-dev|2.1.27+dfsg2-3ubuntu1.2 # Needed by python-ldap
 libldap2-dev|2.5.19+dfsg-0ubuntu0.22.04.1
 slapd|2.5.19+dfsg-0ubuntu0.22.04.1
 ldap-utils|2.5.19+dfsg-0ubuntu0.22.04.1
-libsmbclient|2:4.15.13+dfsg-0ubuntu1.6
-libsmbclient-dev|2:4.15.13+dfsg-0ubuntu1.6
-smbclient|2:4.15.13+dfsg-0ubuntu1.6
+libsmbclient|2:4.15.13+dfsg-0ubuntu1.7
+libsmbclient-dev|2:4.15.13+dfsg-0ubuntu1.7
+smbclient|2:4.15.13+dfsg-0ubuntu1.7
 libgomp1|12.3.0-1ubuntu1~22.04
 tzdata|2025b-0ubuntu0.22.04.1

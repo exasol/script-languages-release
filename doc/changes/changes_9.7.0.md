@@ -20,6 +20,7 @@ This release uses version 3.4.1 of the container tool.
 ## Security Issues
 
  - #1193: Update Dependencies on top of 9.6.0
+ - #1146: Reverting a trivy-ignore CVE-2025-47273
 
 ## Refactorings
 

@@ -26,6 +26,10 @@ n/a
  - #1207: Updated GPU Test Query
  - #1206: Trimmed release docker images
 
+## Dependencies
+
+ - #1220: Updated dependencies for template cuda flavor
+
 ## Bugs
 
 n/a

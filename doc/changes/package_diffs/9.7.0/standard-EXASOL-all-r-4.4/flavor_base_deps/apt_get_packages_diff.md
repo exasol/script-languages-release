@@ -1,6 +1,6 @@
 <!-- markdown-link-check-disable -->
 
-|    | Package              | Version in 9.6.0        | Version in 9.7.0        | Status   |
+|    | Package              | Version in 9.7.0        | Version in 9.7.0        | Status   |
 |---:|:---------------------|:------------------------|:------------------------|:---------|
 |  0 | cmake                | 3.22.1-1ubuntu1.22.04.2 | 3.22.1-1ubuntu1.22.04.2 |          |
 |  1 | coreutils            | 8.32-4.1ubuntu1.2       | 8.32-4.1ubuntu1.2       |          |

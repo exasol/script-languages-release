@@ -1,6 +1,6 @@
 <!-- markdown-link-check-disable -->
 
-|    | Package       | Version in 9.6.0   | Version in 9.7.0   | Status   |
+|    | Package       | Version in 9.7.0   | Version in 9.7.0   | Status   |
 |---:|:--------------|:-------------------|:-------------------|:---------|
 |  0 | BradleyTerry2 | 1.1-2              | 1.1-2              |          |
 |  1 | Formula       | 1.2-5              | 1.2-5              |          |

@@ -1,6 +1,6 @@
 <!-- markdown-link-check-disable -->
 
-|    | Package         | Version in 9.6.0        | Version in 9.7.0        | Status   |
+|    | Package         | Version in 9.7.0        | Version in 9.7.0        | Status   |
 |---:|:----------------|:------------------------|:------------------------|:---------|
 |  0 | coreutils       | 8.32-4.1ubuntu1.2       | 8.32-4.1ubuntu1.2       |          |
 |  1 | libnss-db       | 2.2.3pre1-6ubuntu3      | 2.2.3pre1-6ubuntu3      |          |

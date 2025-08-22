@@ -22,6 +22,7 @@ This release uses version 3.4.1 of the container tool.
  - #1193: Update Dependencies on top of 9.6.0
  - #1146: Reverting a trivy-ignore CVE-2025-47273
  - #1218: Updated dependency for libgomp1 to 12.3.0-1ubuntu1~22.04.2
+ - #1226: Updated dependency for python 3.10 to 3.10.12-1~22.04.11
 
 ## Refactorings
 

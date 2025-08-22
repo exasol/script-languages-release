@@ -1,6 +1,6 @@
 <!-- markdown-link-check-disable -->
 
-|    | Package              | Version in 9.7.0       | Version in 9.7.0       | Status   |
+|    | Package              | Version in 9.6.0       | Version in 9.7.0       | Status   |
 |---:|:---------------------|:-----------------------|:-----------------------|:---------|
 |  0 | build-essential      | 12.9ubuntu3            | 12.9ubuntu3            |          |
 |  1 | git                  | 1:2.34.1-1ubuntu1.15   | 1:2.34.1-1ubuntu1.15   |          |

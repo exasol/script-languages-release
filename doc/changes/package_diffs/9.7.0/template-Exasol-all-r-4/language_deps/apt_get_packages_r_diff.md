@@ -1,6 +1,6 @@
 <!-- markdown-link-check-disable -->
 
-|    | Package     | Version in 9.7.0   | Version in 9.7.0   | Status   |
+|    | Package     | Version in 9.6.0   | Version in 9.7.0   | Status   |
 |---:|:------------|:-------------------|:-------------------|:---------|
 |  0 | r-base-core | 4.4.1-3.2204.0     | 4.4.1-3.2204.0     |          |
 |  1 | r-base-dev  | 4.4.1-3.2204.0     | 4.4.1-3.2204.0     |          |

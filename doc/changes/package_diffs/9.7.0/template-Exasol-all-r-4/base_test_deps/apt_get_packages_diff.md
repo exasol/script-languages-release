@@ -1,6 +1,6 @@
 <!-- markdown-link-check-disable -->
 
-|    | Package   | Version in 9.7.0      | Version in 9.7.0      | Status   |
+|    | Package   | Version in 9.6.0      | Version in 9.7.0      | Status   |
 |---:|:----------|:----------------------|:----------------------|:---------|
 |  0 | binutils  | 2.38-4ubuntu2.8       | 2.38-4ubuntu2.8       |          |
 |  1 | chrpath   | 0.16-2                | 0.16-2                |          |

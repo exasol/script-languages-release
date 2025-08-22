@@ -1,4 +1,4 @@
-# Package Version Comparison between Standard-exasol-all-python-3.10 flavor in 9.7.0 and Standard-exasol-all-python-3.10 flavor in 9.7.0
+# Package Version Comparison between Standard-exasol-all-python-3.10 flavor in 9.7.0 and Standard-exasol-all-python-3.10 flavor in 9.6.0
 
 - Comparison of build step Udfclient_deps
   - [Comparison of Apt Get Packages](udfclient_deps/apt_get_packages_diff.md)

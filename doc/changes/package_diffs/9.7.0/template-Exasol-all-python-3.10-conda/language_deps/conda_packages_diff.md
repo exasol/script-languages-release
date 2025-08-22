@@ -1,6 +1,6 @@
 <!-- markdown-link-check-disable -->
 
-|    | Package   | Version in 9.7.0   | Version in 9.7.0   | Status   |
+|    | Package   | Version in 9.6.0   | Version in 9.7.0   | Status   |
 |---:|:----------|:-------------------|:-------------------|:---------|
 |  0 | mamba     | 1.5.1              | 1.5.1              |          |
 |  1 | numpy     | 1.26.2             | 1.26.2             |          |

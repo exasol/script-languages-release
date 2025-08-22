@@ -20,6 +20,7 @@ n/a
 
  - #1210: Update Dependencies on top of 9.7.0
  - #1213: Update Dependencies on top of 9.7.0
+ - #1223: Updated Dependencies on top of 9.7.0
 
 ## Refactorings
 

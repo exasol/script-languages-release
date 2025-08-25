@@ -20,11 +20,17 @@ n/a
 
  - #1210: Update Dependencies on top of 9.7.0
  - #1213: Update Dependencies on top of 9.7.0
+ - #1223: Updated Dependencies on top of 9.7.0
+ - #1226: Updated dependency for python 3.10 to 3.10.12-1~22.04.11
 
 ## Refactorings
 
  - #1207: Updated GPU Test Query
  - #1206: Trimmed release docker images
+
+## Dependencies
+
+ - #1220: Updated dependencies for template cuda flavor
 
 ## Bugs
 

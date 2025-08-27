@@ -1,10 +1,10 @@
-# script-languages-release 10.0.0, released t.b.d.
+# script-languages-release 10.0.0, released 2025-08-28
 
-Code name: t.b.d.
+Code name: Trimmed docker images for template flavors.
 
 ## Summary
 
-t.b.d.
+The build process for template flavors changed slightly which aims to decrease the size of the intermediate docker images. Besides, this release contains dependency updates and internal improvements.
 
 ## [Package Version Comparison between Release 10.0.0 and 9.7.0](package_diffs/10.0.0/README.md)
 

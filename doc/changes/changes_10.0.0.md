@@ -27,6 +27,7 @@ n/a
 
  - #1207: Updated GPU Test Query
  - #1206: Trimmed release docker images
+ - #1228: Use slow-wrapper for template cuda flavor
 
 ## Dependencies
 

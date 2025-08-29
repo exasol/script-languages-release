@@ -22,6 +22,7 @@ n/a
  - #1213: Update Dependencies on top of 9.7.0
  - #1223: Updated Dependencies on top of 9.7.0
  - #1226: Updated dependency for python 3.10 to 3.10.12-1~22.04.11
+ - #1233: Udpated dependency for git 1:2.43.0-1ubuntu7.3
 
 ## Refactorings
 
@@ -32,6 +33,7 @@ n/a
 ## Dependencies
 
  - #1220: Updated dependencies for template cuda flavor
+ - #1233: Updated dependencies for slc-ci-setup & PTB
 
 ## Bugs
 

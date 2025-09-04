@@ -22,6 +22,8 @@ n/a
 
 ## Refactorings
 
+ - #1094: Removed ssl dependency 
+
 n/a
 
 ## Dependencies

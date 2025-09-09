@@ -11,6 +11,7 @@ TBD
 ## Script-Language-Container-Tool (Exaslct)
 
 This release uses version 3.4.1 of the container tool.
+Pyexasol 1.1.0 contains breaking changes.
 
 ## Features
 
@@ -18,7 +19,8 @@ n/a
 
 ## Security Issues
 
- - #1233: Udpated dependency for git 1:2.43.0-1ubuntu7.3
+ - #1233: Updated dependency for git 1:2.43.0-1ubuntu7.3
+ - #1238: Updated pyexasol to 1.1.0
 
 ## Refactorings
 

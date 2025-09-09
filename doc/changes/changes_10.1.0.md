@@ -20,7 +20,6 @@ n/a
 ## Security Issues
 
  - #1233: Updated dependency for git 1:2.43.0-1ubuntu7.3
- - #1238: Updated pyexasol to 1.1.0
 
 ## Refactorings
 
@@ -31,6 +30,7 @@ n/a
 ## Dependencies
 
  - #1233: Updated dependencies for slc-ci-setup & PTB
+ - #1238: Updated pyexasol to 1.1.0
 
 ## Bugs
 

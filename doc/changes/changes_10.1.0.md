@@ -20,6 +20,7 @@ n/a
 ## Security Issues
 
  - #1233: Updated dependency for git 1:2.43.0-1ubuntu7.3
+ - #1241: Updated dependency for smbclient variants 2:4.15.13+dfsg-0ubuntu1.8
 
 ## Refactorings
 

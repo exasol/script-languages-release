@@ -21,7 +21,7 @@ n/a
 
  - #1233: Updated dependency for git 1:2.43.0-1ubuntu7.3
  - #1241: Updated dependency for smbclient variants 2:4.15.13+dfsg-0ubuntu1.8
- - #1244: Updated dependency for libxml2 2.9.13+dfsg-1ubuntu0.9
+ - #1244: Updated dependency for libxml2 to 2.9.13+dfsg-1ubuntu0.9 and scales to 1.4.0
 
 ## Refactorings
 

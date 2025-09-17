@@ -36,7 +36,7 @@ n/a
 
 ## Bugs
 
-n/a
+ - #1237: Fix package-diff relative links in readme
 
 ## Doc
 

@@ -6,7 +6,8 @@ Code name: TBD.
 
 TBD
 
-## [Package Version Comparison between Release 10.1.0 and 10.0.0](package_diffs/10.1.0/README.md)
+<!-- markdown-link-check-disable -->
+## [Package Version Comparison between Release 10.1.0 and 10.0.0](https://github.com/exasol/script-languages-release/blob/master/doc/changes/package_diffs/10.1.0/README.md)
 
 ## Script-Language-Container-Tool (Exaslct)
 
@@ -36,7 +37,7 @@ n/a
 
 ## Bugs
 
-n/a
+ - #1237: Fixed package diff links with absolute link to master
 
 ## Doc
 

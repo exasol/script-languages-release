@@ -37,7 +37,7 @@ n/a
 
 ## Bugs
 
-n/a
+ - #1237: Fixed package diff links with absolute link to master
 
 ## Doc
 

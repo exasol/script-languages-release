@@ -6,7 +6,8 @@ Code name: TBD.
 
 TBD
 
-## [Package Version Comparison between Release 10.1.0 and 10.0.0](package_diffs/10.1.0/README.md)
+<!-- markdown-link-check-disable -->
+## [Package Version Comparison between Release 10.1.0 and 10.0.0](https://github.com/exasol/script-languages-release/blob/master/doc/changes/package_diffs/10.1.0/README.md)
 
 ## Script-Language-Container-Tool (Exaslct)
 
@@ -22,6 +23,7 @@ n/a
  - #1233: Updated dependency for git 1:2.43.0-1ubuntu7.3
  - #1241: Updated dependency for smbclient variants 2:4.15.13+dfsg-0ubuntu1.8
  - #1244: Updated dependency for libxml2 to 2.9.13+dfsg-1ubuntu0.9 and scales to 1.4.0
+ - #1250: Updated dependency for coreutils to 9.4-3ubuntu6.1 and magrittr to 2.0.4
 
 ## Refactorings
 
@@ -36,7 +38,7 @@ n/a
 
 ## Bugs
 
-n/a
+ - #1237: Fixed package diff links with absolute link to master
 
 ## Doc
 

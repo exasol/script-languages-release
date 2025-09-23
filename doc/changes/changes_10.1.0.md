@@ -26,6 +26,7 @@ n/a
  - #1250: Updated dependency for coreutils to 9.4-3ubuntu6.1 and magrittr to 2.0.4
  - #1253: Ignored CVE-2025-47906 in Cuda flavors
  - #1254: Updated Dependencies on top of 10.0.0
+ - #1257: Disabled oysteR security scanning for R flavors
 
 ## Refactorings
 

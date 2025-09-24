@@ -52,7 +52,7 @@ cffi|2.0.0
 docutils|0.22.2
 requests|2.32.5
 ujson|5.11.0
-paramiko|4.0.0
+paramiko|3.4.0 #Need to pin to old version because pysftp is not compatible with version >=4.0.0
 simplejson|3.20.1
 scikit-learn|1.7.2
 plyvel|1.5.1

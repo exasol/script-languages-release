@@ -24,6 +24,9 @@ n/a
  - #1241: Updated dependency for smbclient variants 2:4.15.13+dfsg-0ubuntu1.8
  - #1244: Updated dependency for libxml2 to 2.9.13+dfsg-1ubuntu0.9 and scales to 1.4.0
  - #1250: Updated dependency for coreutils to 9.4-3ubuntu6.1 and magrittr to 2.0.4
+ - #1253: Ignored CVE-2025-47906 in Cuda flavors
+ - #1254: Updated Dependencies on top of 10.0.0
+ - #1257: Disabled oysteR security scanning for R flavors
 
 ## Refactorings
 

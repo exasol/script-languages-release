@@ -27,6 +27,7 @@ n/a
  - #1253: Ignored CVE-2025-47906 in Cuda flavors
  - #1254: Updated Dependencies on top of 10.0.0
  - #1257: Disabled oysteR security scanning for R flavors
+ - #1260: Update locales dependencies
 
 ## Refactorings
 

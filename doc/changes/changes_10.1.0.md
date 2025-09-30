@@ -29,6 +29,7 @@ n/a
  - #1257: Disabled oysteR security scanning for R flavors
  - #1260: Update locales dependencies
  - #1262: Ignored CVE-2020-11979 for cuda flavors
+ - #1264: Updated Dependencies on top of 10.0.0
 
 ## Refactorings
 

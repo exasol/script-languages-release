@@ -2,11 +2,11 @@
 
 |    | Package                 | Version in 10.0.0              | Version in 10.1.0              | Status   |
 |---:|:------------------------|:-------------------------------|:-------------------------------|:---------|
-|  0 | locales                 | 2.35-0ubuntu3.10               | 2.35-0ubuntu3.11               | UPDATED  |
-|  1 | build-essential         | 12.9ubuntu3                    | 12.9ubuntu3                    |          |
-|  2 | chrpath                 | 0.16-2                         | 0.16-2                         |          |
-|  3 | coreutils               | 8.32-4.1ubuntu1.2              | 8.32-4.1ubuntu1.2              |          |
-|  4 | curl                    | 7.81.0-1ubuntu1.20             | 7.81.0-1ubuntu1.20             |          |
+|  0 | curl                    | 7.81.0-1ubuntu1.20             | 7.81.0-1ubuntu1.21             | UPDATED  |
+|  1 | locales                 | 2.35-0ubuntu3.10               | 2.35-0ubuntu3.11               | UPDATED  |
+|  2 | build-essential         | 12.9ubuntu3                    | 12.9ubuntu3                    |          |
+|  3 | chrpath                 | 0.16-2                         | 0.16-2                         |          |
+|  4 | coreutils               | 8.32-4.1ubuntu1.2              | 8.32-4.1ubuntu1.2              |          |
 |  5 | libpcre3-dev            | 2:8.39-13ubuntu0.22.04.1       | 2:8.39-13ubuntu0.22.04.1       |          |
 |  6 | openjdk-17-jdk-headless | 17.0.16+8~us1-0ubuntu1~22.04.1 | 17.0.16+8~us1-0ubuntu1~22.04.1 |          |
 |  7 | protobuf-compiler       | 3.12.4-1ubuntu7.22.04.4        | 3.12.4-1ubuntu7.22.04.4        |          |

@@ -16,6 +16,7 @@
         "folders": ["standard-flavor/all/python",
                     "standard-flavor/7.1/python",
                     "standard-flavor/8.0/python",
+                    "standard-flavor/deprecated/python",
                     "standard-flavor/setup"],
         "goal": "release",
         "generic_language_tests": []

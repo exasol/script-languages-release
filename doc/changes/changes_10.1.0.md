@@ -30,6 +30,7 @@ n/a
  - #1260: Update locales dependencies
  - #1262: Ignored CVE-2020-11979 for cuda flavors
  - #1264: Updated Dependencies on top of 10.0.0
+ - #1269: Updated dependencies on top of 10.0.0
 
 ## Refactorings
 

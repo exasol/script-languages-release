@@ -2,31 +2,31 @@
 
 |    | Package                                                                                                                       | Version in 10.0.0    | Version in 10.1.0    | Status   |
 |---:|:------------------------------------------------------------------------------------------------------------------------------|:---------------------|:---------------------|:---------|
-|  0 | cryptography                                                                                                                  | 42.0.6               | 45.0.7               | UPDATED  |
-|  1 | pyexasol                                                                                                                      | 0.25.2               | 1.2.0                | UPDATED  |
-|  2 | awscrt                                                                                                                        | 0.20.9               | 0.20.9               |          |
-|  3 | azure-batch                                                                                                                   | 14.2.0               | 14.2.0               |          |
-|  4 | azure-cosmos                                                                                                                  | 4.6.0                | 4.6.0                |          |
-|  5 | azure-eventgrid                                                                                                               | 4.19.0               | 4.19.0               |          |
-|  6 | azure-eventhub                                                                                                                | 5.11.7               | 5.11.7               |          |
-|  7 | azure-eventhub-checkpointstoreblob                                                                                            | 1.1.4                | 1.1.4                |          |
-|  8 | azure-eventhub-checkpointstoreblob-aio                                                                                        | 1.1.4                | 1.1.4                |          |
-|  9 | azure-identity                                                                                                                | 1.16.0               | 1.16.0               |          |
-| 10 | azure-keyvault                                                                                                                | 4.2.0                | 4.2.0                |          |
-| 11 | azure-keyvault-certificates                                                                                                   | 4.8.0                | 4.8.0                |          |
-| 12 | azure-keyvault-keys                                                                                                           | 4.9.0                | 4.9.0                |          |
-| 13 | azure-keyvault-secrets                                                                                                        | 4.8.0                | 4.8.0                |          |
-| 14 | azure-kusto-data                                                                                                              | 4.4.0                | 4.4.0                |          |
-| 15 | azure-loganalytics                                                                                                            | 0.1.1                | 0.1.1                |          |
-| 16 | azure-servicebus                                                                                                              | 7.12.1               | 7.12.1               |          |
-| 17 | azure-storage-blob                                                                                                            | 12.19.1              | 12.19.1              |          |
-| 18 | azure-storage-file-datalake                                                                                                   | 12.14.0              | 12.14.0              |          |
-| 19 | azure-storage-file-share                                                                                                      | 12.15.0              | 12.15.0              |          |
-| 20 | azure-storage-queue                                                                                                           | 12.9.0               | 12.9.0               |          |
-| 21 | bitarray                                                                                                                      | 2.9.2                | 2.9.2                |          |
-| 22 | bitsets                                                                                                                       | 0.8.4                | 0.8.4                |          |
-| 23 | boto3                                                                                                                         | 1.34.98              | 1.34.98              |          |
-| 24 | cffi                                                                                                                          | 1.16.0               | 1.16.0               |          |
+|  0 | pyexasol                                                                                                                      | 0.25.2               | 1.2.0                | UPDATED  |
+|  1 | awscrt                                                                                                                        | 0.20.9               | 0.20.9               |          |
+|  2 | azure-batch                                                                                                                   | 14.2.0               | 14.2.0               |          |
+|  3 | azure-cosmos                                                                                                                  | 4.6.0                | 4.6.0                |          |
+|  4 | azure-eventgrid                                                                                                               | 4.19.0               | 4.19.0               |          |
+|  5 | azure-eventhub                                                                                                                | 5.11.7               | 5.11.7               |          |
+|  6 | azure-eventhub-checkpointstoreblob                                                                                            | 1.1.4                | 1.1.4                |          |
+|  7 | azure-eventhub-checkpointstoreblob-aio                                                                                        | 1.1.4                | 1.1.4                |          |
+|  8 | azure-identity                                                                                                                | 1.16.0               | 1.16.0               |          |
+|  9 | azure-keyvault                                                                                                                | 4.2.0                | 4.2.0                |          |
+| 10 | azure-keyvault-certificates                                                                                                   | 4.8.0                | 4.8.0                |          |
+| 11 | azure-keyvault-keys                                                                                                           | 4.9.0                | 4.9.0                |          |
+| 12 | azure-keyvault-secrets                                                                                                        | 4.8.0                | 4.8.0                |          |
+| 13 | azure-kusto-data                                                                                                              | 4.4.0                | 4.4.0                |          |
+| 14 | azure-loganalytics                                                                                                            | 0.1.1                | 0.1.1                |          |
+| 15 | azure-servicebus                                                                                                              | 7.12.1               | 7.12.1               |          |
+| 16 | azure-storage-blob                                                                                                            | 12.19.1              | 12.19.1              |          |
+| 17 | azure-storage-file-datalake                                                                                                   | 12.14.0              | 12.14.0              |          |
+| 18 | azure-storage-file-share                                                                                                      | 12.15.0              | 12.15.0              |          |
+| 19 | azure-storage-queue                                                                                                           | 12.9.0               | 12.9.0               |          |
+| 20 | bitarray                                                                                                                      | 2.9.2                | 2.9.2                |          |
+| 21 | bitsets                                                                                                                       | 0.8.4                | 0.8.4                |          |
+| 22 | boto3                                                                                                                         | 1.34.98              | 1.34.98              |          |
+| 23 | cffi                                                                                                                          | 1.16.0               | 1.16.0               |          |
+| 24 | cryptography                                                                                                                  | 42.0.6               | 42.0.6               |          |
 | 25 | cython                                                                                                                        | 3.0.10               | 3.0.10               |          |
 | 26 | debugpy                                                                                                                       | 1.8.1                | 1.8.1                |          |
 | 27 | docutils                                                                                                                      | 0.21.2               | 0.21.2               |          |

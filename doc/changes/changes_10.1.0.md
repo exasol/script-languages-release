@@ -42,6 +42,7 @@ n/a
 
  - #1233: Updated dependencies for slc-ci-setup & PTB
  - #1238: Updated pyexasol to 1.1.0
+ - #1273: Updated pyexasol to 1.2.0
 
 ## Bugs
 

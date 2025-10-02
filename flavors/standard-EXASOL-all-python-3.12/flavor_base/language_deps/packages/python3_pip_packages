@@ -1,0 +1,3 @@
+pandas|2.3.2
+numpy|=1.26.4 #Pinned to old version because of sagemaker
+pyarrow|21.0.0

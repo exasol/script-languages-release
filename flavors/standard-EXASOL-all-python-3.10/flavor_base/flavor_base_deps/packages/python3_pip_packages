@@ -36,7 +36,7 @@ google-cloud-storage|2.16.0
 google-cloud-trace|1.13.3
 martian|2.0.post1
 protobuf|4.25.8 #Need to pin to older version - because google-cloud-asset has dependency to <5.0.0dev
-pyexasol|1.1.0
+pyexasol|1.2.0
 pysftp|0.2.9
 pytz|2024.1
 sagemaker|2.218.1
@@ -58,8 +58,8 @@ simplejson|3.19.2
 scikit-learn|1.4.2
 plyvel|1.5.1
 python-ldap|3.4.4
-pyOpenSSL|24.1.0
-git+http://github.com/EXASOL/websocket-api.git@91bd9a7970941c578f246c07f2645699fc491d6c#egg=exasol-db-api&subdirectory=python|
+pyOpenSSL|25.3.0
+git+https://github.com/EXASOL/websocket-api.git@91bd9a7970941c578f246c07f2645699fc491d6c#egg=exasol-db-api&subdirectory=python|
 debugpy|1.8.1
 pybase64|1.3.2
 pysimdjson|6.0.2
@@ -70,7 +70,7 @@ bitsets|0.8.4
 pyyaml|6.0.1
 exasol-bucketfs|2.0.0
 pysmbc|1.0.25.1
-cryptography|42.0.6
+cryptography|45.0.7
 h2|4.1.0
 cython|3.0.10
 portalocker|3.1.1

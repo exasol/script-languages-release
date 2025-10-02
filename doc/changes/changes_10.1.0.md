@@ -1,10 +1,10 @@
-# script-languages-release 10.1.0, released TBD
+# script-languages-release 10.1.0, released 2025-10-02
 
-Code name: TBD.
+Code name: New Python 3.12 standard flavor
 
 ## Summary
 
-TBD
+This release contains the new Python 3.12 standard flavor. Also it has many security related  package updates and internal improvements.
 
 <!-- markdown-link-check-disable -->
 ## [Package Version Comparison between Release 10.1.0 and 10.0.0](https://github.com/exasol/script-languages-release/blob/master/doc/changes/package_diffs/10.1.0/README.md)
@@ -16,7 +16,7 @@ Pyexasol 1.1.0 contains breaking changes.
 
 ## Features
 
-n/a
+ - #1255: Added Python3.12 standard flavor 
 
 ## Security Issues
 
@@ -42,6 +42,7 @@ n/a
 
  - #1233: Updated dependencies for slc-ci-setup & PTB
  - #1238: Updated pyexasol to 1.1.0
+ - #1273: Updated pyexasol to 1.2.0
 
 ## Bugs
 

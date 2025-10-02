@@ -52,7 +52,7 @@
 | 47 | pybase64                                                                                                                       | 1.3.2                | 1.4.2                | UPDATED  |
 | 48 | pybloomfiltermmap3                                                                                                             | 0.5.7                | 0.6.3                | UPDATED  |
 | 49 | pycurl                                                                                                                         | 7.45.3               | 7.45.6               | UPDATED  |
-| 50 | pyexasol                                                                                                                       | 0.25.2               | 1.1.1                | UPDATED  |
+| 50 | pyexasol                                                                                                                       | 0.25.2               | 1.2.0                | UPDATED  |
 | 51 | pyftpdlib                                                                                                                      | 1.5.9                | 2.0.1                | UPDATED  |
 | 52 | pyodbc                                                                                                                         | 5.1.0                | 5.2.0                | UPDATED  |
 | 53 | pysimdjson                                                                                                                     | 6.0.2                | 7.0.2                | UPDATED  |

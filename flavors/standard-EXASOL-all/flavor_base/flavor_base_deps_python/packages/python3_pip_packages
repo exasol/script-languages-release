@@ -36,7 +36,7 @@ google-cloud-storage|2.16.0
 google-cloud-trace|1.13.3
 martian|2.0.post1
 protobuf|4.25.8 #Need to pin to older version - because google-cloud-asset has dependency to <5.0.0dev
-pyexasol|1.2.0
+pyexasol|1.1.1
 pysftp|0.2.9
 pytz|2024.1
 sagemaker|2.218.1

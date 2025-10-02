@@ -16,7 +16,7 @@ Pyexasol 1.1.0 contains breaking changes.
 
 ## Features
 
-n/a
+ - #1255: Added Python3.12 standard flavor 
 
 ## Security Issues
 

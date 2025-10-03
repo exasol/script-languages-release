@@ -7,7 +7,7 @@ Code name: t.b.d.
 t.b.d.
 
 <!-- markdown-link-check-disable -->
-## [Package Version Comparison between Release 10.1.0 and 10.0.0](https://github.com/exasol/script-languages-release/blob/master/doc/changes/package_diffs/10.1.0/README.md)
+## [Package Version Comparison between Release 10.2.0 and 10.1.0](https://github.com/exasol/script-languages-release/blob/master/doc/changes/package_diffs/10.2.0/README.md)
 
 ## Script-Language-Container-Tool (Exaslct)
 

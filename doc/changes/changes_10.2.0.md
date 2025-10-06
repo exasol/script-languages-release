@@ -15,7 +15,8 @@ This release uses version 3.4.1 of the container tool.
 
 ## Features
 
-n/a
+ - #1267: Created template flavor template-Exasol-all-python-3.12-conda
+ - #1268: Created template flavor /template-Exasol-8-python-3.12-cuda-conda
 
 ## Security Issues
 

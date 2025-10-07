@@ -10,6 +10,7 @@
 - [Comparison of flavor Template-exasol-8-python-3.10-cuda-conda](template-Exasol-8-python-3.10-cuda-conda/README.md)
 - [Comparison of flavor Template-exasol-all-python-3.12](template-Exasol-all-python-3.12/README.md)
 - [Comparison of flavor Test-exasol-8-cuda-ml](test-Exasol-8-cuda-ml/README.md)
+- [Comparison of flavor Template-exasol-8-python-3.12-cuda-conda](template-Exasol-8-python-3.12-cuda-conda__template-Exasol-8-python-3.10-cuda-conda/README.md)
 - [Comparison of flavor Template-exasol-all-r-4](template-Exasol-all-r-4/README.md)
 - [Comparison of flavor Standard-exasol-all-r-4.4](standard-EXASOL-all-r-4.4/README.md)
 - [Comparison of flavor Standard-exasol-all-python-3.12](standard-EXASOL-all-python-3.12/README.md)

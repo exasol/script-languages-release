@@ -20,7 +20,7 @@ This release uses version 3.4.1 of the container tool.
 
 ## Security Issues
 
-n/a
+ - #1278: Updated Dependencies on top of 10.1.0
 
 ## Refactorings
 

@@ -9,12 +9,16 @@ Currently, we provide
 - the `standard` flavors: These flavors include three langauage implementations: Java, Python, and R and a collection of typical libraries
 - the `template` flavors: These flavors include a certain language with only absolute necessary packages. This allows very simple customization because you control almost all dependencies.
 
-### Standard flavors
+### Standard Flavors
 
 From the standard-EXASOL flavors, we built the built-in container which we deliver with each Exasol Version.
 It provides the languages Java, Python 3 and R.
+Each of them installs a set of typical packages for the particular language.
 
-We provide one flavor, which can be used in all currently active Exasol versions.
+#### standard-EXASOL-all
+
+We provide one flavor, which includes all supported languages and can be used in all currently active Exasol versions.
+It was used as built-in container before Exasol version 2025.1.
 
 - standard-EXASOL-all
   - Base Image: ubuntu:22.04
@@ -25,7 +29,83 @@ We provide one flavor, which can be used in all currently active Exasol versions
   - Available languages: Java 11, Python 3.10 and R 4.4
   - [Here](standard-EXASOL-all/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-### template-Exasol-all-python-3.10
+#### standard-EXASOL-all-java-11
+
+This flavor supports the Java 11 language and can be used in all currently active Exasol versions.
+It is used as built-in container in Exasol version 2025.1.
+
+- standard-EXASOL-all-java-11
+  - Base Image: ubuntu:22.04
+  - Compatible Exasol Versions: 
+    - 2025.x
+    - 8.\* 
+    - 7.1.\* 
+  - Available languages: Java 11
+  - [Here](standard-EXASOL-all-java-11/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+
+
+#### standard-EXASOL-all-java-17
+
+This flavor supports the Java 17 language and can be used in all currently active Exasol versions.
+It is used as built-in container in Exasol version 2025.1 and later.
+
+- standard-EXASOL-all-java-17
+  - Base Image: ubuntu:22.04
+  - Compatible Exasol Versions: 
+    - 2025.x
+    - 8.\* 
+    - 7.1.\* 
+  - Available languages: Java 17
+  - [Here](standard-EXASOL-all-java-17/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+
+
+#### standard-EXASOL-all-python-3.10
+
+This flavor supports the Python 3.10 language and can be used in all currently active Exasol versions.
+It is used as built-in container in Exasol version 2025.1.
+
+- standard-EXASOL-all-python-3.10
+  - Base Image: ubuntu:22.04
+  - Compatible Exasol Versions: 
+    - 2025.x
+    - 8.\* 
+    - 7.1.\* 
+  - Available languages: Python 3.10
+  - [Here](standard-EXASOL-all-python-3.10/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+
+#### standard-EXASOL-all-python-3.12
+
+This flavor supports the Python 3.12 language and can be used in all currently active Exasol versions.
+It is used as built-in container in Exasol version 2025.1 and later.
+
+- standard-EXASOL-all-python-3.12
+  - Base Image: ubuntu:24.04
+  - Compatible Exasol Versions: 
+    - 2025.x
+    - 8.\* 
+    - 7.1.\* 
+  - Available languages: Python 3.12
+  - [Here](standard-EXASOL-all-python-3.12/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+
+#### standard-EXASOL-all-r-4.4
+
+This flavor supports the R 4.4 language and can be used in all currently active Exasol versions.
+It is used as built-in container in Exasol version 2025.1 and later.
+
+- standard-EXASOL-all-r-4.4
+  - Base Image: ubuntu:22.04
+  - Compatible Exasol Versions: 
+    - 2025.x
+    - 8.\* 
+    - 7.1.\* 
+  - Available languages: R 4.4
+  - [Here](standard-EXASOL-all-r-4.4/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
+
+### Template Flavors
+
+The template flavors provide one language with only absolutely necessary packages. This allows very simple customization because you control almost all dependencies.
+
+#### template-Exasol-all-python-3.10
 
 The template-Exasol-all-python-3.10 flavor provides language Python 3.10 with only absolutely necessary packages. This allows very simple customization because you control almost all dependencies.
 
@@ -38,7 +118,7 @@ The template-Exasol-all-python-3.10 flavor provides language Python 3.10 with on
   - Available languages: Python 3.10
   - [Here](template-Exasol-all-python-3.10/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-### template-Exasol-all-python-3.10-conda
+#### template-Exasol-all-python-3.10-conda
 
 The template-Exasol-all-python-3.10-conda flavor provides the language Python 3.10  with only absolute necessary packages. This allows very simple customization because you control almost all dependencies. In contrast to Python-3.10-minimal, it also allows the installation of conda packages.
 
@@ -52,7 +132,7 @@ The template-Exasol-all-python-3.10-conda flavor provides the language Python 3.
   - Supported Package Manager: conda, pip
   - [Here](template-Exasol-all-python-3.10-conda/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-### template-Exasol-8-python-3.10-cuda-conda
+#### template-Exasol-8-python-3.10-cuda-conda
 
 The template-Exasol-8-python-3.10-cuda-conda flavor provides the language Python 3.10 with NVIDIA GPU support and with only absolute necessary packages. The flavor contains the Cuda-SDK and is prepared to work with the Nvidia-Driver, which however needs to be provided by the Host OS. This allows very simple customization because you control almost all dependencies. In contrast to template-Exasol-all-python-3.10, it also allows the installation of conda packages.
 
@@ -68,7 +148,7 @@ The template-Exasol-8-python-3.10-cuda-conda flavor provides the language Python
 
 **Important**:  If you are using a CUDA driver older than version 575, we recommend that you also install the CUDA compatibility package 12.9.1.
 
-### template-Exasol-all-python-3.12-conda
+#### template-Exasol-all-python-3.12-conda
 
 The template-Exasol-all-python-3.12-conda flavor provides the language Python 3.12  with only absolute necessary packages. This allows very simple customization because you control almost all dependencies. In contrast to template-Exasol-all-python-3.12, it also allows the installation of conda packages.
 
@@ -79,7 +159,7 @@ The template-Exasol-all-python-3.12-conda flavor provides the language Python 3.
   - Supported Package Manager: conda, pip
   - [Here](template-Exasol-all-python-3.12-conda/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-### template-Exasol-8-python-3.12-cuda-conda
+#### template-Exasol-8-python-3.12-cuda-conda
 
 The template-Exasol-8-python-3.12-cuda-conda flavor provides the language Python 3.12 with NVIDIA GPU support and with only absolute necessary packages. The flavor contains the Cuda-SDK and is prepared to work with the Nvidia-Driver, which however needs to be provided by the Host OS. This allows very simple customization because you control almost all dependencies. In contrast to template-Exasol-all-python-3.12, it also allows the installation of conda packages.
 
@@ -95,7 +175,7 @@ The template-Exasol-8-python-3.12-cuda-conda flavor provides the language Python
 
 **Important**:  If you are using a CUDA driver older than version 575, we recommend that you also install the CUDA compatibility package 12.9.1.
 
-### template-Exasol-all-r-4
+#### template-Exasol-all-r-4
 
 The R-4-minimal flavor provides the language R 4.4 with only absolute necessary packages. This allows very simple customization because you control almost all dependencies.
 

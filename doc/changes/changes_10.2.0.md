@@ -36,7 +36,7 @@ n/a
 
 ## Doc
 
-n/a
+ - #1276: Added Cuda Version information section to flavor overview
 
 ## Internal
 

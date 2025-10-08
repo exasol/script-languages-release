@@ -146,7 +146,7 @@ The template-Exasol-8-python-3.10-cuda-conda flavor provides the language Python
   - Installed CuDNN: 9.10.1.4
   - [Here](template-Exasol-8-python-3.10-cuda-conda/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-**Important**:  If you are using a CUDA driver older than version 575, we recommend that you also install the CUDA compatibility package 12.9.1.
+**Important**:  If you are using a CUDA driver older than version 580, we recommend that you also install the CUDA compatibility package (cuda-compat) 12.9.1. (See https://docs.nvidia.com/deploy/cuda-compatibility/minor-version-compatibility.html)
 
 #### template-Exasol-all-python-3.12-conda
 
@@ -173,7 +173,7 @@ The template-Exasol-8-python-3.12-cuda-conda flavor provides the language Python
   - Installed CuDNN: 9.13.1.26
   - [Here](template-Exasol-8-python-3.12-cuda-conda/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-**Important**:  If you are using a CUDA driver older than version 575, we recommend that you also install the CUDA compatibility package 12.9.1.
+**Important**:  If you are using a CUDA driver older than version 580, we recommend that you also install the CUDA compatibility package (cuda-compat) 12.9.1. (See https://docs.nvidia.com/deploy/cuda-compatibility/minor-version-compatibility.html)
 
 #### template-Exasol-all-r-4
 
@@ -211,4 +211,4 @@ So, in order to find the correct version of a flavor for your version of Exasol,
 ## Cuda Support
 
 For the Cuda based flavors we recommend to use the CUDA LTS Driver version 535.
-Depending on the used CUDA Toolkit version you might need to install Cuda Compat. Check the concrete flavor description for details.
+Depending on the used CUDA Toolkit version you might need to install the CUDA compatibility package (cuda-compat). Check the concrete flavor description for details.

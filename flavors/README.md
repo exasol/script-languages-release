@@ -11,14 +11,14 @@ Currently, we provide
 
 ### Standard Flavors
 
-From the standard-EXASOL flavors, we built the built-in container which we deliver with each Exasol Version.
-It provides the languages Java, Python 3 and R.
+From the standard-EXASOL flavors, we built the built-in containers which we deliver with each Exasol Version.
+They provide the languages Java, Python 3 and R.
 Each of them installs a set of typical packages for the particular language.
 
 #### standard-EXASOL-all
 
 We provide one flavor, which includes all supported languages and can be used in all currently active Exasol versions.
-It was used as built-in container before Exasol version 2025.1.
+It is used as built-in container for Exasol versions before the 2025.1 release.
 
 - standard-EXASOL-all
   - Base Image: ubuntu:22.04

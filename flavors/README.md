@@ -103,7 +103,7 @@ It is used as built-in container in Exasol version 2025.1 and later.
 
 ### Template Flavors
 
-The template flavors provide one language with only absolutely necessary packages. This allows very simple customization because you control almost all dependencies.
+The template flavors provide each a single language with only absolutely necessary packages. This allows very simple customization because you control almost all dependencies.
 
 #### template-Exasol-all-python-3.10
 
@@ -212,5 +212,5 @@ So, in order to find the correct version of a flavor for your version of Exasol,
 
 ## Cuda Support
 
-For the Cuda based flavors we recommend to use the CUDA LTS Driver version 535.
+For the CUDA-based flavors we recommend to use the CUDA LTS Driver version 535.
 Depending on the used CUDA Toolkit version you might need to install the CUDA compatibility package (cuda-compat). Check the concrete flavor description for details.

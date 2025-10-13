@@ -134,7 +134,7 @@ The template-Exasol-all-python-3.10-conda flavor provides the language Python 3.
 
 #### template-Exasol-8-python-3.10-cuda-conda
 
-The template-Exasol-8-python-3.10-cuda-conda flavor provides the language Python 3.10 with NVIDIA GPU support and with only absolute necessary packages. The flavor contains the Cuda-SDK and is prepared to work with the Nvidia-Driver, which however needs to be provided by the Host OS. This allows very simple customization because you control almost all dependencies. In contrast to template-Exasol-all-python-3.10, it also allows the installation of conda packages.
+The template-Exasol-8-python-3.10-cuda-conda flavor provides the language Python 3.10 with NVIDIA GPU support and with only absolute necessary packages. The flavor contains the CUDA-SDK and is prepared to work with the Nvidia-Driver, which however needs to be provided by the Host OS. This allows very simple customization because you control almost all dependencies. In contrast to template-Exasol-all-python-3.10, it also allows the installation of conda packages.
 
 - template-Exasol-8-python-3.10-cuda-conda
   - Base Image: ubuntu:22.04
@@ -162,7 +162,7 @@ The template-Exasol-all-python-3.12-conda flavor provides the language Python 3.
 
 #### template-Exasol-8-python-3.12-cuda-conda
 
-The template-Exasol-8-python-3.12-cuda-conda flavor provides the language Python 3.12 with NVIDIA GPU support and with only absolute necessary packages. The flavor contains the Cuda-SDK and is prepared to work with the Nvidia-Driver, which however needs to be provided by the Host OS. This allows very simple customization because you control almost all dependencies. In contrast to template-Exasol-all-python-3.12, it also allows the installation of conda packages.
+The template-Exasol-8-python-3.12-cuda-conda flavor provides the language Python 3.12 with NVIDIA GPU support and with only absolute necessary packages. The flavor contains the CUDA-SDK and is prepared to work with the Nvidia-Driver, which however needs to be provided by the Host OS. This allows very simple customization because you control almost all dependencies. In contrast to template-Exasol-all-python-3.12, it also allows the installation of conda packages.
 
 - template-Exasol-8-python-3.12-cuda-conda
   - Base Image: ubuntu:24.04
@@ -213,4 +213,4 @@ So, in order to find the correct version of a flavor for your version of Exasol,
 ## Cuda Support
 
 For the CUDA-based flavors we recommend to use the CUDA LTS Driver version 535.
-Depending on the used CUDA Toolkit version you might need to install the CUDA compatibility package (cuda-compat). Check the concrete flavor description for details.
+Depending on the used CUDA-Toolkit version you might need to install the CUDA compatibility package (cuda-compat). Check the concrete flavor description for details.

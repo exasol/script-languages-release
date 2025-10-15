@@ -28,7 +28,7 @@ n/a
 
 ## Dependencies
 
-n/a
+ - #1286: Updated Bazel in Python 3.10 Conda flavor
 
 ## Bugs
 

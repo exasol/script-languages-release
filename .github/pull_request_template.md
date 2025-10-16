@@ -17,6 +17,7 @@
 
 1. [ ] Remember to merge with "Merge"
 2. [ ] Have you thought about version number? If there is a breaking change in the toolchain, need to update major version.
-3. [ ] If you plan a release, have you checked the Exasol packages for updates?
+3. [ ] If you plan a release, have you checked the Exasol/partner packages for updates?
    1. Websocket API (https://github.com/EXASOL/websocket-api)
    2. [Exasol-BucketFS](https://pypi.org/project/exasol-bucketfs/)
+   3. [sqlglot](https://pypi.org/project/sqlglot/)

@@ -28,7 +28,7 @@ n/a
 
 ## Dependencies
 
-n/a
+ - #1286: Updated Bazel in Python 3.10 Conda flavor
 
 ## Bugs
 
@@ -36,7 +36,7 @@ n/a
 
 ## Doc
 
-n/a
+ - #1276: Added Cuda Version information section to flavor overview
 
 ## Internal
 

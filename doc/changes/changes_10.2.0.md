@@ -30,6 +30,7 @@ n/a
 ## Dependencies
 
  - #1286: Updated Bazel in Python 3.10 Conda flavor
+ - #1291: Updated poetry lock 
 
 ## Bugs
 

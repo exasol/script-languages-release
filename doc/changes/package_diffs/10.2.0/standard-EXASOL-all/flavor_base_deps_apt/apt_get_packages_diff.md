@@ -2,9 +2,9 @@
 
 |    | Package              | Version in 10.1.0            | Version in 10.2.0            | Status   |
 |---:|:---------------------|:-----------------------------|:-----------------------------|:---------|
-|  0 | libsmbclient         | 2:4.15.13+dfsg-0ubuntu1.8    | 2:4.15.13+dfsg-0ubuntu1.9    | UPDATED  |
-|  1 | libsmbclient-dev     | 2:4.15.13+dfsg-0ubuntu1.8    | 2:4.15.13+dfsg-0ubuntu1.9    | UPDATED  |
-|  2 | smbclient            | 2:4.15.13+dfsg-0ubuntu1.8    | 2:4.15.13+dfsg-0ubuntu1.9    | UPDATED  |
+|  0 | libsmbclient         | 2:4.15.13+dfsg-0ubuntu1.8    | 2:4.15.13+dfsg-0ubuntu1.10   | UPDATED  |
+|  1 | libsmbclient-dev     | 2:4.15.13+dfsg-0ubuntu1.8    | 2:4.15.13+dfsg-0ubuntu1.10   | UPDATED  |
+|  2 | smbclient            | 2:4.15.13+dfsg-0ubuntu1.8    | 2:4.15.13+dfsg-0ubuntu1.10   | UPDATED  |
 |  3 | apt-transport-https  | 2.4.14                       | 2.4.14                       |          |
 |  4 | build-essential      | 12.9ubuntu3                  | 12.9ubuntu3                  |          |
 |  5 | cmake                | 3.22.1-1ubuntu1.22.04.2      | 3.22.1-1ubuntu1.22.04.2      |          |

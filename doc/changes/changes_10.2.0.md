@@ -30,6 +30,8 @@ n/a
 ## Dependencies
 
  - #1286: Updated Bazel in Python 3.10 Conda flavor
+ - #1291: Updated poetry lock 
+ - #1295: Fixed template-Exasol-8-python-3.12-cuda-conda by downgrading conda package `cudnn`
 
 ## Bugs
 

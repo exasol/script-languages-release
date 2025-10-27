@@ -21,6 +21,7 @@ This release uses version 3.4.1 of the container tool.
 ## Security Issues
 
  - #1278: Updated Dependencies on top of 10.1.0
+ - #1289: Updated Dependencies on top of 10.1.0
 
 ## Refactorings
 
@@ -29,6 +30,8 @@ This release uses version 3.4.1 of the container tool.
 ## Dependencies
 
  - #1286: Updated Bazel in Python 3.10 Conda flavor
+ - #1291: Updated poetry lock 
+ - #1295: Fixed template-Exasol-8-python-3.12-cuda-conda by downgrading conda package `cudnn`
 
 ## Bugs
 

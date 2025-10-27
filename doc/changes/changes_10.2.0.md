@@ -24,7 +24,7 @@ This release uses version 3.4.1 of the container tool.
 
 ## Refactorings
 
-n/a
+ - #1298: Added error-code-config.yml
 
 ## Dependencies
 

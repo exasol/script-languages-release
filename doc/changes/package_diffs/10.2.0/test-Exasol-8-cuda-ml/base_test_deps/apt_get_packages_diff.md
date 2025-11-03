@@ -2,7 +2,7 @@
 
 |    | Package   | Version in 10.1.0     | Version in 10.2.0         | Status   |
 |---:|:----------|:----------------------|:--------------------------|:---------|
-|  0 | binutils  | 2.38-4ubuntu2.8       | 2.42-4ubuntu2.5           | UPDATED  |
+|  0 | binutils  | 2.38-4ubuntu2.8       | 2.42-4ubuntu2.6           | UPDATED  |
 |  1 | gdb       | 12.1-0ubuntu1~22.04.2 | 15.0.50.20240403-0ubuntu1 | UPDATED  |
 |  2 | gdbserver | 12.1-0ubuntu1~22.04.2 | 15.0.50.20240403-0ubuntu1 | UPDATED  |
 |  3 | patchelf  | 0.14.3-1              | 0.18.0-1.1build1          | UPDATED  |

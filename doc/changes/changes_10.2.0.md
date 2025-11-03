@@ -22,6 +22,8 @@ This release uses version 3.4.1 of the container tool.
 
  - #1278: Updated Dependencies on top of 10.1.0
  - #1289: Updated Dependencies on top of 10.1.0
+ - #1303: Updated Dependencies on top of 10.1.0
+ - #1304: Ignoring CVEs from nsight-compute 
 
 ## Refactorings
 

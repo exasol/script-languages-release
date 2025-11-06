@@ -22,20 +22,26 @@ This release uses version 3.4.1 of the container tool.
 
  - #1278: Updated Dependencies on top of 10.1.0
  - #1289: Updated Dependencies on top of 10.1.0
+ - #1303: Updated Dependencies on top of 10.1.0
+ - #1304: Ignoring CVEs from nsight-compute 
+ - #1306: Updated Dependencies on top of 10.1.0 and fixed CVE-2025-6176
+ - #1311: Updated Dependencies on top of 10.1.0 libxml2-dev
 
 ## Refactorings
 
-n/a
+ - #1298: Added error-code-config.yml
+ - #1309: Replaced AWS User release_runner(s) by IAM Role
 
 ## Dependencies
 
  - #1286: Updated Bazel in Python 3.10 Conda flavor
  - #1291: Updated poetry lock 
  - #1295: Fixed template-Exasol-8-python-3.12-cuda-conda by downgrading conda package `cudnn`
+ - #1294: Updated cuda test flavor
 
 ## Bugs
 
-n/a
+ - #1300: Changed uid/gid for Ubuntu 24.04 based flavors
 
 ## Doc
 

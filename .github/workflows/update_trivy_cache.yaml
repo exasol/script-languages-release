@@ -5,6 +5,10 @@ on:
   schedule:
     - cron: "30 0 * * *"
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   update_trivy_cache:
     environment: AWS
@@ -31,12 +35,16 @@ jobs:
           tar -czf trivy_cache.tar.gz ./trivy
           popd
 
+      - uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ vars.AWS_CI_ROLE }}
+          role-session-name: github-actions-ai-lab
+          aws-region: ${{ vars.AWS_CI_REGION }}
+
       - name: Copy trivy databases
         run: aws s3 cp  "$HOME/.cache/trivy_cache.tar.gz" "$TRIVY_CACHE_LOCATION/trivy_cache.tar.gz"
-        env: # Set the secret as an env variable
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_SECRET }}
-          AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
+        env:
+          AWS_REGION: ${{ vars.AWS_CI_REGION }}
           TRIVY_CACHE_LOCATION: ${{ secrets.TRIVY_CACHE_LOCATION }}
 
       - name: Report failure Status to Slack channel

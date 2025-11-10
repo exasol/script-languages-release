@@ -59,4 +59,4 @@ jobs:
           message_format: "{emoji} *{workflow}* {status_message} in <{repo_url}|{repo}>"
           notify_when: "failure,cancelled,warnings,skipped"
         env:
-          SLACK_WEBHOOK_URL: ${{ secrets.INTEGRATION_TEAM_SLACK_NOTIFICATION_WEBHOOK }}
+          SLACK_WEBHOOK_URL: ${{ secrets.INTEGRATION_TEAM_SLC_MONITORING_WEBHOOK }}

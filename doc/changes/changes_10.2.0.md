@@ -31,6 +31,7 @@ This release uses version 3.4.1 of the container tool.
 
  - #1298: Added error-code-config.yml
  - #1309: Replaced AWS User release_runner(s) by IAM Role
+ - #1313: Switched slack channel for update trivy cache workflow notification 
 
 ## Dependencies
 

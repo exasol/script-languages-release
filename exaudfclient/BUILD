@@ -63,18 +63,18 @@ config_setting(
 
 
 VM_ENABLED_DEPS=select({
-        "//:benchmark": ["//base/benchmark_container:benchmark_container"],
+        "//:benchmark": ["@exaudfclient//base/benchmark_container:benchmark_container"],
         "//conditions:default": []
     }) + select({
-        "//:java": ["//base/javacontainer:javacontainer"],
+        "//:java": ["@exaudfclient//base/javacontainer:javacontainer"],
         "//conditions:default": []
     }) + select({
-        "//:bash": ["//base/streaming_container:streamingcontainer"],
+        "//:bash": ["@exaudfclient//base/streaming_container:streamingcontainer"],
         "//conditions:default": []
     })
 
 VM_PYTHON3_DEPS=select({
-        "//:python": ["//base/python/python3:pythoncontainer"],
+        "//:python": ["@exaudfclient//base/python/python3:pythoncontainer"],
         "//conditions:default": []
     })
 
@@ -87,12 +87,12 @@ VM_R_DEPS=select({
 
 cc_binary(
     name = "exaudfclient_bin",
-    srcs = ["exaudfclient.cc", "//base:load_dynamic"],
+    srcs = ["exaudfclient.cc", "@exaudfclient//base:load_dynamic"],
     linkopts = ["-ldl"], # needed for dynamicly loading libexaudflib_complete.so into another linker namespace
-    deps = ["//base/exaudflib:header", "//base/utils:utils"]+VM_ENABLED_DEPS+VM_PYTHON3_DEPS+VM_R_DEPS+
-            ["//base/exaudflib:exaudflib-deps"],
+    deps = ["@exaudfclient//base/exaudflib:header", "@exaudfclient//base/utils:utils"]+VM_ENABLED_DEPS+VM_PYTHON3_DEPS+VM_R_DEPS+
+            ["@exaudfclient//base/exaudflib:exaudflib-deps"],
     defines = VM_ENABLED_DEFINES,
-    data = ["//base:libexaudflib_complete.so"]
+    data = ["@exaudfclient//base:libexaudflib_complete.so"]
 )
 
 ## The purpose of the static binaries is to verify if the linker namespace test work correctly.
@@ -104,18 +104,18 @@ cc_binary(
 ## Besides this the test under test/python3/all/linker_namespace.py checks the normal build, which expects
 ## not to find any occurence of the dependencies (protobuf/zmq) in the primary linker namespace.
 ##
-## We need to explicitly declare the dependency of protobuf/zmq here, as the exaudflib is a static lib (//base/exaudflib:exaudflib)
+## We need to explicitly declare the dependency of protobuf/zmq here, as the exaudflib is a static lib (@exaudfclient//base/exaudflib:exaudflib)
 ## and hence does not contain dependency information. We cannot declare the shared lib (:exaudflib_complete.so)
 ## as dependency as it is a binary for bazel.
 
 cc_binary(
     name = "exaudfclient_static_bin",
-    srcs = ["exaudfclient.cc",  "//base:load_dynamic"],
+    srcs = ["exaudfclient.cc",  "@exaudfclient//base:load_dynamic"],
     linkopts = ["-ldl"], # needed for dynamicly loading libexaudflib_complete.so into another linker namespace
-    deps = ["//base/exaudflib:header", "//base/utils:utils"]+VM_ENABLED_DEPS+VM_PYTHON3_DEPS+VM_R_DEPS+
-            ["//base/exaudflib:exaudflib-deps"] + [ "@zmq//:zmq", "@protobuf//:protobuf"],
+    deps = ["@exaudfclient//base/exaudflib:header", "@exaudfclient//base/utils:utils"]+VM_ENABLED_DEPS+VM_PYTHON3_DEPS+VM_R_DEPS+
+            ["@exaudfclient//base/exaudflib:exaudflib-deps"] + [ "@zmq//:zmq", "@protobuf//:protobuf"],
     defines = VM_ENABLED_DEFINES,
-    data = ["//base:libexaudflib_complete.so"],
+    data = ["@exaudfclient//base:libexaudflib_complete.so"],
 )
 
 # Workarround for the hardcoded paths in exaudfclient for libexaudflib_complete.so and python_ext_dataframe.cc
@@ -129,15 +129,15 @@ cc_binary(
 sh_library(
     name = "wrapper_generator_bin",
     srcs=select({
-        "//:valgrind_wrapper": ["//base:create_binary_wrapper_valgrind.sh"],
-        "//:valgrind_massif_wrapper": ["//base:create_binary_wrapper_valgrind_massif.sh"],
-        "//:stdout_to_bucketfs": ["//base:create_binary_wrapper_stdout_to_bucketfs.sh"],
-        "//conditions:default": ["//base:create_binary_wrapper.sh"]
+        "//:valgrind_wrapper": ["@exaudfclient//base:create_binary_wrapper_valgrind.sh"],
+        "//:valgrind_massif_wrapper": ["@exaudfclient//base:create_binary_wrapper_valgrind_massif.sh"],
+        "//:stdout_to_bucketfs": ["@exaudfclient//base:create_binary_wrapper_stdout_to_bucketfs.sh"],
+        "//conditions:default": ["@exaudfclient//base:create_binary_wrapper.sh"]
     })
 )
 
 
-SLOW_WRAPPER_BINARY="""$(location //:wrapper_generator_bin) "$(location exaudfclient_bin)" "$(location exaudfclient)" "$(location //base:exaudfclient.template.sh)" """
+SLOW_WRAPPER_BINARY="""$(location //:wrapper_generator_bin) "$(location exaudfclient_bin)" "$(location exaudfclient)" "$(location @exaudfclient//base:exaudfclient.template.sh)" """
 FAST_BINARY="""cp "$(location exaudfclient_bin)" "$(location exaudfclient)" """
 CREATE_BINARY_SCRIPT=select({
         "//:fast_binary": FAST_BINARY,
@@ -148,11 +148,11 @@ genrule(
     name = "exaudfclient",
     cmd = CREATE_BINARY_SCRIPT,
     outs = ["exaudfclient"],
-    srcs = [":exaudfclient_bin", "//base:libexaudflib_complete.so", "//base:exaudfclient.template.sh", "//:wrapper_generator_bin"],
+    srcs = [":exaudfclient_bin", "@exaudfclient//base:libexaudflib_complete.so", "@exaudfclient//base:exaudfclient.template.sh", "//:wrapper_generator_bin"],
     output_to_bindir = True
 )
 
-SLOW_WRAPPER_STATIC_BINARY="""$(location //:wrapper_generator_bin) "$(location exaudfclient_static_bin)" "$(location exaudfclient_static)" "$(location //base:exaudfclient.template.sh)" """
+SLOW_WRAPPER_STATIC_BINARY="""$(location //:wrapper_generator_bin) "$(location exaudfclient_static_bin)" "$(location exaudfclient_static)" "$(location @exaudfclient//base:exaudfclient.template.sh)" """
 FAST_BINARY_STATIC="""cp "$(location exaudfclient_static_bin)" "$(location exaudfclient_static)" """
 CREATE_STATIC_BINARY_SCRIPT=select({
         "//:fast_binary": FAST_BINARY_STATIC,
@@ -164,6 +164,6 @@ genrule(
     name = "exaudfclient_static",
     cmd = CREATE_STATIC_BINARY_SCRIPT,
     outs = ["exaudfclient_static"],
-    srcs = [":exaudfclient_static_bin", "//base:libexaudflib_complete.so", "//base:exaudfclient.template.sh", "//:wrapper_generator_bin"],
+    srcs = [":exaudfclient_static_bin", "@exaudfclient//base:libexaudflib_complete.so", "@exaudfclient//base:exaudfclient.template.sh", "//:wrapper_generator_bin"],
     output_to_bindir = True
 )

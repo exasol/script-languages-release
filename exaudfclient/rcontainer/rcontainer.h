@@ -1,7 +1,7 @@
 #ifndef RCONTAINER_H
 #define RCONTAINER_H
 
-#include "base/exaudflib/vm/swig_vm.h"
+#include "exaudflib/vm/swig_vm.h"
   
 
 using namespace SWIGVMContainers;

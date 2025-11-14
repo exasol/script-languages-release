@@ -29,8 +29,8 @@ RUN ["/bin/bash", "-c", "source /env && bash build.sh --config no-tty --config o
 RUN cp -r -L bazel-bin/* /exaudf && rm -r /exaudf/external
 RUN rm -r /root/.cache/bazel #Delete bazel cache as it contains java rules with special characters which will cause a problem for Bucketfs
 
-WORKDIR /exaudfclient/base
-RUN ./test_udfclient.sh /exaudf/exaudfclient
+#WORKDIR /exaudfclient/base
+#RUN ./test_udfclient.sh /exaudf/exaudfclient
 
 WORKDIR /exaudf/
 

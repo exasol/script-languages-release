@@ -14,19 +14,19 @@
 #include <dlfcn.h>
 #endif
 #include <exception>
-#include "base/exaudflib/vm/swig_vm.h"
-#include "base/exaudflib/load_dynamic.h"
+#include "exaudflib/vm/swig_vm.h"
+#include "exaudflib/load_dynamic.h"
 #ifdef ENABLE_R_VM
 #include "rcontainer/rcontainer.h"
 #endif
 #ifdef ENABLE_BENCHMARK_VM
-#include "base/benchmark_container/benchmark_container.h"
+#include "benchmark_container/benchmark_container.h"
 #endif
 #ifdef ENABLE_STREAMING_VM
-#include "base/streaming_container/streamingcontainer.h"
+#include "streaming_container/streamingcontainer.h"
 #endif
 #include <functional>
-#include "base/utils/debug_message.h"
+#include "utils/debug_message.h"
 #include <stdio.h>
 #include <stddef.h>
 #include <stdint.h>
@@ -40,11 +40,11 @@
 
 
 #ifdef ENABLE_JAVA_VM
-#include "base/javacontainer/javacontainer_builder.h"
+#include "javacontainer/javacontainer_builder.h"
 #endif //ENABLE_JAVA_VM
 
 #ifdef ENABLE_PYTHON_VM
-#include "base/python/pythoncontainer.h"
+#include "python/pythoncontainer.h"
 #endif //ENABLE_PYTHON_VM
 
 #ifdef UDF_PLUGIN_CLIENT

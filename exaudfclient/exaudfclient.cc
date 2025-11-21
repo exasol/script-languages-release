@@ -10,6 +10,9 @@
 #include <fstream>
 #include <link.h>
 #include <string.h>
+
+#include "exaudf_lib_output_path.h"
+
 #ifndef UDF_PLUGIN_CLIENT
 #include <dlfcn.h>
 #endif

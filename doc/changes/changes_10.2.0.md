@@ -31,6 +31,7 @@ This release uses version 3.4.1 of the container tool.
 
  - #1298: Added error-code-config.yml
  - #1309: Replaced AWS User release_runner(s) by IAM Role
+ - #1313: Switched slack channel for update trivy cache workflow notification 
 
 ## Dependencies
 
@@ -38,6 +39,7 @@ This release uses version 3.4.1 of the container tool.
  - #1291: Updated poetry lock 
  - #1295: Fixed template-Exasol-8-python-3.12-cuda-conda by downgrading conda package `cudnn`
  - #1294: Updated cuda test flavor
+ - #1319: Update Dependencies on top of 10.1.0
 
 ## Bugs
 

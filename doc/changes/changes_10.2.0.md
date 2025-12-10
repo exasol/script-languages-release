@@ -26,12 +26,14 @@ This release uses version 3.4.1 of the container tool.
  - #1304: Ignoring CVEs from nsight-compute 
  - #1306: Updated Dependencies on top of 10.1.0 and fixed CVE-2025-6176
  - #1311: Updated Dependencies on top of 10.1.0 libxml2-dev
+ - #1323: Updated Dependencies on top of 10.1.0 
 
 ## Refactorings
 
  - #1298: Added error-code-config.yml
  - #1309: Replaced AWS User release_runner(s) by IAM Role
- - #1313: Switched slack channel for update trivy cache workflow notification 
+ - #1313: Switched slack channel for update trivy cache workflow notification
+ - #1324: Updated slc-ci-setup
 
 ## Dependencies
 

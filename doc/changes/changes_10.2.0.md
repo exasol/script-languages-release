@@ -46,6 +46,7 @@ This release uses version 3.4.1 of the container tool.
 ## Bugs
 
  - #1300: Changed uid/gid for Ubuntu 24.04 based flavors
+ - #1326: Fixed Java Tests
 
 ## Doc
 

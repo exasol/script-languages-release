@@ -26,7 +26,8 @@ This release uses version 3.4.1 of the container tool.
  - #1304: Ignoring CVEs from nsight-compute 
  - #1306: Updated Dependencies on top of 10.1.0 and fixed CVE-2025-6176
  - #1311: Updated Dependencies on top of 10.1.0 libxml2-dev
- - #1323: Updated Dependencies on top of 10.1.0 
+ - #1323: Updated Dependencies on top of 10.1.0
+ - #1328: Updated Dependencies on top of 10.1.0
 
 ## Refactorings
 
@@ -42,6 +43,7 @@ This release uses version 3.4.1 of the container tool.
  - #1295: Fixed template-Exasol-8-python-3.12-cuda-conda by downgrading conda package `cudnn`
  - #1294: Updated cuda test flavor
  - #1319: Update Dependencies on top of 10.1.0
+ - #1317: Updated dependency pandas from 2.2.2 to 2.2.3
 
 ## Bugs
 

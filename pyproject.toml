@@ -3,7 +3,7 @@ name = "exasol-script-languages-release"
 version = "10.2.0"
 description = "Script Languages Release"
 
-requires-python = ">=3.10, <4.0"
+requires-python = ">=3.10, <3.14"
 
 license = "MIT"
 

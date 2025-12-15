@@ -35,6 +35,7 @@ This release uses version 3.4.1 of the container tool.
  - #1309: Replaced AWS User release_runner(s) by IAM Role
  - #1313: Switched slack channel for update trivy cache workflow notification
  - #1324: Updated slc-ci-setup
+ - #1330: Ignored Python module 'google_crc32c._crc32c' in import test
 
 ## Dependencies
 

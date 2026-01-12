@@ -1,4 +1,4 @@
-# Package Version Comparison between Test-exasol-8-cuda-ml flavor in 10.1.0 and Test-exasol-8-cuda-ml flavor in 10.1.0
+# Package Version Comparison between Test-exasol-8-cuda-ml flavor in 10.1.0 and Test-exasol-8-cuda-ml flavor in 10.0.0
 
 - Comparison of build step Udfclient_deps
   - [Comparison of Conda Channels](udfclient_deps/conda_channels_diff.md)

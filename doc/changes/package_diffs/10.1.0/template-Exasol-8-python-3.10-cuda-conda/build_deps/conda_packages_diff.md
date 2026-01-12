@@ -1,6 +1,6 @@
 <!-- markdown-link-check-disable -->
 
-|    | Package      | Version in 10.1.0   | Version in 10.1.0   | Status   |
+|    | Package      | Version in 10.0.0   | Version in 10.1.0   | Status   |
 |---:|:-------------|:--------------------|:--------------------|:---------|
 |  0 | bazel        | 7.6.1               | 7.6.1               |          |
 |  1 | chrpath      | 0.16                | 0.16                |          |

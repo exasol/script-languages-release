@@ -143,7 +143,6 @@ The template-Exasol-8-python-3.10-cuda-conda flavor provides the language Python
   - Supported Package Manager: conda, pip
   - Without NVIDIA Driver
   - Installed CudaToolkit: 12.9.1
-  - Installed CuDNN: 9.10.1.4
   - [Here](template-Exasol-8-python-3.10-cuda-conda/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
 **Important**:  If you are using a CUDA driver older than version 575, we recommend that you also install the CUDA compatibility package (cuda-compat) `12.9.1`. See https://docs.nvidia.com/deploy/cuda-compatibility/forward-compatibility.html#deployment-considerations-for-forward-compatibility for compatible drivers. 
@@ -171,7 +170,6 @@ The template-Exasol-8-python-3.12-cuda-conda flavor provides the language Python
   - Supported Package Manager: conda, pip
   - Without NVIDIA Driver
   - Installed CudaToolkit: 12.9.1
-  - Installed CuDNN: 9.13.1.26
   - [Here](template-Exasol-8-python-3.12-cuda-conda/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
 **Important**:  If you are using a CUDA driver older than version 575, we recommend that you also install the CUDA compatibility package (cuda-compat) `12.9.1`. See https://docs.nvidia.com/deploy/cuda-compatibility/forward-compatibility.html#deployment-considerations-for-forward-compatibility for compatible drivers. 

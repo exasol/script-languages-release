@@ -14,3 +14,5 @@
 - [Comparison of flavor Template-exasol-all-python-3.12-conda](template-Exasol-all-python-3.12-conda__template-Exasol-all-python-3.10-conda/README.md)
 - [Comparison of flavor Template-exasol-all-r-4](template-Exasol-all-r-4/README.md)
 - [Comparison of flavor Test-exasol-8-cuda-ml](test-Exasol-8-cuda-ml/README.md)
+
+Package `cudnn` was removed from Cuda template flavors.

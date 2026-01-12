@@ -210,5 +210,5 @@ So, in order to find the correct version of a flavor for your version of Exasol,
 
 ## Cuda Support
 
-For the CUDA-based flavors we recommend to use the CUDA LTS Driver version 535.
+For the CUDA-based flavors we recommend to use the CUDA LTS Driver version 580.
 Depending on the used CUDA-Toolkit version you might need to install the CUDA compatibility package (cuda-compat). Check the concrete flavor description for details.

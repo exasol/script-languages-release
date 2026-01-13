@@ -56,6 +56,7 @@ This release uses version 3.4.1 of the container tool.
 ## Doc
 
  - #1276: Added Cuda Version information section to flavor overview
+ - #1341: Removed Cudnn package from flavors/README.md
 
 ## Internal
 

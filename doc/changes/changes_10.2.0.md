@@ -29,6 +29,7 @@ This release uses version 3.4.1 of the container tool.
  - #1323: Updated Dependencies on top of 10.1.0
  - #1328: Updated Dependencies on top of 10.1.0
  - #1339: Updated Dependencies on top of 10.2.0
+ - #1345: Updated Dependencies on top of 10.2.0
 
 ## Refactorings
 

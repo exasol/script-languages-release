@@ -2,15 +2,15 @@
 
 |    | Package              | Version in 10.1.0            | Version in 10.2.0            | Status   |
 |---:|:---------------------|:-----------------------------|:-----------------------------|:---------|
-|  0 | libsmbclient         | 2:4.15.13+dfsg-0ubuntu1.8    | 2:4.15.13+dfsg-0ubuntu1.10   | UPDATED  |
-|  1 | libsmbclient-dev     | 2:4.15.13+dfsg-0ubuntu1.8    | 2:4.15.13+dfsg-0ubuntu1.10   | UPDATED  |
-|  2 | libxml2-dev          | 2.9.13+dfsg-1ubuntu0.9       | 2.9.13+dfsg-1ubuntu0.10      | UPDATED  |
-|  3 | smbclient            | 2:4.15.13+dfsg-0ubuntu1.8    | 2:4.15.13+dfsg-0ubuntu1.10   | UPDATED  |
-|  4 | apt-transport-https  | 2.4.14                       | 2.4.14                       |          |
-|  5 | build-essential      | 12.9ubuntu3                  | 12.9ubuntu3                  |          |
-|  6 | cmake                | 3.22.1-1ubuntu1.22.04.2      | 3.22.1-1ubuntu1.22.04.2      |          |
-|  7 | git                  | 1:2.34.1-1ubuntu1.15         | 1:2.34.1-1ubuntu1.15         |          |
-|  8 | gnupg                | 2.2.27-3ubuntu2.4            | 2.2.27-3ubuntu2.4            |          |
+|  0 | gnupg                | 2.2.27-3ubuntu2.4            | 2.2.27-3ubuntu2.5            | UPDATED  |
+|  1 | libsmbclient         | 2:4.15.13+dfsg-0ubuntu1.8    | 2:4.15.13+dfsg-0ubuntu1.10   | UPDATED  |
+|  2 | libsmbclient-dev     | 2:4.15.13+dfsg-0ubuntu1.8    | 2:4.15.13+dfsg-0ubuntu1.10   | UPDATED  |
+|  3 | libxml2-dev          | 2.9.13+dfsg-1ubuntu0.9       | 2.9.13+dfsg-1ubuntu0.10      | UPDATED  |
+|  4 | smbclient            | 2:4.15.13+dfsg-0ubuntu1.8    | 2:4.15.13+dfsg-0ubuntu1.10   | UPDATED  |
+|  5 | apt-transport-https  | 2.4.14                       | 2.4.14                       |          |
+|  6 | build-essential      | 12.9ubuntu3                  | 12.9ubuntu3                  |          |
+|  7 | cmake                | 3.22.1-1ubuntu1.22.04.2      | 3.22.1-1ubuntu1.22.04.2      |          |
+|  8 | git                  | 1:2.34.1-1ubuntu1.15         | 1:2.34.1-1ubuntu1.15         |          |
 |  9 | ldap-utils           | 2.5.19+dfsg-0ubuntu0.22.04.1 | 2.5.19+dfsg-0ubuntu0.22.04.1 |          |
 | 10 | libcurl4-openssl-dev | 7.81.0-1ubuntu1.21           | 7.81.0-1ubuntu1.21           |          |
 | 11 | libhiredis-dev       | 0.14.1-2                     | 0.14.1-2                     |          |

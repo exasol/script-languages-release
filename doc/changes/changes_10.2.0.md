@@ -28,6 +28,8 @@ This release uses version 3.4.1 of the container tool.
  - #1311: Updated Dependencies on top of 10.1.0 libxml2-dev
  - #1323: Updated Dependencies on top of 10.1.0
  - #1328: Updated Dependencies on top of 10.1.0
+ - #1339: Updated Dependencies on top of 10.2.0
+ - #1345: Updated Dependencies on top of 10.2.0
 
 ## Refactorings
 
@@ -45,6 +47,7 @@ This release uses version 3.4.1 of the container tool.
  - #1294: Updated cuda test flavor
  - #1319: Update Dependencies on top of 10.1.0
  - #1317: Updated dependency pandas from 2.2.2 to 2.2.3
+ - #1334: Removed package cudnn from cuda template flavors
 
 ## Bugs
 
@@ -54,6 +57,7 @@ This release uses version 3.4.1 of the container tool.
 ## Doc
 
  - #1276: Added Cuda Version information section to flavor overview
+ - #1341: Removed Cudnn package from flavors/README.md
 
 ## Internal
 

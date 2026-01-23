@@ -27,3 +27,5 @@ jobs:
           source "$UDF_CLIENT_ENV_FILE"
           bazel build --lockfile_mode=off --config no-tty -c dbg --config python --config java --config fast-binary --config r --verbose_failures
         working-directory: ./exaudfclient/
+        env:
+          USE_BAZEL_VERSION: "7.2.1"

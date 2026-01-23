@@ -5,7 +5,7 @@
 |  0 | gnupg                | 2.2.27-3ubuntu2.4            | 2.2.27-3ubuntu2.5            | UPDATED  |
 |  1 | libsmbclient         | 2:4.15.13+dfsg-0ubuntu1.8    | 2:4.15.13+dfsg-0ubuntu1.10   | UPDATED  |
 |  2 | libsmbclient-dev     | 2:4.15.13+dfsg-0ubuntu1.8    | 2:4.15.13+dfsg-0ubuntu1.10   | UPDATED  |
-|  3 | libxml2-dev          | 2.9.13+dfsg-1ubuntu0.9       | 2.9.13+dfsg-1ubuntu0.10      | UPDATED  |
+|  3 | libxml2-dev          | 2.9.13+dfsg-1ubuntu0.9       | 2.9.13+dfsg-1ubuntu0.11      | UPDATED  |
 |  4 | smbclient            | 2:4.15.13+dfsg-0ubuntu1.8    | 2:4.15.13+dfsg-0ubuntu1.10   | UPDATED  |
 |  5 | apt-transport-https  | 2.4.14                       | 2.4.14                       |          |
 |  6 | build-essential      | 12.9ubuntu3                  | 12.9ubuntu3                  |          |

@@ -28,8 +28,9 @@ This release uses version 3.4.1 of the container tool.
  - #1311: Updated Dependencies on top of 10.1.0 libxml2-dev
  - #1323: Updated Dependencies on top of 10.1.0
  - #1328: Updated Dependencies on top of 10.1.0
- - #1339: Updated Dependencies on top of 10.2.0
- - #1345: Updated Dependencies on top of 10.2.0
+ - #1339: Updated Dependencies on top of 10.1.0
+ - #1345: Updated Dependencies on top of 10.1.0
+ - #1352: Updated Dependencies on top of 10.1.0
 
 ## Refactorings
 

@@ -2,6 +2,6 @@
 
 |    | Package                 | Version in 10.1.0          | Version in 10.2.0        | Status   |
 |---:|:------------------------|:---------------------------|:-------------------------|:---------|
-|  0 | openjdk-11-jdk-headless | 11.0.28+6-1ubuntu1~22.04.1 | 11.0.29+7-1ubuntu1~22.04 | UPDATED  |
+|  0 | openjdk-11-jdk-headless | 11.0.28+6-1ubuntu1~22.04.1 | 11.0.30+7-1ubuntu1~22.04 | UPDATED  |
 |  1 | ca-certificates         | 20240203~22.04.1           | 20240203~22.04.1         |          |
 |  2 | curl                    | 7.81.0-1ubuntu1.21         | 7.81.0-1ubuntu1.21       |          |

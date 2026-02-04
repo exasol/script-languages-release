@@ -2,8 +2,8 @@
 
 |    | Package                 | Version in 10.1.0            | Version in 10.2.0            | Status   |
 |---:|:------------------------|:-----------------------------|:-----------------------------|:---------|
-|  0 | locales                 | 2.35-0ubuntu3.11             | 2.35-0ubuntu3.12             | UPDATED  |
-|  1 | openjdk-11-jdk-headless | 11.0.28+6-1ubuntu1~22.04.1   | 11.0.29+7-1ubuntu1~22.04     | UPDATED  |
+|  0 | locales                 | 2.35-0ubuntu3.11             | 2.35-0ubuntu3.13             | UPDATED  |
+|  1 | openjdk-11-jdk-headless | 11.0.28+6-1ubuntu1~22.04.1   | 11.0.30+7-1ubuntu1~22.04     | UPDATED  |
 |  2 | build-essential         | 12.9ubuntu3                  | 12.9ubuntu3                  |          |
 |  3 | chrpath                 | 0.16-2                       | 0.16-2                       |          |
 |  4 | coreutils               | 8.32-4.1ubuntu1.2            | 8.32-4.1ubuntu1.2            |          |

@@ -26,12 +26,22 @@ This release uses version 3.4.1 of the container tool.
  - #1304: Ignoring CVEs from nsight-compute 
  - #1306: Updated Dependencies on top of 10.1.0 and fixed CVE-2025-6176
  - #1311: Updated Dependencies on top of 10.1.0 libxml2-dev
+ - #1323: Updated Dependencies on top of 10.1.0
+ - #1328: Updated Dependencies on top of 10.1.0
+ - #1339: Updated Dependencies on top of 10.1.0
+ - #1345: Updated Dependencies on top of 10.1.0
+ - #1352: Updated Dependencies on top of 10.1.0
+ - #1355: Updated Dependencies on top of 10.1.0
+ - #1358: Updated Dependencies on top of 10.1.0
 
 ## Refactorings
 
  - #1298: Added error-code-config.yml
  - #1309: Replaced AWS User release_runner(s) by IAM Role
- - #1313: Switched slack channel for update trivy cache workflow notification 
+ - #1313: Switched slack channel for update trivy cache workflow notification
+ - #1324: Updated slc-ci-setup
+ - #1330: Ignored Python module 'google_crc32c._crc32c' in import test
+ - #1361: Updatde docker token for push test container image
 
 ## Dependencies
 
@@ -39,14 +49,20 @@ This release uses version 3.4.1 of the container tool.
  - #1291: Updated poetry lock 
  - #1295: Fixed template-Exasol-8-python-3.12-cuda-conda by downgrading conda package `cudnn`
  - #1294: Updated cuda test flavor
+ - #1319: Update Dependencies on top of 10.1.0
+ - #1317: Updated dependency pandas from 2.2.2 to 2.2.3
+ - #1334: Removed package cudnn from cuda template flavors
+ - #1349: Update Dependencies on top of 10.1.0
 
 ## Bugs
 
  - #1300: Changed uid/gid for Ubuntu 24.04 based flavors
+ - #1326: Fixed Java Tests
 
 ## Doc
 
  - #1276: Added Cuda Version information section to flavor overview
+ - #1341: Removed Cudnn package from flavors/README.md
 
 ## Internal
 

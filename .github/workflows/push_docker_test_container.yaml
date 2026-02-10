@@ -28,14 +28,14 @@ jobs:
         run: |
           poetry run exaslct push-test-container --source-docker-username "$SECRET_DOCKER_USER_NAME" --target-docker-username "$SECRET_DOCKER_USER_NAME" --force-push true
         env: # Set the secret as an input
-          SECRET_DOCKER_USER_NAME: ${{ secrets.DOCKER_USERNAME }}
-          TARGET_DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-          SOURCE_DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          SECRET_DOCKER_USER_NAME: ${{ secrets.CI4_DOCKERHUB_USERNAME }}
+          TARGET_DOCKER_PASSWORD: ${{ secrets.CI4_DOCKERHUB_TOKEN }}
+          SOURCE_DOCKER_PASSWORD: ${{ secrets.CI4_DOCKERHUB_TOKEN }}
       - name: Push  ci-release-test TestContainer image
         if: ${{ (github.ref != 'refs/heads/master') && (github.ref != 'refs/heads/main') }}
         run: |
           poetry run exaslct push-test-container --source-docker-username "$SECRET_DOCKER_USER_NAME" --target-docker-username "$SECRET_DOCKER_USER_NAME" --force-push true --source-docker-tag-prefix ci_release_test --target-docker-tag-prefix ci_release_test
         env: # Set the secret as an input
-          SECRET_DOCKER_USER_NAME: ${{ secrets.DOCKER_USERNAME }}
-          TARGET_DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-          SOURCE_DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          SECRET_DOCKER_USER_NAME: ${{ secrets.CI4_DOCKERHUB_USERNAME }}
+          TARGET_DOCKER_PASSWORD: ${{ secrets.CI4_DOCKERHUB_TOKEN }}
+          SOURCE_DOCKER_PASSWORD: ${{ secrets.CI4_DOCKERHUB_TOKEN }}

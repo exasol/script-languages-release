@@ -28,6 +28,8 @@ dependencies = [
 
 [tool.poetry]
 
+requires-poetry = ">=2.3.0"
+
 packages = [
     {include = "README.md"},
     {include = "LICENSE"},
@@ -40,10 +42,14 @@ repository = "https://github.com/exasol/script-languages"
 homepage = "https://github.com/exasol/script-languages"
 
 
-[tool.poetry.group.dev.dependencies]
-toml = ">=0.10.2"
-gitpython = ">=3.1.0"
-nox = ">=2022.8.7"
+[dependency-groups]
+
+
+dev = [
+    "toml>=0.10.2",
+    "gitpython>=3.1.0, <4.0.0",
+    "nox>=2022.8.7"
+]
 
 [build-system]
 requires = ["poetry_core>=2.1.0"]

@@ -11,7 +11,7 @@ t.b.d.
 
 ## Script-Language-Container-Tool (Exaslct)
 
-This release uses version 3.4.1 of the container tool.
+This release uses version 3.6.1 of the container tool.
 
 ## Features
 
@@ -68,4 +68,4 @@ This release uses version 3.4.1 of the container tool.
 
 ## Internal
 
- n/a
+ - Updated poetry dependencies and Github workflows

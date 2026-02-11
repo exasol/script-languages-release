@@ -1,9 +1,15 @@
 module(name="exaudfclient_ext", version = "1.0")
 
-include("//base:base.MODULE.bazel")
-
+bazel_dep(name = "exaudfclient_base", version = "1.0.0")
+local_path_override(module_name="exaudfclient_base", path="base")
 
 new_local_repository = use_repo_rule("@bazel_tools//tools/build_defs/repo:local.bzl", "new_local_repository")
+
+zmq_local_repository = use_repo_rule("@exaudfclient_base//:zmq_repository.bzl", "zmq_local_repository")
+zmq_local_repository(name = "zmq")
+
+protobuf_local_repository = use_repo_rule("@exaudfclient_base//:protobuf_repository.bzl", "protobuf_local_repository")
+protobuf_local_repository(name = "protobuf")
 
 new_local_repository(
     name = "R_linux",

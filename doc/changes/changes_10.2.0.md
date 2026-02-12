@@ -11,7 +11,7 @@ t.b.d.
 
 ## Script-Language-Container-Tool (Exaslct)
 
-This release uses version 3.4.1 of the container tool.
+This release uses version 3.6.1 of the container tool.
 
 ## Features
 
@@ -33,6 +33,7 @@ This release uses version 3.4.1 of the container tool.
  - #1352: Updated Dependencies on top of 10.1.0
  - #1355: Updated Dependencies on top of 10.1.0
  - #1358: Updated Dependencies on top of 10.1.0
+ - #1365: Updated Dependencies on top of 10.1.0
 
 ## Refactorings
 
@@ -42,6 +43,7 @@ This release uses version 3.4.1 of the container tool.
  - #1324: Updated slc-ci-setup
  - #1330: Ignored Python module 'google_crc32c._crc32c' in import test
  - #1361: Updatde docker token for push test container image
+ - #1336: Changed Bazel module
 
 ## Dependencies
 
@@ -66,4 +68,4 @@ This release uses version 3.4.1 of the container tool.
 
 ## Internal
 
- n/a
+ - Updated poetry dependencies and Github workflows

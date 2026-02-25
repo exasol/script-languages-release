@@ -10,22 +10,28 @@ COPY scripts /scripts
 RUN mkdir -p /build_info/packages
 COPY build_deps/packages /build_info/packages/build_deps
 
-ENV BAZEL_PACKAGE_VERSION="8.3.1"
-ENV BAZEL_PACKAGE_FILE="bazel_$BAZEL_PACKAGE_VERSION-linux-x86_64.deb"
-ENV BAZEL_PACKAGE_URL="https://github.com/bazelbuild/bazel/releases/download/$BAZEL_PACKAGE_VERSION/$BAZEL_PACKAGE_FILE"
+ENV BAZELISK_VERSION="v1.26.0"
+ENV USE_BAZEL_VERSION="8.3.1"
 
 RUN /scripts/install_scripts/install_via_apt.pl --file /build_info/packages/build_deps/apt_get_packages --with-versions
 
-RUN apt-get -y update && \
-    curl -L --output "$BAZEL_PACKAGE_FILE" "$BAZEL_PACKAGE_URL" && \
-    apt-get install -y "./$BAZEL_PACKAGE_FILE" && \
-    rm "$BAZEL_PACKAGE_FILE" && \
-    apt-get -y clean && \
-    apt-get -y autoremove
-	  
+RUN apt-get -y update && apt-get install -y curl
+
+RUN set -e; \
+    ARCH=$(dpkg --print-architecture); \
+    if [ "$ARCH" = "amd64" ]; then \
+        BAZELISK_URL="https://github.com/bazelbuild/bazelisk/releases/download/${BAZELISK_VERSION}/bazelisk-linux-amd64"; \
+    elif [ "$ARCH" = "arm64" ]; then \
+        BAZELISK_URL="https://github.com/bazelbuild/bazelisk/releases/download/${BAZELISK_VERSION}/bazelisk-linux-arm64"; \
+    else \
+        echo "Unsupported architecture: $ARCH" >&2; exit 1; \
+    fi; \
+    curl -fsSL -o /usr/local/bin/bazel "${BAZELISK_URL}"; \
+    chmod +x /usr/local/bin/bazel
+
 RUN curl -L -o swig-2.0.4.tar.gz https://exasol-script-languages-dependencies.s3.eu-central-1.amazonaws.com/swig-2.0.4.tar.gz && \
     tar zxf swig-2.0.4.tar.gz && \
-    (cd swig-2.0.4 && ./configure --prefix=/usr && make && make install) && \
+    (cd swig-2.0.4 && ./configure --build=$(arch)-unknown-linux-gnu --prefix=/usr && make -j"$(nproc)" && make install) && \
     rm -rf swig-2.0.4 swig-2.0.4.tar.gz
 
 RUN locale-gen en_US.UTF-8 && \
@@ -33,5 +39,14 @@ RUN locale-gen en_US.UTF-8 && \
     ldconfig
 
 RUN touch /env && \
+    ARCH=$(dpkg --print-architecture) && \
+    if [ "$ARCH" = "amd64" ]; then \
+        JAVA_HOME_PATH="/usr/lib/jvm/java-1.17.0-openjdk-amd64/"; \
+    elif [ "$ARCH" = "arm64" ]; then \
+        JAVA_HOME_PATH="/usr/lib/jvm/java-1.17.0-openjdk-arm64/"; \
+    else \
+        echo "Unsupported architecture: $ARCH" >&2; exit 1; \
+    fi && \
     echo "export PROTOBUF_BIN=/usr/bin/protoc" >> /env && \
-    echo "export JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64/" >> /env
+    echo "export JAVA_HOME=${JAVA_HOME_PATH}" >> /env && \
+    echo "export USE_BAZEL_VERSION=${USE_BAZEL_VERSION}" >> /env

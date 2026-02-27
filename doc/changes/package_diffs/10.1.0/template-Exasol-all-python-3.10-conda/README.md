@@ -1,4 +1,4 @@
-# Package Version Comparison between Template-exasol-all-python-3.10-conda flavor in 10.1.0 and Template-exasol-all-python-3.10-conda flavor in 10.0.0
+# Package Version Comparison between Template-exasol-all-python-3.10-conda flavor in 10.1.0 and Template-exasol-all-python-3.10-conda flavor in 10.1.0
 
 - Comparison of build step Udfclient_deps
   - [Comparison of Conda Channels](udfclient_deps/conda_channels_diff.md)

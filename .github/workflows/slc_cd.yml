@@ -22,14 +22,15 @@ jobs:
     needs: prepare-test-container
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           submodules: 'recursive'
 
       - name: Setup Python & Poetry Environment
-        uses: exasol/python-toolbox/.github/actions/python-environment@v1
+        uses: exasol/python-toolbox/.github/actions/python-environment@v5
         with:
-          python-version: '3.10'
+          python-version: "3.10"
+          poetry-version: "2.3.0"
 
       - id: set-matrix
         run: poetry run -- exaslc-ci get-flavors --github-output-var matrix
@@ -54,11 +55,11 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: SCM Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Download Logs
         id: download-logs
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           pattern: logs_*
           merge-multiple: false
@@ -86,13 +87,15 @@ jobs:
         flavor: ${{fromJson(needs.get-flavors.outputs.matrix)}}
     steps:
       - name: SCM Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
+
       - name: Download SLC
         id: download-slc
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: slc-${{matrix.flavor}}-release
           path: "slc"
+
       - name: Upload to release
         run: gh release upload "$RELEASE_NAME" slc/* || echo "Upload failed due to size, see workflow logs."
         env:

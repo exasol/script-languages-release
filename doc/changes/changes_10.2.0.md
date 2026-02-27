@@ -45,6 +45,7 @@ This release uses version 3.6.1 of the container tool.
  - #1330: Ignored Python module 'google_crc32c._crc32c' in import test
  - #1361: Updatde docker token for push test container image
  - #1336: Changed Bazel module
+ - #1370: Simplified gen package diff script
 
 ## Dependencies
 

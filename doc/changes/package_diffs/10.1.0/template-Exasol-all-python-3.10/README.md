@@ -1,4 +1,4 @@
-# Package Version Comparison between Template-exasol-all-python-3.10 flavor in 10.1.0 and Template-exasol-all-python-3.10 flavor in 10.1.0
+# Package Version Comparison between Template-exasol-all-python-3.10 flavor in 10.1.0 and Template-exasol-all-python-3.10 flavor in 10.0.0
 
 - Comparison of build step Udfclient_deps
   - [Comparison of Apt Get Packages](udfclient_deps/apt_get_packages_diff.md)

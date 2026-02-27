@@ -1,4 +1,4 @@
-# Package Version Comparison between Standard-exasol-all-r-4.4 flavor in 10.1.0 and Standard-exasol-all-r-4.4 flavor in 10.1.0
+# Package Version Comparison between Standard-exasol-all-r-4.4 flavor in 10.1.0 and Standard-exasol-all-r-4.4 flavor in 10.0.0
 
 - Comparison of build step Udfclient_deps
   - [Comparison of Apt Get Packages](udfclient_deps/apt_get_packages_diff.md)

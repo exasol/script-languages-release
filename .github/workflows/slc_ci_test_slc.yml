@@ -21,23 +21,20 @@ jobs:
   detect-test-matrix:
     runs-on: ubuntu-22.04
     steps:
-     - uses: actions/checkout@v6
+     - uses: actions/checkout@v4
        with:
           submodules: 'recursive'
 
      - name: Setup Python & Poetry Environment
-       uses: exasol/python-toolbox/.github/actions/python-environment@v5
+       uses: exasol/python-toolbox/.github/actions/python-environment@v1
        with:
-          python-version: "3.10"
-          poetry-version: "2.3.0"
-
+         python-version: '3.10'
      - name: Detect Test Matrix
        id: detect-test-matrix
        run: |
          poetry run -- exaslc-ci get-test-matrix --flavor "$FLAVOR" --github-output-var test_matrix
        env:
          FLAVOR: ${{ inputs.flavor }}
-
     outputs:
      test-matrix: ${{ steps.detect-test-matrix.outputs.test_matrix }}
 
@@ -50,7 +47,7 @@ jobs:
       matrix: ${{fromJson(needs.detect-test-matrix.outputs.test-matrix)}}
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v4
         with:
             submodules: 'recursive'
 
@@ -59,7 +56,6 @@ jobs:
         with:
           tool-cache: true
           large-packages: false
-
       - name: Free disk space by removing large directories
         run: |
           sudo rm -rf /usr/local/graalvm/
@@ -70,14 +66,13 @@ jobs:
           sudo rm -rf /opt/ghc
 
       - name: Setup Python & Poetry Environment
-        uses: exasol/python-toolbox/.github/actions/python-environment@v5
+        uses: exasol/python-toolbox/.github/actions/python-environment@v1
         with:
-          python-version: "3.10"
-          poetry-version: "2.3.0"
+          python-version: '3.10'
 
       - name: Download SLC ${{matrix.goal}}
         id: download-slc
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v4
         with:
           name: slc-${{inputs.flavor}}-${{matrix.goal}}
           path: "slc"
@@ -103,7 +98,7 @@ jobs:
       - name: Check for password
         run: grep -rq ${{ secrets.CI4_DOCKERHUB_TOKEN }} .build_output && exit 1 || exit 0
 
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v4
         if: ${{ always() }}
         name: Upload log artifacts
         with:

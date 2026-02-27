@@ -29,7 +29,7 @@ COPY /exaudfclient /exaudfclient
 WORKDIR /exaudfclient/
 RUN ["/bin/bash", "-c", "source /env && bash build.sh --config no-tty -c dbg --config python --config test-binaries"]
 RUN cp -r -L bazel-bin/* /exaudf
-RUN rm -r /root/.cache/bazel #Delete bazel cache as it contains java rules with special characters which will cause a problem for Bucketfs
+RUN rm -rf /root/.cache/bazel #Delete bazel cache as it contains java rules with special characters which will cause a problem for Bucketfs
 WORKDIR /exaudfclient/base
 RUN ./test_udfclient.sh /exaudf/exaudfclient
 RUN ./test_udfclient.sh /exaudf/exaudfclient_static

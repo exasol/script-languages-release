@@ -1,8 +1,30 @@
-FROM {{udfclient_deps}}
+FROM ubuntu:22.04
+ENV DEBIAN_FRONTEND=noninteractive
 
-COPY language_deps/packages /build_info/packages/language_deps
+# Optional: override Ubuntu mirror
+ENV ARCHIVE_UBUNTU_PREFIX=""
+RUN sed --in-place --regexp-extended "s|(//)(archive\.ubuntu)|\1$ARCHIVE_UBUNTU_PREFIX\2|" /etc/apt/sources.list
 
-RUN /scripts/install_scripts/install_via_apt.pl --file /build_info/packages/language_deps/apt_get_packages --with-versions
+# Reduce image size by skipping documentation
+COPY 01_nodoc /etc/dpkg/dpkg.cfg.d/01_nodoc
+COPY scripts /scripts
+
+# Install dependencies
+RUN mkdir -p /build_info/packages
+COPY udfclient_deps/packages /build_info/packages/udfclient_deps
+RUN /scripts/install_scripts/install_via_apt.pl --file /build_info/packages/udfclient_deps/apt_get_packages --with-versions
+
+# Create users and groups
+RUN set -e; \
+    addgroup --gid 1000 exasolution; \
+    adduser --disabled-login --uid 1000 --gid 1000 exasolution --gecos ""; \
+    addgroup --gid 500 exausers; \
+    adduser --disabled-login --uid 500 --gid 500 exadefusr --gecos ""
+
+# UTF-8 locale environment
+ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_US:en
+ENV LC_ALL=en_US.UTF-8
 
 # Determine architecture and write relevant env vars to /env
 RUN ARCH=$(dpkg --print-architecture) && \
@@ -26,4 +48,3 @@ RUN ARCH=$(dpkg --print-architecture) && \
 
 # Optional: make it available in all shells
 RUN cat /env >> /etc/environment
-

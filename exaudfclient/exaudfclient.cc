@@ -11,14 +11,12 @@
 #include <link.h>
 #include <string.h>
 
-#include "exaudf_lib_output_path.h"
-
 #ifndef UDF_PLUGIN_CLIENT
 #include <dlfcn.h>
 #endif
 #include <exception>
-#include "exaudflib/vm/swig_vm.h"
-#include "exaudflib/load_dynamic.h"
+#include "base/exaudflib/vm/swig_vm.h"
+#include "base/exaudflib/load_dynamic.h"
 #ifdef ENABLE_R_VM
 #include "rcontainer/rcontainer.h"
 #endif
@@ -29,7 +27,7 @@
 #include "streaming_container/streamingcontainer.h"
 #endif
 #include <functional>
-#include "utils/debug_message.h"
+#include "base/utils/debug_message.h"
 #include <stdio.h>
 #include <stddef.h>
 #include <stdint.h>
@@ -43,11 +41,11 @@
 
 
 #ifdef ENABLE_JAVA_VM
-#include "javacontainer/javacontainer_builder.h"
+#include "base/javacontainer/javacontainer_builder.h"
 #endif //ENABLE_JAVA_VM
 
 #ifdef ENABLE_PYTHON_VM
-#include "python/pythoncontainer.h"
+#include "base/python/pythoncontainer.h"
 #endif //ENABLE_PYTHON_VM
 
 #ifdef UDF_PLUGIN_CLIENT

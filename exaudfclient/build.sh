@@ -1,1 +1,1 @@
-bazel build $*
+bazel build "$@"

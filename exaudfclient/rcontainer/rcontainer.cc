@@ -8,7 +8,7 @@
 #include <R_ext/Boolean.h>
 #include "exascript_r.h"
 #include "exascript_r_int.h"
-#include "exaudflib/swig/swig_result_handler.h"
+#include "base/exaudflib/swig/swig_result_handler.h"
 
 using namespace SWIGVMContainers;
 using namespace std;
@@ -723,4 +723,3 @@ const char* RVMImpl::singleCall(single_call_function_id_e fn, const ExecutionGra
     UNPROTECT(num_protects);
     return singleCallResult.c_str();
 }
-

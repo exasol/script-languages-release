@@ -4,7 +4,7 @@ build:benchmark --define benchmark=true
 build:r --define r=true
 build:java  --define java=true --action_env=JAVA_PREFIX
 build:python --define python=true  --action_env=NUMPY_PREFIX --action_env=PYTHON3_SYSPATH --action_env=PYTHON3_PREFIX --action_env=PYTHON3_VERSION
-build:fast-binary --define binary_type=fast_binary //:exaudfclient
+build:fast-binary --copt='-DCUSTOM_LIBEXAUDFLIB_PATH="/exaudf/base/libexaudflib_complete.so"' --define binary_type=fast_binary //:exaudfclient
 build:slow-wrapper --define binary_type=slow_wrapper //:exaudfclient
 build:static-binary //:exaudfclient_static
 build:test-binaries --config=static-binary --config=slow-wrapper
@@ -16,4 +16,3 @@ build:no-tty --curses=no --color=no
 build:debug-build --sandbox_debug --config=verbose
 build:no-symlinks --symlink_prefix=/
 build:symlinks-to-tmp --symlink_prefix=/tmp/
-build:fix_conda_ar_tool --action_env=AR=x86_64-conda-linux-gnu-gcc-ar --features=-archive_param_file

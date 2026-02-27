@@ -34,6 +34,7 @@ This release uses version 3.6.1 of the container tool.
  - #1355: Updated Dependencies on top of 10.1.0
  - #1358: Updated Dependencies on top of 10.1.0
  - #1365: Updated Dependencies on top of 10.1.0
+ - #1371: Updated Dependencies on top of 10.1.0
 
 ## Refactorings
 

@@ -55,6 +55,7 @@ This release uses version 3.6.1 of the container tool.
  - #1317: Updated dependency pandas from 2.2.2 to 2.2.3
  - #1334: Removed package cudnn from cuda template flavors
  - #1349: Update Dependencies on top of 10.1.0
+ - #1371: Update Dependencies on top of 10.1.0
 
 ## Bugs
 

@@ -63,6 +63,7 @@ This release uses version 3.6.1 of the container tool.
 
  - #1300: Changed uid/gid for Ubuntu 24.04 based flavors
  - #1326: Fixed Java Tests
+ - #1377: Fixed generate_package_diffs_for_flavors 
 
 ## Doc
 

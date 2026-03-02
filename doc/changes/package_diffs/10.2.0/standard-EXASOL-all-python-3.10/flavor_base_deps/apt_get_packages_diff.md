@@ -2,7 +2,7 @@
 
 |    | Package              | Version in 10.1.0            | Version in 10.2.0            | Status   |
 |---:|:---------------------|:-----------------------------|:-----------------------------|:---------|
-|  0 | git                  | 1:2.34.1-1ubuntu1.15         | 1:2.34.1-1ubuntu1.16         | UPDATED  |
+|  0 | git                  | 1:2.34.1-1ubuntu1.15         | 1:2.34.1-1ubuntu1.17         | UPDATED  |
 |  1 | ldap-utils           | 2.5.19+dfsg-0ubuntu0.22.04.1 | 2.5.20+dfsg-0ubuntu0.22.04.1 | UPDATED  |
 |  2 | libcurl4-openssl-dev | 7.81.0-1ubuntu1.21           | 7.81.0-1ubuntu1.22           | UPDATED  |
 |  3 | libldap2-dev         | 2.5.19+dfsg-0ubuntu0.22.04.1 | 2.5.20+dfsg-0ubuntu0.22.04.1 | UPDATED  |

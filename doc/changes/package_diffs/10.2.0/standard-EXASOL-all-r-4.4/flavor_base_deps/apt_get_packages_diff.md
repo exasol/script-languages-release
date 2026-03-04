@@ -2,7 +2,7 @@
 
 |    | Package              | Version in 10.1.0       | Version in 10.2.0       | Status   |
 |---:|:---------------------|:------------------------|:------------------------|:---------|
-|  0 | git                  | 1:2.34.1-1ubuntu1.15    | 1:2.34.1-1ubuntu1.16    | UPDATED  |
+|  0 | git                  | 1:2.34.1-1ubuntu1.15    | 1:2.34.1-1ubuntu1.17    | UPDATED  |
 |  1 | libcurl4-openssl-dev | 7.81.0-1ubuntu1.21      | 7.81.0-1ubuntu1.22      | UPDATED  |
 |  2 | locales              | 2.35-0ubuntu3.11        | 2.35-0ubuntu3.13        | UPDATED  |
 |  3 | cmake                | 3.22.1-1ubuntu1.22.04.2 | 3.22.1-1ubuntu1.22.04.2 |          |

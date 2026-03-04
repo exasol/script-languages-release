@@ -45,6 +45,7 @@ This release uses version 3.6.1 of the container tool.
  - #1330: Ignored Python module 'google_crc32c._crc32c' in import test
  - #1361: Updatde docker token for push test container image
  - #1336: Changed Bazel module
+ - #1370: Simplified gen package diff script
 
 ## Dependencies
 
@@ -56,11 +57,13 @@ This release uses version 3.6.1 of the container tool.
  - #1317: Updated dependency pandas from 2.2.2 to 2.2.3
  - #1334: Removed package cudnn from cuda template flavors
  - #1349: Update Dependencies on top of 10.1.0
+ - #1375: Update Dependencies on top of 10.1.0
 
 ## Bugs
 
  - #1300: Changed uid/gid for Ubuntu 24.04 based flavors
  - #1326: Fixed Java Tests
+ - #1377: Fixed generate_package_diffs_for_flavors 
 
 ## Doc
 

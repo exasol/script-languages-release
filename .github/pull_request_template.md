@@ -6,7 +6,7 @@
 * [ ] Have you updated the changelog?
 * [ ] Have you checked to ensure there aren't other open [Pull Requests](../../../../pulls) for the same update/change? <!-- markdown-link-check-disable-line --> 
 * [ ] Are you mentioning the issue which this PullRequest fixes ("Fixes...")
-
+* [ ] Have you generated the packages diffs?
 <!-- You can erase any parts of this template not applicable to your Pull Request. -->
 
 ### When integrating to Develop branch:
@@ -20,4 +20,5 @@
 3. [ ] If you plan a release, have you checked the Exasol/partner packages for updates?
    1. Websocket API (https://github.com/EXASOL/websocket-api)
    2. [Exasol-BucketFS](https://pypi.org/project/exasol-bucketfs/)
-   3. [sqlglot](https://pypi.org/project/sqlglot/)
+   3. [PyExasol](https://pypi.org/project/pyexasol/)
+   4. [sqlglot](https://pypi.org/project/sqlglot/)

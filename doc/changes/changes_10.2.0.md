@@ -1,10 +1,13 @@
-# script-languages-release 10.2.0, released t.b.d.
+# script-languages-release 10.2.0, released 2026-03-09
 
-Code name: t.b.d.
+Code name: Python 3.12 Conda flavors
 
 ## Summary
 
-t.b.d.
+This release contains the new Python 3.12 Conda flavors. It uses Exaslct 3.6.1 to build
+the script language containers. The uid/gid has been changed for Ubuntu 24.04 based flavors.
+The UDF client uses Bazel modules to build.
+Also the release contains many security and dependency updates.
 
 <!-- markdown-link-check-disable -->
 ## [Package Version Comparison between Release 10.2.0 and 10.1.0](https://github.com/exasol/script-languages-release/blob/master/doc/changes/package_diffs/10.2.0/README.md)
@@ -43,9 +46,10 @@ This release uses version 3.6.1 of the container tool.
  - #1313: Switched slack channel for update trivy cache workflow notification
  - #1324: Updated slc-ci-setup
  - #1330: Ignored Python module 'google_crc32c._crc32c' in import test
- - #1361: Updatde docker token for push test container image
+ - #1361: Updated docker token for push test container image
  - #1336: Changed Bazel module
  - #1370: Simplified gen package diff script
+ - #1381: Updated Exasol Bucketfs, PyExasol and SQLGlot and prepared release
 
 ## Dependencies
 
@@ -72,4 +76,4 @@ This release uses version 3.6.1 of the container tool.
 
 ## Internal
 
- - Updated poetry dependencies and Github workflows
+ - Updated poetry dependencies and GitHub workflows

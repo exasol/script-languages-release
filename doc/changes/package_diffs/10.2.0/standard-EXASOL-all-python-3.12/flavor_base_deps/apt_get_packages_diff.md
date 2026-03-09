@@ -4,13 +4,13 @@
 |---:|:---------------------|:---------------------------|:-----------------------------|:---------|
 |  0 | ldap-utils           | 2.6.7+dfsg-1~exp1ubuntu8.2 | 2.6.10+dfsg-0ubuntu0.24.04.1 | UPDATED  |
 |  1 | libcurl4-openssl-dev | 8.5.0-2ubuntu10.6          | 8.5.0-2ubuntu10.7            | UPDATED  |
-|  2 | libldap2-dev         | 2.6.7+dfsg-1~exp1ubuntu8.2 | 2.6.10+dfsg-0ubuntu0.24.04.1 | UPDATED  |
-|  3 | libsmbclient-dev     | 2:4.19.5+dfsg-4ubuntu9.3   | 2:4.19.5+dfsg-4ubuntu9.4     | UPDATED  |
-|  4 | openssl              | 3.0.13-0ubuntu3.6          | 3.0.13-0ubuntu3.7            | UPDATED  |
-|  5 | slapd                | 2.6.7+dfsg-1~exp1ubuntu8.2 | 2.6.10+dfsg-0ubuntu0.24.04.1 | UPDATED  |
-|  6 | smbclient            | 2:4.19.5+dfsg-4ubuntu9.3   | 2:4.19.5+dfsg-4ubuntu9.4     | UPDATED  |
-|  7 | git                  | 1:2.43.0-1ubuntu7.3        | 1:2.43.0-1ubuntu7.3          |          |
-|  8 | libgomp1             | 14.2.0-4ubuntu2~24.04      | 14.2.0-4ubuntu2~24.04        |          |
+|  2 | libgomp1             | 14.2.0-4ubuntu2~24.04      | 14.2.0-4ubuntu2~24.04.1      | UPDATED  |
+|  3 | libldap2-dev         | 2.6.7+dfsg-1~exp1ubuntu8.2 | 2.6.10+dfsg-0ubuntu0.24.04.1 | UPDATED  |
+|  4 | libsmbclient-dev     | 2:4.19.5+dfsg-4ubuntu9.3   | 2:4.19.5+dfsg-4ubuntu9.4     | UPDATED  |
+|  5 | openssl              | 3.0.13-0ubuntu3.6          | 3.0.13-0ubuntu3.7            | UPDATED  |
+|  6 | slapd                | 2.6.7+dfsg-1~exp1ubuntu8.2 | 2.6.10+dfsg-0ubuntu0.24.04.1 | UPDATED  |
+|  7 | smbclient            | 2:4.19.5+dfsg-4ubuntu9.3   | 2:4.19.5+dfsg-4ubuntu9.4     | UPDATED  |
+|  8 | git                  | 1:2.43.0-1ubuntu7.3        | 1:2.43.0-1ubuntu7.3          |          |
 |  9 | libsasl2-dev         | 2.1.28+dfsg1-5ubuntu3.1    | 2.1.28+dfsg1-5ubuntu3.1      |          |
 | 10 | tzdata               | 2025b-0ubuntu0.24.04.1     | 2025b-0ubuntu0.24.04.1       |          |
 | 11 | unzip                | 6.0-28ubuntu4.1            | 6.0-28ubuntu4.1              |          |

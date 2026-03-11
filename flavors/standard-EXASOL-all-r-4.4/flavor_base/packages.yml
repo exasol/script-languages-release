@@ -56,9 +56,14 @@ build_steps:
   phases:
   - name: install_apt_packages
     apt:
+      repos:
+        trivy:
+          key_url: https://aquasecurity.github.io/trivy-repo/deb/public.key
+          entry: deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb
+            generic main
+          out_file: trivy.list
       packages:
       - name: trivy
-      - name: gnupg
   validation_cfg:
     version_mandatory: false
 version: 1.0.0

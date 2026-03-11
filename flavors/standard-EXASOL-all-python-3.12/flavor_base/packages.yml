@@ -52,12 +52,20 @@ build_steps:
     version_mandatory: true
 - name: security_scan
   phases:
-  - name: install_apt_packages
+  - name: install_deps
     apt:
       packages:
+        - name: gnupg
+  - name: install_apt_packages
+    apt:
+      repos:
+        trivy:
+          key_url: https://aquasecurity.github.io/trivy-repo/deb/public.key
+          entry: deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb
+            generic main
+          out_file: trivy.list
+      packages:
       - name: trivy
-      - name: apt-transport-https
-      - name: gnupg
   validation_cfg:
     version_mandatory: false
 version: 1.0.0

@@ -11,7 +11,7 @@ build_steps:
       - name: tar
         version: 1.34+dfsg-1ubuntu0.1.22.04.2
       - name: curl
-        version: 7.81.0-1ubuntu1.22
+        version: 7.81.0-1ubuntu1.23
       - name: openjdk-17-jdk-headless
         version: 17.0.18+8-1~22.04.1
       - name: build-essential

@@ -42,7 +42,7 @@ build_steps:
           out_file: jammy-cran40.list
       packages:
       - name: curl
-        version: 7.81.0-1ubuntu1.22
+        version: 7.81.0-1ubuntu1.23
       - comment: Overrides version used by r-base-core/r-base-dev
         name: libexpat1
         version: 2.4.7-1ubuntu0.7
@@ -78,7 +78,7 @@ build_steps:
       - name: cmake
         version: 3.22.1-1ubuntu1.22.04.2
       - name: libcurl4-openssl-dev
-        version: 7.81.0-1ubuntu1.22
+        version: 7.81.0-1ubuntu1.23
       - name: libhiredis-dev
         version: 0.14.1-2
   - name: install_r_packages

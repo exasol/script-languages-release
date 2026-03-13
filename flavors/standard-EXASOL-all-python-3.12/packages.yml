@@ -37,7 +37,7 @@ build_steps:
       - name: python3.12-dev
         version: 3.12.3-1ubuntu0.12
       - name: curl
-        version: 8.5.0-2ubuntu10.7
+        version: 8.5.0-2ubuntu10.8
       - name: chrpath
         version: 0.16-2build1
     variables:
@@ -77,7 +77,7 @@ build_steps:
       - name: git
         version: 1:2.43.0-1ubuntu7.3
       - name: libcurl4-openssl-dev
-        version: 8.5.0-2ubuntu10.7
+        version: 8.5.0-2ubuntu10.8
       - name: openssl
         version: 3.0.13-0ubuntu3.7
       - comment: Needed by python-ldap

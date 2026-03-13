@@ -74,7 +74,7 @@ build_steps:
       - name: git
         version: 1:2.34.1-1ubuntu1.17
       - name: libcurl4-openssl-dev
-        version: 7.81.0-1ubuntu1.22
+        version: 7.81.0-1ubuntu1.23
       - name: openssl
         version: 3.0.2-0ubuntu1.21
       - comment: Needed by python-ldap

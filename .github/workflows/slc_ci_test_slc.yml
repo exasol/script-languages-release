@@ -44,7 +44,7 @@ jobs:
   run-tests:
     needs: [detect-test-matrix]
     runs-on:
-      labels: ${{matrix.test-runners}}
+      labels: ${{matrix.test-runner}}
     strategy:
       fail-fast: true
       matrix: ${{fromJson(needs.detect-test-matrix.outputs.test-matrix)}}
@@ -83,7 +83,7 @@ jobs:
         id: download-slc
         uses: actions/download-artifact@v7
         with:
-          name: slc-${{inputs.flavor}}-${{matrix.goal}}
+          name: slc-${{ inputs.flavor }}-${{ matrix.goal }}-${{ steps.detect-platform.outputs.platform_machine }}
           path: "slc"
 
       - name: Print SLC's
@@ -111,7 +111,7 @@ jobs:
         if: ${{ always() }}
         name: Upload log artifacts
         with:
-          name: logs_tests_${{inputs.flavor}}_${{ matrix.test-set-name }}_${{ matrix.test-runners }}
+          name: logs_tests_${{inputs.flavor}}_${{ matrix.test-set-name }}_${{ matrix.test-runner }}
           path: |
             .build_output/jobs/**/*
             .build_output/meta_data/**/*

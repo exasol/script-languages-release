@@ -23,11 +23,11 @@ n/a
 
 ## Refactorings
 
-n/a
+ - #1395: Updated CI/CD toolchain
 
 ## Dependencies
 
-n/a
+ - #1396: Updated Dependencies on top of 10.2.0
 
 ## Bugs
 

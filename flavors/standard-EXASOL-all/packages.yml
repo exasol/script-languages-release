@@ -46,7 +46,7 @@ build_steps:
       - name: python3-distutils
         version: 3.10.8-1~22.04
       - name: curl
-        version: 7.81.0-1ubuntu1.22
+        version: 7.81.0-1ubuntu1.23
       - name: openjdk-11-jdk-headless
         version: 11.0.30+7-1ubuntu1~22.04
       - name: chrpath

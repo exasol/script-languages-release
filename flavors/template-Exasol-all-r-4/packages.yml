@@ -42,7 +42,7 @@ build_steps:
           out_file: jammy-cran40.list
       packages:
       - name: curl
-        version: 7.81.0-1ubuntu1.22
+        version: 7.81.0-1ubuntu1.23
       - name: r-base-core
         version: 4.5.2-1.2204.0
       - name: r-base-dev

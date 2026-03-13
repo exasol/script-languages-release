@@ -105,7 +105,7 @@ build_steps:
       - name: git
         version: 1:2.34.1-1ubuntu1.17
       - name: libcurl4-openssl-dev
-        version: 7.81.0-1ubuntu1.22
+        version: 7.81.0-1ubuntu1.23
       - name: build-essential
         version: 12.9ubuntu3
       - name: wget

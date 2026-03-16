@@ -284,7 +284,7 @@ build_steps:
         version: ==25.3.0
       - name: exasol-db-api
         extras: []
-        url: git+https://github.com/EXASOL/websocket-api.git@91bd9a7970941c578f246c07f2645699fc491d6c#egg=exasol-db-api&subdirectory=python
+        url: git+https://github.com/EXASOL/websocket-api.git@e4290606386cb941c0bd024506b97be2fd59be7d#egg=exasol-db-api&subdirectory=python
       - extras: []
         name: debugpy
         version: ==1.8.1

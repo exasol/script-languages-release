@@ -82,7 +82,7 @@ jobs:
 
       - name: Detect Platform
         id: detect-platform
-        run: poetry run -- exaslc-ci get-platform --github-output-var platform_machine
+        run: poetry run nox -s detect-platform
 
       - name: Build SLC ${{ inputs.flavor }}
         id: build-slc

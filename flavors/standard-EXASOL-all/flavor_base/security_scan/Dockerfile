@@ -1,6 +1,8 @@
 FROM {{release}}
 ENV DEBIAN_FRONTEND=noninteractive
 
+#No invocation of exaslpm needed because trivy was already installed in the release image
+
 ENV SECURITY_SCANNERS="trivy"
 COPY /security_scan/.trivyignore /.trivyignore
 COPY /security_scan/trivy-secret.yaml /trivy-secret.yaml

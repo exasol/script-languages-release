@@ -20,6 +20,7 @@ This release uses version 3.6.1 of the container tool.
 
  - #1267: Created template flavor template-Exasol-all-python-3.12-conda
  - #1268: Created template flavor /template-Exasol-8-python-3.12-cuda-conda
+ - #1404: Merging all branches of PRs from 1388 to 1394 to feature-branch
 
 ## Security Issues
 

@@ -2,10 +2,10 @@
 
 |    | Package              | Version in 10.2.0       | Version in 11.0.0       | Status   |
 |---:|:---------------------|:------------------------|:------------------------|:---------|
-|  0 | cmake                | 3.22.1-1ubuntu1.22.04.2 | 3.22.1-1ubuntu1.22.04.2 |          |
-|  1 | coreutils            | 8.32-4.1ubuntu1.2       | 8.32-4.1ubuntu1.2       |          |
-|  2 | git                  | 1:2.34.1-1ubuntu1.17    | 1:2.34.1-1ubuntu1.17    |          |
-|  3 | libcurl4-openssl-dev | 7.81.0-1ubuntu1.22      | 7.81.0-1ubuntu1.22      |          |
+|  0 | libcurl4-openssl-dev | 7.81.0-1ubuntu1.22      | 7.81.0-1ubuntu1.23      | UPDATED  |
+|  1 | cmake                | 3.22.1-1ubuntu1.22.04.2 | 3.22.1-1ubuntu1.22.04.2 |          |
+|  2 | coreutils            | 8.32-4.1ubuntu1.2       | 8.32-4.1ubuntu1.2       |          |
+|  3 | git                  | 1:2.34.1-1ubuntu1.17    | 1:2.34.1-1ubuntu1.17    |          |
 |  4 | libhiredis-dev       | 0.14.1-2                | 0.14.1-2                |          |
 |  5 | locales              | 2.35-0ubuntu3.13        | 2.35-0ubuntu3.13        |          |
 |  6 | unixodbc-dev         | 2.3.9-5ubuntu0.1        | 2.3.9-5ubuntu0.1        |          |

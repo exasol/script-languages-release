@@ -1,10 +1,12 @@
-# script-languages-release 11.0.0, released t.b.d.
+# script-languages-release 11.0.0, released 2026-03-16
 
 Code name: Exaslpm
 
 ## Summary
 
-T.b.d.
+This release replaces the package installation in all flavors with the new [exaslpm](https://github.com/exasol/script-languages-package-management) tool. 
+Furthermore, this release updates several packages in all flavors.
+
 
 <!-- markdown-link-check-disable -->
 ## [Package Version Comparison between Release 11.0.0 and 10.2.0](https://github.com/exasol/script-languages-release/blob/master/doc/changes/package_diffs/11.0.0/README.md)
@@ -15,7 +17,7 @@ This release uses version 4.0.2 of the container tool.
 
 ## Features
 
-n/a
+ - #1383: Use exaslpm to install dependencies in all flavors
 
 ## Security Issues
 
@@ -35,7 +37,7 @@ n/a
 
 ## Doc
 
-n/a
+ - #1399: Mention exaslpm in user guide
 
 ## Internal
 

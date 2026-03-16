@@ -1,0 +1,501 @@
+build_steps:
+- name: udfclient_deps
+  phases:
+  - name: install_apt_packages
+    apt:
+      packages:
+      - name: coreutils
+        version: 8.32-4.1ubuntu1.2
+      - name: locales
+        version: 2.35-0ubuntu3.13
+      - name: libnss-db
+        version: 2.2.3pre1-6ubuntu3
+      - name: libzmq3-dev
+        version: 4.3.4-2
+      - name: libprotobuf-dev
+        version: 3.12.4-1ubuntu7.22.04.6
+      - name: libssl-dev
+        version: 3.0.2-0ubuntu1.21
+    variables:
+      PROTOBUF_LIBRARY_PREFIX: /usr/lib/
+      PROTOBUF_INCLUDE_PREFIX: /usr/include/
+      ZMQ_LIBRARY_PREFIX: /usr/lib
+      ZMQ_INCLUDE_PREFIX: /usr/include
+  validation_cfg:
+    version_mandatory: true
+- name: language_deps
+  phases:
+  - name: install_gpg
+    apt:
+      packages:
+      - name: ca-certificates
+        version: 20240203~22.04.1
+      - name: gnupg
+        version: 2.2.27-3ubuntu2.5
+  - name: install_apt_packages
+    apt:
+      repos:
+        cran-r:
+          key_url: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xE298A3A825C0D65DFD57CBB651716619E084DAB9
+          entry: deb [signed-by=/usr/share/keyrings/cran-r.gpg] https://cloud.r-project.org/bin/linux/ubuntu
+            jammy-cran40/
+          out_file: jammy-cran40.list
+      packages:
+      - name: python3.10-dev
+        version: 3.10.12-1~22.04.15
+      - name: python3-distutils
+        version: 3.10.8-1~22.04
+      - name: curl
+        version: 7.81.0-1ubuntu1.23
+      - name: openjdk-11-jdk-headless
+        version: 11.0.30+7-1ubuntu1~22.04
+      - name: chrpath
+        version: 0.16-2
+      - name: libexpat1
+        version: 2.4.7-1ubuntu0.7
+        comment: Overrides version used by r-base-core/r-base-dev
+      - name: libexpat1-dev
+        version: 2.4.7-1ubuntu0.7
+        comment: Overrides version used by r-base-core/r-base-dev
+      - name: r-base-core
+        version: 4.5.2-1.2204.0
+      - name: r-base-dev
+        version: 4.5.2-1.2204.0
+    variables:
+      PYTHON3_PREFIX: /usr
+      PYTHON3_VERSION: python3.10
+      JAVA_PREFIX: /usr/lib/jvm/java-11-openjdk-amd64
+  - name: phase_python_binary
+    tools:
+      python_binary_path: /usr/bin/python3.10
+      r_binary_path: /usr/bin/Rscript
+  - name: install_pip
+    tools:
+      pip:
+        version: '21.3.1'
+        needs_break_system_packages: false
+  - name: install_pip_packages
+    pip:
+      packages:
+      - name: pandas
+        version: ==2.2.3
+        extras: []
+      - name: numpy
+        version: ==1.26.4
+        extras: []
+      - name: pyarrow
+        version: ==16.0.0
+        extras: []
+      install_build_tools_ephemerally: false
+  validation_cfg:
+    version_mandatory: true
+- name: flavor_base_deps_apt
+  phases:
+  - name: install_apt_packages
+    apt:
+      repos:
+        trivy:
+          key_url: https://aquasecurity.github.io/trivy-repo/deb/public.key
+          entry: deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb
+            generic main
+          out_file: trivy.list
+      packages:
+      - name: unzip
+        version: 6.0-26ubuntu3.2
+      - name: git
+        version: 1:2.34.1-1ubuntu1.17
+      - name: libcurl4-openssl-dev
+        version: 7.81.0-1ubuntu1.23
+      - name: build-essential
+        version: 12.9ubuntu3
+      - name: wget
+        version: 1.21.2-2ubuntu1.1
+      - name: maven
+        version: 3.6.3-5
+      - name: libldb2
+        version: 2:2.4.4-0ubuntu0.22.04.2
+      - name: libleveldb1d
+        version: 1.23-3build1
+      - name: openssl
+        version: 3.0.2-0ubuntu1.21
+      - name: libldap2-dev
+        version: 2.5.20+dfsg-0ubuntu0.22.04.1
+      - name: libsasl2-dev
+        version: 2.1.27+dfsg2-3ubuntu1.2
+        comment: Needed by python-ldap
+      - name: slapd
+        version: 2.5.20+dfsg-0ubuntu0.22.04.1
+      - name: ldap-utils
+        version: 2.5.20+dfsg-0ubuntu0.22.04.1
+      - name: unixodbc-dev
+        version: 2.3.9-5ubuntu0.1
+      - name: libxml2-dev
+        version: 2.9.13+dfsg-1ubuntu0.11
+      - name: apt-transport-https
+        version: 2.4.14
+      - name: gnupg
+        version: 2.2.27-3ubuntu2.5
+      - name: libhiredis-dev
+        version: 0.14.1-2
+      - name: libsmbclient
+        version: 2:4.15.13+dfsg-0ubuntu1.10
+      - name: libsmbclient-dev
+        version: 2:4.15.13+dfsg-0ubuntu1.10
+      - name: smbclient
+        version: 2:4.15.13+dfsg-0ubuntu1.10
+      - name: cmake
+        version: 3.22.1-1ubuntu1.22.04.2
+      - name: trivy
+        version: 0.69.3
+  validation_cfg:
+    version_mandatory: true
+- name: flavor_base_deps_python
+  phases:
+  - name: install_pip_packages
+    pip:
+      packages:
+      - name: azure-batch
+        version: ==14.2.0
+        extras: []
+      - name: azure-cosmos
+        version: ==4.6.0
+        extras: []
+      - name: azure-eventgrid
+        version: ==4.19.0
+        extras: []
+      - name: azure-eventhub
+        version: ==5.11.7
+        extras: []
+      - name: azure-eventhub-checkpointstoreblob
+        version: ==1.1.4
+        extras: []
+      - name: azure-eventhub-checkpointstoreblob-aio
+        version: ==1.1.4
+        extras: []
+      - name: azure-identity
+        version: ==1.16.0
+        extras: []
+      - name: azure-keyvault
+        version: ==4.2.0
+        extras: []
+      - name: azure-keyvault-certificates
+        version: ==4.8.0
+        extras: []
+      - name: azure-keyvault-keys
+        version: ==4.9.0
+        extras: []
+      - name: azure-keyvault-secrets
+        version: ==4.8.0
+        extras: []
+      - name: azure-kusto-data
+        version: ==4.4.0
+        extras: []
+      - name: azure-loganalytics
+        version: ==0.1.1
+        extras: []
+      - name: azure-servicebus
+        version: ==7.12.1
+        extras: []
+      - name: azure-storage-blob
+        version: ==12.19.1
+        extras: []
+      - name: azure-storage-file-datalake
+        version: ==12.14.0
+        extras: []
+      - name: azure-storage-file-share
+        version: ==12.15.0
+        extras: []
+      - name: azure-storage-queue
+        version: ==12.9.0
+        extras: []
+      - name: awscrt
+        version: ==0.20.9
+        extras: []
+      - name: boto3
+        version: ==1.34.98
+        extras: []
+      - name: google-cloud-asset
+        version: ==3.26.1
+        extras: []
+      - name: google-cloud-bigquery
+        version: ==3.21.0
+        extras: []
+      - name: google-cloud-bigquery-storage
+        version: ==2.25.0
+        extras: []
+      - name: google-cloud-bigtable
+        version: ==2.23.1
+        extras: []
+      - name: google-cloud-containeranalysis
+        version: ==2.14.3
+        extras: []
+      - name: google-cloud-datacatalog
+        version: ==3.19.0
+        extras: []
+      - name: google-cloud-datastore
+        version: ==2.19.0
+        extras: []
+      - name: google-cloud-firestore
+        version: ==2.16.0
+        extras: []
+      - name: google-cloud-kms
+        version: ==2.21.4
+        extras: []
+      - name: google-cloud-logging
+        version: ==3.10.0
+        extras: []
+      - name: google-cloud-monitoring
+        version: ==2.21.0
+        extras: []
+      - name: google-cloud-ndb
+        version: ==2.3.1
+        extras: []
+      - name: google-cloud-pubsub
+        version: ==2.21.1
+        extras: []
+      - name: google-cloud-spanner
+        version: ==3.46.0
+        extras: []
+      - name: google-cloud-storage
+        version: ==2.16.0
+        extras: []
+      - name: google-cloud-trace
+        version: ==1.13.3
+        extras: []
+      - name: martian
+        version: ==2.0.post1
+        extras: []
+      - name: protobuf
+        version: ==4.25.8
+        comment: Need to pin to older version - because google-cloud-asset has dependency
+          to <5.0.0dev
+        extras: []
+      - name: pyexasol
+        version: ==1.2.0
+        extras: []
+      - name: pysftp
+        version: ==0.2.9
+        extras: []
+      - name: pytz
+        version: '==2024.1'
+        extras: []
+      - name: sagemaker
+        version: ==2.218.1
+        extras: []
+      - name: pycurl
+        version: ==7.45.3
+        extras: []
+      - name: redis
+        version: ==5.0.4
+        extras: []
+      - name: roman
+        version: '==4.2'
+        extras: []
+      - name: pyodbc
+        version: ==5.1.0
+        extras: []
+      - name: lxml
+        version: ==5.2.1
+        extras: []
+      - name: scipy
+        version: ==1.13.0
+        extras: []
+      - name: pyftpdlib
+        version: ==1.5.9
+        extras: []
+      - name: jinja2
+        version: ==3.1.4
+        extras: []
+      - name: cffi
+        version: ==1.16.0
+        extras: []
+      - name: docutils
+        version: ==0.21.2
+        extras: []
+      - name: requests
+        version: ==2.32.4
+        extras: []
+      - name: ujson
+        version: ==5.9.0
+        extras: []
+      - name: paramiko
+        version: ==3.4.0
+        extras: []
+      - name: simplejson
+        version: ==3.19.2
+        extras: []
+      - name: scikit-learn
+        version: ==1.4.2
+        extras: []
+      - name: plyvel
+        version: ==1.5.1
+        extras: []
+      - name: python-ldap
+        version: ==3.4.4
+        extras: []
+      - name: pyOpenSSL
+        version: ==25.3.0
+        extras: []
+      - name: exasol-db-api
+        extras: []
+        url: git+https://github.com/EXASOL/websocket-api.git@91bd9a7970941c578f246c07f2645699fc491d6c#egg=exasol-db-api&subdirectory=python
+      - name: debugpy
+        version: ==1.8.1
+        extras: []
+      - name: pybase64
+        version: ==1.3.2
+        extras: []
+      - name: pysimdjson
+        version: ==6.0.2
+        extras: []
+      - name: numba
+        version: ==0.59.1
+        extras: []
+      - name: bitarray
+        version: ==2.9.2
+        extras: []
+      - name: pybloomfiltermmap3
+        version: ==0.5.7
+        extras: []
+      - name: bitsets
+        version: ==0.8.4
+        extras: []
+      - name: pyyaml
+        version: ==6.0.1
+        extras: []
+      - name: exasol-bucketfs
+        version: ==2.0.0
+        extras: []
+      - name: pysmbc
+        version: ==1.0.25.1
+        extras: []
+      - name: cryptography
+        version: ==45.0.7
+        extras: []
+      - name: h2
+        version: ==4.1.0
+        extras: []
+      - name: cython
+        version: ==3.0.10
+        extras: []
+      - name: portalocker
+        version: ==3.1.1
+        extras: []
+      install_build_tools_ephemerally: true
+  validation_cfg:
+    version_mandatory: false
+- name: flavor_base_deps_r
+  phases:
+  - name: install_r_packages
+    r:
+      packages:
+      - name: acepack
+        version: 1.4.2
+      - name: chron
+        version: 2.3-61
+      - name: data.table
+        version: 1.17.4
+      - name: digest
+        version: 0.6.37
+      - name: fastcluster
+        version: 1.2.6
+      - name: flashClust
+        version: 1.01-2
+      - name: Formula
+        version: 1.2-5
+      - name: gtools
+        version: 3.9.5
+      - name: iterators
+        version: 1.0.14
+      - name: magrittr
+        version: 2.0.4
+      - name: nloptr
+        version: 2.0.3
+      - name: profileModel
+        version: 0.6.1
+      - name: proto
+        version: 1.0.0
+      - name: randomForest
+        version: 4.7-1.2
+      - name: Rcpp
+        version: 1.0.12
+      - name: RODBC
+        version: 1.3-23
+      - name: XML
+        version: 3.99-0.16.1
+      - name: jsonlite
+        version: 1.8.8
+      - name: rjson
+        version: 0.2.21
+      - name: yaml
+        version: 2.3.8
+      - name: glue
+        version: 1.7.0
+      - name: SparseM
+        version: '1.81'
+      - name: brglm
+        version: 0.7.2
+      - name: minqa
+        version: 1.2.6
+      - name: plyr
+        version: 1.8.9
+      - name: foreach
+        version: 1.5.2
+      - name: purrr
+        version: 1.0.2
+      - name: stringr
+        version: 1.5.1
+      - name: htmltools
+        version: 0.5.8.1
+      - name: RCurl
+        version: 1.98-1.14
+      - name: e1071
+        version: 1.7-14
+      - name: redux
+        version: 1.1.4
+      - name: reshape2
+        version: 1.4.4
+      - name: scales
+        version: 1.4.0
+      - name: lme4
+        version: 1.1-35.3
+      - name: gbm
+        version: 2.1.9
+      - name: httr
+        version: 1.4.7
+      - name: BradleyTerry2
+        version: 1.1-2
+      - name: tibble
+        version: 3.2.1
+      - name: dplyr
+        version: 1.2.0
+      - name: tidyr
+        version: 1.3.1
+      - name: oysteR
+        version: 0.1.1
+      - name: caret
+        version: 6.0-94
+      - name: caretEnsemble
+        version: 2.0.3
+  validation_cfg:
+    version_mandatory: true
+- name: flavor_customization
+  phases:
+  - name: install_apt_packages
+    apt:
+      packages: []
+#        - name: p7zip-full
+#          version: ==16.02+dfsg-6
+  - name: install_pip_packages
+    pip:
+      packages: []
+#        - name: tensorflow-probability
+#          version: ==0.9.0
+  - name: install_r_packages
+    r:
+      packages: []
+#        - name: mlr3
+#          version: 0.21.1
+  validation_cfg:
+    version_mandatory: false
+version: 1.0.0

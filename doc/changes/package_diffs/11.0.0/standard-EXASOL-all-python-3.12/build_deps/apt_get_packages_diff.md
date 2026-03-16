@@ -2,10 +2,10 @@
 
 |    | Package           | Version in 10.2.0    | Version in 11.0.0    | Status   |
 |---:|:------------------|:---------------------|:---------------------|:---------|
-|  0 | build-essential   | 12.10ubuntu1         | 12.10ubuntu1         |          |
-|  1 | chrpath           | 0.16-2build1         | 0.16-2build1         |          |
-|  2 | coreutils         | 9.4-3ubuntu6.1       | 9.4-3ubuntu6.1       |          |
-|  3 | curl              | 8.5.0-2ubuntu10.7    | 8.5.0-2ubuntu10.7    |          |
+|  0 | curl              | 8.5.0-2ubuntu10.7    | 8.5.0-2ubuntu10.8    | UPDATED  |
+|  1 | build-essential   | 12.10ubuntu1         | 12.10ubuntu1         |          |
+|  2 | chrpath           | 0.16-2build1         | 0.16-2build1         |          |
+|  3 | coreutils         | 9.4-3ubuntu6.1       | 9.4-3ubuntu6.1       |          |
 |  4 | libpcre3-dev      | 2:8.39-15build1      | 2:8.39-15build1      |          |
 |  5 | locales           | 2.39-0ubuntu8.7      | 2.39-0ubuntu8.7      |          |
 |  6 | openjdk-17-jdk    | 17.0.18+8-1~24.04.1  | 17.0.18+8-1~24.04.1  |          |

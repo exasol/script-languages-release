@@ -271,7 +271,7 @@ build_steps:
           to <5.0.0dev
         extras: []
       - name: pyexasol
-        version: ==1.2.0
+        version: ==2.1.0
         extras: []
       - name: pysftp
         version: ==0.2.9
@@ -338,7 +338,7 @@ build_steps:
         extras: []
       - name: exasol-db-api
         extras: []
-        url: git+https://github.com/EXASOL/websocket-api.git@91bd9a7970941c578f246c07f2645699fc491d6c#egg=exasol-db-api&subdirectory=python
+        url: git+https://github.com/EXASOL/websocket-api.git@e4290606386cb941c0bd024506b97be2fd59be7d#egg=exasol-db-api&subdirectory=python
       - name: debugpy
         version: ==1.8.1
         extras: []

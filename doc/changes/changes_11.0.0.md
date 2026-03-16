@@ -5,7 +5,7 @@ Code name: Exaslpm
 ## Summary
 
 This release replaces the package installation in all flavors with the new [exaslpm](https://github.com/exasol/script-languages-package-management) tool. 
-Furthermore, this release contains some dependy updates for all flavors.
+Furthermore, this release updates several packages in all flavors.
 
 
 <!-- markdown-link-check-disable -->

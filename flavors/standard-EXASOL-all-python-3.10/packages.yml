@@ -218,7 +218,7 @@ build_steps:
         version: ==4.25.8
       - extras: []
         name: pyexasol
-        version: ==2.0.0
+        version: ==2.1.0
       - extras: []
         name: pysftp
         version: ==0.2.9

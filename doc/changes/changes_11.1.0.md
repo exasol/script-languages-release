@@ -24,7 +24,7 @@ n/a
 
 ## Refactorings
 
- - #1406: Updated dependency of slc_ci and slc_ci_setup
+ - #1409: Prepared new version and removed duplicated packages 
 
 ## Dependencies
 

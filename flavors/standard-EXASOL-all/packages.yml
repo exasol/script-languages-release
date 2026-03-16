@@ -147,6 +147,8 @@ build_steps:
         version: 3.22.1-1ubuntu1.22.04.2
       - name: trivy
         version: 0.69.3
+      - name: libleveldb-dev
+        version: 1.23-3build1
   validation_cfg:
     version_mandatory: true
 - name: flavor_base_deps_python

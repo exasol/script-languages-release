@@ -1,4 +1,4 @@
-# script-languages-release 11.0.0, released t.b.d.
+# script-languages-release 11.0.0, released 2026-03-16
 
 Code name: Exaslpm
 
@@ -15,7 +15,7 @@ This release uses version 4.0.2 of the container tool.
 
 ## Features
 
-n/a
+ - #1383: Use exaslpm to install dependencies in all flavors
 
 ## Security Issues
 

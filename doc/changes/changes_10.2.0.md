@@ -20,7 +20,6 @@ This release uses version 3.6.1 of the container tool.
 
  - #1267: Created template flavor template-Exasol-all-python-3.12-conda
  - #1268: Created template flavor /template-Exasol-8-python-3.12-cuda-conda
- - #1383: Exaslpm, Merging all branches each containing changes for respective flavor using exaslpm
 
 ## Security Issues
 

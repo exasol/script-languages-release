@@ -1,10 +1,13 @@
-# script-languages-release 11.1.0, released t.b.d.
+# script-languages-release 11.1.0, released 2026-03-17
 
 Code name: ARM support
 
 ## Summary
 
-t.b.d.
+This release adds ARM support for all standard flavors and None-conda-based template flavors.
+However, the CI/CD does not run integration tests on ARM yet.
+Furthermore, the APT package `libleveldb-dev` was added to all three Python standard flavors.
+Please note that the package difference markdown files use the new report format, which provides a clean separation between public packages (the ones which will be included in the final Script-Languages-Container image) and internal packages (which are only included in the intermediate images). 
 
 
 <!-- markdown-link-check-disable -->
@@ -16,7 +19,7 @@ This release uses version 4.0.2 of the container tool.
 
 ## Features
 
- n/a
+  - #1402: Added ARM support for all flavors except Conda based flavors 
 
 ## Security Issues
 

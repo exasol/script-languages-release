@@ -28,7 +28,7 @@ n/a
 
 ## Dependencies
 
-n/a
+ - #1406: Updated slc_ci and slc_ci_setup and removed detect_platform nox task
 
 ## Bugs
 

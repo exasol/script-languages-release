@@ -706,14 +706,14 @@ types-requests = ">=2.31.0.6,<3.0.0.0"
 
 [[package]]
 name = "exasol-script-languages-container-ci"
-version = "5.1.0"
+version = "5.1.1"
 description = "Implements CI builds for script-language-container."
 optional = false
 python-versions = "<3.14,>=3.10"
 groups = ["main"]
 files = [
-    {file = "exasol_script_languages_container_ci-5.1.0-py3-none-any.whl", hash = "sha256:d7f9a25d4be77ecb4efb89deb8a5e0cf33d1d41ce4c5f323fa81290f8e1ceff5"},
-    {file = "exasol_script_languages_container_ci-5.1.0.tar.gz", hash = "sha256:ac31059c48cc2f42c9a0081b5db59e8e89b26bb82ae01cd3cde09de19d2da977"},
+    {file = "exasol_script_languages_container_ci-5.1.1-py3-none-any.whl", hash = "sha256:6838584e2ac88fabaedbcd4835e3f50207ddb84d5fdb9d8c0cda3eef9ed56f90"},
+    {file = "exasol_script_languages_container_ci-5.1.1.tar.gz", hash = "sha256:d71a448dbf3c6e94c25d00d13c896bbfc0c3c703ea55df0211b8ac9e26215d2a"},
 ]
 
 [package.dependencies]
@@ -725,14 +725,14 @@ setuptools = ">=80.0.0"
 
 [[package]]
 name = "exasol-script-languages-container-ci-setup"
-version = "4.1.0"
+version = "4.2.0"
 description = "Manages AWS cloud CI build infrastructure."
 optional = false
 python-versions = "<3.14,>=3.10"
 groups = ["main"]
 files = [
-    {file = "exasol_script_languages_container_ci_setup-4.1.0-py3-none-any.whl", hash = "sha256:6786540bb920171c5d63174e135dbe78868593d768296c9d422e01df9a5e1a92"},
-    {file = "exasol_script_languages_container_ci_setup-4.1.0.tar.gz", hash = "sha256:979ee858b246ddb70a7f65c84078450e90d9505d6c862ffa92605cdf899912d8"},
+    {file = "exasol_script_languages_container_ci_setup-4.2.0-py3-none-any.whl", hash = "sha256:b8ba063b347ad7bdc78344d4261f3e329293caaeb554526a6f4a235a5da732b0"},
+    {file = "exasol_script_languages_container_ci_setup-4.2.0.tar.gz", hash = "sha256:bb87e7677f85ed2b02e470ff5e497172df50f09c3041e7eff3144b878367c7ff"},
 ]
 
 [package.dependencies]
@@ -740,8 +740,8 @@ boto3 = ">=1.37.1,<2.0.0"
 botocore = ">=1.37.11,<2.0.0"
 click = ">=8.1.3,<9.0.0"
 exasol-error-reporting = ">=1.0.0,<2.0.0"
-exasol-script-languages-container-ci = ">=5.0.0,<6.0.0"
-exasol-script-languages-container-tool = ">=4.0.1,<5.0.0"
+exasol-script-languages-container-ci = ">=5.1.1,<6.0.0"
+exasol-script-languages-container-tool = ">=4.0.2,<5.0.0"
 jinja2 = ">=3.1.6,<4.0.0"
 jsonschema = ">=4.22.0,<5.0.0"
 PyGithub = ">=2.3.0,<3.0.0"
@@ -2799,4 +2799,4 @@ dev = ["pytest", "setuptools"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10, <3.14"
-content-hash = "3a2e851f3c1bd3361d800c9883dc814a81a7bf6bea6aacd62e106b142ed8b197"
+content-hash = "8a6b0632b2d5ae1a9a31da3a0110b81220ddab77e6608608036607f7661c9464"

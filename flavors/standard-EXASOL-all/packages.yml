@@ -133,8 +133,6 @@ build_steps:
         version: 2.9.13+dfsg-1ubuntu0.11
       - name: apt-transport-https
         version: 2.4.14
-      - name: gnupg
-        version: 2.2.27-3ubuntu2.5
       - name: libhiredis-dev
         version: 0.14.1-2
       - name: libsmbclient

@@ -33,6 +33,7 @@ n/a
 ## Bugs
 
  - #1416: Added ARM build runner to standard-EXASOL-all-python-3.12
+ - #1418: Removed duplicated package gnupg in standard-all flavor
 
 ## Doc
 

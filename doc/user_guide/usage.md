@@ -100,12 +100,12 @@ To customize an existing flavor you can add your specific needs to the Dockerfil
 Under `flavors/<flavor>/packages.yml` you will find the list of all packages, which will be installed into the Script-Languages-Container, divided in different "build-steps".
 For customization, there is a dedicated build-step called "flavor_customization" (which is usually at the end of the file).
 
-For an example look [here](../../flavors/template-Exasol-all-python-3.12/packages.yml).
+For an example look [here](../../flavors/template-Exasol-all-r-4/packages.yml).
 
 The packages described in `packages.yml` will be installed by [exaslpm](https://github.com/exasol/script-languages-package-management), which gets called in the respective Dockerfile of the flavor-customization.
 
 If you want to change or add other things you are able to add Dockerfile commands to
-`flavors/<flavor>/flavor-customization/Dockerfile`, for an example look [here](../../flavors/template-Exasol-all-python-3.12/flavor_customization/Dockerfile). Please follow the instruction in there, if you add Dockerfile commands. 
+`flavors/<flavor>/flavor-customization/Dockerfile`, for an example look [here](../../flavors/template-Exasol-all-r-4/flavor_customization/Dockerfile). Please follow the instruction in there, if you add Dockerfile commands. 
 
 **Note: For more details about the flavors please checkout their [documentation](../../flavors/README.md).**
 

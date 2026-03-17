@@ -64,7 +64,7 @@ build_steps:
     variables:
       PYTHON3_PREFIX: /usr
       PYTHON3_VERSION: python3.10
-      JAVA_PREFIX: /usr/lib/jvm/java-11-openjdk-amd64
+      JAVA_PREFIX: /usr/lib/jvm/java-11-openjdk-{% if platform == 'x86_64' %}amd64{% else %}arm64{% endif %}
   - name: phase_python_binary
     tools:
       python_binary_path: /usr/bin/python3.10
@@ -147,6 +147,8 @@ build_steps:
         version: 3.22.1-1ubuntu1.22.04.2
       - name: trivy
         version: 0.69.3
+      - name: libleveldb-dev
+        version: 1.23-3build1
   validation_cfg:
     version_mandatory: true
 - name: flavor_base_deps_python

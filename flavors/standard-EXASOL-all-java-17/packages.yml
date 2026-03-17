@@ -35,18 +35,14 @@ build_steps:
       - name: openjdk-17-jdk-headless
         version: 17.0.18+8-1~22.04.1
     variables:
-      JAVA_PREFIX: /usr/lib/jvm/java-17-openjdk-amd64
+      JAVA_PREFIX: /usr/lib/jvm/java-17-openjdk-{% if platform == 'x86_64' %}amd64{% else %}arm64{% endif %}
   validation_cfg:
     version_mandatory: true
 - name: flavor_base_deps
   phases:
   - name: install_apt_packages
     apt:
-      packages:
-      - name: coreutils
-        version: 8.32-4.1ubuntu1.2
-      - name: locales
-        version: 2.35-0ubuntu3.13
+      packages: []
   validation_cfg:
     version_mandatory: true
 version: 1.0.0

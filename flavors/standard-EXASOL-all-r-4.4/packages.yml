@@ -63,10 +63,6 @@ build_steps:
   - name: install_apt_packages
     apt:
       packages:
-      - name: coreutils
-        version: 8.32-4.1ubuntu1.2
-      - name: locales
-        version: 2.35-0ubuntu3.13
       - name: unzip
         version: 6.0-26ubuntu3.2
       - name: wget

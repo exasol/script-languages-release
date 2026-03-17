@@ -97,6 +97,8 @@ build_steps:
         version: 14.2.0-4ubuntu2~24.04.1
       - name: tzdata
         version: 2025b-0ubuntu0.24.04.1
+      - name: libleveldb-dev
+        version: 1.23-5build1
   - name: install_pip_packages
     pip:
       install_build_tools_ephemerally: true

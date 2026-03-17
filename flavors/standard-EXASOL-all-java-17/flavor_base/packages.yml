@@ -50,8 +50,6 @@ build_steps:
         version: 0.14.3-1
       - name: strace
         version: 5.16-0ubuntu3
-      - name: chrpath
-        version: 0.16-2
   validation_cfg:
     version_mandatory: true
 - name: security_scan
@@ -70,7 +68,6 @@ build_steps:
           out_file: trivy.list
       packages:
       - name: trivy
-      - name: gnupg
   validation_cfg:
     version_mandatory: false
 version: 1.0.0

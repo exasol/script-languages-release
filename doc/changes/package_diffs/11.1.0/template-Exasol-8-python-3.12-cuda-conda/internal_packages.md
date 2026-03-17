@@ -9,11 +9,11 @@
 |  0 | binutils  | 2.42-4ubuntu2.8           | 2.42-4ubuntu2.8           |          | base_test_deps |
 |  1 | gdb       | 15.0.50.20240403-0ubuntu1 | 15.0.50.20240403-0ubuntu1 |          | base_test_deps |
 |  2 | gdbserver | 15.0.50.20240403-0ubuntu1 | 15.0.50.20240403-0ubuntu1 |          | base_test_deps |
-|  3 | gnupg     | No version specified      | No version specified      |          | security_scan  |
-|  4 | patchelf  | 0.18.0-1.1build1          | 0.18.0-1.1build1          |          | base_test_deps |
-|  5 | strace    | 6.8-0ubuntu2              | 6.8-0ubuntu2              |          | base_test_deps |
-|  6 | trivy     | No version specified      | No version specified      |          | security_scan  |
-|  7 | valgrind  | 1:3.22.0-0ubuntu3         | 1:3.22.0-0ubuntu3         |          | base_test_deps |
+|  3 | patchelf  | 0.18.0-1.1build1          | 0.18.0-1.1build1          |          | base_test_deps |
+|  4 | strace    | 6.8-0ubuntu2              | 6.8-0ubuntu2              |          | base_test_deps |
+|  5 | valgrind  | 1:3.22.0-0ubuntu3         | 1:3.22.0-0ubuntu3         |          | base_test_deps |
+|  6 | gnupg     | No version specified      | No version specified      |          | security_scan  |
+|  7 | trivy     | No version specified      | No version specified      |          | security_scan  |
 
 ## Conda packages
 

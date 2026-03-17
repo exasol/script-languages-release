@@ -42,11 +42,7 @@ build_steps:
   phases:
   - name: install_apt_packages
     apt:
-      packages:
-      - name: coreutils
-        version: 8.32-4.1ubuntu1.2
-      - name: locales
-        version: 2.35-0ubuntu3.13
+      packages: []
   validation_cfg:
     version_mandatory: true
 version: 1.0.0

@@ -36,7 +36,7 @@ n/a
 
 ## Doc
 
-n/a
+ - #1411: Fixed broken links in user guide
 
 ## Internal
 

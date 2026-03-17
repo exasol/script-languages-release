@@ -16,7 +16,7 @@ This release uses version 4.0.2 of the container tool.
 
 ## Features
 
- n/a
+  - #1402: Added ARM support for all flavors except Conda based flavors 
 
 ## Security Issues
 

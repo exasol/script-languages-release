@@ -28,7 +28,7 @@ n/a
 
 ## Dependencies
 
-n/a
+ - #1423: Updated Dependencies on top of 11.1.0
 
 ## Bugs
 

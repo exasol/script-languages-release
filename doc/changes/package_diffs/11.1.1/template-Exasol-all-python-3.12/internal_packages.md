@@ -6,7 +6,7 @@
 
 |    | Package           | Version in 11.1.0         | Version in 11.1.1         | Status   | Build-Step     |
 |---:|:------------------|:--------------------------|:--------------------------|:---------|:---------------|
-|  0 | binutils          | 2.42-4ubuntu2.8           | 2.42-4ubuntu2.8           |          | base_test_deps |
+|  0 | binutils          | 2.42-4ubuntu2.8           | 2.42-4ubuntu2.10          | UPDATED  | base_test_deps |
 |  1 | gdb               | 15.0.50.20240403-0ubuntu1 | 15.0.50.20240403-0ubuntu1 |          | base_test_deps |
 |  2 | patchelf          | 0.18.0-1.1build1          | 0.18.0-1.1build1          |          | base_test_deps |
 |  3 | strace            | 6.8-0ubuntu2              | 6.8-0ubuntu2              |          | base_test_deps |

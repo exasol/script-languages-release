@@ -4,33 +4,33 @@
 
 ## Apt packages
 
-|    | Package              | Version in 11.1.1            | Version in 11.2.0            | Status   | Build-Step       |
-|---:|:---------------------|:-----------------------------|:-----------------------------|:---------|:-----------------|
-|  0 | git                  | 1:2.34.1-1ubuntu1.17         | 1:2.34.1-1ubuntu1.17         |          | flavor_base_deps |
-|  1 | ldap-utils           | 2.5.20+dfsg-0ubuntu0.22.04.1 | 2.5.20+dfsg-0ubuntu0.22.04.1 |          | flavor_base_deps |
-|  2 | libcurl4-openssl-dev | 7.81.0-1ubuntu1.23           | 7.81.0-1ubuntu1.23           |          | flavor_base_deps |
-|  3 | libgomp1             | 12.3.0-1ubuntu1~22.04.3      | 12.3.0-1ubuntu1~22.04.3      |          | flavor_base_deps |
-|  4 | libldap2-dev         | 2.5.20+dfsg-0ubuntu0.22.04.1 | 2.5.20+dfsg-0ubuntu0.22.04.1 |          | flavor_base_deps |
-|  5 | libleveldb-dev       | 1.23-3build1                 | 1.23-3build1                 |          | flavor_base_deps |
-|  6 | libsasl2-dev         | 2.1.27+dfsg2-3ubuntu1.2      | 2.1.27+dfsg2-3ubuntu1.2      |          | flavor_base_deps |
-|  7 | libsmbclient         | 2:4.15.13+dfsg-0ubuntu1.10   | 2:4.15.13+dfsg-0ubuntu1.10   |          | flavor_base_deps |
-|  8 | libsmbclient-dev     | 2:4.15.13+dfsg-0ubuntu1.10   | 2:4.15.13+dfsg-0ubuntu1.10   |          | flavor_base_deps |
-|  9 | openssl              | 3.0.2-0ubuntu1.21            | 3.0.2-0ubuntu1.21            |          | flavor_base_deps |
-| 10 | slapd                | 2.5.20+dfsg-0ubuntu0.22.04.1 | 2.5.20+dfsg-0ubuntu0.22.04.1 |          | flavor_base_deps |
-| 11 | smbclient            | 2:4.15.13+dfsg-0ubuntu1.10   | 2:4.15.13+dfsg-0ubuntu1.10   |          | flavor_base_deps |
-| 12 | tzdata               | 2025b-0ubuntu0.22.04.1       | 2025b-0ubuntu0.22.04.1       |          | flavor_base_deps |
-| 13 | unzip                | 6.0-26ubuntu3.2              | 6.0-26ubuntu3.2              |          | flavor_base_deps |
-| 14 | ca-certificates      | 20240203~22.04.1             | 20240203~22.04.1             |          | language_deps    |
-| 15 | chrpath              | 0.16-2                       | 0.16-2                       |          | language_deps    |
-| 16 | curl                 | 7.81.0-1ubuntu1.23           | 7.81.0-1ubuntu1.23           |          | language_deps    |
-| 17 | python3-distutils    | 3.10.8-1~22.04               | 3.10.8-1~22.04               |          | language_deps    |
-| 18 | python3.10-dev       | 3.10.12-1~22.04.15           | 3.10.12-1~22.04.15           |          | language_deps    |
-| 19 | coreutils            | 8.32-4.1ubuntu1.2            | 8.32-4.1ubuntu1.2            |          | udfclient_deps   |
-| 20 | libnss-db            | 2.2.3pre1-6ubuntu3           | 2.2.3pre1-6ubuntu3           |          | udfclient_deps   |
-| 21 | libprotobuf-dev      | 3.12.4-1ubuntu7.22.04.6      | 3.12.4-1ubuntu7.22.04.6      |          | udfclient_deps   |
-| 22 | libssl-dev           | 3.0.2-0ubuntu1.21            | 3.0.2-0ubuntu1.21            |          | udfclient_deps   |
-| 23 | libzmq3-dev          | 4.3.4-2                      | 4.3.4-2                      |          | udfclient_deps   |
-| 24 | locales              | 2.35-0ubuntu3.13             | 2.35-0ubuntu3.13             |          | udfclient_deps   |
+|    | Package              | Version in 11.1.1            | Version in 11.2.0       | Status   | Build-Step       |
+|---:|:---------------------|:-----------------------------|:------------------------|:---------|:-----------------|
+|  0 | git                  | 1:2.34.1-1ubuntu1.17         | 1:2.34.1-1ubuntu*       | UPDATED  | flavor_base_deps |
+|  1 | ldap-utils           | 2.5.20+dfsg-0ubuntu0.22.04.1 | 2.5.20+dfsg-0ubuntu*    | UPDATED  | flavor_base_deps |
+|  2 | libcurl4-openssl-dev | 7.81.0-1ubuntu1.23           | 7.81.0-1ubuntu*         | UPDATED  | flavor_base_deps |
+|  3 | libgomp1             | 12.3.0-1ubuntu1~22.04.3      | 12.3.0-1ubuntu*         | UPDATED  | flavor_base_deps |
+|  4 | libldap2-dev         | 2.5.20+dfsg-0ubuntu0.22.04.1 | 2.5.20+dfsg-0ubuntu*    | UPDATED  | flavor_base_deps |
+|  5 | libsasl2-dev         | 2.1.27+dfsg2-3ubuntu1.2      | 2.1.27+dfsg2-3ubuntu*   | UPDATED  | flavor_base_deps |
+|  6 | libsmbclient         | 2:4.15.13+dfsg-0ubuntu1.10   | 2:4.15.13+dfsg-0ubuntu* | UPDATED  | flavor_base_deps |
+|  7 | libsmbclient-dev     | 2:4.15.13+dfsg-0ubuntu1.10   | 2:4.15.13+dfsg-0ubuntu* | UPDATED  | flavor_base_deps |
+|  8 | openssl              | 3.0.2-0ubuntu1.21            | 3.0.2-0ubuntu*          | UPDATED  | flavor_base_deps |
+|  9 | slapd                | 2.5.20+dfsg-0ubuntu0.22.04.1 | 2.5.20+dfsg-0ubuntu*    | UPDATED  | flavor_base_deps |
+| 10 | smbclient            | 2:4.15.13+dfsg-0ubuntu1.10   | 2:4.15.13+dfsg-0ubuntu* | UPDATED  | flavor_base_deps |
+| 11 | tzdata               | 2025b-0ubuntu0.22.04.1       | 2025b-0ubuntu*          | UPDATED  | flavor_base_deps |
+| 12 | unzip                | 6.0-26ubuntu3.2              | 6.0-26ubuntu*           | UPDATED  | flavor_base_deps |
+| 13 | curl                 | 7.81.0-1ubuntu1.23           | 7.81.0-1ubuntu*         | UPDATED  | language_deps    |
+| 14 | coreutils            | 8.32-4.1ubuntu1.2            | 8.32-4.1ubuntu*         | UPDATED  | udfclient_deps   |
+| 15 | libnss-db            | 2.2.3pre1-6ubuntu3           | 2.2.3pre1-6ubuntu*      | UPDATED  | udfclient_deps   |
+| 16 | libprotobuf-dev      | 3.12.4-1ubuntu7.22.04.6      | 3.12.4-1ubuntu*         | UPDATED  | udfclient_deps   |
+| 17 | libssl-dev           | 3.0.2-0ubuntu1.21            | 3.0.2-0ubuntu*          | UPDATED  | udfclient_deps   |
+| 18 | locales              | 2.35-0ubuntu3.13             | 2.35-0ubuntu*           | UPDATED  | udfclient_deps   |
+| 19 | libleveldb-dev       | 1.23-3build1                 | 1.23-3build1            |          | flavor_base_deps |
+| 20 | ca-certificates      | 20240203~22.04.1             | 20240203~22.04.1        |          | language_deps    |
+| 21 | chrpath              | 0.16-2                       | 0.16-2                  |          | language_deps    |
+| 22 | python3-distutils    | 3.10.8-1~22.04               | 3.10.8-1~22.04          |          | language_deps    |
+| 23 | python3.10-dev       | 3.10.12-1~22.04.15           | 3.10.12-1~22.04.15      |          | language_deps    |
+| 24 | libzmq3-dev          | 4.3.4-2                      | 4.3.4-2                 |          | udfclient_deps   |
 
 ## Pip packages
 

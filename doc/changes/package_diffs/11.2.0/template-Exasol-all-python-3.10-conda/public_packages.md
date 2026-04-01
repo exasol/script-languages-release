@@ -4,15 +4,15 @@
 
 ## Apt packages
 
-|    | Package         | Version in 11.1.1       | Version in 11.2.0       | Status   | Build-Step       |
-|---:|:----------------|:------------------------|:------------------------|:---------|:-----------------|
-|  0 | bzip2           | 1.0.8-5build1           | 1.0.8-5build1           |          | conda_deps       |
-|  1 | ca-certificates | 20240203~22.04.1        | 20240203~22.04.1        |          | conda_deps       |
-|  2 | coreutils       | 8.32-4.1ubuntu1.2       | 8.32-4.1ubuntu1.2       |          | conda_deps       |
-|  3 | curl            | 7.81.0-1ubuntu1.23      | 7.81.0-1ubuntu1.23      |          | conda_deps       |
-|  4 | libxml2         | 2.9.13+dfsg-1ubuntu0.11 | 2.9.13+dfsg-1ubuntu0.11 |          | conda_deps       |
-|  5 | locales         | 2.35-0ubuntu3.13        | 2.35-0ubuntu3.13        |          | conda_deps       |
-|  6 | tzdata          | 2025b-0ubuntu0.22.04.1  | 2025b-0ubuntu0.22.04.1  |          | flavor_base_deps |
+|    | Package         | Version in 11.1.1       | Version in 11.2.0    | Status   | Build-Step       |
+|---:|:----------------|:------------------------|:---------------------|:---------|:-----------------|
+|  0 | coreutils       | 8.32-4.1ubuntu1.2       | 8.32-4.1ubuntu*      | UPDATED  | conda_deps       |
+|  1 | curl            | 7.81.0-1ubuntu1.23      | 7.81.0-1ubuntu*      | UPDATED  | conda_deps       |
+|  2 | libxml2         | 2.9.13+dfsg-1ubuntu0.11 | 2.9.13+dfsg-1ubuntu* | UPDATED  | conda_deps       |
+|  3 | locales         | 2.35-0ubuntu3.13        | 2.35-0ubuntu*        | UPDATED  | conda_deps       |
+|  4 | tzdata          | 2025b-0ubuntu0.22.04.1  | 2025b-0ubuntu*       | UPDATED  | flavor_base_deps |
+|  5 | bzip2           | 1.0.8-5build1           | 1.0.8-5build1        |          | conda_deps       |
+|  6 | ca-certificates | 20240203~22.04.1        | 20240203~22.04.1     |          | conda_deps       |
 
 ## Conda packages
 

@@ -4,28 +4,28 @@
 
 ## Apt packages
 
-|    | Package              | Version in 11.1.1       | Version in 11.2.0       | Status   | Build-Step       |
-|---:|:---------------------|:------------------------|:------------------------|:---------|:-----------------|
-|  0 | cmake                | 3.22.1-1ubuntu1.22.04.2 | 3.22.1-1ubuntu1.22.04.2 |          | flavor_base_deps |
-|  1 | git                  | 1:2.34.1-1ubuntu1.17    | 1:2.34.1-1ubuntu1.17    |          | flavor_base_deps |
-|  2 | libcurl4-openssl-dev | 7.81.0-1ubuntu1.23      | 7.81.0-1ubuntu1.23      |          | flavor_base_deps |
-|  3 | libhiredis-dev       | 0.14.1-2                | 0.14.1-2                |          | flavor_base_deps |
-|  4 | unixodbc-dev         | 2.3.9-5ubuntu0.1        | 2.3.9-5ubuntu0.1        |          | flavor_base_deps |
-|  5 | unzip                | 6.0-26ubuntu3.2         | 6.0-26ubuntu3.2         |          | flavor_base_deps |
-|  6 | wget                 | 1.21.2-2ubuntu1.1       | 1.21.2-2ubuntu1.1       |          | flavor_base_deps |
-|  7 | ca-certificates      | 20240203~22.04.1        | 20240203~22.04.1        |          | language_deps    |
-|  8 | curl                 | 7.81.0-1ubuntu1.23      | 7.81.0-1ubuntu1.23      |          | language_deps    |
-|  9 | gnupg                | 2.2.27-3ubuntu2.5       | 2.2.27-3ubuntu2.5       |          | language_deps    |
-| 10 | libexpat1            | 2.4.7-1ubuntu0.7        | 2.4.7-1ubuntu0.7        |          | language_deps    |
-| 11 | libexpat1-dev        | 2.4.7-1ubuntu0.7        | 2.4.7-1ubuntu0.7        |          | language_deps    |
-| 12 | r-base-core          | 4.5.2-1.2204.0          | 4.5.2-1.2204.0          |          | language_deps    |
-| 13 | r-base-dev           | 4.5.2-1.2204.0          | 4.5.2-1.2204.0          |          | language_deps    |
-| 14 | coreutils            | 8.32-4.1ubuntu1.2       | 8.32-4.1ubuntu1.2       |          | udfclient_deps   |
-| 15 | libnss-db            | 2.2.3pre1-6ubuntu3      | 2.2.3pre1-6ubuntu3      |          | udfclient_deps   |
-| 16 | libprotobuf-dev      | 3.12.4-1ubuntu7.22.04.6 | 3.12.4-1ubuntu7.22.04.6 |          | udfclient_deps   |
-| 17 | libssl-dev           | 3.0.2-0ubuntu1.21       | 3.0.2-0ubuntu1.21       |          | udfclient_deps   |
-| 18 | libzmq3-dev          | 4.3.4-2                 | 4.3.4-2                 |          | udfclient_deps   |
-| 19 | locales              | 2.35-0ubuntu3.13        | 2.35-0ubuntu3.13        |          | udfclient_deps   |
+|    | Package              | Version in 11.1.1       | Version in 11.2.0   | Status   | Build-Step       |
+|---:|:---------------------|:------------------------|:--------------------|:---------|:-----------------|
+|  0 | cmake                | 3.22.1-1ubuntu1.22.04.2 | 3.22.1-1ubuntu*     | UPDATED  | flavor_base_deps |
+|  1 | git                  | 1:2.34.1-1ubuntu1.17    | 1:2.34.1-1ubuntu*   | UPDATED  | flavor_base_deps |
+|  2 | libcurl4-openssl-dev | 7.81.0-1ubuntu1.23      | 7.81.0-1ubuntu*     | UPDATED  | flavor_base_deps |
+|  3 | unixodbc-dev         | 2.3.9-5ubuntu0.1        | 2.3.9-5ubuntu*      | UPDATED  | flavor_base_deps |
+|  4 | unzip                | 6.0-26ubuntu3.2         | 6.0-26ubuntu*       | UPDATED  | flavor_base_deps |
+|  5 | wget                 | 1.21.2-2ubuntu1.1       | 1.21.2-2ubuntu*     | UPDATED  | flavor_base_deps |
+|  6 | curl                 | 7.81.0-1ubuntu1.23      | 7.81.0-1ubuntu*     | UPDATED  | language_deps    |
+|  7 | libexpat1            | 2.4.7-1ubuntu0.7        | 2.4.7-1ubuntu*      | UPDATED  | language_deps    |
+|  8 | libexpat1-dev        | 2.4.7-1ubuntu0.7        | 2.4.7-1ubuntu*      | UPDATED  | language_deps    |
+|  9 | coreutils            | 8.32-4.1ubuntu1.2       | 8.32-4.1ubuntu*     | UPDATED  | udfclient_deps   |
+| 10 | libnss-db            | 2.2.3pre1-6ubuntu3      | 2.2.3pre1-6ubuntu*  | UPDATED  | udfclient_deps   |
+| 11 | libprotobuf-dev      | 3.12.4-1ubuntu7.22.04.6 | 3.12.4-1ubuntu*     | UPDATED  | udfclient_deps   |
+| 12 | libssl-dev           | 3.0.2-0ubuntu1.21       | 3.0.2-0ubuntu*      | UPDATED  | udfclient_deps   |
+| 13 | locales              | 2.35-0ubuntu3.13        | 2.35-0ubuntu*       | UPDATED  | udfclient_deps   |
+| 14 | libhiredis-dev       | 0.14.1-2                | 0.14.1-2            |          | flavor_base_deps |
+| 15 | ca-certificates      | 20240203~22.04.1        | 20240203~22.04.1    |          | language_deps    |
+| 16 | gnupg                | 2.2.27-3ubuntu2.5       | 2.2.27-3ubuntu2.5   |          | language_deps    |
+| 17 | r-base-core          | 4.5.2-1.2204.0          | 4.5.2-1.2204.0      |          | language_deps    |
+| 18 | r-base-dev           | 4.5.2-1.2204.0          | 4.5.2-1.2204.0      |          | language_deps    |
+| 19 | libzmq3-dev          | 4.3.4-2                 | 4.3.4-2             |          | udfclient_deps   |
 
 ## R packages
 

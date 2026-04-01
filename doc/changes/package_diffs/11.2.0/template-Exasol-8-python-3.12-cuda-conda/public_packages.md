@@ -4,16 +4,16 @@
 
 ## Apt packages
 
-|    | Package         | Version in 11.1.1        | Version in 11.2.0        | Status   | Build-Step       |
-|---:|:----------------|:-------------------------|:-------------------------|:---------|:-----------------|
-|  0 | adduser         | 3.137ubuntu1             | 3.137ubuntu1             |          | conda_deps       |
-|  1 | bzip2           | 1.0.8-5.1build0.1        | 1.0.8-5.1build0.1        |          | conda_deps       |
-|  2 | ca-certificates | 20240203                 | 20240203                 |          | conda_deps       |
-|  3 | coreutils       | 9.4-3ubuntu6.1           | 9.4-3ubuntu6.1           |          | conda_deps       |
-|  4 | curl            | 8.5.0-2ubuntu10.8        | 8.5.0-2ubuntu10.8        |          | conda_deps       |
-|  5 | libxml2         | 2.9.14+dfsg-1.3ubuntu3.7 | 2.9.14+dfsg-1.3ubuntu3.7 |          | conda_deps       |
-|  6 | locales         | 2.39-0ubuntu8.7          | 2.39-0ubuntu8.7          |          | conda_deps       |
-|  7 | tzdata          | 2025b-0ubuntu0.24.04.1   | 2025b-0ubuntu0.24.04.1   |          | flavor_base_deps |
+|    | Package         | Version in 11.1.1        | Version in 11.2.0      | Status   | Build-Step       |
+|---:|:----------------|:-------------------------|:-----------------------|:---------|:-----------------|
+|  0 | adduser         | 3.137ubuntu1             | 3.137ubuntu*           | UPDATED  | conda_deps       |
+|  1 | coreutils       | 9.4-3ubuntu6.1           | 9.4-3ubuntu*           | UPDATED  | conda_deps       |
+|  2 | curl            | 8.5.0-2ubuntu10.8        | 8.5.0-2ubuntu*         | UPDATED  | conda_deps       |
+|  3 | libxml2         | 2.9.14+dfsg-1.3ubuntu3.7 | 2.9.14+dfsg-1.3ubuntu* | UPDATED  | conda_deps       |
+|  4 | locales         | 2.39-0ubuntu8.7          | 2.39-0ubuntu*          | UPDATED  | conda_deps       |
+|  5 | tzdata          | 2025b-0ubuntu0.24.04.1   | 2025b-0ubuntu*         | UPDATED  | flavor_base_deps |
+|  6 | bzip2           | 1.0.8-5.1build0.1        | 1.0.8-5.1build0.1      |          | conda_deps       |
+|  7 | ca-certificates | 20240203                 | 20240203               |          | conda_deps       |
 
 ## Conda packages
 

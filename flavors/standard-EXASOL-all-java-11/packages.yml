@@ -5,17 +5,17 @@ build_steps:
     apt:
       packages:
       - name: coreutils
-        version: 8.32-4.1ubuntu1.2
+        version: 8.32-4.1ubuntu*
       - name: locales
-        version: 2.35-0ubuntu3.13
+        version: 2.35-0ubuntu*
       - name: libnss-db
-        version: 2.2.3pre1-6ubuntu3
+        version: 2.2.3pre1-6ubuntu*
       - name: libzmq3-dev
         version: 4.3.4-2
       - name: libprotobuf-dev
-        version: 3.12.4-1ubuntu7.22.04.6
+        version: 3.12.4-1ubuntu*
       - name: libssl-dev
-        version: 3.0.2-0ubuntu1.21
+        version: 3.0.2-0ubuntu*
     variables:
       PROTOBUF_LIBRARY_PREFIX: /usr/lib/
       PROTOBUF_INCLUDE_PREFIX: /usr/include/
@@ -31,9 +31,9 @@ build_steps:
       - name: ca-certificates
         version: 20240203~22.04.1
       - name: curl
-        version: 7.81.0-1ubuntu1.23
+        version: 7.81.0-1ubuntu*
       - name: openjdk-11-jdk-headless
-        version: 11.0.30+7-1ubuntu1~22.04
+        version: 11.0.30+7-1ubuntu*
     variables:
       JAVA_PREFIX: /usr/lib/jvm/java-11-openjdk-{% if platform == 'x86_64' %}amd64{% else %}arm64{% endif %}
   validation_cfg:

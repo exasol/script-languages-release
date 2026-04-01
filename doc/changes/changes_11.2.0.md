@@ -15,7 +15,7 @@ This release uses version 4.0.3 of the container tool.
 
 ## Features
 
-n/a 
+ - #1428: Added ARM support for Conda based flavors
 
 ## Security Issues
 

@@ -24,6 +24,7 @@ n/a
 ## Refactorings
 
  - #1401: Changed r_import_modules test to make it compatible with new package file format
+ - #1425: Used wildcards in versions for apt packages
 
 ## Dependencies
 

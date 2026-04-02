@@ -25,6 +25,7 @@ n/a
 
  - #1401: Changed r_import_modules test to make it compatible with new package file format
  - #1425: Used wildcards in versions for apt packages
+ - #1425: Updated tzdata version to support wildcard
 
 ## Dependencies
 

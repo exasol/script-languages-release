@@ -16,7 +16,7 @@
 |  7 | openssl              | 3.0.13-0ubuntu3.7            | 3.0.13-0ubuntu*        | UPDATED  | flavor_base_deps |
 |  8 | slapd                | 2.6.10+dfsg-0ubuntu0.24.04.1 | 2.6.10+dfsg-0ubuntu*   | UPDATED  | flavor_base_deps |
 |  9 | smbclient            | 2:4.19.5+dfsg-4ubuntu9.4     | 2:4.19.5+dfsg-4ubuntu* | UPDATED  | flavor_base_deps |
-| 10 | tzdata               | 2025b-0ubuntu0.24.04.1       | 2025b-0ubuntu*         | UPDATED  | flavor_base_deps |
+| 10 | tzdata               | 2025b-0ubuntu0.24.04.1       | 2026a-0ubuntu*         | UPDATED  | flavor_base_deps |
 | 11 | unzip                | 6.0-28ubuntu4.1              | 6.0-28ubuntu*          | UPDATED  | flavor_base_deps |
 | 12 | curl                 | 8.5.0-2ubuntu10.8            | 8.5.0-2ubuntu*         | UPDATED  | language_deps    |
 | 13 | python3.12-dev       | 3.12.3-1ubuntu0.12           | 3.12.3-1ubuntu*        | UPDATED  | language_deps    |

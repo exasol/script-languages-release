@@ -96,7 +96,7 @@ build_steps:
       - name: libgomp1
         version: 14.2.0-4ubuntu*
       - name: tzdata
-        version: 2025b-0ubuntu*
+        version: 2026a-0ubuntu*
       - name: libleveldb-dev
         version: 1.23-5build1
   - name: install_pip_packages

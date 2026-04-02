@@ -5,17 +5,17 @@ build_steps:
     apt:
       packages:
       - name: coreutils
-        version: 8.32-4.1ubuntu1.2
+        version: 8.32-4.1ubuntu*
       - name: locales
-        version: 2.35-0ubuntu3.13
+        version: 2.35-0ubuntu*
       - name: libnss-db
-        version: 2.2.3pre1-6ubuntu3
+        version: 2.2.3pre1-6ubuntu*
       - name: libzmq3-dev
         version: 4.3.4-2
       - name: libprotobuf-dev
-        version: 3.12.4-1ubuntu7.22.04.6
+        version: 3.12.4-1ubuntu*
       - name: libssl-dev
-        version: 3.0.2-0ubuntu1.21
+        version: 3.0.2-0ubuntu*
     variables:
       PROTOBUF_LIBRARY_PREFIX: /usr/lib/
       PROTOBUF_INCLUDE_PREFIX: /usr/include/
@@ -31,7 +31,7 @@ build_steps:
       - name: ca-certificates
         version: 20240203~22.04.1
       - name: gnupg
-        version: 2.2.27-3ubuntu2.5
+        version: 2.2.27-3ubuntu*
   - name: install_apt_packages
     apt:
       repos:
@@ -42,7 +42,7 @@ build_steps:
           out_file: jammy-cran40.list
       packages:
       - name: curl
-        version: 7.81.0-1ubuntu1.23
+        version: 7.81.0-1ubuntu*
       - name: r-base-core
         version: 4.5.2-1.2204.0
       - name: r-base-dev
@@ -58,11 +58,11 @@ build_steps:
     apt:
       packages:
       - name: unzip
-        version: 6.0-26ubuntu3.2
+        version: 6.0-26ubuntu*
       - name: wget
-        version: 1.21.2-2ubuntu1.1
+        version: 1.21.2-2ubuntu*
       - name: git
-        version: 1:2.34.1-1ubuntu1.17
+        version: 1:2.34.1-1ubuntu*
   validation_cfg:
     version_mandatory: true
 - name: flavor_customization

@@ -43,3 +43,4 @@ n/a
 ## Internal
 
  - Relocked dependencies
+ - Added workaround for #1435: Pining packaging Python module to version 25.0

@@ -34,7 +34,7 @@ n/a
 
 ## Bugs
 
-n/a
+ - Added workaround for #1435: Pining packaging Python module to version 25.0
 
 ## Doc
 
@@ -43,4 +43,3 @@ n/a
 ## Internal
 
  - Relocked dependencies
- - Added workaround for #1435: Pining packaging Python module to version 25.0

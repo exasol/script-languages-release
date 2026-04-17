@@ -6,7 +6,7 @@ Script Language Flavors are configurations of languages and libraries to be avai
 
 Currently, we provide
 
-- the `standard` flavors: These flavors include three langauage implementations: Java, Python, and R and a collection of typical libraries
+- the `standard` flavors: These flavors include three language implementations: Java, Python, and R and a collection of typical libraries
 - the `template` flavors: These flavors include a certain language with only absolute necessary packages. This allows very simple customization because you control almost all dependencies.
 
 ### Standard Flavors
@@ -145,7 +145,7 @@ The template-Exasol-8-python-3.10-cuda-conda flavor provides the language Python
   - Installed CudaToolkit: 12.9.1
   - [Here](template-Exasol-8-python-3.10-cuda-conda/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-**Important**:  If you are using a CUDA driver older than version 575, we recommend that you also install the CUDA compatibility package (cuda-compat) `12.9.1`. See https://docs.nvidia.com/deploy/cuda-compatibility/forward-compatibility.html#deployment-considerations-for-forward-compatibility for compatible drivers. 
+**Important**: If you are using a CUDA driver older than version 575, we recommend that you also install the CUDA compatibility package (cuda-compat) `12.9.1`. See https://docs.nvidia.com/deploy/cuda-compatibility/forward-compatibility.html#deployment-considerations-for-forward-compatibility for compatible drivers. 
 In addition,CUDA 12.x requires a minimum driver version, see https://docs.nvidia.com/deploy/cuda-compatibility/minor-version-compatibility.html.
 
 #### template-Exasol-all-python-3.12-conda
@@ -208,7 +208,7 @@ This allows us to provide new versions of a flavor when new features become avai
 
 So, in order to find the correct version of a flavor for your version of Exasol, simply take the latest container with version less than or equal to your Exasol version. So for Exasol 6.2.13, you would use the `*-EXASOL-6.2.0` flavors.
 
-## Cuda Support
+## CUDA Support
 
 For the CUDA-based flavors we recommend to use the CUDA LTS Driver version 580.
 Depending on the used CUDA-Toolkit version you might need to install the CUDA compatibility package (cuda-compat). Check the concrete flavor description for details.

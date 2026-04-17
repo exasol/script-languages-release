@@ -35,6 +35,7 @@ n/a
 ## Bugs
 
  - Added workaround for #1435: Pining packaging Python module to version 25.0
+ - #1438: Fixed 'standard-EXASOL-all' flavor: trivy 0.69.3 not found
 
 ## Doc
 

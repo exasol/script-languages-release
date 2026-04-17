@@ -1,7 +1,9 @@
 FROM {{release}}
 ENV DEBIAN_FRONTEND=noninteractive
 
-#No invocation of exaslpm needed because trivy was already installed in the release image
+RUN mkdir -p /build_info/packages
+COPY security_scan_packages.yml /build_info/packages/security_scan_packages.yml
+RUN exaslpm install --package-file /build_info/packages/security_scan_packages.yml --build-step security_scan
 
 ENV SECURITY_SCANNERS="trivy"
 COPY /security_scan/.trivyignore /.trivyignore

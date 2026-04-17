@@ -98,12 +98,6 @@ build_steps:
   phases:
   - name: install_apt_packages
     apt:
-      repos:
-        trivy:
-          key_url: https://aquasecurity.github.io/trivy-repo/deb/public.key
-          entry: deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb
-            generic main
-          out_file: trivy.list
       packages:
       - name: unzip
         version: 6.0-26ubuntu*
@@ -148,8 +142,6 @@ build_steps:
         version: 2:4.15.13+dfsg-0ubuntu*
       - name: cmake
         version: 3.22.1-1ubuntu*
-      - name: trivy
-        version: 0.69.3
       - name: libleveldb-dev
         version: 1.23-3build1
   validation_cfg:

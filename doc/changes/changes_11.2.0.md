@@ -26,14 +26,17 @@ n/a
  - #1401: Changed r_import_modules test to make it compatible with new package file format
  - #1425: Used wildcards in versions for apt packages
  - #1425: Updated tzdata version (2025b to 2026a)
+ - #1432: Fixed UDF Plugin
+ - #1415: Removed legacy package files
 
 ## Dependencies
 
-n/a
+ - #1440: Updated "nloptr"
 
 ## Bugs
 
-n/a
+ - Added workaround for #1435: Pining packaging Python module to version 25.0
+ - #1438: Fixed 'standard-EXASOL-all' flavor: trivy 0.69.3 not found
 
 ## Doc
 

@@ -27,6 +27,7 @@ n/a
  - #1425: Used wildcards in versions for apt packages
  - #1425: Updated tzdata version (2025b to 2026a)
  - #1432: Fixed UDF Plugin
+ - #1415: Removed legacy package files
 
 ## Dependencies
 

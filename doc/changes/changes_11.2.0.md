@@ -31,7 +31,7 @@ n/a
 
 ## Dependencies
 
-n/a
+ - #1440: Updated "nloptr"
 
 ## Bugs
 

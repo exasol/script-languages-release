@@ -407,7 +407,7 @@ build_steps:
       - name: magrittr
         version: 2.0.4
       - name: nloptr
-        version: 2.0.3
+        version: 2.2.1
       - name: profileModel
         version: 0.6.1
       - name: proto

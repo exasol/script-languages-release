@@ -28,6 +28,7 @@ n/a
  - #1425: Updated tzdata version (2025b to 2026a)
  - #1432: Fixed UDF Plugin
  - #1415: Removed legacy package files
+ - #1442: Added new preprocessor flag USE_STATIC_SWIG
 
 ## Dependencies
 

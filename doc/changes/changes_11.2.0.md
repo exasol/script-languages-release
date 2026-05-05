@@ -29,6 +29,8 @@ n/a
  - #1432: Fixed UDF Plugin
  - #1415: Removed legacy package files
  - #1442: Added new preprocessor flag USE_STATIC_SWIG
+ - #1369: Added missing tests for context
+ - #1380: Removed unused scripts and files
 
 ## Dependencies
 

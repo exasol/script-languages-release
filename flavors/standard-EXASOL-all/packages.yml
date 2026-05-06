@@ -378,7 +378,7 @@ build_steps:
       - name: portalocker
         version: ==3.1.1
         extras: []
-      install_build_tools_ephemerally: true
+      install_build_tools_ephemerally: false
   validation_cfg:
     version_mandatory: false
 - name: flavor_base_deps_r

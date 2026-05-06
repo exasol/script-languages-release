@@ -28,6 +28,9 @@ n/a
  - #1425: Updated tzdata version (2025b to 2026a)
  - #1432: Fixed UDF Plugin
  - #1415: Removed legacy package files
+ - #1442: Added new preprocessor flag USE_STATIC_SWIG
+ - #1369: Added missing tests for context
+ - #1380: Removed unused scripts and files
 
 ## Dependencies
 
@@ -37,6 +40,7 @@ n/a
 
  - Added workaround for #1435: Pining packaging Python module to version 25.0
  - #1438: Fixed 'standard-EXASOL-all' flavor: trivy 0.69.3 not found
+ - #1449: Fixed 'standard-EXASOL-all' flavor: Prevent upgrade to R 4.6.0
 
 ## Doc
 

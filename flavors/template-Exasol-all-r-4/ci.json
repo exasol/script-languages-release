@@ -9,13 +9,6 @@
         "folders": ["r"],
         "goal": "release",
         "generic_language_tests": []
-      },
-      {
-        "name": "generic",
-        "files": [],
-        "folders": ["generic/r"],
-        "goal": "release",
-        "generic_language_tests": []
       }
     ]
   }

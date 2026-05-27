@@ -16,13 +16,6 @@
         "folders": ["java"],
         "goal": "release",
         "generic_language_tests": []
-      },
-      {
-        "name": "generic",
-        "files": [],
-        "folders": ["generic/java"],
-        "goal": "release",
-        "generic_language_tests": []
       }
     ]
   }

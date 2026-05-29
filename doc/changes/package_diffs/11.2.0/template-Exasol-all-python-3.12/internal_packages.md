@@ -14,11 +14,11 @@
 |  5 | coreutils         | 9.4-3ubuntu6.1            | 9.4-3ubuntu*              | UPDATED  | build_deps     |
 |  6 | curl              | 8.5.0-2ubuntu10.8         | 8.5.0-2ubuntu*            | UPDATED  | build_deps     |
 |  7 | locales           | 2.39-0ubuntu8.7           | 2.39-0ubuntu*             | UPDATED  | build_deps     |
-|  8 | protobuf-compiler | 3.21.12-8.2ubuntu0.3      | 3.21.12-8.2ubuntu*        | UPDATED  | build_deps     |
-|  9 | patchelf          | 0.18.0-1.1build1          | 0.18.0-1.1build1          |          | base_test_deps |
-| 10 | chrpath           | 0.16-2build1              | 0.16-2build1              |          | build_deps     |
-| 11 | libpcre3-dev      | 2:8.39-15build1           | 2:8.39-15build1           |          | build_deps     |
-| 12 | openjdk-17-jdk    | 17.0.18+8-1~24.04.1       | 17.0.18+8-1~24.04.1       |          | build_deps     |
+|  8 | openjdk-17-jdk    | 17.0.18+8-1~24.04.1       | 17.0.19+10-1~24.04.2      | UPDATED  | build_deps     |
+|  9 | protobuf-compiler | 3.21.12-8.2ubuntu0.3      | 3.21.12-8.2ubuntu*        | UPDATED  | build_deps     |
+| 10 | patchelf          | 0.18.0-1.1build1          | 0.18.0-1.1build1          |          | base_test_deps |
+| 11 | chrpath           | 0.16-2build1              | 0.16-2build1              |          | build_deps     |
+| 12 | libpcre3-dev      | 2:8.39-15build1           | 2:8.39-15build1           |          | build_deps     |
 | 13 | tar               | 1.35+dfsg-3build1         | 1.35+dfsg-3build1         |          | build_deps     |
 | 14 | gnupg             | No version specified      | No version specified      |          | security_scan  |
 | 15 | trivy             | No version specified      | No version specified      |          | security_scan  |

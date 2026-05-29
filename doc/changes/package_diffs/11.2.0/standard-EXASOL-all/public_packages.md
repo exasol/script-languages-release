@@ -26,7 +26,7 @@
 | 17 | curl                    | 7.81.0-1ubuntu1.23           | 7.81.0-1ubuntu*         | UPDATED  | language_deps        |
 | 18 | libexpat1               | 2.4.7-1ubuntu0.7             | 2.4.7-1ubuntu*          | UPDATED  | language_deps        |
 | 19 | libexpat1-dev           | 2.4.7-1ubuntu0.7             | 2.4.7-1ubuntu*          | UPDATED  | language_deps        |
-| 20 | openjdk-11-jdk-headless | 11.0.30+7-1ubuntu1~22.04     | 11.0.30+7-1ubuntu*      | UPDATED  | language_deps        |
+| 20 | openjdk-11-jdk-headless | 11.0.30+7-1ubuntu1~22.04     | 11.0.31+11-1ubuntu*     | UPDATED  | language_deps        |
 | 21 | coreutils               | 8.32-4.1ubuntu1.2            | 8.32-4.1ubuntu*         | UPDATED  | udfclient_deps       |
 | 22 | libnss-db               | 2.2.3pre1-6ubuntu3           | 2.2.3pre1-6ubuntu*      | UPDATED  | udfclient_deps       |
 | 23 | libprotobuf-dev         | 3.12.4-1ubuntu7.22.04.6      | 3.12.4-1ubuntu*         | UPDATED  | udfclient_deps       |

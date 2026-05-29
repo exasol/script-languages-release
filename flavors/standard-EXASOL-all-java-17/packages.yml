@@ -33,9 +33,10 @@ build_steps:
       - name: curl
         version: 7.81.0-1ubuntu*
       - name: openjdk-17-jdk-headless
-        version: 17.0.18+8-1~22.04.1
+        version: 17.0.19+10-1~24.04.2
     variables:
       JAVA_PREFIX: /usr/lib/jvm/java-17-openjdk-{% if platform == 'x86_64' %}amd64{% else %}arm64{% endif %}
+      JAVA_HOME: /usr/lib/jvm/java-1.17.0-openjdk-{% if platform == 'x86_64' %}amd64{% else %}arm64{% endif %}
   validation_cfg:
     version_mandatory: true
 - name: flavor_base_deps

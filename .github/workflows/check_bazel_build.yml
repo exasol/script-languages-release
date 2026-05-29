@@ -18,6 +18,9 @@ jobs:
           fetch-depth: 0
           submodules: 'recursive'
 
+      - name: Print installed R version
+        run: R --version
+
       - name: Install UDF Client Dependencies
         run: |
           sudo bash scripts/installUdfClientDeps.sh "$UDF_CLIENT_ENV_FILE"

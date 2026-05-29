@@ -22,6 +22,8 @@ build_steps:
         version: 0.16-2
       - name: python3
         version: 3.10.6-1~22.04.1
+      - name: ca-certificates
+        version: 20240203~22.04.1
     variables:
       PROTOBUF_BIN: /usr/bin/protoc
   - name: install_bazel

@@ -7,7 +7,7 @@
 |    | Package                 | Version in 11.1.1       | Version in 11.2.0    | Status   | Build-Step     |
 |---:|:------------------------|:------------------------|:---------------------|:---------|:---------------|
 |  0 | curl                    | 7.81.0-1ubuntu1.23      | 7.81.0-1ubuntu*      | UPDATED  | language_deps  |
-|  1 | openjdk-17-jdk-headless | 17.0.18+8-1~22.04.1     | 17.0.19+10-1~24.04.2 | UPDATED  | language_deps  |
+|  1 | openjdk-17-jdk-headless | 17.0.18+8-1~22.04.1     | 17.0.19+10-1~22.04.2 | UPDATED  | language_deps  |
 |  2 | coreutils               | 8.32-4.1ubuntu1.2       | 8.32-4.1ubuntu*      | UPDATED  | udfclient_deps |
 |  3 | libnss-db               | 2.2.3pre1-6ubuntu3      | 2.2.3pre1-6ubuntu*   | UPDATED  | udfclient_deps |
 |  4 | libprotobuf-dev         | 3.12.4-1ubuntu7.22.04.6 | 3.12.4-1ubuntu*      | UPDATED  | udfclient_deps |

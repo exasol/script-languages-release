@@ -31,10 +31,13 @@ n/a
  - #1442: Added new preprocessor flag USE_STATIC_SWIG
  - #1369: Added missing tests for context
  - #1380: Removed unused scripts and files
+ - #1422: Fixed JAVA_HOME path
+
 
 ## Dependencies
 
  - #1440: Updated "nloptr"
+ - #1460: updated openjdk dependency
 
 ## Bugs
 

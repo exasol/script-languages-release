@@ -37,6 +37,7 @@ n/a
 ## Dependencies
 
  - #1440: Updated "nloptr"
+ - #1460: updated openjdk dependency
 
 ## Bugs
 

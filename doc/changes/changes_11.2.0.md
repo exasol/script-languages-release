@@ -32,6 +32,7 @@ n/a
  - #1369: Added missing tests for context
  - #1380: Removed unused scripts and files
  - #1422: Fixed JAVA_HOME path
+ - #1464: Ignored maven settings.xml for security scanner
 
 
 ## Dependencies

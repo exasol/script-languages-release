@@ -38,7 +38,8 @@ n/a
 ## Dependencies
 
  - #1440: Updated "nloptr"
- - #1460: updated openjdk dependency
+ - #1460: Updated openjdk dependency
+ - #1470: Update "tzdata"
 
 ## Bugs
 

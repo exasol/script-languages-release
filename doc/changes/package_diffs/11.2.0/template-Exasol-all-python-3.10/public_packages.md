@@ -9,7 +9,7 @@
 |  0 | build-essential      | 12.9ubuntu3             | 12.9ubuntu*         | UPDATED  | flavor_base_deps |
 |  1 | git                  | 1:2.34.1-1ubuntu1.17    | 1:2.34.1-1ubuntu*   | UPDATED  | flavor_base_deps |
 |  2 | libcurl4-openssl-dev | 7.81.0-1ubuntu1.23      | 7.81.0-1ubuntu*     | UPDATED  | flavor_base_deps |
-|  3 | tzdata               | 2025b-0ubuntu0.22.04.1  | 2025b-0ubuntu*      | UPDATED  | flavor_base_deps |
+|  3 | tzdata               | 2025b-0ubuntu0.22.04.1  | 2026a-0ubuntu*      | UPDATED  | flavor_base_deps |
 |  4 | unzip                | 6.0-26ubuntu3.2         | 6.0-26ubuntu*       | UPDATED  | flavor_base_deps |
 |  5 | curl                 | 7.81.0-1ubuntu1.23      | 7.81.0-1ubuntu*     | UPDATED  | language_deps    |
 |  6 | coreutils            | 8.32-4.1ubuntu1.2       | 8.32-4.1ubuntu*     | UPDATED  | udfclient_deps   |

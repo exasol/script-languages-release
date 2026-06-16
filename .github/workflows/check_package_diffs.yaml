@@ -1,7 +1,7 @@
 name: Check package diff tool
 
 on:
-  push:
+  pull_request:
     branches:
       - develop
 

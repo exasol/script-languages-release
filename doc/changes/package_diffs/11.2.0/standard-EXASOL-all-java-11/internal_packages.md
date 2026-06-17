@@ -19,7 +19,7 @@
 | 10 | protobuf-compiler       | 3.12.4-1ubuntu7.22.04.6      | 3.12.4-1ubuntu*      | UPDATED  | build_deps     |
 | 11 | tar                     | 1.34+dfsg-1ubuntu0.1.22.04.2 | 1.34+dfsg-1ubuntu*   | UPDATED  | build_deps     |
 | 12 | openjdk-11-jdk-headless | 11.0.30+7-1ubuntu1~22.04     |                      | REMOVED  | build_deps     |
-| 13 | ca-certificates         |                              | 20240203~22.04.1     | NEW      | build_deps     |
+| 13 | ca-certificates         |                              | 20260601~22.04.1     | NEW      | build_deps     |
 | 14 | patchelf                | 0.14.3-1                     | 0.14.3-1             |          | base_test_deps |
 | 15 | chrpath                 | 0.16-2                       | 0.16-2               |          | build_deps     |
 | 16 | python3                 | 3.10.6-1~22.04.1             | 3.10.6-1~22.04.1     |          | build_deps     |

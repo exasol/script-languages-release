@@ -29,7 +29,7 @@ build_steps:
     apt:
       packages:
       - name: ca-certificates
-        version: 20240203~22.04.1
+        version: 20260601~22.04.1
       - name: curl
         version: 7.81.0-1ubuntu*
       - name: openjdk-17-jdk-headless

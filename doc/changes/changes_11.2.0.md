@@ -39,7 +39,8 @@ n/a
 
  - #1440: Updated "nloptr"
  - #1460: Updated openjdk dependency
- - #1470: Update "tzdata"
+ - #1470: Updated "tzdata"
+ - #1480: Updated "ca-certificates"
 
 ## Bugs
 

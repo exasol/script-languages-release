@@ -18,15 +18,15 @@
 |  9 | smbclient            | 2:4.19.5+dfsg-4ubuntu9.4     | 2:4.19.5+dfsg-4ubuntu* | UPDATED  | flavor_base_deps |
 | 10 | tzdata               | 2025b-0ubuntu0.24.04.1       | 2026a-0ubuntu*         | UPDATED  | flavor_base_deps |
 | 11 | unzip                | 6.0-28ubuntu4.1              | 6.0-28ubuntu*          | UPDATED  | flavor_base_deps |
-| 12 | curl                 | 8.5.0-2ubuntu10.8            | 8.5.0-2ubuntu*         | UPDATED  | language_deps    |
-| 13 | python3.12-dev       | 3.12.3-1ubuntu0.12           | 3.12.3-1ubuntu*        | UPDATED  | language_deps    |
-| 14 | adduser              | 3.137ubuntu1                 | 3.137ubuntu*           | UPDATED  | udfclient_deps   |
-| 15 | coreutils            | 9.4-3ubuntu6.1               | 9.4-3ubuntu*           | UPDATED  | udfclient_deps   |
-| 16 | libprotobuf-dev      | 3.21.12-8.2ubuntu0.3         | 3.21.12-8.2ubuntu*     | UPDATED  | udfclient_deps   |
-| 17 | libssl-dev           | 3.0.13-0ubuntu3.7            | 3.0.13-0ubuntu*        | UPDATED  | udfclient_deps   |
-| 18 | locales              | 2.39-0ubuntu8.7              | 2.39-0ubuntu*          | UPDATED  | udfclient_deps   |
-| 19 | libleveldb-dev       | 1.23-5build1                 | 1.23-5build1           |          | flavor_base_deps |
-| 20 | ca-certificates      | 20240203                     | 20240203               |          | language_deps    |
+| 12 | ca-certificates      | 20240203                     | 20260601~24.04.1       | UPDATED  | language_deps    |
+| 13 | curl                 | 8.5.0-2ubuntu10.8            | 8.5.0-2ubuntu*         | UPDATED  | language_deps    |
+| 14 | python3.12-dev       | 3.12.3-1ubuntu0.12           | 3.12.3-1ubuntu*        | UPDATED  | language_deps    |
+| 15 | adduser              | 3.137ubuntu1                 | 3.137ubuntu*           | UPDATED  | udfclient_deps   |
+| 16 | coreutils            | 9.4-3ubuntu6.1               | 9.4-3ubuntu*           | UPDATED  | udfclient_deps   |
+| 17 | libprotobuf-dev      | 3.21.12-8.2ubuntu0.3         | 3.21.12-8.2ubuntu*     | UPDATED  | udfclient_deps   |
+| 18 | libssl-dev           | 3.0.13-0ubuntu3.7            | 3.0.13-0ubuntu*        | UPDATED  | udfclient_deps   |
+| 19 | locales              | 2.39-0ubuntu8.7              | 2.39-0ubuntu*          | UPDATED  | udfclient_deps   |
+| 20 | libleveldb-dev       | 1.23-5build1                 | 1.23-5build1           |          | flavor_base_deps |
 | 21 | chrpath              | 0.16-2build1                 | 0.16-2build1           |          | language_deps    |
 | 22 | cppzmq-dev           | 4.10.0-1build1               | 4.10.0-1build1         |          | udfclient_deps   |
 | 23 | libnss-db            | 2.2.3pre1-9build3            | 2.2.3pre1-9build3      |          | udfclient_deps   |

@@ -29,7 +29,7 @@ build_steps:
     apt:
       packages:
       - name: ca-certificates
-        version: 20240203~22.04.1
+        version: 20260601~22.04.1
       - name: gnupg
         version: 2.2.27-3ubuntu*
   - name: install_apt_packages

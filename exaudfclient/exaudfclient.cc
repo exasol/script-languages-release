@@ -101,7 +101,8 @@ int main(int argc, char **argv) {
     // }
     DBGMSG(cerr, "Load libexaudflib");
     DBGVAR(cerr, libexaudflibPath);
-    handle = dlmopen(LM_ID_NEWLM, libexaudflibPath.c_str(), RTLD_NOW);
+    void* handle = dlmopen(LM_ID_NEWLM, libexaudflibPath.c_str(), RTLD_NOW);
+    set_exaudflib_handle(handle);
 //    handle = dlopen(libexaudflibPath.c_str(), RTLD_NOW);
 
     if (!handle) {

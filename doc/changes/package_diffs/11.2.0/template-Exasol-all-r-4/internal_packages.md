@@ -16,7 +16,7 @@
 |  7 | curl                    | 7.81.0-1ubuntu1.23           | 7.81.0-1ubuntu*      | UPDATED  | build_deps     |
 |  8 | libpcre3-dev            | 2:8.39-13ubuntu0.22.04.1     | 2:8.39-13ubuntu*     | UPDATED  | build_deps     |
 |  9 | locales                 | 2.35-0ubuntu3.13             | 2.35-0ubuntu*        | UPDATED  | build_deps     |
-| 10 | openjdk-11-jdk-headless | 11.0.30+7-1ubuntu1~22.04     | 11.0.30+7-1ubuntu*   | UPDATED  | build_deps     |
+| 10 | openjdk-11-jdk-headless | 11.0.30+7-1ubuntu1~22.04     | 11.0.31+11-1ubuntu*  | UPDATED  | build_deps     |
 | 11 | protobuf-compiler       | 3.12.4-1ubuntu7.22.04.6      | 3.12.4-1ubuntu*      | UPDATED  | build_deps     |
 | 12 | tar                     | 1.34+dfsg-1ubuntu0.1.22.04.2 | 1.34+dfsg-1ubuntu*   | UPDATED  | build_deps     |
 | 13 | patchelf                | 0.14.3-1                     | 0.14.3-1             |          | base_test_deps |

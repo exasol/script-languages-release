@@ -29,7 +29,7 @@ build_steps:
     apt:
       packages:
       - name: ca-certificates
-        version: 20240203~22.04.1
+        version: 20260601~22.04.1
       - name: python3.10-dev
         version: 3.10.12-1~22.04.15
       - name: python3-distutils
@@ -95,7 +95,7 @@ build_steps:
       - name: libgomp1
         version: 12.3.0-1ubuntu*
       - name: tzdata
-        version: 2025b-0ubuntu*
+        version: 2026a-0ubuntu*
       - name: libleveldb-dev
         version: 1.23-3build1
   - name: install_pip_packages

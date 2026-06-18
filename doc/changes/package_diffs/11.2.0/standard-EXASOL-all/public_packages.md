@@ -23,22 +23,22 @@
 | 14 | unixodbc-dev            | 2.3.9-5ubuntu0.1             | 2.3.9-5ubuntu*          | UPDATED  | flavor_base_deps_apt |
 | 15 | unzip                   | 6.0-26ubuntu3.2              | 6.0-26ubuntu*           | UPDATED  | flavor_base_deps_apt |
 | 16 | wget                    | 1.21.2-2ubuntu1.1            | 1.21.2-2ubuntu*         | UPDATED  | flavor_base_deps_apt |
-| 17 | curl                    | 7.81.0-1ubuntu1.23           | 7.81.0-1ubuntu*         | UPDATED  | language_deps        |
-| 18 | libexpat1               | 2.4.7-1ubuntu0.7             | 2.4.7-1ubuntu*          | UPDATED  | language_deps        |
-| 19 | libexpat1-dev           | 2.4.7-1ubuntu0.7             | 2.4.7-1ubuntu*          | UPDATED  | language_deps        |
-| 20 | openjdk-11-jdk-headless | 11.0.30+7-1ubuntu1~22.04     | 11.0.30+7-1ubuntu*      | UPDATED  | language_deps        |
-| 21 | coreutils               | 8.32-4.1ubuntu1.2            | 8.32-4.1ubuntu*         | UPDATED  | udfclient_deps       |
-| 22 | libnss-db               | 2.2.3pre1-6ubuntu3           | 2.2.3pre1-6ubuntu*      | UPDATED  | udfclient_deps       |
-| 23 | libprotobuf-dev         | 3.12.4-1ubuntu7.22.04.6      | 3.12.4-1ubuntu*         | UPDATED  | udfclient_deps       |
-| 24 | libssl-dev              | 3.0.2-0ubuntu1.21            | 3.0.2-0ubuntu*          | UPDATED  | udfclient_deps       |
-| 25 | locales                 | 2.35-0ubuntu3.13             | 2.35-0ubuntu*           | UPDATED  | udfclient_deps       |
-| 26 | trivy                   | 0.69.3                       |                         | REMOVED  | flavor_base_deps_apt |
-| 27 | apt-transport-https     | 2.4.14                       | 2.4.14                  |          | flavor_base_deps_apt |
-| 28 | libhiredis-dev          | 0.14.1-2                     | 0.14.1-2                |          | flavor_base_deps_apt |
-| 29 | libleveldb-dev          | 1.23-3build1                 | 1.23-3build1            |          | flavor_base_deps_apt |
-| 30 | libleveldb1d            | 1.23-3build1                 | 1.23-3build1            |          | flavor_base_deps_apt |
-| 31 | maven                   | 3.6.3-5                      | 3.6.3-5                 |          | flavor_base_deps_apt |
-| 32 | ca-certificates         | 20240203~22.04.1             | 20240203~22.04.1        |          | language_deps        |
+| 17 | ca-certificates         | 20240203~22.04.1             | 20260601~22.04.1        | UPDATED  | language_deps        |
+| 18 | curl                    | 7.81.0-1ubuntu1.23           | 7.81.0-1ubuntu*         | UPDATED  | language_deps        |
+| 19 | libexpat1               | 2.4.7-1ubuntu0.7             | 2.4.7-1ubuntu*          | UPDATED  | language_deps        |
+| 20 | libexpat1-dev           | 2.4.7-1ubuntu0.7             | 2.4.7-1ubuntu*          | UPDATED  | language_deps        |
+| 21 | openjdk-11-jdk-headless | 11.0.30+7-1ubuntu1~22.04     | 11.0.31+11-1ubuntu*     | UPDATED  | language_deps        |
+| 22 | coreutils               | 8.32-4.1ubuntu1.2            | 8.32-4.1ubuntu*         | UPDATED  | udfclient_deps       |
+| 23 | libnss-db               | 2.2.3pre1-6ubuntu3           | 2.2.3pre1-6ubuntu*      | UPDATED  | udfclient_deps       |
+| 24 | libprotobuf-dev         | 3.12.4-1ubuntu7.22.04.6      | 3.12.4-1ubuntu*         | UPDATED  | udfclient_deps       |
+| 25 | libssl-dev              | 3.0.2-0ubuntu1.21            | 3.0.2-0ubuntu*          | UPDATED  | udfclient_deps       |
+| 26 | locales                 | 2.35-0ubuntu3.13             | 2.35-0ubuntu*           | UPDATED  | udfclient_deps       |
+| 27 | trivy                   | 0.69.3                       |                         | REMOVED  | flavor_base_deps_apt |
+| 28 | apt-transport-https     | 2.4.14                       | 2.4.14                  |          | flavor_base_deps_apt |
+| 29 | libhiredis-dev          | 0.14.1-2                     | 0.14.1-2                |          | flavor_base_deps_apt |
+| 30 | libleveldb-dev          | 1.23-3build1                 | 1.23-3build1            |          | flavor_base_deps_apt |
+| 31 | libleveldb1d            | 1.23-3build1                 | 1.23-3build1            |          | flavor_base_deps_apt |
+| 32 | maven                   | 3.6.3-5                      | 3.6.3-5                 |          | flavor_base_deps_apt |
 | 33 | chrpath                 | 0.16-2                       | 0.16-2                  |          | language_deps        |
 | 34 | gnupg                   | 2.2.27-3ubuntu2.5            | 2.2.27-3ubuntu2.5       |          | language_deps        |
 | 35 | python3-distutils       | 3.10.8-1~22.04               | 3.10.8-1~22.04          |          | language_deps        |

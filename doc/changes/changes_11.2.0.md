@@ -32,17 +32,24 @@ n/a
  - #1369: Added missing tests for context
  - #1380: Removed unused scripts and files
  - #1422: Fixed JAVA_HOME path
+ - #1464: Ignored maven settings.xml for security scanner
 
 
 ## Dependencies
 
  - #1440: Updated "nloptr"
+ - #1460: Updated openjdk dependency
+ - #1470: Updated "tzdata"
+ - #1480: Updated "ca-certificates"
+ - #1484: Updated exaslsct, slc-ci & slc-ci-setup
 
-## Bugs
+## Bugfixes
 
  - Added workaround for #1435: Pining packaging Python module to version 25.0
  - #1438: Fixed 'standard-EXASOL-all' flavor: trivy 0.69.3 not found
  - #1449: Fixed 'standard-EXASOL-all' flavor: Prevent upgrade to R 4.6.0
+ - #1482: Added tools.pip section to conda template flavors
+ 
 
 ## Doc
 

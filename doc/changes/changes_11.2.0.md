@@ -1,17 +1,19 @@
-# script-languages-release 11.2.0, released t.b.d.
+# script-languages-release 11.2.0, released 2026-06-19
 
-Code name: t.b.d.
+Code name: ARM support for Conda based flavors
 
 ## Summary
 
-t.b.d.
+This release adds ARM support for the Conda template flavors. It also updates `exaslct` to preserve package manager metadata in the generated script-language container images, allowing SBOM tools such as `syft` to detect Debian packages correctly.
+Furthermore, the APT package dependecies were loosened by using wildcards in the specified version and some packages were updated.
+Finally, the release contains some internal improvements.
 
 <!-- markdown-link-check-disable -->
 ## [Package Version Comparison between Release 11.2.0 and 11.1.1](https://github.com/exasol/script-languages-release/blob/master/doc/changes/package_diffs/11.2.0/README.md)
 
 ## Script-Language-Container-Tool (Exaslct)
 
-This release uses version 4.0.3 of the container tool.
+This release uses version 4.1.0 of the container tool.
 
 ## Features
 
@@ -33,6 +35,7 @@ n/a
  - #1380: Removed unused scripts and files
  - #1422: Fixed JAVA_HOME path
  - #1464: Ignored maven settings.xml for security scanner
+ - #1485: Updated exaslpm to v1.3.1
 
 
 ## Dependencies
@@ -41,7 +44,8 @@ n/a
  - #1460: Updated openjdk dependency
  - #1470: Updated "tzdata"
  - #1480: Updated "ca-certificates"
- - #1484: Updated exaslsct, slc-ci & slc-ci-setup
+ - #1484: Updated exaslct, slc-ci & slc-ci-setup
+ - Updated `pyexasol` and `sqlglot`
 
 ## Bugfixes
 

@@ -107,7 +107,7 @@ The packages described in `packages.yml` will be installed by [exaslpm](https://
 If you want to change or add other things you are able to add Dockerfile commands to
 `flavors/<flavor>/flavor-customization/Dockerfile`, for an example look [here](../../flavors/template-Exasol-all-r-4/flavor_customization/Dockerfile). Please follow the instruction in there, if you add Dockerfile commands. 
 
-**Note: For more details about the flavors please checkout their [documentation](../../flavors/README.md).**
+**Note: For more details about the flavors please check out their [documentation](../../flavors/README.md).**
 
 
 Your changes on the file system will then be merged with the file system of the script client

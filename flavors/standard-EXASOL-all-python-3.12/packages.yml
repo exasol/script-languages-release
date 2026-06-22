@@ -33,7 +33,7 @@ build_steps:
     apt:
       packages:
       - name: ca-certificates
-        version: '20240203'
+        version: '20260601~24.04.1'
       - name: python3.12-dev
         version: 3.12.3-1ubuntu*
       - name: curl
@@ -219,7 +219,7 @@ build_steps:
         version: ==6.31.1
       - extras: []
         name: pyexasol
-        version: ==2.1.0
+        version: ==2.2.1
       - extras: []
         name: pysftp
         version: ==0.2.9
@@ -332,7 +332,7 @@ build_steps:
         version: ==3.2.0
       - extras: []
         name: sqlglot[rs]
-        version: ==29.0.1
+        version: ==30.11.0
   validation_cfg:
     version_mandatory: false
 version: 1.0.0

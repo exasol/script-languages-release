@@ -1,1 +1,0 @@
-script-languages/show_code_arround_error_codes.sh

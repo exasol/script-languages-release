@@ -29,7 +29,7 @@ build_steps:
     apt:
       packages:
       - name: ca-certificates
-        version: 20240203~22.04.1
+        version: 20260601~22.04.1
       - name: gnupg
         version: 2.2.27-3ubuntu2.5
   - name: install_apt_packages
@@ -48,7 +48,7 @@ build_steps:
       - name: curl
         version: 7.81.0-1ubuntu*
       - name: openjdk-11-jdk-headless
-        version: 11.0.30+7-1ubuntu*
+        version: 11.0.31+11-1ubuntu*
       - name: chrpath
         version: 0.16-2
       - name: libexpat1
@@ -268,7 +268,7 @@ build_steps:
           to <5.0.0dev
         extras: []
       - name: pyexasol
-        version: ==2.1.0
+        version: ==2.2.1
         extras: []
       - name: pysftp
         version: ==0.2.9

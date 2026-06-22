@@ -23,22 +23,22 @@
 | 14 | unixodbc-dev            | 2.3.9-5ubuntu0.1             | 2.3.9-5ubuntu*          | UPDATED  | flavor_base_deps_apt |
 | 15 | unzip                   | 6.0-26ubuntu3.2              | 6.0-26ubuntu*           | UPDATED  | flavor_base_deps_apt |
 | 16 | wget                    | 1.21.2-2ubuntu1.1            | 1.21.2-2ubuntu*         | UPDATED  | flavor_base_deps_apt |
-| 17 | curl                    | 7.81.0-1ubuntu1.23           | 7.81.0-1ubuntu*         | UPDATED  | language_deps        |
-| 18 | libexpat1               | 2.4.7-1ubuntu0.7             | 2.4.7-1ubuntu*          | UPDATED  | language_deps        |
-| 19 | libexpat1-dev           | 2.4.7-1ubuntu0.7             | 2.4.7-1ubuntu*          | UPDATED  | language_deps        |
-| 20 | openjdk-11-jdk-headless | 11.0.30+7-1ubuntu1~22.04     | 11.0.30+7-1ubuntu*      | UPDATED  | language_deps        |
-| 21 | coreutils               | 8.32-4.1ubuntu1.2            | 8.32-4.1ubuntu*         | UPDATED  | udfclient_deps       |
-| 22 | libnss-db               | 2.2.3pre1-6ubuntu3           | 2.2.3pre1-6ubuntu*      | UPDATED  | udfclient_deps       |
-| 23 | libprotobuf-dev         | 3.12.4-1ubuntu7.22.04.6      | 3.12.4-1ubuntu*         | UPDATED  | udfclient_deps       |
-| 24 | libssl-dev              | 3.0.2-0ubuntu1.21            | 3.0.2-0ubuntu*          | UPDATED  | udfclient_deps       |
-| 25 | locales                 | 2.35-0ubuntu3.13             | 2.35-0ubuntu*           | UPDATED  | udfclient_deps       |
-| 26 | trivy                   | 0.69.3                       |                         | REMOVED  | flavor_base_deps_apt |
-| 27 | apt-transport-https     | 2.4.14                       | 2.4.14                  |          | flavor_base_deps_apt |
-| 28 | libhiredis-dev          | 0.14.1-2                     | 0.14.1-2                |          | flavor_base_deps_apt |
-| 29 | libleveldb-dev          | 1.23-3build1                 | 1.23-3build1            |          | flavor_base_deps_apt |
-| 30 | libleveldb1d            | 1.23-3build1                 | 1.23-3build1            |          | flavor_base_deps_apt |
-| 31 | maven                   | 3.6.3-5                      | 3.6.3-5                 |          | flavor_base_deps_apt |
-| 32 | ca-certificates         | 20240203~22.04.1             | 20240203~22.04.1        |          | language_deps        |
+| 17 | ca-certificates         | 20240203~22.04.1             | 20260601~22.04.1        | UPDATED  | language_deps        |
+| 18 | curl                    | 7.81.0-1ubuntu1.23           | 7.81.0-1ubuntu*         | UPDATED  | language_deps        |
+| 19 | libexpat1               | 2.4.7-1ubuntu0.7             | 2.4.7-1ubuntu*          | UPDATED  | language_deps        |
+| 20 | libexpat1-dev           | 2.4.7-1ubuntu0.7             | 2.4.7-1ubuntu*          | UPDATED  | language_deps        |
+| 21 | openjdk-11-jdk-headless | 11.0.30+7-1ubuntu1~22.04     | 11.0.31+11-1ubuntu*     | UPDATED  | language_deps        |
+| 22 | coreutils               | 8.32-4.1ubuntu1.2            | 8.32-4.1ubuntu*         | UPDATED  | udfclient_deps       |
+| 23 | libnss-db               | 2.2.3pre1-6ubuntu3           | 2.2.3pre1-6ubuntu*      | UPDATED  | udfclient_deps       |
+| 24 | libprotobuf-dev         | 3.12.4-1ubuntu7.22.04.6      | 3.12.4-1ubuntu*         | UPDATED  | udfclient_deps       |
+| 25 | libssl-dev              | 3.0.2-0ubuntu1.21            | 3.0.2-0ubuntu*          | UPDATED  | udfclient_deps       |
+| 26 | locales                 | 2.35-0ubuntu3.13             | 2.35-0ubuntu*           | UPDATED  | udfclient_deps       |
+| 27 | trivy                   | 0.69.3                       |                         | REMOVED  | flavor_base_deps_apt |
+| 28 | apt-transport-https     | 2.4.14                       | 2.4.14                  |          | flavor_base_deps_apt |
+| 29 | libhiredis-dev          | 0.14.1-2                     | 0.14.1-2                |          | flavor_base_deps_apt |
+| 30 | libleveldb-dev          | 1.23-3build1                 | 1.23-3build1            |          | flavor_base_deps_apt |
+| 31 | libleveldb1d            | 1.23-3build1                 | 1.23-3build1            |          | flavor_base_deps_apt |
+| 32 | maven                   | 3.6.3-5                      | 3.6.3-5                 |          | flavor_base_deps_apt |
 | 33 | chrpath                 | 0.16-2                       | 0.16-2                  |          | language_deps        |
 | 34 | gnupg                   | 2.2.27-3ubuntu2.5            | 2.2.27-3ubuntu2.5       |          | language_deps        |
 | 35 | python3-distutils       | 3.10.8-1~22.04               | 3.10.8-1~22.04          |          | language_deps        |
@@ -51,66 +51,66 @@
 
 |    | Package                                | Version in 11.1.1    | Version in 11.2.0    | Status   | Build-Step              |
 |---:|:---------------------------------------|:---------------------|:---------------------|:---------|:------------------------|
-|  0 | packaging                              |                      | ==25.0               | NEW      | language_deps           |
-|  1 | awscrt                                 | ==0.20.9             | ==0.20.9             |          | flavor_base_deps_python |
-|  2 | azure-batch                            | ==14.2.0             | ==14.2.0             |          | flavor_base_deps_python |
-|  3 | azure-cosmos                           | ==4.6.0              | ==4.6.0              |          | flavor_base_deps_python |
-|  4 | azure-eventgrid                        | ==4.19.0             | ==4.19.0             |          | flavor_base_deps_python |
-|  5 | azure-eventhub                         | ==5.11.7             | ==5.11.7             |          | flavor_base_deps_python |
-|  6 | azure-eventhub-checkpointstoreblob     | ==1.1.4              | ==1.1.4              |          | flavor_base_deps_python |
-|  7 | azure-eventhub-checkpointstoreblob-aio | ==1.1.4              | ==1.1.4              |          | flavor_base_deps_python |
-|  8 | azure-identity                         | ==1.16.0             | ==1.16.0             |          | flavor_base_deps_python |
-|  9 | azure-keyvault                         | ==4.2.0              | ==4.2.0              |          | flavor_base_deps_python |
-| 10 | azure-keyvault-certificates            | ==4.8.0              | ==4.8.0              |          | flavor_base_deps_python |
-| 11 | azure-keyvault-keys                    | ==4.9.0              | ==4.9.0              |          | flavor_base_deps_python |
-| 12 | azure-keyvault-secrets                 | ==4.8.0              | ==4.8.0              |          | flavor_base_deps_python |
-| 13 | azure-kusto-data                       | ==4.4.0              | ==4.4.0              |          | flavor_base_deps_python |
-| 14 | azure-loganalytics                     | ==0.1.1              | ==0.1.1              |          | flavor_base_deps_python |
-| 15 | azure-servicebus                       | ==7.12.1             | ==7.12.1             |          | flavor_base_deps_python |
-| 16 | azure-storage-blob                     | ==12.19.1            | ==12.19.1            |          | flavor_base_deps_python |
-| 17 | azure-storage-file-datalake            | ==12.14.0            | ==12.14.0            |          | flavor_base_deps_python |
-| 18 | azure-storage-file-share               | ==12.15.0            | ==12.15.0            |          | flavor_base_deps_python |
-| 19 | azure-storage-queue                    | ==12.9.0             | ==12.9.0             |          | flavor_base_deps_python |
-| 20 | bitarray                               | ==2.9.2              | ==2.9.2              |          | flavor_base_deps_python |
-| 21 | bitsets                                | ==0.8.4              | ==0.8.4              |          | flavor_base_deps_python |
-| 22 | boto3                                  | ==1.34.98            | ==1.34.98            |          | flavor_base_deps_python |
-| 23 | cffi                                   | ==1.16.0             | ==1.16.0             |          | flavor_base_deps_python |
-| 24 | cryptography                           | ==45.0.7             | ==45.0.7             |          | flavor_base_deps_python |
-| 25 | cython                                 | ==3.0.10             | ==3.0.10             |          | flavor_base_deps_python |
-| 26 | debugpy                                | ==1.8.1              | ==1.8.1              |          | flavor_base_deps_python |
-| 27 | docutils                               | ==0.21.2             | ==0.21.2             |          | flavor_base_deps_python |
-| 28 | exasol-bucketfs                        | ==2.0.0              | ==2.0.0              |          | flavor_base_deps_python |
-| 29 | exasol-db-api                          | No version specified | No version specified |          | flavor_base_deps_python |
-| 30 | google-cloud-asset                     | ==3.26.1             | ==3.26.1             |          | flavor_base_deps_python |
-| 31 | google-cloud-bigquery                  | ==3.21.0             | ==3.21.0             |          | flavor_base_deps_python |
-| 32 | google-cloud-bigquery-storage          | ==2.25.0             | ==2.25.0             |          | flavor_base_deps_python |
-| 33 | google-cloud-bigtable                  | ==2.23.1             | ==2.23.1             |          | flavor_base_deps_python |
-| 34 | google-cloud-containeranalysis         | ==2.14.3             | ==2.14.3             |          | flavor_base_deps_python |
-| 35 | google-cloud-datacatalog               | ==3.19.0             | ==3.19.0             |          | flavor_base_deps_python |
-| 36 | google-cloud-datastore                 | ==2.19.0             | ==2.19.0             |          | flavor_base_deps_python |
-| 37 | google-cloud-firestore                 | ==2.16.0             | ==2.16.0             |          | flavor_base_deps_python |
-| 38 | google-cloud-kms                       | ==2.21.4             | ==2.21.4             |          | flavor_base_deps_python |
-| 39 | google-cloud-logging                   | ==3.10.0             | ==3.10.0             |          | flavor_base_deps_python |
-| 40 | google-cloud-monitoring                | ==2.21.0             | ==2.21.0             |          | flavor_base_deps_python |
-| 41 | google-cloud-ndb                       | ==2.3.1              | ==2.3.1              |          | flavor_base_deps_python |
-| 42 | google-cloud-pubsub                    | ==2.21.1             | ==2.21.1             |          | flavor_base_deps_python |
-| 43 | google-cloud-spanner                   | ==3.46.0             | ==3.46.0             |          | flavor_base_deps_python |
-| 44 | google-cloud-storage                   | ==2.16.0             | ==2.16.0             |          | flavor_base_deps_python |
-| 45 | google-cloud-trace                     | ==1.13.3             | ==1.13.3             |          | flavor_base_deps_python |
-| 46 | h2                                     | ==4.1.0              | ==4.1.0              |          | flavor_base_deps_python |
-| 47 | jinja2                                 | ==3.1.4              | ==3.1.4              |          | flavor_base_deps_python |
-| 48 | lxml                                   | ==5.2.1              | ==5.2.1              |          | flavor_base_deps_python |
-| 49 | martian                                | ==2.0.post1          | ==2.0.post1          |          | flavor_base_deps_python |
-| 50 | numba                                  | ==0.59.1             | ==0.59.1             |          | flavor_base_deps_python |
-| 51 | paramiko                               | ==3.4.0              | ==3.4.0              |          | flavor_base_deps_python |
-| 52 | plyvel                                 | ==1.5.1              | ==1.5.1              |          | flavor_base_deps_python |
-| 53 | portalocker                            | ==3.1.1              | ==3.1.1              |          | flavor_base_deps_python |
-| 54 | protobuf                               | ==4.25.8             | ==4.25.8             |          | flavor_base_deps_python |
-| 55 | pyOpenSSL                              | ==25.3.0             | ==25.3.0             |          | flavor_base_deps_python |
-| 56 | pybase64                               | ==1.3.2              | ==1.3.2              |          | flavor_base_deps_python |
-| 57 | pybloomfiltermmap3                     | ==0.5.7              | ==0.5.7              |          | flavor_base_deps_python |
-| 58 | pycurl                                 | ==7.45.3             | ==7.45.3             |          | flavor_base_deps_python |
-| 59 | pyexasol                               | ==2.1.0              | ==2.1.0              |          | flavor_base_deps_python |
+|  0 | pyexasol                               | ==2.1.0              | ==2.2.1              | UPDATED  | flavor_base_deps_python |
+|  1 | packaging                              |                      | ==25.0               | NEW      | language_deps           |
+|  2 | awscrt                                 | ==0.20.9             | ==0.20.9             |          | flavor_base_deps_python |
+|  3 | azure-batch                            | ==14.2.0             | ==14.2.0             |          | flavor_base_deps_python |
+|  4 | azure-cosmos                           | ==4.6.0              | ==4.6.0              |          | flavor_base_deps_python |
+|  5 | azure-eventgrid                        | ==4.19.0             | ==4.19.0             |          | flavor_base_deps_python |
+|  6 | azure-eventhub                         | ==5.11.7             | ==5.11.7             |          | flavor_base_deps_python |
+|  7 | azure-eventhub-checkpointstoreblob     | ==1.1.4              | ==1.1.4              |          | flavor_base_deps_python |
+|  8 | azure-eventhub-checkpointstoreblob-aio | ==1.1.4              | ==1.1.4              |          | flavor_base_deps_python |
+|  9 | azure-identity                         | ==1.16.0             | ==1.16.0             |          | flavor_base_deps_python |
+| 10 | azure-keyvault                         | ==4.2.0              | ==4.2.0              |          | flavor_base_deps_python |
+| 11 | azure-keyvault-certificates            | ==4.8.0              | ==4.8.0              |          | flavor_base_deps_python |
+| 12 | azure-keyvault-keys                    | ==4.9.0              | ==4.9.0              |          | flavor_base_deps_python |
+| 13 | azure-keyvault-secrets                 | ==4.8.0              | ==4.8.0              |          | flavor_base_deps_python |
+| 14 | azure-kusto-data                       | ==4.4.0              | ==4.4.0              |          | flavor_base_deps_python |
+| 15 | azure-loganalytics                     | ==0.1.1              | ==0.1.1              |          | flavor_base_deps_python |
+| 16 | azure-servicebus                       | ==7.12.1             | ==7.12.1             |          | flavor_base_deps_python |
+| 17 | azure-storage-blob                     | ==12.19.1            | ==12.19.1            |          | flavor_base_deps_python |
+| 18 | azure-storage-file-datalake            | ==12.14.0            | ==12.14.0            |          | flavor_base_deps_python |
+| 19 | azure-storage-file-share               | ==12.15.0            | ==12.15.0            |          | flavor_base_deps_python |
+| 20 | azure-storage-queue                    | ==12.9.0             | ==12.9.0             |          | flavor_base_deps_python |
+| 21 | bitarray                               | ==2.9.2              | ==2.9.2              |          | flavor_base_deps_python |
+| 22 | bitsets                                | ==0.8.4              | ==0.8.4              |          | flavor_base_deps_python |
+| 23 | boto3                                  | ==1.34.98            | ==1.34.98            |          | flavor_base_deps_python |
+| 24 | cffi                                   | ==1.16.0             | ==1.16.0             |          | flavor_base_deps_python |
+| 25 | cryptography                           | ==45.0.7             | ==45.0.7             |          | flavor_base_deps_python |
+| 26 | cython                                 | ==3.0.10             | ==3.0.10             |          | flavor_base_deps_python |
+| 27 | debugpy                                | ==1.8.1              | ==1.8.1              |          | flavor_base_deps_python |
+| 28 | docutils                               | ==0.21.2             | ==0.21.2             |          | flavor_base_deps_python |
+| 29 | exasol-bucketfs                        | ==2.0.0              | ==2.0.0              |          | flavor_base_deps_python |
+| 30 | exasol-db-api                          | No version specified | No version specified |          | flavor_base_deps_python |
+| 31 | google-cloud-asset                     | ==3.26.1             | ==3.26.1             |          | flavor_base_deps_python |
+| 32 | google-cloud-bigquery                  | ==3.21.0             | ==3.21.0             |          | flavor_base_deps_python |
+| 33 | google-cloud-bigquery-storage          | ==2.25.0             | ==2.25.0             |          | flavor_base_deps_python |
+| 34 | google-cloud-bigtable                  | ==2.23.1             | ==2.23.1             |          | flavor_base_deps_python |
+| 35 | google-cloud-containeranalysis         | ==2.14.3             | ==2.14.3             |          | flavor_base_deps_python |
+| 36 | google-cloud-datacatalog               | ==3.19.0             | ==3.19.0             |          | flavor_base_deps_python |
+| 37 | google-cloud-datastore                 | ==2.19.0             | ==2.19.0             |          | flavor_base_deps_python |
+| 38 | google-cloud-firestore                 | ==2.16.0             | ==2.16.0             |          | flavor_base_deps_python |
+| 39 | google-cloud-kms                       | ==2.21.4             | ==2.21.4             |          | flavor_base_deps_python |
+| 40 | google-cloud-logging                   | ==3.10.0             | ==3.10.0             |          | flavor_base_deps_python |
+| 41 | google-cloud-monitoring                | ==2.21.0             | ==2.21.0             |          | flavor_base_deps_python |
+| 42 | google-cloud-ndb                       | ==2.3.1              | ==2.3.1              |          | flavor_base_deps_python |
+| 43 | google-cloud-pubsub                    | ==2.21.1             | ==2.21.1             |          | flavor_base_deps_python |
+| 44 | google-cloud-spanner                   | ==3.46.0             | ==3.46.0             |          | flavor_base_deps_python |
+| 45 | google-cloud-storage                   | ==2.16.0             | ==2.16.0             |          | flavor_base_deps_python |
+| 46 | google-cloud-trace                     | ==1.13.3             | ==1.13.3             |          | flavor_base_deps_python |
+| 47 | h2                                     | ==4.1.0              | ==4.1.0              |          | flavor_base_deps_python |
+| 48 | jinja2                                 | ==3.1.4              | ==3.1.4              |          | flavor_base_deps_python |
+| 49 | lxml                                   | ==5.2.1              | ==5.2.1              |          | flavor_base_deps_python |
+| 50 | martian                                | ==2.0.post1          | ==2.0.post1          |          | flavor_base_deps_python |
+| 51 | numba                                  | ==0.59.1             | ==0.59.1             |          | flavor_base_deps_python |
+| 52 | paramiko                               | ==3.4.0              | ==3.4.0              |          | flavor_base_deps_python |
+| 53 | plyvel                                 | ==1.5.1              | ==1.5.1              |          | flavor_base_deps_python |
+| 54 | portalocker                            | ==3.1.1              | ==3.1.1              |          | flavor_base_deps_python |
+| 55 | protobuf                               | ==4.25.8             | ==4.25.8             |          | flavor_base_deps_python |
+| 56 | pyOpenSSL                              | ==25.3.0             | ==25.3.0             |          | flavor_base_deps_python |
+| 57 | pybase64                               | ==1.3.2              | ==1.3.2              |          | flavor_base_deps_python |
+| 58 | pybloomfiltermmap3                     | ==0.5.7              | ==0.5.7              |          | flavor_base_deps_python |
+| 59 | pycurl                                 | ==7.45.3             | ==7.45.3             |          | flavor_base_deps_python |
 | 60 | pyftpdlib                              | ==1.5.9              | ==1.5.9              |          | flavor_base_deps_python |
 | 61 | pyodbc                                 | ==5.1.0              | ==5.1.0              |          | flavor_base_deps_python |
 | 62 | pysftp                                 | ==0.2.9              | ==0.2.9              |          | flavor_base_deps_python |

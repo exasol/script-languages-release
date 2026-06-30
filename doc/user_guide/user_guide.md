@@ -14,6 +14,7 @@ For a more simple setup, Exasol provides the [AI-Lab](https://github.com/exasol/
 
 ## Selected topics
 
+- [UDF Interface Requirements for Python, Java, and R](udf_interface_requirements.md)
 - [Python Dataframe Support](py_dataframe.md)
 - [Using Vagrant as development environment](vagrant.md)
 - [FAQ](FAQ.md)

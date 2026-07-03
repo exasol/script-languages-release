@@ -1,10 +1,10 @@
-# Public packages comparison between flavor "Standard Exasol All Python 3.12" in 11.2.0 and flavor "Standard Exasol All Python 3.12" in 11.2.0
+# Public packages comparison between flavor "Standard Exasol All Python 3.12" in 11.3.0 and flavor "Standard Exasol All Python 3.12" in 11.2.0
 
 <!-- markdown-link-check-disable -->
 
 ## Apt packages
 
-|    | Package              | Version in 11.2.0      | Version in 11.2.0      | Status   | Build-Step       |
+|    | Package              | Version in 11.2.0      | Version in 11.3.0      | Status   | Build-Step       |
 |---:|:---------------------|:-----------------------|:-----------------------|:---------|:-----------------|
 |  0 | git                  | 1:2.43.0-1ubuntu*      | 1:2.43.0-1ubuntu*      |          | flavor_base_deps |
 |  1 | ldap-utils           | 2.6.10+dfsg-0ubuntu*   | 2.6.10+dfsg-0ubuntu*   |          | flavor_base_deps |
@@ -34,7 +34,7 @@
 
 ## Pip packages
 
-|    | Package                                | Version in 11.2.0    | Version in 11.2.0    | Status   | Build-Step       |
+|    | Package                                | Version in 11.2.0    | Version in 11.3.0    | Status   | Build-Step       |
 |---:|:---------------------------------------|:---------------------|:---------------------|:---------|:-----------------|
 |  0 | awscrt                                 | ==0.28.1             | ==0.28.1             |          | flavor_base_deps |
 |  1 | azure-batch                            | ==14.2.0             | ==14.2.0             |          | flavor_base_deps |

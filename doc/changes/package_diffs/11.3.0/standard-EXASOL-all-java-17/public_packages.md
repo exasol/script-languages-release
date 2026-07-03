@@ -1,10 +1,10 @@
-# Public packages comparison between flavor "Standard Exasol All Java 17" in 11.2.0 and flavor "Standard Exasol All Java 17" in 11.2.0
+# Public packages comparison between flavor "Standard Exasol All Java 17" in 11.3.0 and flavor "Standard Exasol All Java 17" in 11.2.0
 
 <!-- markdown-link-check-disable -->
 
 ## Apt packages
 
-|    | Package                 | Version in 11.2.0    | Version in 11.2.0    | Status   | Build-Step     |
+|    | Package                 | Version in 11.2.0    | Version in 11.3.0    | Status   | Build-Step     |
 |---:|:------------------------|:---------------------|:---------------------|:---------|:---------------|
 |  0 | ca-certificates         | 20260601~22.04.1     | 20260601~22.04.1     |          | language_deps  |
 |  1 | curl                    | 7.81.0-1ubuntu*      | 7.81.0-1ubuntu*      |          | language_deps  |

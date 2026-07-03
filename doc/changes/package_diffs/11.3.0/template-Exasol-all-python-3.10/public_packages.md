@@ -1,10 +1,10 @@
-# Public packages comparison between flavor "Template Exasol All Python 3.10" in 11.2.0 and flavor "Template Exasol All Python 3.10" in 11.2.0
+# Public packages comparison between flavor "Template Exasol All Python 3.10" in 11.3.0 and flavor "Template Exasol All Python 3.10" in 11.2.0
 
 <!-- markdown-link-check-disable -->
 
 ## Apt packages
 
-|    | Package              | Version in 11.2.0   | Version in 11.2.0   | Status   | Build-Step       |
+|    | Package              | Version in 11.2.0   | Version in 11.3.0   | Status   | Build-Step       |
 |---:|:---------------------|:--------------------|:--------------------|:---------|:-----------------|
 |  0 | build-essential      | 12.9ubuntu*         | 12.9ubuntu*         |          | flavor_base_deps |
 |  1 | git                  | 1:2.34.1-1ubuntu*   | 1:2.34.1-1ubuntu*   |          | flavor_base_deps |
@@ -24,7 +24,7 @@
 
 ## Pip packages
 
-|    | Package   | Version in 11.2.0   | Version in 11.2.0   | Status   | Build-Step    |
+|    | Package   | Version in 11.2.0   | Version in 11.3.0   | Status   | Build-Step    |
 |---:|:----------|:--------------------|:--------------------|:---------|:--------------|
 |  0 | numpy     | ==1.26.4            | ==1.26.4            |          | language_deps |
 |  1 | pandas    | ==2.2.3             | ==2.2.3             |          | language_deps |

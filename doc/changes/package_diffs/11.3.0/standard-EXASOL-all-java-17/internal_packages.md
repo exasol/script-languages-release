@@ -1,10 +1,10 @@
-# Internal packages comparison between flavor "Standard Exasol All Java 17" in 11.2.0 and flavor "Standard Exasol All Java 17" in 11.2.0
+# Internal packages comparison between flavor "Standard Exasol All Java 17" in 11.3.0 and flavor "Standard Exasol All Java 17" in 11.2.0
 
 <!-- markdown-link-check-disable -->
 
 ## Apt packages
 
-|    | Package           | Version in 11.2.0    | Version in 11.2.0    | Status   | Build-Step     |
+|    | Package           | Version in 11.2.0    | Version in 11.3.0    | Status   | Build-Step     |
 |---:|:------------------|:---------------------|:---------------------|:---------|:---------------|
 |  0 | binutils          | 2.38-4ubuntu*        | 2.38-4ubuntu*        |          | base_test_deps |
 |  1 | gdb               | 12.1-0ubuntu*        | 12.1-0ubuntu*        |          | base_test_deps |

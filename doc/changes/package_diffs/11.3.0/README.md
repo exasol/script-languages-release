@@ -1,4 +1,4 @@
-# Package Version Comparison between 11.2.0 and 11.2.0
+# Package Version Comparison between 11.3.0 and 11.2.0
 
 
 ## Standard Exasol All

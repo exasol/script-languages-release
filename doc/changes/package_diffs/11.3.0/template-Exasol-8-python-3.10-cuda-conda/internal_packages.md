@@ -1,10 +1,10 @@
-# Internal packages comparison between flavor "Template Exasol 8 Python 3.10 Cuda Conda" in 11.2.0 and flavor "Template Exasol 8 Python 3.10 Cuda Conda" in 11.2.0
+# Internal packages comparison between flavor "Template Exasol 8 Python 3.10 Cuda Conda" in 11.3.0 and flavor "Template Exasol 8 Python 3.10 Cuda Conda" in 11.2.0
 
 <!-- markdown-link-check-disable -->
 
 ## Apt packages
 
-|    | Package   | Version in 11.2.0    | Version in 11.2.0    | Status   | Build-Step     |
+|    | Package   | Version in 11.2.0    | Version in 11.3.0    | Status   | Build-Step     |
 |---:|:----------|:---------------------|:---------------------|:---------|:---------------|
 |  0 | binutils  | 2.38-4ubuntu*        | 2.38-4ubuntu*        |          | base_test_deps |
 |  1 | gdb       | 12.1-0ubuntu*        | 12.1-0ubuntu*        |          | base_test_deps |
@@ -17,7 +17,7 @@
 
 ## Conda packages
 
-|    | Package   | Version in 11.2.0   | Version in 11.2.0   | Status   | Build-Step   |
+|    | Package   | Version in 11.2.0   | Version in 11.3.0   | Status   | Build-Step   |
 |---:|:----------|:--------------------|:--------------------|:---------|:-------------|
 |  0 | bazel     | =8.3.1              | =8.3.1              |          | build_deps   |
 |  1 | chrpath   | =0.16               | =0.16               |          | build_deps   |

@@ -1,10 +1,10 @@
-# Public packages comparison between flavor "Standard Exasol All" in 11.2.0 and flavor "Standard Exasol All" in 11.2.0
+# Public packages comparison between flavor "Standard Exasol All" in 11.3.0 and flavor "Standard Exasol All" in 11.2.0
 
 <!-- markdown-link-check-disable -->
 
 ## Apt packages
 
-|    | Package                 | Version in 11.2.0       | Version in 11.2.0       | Status   | Build-Step           |
+|    | Package                 | Version in 11.2.0       | Version in 11.3.0       | Status   | Build-Step           |
 |---:|:------------------------|:------------------------|:------------------------|:---------|:---------------------|
 |  0 | apt-transport-https     | 2.4.14                  | 2.4.14                  |          | flavor_base_deps_apt |
 |  1 | build-essential         | 12.9ubuntu*             | 12.9ubuntu*             |          | flavor_base_deps_apt |
@@ -48,7 +48,7 @@
 
 ## Pip packages
 
-|    | Package                                | Version in 11.2.0    | Version in 11.2.0    | Status   | Build-Step              |
+|    | Package                                | Version in 11.2.0    | Version in 11.3.0    | Status   | Build-Step              |
 |---:|:---------------------------------------|:---------------------|:---------------------|:---------|:------------------------|
 |  0 | awscrt                                 | ==0.20.9             | ==0.20.9             |          | flavor_base_deps_python |
 |  1 | azure-batch                            | ==14.2.0             | ==14.2.0             |          | flavor_base_deps_python |
@@ -132,7 +132,7 @@
 
 ## R packages
 
-|    | Package       | Version in 11.2.0   | Version in 11.2.0   | Status   | Build-Step         |
+|    | Package       | Version in 11.2.0   | Version in 11.3.0   | Status   | Build-Step         |
 |---:|:--------------|:--------------------|:--------------------|:---------|:-------------------|
 |  0 | BradleyTerry2 | 1.1-2               | 1.1-2               |          | flavor_base_deps_r |
 |  1 | Formula       | 1.2-5               | 1.2-5               |          | flavor_base_deps_r |

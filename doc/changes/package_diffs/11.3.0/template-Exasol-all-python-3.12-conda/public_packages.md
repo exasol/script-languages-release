@@ -1,10 +1,10 @@
-# Public packages comparison between flavor "Template Exasol All Python 3.12 Conda" in 11.2.0 and flavor "Template Exasol All Python 3.12 Conda" in 11.2.0
+# Public packages comparison between flavor "Template Exasol All Python 3.12 Conda" in 11.3.0 and flavor "Template Exasol All Python 3.12 Conda" in 11.2.0
 
 <!-- markdown-link-check-disable -->
 
 ## Apt packages
 
-|    | Package         | Version in 11.2.0      | Version in 11.2.0      | Status   | Build-Step       |
+|    | Package         | Version in 11.2.0      | Version in 11.3.0      | Status   | Build-Step       |
 |---:|:----------------|:-----------------------|:-----------------------|:---------|:-----------------|
 |  0 | adduser         | 3.137ubuntu*           | 3.137ubuntu*           |          | conda_deps       |
 |  1 | bzip2           | 1.0.8-5.1build0.1      | 1.0.8-5.1build0.1      |          | conda_deps       |
@@ -17,7 +17,7 @@
 
 ## Conda packages
 
-|    | Package     | Version in 11.2.0   | Version in 11.2.0   | Status   | Build-Step     |
+|    | Package     | Version in 11.2.0   | Version in 11.3.0   | Status   | Build-Step     |
 |---:|:------------|:--------------------|:--------------------|:---------|:---------------|
 |  0 | mamba       | =2.3.3              | =2.3.3              |          | language_deps  |
 |  1 | numpy       | =1.26.2             | =1.26.2             |          | language_deps  |

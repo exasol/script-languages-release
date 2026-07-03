@@ -1,10 +1,10 @@
-# Public packages comparison between flavor "Template Exasol All R 4" in 11.2.0 and flavor "Template Exasol All R 4" in 11.2.0
+# Public packages comparison between flavor "Template Exasol All R 4" in 11.3.0 and flavor "Template Exasol All R 4" in 11.2.0
 
 <!-- markdown-link-check-disable -->
 
 ## Apt packages
 
-|    | Package         | Version in 11.2.0   | Version in 11.2.0   | Status   | Build-Step       |
+|    | Package         | Version in 11.2.0   | Version in 11.3.0   | Status   | Build-Step       |
 |---:|:----------------|:--------------------|:--------------------|:---------|:-----------------|
 |  0 | git             | 1:2.34.1-1ubuntu*   | 1:2.34.1-1ubuntu*   |          | flavor_base_deps |
 |  1 | unzip           | 6.0-26ubuntu*       | 6.0-26ubuntu*       |          | flavor_base_deps |

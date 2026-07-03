@@ -36,7 +36,6 @@ n/a
  - #1422: Fixed JAVA_HOME path
  - #1464: Ignored maven settings.xml for security scanner
  - #1485: Updated exaslpm to v1.3.1
- - #1491: Removed generic-lang-tests and pointed to individual lang tests
 
 
 ## Dependencies

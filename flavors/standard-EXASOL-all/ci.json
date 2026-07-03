@@ -70,9 +70,9 @@
       {
         "name": "generic",
         "files": [],
-        "folders": [],
+        "folders": ["generic/python3", "generic/java", "generic/r"],
         "goal": "release",
-        "generic_language_tests": ["python3", "java", "r"]
+        "generic_language_tests": []
       }
     ]
   }

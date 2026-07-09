@@ -13,9 +13,9 @@
       {
         "name": "generic",
         "files": [],
-        "folders": [],
+        "folders": ["generic/r"],
         "goal": "release",
-        "generic_language_tests": ["r"]
+        "generic_language_tests": []
       }
     ]
   }

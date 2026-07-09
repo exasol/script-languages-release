@@ -20,9 +20,9 @@
       {
         "name": "generic",
         "files": [],
-        "folders": [],
+        "folders": ["generic/java"],
         "goal": "release",
-        "generic_language_tests": ["java"]
+        "generic_language_tests": []
       }
     ]
   }

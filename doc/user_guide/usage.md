@@ -154,10 +154,10 @@ poetry run exaslct run-db-test --flavor-path=flavors/<flavor-name> --environment
 ```
 The `exaslct` tool will upload your script languages container to the BucketFS on the database instance, configure the container and automatically execute the tests.
 
-Please note that each flavor contains a configuration file for the tests under `flavors/<flavor>/flavor-base/testconfig`. This file describes the programming languages and folders which should be used for the test execution. You can customize the used folder using the `--test-folder` or `--test-file` parameter.
+Please note that each flavor contains a configuration file for the tests under `flavors/<flavor>/ci.json`. This file describes the programming languages and folders which should be used for the test execution. You can customize the used folder using the `--test-folder` or `--test-file` parameter.
 For a full list of options please check:
 ```bash
-poetry run exaslct run-db-test --help   
+poetry run exaslct run-db-test --help
 ```
 
 ### MacOsX Limitations

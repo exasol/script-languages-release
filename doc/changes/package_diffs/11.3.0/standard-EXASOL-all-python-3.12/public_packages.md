@@ -6,18 +6,18 @@
 
 |    | Package              | Version in 11.2.0      | Version in 11.3.0      | Status   | Build-Step       |
 |---:|:---------------------|:-----------------------|:-----------------------|:---------|:-----------------|
-|  0 | git                  | 1:2.43.0-1ubuntu*      | 1:2.43.0-1ubuntu*      |          | flavor_base_deps |
-|  1 | ldap-utils           | 2.6.10+dfsg-0ubuntu*   | 2.6.10+dfsg-0ubuntu*   |          | flavor_base_deps |
-|  2 | libcurl4-openssl-dev | 8.5.0-2ubuntu*         | 8.5.0-2ubuntu*         |          | flavor_base_deps |
-|  3 | libgomp1             | 14.2.0-4ubuntu*        | 14.2.0-4ubuntu*        |          | flavor_base_deps |
-|  4 | libldap2-dev         | 2.6.10+dfsg-0ubuntu*   | 2.6.10+dfsg-0ubuntu*   |          | flavor_base_deps |
-|  5 | libleveldb-dev       | 1.23-5build1           | 1.23-5build1           |          | flavor_base_deps |
-|  6 | libsasl2-dev         | 2.1.28+dfsg1-5ubuntu*  | 2.1.28+dfsg1-5ubuntu*  |          | flavor_base_deps |
-|  7 | libsmbclient-dev     | 2:4.19.5+dfsg-4ubuntu* | 2:4.19.5+dfsg-4ubuntu* |          | flavor_base_deps |
-|  8 | openssl              | 3.0.13-0ubuntu*        | 3.0.13-0ubuntu*        |          | flavor_base_deps |
-|  9 | slapd                | 2.6.10+dfsg-0ubuntu*   | 2.6.10+dfsg-0ubuntu*   |          | flavor_base_deps |
-| 10 | smbclient            | 2:4.19.5+dfsg-4ubuntu* | 2:4.19.5+dfsg-4ubuntu* |          | flavor_base_deps |
-| 11 | tzdata               | 2026a-0ubuntu*         | 2026a-0ubuntu*         |          | flavor_base_deps |
+|  0 | tzdata               | 2026a-0ubuntu*         | 2026*                  | UPDATED  | flavor_base_deps |
+|  1 | git                  | 1:2.43.0-1ubuntu*      | 1:2.43.0-1ubuntu*      |          | flavor_base_deps |
+|  2 | ldap-utils           | 2.6.10+dfsg-0ubuntu*   | 2.6.10+dfsg-0ubuntu*   |          | flavor_base_deps |
+|  3 | libcurl4-openssl-dev | 8.5.0-2ubuntu*         | 8.5.0-2ubuntu*         |          | flavor_base_deps |
+|  4 | libgomp1             | 14.2.0-4ubuntu*        | 14.2.0-4ubuntu*        |          | flavor_base_deps |
+|  5 | libldap2-dev         | 2.6.10+dfsg-0ubuntu*   | 2.6.10+dfsg-0ubuntu*   |          | flavor_base_deps |
+|  6 | libleveldb-dev       | 1.23-5build1           | 1.23-5build1           |          | flavor_base_deps |
+|  7 | libsasl2-dev         | 2.1.28+dfsg1-5ubuntu*  | 2.1.28+dfsg1-5ubuntu*  |          | flavor_base_deps |
+|  8 | libsmbclient-dev     | 2:4.19.5+dfsg-4ubuntu* | 2:4.19.5+dfsg-4ubuntu* |          | flavor_base_deps |
+|  9 | openssl              | 3.0.13-0ubuntu*        | 3.0.13-0ubuntu*        |          | flavor_base_deps |
+| 10 | slapd                | 2.6.10+dfsg-0ubuntu*   | 2.6.10+dfsg-0ubuntu*   |          | flavor_base_deps |
+| 11 | smbclient            | 2:4.19.5+dfsg-4ubuntu* | 2:4.19.5+dfsg-4ubuntu* |          | flavor_base_deps |
 | 12 | unzip                | 6.0-28ubuntu*          | 6.0-28ubuntu*          |          | flavor_base_deps |
 | 13 | ca-certificates      | 20260601~24.04.1       | 20260601~24.04.1       |          | language_deps    |
 | 14 | chrpath              | 0.16-2build1           | 0.16-2build1           |          | language_deps    |

@@ -31,6 +31,7 @@ n/a
 ## Dependencies
 
  - #1494: Use wildcards for python3.10-dev and python3-distutils
+ - #1498: Updated tzdata ver to 2026* 
 
 ## Bugfixes
 

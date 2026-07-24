@@ -47,7 +47,7 @@ homepage = "https://github.com/exasol/script-languages"
 
 dev = [
     "toml>=0.10.2",
-    "gitpython>=3.1.0, <4.0.0",
+    "gitpython>=3.1.52, <4.0.0",
     "nox>=2022.8.7"
 ]
 

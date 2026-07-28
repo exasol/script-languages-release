@@ -14,7 +14,7 @@ nox.options.sessions = []
 def check_duplicate_language_aliases(session: nox.Session):
     """
     Checks all standard language_definitions.json for duplicate aliases.
-    Fails if an alias appears more than once.
+    Skips standard-EXASOL-all because it contains all aliases.
     """
     alias_to_flavor: dict[str, str] = {}
 
@@ -25,7 +25,7 @@ def check_duplicate_language_aliases(session: nox.Session):
 
     SKIP_FLAVOR = "standard-EXASOL-all"
     for json_file in flavor_files:
-        flavor_name = json_file.parts[-3]  # picks the flavor name
+        flavor_name = json_file.parents[1].name
         if flavor_name == SKIP_FLAVOR:
             continue  # skip standard-EXASOL-all as it contains all aliases
 

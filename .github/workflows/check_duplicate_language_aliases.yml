@@ -1,0 +1,25 @@
+name: Check duplicate language aliases
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+  pull_request:
+
+jobs:
+  check-duplicate-language-aliases:
+    name: Check duplicate language aliases
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Setup Python & Poetry Environment
+        uses: exasol/python-toolbox/.github/actions/python-environment@v9
+        with:
+          python-version: "3.10"
+          poetry-version: "2.3.0"
+
+      - name: Check for duplicate language aliases across standard flavors
+        run: poetry run -- nox -s check-duplicate-aliases

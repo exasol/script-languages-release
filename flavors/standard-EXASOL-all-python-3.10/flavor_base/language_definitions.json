@@ -4,7 +4,7 @@
   "language_definitions": [
     {
       "protocol": "localzmq+protobuf",
-      "aliases": ["PYTHON3", "PYTHON310"],
+      "aliases": ["PYTHON310"],
       "parameters": [{"key": "lang", "value": "python"}],
       "udf_client_path": {
         "executable": "/exaudf/exaudfclient"

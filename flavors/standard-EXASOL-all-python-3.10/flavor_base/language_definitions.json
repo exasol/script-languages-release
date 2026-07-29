@@ -4,12 +4,15 @@
   "language_definitions": [
     {
       "protocol": "localzmq+protobuf",
-      "aliases": ["PYTHON3", "PYTHON310"],
+      "aliases": ["PYTHON310"],
       "parameters": [{"key": "lang", "value": "python"}],
       "udf_client_path": {
         "executable": "/exaudf/exaudfclient"
       },
-      "deprecation": null
+      "deprecation": {
+        "deprecation_date": "2026-10-01",
+        "default_changed_to": "Python 3.12"
+      }
     }
   ]
 }

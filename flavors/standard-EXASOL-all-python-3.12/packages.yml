@@ -219,7 +219,7 @@ build_steps:
         version: ==6.31.1
       - extras: []
         name: pyexasol
-        version: ==2.2.1
+        version: ==2.2.2
       - extras: []
         name: pysftp
         version: ==0.2.9
@@ -332,7 +332,7 @@ build_steps:
         version: ==3.2.0
       - extras: []
         name: sqlglot[rs]
-        version: ==30.11.0
+        version: ==30.13.0
   validation_cfg:
     version_mandatory: false
 version: 1.0.0

@@ -28,6 +28,7 @@ n/a
  - #1490: Tests for python interpreter variants are executed with linker-namespace test
  - #1491: Removed generic-lang-tests and pointed to individual lang tests
  - #1504: Removed PYTHON3 from language aliases
+ - #1507: Update dependencies. PyExasol, BucketFS, SqlGlot
 
 ## Dependencies
 

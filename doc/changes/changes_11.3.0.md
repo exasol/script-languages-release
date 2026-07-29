@@ -1,10 +1,10 @@
-# script-languages-release 11.3.0, released t.b.d.
+# script-languages-release 11.3.0, released 2026-07-29
 
-Code name: t.b.d.
+Code name: Dependency updates and test refactoring
 
 ## Summary
 
-t.b.d.
+This release primarily contains a maintenance update. It includes refactoring of the generic language tests into self-contained language-specific tests, tests for Python interpreters, removal of duplicate alias,  PYTHON3, from language aliases and dependency updates for PyExasol, BucketFS, SqlGlot, and tzdata.
 
 <!-- markdown-link-check-disable -->
 ## [Package Version Comparison between Release 11.3.0 and 11.2.0](https://github.com/exasol/script-languages-release/blob/master/doc/changes/package_diffs/11.3.0/README.md)

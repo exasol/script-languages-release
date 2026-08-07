@@ -22,7 +22,8 @@ It is used as built-in container for Exasol versions before the 2025.1 release.
 
 - standard-EXASOL-all
   - Base Image: ubuntu:22.04
-  - Compatible Exasol Versions: 
+  - Compatible Exasol Versions:
+    - 2026.x
     - 2025.x
     - 8.\* 
     - 7.1.\* 
@@ -36,7 +37,8 @@ It is used as built-in container in Exasol version 2025.1.
 
 - standard-EXASOL-all-java-11
   - Base Image: ubuntu:22.04
-  - Compatible Exasol Versions: 
+  - Compatible Exasol Versions:
+    - 2026.x
     - 2025.x
     - 8.\* 
     - 7.1.\* 
@@ -51,7 +53,8 @@ It is used as built-in container in Exasol version 2025.1 and later.
 
 - standard-EXASOL-all-java-17
   - Base Image: ubuntu:22.04
-  - Compatible Exasol Versions: 
+  - Compatible Exasol Versions:
+    - 2026.x
     - 2025.x
     - 8.\* 
     - 7.1.\* 
@@ -66,7 +69,8 @@ It is used as built-in container in Exasol version 2025.1.
 
 - standard-EXASOL-all-python-3.10
   - Base Image: ubuntu:22.04
-  - Compatible Exasol Versions: 
+  - Compatible Exasol Versions:
+    - 2026.x
     - 2025.x
     - 8.\* 
     - 7.1.\* 
@@ -80,7 +84,8 @@ It is used as built-in container in Exasol version 2025.1 and later.
 
 - standard-EXASOL-all-python-3.12
   - Base Image: ubuntu:24.04
-  - Compatible Exasol Versions: 
+  - Compatible Exasol Versions:
+    - 2026.x
     - 2025.x
     - 8.\* 
     - 7.1.\* 
@@ -94,7 +99,8 @@ It is used as built-in container in Exasol version 2025.1 and later.
 
 - standard-EXASOL-all-r-4.4
   - Base Image: ubuntu:22.04
-  - Compatible Exasol Versions: 
+  - Compatible Exasol Versions:
+    - 2026.x
     - 2025.x
     - 8.\* 
     - 7.1.\* 
@@ -112,6 +118,7 @@ The template-Exasol-all-python-3.10 flavor provides language Python 3.10 with on
 - template-Exasol-all-python-3.10
   - Base Image: ubuntu:22.04
   - Compatible Exasol Versions:
+    - 2026.x
     - 2025.x
     - 8.\* 
     - 7.1.\* 
@@ -125,6 +132,7 @@ The template-Exasol-all-python-3.10-conda flavor provides the language Python 3.
 - template-Exasol-all-python-3.10-conda
   - Base Image: ubuntu:22.04
   - Compatible Exasol Versions:
+    - 2026.x
     - 2025.x
     - 8.\* 
     - 7.1.\* 
@@ -182,6 +190,7 @@ The R-4-minimal flavor provides the language R 4.4 with only absolute necessary 
 - template-Exasol-all-r-4
   - Base Image: ubuntu:22.04
   - Compatible Exasol Versions:
+    - 2026.x
     - 2025.x
     - 8.\* 
     - 7.1.\* 

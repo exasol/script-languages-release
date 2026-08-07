@@ -18,12 +18,12 @@
 
 |    | Package     | Version in 11.3.0   | Version in 11.4.0   | Status   | Build-Step     |
 |---:|:------------|:--------------------|:--------------------|:---------|:---------------|
-|  0 | mamba       | =2.3.3              | =2.3.3              |          | language_deps  |
-|  1 | numpy       | =1.26.2             | =1.26.2             |          | language_deps  |
-|  2 | pandas      | =2.2.3              | =2.2.3              |          | language_deps  |
-|  3 | pyarrow     | =22.0.0             | =22.0.0             |          | language_deps  |
-|  4 | python      | =3.10.4             | =3.10.4             |          | language_deps  |
-|  5 | cppzmq      | =4.10.0             | =4.10.0             |          | udfclient_deps |
-|  6 | libprotobuf | =6.31.1             | =6.31.1             |          | udfclient_deps |
-|  7 | nss         | =3.100              | =3.100              |          | udfclient_deps |
+|  0 | mamba       | =2.3.3              | =2.8.1              | UPDATED  | language_deps  |
+|  1 | numpy       | =1.26.2             | =2.2.6              | UPDATED  | language_deps  |
+|  2 | pandas      | =2.2.3              | =2.3.3              | UPDATED  | language_deps  |
+|  3 | pyarrow     | =22.0.0             | =25.0.0             | UPDATED  | language_deps  |
+|  4 | python      | =3.10.4             | =3.10.20            | UPDATED  | language_deps  |
+|  5 | cppzmq      | =4.10.0             | =4.11.0             | UPDATED  | udfclient_deps |
+|  6 | libprotobuf | =6.31.1             | =7.35.1             | UPDATED  | udfclient_deps |
+|  7 | nss         | =3.100              | =3.118              | UPDATED  | udfclient_deps |
 |  8 | zeromq      | =4.3.5              | =4.3.5              |          | udfclient_deps |

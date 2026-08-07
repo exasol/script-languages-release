@@ -19,10 +19,10 @@
 
 |    | Package   | Version in 11.3.0   | Version in 11.4.0   | Status   | Build-Step   |
 |---:|:----------|:--------------------|:--------------------|:---------|:-------------|
-|  0 | bazel     | =8.3.1              | =8.3.1              |          | build_deps   |
-|  1 | chrpath   | =0.16               | =0.16               |          | build_deps   |
-|  2 | gcc       | =12.4.0             | =12.4.0             |          | build_deps   |
-|  3 | gxx       | =12.4.0             | =12.4.0             |          | build_deps   |
-|  4 | make      | =4.3                | =4.3                |          | build_deps   |
-|  5 | pcre      | =8.45               | =8.45               |          | build_deps   |
-|  6 | protobuf  | =6.31.1             | =6.31.1             |          | build_deps   |
+|  0 | bazel     | =8.3.1              | =9.2.0              | UPDATED  | build_deps   |
+|  1 | protobuf  | =6.31.1             | =7.35.1             | UPDATED  | build_deps   |
+|  2 | chrpath   | =0.16               | =0.16               |          | build_deps   |
+|  3 | gcc       | =12.4.0             | =12.4.0             |          | build_deps   |
+|  4 | gxx       | =12.4.0             | =12.4.0             |          | build_deps   |
+|  5 | make      | =4.3                | =4.3                |          | build_deps   |
+|  6 | pcre      | =8.45               | =8.45               |          | build_deps   |

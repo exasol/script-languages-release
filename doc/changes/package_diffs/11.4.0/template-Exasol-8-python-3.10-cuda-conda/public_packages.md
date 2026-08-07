@@ -18,14 +18,14 @@
 
 |    | Package      | Version in 11.3.0   | Version in 11.4.0   | Status   | Build-Step     |
 |---:|:-------------|:--------------------|:--------------------|:---------|:---------------|
-|  0 | cuda-toolkit | =12.9.1             | =12.9.1             |          | language_deps  |
-|  1 | libarrow     | =22.0.0=*_cuda      | =22.0.0=*_cuda      |          | language_deps  |
-|  2 | mamba        | =2.3.3              | =2.3.3              |          | language_deps  |
-|  3 | numpy        | =1.26.2             | =1.26.2             |          | language_deps  |
-|  4 | pandas       | =2.3.1              | =2.3.1              |          | language_deps  |
-|  5 | pyarrow      | =22.0.0             | =22.0.0             |          | language_deps  |
-|  6 | python       | =3.10.4             | =3.10.4             |          | language_deps  |
-|  7 | cppzmq       | =4.10.0             | =4.10.0             |          | udfclient_deps |
-|  8 | libprotobuf  | =6.31.1             | =6.31.1             |          | udfclient_deps |
-|  9 | nss          | =3.100              | =3.100              |          | udfclient_deps |
+|  0 | cuda-toolkit | =12.9.1             | =13.3.1             | UPDATED  | language_deps  |
+|  1 | libarrow     | =22.0.0=*_cuda      | =25.0.0=*_cuda      | UPDATED  | language_deps  |
+|  2 | mamba        | =2.3.3              | =2.8.1              | UPDATED  | language_deps  |
+|  3 | numpy        | =1.26.2             | =2.2.6              | UPDATED  | language_deps  |
+|  4 | pandas       | =2.3.1              | =2.3.3              | UPDATED  | language_deps  |
+|  5 | pyarrow      | =22.0.0             | =25.0.0             | UPDATED  | language_deps  |
+|  6 | python       | =3.10.4             | =3.10.20            | UPDATED  | language_deps  |
+|  7 | cppzmq       | =4.10.0             | =4.11.0             | UPDATED  | udfclient_deps |
+|  8 | libprotobuf  | =6.31.1             | =7.35.1             | UPDATED  | udfclient_deps |
+|  9 | nss          | =3.100              | =3.118              | UPDATED  | udfclient_deps |
 | 10 | zeromq       | =4.3.5              | =4.3.5              |          | udfclient_deps |

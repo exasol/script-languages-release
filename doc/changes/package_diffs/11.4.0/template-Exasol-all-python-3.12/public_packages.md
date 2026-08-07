@@ -26,6 +26,6 @@
 
 |    | Package   | Version in 11.3.0   | Version in 11.4.0   | Status   | Build-Step    |
 |---:|:----------|:--------------------|:--------------------|:---------|:--------------|
-|  0 | numpy     | ==1.26.4            | ==1.26.4            |          | language_deps |
-|  1 | pandas    | ==2.2.3             | ==2.2.3             |          | language_deps |
-|  2 | pyarrow   | ==22.0.0            | ==22.0.0            |          | language_deps |
+|  0 | pyarrow   | ==22.0.0            | ==25.0.0            | UPDATED  | language_deps |
+|  1 | numpy     | ==1.26.4            | ==1.26.4            |          | language_deps |
+|  2 | pandas    | ==2.2.3             | ==2.2.3             |          | language_deps |

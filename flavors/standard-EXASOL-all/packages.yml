@@ -84,7 +84,7 @@ build_steps:
         version: ==1.26.4
         extras: []
       - name: pyarrow
-        version: ==16.0.0
+        version: ==25.0.0
         extras: []
       - comment: workaround for failing integration tests, see https://github.com/exasol/script-languages-release/issues/1435
         name: packaging

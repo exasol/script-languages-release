@@ -61,7 +61,7 @@ build_steps:
         version: ==1.26.4
       - extras: []
         name: pyarrow
-        version: ==16.0.0
+        version: ==25.0.0
   validation_cfg:
     version_mandatory: true
 - name: flavor_base_deps

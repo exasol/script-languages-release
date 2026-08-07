@@ -142,11 +142,11 @@ The template-Exasol-8-python-3.10-cuda-conda flavor provides the language Python
   - Available languages: Python 3.10
   - Supported Package Manager: conda, pip
   - Without NVIDIA Driver
-  - Installed CudaToolkit: 12.9.1
+  - Installed CudaToolkit: 13.3.1
   - [Here](template-Exasol-8-python-3.10-cuda-conda/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-**Important**: If you are using a CUDA driver older than version 575, we recommend that you also install the CUDA compatibility package (cuda-compat) `12.9.1`. See https://docs.nvidia.com/deploy/cuda-compatibility/forward-compatibility.html#deployment-considerations-for-forward-compatibility for compatible drivers. 
-In addition,CUDA 12.x requires a minimum driver version, see https://docs.nvidia.com/deploy/cuda-compatibility/minor-version-compatibility.html.
+**Important**: If you are using a CUDA driver older than version 580, we recommend that you also install the CUDA compatibility package (cuda-compat) `13.3.1`. See https://docs.nvidia.com/deploy/cuda-compatibility/forward-compatibility.html#deployment-considerations-for-forward-compatibility for compatible drivers. 
+In addition, CUDA 13.x requires a minimum driver version, see https://docs.nvidia.com/deploy/cuda-compatibility/minor-version-compatibility.html.
 
 #### template-Exasol-all-python-3.12-conda
 
@@ -169,11 +169,11 @@ The template-Exasol-8-python-3.12-cuda-conda flavor provides the language Python
   - Available languages: Python 3.12
   - Supported Package Manager: conda, pip
   - Without NVIDIA Driver
-  - Installed CudaToolkit: 12.9.1
+  - Installed CudaToolkit: 13.3.1
   - [Here](template-Exasol-8-python-3.12-cuda-conda/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-**Important**:  If you are using a CUDA driver older than version 575, we recommend that you also install the CUDA compatibility package (cuda-compat) `12.9.1`. See https://docs.nvidia.com/deploy/cuda-compatibility/forward-compatibility.html#deployment-considerations-for-forward-compatibility for compatible drivers. 
-In addition,CUDA 12.x requires a minimum driver version, see https://docs.nvidia.com/deploy/cuda-compatibility/minor-version-compatibility.html.
+**Important**:  If you are using a CUDA driver older than version 580, we recommend that you also install the CUDA compatibility package (cuda-compat) `13.3.1`. See https://docs.nvidia.com/deploy/cuda-compatibility/forward-compatibility.html#deployment-considerations-for-forward-compatibility for compatible drivers. 
+In addition, CUDA 13.x requires a minimum driver version, see https://docs.nvidia.com/deploy/cuda-compatibility/minor-version-compatibility.html.
 
 #### template-Exasol-all-r-4
 

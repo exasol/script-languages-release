@@ -100,8 +100,8 @@
 | 61 | requests                               | ==2.32.4             | ==2.34.2             | UPDATED  | flavor_base_deps |
 | 62 | roman                                  | ==4.2                | ==5.2                | UPDATED  | flavor_base_deps |
 | 63 | sagemaker                              | ==2.218.1            | ==3.18.0             | UPDATED  | flavor_base_deps |
-| 64 | scikit-learn                           | ==1.4.2              | ==1.9.0              | UPDATED  | flavor_base_deps |
-| 65 | scipy                                  | ==1.13.0             | ==1.17.1             | UPDATED  | flavor_base_deps |
+| 64 | scikit-learn                           | ==1.4.2              | ==1.7.2              | UPDATED  | flavor_base_deps |
+| 65 | scipy                                  | ==1.13.0             | ==1.15.3             | UPDATED  | flavor_base_deps |
 | 66 | simplejson                             | ==3.19.2             | ==4.1.1              | UPDATED  | flavor_base_deps |
 | 67 | sqlglot[rs]                            | ==30.13.0            | ==30.15.0            | UPDATED  | flavor_base_deps |
 | 68 | ujson                                  | ==5.9.0              | ==5.13.0             | UPDATED  | flavor_base_deps |

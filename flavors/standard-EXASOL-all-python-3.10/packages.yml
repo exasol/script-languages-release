@@ -247,7 +247,7 @@ build_steps:
         version: ==6.1.1
       - extras: []
         name: scipy
-        version: ==1.17.1
+        version: ==1.15.3
       - extras: []
         name: pyftpdlib
         version: ==2.2.0
@@ -274,7 +274,7 @@ build_steps:
         version: ==4.1.1
       - extras: []
         name: scikit-learn
-        version: ==1.9.0
+        version: ==1.7.2
       - extras: []
         name: plyvel
         version: ==1.5.1

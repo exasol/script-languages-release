@@ -1,10 +1,6 @@
 # Package Version Comparison between 12.0.0 and 11.3.0
 
 
-## Standard Exasol All
-- [Release dependencies](standard-EXASOL-all/public_packages.md)
-- [Build dependencies](standard-EXASOL-all/internal_packages.md)
-    
 ## Standard Exasol All Java 11
 - [Release dependencies](standard-EXASOL-all-java-11/public_packages.md)
 - [Build dependencies](standard-EXASOL-all-java-11/internal_packages.md)

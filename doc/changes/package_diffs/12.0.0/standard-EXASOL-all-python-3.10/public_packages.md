@@ -57,7 +57,7 @@
 | 18 | bitsets                                | ==0.8.4              | ==0.9.1              | UPDATED  | flavor_base_deps |
 | 19 | boto3                                  | ==1.34.98            | ==1.43.68            | UPDATED  | flavor_base_deps |
 | 20 | cffi                                   | ==1.16.0             | ==2.1.1              | UPDATED  | flavor_base_deps |
-| 21 | cryptography                           | ==45.0.7             | ==49.0.0             | UPDATED  | flavor_base_deps |
+| 21 | cryptography                           | ==45.0.7             | ==50.0.0             | UPDATED  | flavor_base_deps |
 | 22 | cython                                 | ==3.0.10             | ==3.2.9              | UPDATED  | flavor_base_deps |
 | 23 | debugpy                                | ==1.8.1              | ==1.8.21             | UPDATED  | flavor_base_deps |
 | 24 | docutils                               | ==0.21.2             | ==0.23               | UPDATED  | flavor_base_deps |
@@ -100,15 +100,15 @@
 | 61 | redis                                  | ==5.0.4              | ==7.4.1              | UPDATED  | flavor_base_deps |
 | 62 | requests                               | ==2.32.4             | ==2.34.2             | UPDATED  | flavor_base_deps |
 | 63 | roman                                  | ==4.2                | ==5.2                | UPDATED  | flavor_base_deps |
-| 64 | sagemaker                              | ==2.218.1            | ==3.19.0             | UPDATED  | flavor_base_deps |
-| 65 | scikit-learn                           | ==1.4.2              | ==1.7.2              | UPDATED  | flavor_base_deps |
-| 66 | scipy                                  | ==1.13.0             | ==1.15.3             | UPDATED  | flavor_base_deps |
-| 67 | simplejson                             | ==3.19.2             | ==4.1.1              | UPDATED  | flavor_base_deps |
-| 68 | sqlglot[rs]                            | ==30.13.0            | ==30.16.0            | UPDATED  | flavor_base_deps |
-| 69 | ujson                                  | ==5.9.0              | ==5.13.0             | UPDATED  | flavor_base_deps |
-| 70 | numpy                                  | ==1.26.4             | ==2.2.6              | UPDATED  | language_deps    |
-| 71 | pandas                                 | ==2.2.3              | ==2.3.3              | UPDATED  | language_deps    |
-| 72 | pyarrow                                | ==16.0.0             | ==25.0.1             | UPDATED  | language_deps    |
+| 64 | scikit-learn                           | ==1.4.2              | ==1.7.2              | UPDATED  | flavor_base_deps |
+| 65 | scipy                                  | ==1.13.0             | ==1.15.3             | UPDATED  | flavor_base_deps |
+| 66 | simplejson                             | ==3.19.2             | ==4.1.1              | UPDATED  | flavor_base_deps |
+| 67 | sqlglot[rs]                            | ==30.13.0            | ==30.16.0            | UPDATED  | flavor_base_deps |
+| 68 | ujson                                  | ==5.9.0              | ==5.13.0             | UPDATED  | flavor_base_deps |
+| 69 | numpy                                  | ==1.26.4             | ==2.2.6              | UPDATED  | language_deps    |
+| 70 | pandas                                 | ==2.2.3              | ==2.3.3              | UPDATED  | language_deps    |
+| 71 | pyarrow                                | ==16.0.0             | ==25.0.1             | UPDATED  | language_deps    |
+| 72 | sagemaker                              | ==2.218.1            |                      | REMOVED  | flavor_base_deps |
 | 73 | azure-keyvault                         | ==4.2.0              | ==4.2.0              |          | flavor_base_deps |
 | 74 | azure-loganalytics                     | ==0.1.1              | ==0.1.1              |          | flavor_base_deps |
 | 75 | exasol-db-api                          | No version specified | No version specified |          | flavor_base_deps |

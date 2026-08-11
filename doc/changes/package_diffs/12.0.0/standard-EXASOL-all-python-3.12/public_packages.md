@@ -55,7 +55,7 @@
 | 16 | bitsets                                | ==0.8.4              | ==0.9.1              | UPDATED  | flavor_base_deps |
 | 17 | boto3                                  | ==1.40.37            | ==1.43.68            | UPDATED  | flavor_base_deps |
 | 18 | cffi                                   | ==2.0.0              | ==2.1.1              | UPDATED  | flavor_base_deps |
-| 19 | cryptography                           | ==46.0.1             | ==49.0.0             | UPDATED  | flavor_base_deps |
+| 19 | cryptography                           | ==46.0.1             | ==50.0.0             | UPDATED  | flavor_base_deps |
 | 20 | cython                                 | ==3.1.4              | ==3.2.9              | UPDATED  | flavor_base_deps |
 | 21 | debugpy                                | ==1.8.17             | ==1.8.21             | UPDATED  | flavor_base_deps |
 | 22 | docutils                               | ==0.22.2             | ==0.23               | UPDATED  | flavor_base_deps |
@@ -94,15 +94,15 @@
 | 55 | redis                                  | ==6.4.0              | ==7.4.1              | UPDATED  | flavor_base_deps |
 | 56 | requests                               | ==2.32.5             | ==2.34.2             | UPDATED  | flavor_base_deps |
 | 57 | roman                                  | ==5.1                | ==5.2                | UPDATED  | flavor_base_deps |
-| 58 | sagemaker                              | ==2.251.1            | ==3.19.0             | UPDATED  | flavor_base_deps |
-| 59 | scikit-learn                           | ==1.7.2              | ==1.9.0              | UPDATED  | flavor_base_deps |
-| 60 | scipy                                  | ==1.16.2             | ==1.18.0             | UPDATED  | flavor_base_deps |
-| 61 | simplejson                             | ==3.20.1             | ==4.1.1              | UPDATED  | flavor_base_deps |
-| 62 | sqlglot[rs]                            | ==30.13.0            | ==30.16.0            | UPDATED  | flavor_base_deps |
-| 63 | ujson                                  | ==5.11.0             | ==5.13.0             | UPDATED  | flavor_base_deps |
-| 64 | numpy                                  | ==1.26.4             | ==2.4.6              | UPDATED  | language_deps    |
-| 65 | pandas                                 | ==2.3.2              | ==2.3.3              | UPDATED  | language_deps    |
-| 66 | pyarrow                                | ==21.0.0             | ==25.0.1             | UPDATED  | language_deps    |
+| 58 | scikit-learn                           | ==1.7.2              | ==1.9.0              | UPDATED  | flavor_base_deps |
+| 59 | scipy                                  | ==1.16.2             | ==1.18.0             | UPDATED  | flavor_base_deps |
+| 60 | simplejson                             | ==3.20.1             | ==4.1.1              | UPDATED  | flavor_base_deps |
+| 61 | sqlglot[rs]                            | ==30.13.0            | ==30.16.0            | UPDATED  | flavor_base_deps |
+| 62 | ujson                                  | ==5.11.0             | ==5.13.0             | UPDATED  | flavor_base_deps |
+| 63 | numpy                                  | ==1.26.4             | ==2.4.6              | UPDATED  | language_deps    |
+| 64 | pandas                                 | ==2.3.2              | ==2.3.3              | UPDATED  | language_deps    |
+| 65 | pyarrow                                | ==21.0.0             | ==25.0.1             | UPDATED  | language_deps    |
+| 66 | sagemaker                              | ==2.251.1            |                      | REMOVED  | flavor_base_deps |
 | 67 | azure-eventhub-checkpointstoreblob     | ==1.2.0              | ==1.2.0              |          | flavor_base_deps |
 | 68 | azure-eventhub-checkpointstoreblob-aio | ==1.2.0              | ==1.2.0              |          | flavor_base_deps |
 | 69 | azure-keyvault                         | ==4.2.0              | ==4.2.0              |          | flavor_base_deps |

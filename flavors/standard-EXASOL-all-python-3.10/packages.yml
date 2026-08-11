@@ -226,9 +226,6 @@ build_steps:
         name: pytz
         version: '==2026.3.post1'
       - extras: []
-        name: sagemaker
-        version: ==3.19.0
-      - extras: []
         name: pycurl
         version: ==7.47.0
       - extras: []
@@ -317,7 +314,7 @@ build_steps:
         version: ==1.0.25.1
       - extras: []
         name: cryptography
-        version: ==49.0.0
+        version: ==50.0.0
       - extras: []
         name: h2
         version: ==4.4.1

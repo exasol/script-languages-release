@@ -58,10 +58,10 @@ build_steps:
         version: ==2.3.3
       - extras: []
         name: numpy
-        version: ==1.26.4
+        version: ==2.2.6
       - extras: []
         name: pyarrow
-        version: ==25.0.0
+        version: ==25.0.1
   validation_cfg:
     version_mandatory: true
 - name: flavor_base_deps
@@ -161,7 +161,7 @@ build_steps:
         version: ==0.36.1
       - extras: []
         name: boto3
-        version: ==1.43.67
+        version: ==1.43.68
       - extras: []
         name: google-cloud-asset
         version: ==4.4.0
@@ -212,10 +212,8 @@ build_steps:
         version: ==1.20.0
       - extras: []
         name: martian
-        version: ==2.1
-      - comment: Need to pin to older version - because google-cloud-asset has dependency
-          to <5.0.0dev
-        extras: []
+        version: '==2.1'
+      - extras: []
         name: protobuf
         version: ==6.33.6
       - extras: []
@@ -229,7 +227,7 @@ build_steps:
         version: '==2026.3.post1'
       - extras: []
         name: sagemaker
-        version: ==3.18.0
+        version: ==3.19.0
       - extras: []
         name: pycurl
         version: ==7.47.0
@@ -280,7 +278,7 @@ build_steps:
         version: ==1.5.1
       - extras: []
         name: python-ldap
-        version: ==3.4.4
+        version: ==3.4.7
       - extras: []
         name: pyOpenSSL
         version: ==26.4.0
@@ -319,7 +317,7 @@ build_steps:
         version: ==1.0.25.1
       - extras: []
         name: cryptography
-        version: ==50.0.0
+        version: ==49.0.0
       - extras: []
         name: h2
         version: ==4.4.1
@@ -331,7 +329,7 @@ build_steps:
         version: ==4.1.0
       - extras: []
         name: sqlglot[rs]
-        version: ==30.15.0
+        version: ==30.16.0
   validation_cfg:
     version_mandatory: false
 version: 1.0.0

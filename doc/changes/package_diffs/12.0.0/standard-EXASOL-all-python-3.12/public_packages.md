@@ -53,9 +53,9 @@
 | 14 | azure-storage-queue                    | ==12.13.0            | ==12.17.0            | UPDATED  | flavor_base_deps |
 | 15 | bitarray                               | ==3.7.1              | ==3.10.1             | UPDATED  | flavor_base_deps |
 | 16 | bitsets                                | ==0.8.4              | ==0.9.1              | UPDATED  | flavor_base_deps |
-| 17 | boto3                                  | ==1.40.37            | ==1.43.67            | UPDATED  | flavor_base_deps |
+| 17 | boto3                                  | ==1.40.37            | ==1.43.68            | UPDATED  | flavor_base_deps |
 | 18 | cffi                                   | ==2.0.0              | ==2.1.1              | UPDATED  | flavor_base_deps |
-| 19 | cryptography                           | ==46.0.1             | ==50.0.0             | UPDATED  | flavor_base_deps |
+| 19 | cryptography                           | ==46.0.1             | ==49.0.0             | UPDATED  | flavor_base_deps |
 | 20 | cython                                 | ==3.1.4              | ==3.2.9              | UPDATED  | flavor_base_deps |
 | 21 | debugpy                                | ==1.8.17             | ==1.8.21             | UPDATED  | flavor_base_deps |
 | 22 | docutils                               | ==0.22.2             | ==0.23               | UPDATED  | flavor_base_deps |
@@ -88,30 +88,30 @@
 | 49 | pyexasol                               | ==2.2.2              | ==2.3.1              | UPDATED  | flavor_base_deps |
 | 50 | pyftpdlib                              | ==2.0.1              | ==2.2.0              | UPDATED  | flavor_base_deps |
 | 51 | pyodbc                                 | ==5.2.0              | ==5.3.0              | UPDATED  | flavor_base_deps |
-| 52 | pytz                                   | ==2025.2             | ==2026.3.post1       | UPDATED  | flavor_base_deps |
-| 53 | pyyaml                                 | ==6.0.2              | ==6.0.3              | UPDATED  | flavor_base_deps |
-| 54 | redis                                  | ==6.4.0              | ==7.4.1              | UPDATED  | flavor_base_deps |
-| 55 | requests                               | ==2.32.5             | ==2.34.2             | UPDATED  | flavor_base_deps |
-| 56 | roman                                  | ==5.1                | ==5.2                | UPDATED  | flavor_base_deps |
-| 57 | sagemaker                              | ==2.251.1            | ==3.18.0             | UPDATED  | flavor_base_deps |
-| 58 | scikit-learn                           | ==1.7.2              | ==1.9.0              | UPDATED  | flavor_base_deps |
-| 59 | scipy                                  | ==1.16.2             | ==1.17.1             | UPDATED  | flavor_base_deps |
-| 60 | simplejson                             | ==3.20.1             | ==4.1.1              | UPDATED  | flavor_base_deps |
-| 61 | sqlglot[rs]                            | ==30.13.0            | ==30.15.0            | UPDATED  | flavor_base_deps |
-| 62 | ujson                                  | ==5.11.0             | ==5.13.0             | UPDATED  | flavor_base_deps |
-| 63 | pandas                                 | ==2.3.2              | ==2.3.3              | UPDATED  | language_deps    |
-| 64 | pyarrow                                | ==21.0.0             | ==25.0.0             | UPDATED  | language_deps    |
-| 65 | azure-eventhub-checkpointstoreblob     | ==1.2.0              | ==1.2.0              |          | flavor_base_deps |
-| 66 | azure-eventhub-checkpointstoreblob-aio | ==1.2.0              | ==1.2.0              |          | flavor_base_deps |
-| 67 | azure-keyvault                         | ==4.2.0              | ==4.2.0              |          | flavor_base_deps |
-| 68 | azure-loganalytics                     | ==0.1.1              | ==0.1.1              |          | flavor_base_deps |
-| 69 | exasol-db-api                          | No version specified | No version specified |          | flavor_base_deps |
-| 70 | jinja2                                 | ==3.1.6              | ==3.1.6              |          | flavor_base_deps |
-| 71 | martian                                | ==2.1                | ==2.1                |          | flavor_base_deps |
-| 72 | plyvel                                 | ==1.5.1              | ==1.5.1              |          | flavor_base_deps |
-| 73 | pybloomfiltermmap3                     | ==0.6.3              | ==0.6.3              |          | flavor_base_deps |
-| 74 | pysftp                                 | ==0.2.9              | ==0.2.9              |          | flavor_base_deps |
-| 75 | pysimdjson                             | ==7.0.2              | ==7.0.2              |          | flavor_base_deps |
-| 76 | pysmbc                                 | ==1.0.25.1           | ==1.0.25.1           |          | flavor_base_deps |
-| 77 | python-ldap                            | ==3.4.4              | ==3.4.4              |          | flavor_base_deps |
-| 78 | numpy                                  | ==1.26.4             | ==1.26.4             |          | language_deps    |
+| 52 | python-ldap                            | ==3.4.4              | ==3.4.7              | UPDATED  | flavor_base_deps |
+| 53 | pytz                                   | ==2025.2             | ==2026.3.post1       | UPDATED  | flavor_base_deps |
+| 54 | pyyaml                                 | ==6.0.2              | ==6.0.3              | UPDATED  | flavor_base_deps |
+| 55 | redis                                  | ==6.4.0              | ==7.4.1              | UPDATED  | flavor_base_deps |
+| 56 | requests                               | ==2.32.5             | ==2.34.2             | UPDATED  | flavor_base_deps |
+| 57 | roman                                  | ==5.1                | ==5.2                | UPDATED  | flavor_base_deps |
+| 58 | sagemaker                              | ==2.251.1            | ==3.19.0             | UPDATED  | flavor_base_deps |
+| 59 | scikit-learn                           | ==1.7.2              | ==1.9.0              | UPDATED  | flavor_base_deps |
+| 60 | scipy                                  | ==1.16.2             | ==1.18.0             | UPDATED  | flavor_base_deps |
+| 61 | simplejson                             | ==3.20.1             | ==4.1.1              | UPDATED  | flavor_base_deps |
+| 62 | sqlglot[rs]                            | ==30.13.0            | ==30.16.0            | UPDATED  | flavor_base_deps |
+| 63 | ujson                                  | ==5.11.0             | ==5.13.0             | UPDATED  | flavor_base_deps |
+| 64 | numpy                                  | ==1.26.4             | ==2.4.6              | UPDATED  | language_deps    |
+| 65 | pandas                                 | ==2.3.2              | ==2.3.3              | UPDATED  | language_deps    |
+| 66 | pyarrow                                | ==21.0.0             | ==25.0.1             | UPDATED  | language_deps    |
+| 67 | azure-eventhub-checkpointstoreblob     | ==1.2.0              | ==1.2.0              |          | flavor_base_deps |
+| 68 | azure-eventhub-checkpointstoreblob-aio | ==1.2.0              | ==1.2.0              |          | flavor_base_deps |
+| 69 | azure-keyvault                         | ==4.2.0              | ==4.2.0              |          | flavor_base_deps |
+| 70 | azure-loganalytics                     | ==0.1.1              | ==0.1.1              |          | flavor_base_deps |
+| 71 | exasol-db-api                          | No version specified | No version specified |          | flavor_base_deps |
+| 72 | jinja2                                 | ==3.1.6              | ==3.1.6              |          | flavor_base_deps |
+| 73 | martian                                | ==2.1                | ==2.1                |          | flavor_base_deps |
+| 74 | plyvel                                 | ==1.5.1              | ==1.5.1              |          | flavor_base_deps |
+| 75 | pybloomfiltermmap3                     | ==0.6.3              | ==0.6.3              |          | flavor_base_deps |
+| 76 | pysftp                                 | ==0.2.9              | ==0.2.9              |          | flavor_base_deps |
+| 77 | pysimdjson                             | ==7.0.2              | ==7.0.2              |          | flavor_base_deps |
+| 78 | pysmbc                                 | ==1.0.25.1           | ==1.0.25.1           |          | flavor_base_deps |

@@ -16,7 +16,7 @@ The CUDA Conda template flavors have been updated to support CUDA toolkit versio
 
 ## Script-Language-Container-Tool (Exaslct)
 
-This release uses version 4.2.0 of the container tool.
+This release uses version 4.2.1 of the container tool.
 
 
 ## Features
@@ -33,7 +33,7 @@ n/a
 
 ## Dependencies
 
-n/a
+ - #1518: Updated tar to version 1.35+dfsg-3ubuntu*
 
 ## Bugfixes
 

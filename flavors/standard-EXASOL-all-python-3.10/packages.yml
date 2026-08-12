@@ -220,9 +220,6 @@ build_steps:
         name: pyexasol
         version: ==2.3.1
       - extras: []
-        name: pysftp
-        version: ==0.2.9
-      - extras: []
         name: pytz
         version: '==2026.3.post1'
       - extras: []

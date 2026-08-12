@@ -108,10 +108,10 @@
 | 69 | numpy                                  | ==1.26.4             | ==2.2.6              | UPDATED  | language_deps    |
 | 70 | pandas                                 | ==2.2.3              | ==2.3.3              | UPDATED  | language_deps    |
 | 71 | pyarrow                                | ==16.0.0             | ==25.0.1             | UPDATED  | language_deps    |
-| 72 | sagemaker                              | ==2.218.1            |                      | REMOVED  | flavor_base_deps |
-| 73 | azure-keyvault                         | ==4.2.0              | ==4.2.0              |          | flavor_base_deps |
-| 74 | azure-loganalytics                     | ==0.1.1              | ==0.1.1              |          | flavor_base_deps |
-| 75 | exasol-db-api                          | No version specified | No version specified |          | flavor_base_deps |
-| 76 | plyvel                                 | ==1.5.1              | ==1.5.1              |          | flavor_base_deps |
-| 77 | pysftp                                 | ==0.2.9              | ==0.2.9              |          | flavor_base_deps |
+| 72 | pysftp                                 | ==0.2.9              |                      | REMOVED  | flavor_base_deps |
+| 73 | sagemaker                              | ==2.218.1            |                      | REMOVED  | flavor_base_deps |
+| 74 | azure-keyvault                         | ==4.2.0              | ==4.2.0              |          | flavor_base_deps |
+| 75 | azure-loganalytics                     | ==0.1.1              | ==0.1.1              |          | flavor_base_deps |
+| 76 | exasol-db-api                          | No version specified | No version specified |          | flavor_base_deps |
+| 77 | plyvel                                 | ==1.5.1              | ==1.5.1              |          | flavor_base_deps |
 | 78 | pysmbc                                 | ==1.0.25.1           | ==1.0.25.1           |          | flavor_base_deps |

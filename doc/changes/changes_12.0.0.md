@@ -4,7 +4,9 @@ Code name: t.b.d.
 
 ## Summary
 
-Removed "standard-EXASOL-all" flavor. The SageMaker Python SDK was removed from the Standard Python flavors.
+Removed "standard-EXASOL-all" flavor.
+The SageMaker Python SDK and pysftp have been removed from the Standard Python flavors.
+
 
 <!-- markdown-link-check-disable -->
 ## [Package Version Comparison between Release 12.0.0 and 11.3.0](https://github.com/exasol/script-languages-release/blob/master/doc/changes/package_diffs/12.0.0/README.md)

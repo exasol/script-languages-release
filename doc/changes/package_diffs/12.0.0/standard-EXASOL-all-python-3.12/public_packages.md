@@ -102,16 +102,16 @@
 | 63 | numpy                                  | ==1.26.4             | ==2.4.6              | UPDATED  | language_deps    |
 | 64 | pandas                                 | ==2.3.2              | ==2.3.3              | UPDATED  | language_deps    |
 | 65 | pyarrow                                | ==21.0.0             | ==25.0.1             | UPDATED  | language_deps    |
-| 66 | sagemaker                              | ==2.251.1            |                      | REMOVED  | flavor_base_deps |
-| 67 | azure-eventhub-checkpointstoreblob     | ==1.2.0              | ==1.2.0              |          | flavor_base_deps |
-| 68 | azure-eventhub-checkpointstoreblob-aio | ==1.2.0              | ==1.2.0              |          | flavor_base_deps |
-| 69 | azure-keyvault                         | ==4.2.0              | ==4.2.0              |          | flavor_base_deps |
-| 70 | azure-loganalytics                     | ==0.1.1              | ==0.1.1              |          | flavor_base_deps |
-| 71 | exasol-db-api                          | No version specified | No version specified |          | flavor_base_deps |
-| 72 | jinja2                                 | ==3.1.6              | ==3.1.6              |          | flavor_base_deps |
-| 73 | martian                                | ==2.1                | ==2.1                |          | flavor_base_deps |
-| 74 | plyvel                                 | ==1.5.1              | ==1.5.1              |          | flavor_base_deps |
-| 75 | pybloomfiltermmap3                     | ==0.6.3              | ==0.6.3              |          | flavor_base_deps |
-| 76 | pysftp                                 | ==0.2.9              | ==0.2.9              |          | flavor_base_deps |
+| 66 | pysftp                                 | ==0.2.9              |                      | REMOVED  | flavor_base_deps |
+| 67 | sagemaker                              | ==2.251.1            |                      | REMOVED  | flavor_base_deps |
+| 68 | azure-eventhub-checkpointstoreblob     | ==1.2.0              | ==1.2.0              |          | flavor_base_deps |
+| 69 | azure-eventhub-checkpointstoreblob-aio | ==1.2.0              | ==1.2.0              |          | flavor_base_deps |
+| 70 | azure-keyvault                         | ==4.2.0              | ==4.2.0              |          | flavor_base_deps |
+| 71 | azure-loganalytics                     | ==0.1.1              | ==0.1.1              |          | flavor_base_deps |
+| 72 | exasol-db-api                          | No version specified | No version specified |          | flavor_base_deps |
+| 73 | jinja2                                 | ==3.1.6              | ==3.1.6              |          | flavor_base_deps |
+| 74 | martian                                | ==2.1                | ==2.1                |          | flavor_base_deps |
+| 75 | plyvel                                 | ==1.5.1              | ==1.5.1              |          | flavor_base_deps |
+| 76 | pybloomfiltermmap3                     | ==0.6.3              | ==0.6.3              |          | flavor_base_deps |
 | 77 | pysimdjson                             | ==7.0.2              | ==7.0.2              |          | flavor_base_deps |
 | 78 | pysmbc                                 | ==1.0.25.1           | ==1.0.25.1           |          | flavor_base_deps |

@@ -1,6 +1,8 @@
 module(name="exaudfclient_ext", version = "1.0")
 
 bazel_dep(name = "exaudfclient_base", version = "1.0.0")
+bazel_dep(name = "rules_cc", version = "0.2.22")
+bazel_dep(name = "rules_shell", version = "0.8.0")
 local_path_override(module_name="exaudfclient_base", path="base")
 
 new_local_repository = use_repo_rule("@bazel_tools//tools/build_defs/repo:local.bzl", "new_local_repository")
@@ -15,6 +17,8 @@ new_local_repository(
     name = "R_linux",
     path = "/usr",
     build_file_content = """
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
 cc_library(
     name = "r-lib",
     srcs = glob(["lib/R/lib/libR.so"]),

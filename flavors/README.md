@@ -15,20 +15,6 @@ From the standard-EXASOL flavors, we built the built-in containers which we deli
 They provide the languages Java, Python 3 and R.
 Each of them installs a set of typical packages for the particular language.
 
-#### standard-EXASOL-all
-
-We provide one flavor, which includes all supported languages and can be used in all currently active Exasol versions.
-It is used as built-in container for Exasol versions before the 2025.1 release.
-
-- standard-EXASOL-all
-  - Base Image: ubuntu:22.04
-  - Compatible Exasol Versions: 
-    - 2025.x
-    - 8.\* 
-    - 7.1.\* 
-  - Available languages: Java 11, Python 3.10 and R 4.4
-  - [Here](standard-EXASOL-all/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
-
 #### standard-EXASOL-all-java-11
 
 This flavor supports the Java 11 language and can be used in all currently active Exasol versions.
@@ -36,7 +22,8 @@ It is used as built-in container in Exasol version 2025.1.
 
 - standard-EXASOL-all-java-11
   - Base Image: ubuntu:22.04
-  - Compatible Exasol Versions: 
+  - Compatible Exasol Versions:
+    - 2026.x
     - 2025.x
     - 8.\* 
     - 7.1.\* 
@@ -51,7 +38,8 @@ It is used as built-in container in Exasol version 2025.1 and later.
 
 - standard-EXASOL-all-java-17
   - Base Image: ubuntu:22.04
-  - Compatible Exasol Versions: 
+  - Compatible Exasol Versions:
+    - 2026.x
     - 2025.x
     - 8.\* 
     - 7.1.\* 
@@ -66,7 +54,8 @@ It is used as built-in container in Exasol version 2025.1.
 
 - standard-EXASOL-all-python-3.10
   - Base Image: ubuntu:22.04
-  - Compatible Exasol Versions: 
+  - Compatible Exasol Versions:
+    - 2026.x
     - 2025.x
     - 8.\* 
     - 7.1.\* 
@@ -80,7 +69,8 @@ It is used as built-in container in Exasol version 2025.1 and later.
 
 - standard-EXASOL-all-python-3.12
   - Base Image: ubuntu:24.04
-  - Compatible Exasol Versions: 
+  - Compatible Exasol Versions:
+    - 2026.x
     - 2025.x
     - 8.\* 
     - 7.1.\* 
@@ -94,7 +84,8 @@ It is used as built-in container in Exasol version 2025.1 and later.
 
 - standard-EXASOL-all-r-4.4
   - Base Image: ubuntu:22.04
-  - Compatible Exasol Versions: 
+  - Compatible Exasol Versions:
+    - 2026.x
     - 2025.x
     - 8.\* 
     - 7.1.\* 
@@ -112,6 +103,7 @@ The template-Exasol-all-python-3.10 flavor provides language Python 3.10 with on
 - template-Exasol-all-python-3.10
   - Base Image: ubuntu:22.04
   - Compatible Exasol Versions:
+    - 2026.x
     - 2025.x
     - 8.\* 
     - 7.1.\* 
@@ -125,6 +117,7 @@ The template-Exasol-all-python-3.10-conda flavor provides the language Python 3.
 - template-Exasol-all-python-3.10-conda
   - Base Image: ubuntu:22.04
   - Compatible Exasol Versions:
+    - 2026.x
     - 2025.x
     - 8.\* 
     - 7.1.\* 
@@ -142,11 +135,11 @@ The template-Exasol-8-python-3.10-cuda-conda flavor provides the language Python
   - Available languages: Python 3.10
   - Supported Package Manager: conda, pip
   - Without NVIDIA Driver
-  - Installed CudaToolkit: 12.9.1
+  - Installed CudaToolkit: 13.3.1
   - [Here](template-Exasol-8-python-3.10-cuda-conda/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-**Important**: If you are using a CUDA driver older than version 575, we recommend that you also install the CUDA compatibility package (cuda-compat) `12.9.1`. See https://docs.nvidia.com/deploy/cuda-compatibility/forward-compatibility.html#deployment-considerations-for-forward-compatibility for compatible drivers. 
-In addition,CUDA 12.x requires a minimum driver version, see https://docs.nvidia.com/deploy/cuda-compatibility/minor-version-compatibility.html.
+**Important**: If you are using a CUDA driver older than version 580, we recommend that you also install the CUDA compatibility package (cuda-compat) `13.3.1`. See https://docs.nvidia.com/deploy/cuda-compatibility/forward-compatibility.html#deployment-considerations-for-forward-compatibility for compatible drivers. 
+In addition, CUDA 13.x requires a minimum driver version, see https://docs.nvidia.com/deploy/cuda-compatibility/minor-version-compatibility.html.
 
 #### template-Exasol-all-python-3.12-conda
 
@@ -169,11 +162,11 @@ The template-Exasol-8-python-3.12-cuda-conda flavor provides the language Python
   - Available languages: Python 3.12
   - Supported Package Manager: conda, pip
   - Without NVIDIA Driver
-  - Installed CudaToolkit: 12.9.1
+  - Installed CudaToolkit: 13.3.1
   - [Here](template-Exasol-8-python-3.12-cuda-conda/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-**Important**:  If you are using a CUDA driver older than version 575, we recommend that you also install the CUDA compatibility package (cuda-compat) `12.9.1`. See https://docs.nvidia.com/deploy/cuda-compatibility/forward-compatibility.html#deployment-considerations-for-forward-compatibility for compatible drivers. 
-In addition,CUDA 12.x requires a minimum driver version, see https://docs.nvidia.com/deploy/cuda-compatibility/minor-version-compatibility.html.
+**Important**:  If you are using a CUDA driver older than version 580, we recommend that you also install the CUDA compatibility package (cuda-compat) `13.3.1`. See https://docs.nvidia.com/deploy/cuda-compatibility/forward-compatibility.html#deployment-considerations-for-forward-compatibility for compatible drivers. 
+In addition, CUDA 13.x requires a minimum driver version, see https://docs.nvidia.com/deploy/cuda-compatibility/minor-version-compatibility.html.
 
 #### template-Exasol-all-r-4
 
@@ -182,6 +175,7 @@ The R-4-minimal flavor provides the language R 4.4 with only absolute necessary 
 - template-Exasol-all-r-4
   - Base Image: ubuntu:22.04
   - Compatible Exasol Versions:
+    - 2026.x
     - 2025.x
     - 8.\* 
     - 7.1.\* 

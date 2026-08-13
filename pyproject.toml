@@ -1,6 +1,6 @@
 [project]
 name = "exasol-script-languages-release"
-version = "11.3.0"
+version = "12.0.0"
 description = "Script Languages Release"
 
 requires-python = ">=3.10, <3.14"

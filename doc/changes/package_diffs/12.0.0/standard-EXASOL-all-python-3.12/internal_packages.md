@@ -4,22 +4,23 @@
 
 ## Apt packages
 
-|    | Package           | Version in 11.3.0         | Version in 12.0.0         | Status   | Build-Step     |
-|---:|:------------------|:--------------------------|:--------------------------|:---------|:---------------|
-|  0 | tar               | 1.35+dfsg-3build1         | 1.35+dfsg-3ubuntu*        | UPDATED  | build_deps     |
-|  1 | binutils          | 2.42-4ubuntu*             | 2.42-4ubuntu*             |          | base_test_deps |
-|  2 | gdb               | 15.0.50.20240403-0ubuntu* | 15.0.50.20240403-0ubuntu* |          | base_test_deps |
-|  3 | gdbserver         | 15.0.50.20240403-0ubuntu* | 15.0.50.20240403-0ubuntu* |          | base_test_deps |
-|  4 | patchelf          | 0.18.0-1.1build1          | 0.18.0-1.1build1          |          | base_test_deps |
-|  5 | strace            | 6.8-0ubuntu*              | 6.8-0ubuntu*              |          | base_test_deps |
-|  6 | valgrind          | 1:3.22.0-0ubuntu*         | 1:3.22.0-0ubuntu*         |          | base_test_deps |
-|  7 | build-essential   | 12.10ubuntu*              | 12.10ubuntu*              |          | build_deps     |
-|  8 | chrpath           | 0.16-2build1              | 0.16-2build1              |          | build_deps     |
-|  9 | coreutils         | 9.4-3ubuntu*              | 9.4-3ubuntu*              |          | build_deps     |
-| 10 | curl              | 8.5.0-2ubuntu*            | 8.5.0-2ubuntu*            |          | build_deps     |
-| 11 | libpcre3-dev      | 2:8.39-15build1           | 2:8.39-15build1           |          | build_deps     |
-| 12 | locales           | 2.39-0ubuntu*             | 2.39-0ubuntu*             |          | build_deps     |
-| 13 | openjdk-17-jdk    | 17.0.19+10-1~24.04.2      | 17.0.19+10-1~24.04.2      |          | build_deps     |
-| 14 | protobuf-compiler | 3.21.12-8.2ubuntu*        | 3.21.12-8.2ubuntu*        |          | build_deps     |
-| 15 | gnupg             | No version specified      | No version specified      |          | security_scan  |
-| 16 | trivy             | No version specified      | No version specified      |          | security_scan  |
+|    | Package                 | Version in 11.3.0         | Version in 12.0.0         | Status   | Build-Step     |
+|---:|:------------------------|:--------------------------|:--------------------------|:---------|:---------------|
+|  0 | tar                     | 1.35+dfsg-3build1         | 1.35+dfsg-3ubuntu*        | UPDATED  | build_deps     |
+|  1 | openjdk-17-jdk          | 17.0.19+10-1~24.04.2      |                           | REMOVED  | build_deps     |
+|  2 | openjdk-17-jdk-headless |                           | 17.0.20+8-1~24.04         | NEW      | build_deps     |
+|  3 | binutils                | 2.42-4ubuntu*             | 2.42-4ubuntu*             |          | base_test_deps |
+|  4 | gdb                     | 15.0.50.20240403-0ubuntu* | 15.0.50.20240403-0ubuntu* |          | base_test_deps |
+|  5 | gdbserver               | 15.0.50.20240403-0ubuntu* | 15.0.50.20240403-0ubuntu* |          | base_test_deps |
+|  6 | patchelf                | 0.18.0-1.1build1          | 0.18.0-1.1build1          |          | base_test_deps |
+|  7 | strace                  | 6.8-0ubuntu*              | 6.8-0ubuntu*              |          | base_test_deps |
+|  8 | valgrind                | 1:3.22.0-0ubuntu*         | 1:3.22.0-0ubuntu*         |          | base_test_deps |
+|  9 | build-essential         | 12.10ubuntu*              | 12.10ubuntu*              |          | build_deps     |
+| 10 | chrpath                 | 0.16-2build1              | 0.16-2build1              |          | build_deps     |
+| 11 | coreutils               | 9.4-3ubuntu*              | 9.4-3ubuntu*              |          | build_deps     |
+| 12 | curl                    | 8.5.0-2ubuntu*            | 8.5.0-2ubuntu*            |          | build_deps     |
+| 13 | libpcre3-dev            | 2:8.39-15build1           | 2:8.39-15build1           |          | build_deps     |
+| 14 | locales                 | 2.39-0ubuntu*             | 2.39-0ubuntu*             |          | build_deps     |
+| 15 | protobuf-compiler       | 3.21.12-8.2ubuntu*        | 3.21.12-8.2ubuntu*        |          | build_deps     |
+| 16 | gnupg                   | No version specified      | No version specified      |          | security_scan  |
+| 17 | trivy                   | No version specified      | No version specified      |          | security_scan  |

@@ -34,6 +34,7 @@ n/a
 ## Dependencies
 
  - #1518: Updated tar to version 1.35+dfsg-3ubuntu*
+ - #1520: Updated openjdk-11-jdk-headless and openjdk-17-jdk-headless
 
 ## Bugfixes
 

@@ -8,7 +8,7 @@
 |---:|:------------------------|:--------------------------|:--------------------------|:---------|:---------------|
 |  0 | tar                     | 1.35+dfsg-3build1         | 1.35+dfsg-3ubuntu*        | UPDATED  | build_deps     |
 |  1 | openjdk-17-jdk          | 17.0.19+10-1~24.04.2      |                           | REMOVED  | build_deps     |
-|  2 | openjdk-17-jdk-headless |                           | 17.0.20+8-1~24.04         | NEW      | build_deps     |
+|  2 | openjdk-17-jdk-headless |                           | 17.0.20.1+1-1~24.04       | NEW      | build_deps     |
 |  3 | binutils                | 2.42-4ubuntu*             | 2.42-4ubuntu*             |          | base_test_deps |
 |  4 | gdb                     | 15.0.50.20240403-0ubuntu* | 15.0.50.20240403-0ubuntu* |          | base_test_deps |
 |  5 | gdbserver               | 15.0.50.20240403-0ubuntu* | 15.0.50.20240403-0ubuntu* |          | base_test_deps |

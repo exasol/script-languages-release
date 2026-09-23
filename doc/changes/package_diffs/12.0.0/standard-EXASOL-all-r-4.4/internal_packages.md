@@ -6,7 +6,7 @@
 
 |    | Package                 | Version in 11.3.0    | Version in 12.0.0    | Status   | Build-Step     |
 |---:|:------------------------|:---------------------|:---------------------|:---------|:---------------|
-|  0 | openjdk-11-jdk-headless | 11.0.31+11-1ubuntu*  | 11.0.32+9-1ubuntu*   | UPDATED  | build_deps     |
+|  0 | openjdk-11-jdk-headless | 11.0.31+11-1ubuntu*  | 11.0.32.1+1-1ubuntu* | UPDATED  | build_deps     |
 |  1 | binutils                | 2.38-4ubuntu*        | 2.38-4ubuntu*        |          | base_test_deps |
 |  2 | gdb                     | 12.1-0ubuntu*        | 12.1-0ubuntu*        |          | base_test_deps |
 |  3 | gdbserver               | 12.1-0ubuntu*        | 12.1-0ubuntu*        |          | base_test_deps |

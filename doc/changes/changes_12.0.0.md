@@ -25,7 +25,7 @@ This release uses version 4.2.1 of the container tool.
 
 ## Security Issues
 
-n/a
+ - #1530: Updated the Trivy ignore rule for Linux kernel related CVEs
 
 ## Refactorings
 

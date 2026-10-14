@@ -21,4 +21,3 @@
    1. Websocket API (https://github.com/EXASOL/websocket-api)
    2. [Exasol-BucketFS](https://pypi.org/project/exasol-bucketfs/)
    3. [PyExasol](https://pypi.org/project/pyexasol/)
-   4. [sqlglot](https://pypi.org/project/sqlglot/)

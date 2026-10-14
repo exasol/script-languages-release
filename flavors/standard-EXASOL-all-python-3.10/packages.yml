@@ -321,9 +321,6 @@ build_steps:
       - extras: []
         name: portalocker
         version: ==4.1.0
-      - extras: []
-        name: sqlglot[rs]
-        version: ==30.16.0
   validation_cfg:
     version_mandatory: false
 version: 1.0.0

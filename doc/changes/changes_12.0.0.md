@@ -10,6 +10,7 @@ This release removes the `standard-EXASOL-all` flavor and
 refreshes the other Python flavors with updated, security-maintained dependencies.
 The SageMaker Python SDK and pysftp have been removed from the standard Python flavors.
 The CUDA Conda template flavors have been updated to support CUDA toolkit version 13.3.1.
+Python packages `sqlglot`, `sagemaker` and `pysftp` were removed from both Python Standard flavors.
 
 <!-- markdown-link-check-disable -->
 ## [Package Version Comparison between Release 12.0.0 and 11.3.0](https://github.com/exasol/script-languages-release/blob/master/doc/changes/package_diffs/12.0.0/README.md)
@@ -37,6 +38,7 @@ n/a
  - #1520: Updated openjdk-11-jdk-headless and openjdk-17-jdk-headless
  - #1524: Updated bzip2 to 1.0.8-*
  - #1527: Updated openjdk-11-jdk-headless and openjdk-17-jdk-headless
+ - #1534: Removed `sqlglot` from both Python Standard flavors
 
 ## Bugfixes
 

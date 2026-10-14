@@ -103,13 +103,13 @@
 | 64 | scikit-learn                           | ==1.4.2              | ==1.7.2              | UPDATED  | flavor_base_deps |
 | 65 | scipy                                  | ==1.13.0             | ==1.15.3             | UPDATED  | flavor_base_deps |
 | 66 | simplejson                             | ==3.19.2             | ==4.1.1              | UPDATED  | flavor_base_deps |
-| 67 | sqlglot[rs]                            | ==30.13.0            | ==30.16.0            | UPDATED  | flavor_base_deps |
-| 68 | ujson                                  | ==5.9.0              | ==5.13.0             | UPDATED  | flavor_base_deps |
-| 69 | numpy                                  | ==1.26.4             | ==2.2.6              | UPDATED  | language_deps    |
-| 70 | pandas                                 | ==2.2.3              | ==2.3.3              | UPDATED  | language_deps    |
-| 71 | pyarrow                                | ==16.0.0             | ==25.0.1             | UPDATED  | language_deps    |
-| 72 | pysftp                                 | ==0.2.9              |                      | REMOVED  | flavor_base_deps |
-| 73 | sagemaker                              | ==2.218.1            |                      | REMOVED  | flavor_base_deps |
+| 67 | ujson                                  | ==5.9.0              | ==5.13.0             | UPDATED  | flavor_base_deps |
+| 68 | numpy                                  | ==1.26.4             | ==2.2.6              | UPDATED  | language_deps    |
+| 69 | pandas                                 | ==2.2.3              | ==2.3.3              | UPDATED  | language_deps    |
+| 70 | pyarrow                                | ==16.0.0             | ==25.0.1             | UPDATED  | language_deps    |
+| 71 | pysftp                                 | ==0.2.9              |                      | REMOVED  | flavor_base_deps |
+| 72 | sagemaker                              | ==2.218.1            |                      | REMOVED  | flavor_base_deps |
+| 73 | sqlglot[rs]                            | ==30.13.0            |                      | REMOVED  | flavor_base_deps |
 | 74 | azure-keyvault                         | ==4.2.0              | ==4.2.0              |          | flavor_base_deps |
 | 75 | azure-loganalytics                     | ==0.1.1              | ==0.1.1              |          | flavor_base_deps |
 | 76 | exasol-db-api                          | No version specified | No version specified |          | flavor_base_deps |

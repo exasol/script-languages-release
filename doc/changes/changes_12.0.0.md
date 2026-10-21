@@ -1,13 +1,13 @@
-# script-languages-release 12.0.0, released t.b.d
+# script-languages-release 12.0.0, released 2026-10-22
 
-Code name: t.b.d.
+Code name: Removed standard-EXASOL-all flavor.
 
 ## Summary
 
 **Breaking Changes:**
 
 This release removes the `standard-EXASOL-all` flavor and
-refreshes the other Python flavors with updated, security-maintained dependencies.
+refreshes the other flavors with updated, security-maintained dependencies.
 The SageMaker Python SDK and pysftp have been removed from the standard Python flavors.
 The CUDA Conda template flavors have been updated to support CUDA toolkit version 13.3.1.
 
@@ -16,7 +16,7 @@ The CUDA Conda template flavors have been updated to support CUDA toolkit versio
 
 ## Script-Language-Container-Tool (Exaslct)
 
-This release uses version 4.2.1 of the container tool.
+This release uses version 4.4.0 of the container tool.
 
 
 ## Features

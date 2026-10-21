@@ -6,14 +6,14 @@
 
 |    | Package           | Version in 11.3.0    | Version in 12.0.0    | Status   | Build-Step     |
 |---:|:------------------|:---------------------|:---------------------|:---------|:---------------|
-|  0 | binutils          | 2.38-4ubuntu*        | 2.38-4ubuntu*        |          | base_test_deps |
-|  1 | gdb               | 12.1-0ubuntu*        | 12.1-0ubuntu*        |          | base_test_deps |
-|  2 | gdbserver         | 12.1-0ubuntu*        | 12.1-0ubuntu*        |          | base_test_deps |
-|  3 | patchelf          | 0.14.3-1             | 0.14.3-1             |          | base_test_deps |
-|  4 | strace            | 5.16-0ubuntu*        | 5.16-0ubuntu*        |          | base_test_deps |
-|  5 | valgrind          | 1:3.18.1-1ubuntu*    | 1:3.18.1-1ubuntu*    |          | base_test_deps |
-|  6 | build-essential   | 12.9ubuntu*          | 12.9ubuntu*          |          | build_deps     |
-|  7 | ca-certificates   | 20260601~22.04.1     | 20260601~22.04.1     |          | build_deps     |
+|  0 | ca-certificates   | 20260601~22.04.1     | *                    | UPDATED  | build_deps     |
+|  1 | binutils          | 2.38-4ubuntu*        | 2.38-4ubuntu*        |          | base_test_deps |
+|  2 | gdb               | 12.1-0ubuntu*        | 12.1-0ubuntu*        |          | base_test_deps |
+|  3 | gdbserver         | 12.1-0ubuntu*        | 12.1-0ubuntu*        |          | base_test_deps |
+|  4 | patchelf          | 0.14.3-1             | 0.14.3-1             |          | base_test_deps |
+|  5 | strace            | 5.16-0ubuntu*        | 5.16-0ubuntu*        |          | base_test_deps |
+|  6 | valgrind          | 1:3.18.1-1ubuntu*    | 1:3.18.1-1ubuntu*    |          | base_test_deps |
+|  7 | build-essential   | 12.9ubuntu*          | 12.9ubuntu*          |          | build_deps     |
 |  8 | chrpath           | 0.16-2               | 0.16-2               |          | build_deps     |
 |  9 | coreutils         | 8.32-4.1ubuntu*      | 8.32-4.1ubuntu*      |          | build_deps     |
 | 10 | curl              | 7.81.0-1ubuntu*      | 7.81.0-1ubuntu*      |          | build_deps     |

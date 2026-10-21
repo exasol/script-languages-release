@@ -6,20 +6,20 @@
 
 |    | Package              | Version in 11.3.0      | Version in 12.0.0      | Status   | Build-Step       |
 |---:|:---------------------|:-----------------------|:-----------------------|:---------|:-----------------|
-|  0 | git                  | 1:2.43.0-1ubuntu*      | 1:2.43.0-1ubuntu*      |          | flavor_base_deps |
-|  1 | ldap-utils           | 2.6.10+dfsg-0ubuntu*   | 2.6.10+dfsg-0ubuntu*   |          | flavor_base_deps |
-|  2 | libcurl4-openssl-dev | 8.5.0-2ubuntu*         | 8.5.0-2ubuntu*         |          | flavor_base_deps |
-|  3 | libgomp1             | 14.2.0-4ubuntu*        | 14.2.0-4ubuntu*        |          | flavor_base_deps |
-|  4 | libldap2-dev         | 2.6.10+dfsg-0ubuntu*   | 2.6.10+dfsg-0ubuntu*   |          | flavor_base_deps |
-|  5 | libleveldb-dev       | 1.23-5build1           | 1.23-5build1           |          | flavor_base_deps |
-|  6 | libsasl2-dev         | 2.1.28+dfsg1-5ubuntu*  | 2.1.28+dfsg1-5ubuntu*  |          | flavor_base_deps |
-|  7 | libsmbclient-dev     | 2:4.19.5+dfsg-4ubuntu* | 2:4.19.5+dfsg-4ubuntu* |          | flavor_base_deps |
-|  8 | openssl              | 3.0.13-0ubuntu*        | 3.0.13-0ubuntu*        |          | flavor_base_deps |
-|  9 | slapd                | 2.6.10+dfsg-0ubuntu*   | 2.6.10+dfsg-0ubuntu*   |          | flavor_base_deps |
-| 10 | smbclient            | 2:4.19.5+dfsg-4ubuntu* | 2:4.19.5+dfsg-4ubuntu* |          | flavor_base_deps |
-| 11 | tzdata               | 2026*                  | 2026*                  |          | flavor_base_deps |
-| 12 | unzip                | 6.0-28ubuntu*          | 6.0-28ubuntu*          |          | flavor_base_deps |
-| 13 | ca-certificates      | 20260601~24.04.1       | 20260601~24.04.1       |          | language_deps    |
+|  0 | ca-certificates      | 20260601~24.04.1       | *                      | UPDATED  | language_deps    |
+|  1 | git                  | 1:2.43.0-1ubuntu*      | 1:2.43.0-1ubuntu*      |          | flavor_base_deps |
+|  2 | ldap-utils           | 2.6.10+dfsg-0ubuntu*   | 2.6.10+dfsg-0ubuntu*   |          | flavor_base_deps |
+|  3 | libcurl4-openssl-dev | 8.5.0-2ubuntu*         | 8.5.0-2ubuntu*         |          | flavor_base_deps |
+|  4 | libgomp1             | 14.2.0-4ubuntu*        | 14.2.0-4ubuntu*        |          | flavor_base_deps |
+|  5 | libldap2-dev         | 2.6.10+dfsg-0ubuntu*   | 2.6.10+dfsg-0ubuntu*   |          | flavor_base_deps |
+|  6 | libleveldb-dev       | 1.23-5build1           | 1.23-5build1           |          | flavor_base_deps |
+|  7 | libsasl2-dev         | 2.1.28+dfsg1-5ubuntu*  | 2.1.28+dfsg1-5ubuntu*  |          | flavor_base_deps |
+|  8 | libsmbclient-dev     | 2:4.19.5+dfsg-4ubuntu* | 2:4.19.5+dfsg-4ubuntu* |          | flavor_base_deps |
+|  9 | openssl              | 3.0.13-0ubuntu*        | 3.0.13-0ubuntu*        |          | flavor_base_deps |
+| 10 | slapd                | 2.6.10+dfsg-0ubuntu*   | 2.6.10+dfsg-0ubuntu*   |          | flavor_base_deps |
+| 11 | smbclient            | 2:4.19.5+dfsg-4ubuntu* | 2:4.19.5+dfsg-4ubuntu* |          | flavor_base_deps |
+| 12 | tzdata               | 2026*                  | 2026*                  |          | flavor_base_deps |
+| 13 | unzip                | 6.0-28ubuntu*          | 6.0-28ubuntu*          |          | flavor_base_deps |
 | 14 | chrpath              | 0.16-2build1           | 0.16-2build1           |          | language_deps    |
 | 15 | curl                 | 8.5.0-2ubuntu*         | 8.5.0-2ubuntu*         |          | language_deps    |
 | 16 | python3.12-dev       | 3.12.3-1ubuntu*        | 3.12.3-1ubuntu*        |          | language_deps    |
@@ -85,7 +85,7 @@
 | 46 | pyOpenSSL                              | ==25.3.0             | ==26.4.0             | UPDATED  | flavor_base_deps |
 | 47 | pybase64                               | ==1.4.2              | ==1.5.0              | UPDATED  | flavor_base_deps |
 | 48 | pycurl                                 | ==7.45.6             | ==7.47.0             | UPDATED  | flavor_base_deps |
-| 49 | pyexasol                               | ==2.2.2              | ==2.3.1              | UPDATED  | flavor_base_deps |
+| 49 | pyexasol                               | ==2.2.2              | ==3.0.0              | UPDATED  | flavor_base_deps |
 | 50 | pyftpdlib                              | ==2.0.1              | ==2.2.0              | UPDATED  | flavor_base_deps |
 | 51 | pyodbc                                 | ==5.2.0              | ==5.3.0              | UPDATED  | flavor_base_deps |
 | 52 | python-ldap                            | ==3.4.4              | ==3.4.7              | UPDATED  | flavor_base_deps |
@@ -97,21 +97,22 @@
 | 58 | scikit-learn                           | ==1.7.2              | ==1.9.0              | UPDATED  | flavor_base_deps |
 | 59 | scipy                                  | ==1.16.2             | ==1.18.0             | UPDATED  | flavor_base_deps |
 | 60 | simplejson                             | ==3.20.1             | ==4.1.1              | UPDATED  | flavor_base_deps |
-| 61 | sqlglot[rs]                            | ==30.13.0            | ==30.16.0            | UPDATED  | flavor_base_deps |
-| 62 | ujson                                  | ==5.11.0             | ==5.13.0             | UPDATED  | flavor_base_deps |
-| 63 | numpy                                  | ==1.26.4             | ==2.4.6              | UPDATED  | language_deps    |
-| 64 | pandas                                 | ==2.3.2              | ==2.3.3              | UPDATED  | language_deps    |
-| 65 | pyarrow                                | ==21.0.0             | ==25.0.1             | UPDATED  | language_deps    |
-| 66 | pysftp                                 | ==0.2.9              |                      | REMOVED  | flavor_base_deps |
-| 67 | sagemaker                              | ==2.251.1            |                      | REMOVED  | flavor_base_deps |
-| 68 | azure-eventhub-checkpointstoreblob     | ==1.2.0              | ==1.2.0              |          | flavor_base_deps |
-| 69 | azure-eventhub-checkpointstoreblob-aio | ==1.2.0              | ==1.2.0              |          | flavor_base_deps |
-| 70 | azure-keyvault                         | ==4.2.0              | ==4.2.0              |          | flavor_base_deps |
-| 71 | azure-loganalytics                     | ==0.1.1              | ==0.1.1              |          | flavor_base_deps |
-| 72 | exasol-db-api                          | No version specified | No version specified |          | flavor_base_deps |
-| 73 | jinja2                                 | ==3.1.6              | ==3.1.6              |          | flavor_base_deps |
-| 74 | martian                                | ==2.1                | ==2.1                |          | flavor_base_deps |
-| 75 | plyvel                                 | ==1.5.1              | ==1.5.1              |          | flavor_base_deps |
-| 76 | pybloomfiltermmap3                     | ==0.6.3              | ==0.6.3              |          | flavor_base_deps |
-| 77 | pysimdjson                             | ==7.0.2              | ==7.0.2              |          | flavor_base_deps |
-| 78 | pysmbc                                 | ==1.0.25.1           | ==1.0.25.1           |          | flavor_base_deps |
+| 61 | ujson                                  | ==5.11.0             | ==5.13.0             | UPDATED  | flavor_base_deps |
+| 62 | numpy                                  | ==1.26.4             | ==2.4.6              | UPDATED  | language_deps    |
+| 63 | pandas                                 | ==2.3.2              | ==2.3.3              | UPDATED  | language_deps    |
+| 64 | pyarrow                                | ==21.0.0             | ==25.0.1             | UPDATED  | language_deps    |
+| 65 | pysftp                                 | ==0.2.9              |                      | REMOVED  | flavor_base_deps |
+| 66 | sagemaker                              | ==2.251.1            |                      | REMOVED  | flavor_base_deps |
+| 67 | sqlglot[rs]                            | ==30.13.0            |                      | REMOVED  | flavor_base_deps |
+| 68 | sqlglot[c]                             |                      | ==30.24.0            | NEW      | flavor_base_deps |
+| 69 | azure-eventhub-checkpointstoreblob     | ==1.2.0              | ==1.2.0              |          | flavor_base_deps |
+| 70 | azure-eventhub-checkpointstoreblob-aio | ==1.2.0              | ==1.2.0              |          | flavor_base_deps |
+| 71 | azure-keyvault                         | ==4.2.0              | ==4.2.0              |          | flavor_base_deps |
+| 72 | azure-loganalytics                     | ==0.1.1              | ==0.1.1              |          | flavor_base_deps |
+| 73 | exasol-db-api                          | No version specified | No version specified |          | flavor_base_deps |
+| 74 | jinja2                                 | ==3.1.6              | ==3.1.6              |          | flavor_base_deps |
+| 75 | martian                                | ==2.1                | ==2.1                |          | flavor_base_deps |
+| 76 | plyvel                                 | ==1.5.1              | ==1.5.1              |          | flavor_base_deps |
+| 77 | pybloomfiltermmap3                     | ==0.6.3              | ==0.6.3              |          | flavor_base_deps |
+| 78 | pysimdjson                             | ==7.0.2              | ==7.0.2              |          | flavor_base_deps |
+| 79 | pysmbc                                 | ==1.0.25.1           | ==1.0.25.1           |          | flavor_base_deps |

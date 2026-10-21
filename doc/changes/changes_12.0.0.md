@@ -37,6 +37,7 @@ n/a
  - #1520: Updated openjdk-11-jdk-headless and openjdk-17-jdk-headless
  - #1524: Updated bzip2 to 1.0.8-*
  - #1527: Updated openjdk-11-jdk-headless and openjdk-17-jdk-headless
+ - #1537: Updated ca-certificates
 
 ## Bugfixes
 

@@ -6,11 +6,11 @@
 
 |    | Package              | Version in 11.3.0   | Version in 12.0.0   | Status   | Build-Step       |
 |---:|:---------------------|:--------------------|:--------------------|:---------|:-----------------|
-|  0 | build-essential      | 12.10ubuntu*        | 12.10ubuntu*        |          | flavor_base_deps |
-|  1 | git                  | 1:2.43.0-1ubuntu*   | 1:2.43.0-1ubuntu*   |          | flavor_base_deps |
-|  2 | libcurl4-openssl-dev | 8.5.0-2ubuntu*      | 8.5.0-2ubuntu*      |          | flavor_base_deps |
-|  3 | unzip                | 6.0-28ubuntu*       | 6.0-28ubuntu*       |          | flavor_base_deps |
-|  4 | ca-certificates      | 20260601~24.04.1    | 20260601~24.04.1    |          | language_deps    |
+|  0 | ca-certificates      | 20260601~24.04.1    | *                   | UPDATED  | language_deps    |
+|  1 | build-essential      | 12.10ubuntu*        | 12.10ubuntu*        |          | flavor_base_deps |
+|  2 | git                  | 1:2.43.0-1ubuntu*   | 1:2.43.0-1ubuntu*   |          | flavor_base_deps |
+|  3 | libcurl4-openssl-dev | 8.5.0-2ubuntu*      | 8.5.0-2ubuntu*      |          | flavor_base_deps |
+|  4 | unzip                | 6.0-28ubuntu*       | 6.0-28ubuntu*       |          | flavor_base_deps |
 |  5 | curl                 | 8.5.0-2ubuntu*      | 8.5.0-2ubuntu*      |          | language_deps    |
 |  6 | python3.12-dev       | 3.12.3-1ubuntu*     | 3.12.3-1ubuntu*     |          | language_deps    |
 |  7 | adduser              | 3.137ubuntu*        | 3.137ubuntu*        |          | udfclient_deps   |

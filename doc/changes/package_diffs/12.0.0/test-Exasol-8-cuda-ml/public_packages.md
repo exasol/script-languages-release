@@ -7,8 +7,8 @@
 |    | Package         | Version in 11.3.0      | Version in 12.0.0      | Status   | Build-Step       |
 |---:|:----------------|:-----------------------|:-----------------------|:---------|:-----------------|
 |  0 | bzip2           | 1.0.8-5.1build0.1      | 1.0.8-*                | UPDATED  | conda_deps       |
-|  1 | adduser         | 3.137ubuntu*           | 3.137ubuntu*           |          | conda_deps       |
-|  2 | ca-certificates | 20260601~24.04.1       | 20260601~24.04.1       |          | conda_deps       |
+|  1 | ca-certificates | 20260601~24.04.1       | *                      | UPDATED  | conda_deps       |
+|  2 | adduser         | 3.137ubuntu*           | 3.137ubuntu*           |          | conda_deps       |
 |  3 | coreutils       | 9.4-3ubuntu*           | 9.4-3ubuntu*           |          | conda_deps       |
 |  4 | curl            | 8.5.0-2ubuntu*         | 8.5.0-2ubuntu*         |          | conda_deps       |
 |  5 | libxml2         | 2.9.14+dfsg-1.3ubuntu* | 2.9.14+dfsg-1.3ubuntu* |          | conda_deps       |

@@ -6,12 +6,12 @@
 
 |    | Package              | Version in 11.3.0   | Version in 12.0.0   | Status   | Build-Step       |
 |---:|:---------------------|:--------------------|:--------------------|:---------|:-----------------|
-|  0 | build-essential      | 12.9ubuntu*         | 12.9ubuntu*         |          | flavor_base_deps |
-|  1 | git                  | 1:2.34.1-1ubuntu*   | 1:2.34.1-1ubuntu*   |          | flavor_base_deps |
-|  2 | libcurl4-openssl-dev | 7.81.0-1ubuntu*     | 7.81.0-1ubuntu*     |          | flavor_base_deps |
-|  3 | tzdata               | 2026*               | 2026*               |          | flavor_base_deps |
-|  4 | unzip                | 6.0-26ubuntu*       | 6.0-26ubuntu*       |          | flavor_base_deps |
-|  5 | ca-certificates      | 20260601~22.04.1    | 20260601~22.04.1    |          | language_deps    |
+|  0 | ca-certificates      | 20260601~22.04.1    | *                   | UPDATED  | language_deps    |
+|  1 | build-essential      | 12.9ubuntu*         | 12.9ubuntu*         |          | flavor_base_deps |
+|  2 | git                  | 1:2.34.1-1ubuntu*   | 1:2.34.1-1ubuntu*   |          | flavor_base_deps |
+|  3 | libcurl4-openssl-dev | 7.81.0-1ubuntu*     | 7.81.0-1ubuntu*     |          | flavor_base_deps |
+|  4 | tzdata               | 2026*               | 2026*               |          | flavor_base_deps |
+|  5 | unzip                | 6.0-26ubuntu*       | 6.0-26ubuntu*       |          | flavor_base_deps |
 |  6 | curl                 | 7.81.0-1ubuntu*     | 7.81.0-1ubuntu*     |          | language_deps    |
 |  7 | python3-distutils    | 3.10.8*             | 3.10.8*             |          | language_deps    |
 |  8 | python3.10-dev       | 3.10.12*            | 3.10.12*            |          | language_deps    |

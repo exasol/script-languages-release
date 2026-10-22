@@ -6,14 +6,14 @@
 
 |    | Package              | Version in 11.3.0   | Version in 12.0.0   | Status   | Build-Step       |
 |---:|:---------------------|:--------------------|:--------------------|:---------|:-----------------|
-|  0 | cmake                | 3.22.1-1ubuntu*     | 3.22.1-1ubuntu*     |          | flavor_base_deps |
-|  1 | git                  | 1:2.34.1-1ubuntu*   | 1:2.34.1-1ubuntu*   |          | flavor_base_deps |
-|  2 | libcurl4-openssl-dev | 7.81.0-1ubuntu*     | 7.81.0-1ubuntu*     |          | flavor_base_deps |
-|  3 | libhiredis-dev       | 0.14.1-2            | 0.14.1-2            |          | flavor_base_deps |
-|  4 | unixodbc-dev         | 2.3.9-5ubuntu*      | 2.3.9-5ubuntu*      |          | flavor_base_deps |
-|  5 | unzip                | 6.0-26ubuntu*       | 6.0-26ubuntu*       |          | flavor_base_deps |
-|  6 | wget                 | 1.21.2-2ubuntu*     | 1.21.2-2ubuntu*     |          | flavor_base_deps |
-|  7 | ca-certificates      | 20260601~22.04.1    | 20260601~22.04.1    |          | language_deps    |
+|  0 | ca-certificates      | 20260601~22.04.1    | *                   | UPDATED  | language_deps    |
+|  1 | cmake                | 3.22.1-1ubuntu*     | 3.22.1-1ubuntu*     |          | flavor_base_deps |
+|  2 | git                  | 1:2.34.1-1ubuntu*   | 1:2.34.1-1ubuntu*   |          | flavor_base_deps |
+|  3 | libcurl4-openssl-dev | 7.81.0-1ubuntu*     | 7.81.0-1ubuntu*     |          | flavor_base_deps |
+|  4 | libhiredis-dev       | 0.14.1-2            | 0.14.1-2            |          | flavor_base_deps |
+|  5 | unixodbc-dev         | 2.3.9-5ubuntu*      | 2.3.9-5ubuntu*      |          | flavor_base_deps |
+|  6 | unzip                | 6.0-26ubuntu*       | 6.0-26ubuntu*       |          | flavor_base_deps |
+|  7 | wget                 | 1.21.2-2ubuntu*     | 1.21.2-2ubuntu*     |          | flavor_base_deps |
 |  8 | curl                 | 7.81.0-1ubuntu*     | 7.81.0-1ubuntu*     |          | language_deps    |
 |  9 | gnupg                | 2.2.27-3ubuntu2.5   | 2.2.27-3ubuntu2.5   |          | language_deps    |
 | 10 | libexpat1            | 2.4.7-1ubuntu*      | 2.4.7-1ubuntu*      |          | language_deps    |

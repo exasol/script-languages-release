@@ -29,7 +29,7 @@ build_steps:
     apt:
       packages:
       - name: ca-certificates
-        version: 20260601~22.04.1
+        version: '*'
       - name: python3.10-dev
         version: 3.10.12*
       - name: python3-distutils
@@ -218,7 +218,7 @@ build_steps:
         version: ==6.33.6
       - extras: []
         name: pyexasol
-        version: ==2.3.1
+        version: ==2.4.1
       - extras: []
         name: pytz
         version: '==2026.3.post1'
@@ -278,7 +278,7 @@ build_steps:
         version: ==26.4.0
       - name: exasol-db-api
         extras: []
-        url: git+https://github.com/EXASOL/websocket-api.git@e4290606386cb941c0bd024506b97be2fd59be7d#egg=exasol-db-api&subdirectory=python
+        url: git+https://github.com/EXASOL/websocket-api.git@707521bbcc49fe0fa211e31a2b4da3b8da9ce829#egg=exasol-db-api&subdirectory=python
       - extras: []
         name: debugpy
         version: ==1.8.21
@@ -322,8 +322,8 @@ build_steps:
         name: portalocker
         version: ==4.1.0
       - extras: []
-        name: sqlglot[rs]
-        version: ==30.16.0
+        name: sqlglot[c]
+        version: ==30.24.0
   validation_cfg:
     version_mandatory: false
 version: 1.0.0

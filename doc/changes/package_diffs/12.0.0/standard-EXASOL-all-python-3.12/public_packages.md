@@ -85,7 +85,7 @@
 | 46 | pyOpenSSL                              | ==25.3.0             | ==26.4.0             | UPDATED  | flavor_base_deps |
 | 47 | pybase64                               | ==1.4.2              | ==1.5.0              | UPDATED  | flavor_base_deps |
 | 48 | pycurl                                 | ==7.45.6             | ==7.47.0             | UPDATED  | flavor_base_deps |
-| 49 | pyexasol                               | ==2.2.2              | ==3.0.0              | UPDATED  | flavor_base_deps |
+| 49 | pyexasol                               | ==2.2.2              | ==2.3.1              | UPDATED  | flavor_base_deps |
 | 50 | pyftpdlib                              | ==2.0.1              | ==2.2.0              | UPDATED  | flavor_base_deps |
 | 51 | pyodbc                                 | ==5.2.0              | ==5.3.0              | UPDATED  | flavor_base_deps |
 | 52 | python-ldap                            | ==3.4.4              | ==3.4.7              | UPDATED  | flavor_base_deps |

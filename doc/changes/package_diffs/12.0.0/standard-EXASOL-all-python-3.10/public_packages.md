@@ -90,7 +90,7 @@
 | 51 | pybase64                               | ==1.3.2              | ==1.5.0              | UPDATED  | flavor_base_deps |
 | 52 | pybloomfiltermmap3                     | ==0.5.7              | ==0.6.3              | UPDATED  | flavor_base_deps |
 | 53 | pycurl                                 | ==7.45.3             | ==7.47.0             | UPDATED  | flavor_base_deps |
-| 54 | pyexasol                               | ==2.2.2              | ==3.0.0              | UPDATED  | flavor_base_deps |
+| 54 | pyexasol                               | ==2.2.2              | ==2.3.1              | UPDATED  | flavor_base_deps |
 | 55 | pyftpdlib                              | ==1.5.9              | ==2.2.0              | UPDATED  | flavor_base_deps |
 | 56 | pyodbc                                 | ==5.1.0              | ==5.3.0              | UPDATED  | flavor_base_deps |
 | 57 | pysimdjson                             | ==6.0.2              | ==7.0.2              | UPDATED  | flavor_base_deps |

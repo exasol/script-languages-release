@@ -4,7 +4,7 @@ Code name: t.b.d.
 
 ## Summary
 
-This release fixes Python float emission to DECIMAL output columns.
+This release fixes Python float emission to DECIMAL output columns and updates pip in Python SLC flavors.
 
 ## Features
 
@@ -20,7 +20,7 @@ n/a
 
 ## Dependencies
 
-n/a
+ - Updated pip to version 26.2.2 in the Python SLC flavors.
 
 ## Bugfixes
 

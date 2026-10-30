@@ -12,7 +12,7 @@ n/a
 
 ## Security Issues
 
-n/a
+ - Configured Trivy to skip pip's vendored-library BOM file.
 
 ## Refactorings
 

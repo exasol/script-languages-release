@@ -1,4 +1,5 @@
 scan:
   skip-files:
     - /usr/bin/trivy
+    - "**/pip/_vendor/vendor.txt"
 ignore-policy: /trivy.rego

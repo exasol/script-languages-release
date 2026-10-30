@@ -1,5 +1,6 @@
 scan:
   skip-files:
     - /usr/bin/trivy
+    # pip does not update vendored setuptools: https://github.com/pypa/pip/issues/14031
     - "**/pip/_vendor/vendor.txt"
 ignore-policy: /trivy.rego

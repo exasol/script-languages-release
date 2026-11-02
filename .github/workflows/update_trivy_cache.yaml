@@ -17,13 +17,13 @@ jobs:
       - name: Run install dependencies
         run: |
           sudo apt update && sudo apt install -y curl wget apt-transport-https gnupg lsb-release
-          wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
-          echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
+          sudo install -m 0755 -d /etc/apt/keyrings
+          wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo gpg --dearmor -o /etc/apt/keyrings/trivy.gpg
+          echo "deb [signed-by=/etc/apt/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/trivy.sources
           sudo apt-get update
           sudo apt-get install trivy
         env:
           DEBIAN_FRONTEND: noninteractive
-
       - name: Fetch trivy databases
         run: |
           trivy image --download-java-db-only || (echo "Falling back to ECR repository...." && trivy image --download-java-db-only --java-db-repository public.ecr.aws/aquasecurity/trivy-java-db)

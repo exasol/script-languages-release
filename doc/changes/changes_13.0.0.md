@@ -1,4 +1,4 @@
-# script-languages-release 12.0.2, released 2026-11-04
+# script-languages-release 13.0.0, released 2026-11-04
 
 Code name: Python DECIMAL Conversion and Python3.10 removal
 

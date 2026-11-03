@@ -46,7 +46,6 @@ It is used as built-in container in Exasol version 2025.1 and later.
   - Available languages: Java 17
   - [Here](standard-EXASOL-all-java-17/FLAVOR_DESCRIPTION.md) you can find more details about the flavor, such as the provided packages.
 
-  
 #### standard-EXASOL-all-python-3.12
 
 This flavor supports the Python 3.12 language and can be used in all currently active Exasol versions.
@@ -83,7 +82,7 @@ The template flavors provide each a single language with only absolutely necessa
 
 #### template-Exasol-all-python-3.12
 
-The template-Exasol-all-python-3.12 flavor provides language Python 3.10 with only absolutely necessary packages. This allows very simple customization because you control almost all dependencies.
+The template-Exasol-all-python-3.12 flavor provides language Python 3.12 with only absolutely necessary packages. This allows very simple customization because you control almost all dependencies.
 
 - template-Exasol-all-python-3.12
   - Base Image: ubuntu:24.04

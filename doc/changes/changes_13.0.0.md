@@ -1,11 +1,11 @@
 # script-languages-release 13.0.0, released 2026-11-04
 
-Code name: Python DECIMAL Conversion and Python3.10 removal
+Code name: Python DECIMAL Conversion and Python 3.10 removal
 
-## Summary
-
-This release fixes Python float emission to DECIMAL output columns and updates pip in Python SLC flavors.
-All Python3.10 based flavors were removed.
+## Summary 
+ 
+This release fixes the emission of Python floats to DECIMAL output columns and updates pip in Python SLC flavors. 
+It also removes all Python 3.10 based flavors because the required upgrade to the latest version of pyarrow is incompatible with Python 3.10.
 
 <!-- markdown-link-check-disable -->
 ## [Package Version Comparison between Release 13.0.0 and 12.0.1](https://github.com/exasol/script-languages-release/blob/master/doc/changes/package_diffs/13.0.0/README.md)

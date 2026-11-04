@@ -60,10 +60,10 @@ build_steps:
         version: ==2.3.3
       - extras: []
         name: numpy
-        version: ==2.4.6
+        version: ==2.5.4
       - extras: []
         name: pyarrow
-        version: ==25.0.1
+        version: ==26.0.1
   validation_cfg:
     version_mandatory: true
 - name: flavor_base_deps
@@ -290,7 +290,7 @@ build_steps:
         version: ==7.0.2
       - extras: []
         name: numba
-        version: ==0.66.0
+        version: ==0.68.1
       - extras: []
         name: bitarray
         version: ==3.10.1

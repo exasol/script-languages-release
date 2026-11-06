@@ -3,7 +3,6 @@
 Code name: Python DECIMAL Conversion and Python 3.10 removal
 
 ## Summary
-
 This release fixes the emission of Python floats to DECIMAL output columns and updates pip in Python SLC flavors.
 It also removes all Python 3.10 based flavors because the required upgrade to the latest version of pyarrow is incompatible with Python 3.10.
 
@@ -20,24 +19,24 @@ n/a
 
 ## Security Issues
 
-* #1548: Configured Trivy to skip pip's vendored-library BOM file.
+ - #1548: Configured Trivy to skip pip's vendored-library BOM file.
 
 ## Refactorings
 
-* #1551: Python 3.10 flavors were removed
+ - #1551: Python 3.10 flavors were removed
 
 ## Dependencies
 
-* #1548: Updated pip to version 26.2.2 in the Python SLC flavors.
-* #1550: pyarrow was updated to 26.0.1
+ - #1548: Updated pip to version 26.2.2 in the Python SLC flavors.
+ - #1550: pyarrow was updated to 26.0.1
 
 ## Bugfixes
 
-* #1548: Fixed conversion of Python floats emitted to DECIMAL columns.
+ - #1548: Fixed conversion of Python floats emitted to DECIMAL columns.
 
 ## Doc
 
-* #1554: Updated user guide
+n/a
 
 ## Internal
 

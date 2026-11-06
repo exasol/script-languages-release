@@ -19,7 +19,38 @@ n/a
 
 ## Security Issues
 
-n/a
+This release fixes the following security issues by updating dependencies:
+
+| Name       | Version   | ID                  | Fix Versions |
+|------------|-----------|---------------------|--------------|
+| certifi    | 2026.7.22 | PYSEC-2026-4320     | 2026.10.18   |
+| certifi    | 2026.7.22 | PYSEC-2026-4320     | 2026.10.18   |
+| filelock   | 4.0.12    | CVE-2026-112940     | 4.2.1        |
+| filelock   | 4.0.12    | CVE-2026-112913     | 4.2.1        |
+| filelock   | 4.0.12    | CVE-2026-112907     | 4.2.1        |
+| filelock   | 4.0.12    | CVE-2026-112938     | 4.2.1        |
+| filelock   | 4.0.12    | CVE-2026-112910     | 4.2.1        |
+| filelock   | 4.0.12    | CVE-2026-112934     | 4.2.1        |
+| filelock   | 4.0.12    | CVE-2026-112909     | 4.2.1        |
+| filelock   | 4.0.12    | CVE-2026-112911     | 4.2.1        |
+| filelock   | 4.0.12    | CVE-2026-112939     | 4.2.1        |
+| filelock   | 4.0.12    | CVE-2026-112915     | 4.2.1        |
+| filelock   | 4.0.12    | CVE-2026-112935     | 4.2.1        |
+| filelock   | 4.0.12    | CVE-2026-112912     | 4.2.1        |
+| filelock   | 4.0.12    | CVE-2026-112908     | 4.2.1        |
+| gitpython  | 3.2.0     | CVE-2026-114145     | 3.2.1        |
+| setuptools | 84.0.0    | GHSA-xmj3-9gf7-h52w | 84.1.0       |
+| tornado    | 6.5.10    | CVE-2026-116577     | 6.6          |
+| tornado    | 6.5.10    | CVE-2026-115927     | 6.6          |
+| tornado    | 6.5.10    | CVE-2026-116578     | 6.6          |
+| virtualenv | 21.14.5   | CVE-2026-113725     | 21.14.7      |
+| virtualenv | 21.14.5   | CVE-2026-113722     | 21.14.9      |
+| virtualenv | 21.14.5   | CVE-2026-113714     | 21.14.9      |
+| virtualenv | 21.14.5   | CVE-2026-113723     | 21.14.9      |
+| virtualenv | 21.14.5   | CVE-2026-113715     | 21.14.9      |
+| virtualenv | 21.14.5   | CVE-2026-113720     | 21.14.9      |
+| virtualenv | 21.14.5   | CVE-2026-113717     | 21.14.9      |
+| virtualenv | 21.14.5   | CVE-2026-113718     | 21.14.9      |
 
 ## Refactorings
 

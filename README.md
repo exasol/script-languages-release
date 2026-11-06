@@ -1,5 +1,5 @@
 
-# EXASOL Script Languages 
+# EXASOL Script Languages
 
 ###### Please note that this is an open source project which is officially supported by EXASOL. For any question, you can contact our support team.
 ## Overview
@@ -10,7 +10,7 @@ This project contains script-language containers for the user-defined functions 
 
 A script language container consists of a Linux container with a complete Linux distribution and all required libraries and a script client. The script client is responsible for the communication with the database and for executing the UDF code.
 
-We provide in this repository several [flavors](flavors) of script-language containers, such as the current standard implementation of the [script client](https://github.com/exasol/script-languages/blob/master/exaudfclient/base) with support for Python 2/3, R und Java. A flavor contains the build description of a container. We will show below how to customize and build the different script-language containers. 
+We provide in this repository several [flavors](flavors) of script-language containers, such as the current standard implementation of the [script client](https://github.com/exasol/script-languages/blob/master/exaudfclient/base) with support for Python 3, R und Java. A flavor contains the build description of a container. We will show below how to customize and build the different script-language containers.
 
 You can find pre-built containers in the [release section](https://github.com/exasol/script-languages-release/releases) of this repository.
 If you are interested in the script client you find more details [here](https://github.com/exasol/script-languages/blob/master/exaudfclient/README.md).
@@ -30,4 +30,5 @@ If you are interested in the script client you find more details [here](https://
 ### Information for Users
 
 * [User Guide](doc/user_guide/user_guide.md)
+* [Developer Guide](doc/developer_guide/developer_guide.md)
 * [Changelog](doc/changes/changelog.md)

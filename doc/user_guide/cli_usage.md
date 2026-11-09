@@ -77,8 +77,8 @@ A popular requirement is installing additional packages.
 ### Adding New Packages
 
 File `packages.yml` contains the list of packages to be installed into the SLC, e.g. in the [template for R4](../../flavors/template-Exasol-all-r-4/packages.yml).  <br />
-There are multiple *build steps*.  Usually at the end of the file there is a build step `flavor_customization`.  <br />
-You can add new packages here.
+There are multiple *build steps*.  Usually at the end of the file, there is a build step `flavor_customization`.  <br />
+You can add new packages there.
 
 #### Dockerfile
 

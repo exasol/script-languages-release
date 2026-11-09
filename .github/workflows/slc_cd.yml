@@ -10,24 +10,34 @@ on:
     tags:
       - '**'
 
+permissions:
+  contents: read
+
 env:
   RELEASE_NAME: "${{ github.ref_name }}"
 
 jobs:
   prepare-test-container:
-    uses: ./.github/workflows/slc_ci_prepare_test_container.yml
-    secrets: inherit
+    permissions:
+      contents: read
+    uses: $/.github/workflows/slc_ci_prepare_test_container.yml
+    secrets:
+      CI4_DOCKERHUB_USERNAME: ${{ secrets.CI4_DOCKERHUB_USERNAME }}
+      CI4_DOCKERHUB_TOKEN: ${{ secrets.CI4_DOCKERHUB_TOKEN }}
 
   get-flavors:
     needs: prepare-test-container
+    permissions:
+      contents: read
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
         with:
+          persist-credentials: false
           submodules: 'recursive'
 
       - name: Setup Python & Poetry Environment
-        uses: exasol/python-toolbox/.github/actions/python-environment@v9
+        uses: exasol/python-toolbox/.github/actions/python-environment@v10
         with:
           python-version: "3.10"
           poetry-version: "2.3.0"
@@ -40,22 +50,30 @@ jobs:
 
   cd:
     needs: get-flavors
+    permissions:
+      contents: read
     strategy:
       fail-fast: true
       matrix:
         flavor: ${{fromJson(needs.get-flavors.outputs.matrix)}}
-    uses: ./.github/workflows/slc_cd_flavor.yml
-    secrets: inherit
+    uses: $/.github/workflows/slc_cd_flavor.yml
+    secrets:
+      CI4_DOCKERHUB_USERNAME: ${{ secrets.CI4_DOCKERHUB_USERNAME }}
+      CI4_DOCKERHUB_TOKEN: ${{ secrets.CI4_DOCKERHUB_TOKEN }}
     with:
       flavor: ${{ matrix.flavor }}
 
   release:
     needs: cd
     name: Create Github release
+    permissions:
+      contents: write
     runs-on: ubuntu-24.04
     steps:
       - name: SCM Checkout
         uses: actions/checkout@v6
+        with:
+          persist-credentials: false
 
       - name: Download Logs
         id: download-logs
@@ -80,11 +98,15 @@ jobs:
 
   upload-release-slc:
     needs: [get-flavors, release]
+    permissions:
+      contents: write
     strategy:
       matrix:
         flavor: ${{fromJson(needs.get-flavors.outputs.matrix)}}
-    uses: ./.github/workflows/slc_cd_upload_to_release.yml
+    uses: $/.github/workflows/slc_cd_upload_to_release.yml
     with:
       flavor: ${{ matrix.flavor }}
       release-name: ${{ github.ref_name }}
-    secrets: inherit
+    secrets:
+      CI4_DOCKERHUB_USERNAME: ${{ secrets.CI4_DOCKERHUB_USERNAME }}
+      CI4_DOCKERHUB_TOKEN: ${{ secrets.CI4_DOCKERHUB_TOKEN }}

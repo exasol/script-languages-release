@@ -1,6 +1,6 @@
 [project]
 name = "exasol-script-languages-release"
-version = "13.0.0"
+version = "13.1.0"
 description = "Script Languages Release"
 
 requires-python = ">=3.10, <3.14"
@@ -48,7 +48,7 @@ homepage = "https://github.com/exasol/script-languages"
 dev = [
     "toml>=0.10.2",
     "gitpython>=3.1.0, <4.0.0",
-    "nox>=2022.8.7"
+    "nox>=2022.8.7",
 ]
 
 [build-system]

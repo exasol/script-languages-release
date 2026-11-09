@@ -10,7 +10,7 @@ Repository SLCR uses [Git Submodules](https://git-scm.com/book/en/v2/Git-Tools-S
         url = https://github.com/exasol/script-languages.git
 ```
 
-If clone the repository initially, then please use CLI option `--recurse-submodules`:
+If clone the repository initially, then please use CLI option `--recurse-submodules` and also call `githooks/install.sh` to install the Git Hooks as explained in the next section:
 
 ```shell
 git clone https://github.com/exasol/script-languages-release.git --recurse-submodules
@@ -25,11 +25,15 @@ cd script-languages; git pull; cd $OLDPWD
 
 SLCR uses [Git Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) to run specific scripts at specific events, e.g. before commiting, pushing, etc.
 
-Some of these scripts require the Poetry virtual environment to be activated, as the script for example runs a Nox session.
+To install the hook, run
 
-So, instead of `git commit` please run `poetry run -- git commit` or use `poetry run bash` before.
+```shell
+./githooks/install.sh
+./githooks/install_recursive.sh
+```
 
-Alternatively you can skip the hooks with CLI option `-n` or `--no-verify`:
+When one of these scripts contains an error, then you can skip the hooks with CLI option `-n` or `--no-verify`:
+
 ```shell
 git commit -n
 ```

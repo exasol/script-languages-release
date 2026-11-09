@@ -10,7 +10,7 @@ Repository SLCR uses [Git Submodules](https://git-scm.com/book/en/v2/Git-Tools-S
         url = https://github.com/exasol/script-languages.git
 ```
 
-If clone the repository initially, then please use CLI option `--recurse-submodules` and also call `githooks/install.sh` to install the Git Hooks as explained in the next section:
+If you clone the repository initially, then please use CLI option `--recurse-submodules` and also call `githooks/install.sh` to install the Git Hooks as explained in the next section:
 
 ```shell
 git clone https://github.com/exasol/script-languages-release.git --recurse-submodules

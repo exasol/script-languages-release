@@ -1,5 +1,39 @@
 # Developer Guide
 
+## Cloning the Repository
+
+Repository SLCR uses [Git Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules). File `.gitmodules` identifies the affected paths:
+
+```shell
+[submodule "script-languages"]
+        path = script-languages
+        url = https://github.com/exasol/script-languages.git
+```
+
+If clone the repository initially, then please use CLI option `--recurse-submodules`:
+
+```shell
+git clone https://github.com/exasol/script-languages-release.git --recurse-submodules
+```
+
+When creating a branch, then please ensure to also keep the submodule up-to-date:
+```shell
+cd script-languages; git pull; cd $OLDPWD
+```
+
+## Git Hooks
+
+SLCR uses [Git Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) to run specific scripts at specific events, e.g. before commiting, pushing, etc.
+
+Some of these scripts require the Poetry virtual environment to be activated, as the script for example runs a Nox session.
+
+So, instead of `git commit` please run `poetry run -- git commit` or use `poetry run bash` before.
+
+Alternatively you can skip the hooks with CLI option `-n` or `--no-verify`:
+```shell
+git commit -n
+```
+
 ## Integration Tests
 
 SLCR contains several integration tests which can be executed for a specific flavor using the `exaslct`:

@@ -23,7 +23,7 @@ cd script-languages; git pull; cd $OLDPWD
 
 ## Git Hooks
 
-SLCR uses [Git Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) to run specific scripts at specific events, e.g. before commiting, pushing, etc.
+SLCR uses [Git Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) to run specific scripts at specific events, e.g. before committing, pushing, etc.
 
 To install the hook, run
 

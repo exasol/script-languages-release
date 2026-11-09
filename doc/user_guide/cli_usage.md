@@ -49,7 +49,7 @@ There are multiple ways to accomplish these tasks:
 * Follow the [official Exasol documentation](https://docs.exasol.com/db/latest/database_concepts/udf_scripts/adding_new_packages_script_languages.htm?Highlight=container)
 * Use the [Exa-toolbox](https://github.com/exasol/exa-toolbox/blob/master/utilities/README.md#upload_github_release_file_to_bucketfs)
 
-In all cases, you can download a pre-built SLCs from the [releases](https://github.com/exasol/script-languages-release/releases) of SLCR.
+In all cases, you can download pre-built SLCs from the [releases](https://github.com/exasol/script-languages-release/releases) of SLCR.
 
 ### Building an SLC
 
@@ -111,7 +111,7 @@ poetry run -- exaslct deploy \
     --bucketfs-password <password>  \
     --bucketfs-name <bucketfs-name> \
     --bucket-name <bucket-name> \
-    --path-in-bucket <path/in/bucket> \
+    --path-in-bucket <path/in/bucket>
 ```
 
 To save time, `exaslct` reuses artifacts from previous builds and also pulls images from Docker Hub.

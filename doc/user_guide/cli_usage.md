@@ -104,13 +104,13 @@ or deploy it directly:
 
 ```shell
 poetry run -- exaslct deploy \
-    --flavor-path=flavors/<flavor-name> \
-    --database-host <hostname-or-ip> \
+    --flavor-path flavors/<flavor-name> \
+    --bucketfs-host <hostname-or-ip> \
     --bucketfs-port <port> \
-    --bucketfs-username w \
+    --bucketfs-user w \
     --bucketfs-password <password>  \
     --bucketfs-name <bucketfs-name> \
-    --bucket-name <bucket-name> \
+    --bucket <bucket-name> \
     --path-in-bucket <path/in/bucket>
 ```
 

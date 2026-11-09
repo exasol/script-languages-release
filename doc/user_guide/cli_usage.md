@@ -13,7 +13,7 @@ See the [system requirements](https://github.com/exasol/script-languages-contain
 To permit your user account to work with Docker images and containers you need to:
 * Either add the user to the docker group,
 * Execute the commands with `sudo`
-* Or as user `root.
+* Or as user `root`.
 
 See the [Docker documentation](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) for more information.
 
@@ -41,8 +41,8 @@ You can also use other tools for this task.
 ### Deploying an SLC to an Exasol Database Instance
 
 An SLC is deployed to an Exasol database instance by:
-* Uploading it to the BucketFS and
-* Activating the SLC by setting a *language alias*
+1. Uploading it to the BucketFS and
+2. Activating the SLC by setting a *language alias*
 
 There are multiple ways to accomplish these tasks:
 * Use `exaslct` to [build and deploy](https://exasol.github.io/script-languages-container-tool/main/user_guide/user_guide.html#how-to-build-an-existing-flavor) and to [activate](https://exasol.github.io/script-languages-container-tool/main/index.html#how-to-activate-a-script-language-container-in-the-database) the SLC.

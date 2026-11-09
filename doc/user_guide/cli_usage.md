@@ -10,7 +10,7 @@ See the [system requirements](https://github.com/exasol/script-languages-contain
 
 `exaslct` uses the [Docker Service](https://docs.docker.com/) which needs to be available on your system.
 
-To permit your user account to work with Docker images and containers you need to
+To permit your user account to work with Docker images and containers you need to:
 * Either add the user to the docker group,
 * Execute the commands with `sudo`
 * Or as user `root.
@@ -21,7 +21,7 @@ See the [Docker documentation](https://docs.docker.com/engine/install/linux-post
 
 You can download pre-built SLCs in the [releases](https://github.com/exasol/script-languages-release/releases) of this repository (*SLCR* for short).
 
-If you want build custom container, you need to clone the SLCR repository.
+If you want to build custom containers, you need to clone the SLCR repository.
 
 ```shell
 git clone --recurse-submodules https://github.com/exasol/script-languages-release.git
@@ -29,7 +29,7 @@ git clone --recurse-submodules https://github.com/exasol/script-languages-releas
 
 Note: Option `--recurse-submodules` clones the submodule [script-languages](https://github.com/exasol/script-languages).
 
-The following command uses [Poetry](https://python-poetry.org/docs/) to create a virtual environment and install the components and dependencies of SLCR into it:
+The following command uses [Poetry](https://python-poetry.org/docs/) to create a virtual environment and install the components and dependencies of SLCR:
 ```shell
 cd script-languages-release
 poetry env use $(which python3)
@@ -40,7 +40,7 @@ You can also use other tools for this task.
 
 ### Deploying an SLC to an Exasol Database Instance
 
-An SLC is deployed to an Exasol Database Instance by
+An SLC is deployed to an Exasol database instance by:
 * Uploading it to the BucketFS and
 * Activating the SLC by setting a *language alias*
 
@@ -53,7 +53,7 @@ In all cases, you can download a pre-built SLCs from the [releases](https://gith
 
 ### Building an SLC
 
-SLCR supports different variants of SLCs containing different libraries and suporting different programming languages, e.g. Python, Java, etc.
+SLCR supports different variants of SLCs containing different libraries and supporting different programming languages, e.g. Python, Java, etc.
 
 Each variant is called a _flavor_ and the related Dockerfiles are in the resp. subdirectory below [flavors/](../../flavors).
 
@@ -77,7 +77,7 @@ A popular requirement is installing additional packages.
 ### Adding New Packages
 
 File `packages.yml` contains the list of packages to be installed into the SLC, e.g. in the [template for R4](../../flavors/template-Exasol-all-r-4/packages.yml).  <br />
-There are multiple *build steps*.  Usually at the end of the file the is a build step `flavor_customization`.  <br />
+There are multiple *build steps*.  Usually at the end of the file there is a build step `flavor_customization`.  <br />
 You can add new packages here.
 
 #### Dockerfile
@@ -103,7 +103,7 @@ poetry run -- exaslct export --flavor-path=flavors/<flavor-name>
 or deploy it directly:
 
 ```shell
-poetry run -- exaslct deploy
+poetry run -- exaslct deploy \
     --flavor-path=flavors/<flavor-name> \
     --database-host <hostname-or-ip> \
     --bucketfs-port <port> \
@@ -116,10 +116,10 @@ poetry run -- exaslct deploy
 
 To save time, `exaslct` reuses artifacts from previous builds and also pulls images from Docker Hub.
 
-Please, refer to the [SLCT User Guide](https://exasol.github.io/script-languages-container-tool/main/user_guide/user_guide.html) for more detailed information about the usage of `exalsct`.
+Please, refer to the [SLCT User Guide](https://exasol.github.io/script-languages-container-tool/main/user_guide/user_guide.html) for more detailed information about the usage of `exaslct`.
 
-### MacOsX Limitations
+### macOS Limitations
 
-MacOsX does not support mount binding additional directories.
+macOS does not support mount binding additional directories.
 
 Hence all arguments must point to locations within the current directory: flavors path, output directory, etc.

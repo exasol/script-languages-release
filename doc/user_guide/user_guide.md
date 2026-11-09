@@ -1,12 +1,12 @@
 # User Guide
 
-This repository is mainly used for developing and maintaining the Script Languages Containers (SLCs) for user-defined functions (UDF's) that can be used in the EXASOL database.
+This repository is mainly used for developing and maintaining the Script Languages Containers (SLCs) for user-defined functions (UDFs) that can be used in the EXASOL database.
 
 However, you can also build and customize an SLC on your own.
 
 ## Building a Script Languages Container
 
-You can build an SLC using one of the following methods
+You can build an SLC using one of the following methods:
 * Plain CLI command `exaslct` in the current repository, see [Command Line Interface](cli_usage.md)
 * Guided tour based on Jupyter notebooks in Exasol's [AI Lab](https://github.com/exasol/ai-lab)
 

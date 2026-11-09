@@ -40,7 +40,7 @@ git commit -n
 
 ## Integration Tests
 
-SLCR contains several integration tests which can be executed for a specific flavor using the `exaslct`:
+SLCR contains several integration tests which can be executed for a specific flavor using `exaslct`:
 ```shell
 poetry run -- exaslct run-db-test --flavor-path=flavors/<flavor-name>
 ```

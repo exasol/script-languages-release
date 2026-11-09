@@ -6,7 +6,7 @@
 
 ## Getting Started
 
-We provide a [vagrant setup in this repository](../../vagrant). It installs all necassary dependencies needed to build a script-language-container into the Virtual Machine. You can then connect via SSH to run the [exaslct commands to build the container](cli_usage.md). The code of this repository will be shared with VM through rsync.
+We provide a [vagrant setup in this repository](../../vagrant). It installs all necessary dependencies needed to build a script-language-container into the Virtual Machine. You can then connect via SSH to run the [exaslct commands to build the container](cli_usage.md). The code of this repository will be shared with VM through rsync.
 
 We support the following Virtual Machine provider:
 
@@ -14,7 +14,7 @@ We support the following Virtual Machine provider:
 
 ### Installing Vagrant
 
-For installing Vagrant please follow the instrunctions on the [vagrant homepage](https://www.vagrantup.com/docs/installation).
+For installing Vagrant please follow the instructions on the [vagrant homepage](https://www.vagrantup.com/docs/installation).
 
 #### Setting up Vagrant for libvirt
 
@@ -31,7 +31,7 @@ In many cases, it is enough to run the following command to install the plugin:
 
 In case, this doesn't work, please have a look at the [documentation of the plugin](https://github.com/vagrant-libvirt/vagrant-libvirt#readme).
 
-#### Addtional plugins
+#### Additional plugins
 
 We recommend to install also the following vagrant plugin to simplify working with Vagrant:
 

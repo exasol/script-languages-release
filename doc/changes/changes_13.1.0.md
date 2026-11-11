@@ -95,6 +95,7 @@ n/a
 ## Doc
 
 * #1554: Updated user guide
+* #1559: Added user journey to user guide describing how to build a custom SLC with sqlglot
 
 ## Internal
 

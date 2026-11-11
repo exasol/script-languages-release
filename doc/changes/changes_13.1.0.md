@@ -58,7 +58,9 @@ n/a
 
 ## Dependencies
 
-Updated
+* #1556: Updated openjdk-11-jdk-headless and openjdk-17-jdk-headless
+
+Updated Python modules:
 
 * `pycparser` from 3.0 to 3.12
 * `certifi` from 2026.7.22 to 2026.10.23

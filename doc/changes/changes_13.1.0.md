@@ -87,6 +87,7 @@ Updated
 * `boto3` from 1.43.109 to 1.43.125
 * `exasol-script-languages-container-ci-setup` from 4.4.1 to 4.4.2
 * `nox` from 2026.8.17 to 2026.10.20
+* #1556: Updated openjdk-11-jdk-headless and openjdk-17-jdk-headless
 
 ## Bugfixes
 

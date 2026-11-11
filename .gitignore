@@ -13,5 +13,8 @@ luigi.cfg
 .bcc/
 .vagrant
 
+# Agents
+/.serena
+
 # Emacs
 TAGS

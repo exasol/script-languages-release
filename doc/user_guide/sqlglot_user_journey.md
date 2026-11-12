@@ -57,7 +57,7 @@ poetry run exaslct deploy \
        --bucket default
 ```
 
-When using an Exasol Docker DB with a self-signed certificate you can add CLI option `--no-use-ssl-cert-validation`, which does not cause a security issue in this context. Please see [Exasol documentation](https://docs.exasol.com/db/latest/changelogs/6507.htm) for more details in other scenarios.
+When using an Exasol Docker DB with a self-signed certificate you can add CLI option `--no-use-ssl-cert-validation`, which does not cause a security issue in this context. Please see [Exasol documentation](https://docs.exasol.com/db/latest/changelogs/6507.htm) for more details for other scenarios.
 
 Environment variables:
 

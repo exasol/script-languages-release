@@ -43,7 +43,8 @@ In all these cases, to be safe, ensure the value is quoted as a string:
 
 ### Building and Deploying the SLC
 
-The following command builds and deploys a custom SLC.
+The following command builds and deploys a custom SLC:
+``
 
 ```shell
 poetry run exaslct deploy \

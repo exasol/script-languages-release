@@ -4,7 +4,7 @@
 
 SLC-PM allows you to specify all dependencies in a single file `packages.yml` located in the directory of a flavor.
 
-Each packages.yml of the default flavors already contains a customization section.
+Each file `packages.yml` of the default flavors already contains a customization section.
 
 If you want to customize a flavor, consider forking the Git repository or simply copying the flavor directory to a place for modifying and later potentially also making a backup.
 

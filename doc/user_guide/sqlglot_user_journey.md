@@ -68,7 +68,7 @@ Environment variables:
 | `$BUCKETFS_PORT`     | e.g. `2580`       | Port for BucketFS service                  |
 | `$BUCKETFS_PASSWORD` |                   | Password for write access to the BucketFS  |
 
-<span style="color: red">Should we explain where and how to obtain the BUCKETFS_PASSWORD?</span>
+The BucketFS password you can obtain from your database administrator, see [BucketFS Administration](https://docs.exasol.com/db/latest/administration/on-premise/bucketfs/bucketfs.htm)
 
 The command will also print the SQL statements `ALTER SESSION` and `ALTER SYSTEM` for activating the SLC by setting a language alias.
 

@@ -1,15 +1,15 @@
 # User Journey: Adding package SQLGlot
 
-`exaslct` uses [SLC-PM](https://github.com/exasol/script-languages-package-management) to install different packages from various sources in a unified way incl. coda, apt, and PyPi.
+`exaslct` uses [SLC-PM](https://github.com/exasol/script-languages-package-management) to install different packages from various sources in a unified way incl. conda, apt, and PyPI.
 
-SLC-PM allow you to specify all dependencies in a single file `packages.yml` located in the directory of a flavor.
+SLC-PM allows you to specify all dependencies in a single file `packages.yml` located in the directory of a flavor.
 
-Each of the files in the default flavors already contains a section for customization.
+Each packages.yml of the default flavors already contains a customization section.
 
 * <span style="color: red">Should we recommend the user to create a Git branch here?</span>
 * <span style="color: red">Or maybe copy the flavor folder to a directory outside the current Git repository?</span>
 
-Let's say, you want to create a custom SLC based on the template for Python 3.12 but including the additional Pip package [sqlglot](https://sqlglot.com/sqlglot/dialects/exasol.html) in the latest version.
+Let's say, you want to create a custom SLC based on the Python 3.12 template, but including the additional Pip package [sqlglot](https://sqlglot.com/sqlglot/dialects/exasol.html) in the latest version.
 
 On PyPI you found out that the latest version is `30.31.0`, so you decide to specify any version equal or higher than major version `30`.
 
@@ -30,16 +30,16 @@ On PyPI you found out that the latest version is `30.31.0`, so you decide to spe
 
 ### Quoting
 
-Some characters are special in Yaml. Also numbers with a decimal point are interpreted as float values which usually conflicts when specifying semantic version, e.g. `30.31`.
+Some characters are special in YAML. Also numbers with a decimal point are interpreted as float values which usually conflict when specifying semantic version, e.g. `30.31`.
 
-In all these cases, to be safe, ensure the value to be quoted as a string:
+In all these cases, to be safe, ensure the value is quoted as a string:
 
 | Name                        | Character | As string |
 |-----------------------------|-----------|-----------|
 | Colon                       | `:`       | `":"`     |
 | Asterisk                    | `*`       | `"*"`     |
 | Greater-than                | `>`       | `">"`     |
-| Numbers with decimal point  | `30.31`   | `"31.31"` |
+| Numbers with decimal point  | `30.31`   | `"30.31"` |
 | Synonyms for boolean values | `on`      | `"on"`    |
 
 ### Building and Deploying the SLC
@@ -69,7 +69,7 @@ Environment variables:
 |----------------------|-------------------|--------------------------------------------|
 | `$BUCKETFS_HOST`     | e.g. `localhost`  | Host running Exasol incl. BucketFS service |
 | `$USE_HTTPS`         | `true` or `false` |                                            |
-| `$BUCKETFS_PORT`     | e.g. `2580`       | Port for BUcketFS service                  |
+| `$BUCKETFS_PORT`     | e.g. `2580`       | Port for BucketFS service                  |
 | `$BUCKETFS_PASSWORD` |                   | Password for write access to the BucketFS  |
 
 <span style="color: red">Should we explain where and how to obtain the BUCKETFS_PASSWORD?</span>
@@ -103,7 +103,7 @@ def run(ctx):
 ;
 ```
 
-And finally you can call the UDF to transpile an SQL statement from duckdb dialect to Exasol with sqlglot:
+And finally you can call the UDF to transpile an SQL statement from DuckDB dialect to Exasol with SQLGlot:
 
 ```sql
 select SQLGLOT.TRANSPILE('SELECT EPOCH_MS(1618088028295)', 'duckdb', 'exasol');

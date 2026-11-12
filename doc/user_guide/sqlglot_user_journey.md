@@ -6,8 +6,7 @@ SLC-PM allows you to specify all dependencies in a single file `packages.yml` lo
 
 Each packages.yml of the default flavors already contains a customization section.
 
-* <span style="color: red">Should we recommend the user to create a Git branch here?</span>
-* <span style="color: red">Or maybe copy the flavor folder to a directory outside the current Git repository?</span>
+If you want to customize a flavor, consider forking the Git repository or simply copying the flavor directory to a place for modifying and later potentially also making a backup.
 
 Let's say, you want to create a custom SLC based on the Python 3.12 template, but including the additional Pip package [sqlglot](https://sqlglot.com/sqlglot/dialects/exasol.html) in the latest version.
 
@@ -46,10 +45,6 @@ In all these cases, to be safe, ensure the value is quoted as a string:
 
 The following command builds and deploys a custom SLC.
 
-I was using an Exasol Docker DB with a self-signed certificate and hence added CLI option `--no-use-ssl-cert-validation`, which does not cause a security issue in this context.
-
-Please see [Exasol documentation](https://docs.exasol.com/db/latest/changelogs/6507.htm) for more details in other scenarios.
-
 ```shell
 poetry run exaslct deploy \
        --flavor-path flavors/template-Exasol-all-python-3.12 \
@@ -59,9 +54,10 @@ poetry run exaslct deploy \
        --bucketfs-user w \
        --bucketfs-password $BUCKETFS_PASSWORD \
        --bucketfs-name bfsdefault \
-       --bucket default \
-       --no-use-ssl-cert-validation
+       --bucket default
 ```
+
+When using an Exasol Docker DB with a self-signed certificate you can add CLI option `--no-use-ssl-cert-validation`, which does not cause a security issue in this context. Please see [Exasol documentation](https://docs.exasol.com/db/latest/changelogs/6507.htm) for more details in other scenarios.
 
 Environment variables:
 

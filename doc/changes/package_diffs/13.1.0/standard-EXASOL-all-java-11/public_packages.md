@@ -4,14 +4,14 @@
 
 ## Apt packages
 
-|    | Package                 | Version in 13.0.0    | Version in 13.1.0    | Status   | Build-Step     |
-|---:|:------------------------|:---------------------|:---------------------|:---------|:---------------|
-|  0 | ca-certificates         | *                    | *                    |          | language_deps  |
-|  1 | curl                    | 7.81.0-1ubuntu*      | 7.81.0-1ubuntu*      |          | language_deps  |
-|  2 | openjdk-11-jdk-headless | 11.0.32.1+1-1ubuntu* | 11.0.32.1+1-1ubuntu* |          | language_deps  |
-|  3 | coreutils               | 8.32-4.1ubuntu*      | 8.32-4.1ubuntu*      |          | udfclient_deps |
-|  4 | libnss-db               | 2.2.3pre1-6ubuntu*   | 2.2.3pre1-6ubuntu*   |          | udfclient_deps |
-|  5 | libprotobuf-dev         | 3.12.4-1ubuntu*      | 3.12.4-1ubuntu*      |          | udfclient_deps |
-|  6 | libssl-dev              | 3.0.2-0ubuntu*       | 3.0.2-0ubuntu*       |          | udfclient_deps |
-|  7 | libzmq3-dev             | 4.3.4-2              | 4.3.4-2              |          | udfclient_deps |
-|  8 | locales                 | 2.35-0ubuntu*        | 2.35-0ubuntu*        |          | udfclient_deps |
+|    | Package                 | Version in 13.0.0    | Version in 13.1.0   | Status   | Build-Step     |
+|---:|:------------------------|:---------------------|:--------------------|:---------|:---------------|
+|  0 | openjdk-11-jdk-headless | 11.0.32.1+1-1ubuntu* | 11.0.33+9-1ubuntu*  | UPDATED  | language_deps  |
+|  1 | ca-certificates         | *                    | *                   |          | language_deps  |
+|  2 | curl                    | 7.81.0-1ubuntu*      | 7.81.0-1ubuntu*     |          | language_deps  |
+|  3 | coreutils               | 8.32-4.1ubuntu*      | 8.32-4.1ubuntu*     |          | udfclient_deps |
+|  4 | libnss-db               | 2.2.3pre1-6ubuntu*   | 2.2.3pre1-6ubuntu*  |          | udfclient_deps |
+|  5 | libprotobuf-dev         | 3.12.4-1ubuntu*      | 3.12.4-1ubuntu*     |          | udfclient_deps |
+|  6 | libssl-dev              | 3.0.2-0ubuntu*       | 3.0.2-0ubuntu*      |          | udfclient_deps |
+|  7 | libzmq3-dev             | 4.3.4-2              | 4.3.4-2             |          | udfclient_deps |
+|  8 | locales                 | 2.35-0ubuntu*        | 2.35-0ubuntu*       |          | udfclient_deps |

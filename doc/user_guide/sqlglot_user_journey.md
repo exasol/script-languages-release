@@ -8,7 +8,7 @@ Each file `packages.yml` of the default flavors already contains a customization
 
 If you want to customize a flavor, consider forking the Git repository or simply copying the flavor directory to a place for modifying and later potentially also making a backup.
 
-Let's say, you want to create a custom SLC based on the Python 3.12 template, but including the additional Pip package [sqlglot](https://sqlglot.com/sqlglot/dialects/exasol.html) in the latest version.
+Let's say you want to create a custom SLC based on the Python 3.12 template, but including the additional Pip package [sqlglot](https://sqlglot.com/sqlglot/dialects/exasol.html) in the latest version.
 
 On PyPI you found out that the latest version is `30.31.0`, so you decide to specify any version equal or higher than major version `30`.
 

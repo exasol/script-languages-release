@@ -49,11 +49,11 @@ The following command builds and deploys a custom SLC:
 ```shell
 poetry run exaslct deploy \
        --flavor-path flavors/template-Exasol-all-python-3.12 \
-       --bucketfs-host $BUCKETFS_HOST \
-       --bucketfs-use-https $USE_HTTPS \
-       --bucketfs-port $BUCKETFS_PORT \
+       --bucketfs-host localhost \
+       --bucketfs-use-https true \
+       --bucketfs-port 2580 \
        --bucketfs-user w \
-       --bucketfs-password $BUCKETFS_PASSWORD \
+       --bucketfs-password my-secret-password \
        --bucketfs-name bfsdefault \
        --bucket default
 ```
@@ -62,12 +62,12 @@ When using an Exasol Docker DB with a self-signed certificate you can add CLI op
 
 Environment variables:
 
-| Variable             | Values            | Description                                |
-|----------------------|-------------------|--------------------------------------------|
-| `$BUCKETFS_HOST`     | e.g. `localhost`  | Host running Exasol incl. BucketFS service |
-| `$USE_HTTPS`         | `true` or `false` |                                            |
-| `$BUCKETFS_PORT`     | e.g. `2580`       | Port for BucketFS service                  |
-| `$BUCKETFS_PASSWORD` |                   | Password for write access to the BucketFS  |
+| CLI Option             | Description                                |
+|------------------------|--------------------------------------------|
+| `--bucketfs-host`      | Host running Exasol incl. BucketFS service |
+| `--bucketfs-use-https` | Can be `true` or `false`                   |
+| `--bucketfs-port`      | Port for BucketFS service                  |
+| `--bucketfs-password`  | Password for write access to the BucketFS  |
 
 The BucketFS password you can obtain from your database administrator, see [BucketFS Administration](https://docs.exasol.com/db/latest/administration/on-premise/bucketfs/bucketfs.htm)
 

@@ -11,7 +11,7 @@ This release updates the user guide.
 
 ## Script-Language-Container-Tool (Exaslct)
 
-This release uses version 4.4.0 of the container tool.
+This release uses version 4.5.0 of the container tool.
 
 ## Features
 
@@ -54,11 +54,12 @@ This release fixes the following security issues by updating dependencies:
 
 ## Refactorings
 
-n/a
+* Updated exaslpm to version 2.0.0
 
 ## Dependencies
 
 * #1556: Updated openjdk-11-jdk-headless and openjdk-17-jdk-headless
+* #1562: Updated openjdk-11-jdk-headless and openjdk-17-jdk-headless
 
 Updated Python modules:
 
@@ -97,6 +98,7 @@ n/a
 ## Doc
 
 * #1554: Updated user guide
+* #1559: Added user journey to user guide describing how to build a custom SLC with SQLGlot
 
 ## Internal
 

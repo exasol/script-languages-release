@@ -17,3 +17,4 @@ You can build an SLC using one of the following methods:
 * [FAQ](FAQ.md)
 * [Using R3.x and Python2 on an Exasol 7.1.3.0 database and above](use_R3_and_Python2_on_7.1.30_and_above.md)
 * [Script Options](script_options/script_options.md)
+* [User Journey: Flavor customization Adding package SQLGlot](sqlglot_user_journey.md)

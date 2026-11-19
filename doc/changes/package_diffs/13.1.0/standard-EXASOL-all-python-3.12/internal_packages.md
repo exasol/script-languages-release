@@ -6,7 +6,7 @@
 
 |    | Package                 | Version in 13.0.0         | Version in 13.1.0         | Status   | Build-Step     |
 |---:|:------------------------|:--------------------------|:--------------------------|:---------|:---------------|
-|  0 | openjdk-17-jdk-headless | 17.0.20.1+1-1~24.04       | 17.0.21.0.3+1-1~24.04.1   | UPDATED  | build_deps     |
+|  0 | openjdk-17-jdk-headless | 17.0.20.1+1-1~24.04       | 17.0.21.1+2-1~24.04.1     | UPDATED  | build_deps     |
 |  1 | binutils                | 2.42-4ubuntu*             | 2.42-4ubuntu*             |          | base_test_deps |
 |  2 | gdb                     | 15.0.50.20240403-0ubuntu* | 15.0.50.20240403-0ubuntu* |          | base_test_deps |
 |  3 | gdbserver               | 15.0.50.20240403-0ubuntu* | 15.0.50.20240403-0ubuntu* |          | base_test_deps |

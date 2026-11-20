@@ -14,30 +14,6 @@ This release uses version 4.5.0 of the container tool.
 
 n/a
 
-## Security Issues
-
-This release fixes the following security issues by updating dependencies:
-
-| Name | Version | ID | Fix Versions |
-|------|---------|----|--------------|
-| filelock | 4.1.0 | CVE-2026-112907 | 4.2.1 |
-| filelock | 4.1.0 | CVE-2026-112908 | 4.2.1 |
-| filelock | 4.1.0 | CVE-2026-112909 | 4.2.1 |
-| filelock | 4.1.0 | CVE-2026-112910 | 4.2.1 |
-| filelock | 4.1.0 | CVE-2026-112911 | 4.2.1 |
-| filelock | 4.1.0 | CVE-2026-112912 | 4.2.1 |
-| filelock | 4.1.0 | CVE-2026-112913 | 4.2.1 |
-| filelock | 4.1.0 | CVE-2026-112915 | 4.2.1 |
-| filelock | 4.1.0 | CVE-2026-112934 | 4.2.1 |
-| filelock | 4.1.0 | CVE-2026-112935 | 4.2.1 |
-| filelock | 4.1.0 | CVE-2026-112938 | 4.2.1 |
-| filelock | 4.1.0 | CVE-2026-112939 | 4.2.1 |
-| filelock | 4.1.0 | CVE-2026-112940 | 4.2.1 |
-| tornado | 6.5.10 | CVE-2026-115927 | 6.6 |
-| tornado | 6.5.10 | CVE-2026-116577 | 6.6 |
-| tornado | 6.5.10 | CVE-2026-116578 | 6.6 |
-| tornado | 6.5.10 | CVE-2026-126347 | 6.6.1 |
-
 ## Refactorings
 
 - #1565: Dropped Python 3.10 from the project requirement and changed workflow Python versions to 3.11.

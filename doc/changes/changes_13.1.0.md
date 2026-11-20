@@ -1,4 +1,4 @@
-# script-languages-release 13.1.0, released 2026-??-??
+# script-languages-release 13.1.0, released 2026-11-20
 
 Code name: Python 3.10 project support removal.
 

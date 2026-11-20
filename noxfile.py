@@ -1,14 +1,9 @@
 import json
-import sys
 from pathlib import Path
 
-ROOT = Path(__file__).parent
-sys.path.insert(0, str(ROOT))
-
-import nox
-
-from exasol.toolbox.nox.tasks import *
 from exasol.slc_ci_setup.nox.tasks import *
+
+ROOT = Path(__file__).parent
 
 
 # default actions to be run if nothing is explicitly specified with the -s option

@@ -4,7 +4,7 @@ Code name: Python 3.10 project support removal.
 
 ## Summary
 
-This release updates the user guide, drops Python 3.10 from the supported versions of `script-languages-release`, updates project workflows to Python 3.11, and updates the `script-languages` submodule to include the merged Python 3.10 support removal.
+This release updates the user guide, upgrades exaslpm to 2.0.0, updates the OpenJDK 11 and 17 packages, drops Python 3.10 from the supported versions of `script-languages-release`, updates project workflows to Python 3.11, and updates the `script-languages` submodule to include the merged Python 3.10 support removal.
 
 <!-- markdown-link-check-disable -->
 ## [Package Version Comparison between Release 13.1.0 and 13.0.0](https://github.com/exasol/script-languages-release/blob/master/doc/changes/package_diffs/13.1.0/README.md)

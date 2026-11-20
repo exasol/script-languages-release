@@ -62,7 +62,7 @@ Currently, there are two groups of flavors:
 | Flavor Group | Example                           | Packages   | Installation         | Customization?               |
 |--------------|-----------------------------------|------------|----------------------|------------------------------|
 | Standard     | `standard-EXASOL-all`             | Predefined | Available by default | Not intended                 |
-| Template     | `template-Exasol-all-python-3.10` | Minimal    | Manually on demand   | Can be modified and extended |
+| Template     | `template-Exasol-all-python-3.12` | Minimal    | Manually on demand   | Can be modified and extended |
 
 See [Details about available flavors](../../flavors/README.md).
 
